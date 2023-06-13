@@ -8,6 +8,7 @@ constant_velocity.py:  Conversion of the matlab program
 
 import numpy as np
 import matplotlib.pyplot as plt
+from collate import collate
 
 np.random.seed(0)  # Set random seed for reproducibility
 
@@ -107,14 +108,14 @@ plt.annotate('\n'.join(str), xy=(0.7, 0.4), xycoords='figure fraction')
 print('Error:')
 print(x_hat[:, num_samples - 1] - x_true[:, num_samples - 1])
 
-# To get a sawtooth plot, you can use the attached function I wrote called collate.m.
+# To get a sawtooth plot, you can use the imported function called collate.
 # If you have two vectors of variances, v1, v2, and one is supposed to be before measurement update and one after, you create
 # a new vector twice in length by v = collate(v1, v2).   Then, if t is the time vector for the period in question, you collate it with itself by
 # new_time = collate(t, t).   Then you can plot v against new_time:   plot(new_time, v).
 
-collated = np.concatenate((pre, post))
+collated = collate(pre, post)
 t = np.arange(1, num_samples + 1)
-new_time = np.concatenate((t, t))
+new_time = collate(t, t)
 plt.figure(2)
 plt.plot(new_time, collated)
 plt.title('Variance in Position (with Process Noise)')

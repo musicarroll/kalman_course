@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import movavgs as ma
 import math
+from collate import collate
 
 num_samples = 50
 truth = 220.6  # static state model
@@ -72,20 +73,11 @@ ylabel = 'Resistance (Ohms)'
 ma.tme_plot(2,truth_vec, z, x_hat, ylabel, title, sigma) 
 
 
-# To get a sawtooth plot, you can use the attached function I wrote called collate.m.
+# To get a sawtooth plot, you can use the imported function called collate.
 # If you have two vectors of variances, v1, v2, and one is supposed to be before measurement update and one after, you create
 # a new vector twice in length by v=collate(v1,v2).   Then, if t is a the time vector for the period in question, you collate it with itself by
 #new_time = collate(t,t).   Then you can plot v against new_time:   plot(new_time, v).
 
-
-def collate(v1, v2):
-    if v1.shape == v2.shape:
-        collated = np.empty((v1.size * 2,), dtype=v1.dtype)
-        collated[::2] = v1
-        collated[1::2] = v2
-    else:
-        collated = -1
-    return collated
 
 collated = collate(pre,post)
 t=time
