@@ -19,8 +19,9 @@ delta_t = 1
 Phi = np.array([[1, delta_t], [0, 1]])
 
 # Process Noise:
-Q = np.array([[0.0001, 0], [0, 0.000001]])
+Q = np.array([[0.001, 0], [0, 0.1]])
 # Q = np.zeros((2, 2))
+q_string = 'with'
 # Process noise sample trajectory:
 w = np.random.randn(2, num_samples)
 w[0] *= np.sqrt(Q[0, 0])
@@ -30,7 +31,7 @@ w[1] *= np.sqrt(Q[1, 1])
 P0 = np.array([[0.01, 0], [0, 0.01]])
 
 # Measurement noise covariance
-R = 1**2
+R = 2**2
 # Measurement matrix: Position measurement only
 H = np.array([[1, 0]])
 
@@ -85,6 +86,7 @@ for k in range(1, num_samples):
 rms_pos = np.sqrt(np.mean((x_true[0, :] - x_hat[0, :])**2))
 rms_vel = np.sqrt(np.mean((x_true[1, :] - x_hat[1, :])**2))
 
+param_string = f'Pos Q[0]={Q[0,0]}, Vel Q[0]={Q[1,1]}  R={R},\n Pos x_hat[0]={np.round(x_hat[0,0],2)}, Vel x_hat[0]={np.round(x_hat[0,1],2)}, \n Pos P[0]={np.round(P[0,0,0],2)}, Vel P[0]={np.round(P[1,1,0],2)}'
 plt.figure(1)
 plt.subplot(2, 1, 1)
 plt.plot(range(num_samples), x_true[0, :], 'b--*', label='Truth')
@@ -93,7 +95,7 @@ plt.plot(range(num_samples), x_hat[0, :], 'd:k', label='Estimate')
 plt.legend(loc='best')
 plt.xlabel('Time')
 plt.ylabel('Position (m)')
-plt.title('Kalman Estimator: Non-accelerated 1D Motion')
+plt.title('Kalman Estimator: Non-accelerated 1D Motion\n'+ param_string)
 str = ['Meas Noise Variance: {:.4f}'.format(R), 'RMS Pos Err: {:.4f}'.format(rms_pos)]
 plt.annotate('\n'.join(str), xy=(0.6, 0.6), xycoords='figure fraction')
 plt.subplot(2, 1, 2)
@@ -118,7 +120,7 @@ t = np.arange(1, num_samples + 1)
 new_time = collate(t, t)
 plt.figure(2)
 plt.plot(new_time, collated)
-plt.title('Variance in Position (with Process Noise)')
+plt.title(f'Variance in Position ({q_string} Process Noise)\n'+param_string)
 plt.xlabel('Time')
 plt.ylabel('Variance (m^2)')
 plt.show()
