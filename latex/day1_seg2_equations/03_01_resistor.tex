@@ -1,0 +1,97 @@
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Example: Resistor Revisited}}
+\begin{itemize}
+  \onslide<2->{  \item Number of states: 1}
+  \onslide<3->{  \item System Dynamics: $x(k)=x(k-1)$}
+  \onslide<4->{  \item Measurement Model: $z(k)=x(k)+v(k)$, where $v(k)$ is zero mean, 
+Gaussian white noise with variance $\sigma^2$}
+  \onslide<5->{  \item Thus, $\Phi  = 1$, $H_k=1$, $Q_k=0$, $R_k=\sigma^2$}
+\end{itemize} 
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Example: Resistor Revisited}}
+\begin{itemize}
+   \onslide<2->{ \item State extrapolation and covariance extrapolation are simple:
+\[\stateest{k}{-}=\stateest{k-1}{+}\]
+\[\covmat{k}{-}=\covmat{k-1}{+}\]
+where $P$ is a $1\times 1$ matrix or scalar.}
+  \onslide<3->{  \item The Kalman gain equation $\kalgaineq$ becomes:
+\[K_k=\covmat{k}{-}\left(\covmat{k}{-}+\sigma^2\right)^{-1}\]}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Example: Resistor Revisited}}
+\begin{itemize}
+  \onslide<2->{  \item State update equation $\stateupdateeq$ becomes
+\[\stateest{k}{+}=\stateest{k}{-}+\dfrac{\covmat{k}{-}}{\covmat{k}{-}+\sigma^2}\left(z(k)-\stateest{k}{-}\right)\]}
+  \onslide<3->{  \item Covariance update equation $\covupdateeq$ becomes
+\[\covmat{k}{+}=\left(1-\dfrac{\covmat{k}{-}}{\covmat{k}{-}+\sigma^2}\right)\covmat{k}{-}\]}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Resistor Example Using Kalman Filter }}
+   \onslide<2->{
+\begin{figure}
+\begin{center}
+  \includegraphics[width=6cm]{\dayonesegtwo/kf_resistor_plot.png}
+\end{center}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Static, Scalar Example: Resistor Revisited: \\ Comparing KF and Running Average}}
+   \onslide<2->{
+\begin{figure}
+
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{\graphics/runavgplot.png}
+      \caption{Simple Running Average Estimator}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{\dayonesegtwo/kf_resistor_plot.png}
+      \caption{Kalman Estimator}
+    \end{subfigure}
+\caption{Comparing Running Average and Kalman Estimators}
+
+\end{figure}
+
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Sawtooth Plots}}
+By interleaving the pre- and post-update elements of $P$ over a run (typically only 
+the diagonal elements), we can obtain Kalman sawtooth plots.
+   \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{\dayonesegtwo/kf_resistor_variance_w_process_noise.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Sawtooth Plots}}
+Plots show growth in uncertainty (upticks) upon time extrapolation and reduction in 
+uncertainty (downticks) after measurement updates.  No process noise $\rightarrow$ no upticks:
+   \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{\dayonesegtwo/kf_resistor_variance_no_process_noise.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+

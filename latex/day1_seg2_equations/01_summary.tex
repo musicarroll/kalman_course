@@ -1,0 +1,140 @@
+% day1_seg1_heuristic/summary.tex
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary}
+  }
+ \begin{itemize}
+  \onslide<2->{   \item Given two models:}
+    \begin{itemize}
+  	\onslide<3->{\item State Dynamics Model\\ (sometimes called the System or Process Model)}
+  	\onslide<4->{\item Measurement Model\\ (sometimes called the Observation Model)}
+    \end{itemize}
+  \onslide<5->{ \item Find a way to \textbf{optimally} combine our knowledge of the \textbf{predicted state} 
+   with our knowledge of the \textbf{actual measurement} to produce an \textbf{updated state estimate}}
+  \begin{itemize}
+    \onslide<6->{ \item I.e., find the optimal linear gain $K(k)$ with which to weight the measurement residual 
+		(or innovation)}
+    \onslide<7->{ \item The weighted residual is then used to additively update the state estimate} 
+	\onslide<8->{ \item The Kalman gain is also used to update the estimation error covariance 
+	(estimation uncertainty)}
+  \end{itemize}
+ \end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+  \frametitle{Mathematical Formulation of the Problem}
+    \framesubtitle{Kalman Filter Problem Summary\\General, Non-Linear, Time-Invariant,
+Discrete-Time Formulation\\Given: }
+}
+ \begin{itemize}
+   \onslide<2->{ \item State Dynamics Model:  $x(k)=f[x(k-1)] + w(k)$}
+   \begin{itemize}
+      \onslide<3->{ \item $x$=state,$f$=true dynamics function,$w$=process noise}
+   \end{itemize}
+   \onslide<4->{ \item Measurement Model: $z(k)=h[x(k)]+v(k)$}
+   \begin{itemize}
+      \onslide<5->{ \item $z$=measurement,\;\;$h$=measurement function,\;\; $v$=measurement noise}
+   \end{itemize}
+  \end{itemize}
+  \onslide<6->{ Find:}
+ \begin{itemize}
+  \onslide<7->{ \item Optimal gain $K(k)$ that allows us to update our state estimate in the following way:\\
+     $\hat{x}(k) = f[\hat{x}(k-1)] + K(k)\;[\;z(k)-h(f[\hat{x}(k-1)])\;]$}
+  \onslide<8->{ \item We'll ignore the form of the covariance for now!}
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} \framesubtitle{Kalman Filter Problem Summary}
+  }
+ \begin{itemize}
+  \onslide<2->{ \item Kalman filtering only deals with linear (or linearized) system dynamics
+  \begin{itemize}
+  \onslide<3->{
+    \item Assume from now on that vector-valued function $f[\hat{x}(k-1)]$ is simply
+matrix multiplication, something like $\Phi$ \\(which we assume for now does not vary with time)
+}
+  \onslide<4->{
+  \item Also assume that $h$ is a linear, vector-valued function, i.e. a matrix $H$
+}
+  \end{itemize}
+}
+  \onslide<5->{ \item Find a gain $K(k)$ in form of multiplier (i.e., a gain matrix) such that} \\
+  \onslide<6->{\center $\hat{x}(k) = \Phi\hat{x}(k-1) + K(k)\;[\;z(k)-H\Phi\hat{x}(k-1)\;]$  \\}
+  \onslide<7->{ ( {\small We'll declutter this soon by giving $\Phi\hat{x}(k-1)$ a new notation })}
+
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem}
+  \framesubtitle{Kalman Filter Problem Summary\\ (Linear Discrete Formulation)\\
+Given: }
+}
+\begin{itemize}
+  \onslide<2->{\item State Dynamics Model:
+  $x(k)=\Phi x(k-1)+w(k)$}
+  \onslide<3->{
+    \begin{itemize}
+		\item $x(k)$=state,$\Phi $=state transition matrix, $w(k)$=process noise
+	\end{itemize} }
+  \onslide<4->{\item Measurement Model: $z(k)=H x(k)+v(k)$ \\
+	\begin{itemize}
+		\item $z(k)$=measurement,$H$=meas. matrix (assumed constant), $v(k)$=meas. noise
+	\end{itemize}}
+  \end{itemize}
+  \onslide<5->{Find:}
+\begin{itemize}
+	  \onslide<6->{\item   State estimate in the form\\
+ 	$\hat{x}(k) = \Phi \hat{x}(k-1) + K(k)[z(k)-H \Phi \hat{x}(k-1)]$ }
+	  \onslide<7->{\item Note that $\Phi \hat{x}(k-1)$ extrapolates of the previous estimate to the current time}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem}
+\framesubtitle{Kalman Filter Problem Summary \\
+Slight Notational Change}
+}
+\begin{itemize}
+  \onslide<2->{  \item The term $\Phi \hat{x}(k-1)$ is the extrapolated state estimate prior to making the measurement update or correction}
+  \onslide<3->{  \item To distinguish prior (extrapolated) estimate from updated estimate, we use the following notation:\
+\[\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1)=\text{predicted estimate prior to update}\]
+\[\hat{x}^{+}(k)=\text{updated state estimate}\] }
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{Mathematical Formulation of the Problem}
+    \framesubtitle{Kalman Filter Problem Summary}
+  }
+\begin{itemize}
+  \onslide<2->{\item Thus, the solution we seek now looks like this:\\}
+  \onslide<3->{
+    \begin{equation}\label{filtersolution}
+       \hat{x}^{+}(k)=\hat{x}^{-}(k)+ K(k)[z(k)-H\hat{x}^{-}(k)]
+    \end{equation}
+}
+\onslide<4-> {
+  where $\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1) $
+}
+\onslide<5-> {
+  \item This now looks a lot like the running average problem!
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+
+\end{frame}
+

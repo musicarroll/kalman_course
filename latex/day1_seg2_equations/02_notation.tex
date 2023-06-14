@@ -1,0 +1,137 @@
+% day1_seg2_equations/notation.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Understanding Kalman Filter Notation}
+\framesubtitle{Drilldown on State Dynamics}
+}
+ \begin{itemize}
+\onslide<2->{ \item State Dynamics Model: $\simplestatedyneq$ }
+\onslide<3->{ \item $x(k)$ is the \textit{\textbf{state vector}} with $n$
+ elements, written as a column vector:}
+\begin{itemize}
+\onslide<4->{ \item $x(k)=\state (k)=\statek$}
+\end{itemize}
+\onslide<5->{ \item The process noise is also a column vector of size $n$:}
+	\begin{itemize}
+		\onslide<6->{ \item $\procnoise{k}=\procnoisek$}
+	\end{itemize}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Understanding Kalman Filter Notation}
+\framesubtitle{Drilldown on State Dynamics}
+}
+\begin{itemize}
+\onslide<2->{ \item Discrete State Dynamics}
+\onslide<3->{ \item KF doesn't work for nonlinear dynamics function $f[x(k-1)]$ }
+	\begin{itemize}
+		\onslide<4->{ \item But nonlinear models can be linearized (more about that later) }
+	\end{itemize}
+\onslide<5->{ \item Restriction to matrices:  $\simplestatedyneq$}
+\onslide<6->{ \item $\stm{k}$ is called the \textbf{state transition matrix}.  It is 
+$n\times n$ in size.}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Understanding Kalman Filter Notation}
+\framesubtitle{Drilldown on State Dynamics}
+}
+
+\begin{itemize}
+\onslide<2->{ \item State Transition Matrix: $\stmeqtwo{k}{k-1}$}
+\onslide<3->{ \item Extrapolates state vector from time step $k-1$ to time step
+ $k$ (pulling from past to present)}
+\onslide<4->{ \item Tells you how the state would evolve in the absence of forcing functions}
+\onslide<5->{ \item Remember: this is still just a model.  We don't really know
+ what the true state is, because the random forcing function (process noise) generates disturbances!}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Understanding Kalman Filter Notation}
+\framesubtitle{Drilldown on State Dynamics}
+}
+
+ \begin{itemize}
+\onslide<2->{ \item We could throw in other factors and terms}
+ \begin{itemize}
+\onslide<3->{ \item A matrix $\sdm{k}$ to distribute the Gaussian white noise
+ to the states}
+\onslide<4->{ \item An additional, deterministic control variable $u(k)$, and
+ associated distribution matrix $\Lambda(k)$}
+ \onslide<5->{ \item Then the full state dynamics equation would look like this: 
+ \[\statedynctrleq\]}
+ \end{itemize}
+\onslide<6->{ \item For simplicity we'll generally leave the control variable out of the picture}
+\onslide<7->{ \item We are deliberately trying to keep the notation as decluttered as
+ possible (for now)}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution}
+\framesubtitle{ State Estimate Extrapolation}
+}
+
+\begin{itemize}
+\onslide<2->{\item Given an estimate $\stateest{k-1}{+}$ at time $k-1$, we extrapolate it forward in time 
+by the state transition matrix:
+\begin{equation}\label{stateextrapeq}
+\stateextrapeq 
+\end{equation}
+}
+\onslide<3->{\item Q: Why isn't the white noise sequence $w$ included in this extrapolation?}\\  
+\onslide<4->{A:  Because the white noise forcing function is a \textbf{zero-mean} process.  
+Thus, on average, the equation is homogeneous and we should therefore use the homogeneous solution, i.e., 
+the state transition matrix.}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution}
+\framesubtitle{ Covariance Extrapolation}
+}
+
+\begin{itemize}
+\onslide<2->{\item Q: How certain are we that our solution is right?}\\
+\onslide<3->{A: The answer is given by the \textbf{estimation error covariance matrix} or often just 
+called the covariance matrix $P(k)$}
+\onslide<4->{\item Just like the state estimate, the covariance matrix is propagated forward in time before being corrected:}
+\onslide<5->
+{\begin{equation}\label{altcovextrapeq}
+\altcovextrapeq
+\end{equation}
+where $Q(k)$ is a matrix called the \textbf{process noise covariance matrix} }
+\onslide<6->{\item $Q(k)$ measures the amount of dispersion in the white noise forcing function $w(k)$}
+\onslide<7->{\item Later we'll learn how to define $P(k)$ in terms of the expected error in the estimation $\esterrdef$}
+\end{itemize} 
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution}
+\framesubtitle{ Covariance Extrapolation}
+}
+\begin{itemize}
+\onslide<2->{\item What does Eq. \eqref{altcovextrapeq} really mean?
+  \[ \altcovextrapeq \]
+}
+\onslide<3->{\item The term $\stm{k}\covmat{k-1}{+}\stm{k}\trans$ represents the effect that the state dynamics 
+has on the estimation error covariance}
+\begin{itemize}
+\onslide<4->{\item P(k) is positive definite matrix and $\Phi $ tends to increase its norm }
+\end{itemize}
+\onslide<5->{\item The other term $Q(k)$ represents the increased uncertainty added at each step due to 
+the process noise inherent in the system }
+\end{itemize} 
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+

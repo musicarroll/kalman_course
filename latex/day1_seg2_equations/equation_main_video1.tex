@@ -1,0 +1,71 @@
+% \dayonesegtwo/equation_main.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Part I}
+  \framesubtitle{The Basic Kalman Equations\\
+  Topics}
+  }
+ \begin{itemize}
+  \onslide<2->{\item Understanding the Equations: Heuristic Introduction}
+  \onslide<3->{\item \textbf{Equation Drilldown:  Taking the Equations Apart}}
+%  \onslide<4->{\item Differential Equations, Difference Equations and Dynamic Systems}
+  \onslide<4->{\item State Space Concepts}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+
+\onslide<1->{
+  \frametitle{Equation Drilldown:  Taking the Equations Apart}
+     \framesubtitle{Topics}
+}
+
+\begin{itemize}
+  \onslide<2->{\item \textbf{Mathematical Formulation of the Problem}}
+  \onslide<3->{\item Drilldown on State Dynamics and Covariance Extrapolation
+Equations}
+  \onslide<4->{\item The Five Kalman Filter Equations}
+  \onslide<5->{\item Examples}
+  \onslide<6->{\item Exercises}
+\end{itemize}
+
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{\dayonesegtwo/01_summary.tex}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Summary} 
+	\framesubtitle{Vector Check}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Where are we?  
+}
+\begin{itemize}
+
+\onslide<3->{\item We've formulated the linear discrete problem}
+\onslide<4->{\item We've indicated the form of the solution: the recursive estimating algorithm with the Kalman gain}
+\onslide<5->{\item But we haven't yet presented the general solution;  only in the case of a simple, constant, scalar system}
+\onslide<6->{\item When we arrive at the general solution, we'll get an added benefit: While trying to come up with $\stateest{k}{+}$ and $K(k)$, we'll also end up 
+with a recursive estimate of our estimation uncertainty! This is the so-called error covariance matrix.}
+\end{itemize}
+  \onslide<7->{
+\item What's next?  
+}
+\begin{itemize}
+  \onslide<8->{
+\item Drill down on state dynamics and determine how
+noise/uncertainty statistics change over time  
+}
+  \onslide<9-> {Use both estimation uncertainty and measurment noise
+uncertainty to calculate the Kalman gain}
+  \onslide<10-> {Use Kalman gain to update estimation uncertainty}
+\end{itemize}
+\end{itemize}
+\onslide<11->{\center --------------------------------------------------------------------}
+\end{frame}
+

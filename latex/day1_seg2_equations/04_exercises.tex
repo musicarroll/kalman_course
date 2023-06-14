@@ -1,0 +1,41 @@
+% day1_seg2_equations/exercises.tex
+
+\begin{frame}
+
+  \onslide<1->{\frametitle{Exercises
+}}
+\begin{enumerate}
+  \onslide<2->{\item Work through the resistor example by hand using 
+$\hat{x}_0=100\Omega$, $\sigma=0.1$, and $P_0=0$.  Start the recursive loop 
+with the gain equation first.  Run through the loop three times.}
+
+  \onslide<3->{
+\item Draw a rough plot of the error covariance, plotting both the extrapolated and 
+updated covariance for any give $k$ at the same time.  (This will yield the classic 
+Kalman sawtooth pattern.)
+  Similarly, draw a rough plot of the state estimates.}
+
+\setcounter{exercisecounter}{\value{enumi}}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+
+
+  \onslide<1->{\frametitle{Exercises
+}}
+\begin{enumerate}
+\setcounter{enumi}{\value{exercisecounter}}
+  \onslide<2->{\item Calculate the Kalman gain of the non-accelerated motion example.  Hint:  It looks a lot like the 
+gain for the damped harmonic oscillator.}
+  \onslide<3->{\item Write out the state update equation for the damped harmonic oscillator, 
+using the Kalman gain derived in the example.
+
+}
+  \onslide<4->{\item Write out the covariance update 
+equation for the damped harmonic oscillator, using the Kalman gain dervied in the 
+example.
+ }
+\end{enumerate}
+\end{frame}

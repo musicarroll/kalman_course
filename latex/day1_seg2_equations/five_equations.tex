@@ -1,0 +1,102 @@
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution}
+  \framesubtitle{The Kalman Gain}
+  }
+\begin{itemize}
+\onslide<2->{\item The heart of the solution is the \textbf{\textit{Kalman Gain}}:  $\kalgain{k}$}
+\onslide<3->{
+\begin{equation}\label{kalgaineq}
+\kalgaineq
+\end{equation}
+where $R(k)$ is the measurement noise covariance matrix (to be defined later) governing the 
+white measurement noise $v(k)$ in the measurement model:
+\[\measmodeleq\] 
+}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution:  State Update Equation}}
+\begin{itemize}
+\onslide<2->{\item Using the gain, the state update equation (which we've already seen) is 
+\begin{equation}\label{stateupdateeq}
+\stateupdateeq
+\end{equation}
+where $z(k)$ is the measurement and $H(k)$ is the measurment matrix at time $k$.
+}
+\end{itemize} 
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution:  The Covariance Update Equation}}
+\begin{itemize}
+\onslide<2->{\item Likewise, the error covariance $P(k)$ is corrected using the gain:
+\begin{equation}\label{covupdateeq}
+\covupdateeq
+\end{equation}
+} 
+\onslide<3->{\item This is not a good form to use in numerical work!}
+\onslide<4->{\item Better to use the Joseph form:}\\
+\onslide<5->{ {\small \[ \josephcovupdateeq\] } }
+\begin{itemize}
+\onslide<6->{\item Better preserves symmetry of $P$}
+\end{itemize}
+\end{itemize} 
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+%\begin{frame}
+%  \frametitle{The Five Kalman Equations}
+%  \begin{tabular}{rl}
+%    \onslide<1->{ {\small State Extrapolation:} &{\small $\stateextrapeq$  } }\\
+%    \onslide<2->{ {\small Covariance Extrapolation: }&{\small  $\altcovextrapeq$}} \\
+%    \onslide<3->{ {\small Kalman Gain:}& {\small $\kalgaineq$}} \\
+%    \onslide<4->{ {\small State Update:}& {\small $\stateupdateeq$}} \\
+%    \onslide<5->{ {\small Covariance Update:}&{\small  $\covupdateeq$ }}
+%  \end{tabular}
+%  \onslide<6->{\center --------------------------------------------------------------------}
+%\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Five Kalman Equations}
+\onslide<1->{\begin{equation}
+\textbf{State Extrapolation: }\stateextrapeq
+\end{equation}} 
+\onslide<2->{\begin{equation}
+\textbf{Covariance Extrapolation: }\altcovextrapeq
+\end{equation}} 
+\onslide<3->{\begin{equation}
+\textbf{Kalman Gain: }\kalgaineq
+\end{equation}} 
+\onslide<4->{\begin{equation}
+\textbf{State Update: }\stateupdateeq
+\end{equation}} 
+\onslide<5->{
+	\begin{equation}
+		\textbf{Covariance Update: }\covupdateeq
+	\end{equation} 
+		or {\small $\josephcovupdateeq$ }
+(the Joseph form)}
+
+\onslide<6->{\center --------------------------------------------------------------------}
+ 
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Definitions for the Five Equations }}
+\begin{itemize}
+  \onslide<2->{\item $\covmatdef$ is the estimation error covariance matrix}
+  \begin{itemize}  
+	\onslide<3->{\item Often just referred to as the 'covariance matrix'}
+  \end{itemize}
+  \onslide<4->{\item $\esterrdef$ is the estimation error  }
+  \onslide<5->{\item $\procnoisematdef{k}$ is the process noise covariance matrix }
+  \onslide<6->{\item $\measnoisematdef{k}$ is the measurement noise covariance matrix }
+  \onslide<7->{\item In the above, $E[...]$ is statistical expectation (more on that later) }
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
