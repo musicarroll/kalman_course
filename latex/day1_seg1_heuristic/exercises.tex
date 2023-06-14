@@ -1,0 +1,274 @@
+% \dayonesegone/exercises.tex
+
+\begin{enumerate}
+\begin{frame}
+
+  \frametitle{Exercises}
+\item Let's re-familiarize ourselves with vectors and matrices.  
+Addition:
+\[\colvec{x}{n}+\colvec{y}{n}=\colvecsum{x}{y}{n}\]
+For vectors in three space, this would be:
+
+\[\colvecthree{x}{}+\colvecthree{y}{}=\colvecthreesum{x}{y}\] 
+
+Compute:
+\[
+\begin{bmatrix}
+-1\\
+\;\;\;3\\
+\;\;\;0 \end{bmatrix}
++
+\begin{bmatrix}
+\;\;\;7\\
+-1\\
+\;\;\;5 \end{bmatrix}=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Exercises}
+\[
+\begin{bmatrix}
+0\\
+0\\
+0 \end{bmatrix}
++
+\begin{bmatrix}
+2\\
+2\\
+1 \end{bmatrix}=
+\]
+
+\[
+\begin{bmatrix}
+0.75\\
+\;\;-3\\
+100 \end{bmatrix}
++
+\begin{bmatrix}
+\;\;\;0.75\\
+\;\;\;\;\;\;0\\
+-1000 \end{bmatrix}=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Exercises}
+\[
+\begin{bmatrix}
+1\\
+0\\
+0 \end{bmatrix}
++
+\begin{bmatrix}
+0\\
+1\\
+0 \end{bmatrix}=
+\]
+
+\[
+\begin{bmatrix}
+\;\;\;1.1\\
+-3.2\\
+\;\;\;9.7 \end{bmatrix}
++
+\begin{bmatrix}
+-0.8\\
+\;\;\;3.2\\
+\;\;\;10 \end{bmatrix}=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+ 
+  \frametitle{Exercises}
+\item Multiplying a row vector times a column vector:
+
+\[
+\begin{bmatrix}
+a_1&a_2&a_3
+\end{bmatrix}
+\begin{bmatrix}
+b_1\\
+b_2\\
+b_3
+\end{bmatrix}
+=
+a_1b_1 + a_2b_2 + a_3b_3
+\]
+
+Now you try it:
+\[
+\begin{bmatrix}
+0&1&3
+\end{bmatrix}
+\begin{bmatrix}
+4\\
+3\\
+0
+\end{bmatrix}
+=
+\]
+
+\[
+\begin{bmatrix}
+-1&3&-2
+\end{bmatrix}
+\begin{bmatrix}
+\;\;1\\
+-2\\
+\;\;2
+\end{bmatrix}
+=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Exercises}
+\[
+\begin{bmatrix}
+x&y&z
+\end{bmatrix}
+\begin{bmatrix}
+u\\
+v\\
+w
+\end{bmatrix}
+=
+\]
+
+\[
+\begin{bmatrix}
+2x&.5x&-7x
+\end{bmatrix}
+\begin{bmatrix}
+-10\\
+\;\;\;4\\
+\;-1
+\end{bmatrix}
+=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+
+  \frametitle{Exercises}
+\item Multiplying a matrix times a column vector:
+
+\[
+\begin{bmatrix}
+1&0&1\\
+2&7&0\\
+3&2&5
+\end{bmatrix}
+\begin{bmatrix}
+\;\;\;7\\
+-1\\
+\;\;\;5 
+\end{bmatrix}=
+\]
+
+Hint: Multiply the first row of the matrix times the column vector to get the first element of the new column vector.  
+Then multiply by the second row of the matrix, and so on.
+\[
+\begin{bmatrix}
+2&1&0\\
+0&1&1\\
+2&2&2
+\end{bmatrix}
+\begin{bmatrix}
+\;\;\;3\\
+-3\\
+\;\;\;1 
+\end{bmatrix}=
+\]
+
+\[
+\begin{bmatrix}
+\;\;3&1&\;\;1\\
+-1&1&-1\\
+\;\;0&2&\;\;2
+\end{bmatrix}
+\begin{bmatrix}
+\;\;\;3\\
+-3\\
+\;\;\;1 
+\end{bmatrix}=
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Exercises}
+\item What happens if you multiply a column on the left by a row vector on the right?\\
+
+
+item What is the transpose of the following matrix?
+\[
+\begin{bmatrix}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}\\
+\end{bmatrix}
+\]
+
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Exercises}
+\item Given the following scalar measurements of some constant scalar process, calculate the average value at each stage $k$ by two different methods: 1) by averaging all past values and 2) by using the recursive algorithm in Eq. $\eqref{recursiverunavg}$:
+	\begin{enumerate}
+		\item $z_1=0.76$
+		\item $z_2=0.67$
+		\item $z_3=0.79$
+		\item $z_4=0.81$
+		\item $z_5=0.78$
+		\item $z_6=0.79$
+		\item $z_7=0.81$
+		\item $z_8=0.82$
+		\item $z_9=0.77$
+	\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+ 
+  \frametitle{Exercises}
+\item You are traveling in a car at 45 mph in a 35 mph speed
+ zone.  Your friendly neighborhood police officer is watching you with
+ her radar gun.  
+She is measuring your speed, of course, but needs
+ to report as well your position as a function of time.  Write down 
+ a dynamics and 
+measurement model for this problem in which the state variable is your
+ positional displacement from some arbitrary initial position.  
+Assume that
+ there is no process noise in your dynamics and that your velocity
+ is not changing.  Assume the policeman makes a measurement 
+with
+ her radar gun every 2 seconds.\\
+Hint: You have two variables of interest!
+
+\item How is this problem different from the resistor problem?
+
+\end{frame}
+\end{enumerate}

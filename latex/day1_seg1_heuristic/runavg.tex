@@ -1,0 +1,230 @@
+% \dayonesegone/runavg.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Simple Example:  Running Averages}}
+ \begin{itemize}
+  \onslide<2->{ \item Suppose the boss says that we need to estimate the resistance of a particular resistor.  We are given ...}
+	\begin{itemize}
+		\onslide<3->{ \item The manufacturer's estimate of the true value, which has some uncertainty associated with it}
+		\onslide<4->{ \item A dynamic model of how the resistance: The (unknown) "true" value $x$ of the resistance is assumed to be
+			constant in time: $x(k) = x(k-1)$}
+		\onslide<5->{\item A voltmeter with which to make measurements of the resistance in Ohms}
+	\end{itemize}
+  \onslide<6->{ \item How should we go about coming up with a better estimate of the resistance?}
+  \onslide<7->{ \item Our plan:  Take repeated measurements using the voltmeter to obtain a sequence of measurement values:}
+  \begin{itemize}
+	\onslide<8->{ \item $z(1), z(2), \ldots$}
+	\onslide<9->{ \item ... and then average all the values}
+  \end{itemize}
+  
+\end{itemize}
+\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}}
+\onslide<2->{\begin{figure}
+
+\includegraphics[width=0.75\textwidth]{\dayonesegone/runavg_truth_meas.png}
+\end{figure}}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Simple Example: Running Averages}}
+  \begin{itemize}
+	\onslide<2->{\item The \textbf{\textit{state}} that we are trying to estimate is the true resistance value of the resistor}
+	\onslide<3->{\item Our \textbf{\textit{state dynamics}}  or \textbf{\textit{process model}} is very simple:  
+		\[x(k) = x(k-1)\]}
+  \onslide<4->{ \item The state is a scalar quantity (1-dimensional) and does not change with time}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Simple Example: Running Averages}}
+\begin{itemize}
+  \onslide<2->{\item What is the best way to estimate the state of our system?}
+  \onslide<3->{\item In the absence of any other information, we should probably just average the measurements}
+  \begin{itemize}
+	\onslide<4-> {
+		\item We have no \textit{a priori} reason to believe that any one measurement is better than any other and we trust our voltmeter to be unbiased
+	}
+	\onslide<5-> {
+		\item Therefore, we ought to weight them equally compute a simple average (sample mean of measurements)
+	}
+  \end{itemize}
+  \onslide<6->{
+	\item We assume such an average is unbiased, because the measurement errors ought average out to zero (zero-mean)
+  }
+\end{itemize} 
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Simple Example:  Running Averages}}
+ \begin{itemize}
+  \onslide<2->{ 
+	\item A simple running average is very much like a Kalman filter with
+		simple, unchanging dynamics ($\;\;x(k)=x(k-1)\;\;$)
+  }
+  \onslide<3->{
+	\item Given a sequence of (noisy) measurements, denoted $z(1),z(2),\ldots$, compute at each step (epoch) 
+		the best estimate $\stateest{k}{+}$ of the true value of the state:  \\At the $k^{\text{th}}$
+		step, the best guess would be the average of all acquired measurement values:
+  }
+\end{itemize}
+  \onslide<4->{
+	\begin{equation}\label{runavg}
+		\stateest{k}{+}=\dfrac{1}{k}\sum_{j=1}^{k}z(j)=\dfrac{1}{k}[\;z(1)+z(2)+\cdots+z(k)\;]
+	\end{equation}
+  }
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+ \onslide<1->{\frametitle{Simple Example:  Running Averages}}
+ \begin{itemize}
+ \onslide<2->{\item Q: Why is the average of all measurements the "best" estimate?}
+ \onslide<3->{\item A: The dynamics tell us that the quantity to be estimated is not changing, and therefore 
+the only variability stems from the measurements, i.e., the measurement noise}
+ \onslide<4->{\item Thus, we should try to eliminate the measurement variability by averaging the measurements}
+ \onslide<5->{\item Note that in this example $\stateest{k}{-}=\stateest{k-1}{+}$ due to the constant dynamics;  
+ $\stateest{k}{+}$ adds the new measurement and averages over all $k$ measurements }
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}}
+\begin{itemize}
+ \onslide<2->{ \item Therefore, as much as possible, we want to rid ourselves of the noise by averaging it out}
+ \onslide<3->{ \item We assume that our voltmeter is good, i.e., that the measurement noise is zero-mean, i.e., 
+   its average tends to zero over the long run}
+ \onslide<4->{ \item If we had a bias in the voltmeter, we wouldn't call that noise; that would be a systematic error on the 
+ part of our voltmeter.  We'd have to calibrate it out.}
+  \onslide<5->{\item But noise can't be calibrated out; it must be averaged or \textbf{filtered} out over time}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}}
+\onslide<2->{\begin{figure}
+
+\includegraphics[width=0.75\textwidth]{\dayonesegone/runavg_truth_meas_est.png}
+\end{figure}}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}}
+\onslide<2->{Eq.\eqref{runavg}\\
+\[\stateest{k}{+}=\dfrac{1}{k}\sum_{j=1}^{k}z(j)=\dfrac{1}{k}[\;z(1)+z(2)+\cdots+z(k)\;]\]}
+\begin{itemize}
+\onslide<3->{ \item Now suppose our estimating task is going to continue for a long time and we don't want to fill up our
+computer memory with a record of all the measurements taken since the start}
+\onslide<4->{ \item We just want to use the previously calculated value and add a small increment}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Recursive Running Average} 
+	\framesubtitle{Derivation}
+}
+\begin{itemize}
+  \onslide<2->{
+\item What's the difference between $\stateest{k}{+}$ and $\stateest{k-1}{+}$\\
+(which is the same as $\stateest{k}{-}$ in this case)?
+}
+  \onslide<3->{
+\item   Eq.\eqref{runavg} tells us that:  $\sum_{j=1}^{k-1}z(j)=(k-1)\stateest{k-1}{+}$
+}
+  \onslide<4->{
+\item   We now compute the difference as
+\[k\,\stateest{k}{+}-(k-1)\stateest{k-1}{+}=z(k)\] 
+and, solving for $\stateest{k}{+}$, we get
+\[\stateest{k}{+}=\dfrac{k-1}{k}\stateest{k-1}{+}\dfrac{1}{k}+z(k)=\dfrac{k-1}{k}\stateest{k}{-}+\dfrac{1}{k}z(k)\]
+}
+  \onslide<5->{
+\item Note that the last expression on the right is a weighted average of two terms:  The old information and the new.Now we can rearrange the right side and obtain our recursive formula for the running average ...   
+}
+  \onslide<6->{
+\item Now we can further rearrange the right side and obtain our final recursive formula for the running average ...   
+}
+\onslide<7->{\center --------------------------------------------------------------------}
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\onslide<1->{Step-by-Step Derivation:}
+\begin{footnotesize} 
+\begin{align*}
+  \onslide<2->{\stateest{k}{+} &=\dfrac{1}{k}\sum_{j=1}^{k}z(j) \text{\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;by def. Eq. }\eqref{runavg}\\}
+  \onslide<3->{&=\dfrac{1}{k}\sum_{j=1}^{k-1}z(j)+\dfrac{1}{k}z(k)  \text{\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; separate last term from sum} \\}
+  \onslide<4->{&=\dfrac{1}{k}(k-1)\stateest{k}{-}+\dfrac{1}{k}z(k) \text{\;\;\;\;\;\;\;\;\;\;\;\; replace the sum using Eq. } \eqref{runavg}\text{ again} \\ }
+  \onslide<5->{&=\dfrac{k}{k}\stateest{k}{-} -\dfrac{1}{k}\stateest{k}{-} +\dfrac{1}{k}z(k)\text{\;\;\;\;\;\;\; distribute }\\}
+  \onslide<6->{&=\stateest{k}{-}+\dfrac{1}{k}\left[\;z(k)-\stateest{k}{-}\;\right].\text{\;\;\;\;\;\; simplify, rearrange and factor out 1/$k$ }}
+\end{align*}
+\end{footnotesize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{\textit{\textbf{Recursive}} Running Average}}
+  \begin{itemize}
+   \onslide<2->{\item We now have a recursive algorithm for computing a running average. \\\;\;Procedure:}
+	 \begin{itemize}
+		\onslide<3->{\item At the $k^{\textit{th}}$ step take the current measurrement and 
+			subtract off from it the old average to obtain the residual }
+		\onslide<4->{\item Multiply the residual by a gain factor of $1/k$ }
+		\onslide<5->{\item Finally, add this weighted residual to the old average to obtain the new average}
+	 \end{itemize}
+  \end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}}
+ \begin{itemize}
+ \onslide<2->{\item Note that we don't have to remember all the previous
+ values or averages, only the last average; we use the latest measurement to \textbf{correct} the last average
+ }
+ \onslide<3->{ \item Note also that as $k$ goes to $\infty$, the gain $1/k$ goes
+ to 0. \\(The filter is said to be going to sleep!)}
+\end{itemize}
+\onslide<4->{
+\begin{equation}\label{recursiverunavg}
+  \stateest{k}{+}=\stateest{k}{-}+\dfrac{1}{k}\left[z(k)-\stateest{k}{-}\right]
+\end{equation} 
+}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average}
+	\framesubtitle{The Measurement Residual}
+	}
+ \begin{itemize}
+  \onslide<2->{\item The quantity in brackets, $z(k)-\stateest{k}{-}$, is called the 
+  \textbf{\textit{measurement residual}}, \textbf{\textit{pre-fit residual}} or the 
+  \textbf{\textit{innovation}}}
+  \onslide<3->{\item It is the difference between the actual new measurement and the predicted new measurement}
+  \onslide<4->{\item Q: Why is $\stateest{k}{-}$ our predicted measurement?}
+  \onslide<5->{\item A: We have assumed that the state in this case is not changing with time.  Therefore, in the absence of new 
+  information the previous estimate is the best answer thus far!}
+  \begin{itemize}
+    \onslide<6->{\item When non-constant state dynamics come into play, the predicted measurement will certainly differ from 
+	  the previous updated estimate, but we expect this predicted measurement to be fairly close to the actual measurement \\
+	  (if our dynamic model is any good)}
+  \end{itemize}
+ \end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+

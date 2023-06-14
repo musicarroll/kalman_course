@@ -1,0 +1,63 @@
+% \dayonesegone/heuristic_main.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Part I}
+  \framesubtitle{The Basic Kalman Equations\\
+  Topics}
+  }
+ \begin{itemize}
+  \onslide<2->{\item Understanding the Equations: Heuristic Introduction}
+  \onslide<3->{\item Equation Drilldown:  Taking the Equations Apart}
+%  \onslide<4->{\item Differential Equations, Difference Equations and Dynamic Systems}
+  \onslide<4->{\item State Space Concepts}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{The Basic Kalman Equations}
+\framesubtitle{Understanding the Equations: Heuristic Introduction\\
+Subtopics}
+}
+ \begin{itemize}
+ \onslide<2->{\item Recursive Predictor-Corrector Algorithms}
+ \onslide<3->{\item \textbf{Running Averages (Part B)}}
+ \onslide<4->{\item Prediction (Extrapolation)}
+ \onslide<5->{\item Correction (Measurement Update)}
+ \onslide<6->{\item Gain Computation}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{\dayonesegone/runavgb.tex}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Running Average Summary} 
+	\framesubtitle{Vector Check}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Where are we?  
+}
+\begin{itemize}
+  \onslide<3->{
+\item  Looked at some Python implementations of the running average and simple moving average
+}
+  \onslide<4->{
+\item Ran some simulations of both constant and dynamic scalar processes and examine how the two types of averages performed   
+}
+\end{itemize}
+  \onslide<5->{
+\item What's next?  
+}
+\begin{itemize}
+  \onslide<6->{
+\item In the next video we will look at the prediction part of the algorithm  
+}
+  \onslide<7->{
+\item Especially in the case where the state of the system (process) is dynamically changing  
+}
+\end{itemize}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}

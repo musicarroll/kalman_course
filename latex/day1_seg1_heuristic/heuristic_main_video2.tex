@@ -1,0 +1,63 @@
+% \dayonesegone/heuristic_main.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Part I}
+  \framesubtitle{The Basic Kalman Equations\\
+  Topics}
+  }
+ \begin{itemize}
+  \onslide<2->{\item Understanding the Equations: Heuristic Introduction}
+  \onslide<3->{\item Equation Drilldown:  Taking the Equations Apart}
+%  \onslide<4->{\item Differential Equations, Difference Equations and Dynamic Systems}
+  \onslide<4->{\item State Space Concepts}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{The Basic Kalman Equations}
+\framesubtitle{Understanding the Equations: Heuristic Introduction\\
+Subtopics}
+}
+ \begin{itemize}
+ \onslide<2->{\item Recursive Predictor-Corrector Algorithms}
+ \onslide<3->{\item \textbf{Running Averages (Part A)}}
+ \onslide<4->{\item Prediction (Extrapolation)}
+ \onslide<5->{\item Correction (Measurement Update)}
+ \onslide<6->{\item Gain Computation}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{\dayonesegone/runavg.tex}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Running Average Summary} 
+	\framesubtitle{Vector Check}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Where are we?  
+}
+\begin{itemize}
+  \onslide<3->{
+\item  Derived the recursive running average algorithm 
+}
+  \onslide<4->{
+\item Identified the running average equation with the update step in the Kalman filter algorithm
+}
+\end{itemize}
+  \onslide<5->{
+\item What's next?  
+}
+\begin{itemize}
+  \onslide<6->{
+\item In the next video (Part B) we will look at Python code implementations of the running average and simple moving average  
+}
+  \onslide<7->{
+\item Simulate both a constant and a dynamic scalar process to see how well these recursive average filters perform  
+}
+\end{itemize}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}

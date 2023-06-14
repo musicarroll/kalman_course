@@ -1,0 +1,338 @@
+% \dayonesegone/extrap.tex
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}}
+ \begin{itemize}
+\onslide<2->{ \item In the running average example, the dynamics were trivial,
+ i.e., $x(k+1)=x(k)$}
+\onslide<3->{ \item This means that the state never really changes.  It's
+ always equal to its previous value}
+\onslide<4->{ \item We just don't know what the exact value is}
+\onslide<5->{ \item Example:  Measuring the same resistor over and over again with a voltmeter to
+ estimate the resistor's resistance value. }
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Prediction (Extrapolation)}
+\begin{figure}
+   \includegraphics[width=0.75\textwidth]{\dayonesegone/pred_correct_predict.jpg}
+\end{figure}
+\onslide<1->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}}
+ \begin{itemize}
+ \onslide<2->{\item In more general Kalman filtering, the
+ situation becomes more complicated by adding more elements:}
+ \begin{itemize}
+\onslide<3->{ \item Non-trivial state dynamics, possible time dependence and \bfit{process noise}: 
+\begin{center}$x(k+1)=f\left[k,x(k),w(k)\right]$\end{center}}
+\onslide<4->{ \item Typically, the process noise is additive: 
+  \begin{center}
+	$x(k+1)=f\left[k,x(k)\right]+w(k)$
+  \end{center}
+  Or, equivalently,
+  \begin{center}
+	$x(k)=f\left[k-1,x(k-1)\right]+w(k-1)$
+  \end{center}
+}
+\end{itemize}
+\onslide<5-> {\item Continuous-time systems are often specified as differential equations: $\dot{x}(t)=f(t,x(t),w(t)$,\\
+where the 'dot' over the $x$ refers to the derivative of $x$ with respect to time}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}}
+\begin{itemize}
+  \onslide<2->{\item Form of function $f$ can be simple or complicated, linear or nonlinear (but Kalman filtering requires linearization)}
+  \onslide<3->{\item Independent variable $k$ indicates  possible explicit time dependence}
+  \onslide<4->{\item Process noise assumed to be Gaussian white noise (to be defined later)}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}}
+ \begin{itemize}
+ \onslide<2->{\item General Kalman filtering further complicates things by
+ allowing the state variable to be \bfit{vector-valued}}
+ \onslide<3->{\item $f$ thus becomes a vector-valued function,
+ often a matrix (possibly time-dependent)}
+ \onslide<4->{\item Process noise must therefore also become a vector-valued variable\\ (actually, a \bfit{random process})}
+ \end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{Some Examples of \emph{Scalar} Dynamical System Functions}
+}
+\begin{itemize}
+	  \onslide<2->{	\item  Continuous, Time-Invariant and Differentiable over some bounded time interval $[0,T]$
+	}
+	\begin{itemize}
+		  \onslide<3->{
+			\item $\dot{x}(t)=f(x(t),w(t))=0$, a constant function;  if initial condition is a random variable 
+				then this is called a random constant 
+		}
+		  \onslide<4->{ \item $\dot{x}(t)=f(x(t),w(t))=x(t)+ w(t)$, a continuous random walk }
+		  \onslide<5->{ \item $\dot{x}(t)=f(x(t),w(t))=-\beta x(t)+ w(t)$, exponentially correlated random process  
+		}
+	\end{itemize}
+    \onslide<6->{
+	\item Discrete, Time-Invariant  
+	}
+	\begin{itemize}
+	  \onslide<7->{
+		\item $x(k+1) = f(x(k),w(k)) = x(k) + w(k)$, a discrete random walk sequence
+	}
+	  \onslide<8->{
+		\item $x(k+1)=f(x(k),w(k) = x^2(k-1)\cdot w(k)$, discrete, nonlinear, multiplicative noise  
+	}
+	  \onslide<9->{
+		\item $x(k+1)=f(x(k),w(k)) = ax(k) + bx(k-1) + w(k)$, autoregressive (AR) difference equation plus noise input
+	}  
+	\end{itemize}
+\end{itemize}
+\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{Some Examples of \emph{Vector} Dynamical System Functions}
+}
+\begin{itemize}
+	  \onslide<2->{	\item  Continuous, Time-Invariant and Differentiable over some bounded time interval $[0,T]$
+	}
+		  \onslide<3->{
+  \begin{footnotesize}
+		 \[\colvectwo{\dot{x}}{2}{t} =f(\colvectwo{x}{2}{t},\colvectwo{w}{2}{t})=
+			\begin{bmatrix}
+			0 & 1.0 \\
+			-2.0 & 1.5 
+			\end{bmatrix}
+			\colvectwo{x}{2}{t}+ \colvectwo{w}{2}{t}\]
+	\end{footnotesize}
+			a constant-coefficient differential equation driven by noise
+		}
+    \onslide<4->{
+	\item Discrete, but Time-varying  
+	}
+   \onslide<5->{
+   \begin{footnotesize}
+		 \[\colvectwo{x}{2}{k+1} =f(\colvectwo{x}{2}{k},\colvectwo{w}{2}{k})=
+			\begin{bmatrix}
+			0 & \sin(\omega k) \\
+			\cos(\omega k) & k^2 
+			\end{bmatrix}
+			\colvectwo{x}{2}{k}+ \colvectwo{w}{2}{k}\]
+	\end{footnotesize}
+			a \bfit{difference} equation with time-dependent coefficients and driven by noise
+	}
+	  
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{Some \bfit{Physical} Examples of Vector Dynamical System Functions}
+	}
+	\begin{itemize}
+			\onslide<2->{	\item  Discrete, Time-Invariant: A car moving in one direction 
+				along a road at constant speed (under cruise control) 
+			}
+			  \onslide<3->{
+				\begin{footnotesize}
+					\[
+					\colvectwo{x}{2}{k+1} =f(\colvectwo{x}{2}{k},\colvectwo{w}{2}{k}=
+					\begin{bmatrix}
+					1 & \Delta T \\
+					0 & 1 
+					\end{bmatrix}
+					\colvectwo{x}{2}{k}+ \colvectwo{w}{2}{k}
+					\]
+				\end{footnotesize}
+			}
+			\begin{itemize}
+				\onslide<4->{
+					\item where $\Delta T:=t_{k+1} - t_{k}$ is the time difference between each epoch (assumed constant)
+				}
+				\onslide<5->{
+					\item The first state $x_1$ is the \bfit{position} of the car
+				}
+				\onslide<6->{
+					\item The second state $x_2$ is the (constant) \bfit{velocity}
+				}
+			\end{itemize}
+	\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{Some \bfit{Physical} Examples of Vector Dynamical System Functions}
+	}
+	\begin{itemize}
+			\onslide<2->{
+				\item Note that the position is primarily a function of the velocity $x_2(k)$ and the time increment $\Delta T$
+			}
+			\onslide<3->{
+				\item Note also that there are noise terms associated with both the position and velocity states:  
+				\[x_1(k+1)=x_1(k) +  x_2(k)\cdot \Delta T + w_1(k)\] 
+				and 
+				\[x_2(k+1)=x_2(k) + w_2(k) \]
+			}
+			\onslide<4->{
+				\item $w_1$ is noise due perhaps to an inaccurate clock (whose dynamics we are not explicitly modeling) 
+			}
+			\onslide<5->{
+				\item $w_2$ is noise due to 
+				unmodeled, short term accelerations that the cruise contral is trying to overcome
+			}
+	\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}
+	\framesubtitle{Stochastic Processes}
+}
+\begin{itemize}
+	\onslide<2->{\item Note that presence of a random forcing function like
+	 Gaussian white noise makes the state vector process a stochastic process (aka random process)}
+	  \begin{itemize} 
+  		\onslide<3->{ \item Technically, this means we can't use ordinary calculus to solve the stochastic differential equations}
+	  \end{itemize}
+	 \onslide<4->{\item  Even with the same initial conditions the sample trajectory will be different each time, due to 
+	  randomly changing forcing functions }
+	 \onslide<5->{\item But many sample trajectories can be simulated/generated on a computer using Monte Carlo methods
+	 }
+	 \onslide<6->{\item We'll look at this more closely when we discuss random variables and random/stochastic processes
+	 }
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Prediction (Extrapolation)}
+	\framesubtitle{Stochastic Processes}
+}
+ \begin{itemize}
+  \onslide<2->{\item Note that we did not mention a \bfit{control function} $u(t)$ input that could also be part of the 
+forcing function}
+\begin{itemize}
+\onslide<3->{\item Control functions are usually considered to be deterministic\\ (although in reality you can't control things 
+perfectly) }
+	\begin{itemize}
+		\onslide<4->{\item E.g., aircraft actuator (e.g., elevator or flaps) deflection angle might be a 
+		control variable and yet its true value may not be known precisely!}
+	\end{itemize}
+\end{itemize}
+ \onslide<5->{\item To keep things simple and to focus on state estimation, we are going to ignore the presence of deterministic control }
+ \onslide<6->{\item Thus, the only forcing functions considered will be uncontrollable disturbance functions like noise}
+ \onslide<7->{\item And that is precisely what we want to filter out:  Noise}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation} 
+	\framesubtitle{Noise}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   So, what is noise?
+}
+  \onslide<3->{
+\item   Key characteristic: Uncorrelated in time
+}
+\begin{itemize}
+  \onslide<4->{
+\item E.g., $w(k)$ and $w(k+1)$ are statistically uncorrelated
+}
+  \onslide<5->{
+\item  As a function of time, it can only be characterized \bfit{statistically}}
+  \onslide<6->{
+\item  Process noise is distinct from measurement noise and may result from real 
+physical disturbances or from modeling errors (just don't know all the underlying perturbations) 
+}
+\end{itemize}
+  \onslide<7->{
+\item  More to come on this topic after we've drilled down more on probability and statistics 
+}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{State Dynamics and Predicted Measurement}
+}
+\begin{itemize}
+	  \onslide<2->{
+	\item When we apply state dynamics to the previous time step to bring the previous state estimate forward to the present time, 
+	we ignore the process noise  
+	}
+	  \onslide<3->{
+	\item That's because our estimate is a sample mean (average) and we expect the noise -- on average -- to be zero  
+	}
+	  \onslide<4->{
+	\item  Therefore,  $\stateest{k}{-}=f(k-1,\stateest{k-1}{+},0)$ 
+	}
+	\begin{itemize}
+		  \onslide<5->{
+		\item  Makes implicit use of the fact that process noise is additive and zero-mean 
+		}
+	\end{itemize}
+	  \onslide<6->{
+	\item  The quantity $\stateest{k}{-}$ is basis for the \bfit{predicted measurement} which results when we apply the measurement function to 
+	the predicted state (to be discussed in next video) 
+	}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Prediction (Extrapolation)} 
+	\framesubtitle{State Dynamics and Predicted Measurement}
+}
+\begin{itemize}
+  \onslide<2->{
+	\item  Recall that this prediction step was missing from the running average problem because the $f$ function in this case was a simple identity:  
+		$\stateest{k}{-}=\stateest{k-1}{+}$  
+}
+  \onslide<3->{
+	\item  Recall also that the measurement function in the running average scenario was likewise the identify function   
+}
+  \onslide<4->{
+	\item Although process noise plays no role in predicting the new state, the 
+		process noise \bfit{statistics} play a very important role in predicting how the estimation uncertainty 
+		(or estimation error covariance) grows with time  
+}
+  \onslide<5->{
+	\item Process noise is also important and is used directly in simulating system behavior over time  
+}
+  \onslide<6->{
+\item  We'll discuss this more when we drill down on the five Kalman equations 
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+

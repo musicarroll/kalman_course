@@ -1,0 +1,93 @@
+% \dayonesegone/gain.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Gain Computation}}
+ \begin{itemize}
+  \onslide<2->{
+		\item Technically, the \bfit{Kalman Gain} is computed \bfit{before} the measurement update is performed}
+   \onslide<3->{\item To blend information from \textbf{previous estimate} and \textbf{current measurement}, we need to  
+   calculate the Kalman gain, denoted by $K(k)$}
+  \onslide<4->{ \item Recall running average example: $K(k)=\dfrac{1}{k}$, a simple scalar}
+  \begin{itemize}
+	\onslide<5->{ \item If we have $k$ pieces of information \textit{of equal quality}, then, 
+			intuitively, it makes sense weight each piece equally using a factor of $1/k$}
+	\end{itemize}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Gain Computation}}
+ \begin{itemize}
+ \onslide<2->{\item Quantity to be weighted is the \textbf{measurement residual}:  
+	\[z(k)-H\stateest{k}{-}\]
+	i.e., the difference between the \textbf{actual} and \textbf{predicted} measurements}
+ \onslide<3->{\item Residual contains all new information, i.e., new information from most recent 
+ measurement minus what we think we already knew, i.e., the prediction based on previous
+ estimate}
+ \onslide<4->{\item Gain computation occurs after the prediction step but before the update step; sometimes thought of a preliminary sub-step within the update step}
+ \onslide<5->{\item Sometimes referred to as the 'innovation gain' (since the residual is somethimes called the 'innovation'}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Gain Computation} 
+	\framesubtitle{Intuitive Understanding of the Gain}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Kalman gain computation is the heart of the Kalman algorithm  
+}
+  \begin{itemize}
+	\onslide<3->{
+		\item Guarantees optimality  
+	}
+  \end{itemize}
+  \onslide<4->{
+\item  Intuitively, gain is a function of two kinds of uncertainty:   
+}
+\begin{itemize}
+  \onslide<5->{
+	\item Uncertainty in previous estimate:  How precise was our last estimate?   
+}
+\begin{itemize}
+  \onslide<6->{
+	\item  Dependent on uncertainty in the process model:  
+		How well have we actually modeled the system dynamics and how much do uncontrollable disturbances influence our estimates? 
+}
+\end{itemize}
+
+  \onslide<7->{
+	\item Uncertainty in the measurement:  How precise are the measurements?   
+}
+\end{itemize}
+  \onslide<8->{
+\item  Gain weights the innovation, and these two kinds of uncertainty are all implicity present in the innovation
+}
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Recursive Predictor-Corrector Algorithm}
+\framesubtitle{Discrete System}
+\begin{figure}
+   \includegraphics[width=0.75\textwidth]{\dayonesegone/pred_correct.jpg}
+\end{figure}
+\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kalman Gain}
+\framesubtitle{within Correction (or Update) Block}
+
+\begin{figure}
+   \includegraphics[width=0.75\textwidth]{\dayonesegone/correction_block.jpg}
+\end{figure}
+\onslide<1->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+
