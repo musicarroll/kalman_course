@@ -44,27 +44,27 @@ w_{2}(t)
 -b/m & -k/m
 \end{bmatrix}
  \Delta t
-\right)$.  We'll explain later how to derive state transition 
-matrices from the underlying differential equations. }
-  \onslide<5->{\item Here $\Delta t=T_t - T_{t-1}$, $m$ is the mass, $k$ is the 
+\right)$.   }
+  \onslide<5->{\item Note that $\exp$ is a matrix exponential. We'll explain later how to derive state transition 
+matrices from the underlying differential equations.}
+  \onslide<6->{\item Here $\Delta t=T_t - T_{t-1}$, $m$ is the mass, $k$ is the 
 spring constant, and $b$ is the damping constant}
-  \onslide<6->{\item Note that $\exp$ is a matrix exponential.}
 \end{itemize} 
 \onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Damped Harmonic Oscillator: Process Noise}}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{Process Noise}}
 \begin{itemize}
   \onslide<2->{\item Assume that the process noise $w$ has the following statistics:
 \[Q_t=\begin{bmatrix}
-0.00001 & 0\\
-0 & 0.000001
+q_{11} & 0\\
+0 & q_{22}
 \end{bmatrix}
 \]}
-  \onslide<3->{  \item This means that there is a small amount of position noise and an even
-smaller amount of velocity.}
-  \onslide<4->{  \item It also means that the noises in position and velocity are statistically 
+  \onslide<3->{  \item This means that there is some process noise in both position and velocity.}
+  \onslide<4->{  \item It also means that the noise sequences in position and velocity are statistically 
 uncorrelated (i.e., no non-zero off-diagonal elements in $Q_t$.)}
   \onslide<5->{  \item One may think of process noise as due to unmodelled dynamic effects}
 \end{itemize} 
@@ -72,7 +72,8 @@ uncorrelated (i.e., no non-zero off-diagonal elements in $Q_t$.)}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Dampled Harmonic Oscillator:  Measurement Model}}
+  \onslide<1->{\frametitle{Dampled Harmonic Oscillator}
+   \framesubtitle{Measurement Model}}
 \begin{itemize}
   \onslide<2->{  \item Measurement Model:
 \[z(t) = \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
@@ -89,7 +90,8 @@ where the measurement noise $v(t)$ has variance $\sigma^2$}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Damped Harmonic Oscillator:  State Transistion Matrix $\Phi$}}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{State Transistion Matrix $\Phi$}}
 \begin{itemize}
   \onslide<2->{  \item $\stm{t}$ can be approximated through series expansion of 
 \[\exp\begin{bmatrix}
@@ -97,13 +99,15 @@ where the measurement noise $v(t)$ has variance $\sigma^2$}
 -b/m\Delta t & -k/m\Delta t
 \end{bmatrix}
 \]}
-  \onslide<3->{  \item Or we can use Matlab's (or numpy's) expm function for specific values of $k$,$c$,$m$, and $\Delta t$.}
+  \onslide<3->{  \item Or we can use Matlab's (or numpy's) expm function for specific values 
+  of $k$,$b$,$m$, and $\Delta t$.}
 \end{itemize} 
 \onslide<4->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Damped Harmonic Oscillator:  Kalman Gain}}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{Kalman Gain}}
 \begin{itemize}
   \onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form.}
   \onslide<3->{  \item However, the gain equation $\genkalgaineq$ looks like this:
@@ -148,8 +152,8 @@ where we have once again suppresed the +/- superscripts and time step $t$.}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator Sawtooth}
-  \framesubtitle{MATLAB/Python Run}}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator }
+  \framesubtitle{Sawtooth Plots}}
   \onslide<1->{
 \begin{figure}
   \includegraphics[width=0.85\textwidth,height=7cm]{\dayonesegtwo/damposc_variance.png}
