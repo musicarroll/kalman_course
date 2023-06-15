@@ -19,9 +19,13 @@ delta_t = 1
 Phi = np.array([[1, delta_t], [0, 1]])
 
 # Process Noise:
-Q = np.array([[0.0001, 0], [0, 0.00001]])
+Q = np.array([[0.001, 0], [0, 0.1]])
 # Q = np.zeros((2, 2))
-q_string = 'with'
+if Q[0,0]>0.0 or Q[1,1]>0:
+    q_string = 'with'
+else:
+    q_string = 'without'
+
 # Process noise sample trajectory:
 w = np.random.randn(2, num_samples)
 w[0] *= np.sqrt(Q[0, 0])
@@ -31,7 +35,7 @@ w[1] *= np.sqrt(Q[1, 1])
 P0 = np.array([[0.01, 0], [0, 0.01]])
 
 # Measurement noise covariance
-R = 1**2
+R = 4**2
 # Measurement matrix: Position measurement only
 H = np.array([[1, 0]])
 

@@ -19,16 +19,22 @@ spring_coeff = 0.1
 
 Phi = expm(np.array([[0, 1], [-spring_coeff/m, -damp_coeff/m]]) * delta_t)
 
+# Model statistics:
 Q = np.diag([0.1**2, 0.01**2])
 P0 = np.diag([0.01**2, 0.01**2])
 R = 0.5**2
 H = np.array([1, 0])
-w1 = np.random.randn(num_samples) * np.sqrt(Q[0, 0])
+w1 = np.random.randn(num_samples) * np.sqrt(Q[0, 0])  # process noise for model
 w2 = np.random.randn(num_samples) * np.sqrt(Q[1, 1])
 w = np.vstack((w1, w2))
 x_true = np.zeros((2, num_samples))
+
+# True vs. assumed process noise:
 process_noise_assumption_factor = 0.5  # factor by which process noise assumption is off
-x_true[:, 0] = np.array([1, 0]) + process_noise_assumption_factor*w[:, 0]
+w1_true = process_noise_assumption_factor*np.random.randn(num_samples) * np.sqrt(Q[0, 0])
+w2_true = process_noise_assumption_factor*np.random.randn(num_samples) * np.sqrt(Q[1, 1])
+w_true = np.vstack((w1_true, w2_true))
+x_true[:, 0] = np.array([1, 0]) + w_true[:, 0]
 
 for k in range(1, num_samples):
     x_true[:, k] = Phi.dot(x_true[:, k-1]) + process_noise_assumption_factor*w[:, k-1]
