@@ -1,14 +1,17 @@
+
+
 \begin{frame}
   \onslide<1->{\frametitle{Scalar Example: Resistor Revisited}}
 \begin{itemize}
-  \onslide<2->{  \item Number of states: 1}
-  \onslide<3->{  \item System Dynamics: $x(k)=x(k-1)$}
+  \onslide<2->{  \item Number of states: 1\\ $x(k)$ represents resistance in Ohms at time step $k$}
+  \onslide<3->{  \item System Dynamics: $x(k)=x(k-1)$ }
   \onslide<4->{  \item Measurement Model: $z(k)=x(k)+v(k)$, where $v(k)$ is zero mean, 
 Gaussian white noise with variance $\sigma^2$}
   \onslide<5->{  \item Thus, $\Phi  = 1$, $H_k=1$, $Q_k=0$, $R_k=\sigma^2$}
 \end{itemize} 
 \onslide<6->{\center --------------------------------------------------------------------}
 \end{frame}
+
 
 \begin{frame}
   \onslide<1->{\frametitle{Scalar Example: Resistor Revisited}}
@@ -53,12 +56,12 @@ where $P$ is a $1\times 1$ matrix or scalar.}
 
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{\graphics/runavgplot.png}
+      \includegraphics[width=0.95\textwidth]{\graphics/runavgplot.png}
       \caption{Simple Running Average Estimator}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
-      \includegraphics[width=\textwidth]{\dayonesegtwo/kf_resistor_plot.png}
+      \includegraphics[width=0.95\textwidth]{\dayonesegtwo/kf_resistor_plot.png}
       \caption{Kalman Estimator}
     \end{subfigure}
 \caption{Comparing Running Average and Kalman Estimators}
@@ -72,26 +75,22 @@ where $P$ is a $1\times 1$ matrix or scalar.}
 
 \begin{frame}
   \onslide<1->{\frametitle{Kalman Sawtooth Plots}}
-By interleaving the pre- and post-update elements of $P$ over a run (typically only 
-the diagonal elements), we can obtain Kalman sawtooth plots.
+ With constant dynamics ($\Phi=I$) and no process noise ($Q=0$) $\rightarrow$ no upticks:
    \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.75\textwidth]{\dayonesegtwo/kf_resistor_variance_w_process_noise.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/kf_resistor_variance_no_process_noise.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
 \end{frame}
 
-\begin{frame}
-  \onslide<1->{\frametitle{Kalman Sawtooth Plots}}
-Plots show growth in uncertainty (upticks) upon time extrapolation and reduction in 
-uncertainty (downticks) after measurement updates.  No process noise $\rightarrow$ no upticks:
-   \onslide<2->{
-\begin{figure}
-  \includegraphics[width=0.75\textwidth]{\dayonesegtwo/kf_resistor_variance_no_process_noise.png}
-\end{figure}
-}
-\onslide<3->{\center --------------------------------------------------------------------}
+\begin{frame}[fragile]
+  \frametitle{Python Code Example}
+  
+\begin{lstlisting}[language=Python]
+# Python code goes here
+print("Hello, World!")
+\end{lstlisting}
+  
 \end{frame}
-
 

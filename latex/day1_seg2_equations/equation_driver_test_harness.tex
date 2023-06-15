@@ -5,16 +5,11 @@
 % Use jpg graphics in figure environments and pdflatex to compile!!!
 \usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
 \usepackage{verbatim}
-\usepackage{subcaption}
 \usepackage{url}
-
 \usetheme{Warsaw}
-\setbeamertemplate{footline}{}
-
 \newcommand{\includes}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/include}
 \newcommand{\graphics}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/graphics}
 %\newcommand{\includes}{/home/1104070/latex_include}
-
 \newcommand{\dayonesegtwo}{.}
 % Node the following tag will orient things right using dvi2pdf.
 % Process with LaTeX first, then dvi2pdf.
@@ -31,7 +26,7 @@
 \newtheorem{prop}[thm]{Proposition.}
 \newtheorem{defn}[thm]{Definition.}
 \renewcommand{\thethm}{}  % unnumbered
-%\pagestyle{plain}
+\pagestyle{plain}
 %%% --------------------------------------------------------------
 \newcounter{exercisecounter}
 
@@ -41,7 +36,7 @@
 \begin{center}
 Kalman Filter Theory and Applications\\
 Equation Drilldown\\
- {\small \url{https://github.com/musicarroll/kalman_course}}
+{\small \url{https://github.com/musicarroll/kalman_course}}
 \end{center}
 }
 \author{Michael L. Carroll}
@@ -54,5 +49,15 @@ Equation Drilldown\\
 \maketitle
 
 % ----------------------------------------------------------------
-\input{equation_main_video4.tex}
+\begin{frame}
+  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \framesubtitle{Filter Performance (30 samples; less Process Noise)}}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=\textwidth]{\dayonesegtwo/Figure_1.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+
+\end{frame}
 \end{document}

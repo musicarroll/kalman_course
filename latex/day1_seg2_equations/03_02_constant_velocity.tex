@@ -5,7 +5,8 @@
   \framesubtitle{Constant Velocity}
   }
 \begin{itemize}
-  \onslide<2->{\item Number of states: 2  }
+  \onslide<2->{\item Number of states: 2\\ $x_1(k)$ is the position at time step $k$ 
+\\ $x_2(k)$ is the velocity at time step $k$ }
   \onslide<3->{\item System Dynamics:
       \begin{align*}
 	x_1(k)&=x_1(k-1)+x_2(k-1)\Delta t\\
@@ -24,7 +25,7 @@ in that assumption could be dealt with by adding a very small process noise to t
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
 	\framesubtitle{Covariance Extrapolation}}
 \begin{itemize}
   \onslide<2->{\item $\altcovextrapeq$ becomes:  }
@@ -68,11 +69,11 @@ in that assumption could be dealt with by adding a very small process noise to t
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)} 
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)} 
   \framesubtitle{Filter Performance (without Process Noise)}}
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
@@ -80,7 +81,7 @@ in that assumption could be dealt with by adding a very small process noise to t
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
 	\framesubtitle{Filter Sawtooth}}
 Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in covariance extrapolation; causes increase in uncertainty:
   \onslide<2->{
@@ -90,19 +91,19 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 }
   \onslide<3->{
 \begin{figure}
-  \includegraphics[width=0.90\textwidth,height=5cm]{\dayonesegtwo/const_vel_sawtooth.png}
-%  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_sawtooth.png}
+  \includegraphics[width=0.95\textwidth,height=5cm]{\dayonesegtwo/const_vel_sawtooth.png}
+%  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_sawtooth.png}
 \end{figure}
 }
 \onslide<4->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
 	\framesubtitle{Filter Performance (with Process Noise)}}
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_w_proc_noise.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_w_proc_noise.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
@@ -110,22 +111,11 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
   \framesubtitle{Filter Sawtooth with Process Noise}}
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_proc_noise.png}
-\end{figure}
-}
-\onslide<3->{\center --------------------------------------------------------------------}
-\end{frame}
-
-\begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
-  \framesubtitle{Filter Performance (30 samples; less Process Noise)}}
-  \onslide<2->{
-\begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_w_less_proc_noise_30_samples.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_proc_noise.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
@@ -133,56 +123,45 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
-  \framesubtitle{Filter Performance (30 samples; less Process Noise)}}
-  \onslide<2->{
-\begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_proc_noise_30_samples.png}
-\end{figure}
-}
-\onslide<3->{\center --------------------------------------------------------------------}
-\end{frame}
-
-\begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}  
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}  
   \framesubtitle{Filter Performance (30 samples; large Process Noise)}}
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_w_large_proc_noise_30_samples.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_w_large_proc_noise_30_samples.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
   \framesubtitle{Filter Sawtooth with Process Noise (30 samples; large Process Noise)}}
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_large_proc_noise_30_samples.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_large_proc_noise_30_samples.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
 \framesubtitle{Filter Performance \\(30 samples; large Process Noise; large Measurement Noise)}}
   \onslide<2->{\begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_w_large_proc_noise_large_meas_noise_30_samples.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_w_large_proc_noise_large_meas_noise_30_samples.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-accelerated Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
   \framesubtitle{Filter Sawtooth with Process Noise \\ 
   (30 samples; large Process Noise; large Measurement Noise)}}
 
   \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_large_proc_noise_large_meas_noise_30_samples.png}
+  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_sawtooth_w_large_proc_noise_large_meas_noise_30_samples.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}

@@ -1,51 +1,106 @@
 \begin{frame}
   \onslide<1->{\frametitle{Examples}}
 \begin{itemize}
- \onslide<2->{\item The MATLAB/Python files}
- \onslide<3->{\item Scalar Example: Resistor Revisited}
- \onslide<4->{\item Non-accelerated Motion (constant velocity)}
+ \onslide<2->{\item The Examples present three different models:}
+ \begin{itemize}
+ \onslide<3->{\item Resistor Revisited (but using a Kalman filter instead of a running average)}
+ \onslide<4->{\item Constant Velocity Motion (non-accelerated motion)}
  \onslide<5->{\item Damped Harmonic Oscillator}
+\end{itemize}
+ \onslide<6->{\item Types of Plots produced by the simulations} 
 \end{itemize} 
-\onslide<6->{\center --------------------------------------------------------------------}
+\onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{About the Examples}}
+  \onslide<1->{\frametitle{Overview of the Examples}}
 \begin{itemize}
   \onslide<2->{\item Discrete-time systems}
   \onslide<3->{\item Gradually increasing complexity:  }
   \begin{itemize}
-    \onslide<4->{\item Resistor: 1-state, static (no dynamics)  }
-    \onslide<5->{\item Non-accelerated Motion:  2-state, but one of the state static }
-    \onslide<6->{\item Damped Harmonic Oscillator:  2-state, with both states dynamic  }
+    \onslide<4->{\item Resistor: 1 state, \textbf{static} (constant dynamics)  }
+    \onslide<5->{\item Constant Velocity Motion:  2 states, with one state \textbf{dynamic} and one \textbf{static} }
+    \onslide<6->{\item Damped Harmonic Oscillator:  2 states, with \textbf{both states dynamic}  }
   \end{itemize}
 \end{itemize}
 \onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{ The MATLAB/Python files:\\ 
+  \onslide<1->{
+  \frametitle{ The MATLAB/Python files:\\ 
 		\texttt{kf\_resistor\_demo,constant\_velocity, damposc} in both .m and .py versions}
 }
 \begin{itemize}
   \onslide<2->{\item File located here: matlab/python \\
-  \url{https://github.com/musicarroll/kalman_course/tree/main/src }  
-  }
+    \url{https://github.com/musicarroll/kalman_course/src }
+	}
   \onslide<3->{\item Download these scripts and play with them!  }
   \begin{itemize}
 	\onslide<4->{\item Modify the initial conditions, number of samples  }
   	\onslide<5->{\item Modify the $R$ and $Q$ noise parameters  }
 	\onslide<6->{\item Observe how the plots change }
   \end{itemize}
+  \onslide<7->{ \item If you want to share your mods to the programs, upload them to the 
+  student\_contrib folder on github}
+  \onslide<8-> {\item Please add a suffix (such as your YouTube ID) to filename:  \\
+  E.g. damposc\_joeuser.py
+  }
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Types of Plots}}
+\begin{itemize}
+  \onslide<2->{\item TME plots}
+  \begin{itemize}
+	\onslide<2->{\item Time series plots of ground truth model, measurements, and state estimations}
+  \end{itemize}
+  \onslide<3->{\item Kalman Sawtooth plots}
+  \begin{itemize}
+    \onslide<4->{\item Specialized plots for simultaneously assessing the growth and reduction in estimation uncertainty }
+  \end{itemize}
 \end{itemize}
 \onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
 
+\begin{frame}
+  \onslide<1->{
+	\frametitle{TME Plots} 
+	\framesubtitle{Truth, Measurement, Estimation Plots}
+}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_conservative.png}
+\end{figure}   
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
 
 
-\input{\dayonesegtwo/03_01_resistor.tex}
-\input{\dayonesegtwo/03_02_constant_velocity.tex}
-\input{\dayonesegtwo/03_03_damposc.tex}
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Sawtooth Plots}}
+  \begin{itemize}
+   \onslide<2->{\item Interleave pre- and post-update elements of $P$ over a run
+   }
+   \onslide<3->{\item Show growth over time in uncertainty (upticks) and 
+   then immediate reduction (no time lapse!) in uncertainty (downticks) after measurement updates 
+}
+\onslide<4->{   
+\begin{figure}
+  \includegraphics[width=0.75\textwidth,height=5cm]{\dayonesegtwo/kf_resistor_variance_w_process_noise.png}
+\end{figure}
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+%\input{\dayonesegtwo/03_01_resistor.tex}
+%\input{\dayonesegtwo/03_02_constant_velocity.tex}
+%\input{\dayonesegtwo/03_03_damposc.tex}
 
 
 
