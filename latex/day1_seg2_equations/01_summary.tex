@@ -10,14 +10,14 @@
   	\onslide<3->{\item State Dynamics Model\\ (sometimes called the System or Process Model)}
   	\onslide<4->{\item Measurement Model\\ (sometimes called the Observation Model)}
     \end{itemize}
-  \onslide<5->{ \item Find a way to \textbf{optimally} combine our knowledge of the \textbf{predicted state} 
+  \onslide<5->{ \item Find a way to \textbf{optimally} combine our knowledge of the \textbf{predicted state estimate} 
    with our knowledge of the \textbf{actual measurement} to produce an \textbf{updated state estimate}}
   \begin{itemize}
-    \onslide<6->{ \item I.e., find the optimal linear gain $K(k)$ with which to weight the measurement residual 
-		(or innovation)}
-    \onslide<7->{ \item The weighted residual is then used to additively update the state estimate} 
-	\onslide<8->{ \item The Kalman gain is also used to update the estimation error covariance 
-	(estimation uncertainty)}
+    \onslide<6->{ \item I.e., find the optimal gain with which to weight the measurement residual (difference between actual and predicted measurement) 
+	}
+    \onslide<7->{ \item Use weighted residual to  increment or update the state estimate} 
+	\onslide<8->{ \item Use Kalman gain also to update the estimation uncertainty  
+	(estimation error covariance aka "covariance")}
   \end{itemize}
  \end{itemize}
 \onslide<9->{\center --------------------------------------------------------------------}
@@ -28,73 +28,80 @@
   \onslide<1->{
   \frametitle{Mathematical Formulation of the Problem}
     \framesubtitle{Kalman Filter Problem Summary\\General, Non-Linear, Time-Invariant,
-Discrete-Time Formulation\\Given: }
+Discrete-Time Formulation }
 }
+Given:
  \begin{itemize}
    \onslide<2->{ \item State Dynamics Model:  $x(k)=f[x(k-1)] + w(k)$}
    \begin{itemize}
-      \onslide<3->{ \item $x$=state,$f$=true dynamics function,$w$=process noise}
+      \onslide<3->{ \item $k$ indicates the time step;  the actual time at that time step is $t_k$, and the time increment is $\Delta t = t_k - t_{k-1}$}
+      \onslide<4->{ \item $x(k)$=state vector,$\;\;f$=true dynamics function,$\;\;w(k)$=process noise}
    \end{itemize}
-   \onslide<4->{ \item Measurement Model: $z(k)=h[x(k)]+v(k)$}
+   \onslide<5->{ \item Measurement Model: $z(k)=h[x(k)]+v(k)$}
    \begin{itemize}
-      \onslide<5->{ \item $z$=measurement,\;\;$h$=measurement function,\;\; $v$=measurement noise}
+      \onslide<6->{ \item $z(k)$=measurement,$\;\;h$=measurement function, $\;\;v(k)$=measurement noise}
    \end{itemize}
   \end{itemize}
-  \onslide<6->{ Find:}
+  \onslide<7->{ Find:}
  \begin{itemize}
-  \onslide<7->{ \item Optimal gain $K(k)$ that allows us to update our state estimate in the following way:\\
+  \onslide<8->{ \item Optimal gain $K(k)$ that allows us to update our state estimate in the following way:\\
      $\hat{x}(k) = f[\hat{x}(k-1)] + K(k)\;[\;z(k)-h(f[\hat{x}(k-1)])\;]$}
-  \onslide<8->{ \item We'll ignore the form of the covariance for now!}
+  \onslide<9->{ \item (For now, we'll ignore the update of the covariance)}
 \end{itemize}
-\onslide<9->{\center --------------------------------------------------------------------}
+\onslide<10->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} \framesubtitle{Kalman Filter Problem Summary}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary\\
+  Limitations}
   }
  \begin{itemize}
-  \onslide<2->{ \item Kalman filtering only deals with linear (or linearized) system dynamics
+  \onslide<2->{ \item Original Kalman filter solution applies only to ...} 
   \begin{itemize}
-  \onslide<3->{
-    \item Assume from now on that vector-valued function $f[\hat{x}(k-1)]$ is simply
-matrix multiplication, something like $\Phi$ \\(which we assume for now does not vary with time)
+\onslide<3-> {\item linear systems with linear measurements driven by ...} 	 
+\onslide<4-> {\item zero-mean, Gaussian white noise processes (for both process and measurement noise)}
+\end{itemize}
+\onslide<5->{\item Assume from now on that ...}
+  \begin{itemize}
+  \onslide<6-> {
+    \item  Our vector-valued function $f$ is a linear, vector-valued function, i.e., a matrix $\Phi$
 }
-  \onslide<4->{
-  \item Also assume that $h$ is a linear, vector-valued function, i.e. a matrix $H$
+  \onslide<7->{
+  \item $h$ is also a linear, vector-valued function, i.e. a matrix $H$
 }
   \end{itemize}
-}
-  \onslide<5->{ \item Find a gain $K(k)$ in form of multiplier (i.e., a gain matrix) such that} \\
-  \onslide<6->{\center $\hat{x}(k) = \Phi\hat{x}(k-1) + K(k)\;[\;z(k)-H\Phi\hat{x}(k-1)\;]$  \\}
-  \onslide<7->{ ( {\small We'll declutter this soon by giving $\Phi\hat{x}(k-1)$ a new notation })}
+
+  \onslide<8->{ \item Thus, the problem is to find a gain matrix $K(k)$ such that} 
+  \onslide<9->{\center $\hat{x}(k) = \Phi\hat{x}(k-1) + K(k)\;[\;z(k)-H\Phi\hat{x}(k-1)\;]$  }
 
 \end{itemize}
-\onslide<8->{\center --------------------------------------------------------------------}
+\onslide<10->{\center --------------------------------------------------------------------}
 
 \end{frame}
 
 \begin{frame}
   \onslide<1->{\frametitle{Mathematical Formulation of the Problem}
-  \framesubtitle{Kalman Filter Problem Summary\\ (Linear Discrete Formulation)\\
-Given: }
+  \framesubtitle{Kalman Filter Problem Summary\\ Linear Discrete Formulation\\
+ }
 }
+Given:
 \begin{itemize}
   \onslide<2->{\item State Dynamics Model:
   $x(k)=\Phi x(k-1)+w(k)$}
   \onslide<3->{
     \begin{itemize}
-		\item $x(k)$=state,$\Phi $=state transition matrix, $w(k)$=process noise
+		\item $x(k)$=state vector,$\;\;\Phi $=state transition matrix, $\;\;w(k)$=process noise vector
 	\end{itemize} }
-  \onslide<4->{\item Measurement Model: $z(k)=H x(k)+v(k)$ \\
+  \onslide<4->{\item Measurement Model: $z(k)=H x(k)+v(k)$} 
 	\begin{itemize}
-		\item $z(k)$=measurement,$H$=meas. matrix (assumed constant), $v(k)$=meas. noise
-	\end{itemize}}
+		 \onslide<5->{\item $z(k)$=measurement vector,$\;\;H$=meas. matrix, $\;\;v(k)$=meas. noise vector}
+	\end{itemize}
   \end{itemize}
-  \onslide<5->{Find:}
+  \onslide<6->{Find:}
 \begin{itemize}
-	  \onslide<6->{\item   State estimate in the form\\
+	  \onslide<7->{\item   State estimate in the form\\
  	$\hat{x}(k) = \Phi \hat{x}(k-1) + K(k)[z(k)-H \Phi \hat{x}(k-1)]$ }
-	  \onslide<7->{\item Note that $\Phi \hat{x}(k-1)$ extrapolates of the previous estimate to the current time}
 \end{itemize}
 \onslide<8->{\center --------------------------------------------------------------------}
 
@@ -107,18 +114,19 @@ Slight Notational Change}
 }
 \begin{itemize}
   \onslide<2->{  \item The term $\Phi \hat{x}(k-1)$ is the extrapolated state estimate prior to making the measurement update or correction}
-  \onslide<3->{  \item To distinguish prior (extrapolated) estimate from updated estimate, we use the following notation:\
-\[\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1)=\text{predicted estimate prior to update}\]
-\[\hat{x}^{+}(k)=\text{updated state estimate}\] }
+  \onslide<3->{  \item To distinguish prior (extrapolated) estimate from updated estimate, we use the following notation:}
+   \onslide<4->{  	\[\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1)=\text{\textbf{predicted estimate} prior to update}\]}
+ \onslide<5->{  \[\hat{x}^{+}(k)=\text{\textbf{updated state estimate}}\] }
+  \onslide<6-> {\item Applying $H$ to $\hat{x}^{-}(k)$ yields the \textbf{predicted measurement}}
 \end{itemize}
-\onslide<4->{\center --------------------------------------------------------------------}
+\onslide<7->{\center --------------------------------------------------------------------}
 
 \end{frame}
 
 \begin{frame}
   \onslide<1->{
     \frametitle{Mathematical Formulation of the Problem}
-    \framesubtitle{Kalman Filter Problem Summary}
+    \framesubtitle{Kalman Filter Problem Solution}
   }
 \begin{itemize}
   \onslide<2->{\item Thus, the solution we seek now looks like this:\\}
@@ -131,7 +139,7 @@ Slight Notational Change}
   where $\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1) $
 }
 \onslide<5-> {
-  \item This now looks a lot like the running average problem!
+  \item This now looks very much like the running average problem!
 }
 \end{itemize}
 \onslide<6->{\center --------------------------------------------------------------------}

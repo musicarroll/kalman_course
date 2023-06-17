@@ -7,30 +7,72 @@
 \onslide<3->{
 \begin{equation}\label{kalgaineq}
 \kalgaineq
-\end{equation}
-where $R(k)$ is the measurement noise covariance matrix (to be defined later) governing the 
-white measurement noise $v(k)$ in the measurement model:
+\end{equation}}
+\onslide<4->{where $R(k)$ is the \textbf{measurement noise covariance matrix} (to be defined later) }
+\begin{itemize}
+	\onslide<5->{\item $R(k)$ governs the white measurement noise $v(k)$ in the measurement model:}
+\end{itemize}
+\onslide<6->{
 \[\measmodeleq\] 
 }
+\onslide<7->{\item But where did the Kalman gain Eq.(\ref{kalgaineq}) come from?}
 \end{itemize} 
-\onslide<4->{\center --------------------------------------------------------------------}
+\onslide<8->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{The Kalman Filter Solution:  State Update Equation}}
+	\onslide<1->{\frametitle{The Kalman Filter Solution}
+		\framesubtitle{The Kalman Gain}
+	}
+{\center {\scriptsize $\kalgaineq\;\;\;\;$ (\ref{kalgaineq}) }}
+	\begin{itemize}
+		\onslide<2->{\item We are not going to formally derive Eq.(\ref{kalgaineq}) right now.}
+		\onslide<3->{\item But we will take it apart and consider why it makes sense}
+		\onslide<4->{\item First consider that the expression on the right side has the form: $AB^{-1}$}
+		\onslide<5->{\item This is analogous to a scalar fraction: $\dfrac{a}{b}$, i.e., a ratio}
+		\onslide<6->{\item Now ignore the $H$ matrix since it only serves to map the state space-related matrix $P$ into measurement space; think of it as a scaling or projection factor}
+	\end{itemize} 
+	\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{The Kalman Filter Solution}
+		\framesubtitle{The Kalman Gain}
+	}
+{\center {\scriptsize $\kalgaineq\;\;\;\;$ (\ref{kalgaineq}) }}
+	\begin{itemize}
+		\onslide<2->{\item Note also that the matrices $P$ and $R$ are positive definite\footnote{Technically, covariance matrices only need to be positive \textbf{semi}definite.}}
+		\onslide<3->{\item So, we are essentially considering the ratio of $P$ to $P+R$}
+		\onslide<4->{\item But the $P$ here is the extrapolated $P$ that incorporates the previous $P$ and $Q$ (also positive definite) }
+		\onslide<5->{\item So, we effectively looking at a ratio of $P+Q$ to $P+Q+R$ }
+		\onslide<6->{\item If $R$ were small (a near perfect sensor), then $K$ would be near unity, and we would effectively ignore the prior state estimate and just trust the measurement; which makes sense, given a perfect sensor }
+		\onslide<7->{\item At the other extreme, if $R$ were infinitely huge (a non-functional sensor), then $K$ would be near 0 and we would effectively ignore the measurement in favor of the previously predicted estimate }
+
+	\end{itemize} 
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Kalman Filter Solution }
+  \framesubtitle{State Update Equation}}
 \begin{itemize}
-\onslide<2->{\item Using the gain, the state update equation (which we've already seen) is 
+\onslide<2->{\item Using the gain Eq. (\ref{kalgaineq})\\ }
+\onslide<3->{{\center $\kalgaineq$,\\}}
+\onslide<4->{the state update equation (which we've already seen) is 
 \begin{equation}\label{stateupdateeq}
 \stateupdateeq
 \end{equation}
-where $z(k)$ is the measurement and $H(k)$ is the measurment matrix at time $k$.
+where $z(k)$ is the measurement and $H(k)$ is the measurement matrix at time $k$.
 }
 \end{itemize} 
-\onslide<3->{\center --------------------------------------------------------------------}
+\onslide<5->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{The Kalman Filter Solution:  The Covariance Update Equation}}
+  \onslide<1->{\frametitle{The Kalman Filter Solution}
+  	\framesubtitle{The Covariance Update Equation}
+  }
 \begin{itemize}
 \onslide<2->{\item Likewise, the error covariance $P(k)$ is corrected using the gain:
 \begin{equation}\label{covupdateeq}
@@ -41,61 +83,79 @@ where $z(k)$ is the measurement and $H(k)$ is the measurment matrix at time $k$.
 \onslide<4->{\item Better to use the Joseph form:}\\
 \onslide<5->{ {\small \[ \josephcovupdateeq\] } }
 \begin{itemize}
-\onslide<6->{\item Better preserves symmetry of $P$}
+\onslide<6->{\item which better preserves symmetry of $P$\\ (covariance matrices are always symmetric)}
 \end{itemize}
 \end{itemize} 
 \onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{The Five Kalman Equations}
-%  \begin{tabular}{rl}
-%    \onslide<1->{ {\small State Extrapolation:} &{\small $\stateextrapeq$  } }\\
-%    \onslide<2->{ {\small Covariance Extrapolation: }&{\small  $\altcovextrapeq$}} \\
-%    \onslide<3->{ {\small Kalman Gain:}& {\small $\kalgaineq$}} \\
-%    \onslide<4->{ {\small State Update:}& {\small $\stateupdateeq$}} \\
-%    \onslide<5->{ {\small Covariance Update:}&{\small  $\covupdateeq$ }}
-%  \end{tabular}
-%  \onslide<6->{\center --------------------------------------------------------------------}
-%\end{frame}
+\begin{frame}
+	\onslide<1->{\frametitle{The Kalman Filter Solution}
+		\framesubtitle{Taking Apart the Covariance Update Equation}
+	}
+	\begin{itemize}
+		\onslide<2->{\item Again, ignore $H$ in Eq.(\ref{covupdateeq}):$\;\;\covupdateeq$}
+		\onslide<3->{\item Thus, $I-K$ indicates, in a sense, how far we are from having no sensors at all}
+		\onslide<4->{\item If $K=0$,(i.e., no sensors at all) there would be no reduction in uncertainty }
+		\onslide<5->{\item If $K=I$, we would have perfect knowledge (thanks to perfect sensors), i.e., $P=0$}
+		\onslide<6->{\item Thus, if $0< K < I,$ this use of $I-K$ will tend to reduce the uncertainty $P$ }
+		\onslide<7->{\item Later we will see how this form for $K$ and its use in the update equations is in fact mandated by the requirement of optimal use of $\Phi,P,Q,R$  }
+		
+	\end{itemize} 
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
 
+\begin{comment}
+\begin{frame}
+  \frametitle{The Five Kalman Equations}
+  \begin{tabular}{rlc}
+    \onslide<1->{ {\scriptsize State Extrapolation:} & {\tiny $\stateextrapeq$  } & {\scriptsize (TBD) }} \\
+    \onslide<2->{ {\scriptsize Covariance Extrapolation: }&{\tiny  $\altcovextrapeq$} & {\scriptsize (TBD) }} \\
+    \onslide<3->{ {\scriptsize Kalman Gain:}& {\tiny $\kalgaineq$} & {\scriptsize \ref{kalgaineq} }} \\
+    \onslide<4->{ {\scriptsize State Update:}& {\tiny $\stateupdateeq$} & {\scriptsize \ref{stateupdateeq}}} \\
+    \onslide<5->{ {\scriptsize Covariance Update:}& \makecell{ {\tiny  $\covupdateeq$ or \\  $\josephcovupdateeq$ } } & {\scriptsize \ref{covupdateeq}} }
+  \end{tabular}
+  \onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+\end{comment}
 
 \begin{frame}
   \frametitle{The Five Kalman Equations}
-\onslide<1->{\begin{equation}
+\onslide<1->{\begin{equation*}
 \textbf{State Extrapolation: }\stateextrapeq
-\end{equation}} 
-\onslide<2->{\begin{equation}
+\end{equation*}} 
+\onslide<2->{\begin{equation*}
 \textbf{Covariance Extrapolation: }\altcovextrapeq
-\end{equation}} 
-\onslide<3->{\begin{equation}
+\end{equation*}} 
+\onslide<3->{\begin{equation*}
 \textbf{Kalman Gain: }\kalgaineq
-\end{equation}} 
-\onslide<4->{\begin{equation}
+\end{equation*}} 
+\onslide<4->{\begin{equation*}
 \textbf{State Update: }\stateupdateeq
-\end{equation}} 
+\end{equation*}} 
 \onslide<5->{
-	\begin{equation}
+	\begin{equation*}
 		\textbf{Covariance Update: }\covupdateeq
-	\end{equation} 
-		or {\small $\josephcovupdateeq$ }
-(the Joseph form)}
+	\end{equation*} 
+\onslide<6->{or the Joseph form for the Covariance Update:\\}		
+\onslide<7->{	{\center \small $\josephcovupdateeq$ }}	
+	}
 
-\onslide<6->{\center --------------------------------------------------------------------}
+\onslide<8->{\center --------------------------------------------------------------------}
  
 \end{frame}
 
 \begin{frame}
   \onslide<1->{\frametitle{Definitions for the Five Equations }}
 \begin{itemize}
-  \onslide<2->{\item $\covmatdef$ is the estimation error covariance matrix}
+  \onslide<2->{\item $\covmatdef$ is the estimation error covariance matrix (formal definition)}
   \begin{itemize}  
-	\onslide<3->{\item Often just referred to as the 'covariance matrix'}
-  \end{itemize}
+  \onslide<3->{\item where $E[...]$ is statistical expectation (more on that later) and }
   \onslide<4->{\item $\esterrdef$ is the estimation error  }
-  \onslide<5->{\item $\procnoisematdef{k}$ is the process noise covariance matrix }
-  \onslide<6->{\item $\measnoisematdef{k}$ is the measurement noise covariance matrix }
-  \onslide<7->{\item In the above, $E[...]$ is statistical expectation (more on that later) }
+	\onslide<5->{\item $P$ is often just referred to as the 'covariance matrix'}
+  \end{itemize}
+  \onslide<6->{\item $\procnoisematdef{k}$ is the process noise covariance matrix }
+  \onslide<7->{\item $\measnoisematdef{k}$ is the measurement noise covariance matrix }
 \end{itemize}
 \onslide<8->{\center --------------------------------------------------------------------}
 \end{frame}

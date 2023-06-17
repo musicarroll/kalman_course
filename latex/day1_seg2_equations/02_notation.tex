@@ -14,6 +14,9 @@
 	\begin{itemize}
 		\onslide<6->{ \item $\procnoise{k}=\procnoisek$}
 	\end{itemize}
+
+	\onslide<7->{ \item Some others prefer to make $k$ a subscript;  we choose not to do so, in order to avoid clashes with vector and matrix elements which do by convention use subscripts}
+
 \end{itemize}
 \onslide<7->{\center --------------------------------------------------------------------}
 \end{frame}
@@ -31,6 +34,9 @@
 \onslide<5->{ \item Restriction to matrices:  $\simplestatedyneq$}
 \onslide<6->{ \item $\stm{k}$ is called the \textbf{state transition matrix}.  It is 
 $n\times n$ in size.}
+\begin{itemize}
+	\onslide<7->{\item If $\Phi$ is derived from a constant-coefficient difference or differential equation, and the time increments $\Delta t$ are constant, there there is no need for the index $k$;  $\Phi$ will then be constant} 
+\end{itemize}
 \end{itemize}
 \onslide<7->{\center --------------------------------------------------------------------}
 
@@ -42,14 +48,21 @@ $n\times n$ in size.}
 }
 
 \begin{itemize}
-\onslide<2->{ \item State Transition Matrix: $\stmeqtwo{k}{k-1}$}
+\onslide<2->{ \item State Transition Matrix: $\stmeq{k}$}
 \onslide<3->{ \item Extrapolates state vector from time step $k-1$ to time step
  $k$ (pulling from past to present)}
-\onslide<4->{ \item Tells you how the state would evolve in the absence of forcing functions}
-\onslide<5->{ \item Remember: this is still just a model.  We don't really know
- what the true state is, because the random forcing function (process noise) generates disturbances!}
+\begin{itemize}
+	\onslide<4->{\item If $\Delta t = t_k-t_{k-1}$ is constant for all $k$, then we might write $\Phi(\Delta t)$}
 \end{itemize}
-\onslide<6->{\center --------------------------------------------------------------------}
+\onslide<5->{ \item Tells you how the state would evolve \textbf{in the absence of forcing functions}}
+\begin{itemize}
+	\onslide<6->{ \item Remember: this is still just a model }
+	\onslide<7->{ \item  We don't really know
+	what the true state is, because the random forcing function (process noise) generates disturbances!}
+\end{itemize}
+
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
 
 \end{frame}
 
@@ -59,7 +72,7 @@ $n\times n$ in size.}
 }
 
  \begin{itemize}
-\onslide<2->{ \item We could throw in other factors and terms}
+\onslide<2->{ \item Other factors and terms often play a role in the full state dynamics model}
  \begin{itemize}
 \onslide<3->{ \item A matrix $\sdm{k}$ to distribute the Gaussian white noise
  to the states}
@@ -68,9 +81,8 @@ $n\times n$ in size.}
  \onslide<5->{ \item Then the full state dynamics equation would look like this: 
  \[\statedynctrleq\]}
  \end{itemize}
-\onslide<6->{ \item For simplicity we'll generally leave the control variable out of the picture}
-\onslide<7->{ \item We are deliberately trying to keep the notation as decluttered as
- possible (for now)}
+\onslide<6->{ \item In order to focus primarily on the estimation problem, we will generally omit the control variable}
+\onslide<7->{ \item Control is obviously an important part of engineering system solutions, so we will consider it occasionally}
 \end{itemize}
 \onslide<8->{\center --------------------------------------------------------------------}
 \end{frame}
@@ -89,7 +101,7 @@ by the state transition matrix:
 }
 \onslide<3->{\item Q: Why isn't the white noise sequence $w$ included in this extrapolation?}\\  
 \onslide<4->{A:  Because the white noise forcing function is a \textbf{zero-mean} process.  
-Thus, on average, the equation is homogeneous and we should therefore use the homogeneous solution, i.e., 
+Thus, \textbf{on average}, the equation is homogeneous and we should therefore use the homogeneous solution, i.e., 
 the state transition matrix.}
 \end{itemize} 
 \onslide<5->{\center --------------------------------------------------------------------}
@@ -102,18 +114,19 @@ the state transition matrix.}
 
 \begin{itemize}
 \onslide<2->{\item Q: How certain are we that our solution is right?}\\
-\onslide<3->{A: The answer is given by the \textbf{estimation error covariance matrix} or often just 
-called the covariance matrix $P(k)$}
-\onslide<4->{\item Just like the state estimate, the covariance matrix is propagated forward in time before being corrected:}
-\onslide<5->
+\onslide<3->{A: The answer is given by the \textbf{estimation error covariance matrix}, often for brevity just 
+called the covariance matrix $P(k)$\onslide<4->{\footnote{\onslide<5->{There are two other covariance matrices involved in KF, but $P$ is often referred to as THE covariance matrix.}}}
+}
+\onslide<6->{\item Like the state estimate, the covariance matrix is propagated forward in time before being corrected:}
+\onslide<7->
 {\begin{equation}\label{altcovextrapeq}
 \altcovextrapeq
 \end{equation}
 where $Q(k)$ is a matrix called the \textbf{process noise covariance matrix} }
-\onslide<6->{\item $Q(k)$ measures the amount of dispersion in the white noise forcing function $w(k)$}
-\onslide<7->{\item Later we'll learn how to define $P(k)$ in terms of the expected error in the estimation $\esterrdef$}
+\onslide<8->{\item $Q(k)$ measures the amount of dispersion in the white noise forcing function $w(k)$}
+\onslide<9->{\item Later we'll learn how to define $P(k)$ (at least initially) in terms of the expected error in the estimation $\esterrdef$}
 \end{itemize} 
-\onslide<8->{\center --------------------------------------------------------------------}
+\onslide<10->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
@@ -127,10 +140,10 @@ where $Q(k)$ is a matrix called the \textbf{process noise covariance matrix} }
 \onslide<3->{\item The term $\stm{k}\covmat{k-1}{+}\stm{k}\trans$ represents the effect that the state dynamics 
 has on the estimation error covariance}
 \begin{itemize}
-\onslide<4->{\item P(k) is positive definite matrix and $\Phi $ tends to increase its norm }
+\onslide<4->{\item P(k) is a positive definite matrix and $\Phi $ tends to increase its norm }
 \end{itemize}
 \onslide<5->{\item The other term $Q(k)$ represents the increased uncertainty added at each step due to 
-the process noise inherent in the system }
+the process noise inherent in the system (like all covariance matrices, it is also positive definite) }
 \end{itemize} 
 \onslide<6->{\center --------------------------------------------------------------------}
 \end{frame}
