@@ -5,7 +5,6 @@ constant_velocity.py:  Conversion of the matlab program
 @author: cognotrend
 """
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from collate import collate
@@ -19,33 +18,35 @@ delta_t = 1
 Phi = np.array([[1, delta_t], [0, 1]])
 
 # Process Noise:
-Q = np.array([[0.001, 0], [0, 0.1]])
+Q = np.array([[0.001, 0], [0, 1e-6]])
 # Q = np.zeros((2, 2))
 if Q[0,0]>0.0 or Q[1,1]>0:
     q_string = 'with'
 else:
     q_string = 'without'
 
-# Process noise sample trajectory:
-w = np.random.randn(2, num_samples)
-w[0] *= np.sqrt(Q[0, 0])
-w[1] *= np.sqrt(Q[1, 1])
-
 # Initial estimation uncertainty (covariance):
 P0 = np.array([[0.01, 0], [0, 0.01]])
 
 # Measurement noise covariance
-R = 4**2
+R = 2**2
 # Measurement matrix: Position measurement only
 H = np.array([[1, 0]])
 
-# Truth model
 x_true = np.zeros((2, num_samples))
-# Initial truth:
-x_true[:, 0] = [0, 1] + w[:, 0]
-# Apply Phi to truth and add process noise:
+
+# True vs. assumed process noise:
+# Make this parameter=1, if you want the truth and the model to have the same process
+# noise stats.  Otherwise, make it any non-negative value you like for parametric studies.
+process_noise_assumption_factor = 0.8 
+# Process noise sample trajectory:
+w1_true = process_noise_assumption_factor * np.sqrt(Q[0, 0]) * np.random.randn(num_samples) 
+w2_true = process_noise_assumption_factor * np.sqrt(Q[1, 1]) * np.random.randn(num_samples)
+w_true = np.vstack((w1_true, w2_true))
+x_true[:, 0] = np.array([0, 1]) + w_true[:, 0] # truth at timestep 0
+
 for k in range(1, num_samples):
-    x_true[:, k] = Phi.dot(x_true[:, k - 1]) + w[:, k - 1]
+    x_true[:, k] = Phi.dot(x_true[:, k-1]) + process_noise_assumption_factor*w_true[:, k-1]
 
 # Estimate:
 x_hat = np.zeros((2, num_samples))
@@ -90,7 +91,14 @@ for k in range(1, num_samples):
 rms_pos = np.sqrt(np.mean((x_true[0, :] - x_hat[0, :])**2))
 rms_vel = np.sqrt(np.mean((x_true[1, :] - x_hat[1, :])**2))
 
-param_string = f'Pos Q[0]={Q[0,0]}, Vel Q[0]={Q[1,1]}  R={R},\n Pos x_hat[0]={np.round(x_hat[0,0],2)}, Vel x_hat[0]={np.round(x_hat[0,1],2)}, \n Pos P[0]={np.round(P[0,0,0],2)}, Vel P[0]={np.round(P[1,1,0],2)}'
+# Customm TME Plot:  Hasn't yet been integrated with movavgs.tme_plot()
+posQ = f'Pos Q={np.round(Q[0,0],4)}'
+velQ = f'Vel Q={np.round(Q[1,1],8)}'
+pos_init_est = f'Pos={np.round(x_hat[0,0],2)}'
+vel_init_est = f'Vel={np.round(x_hat[1,0],2)}'
+param_string = f'Model Init: {pos_init_est}, {vel_init_est}, {posQ}, {velQ},\n Pos P={np.round(P[0,0,0],4)}, Vel P={np.round(P[1,1,0],4)}, R={R}'
+
+# param_string = f'Pos Q[0]={Q[0,0]}, Vel Q[0]={Q[1,1]}  R={R},\n Pos x_hat[0]={np.round(x_hat[0,0],2)}, Vel x_hat[0]={np.round(x_hat[0,1],2)}, \n Pos P[0]={np.round(P[0,0,0],2)}, Vel P[0]={np.round(P[1,1,0],2)}'
 plt.figure(1)
 plt.subplot(2, 1, 1)
 plt.plot(range(num_samples), x_true[0, :], 'b--*', label='Truth')
@@ -100,8 +108,8 @@ plt.legend(loc='best')
 plt.xlabel('Time')
 plt.ylabel('Position (m)')
 plt.title('Kalman Estimator: Non-accelerated 1D Motion\n'+ param_string)
-str = ['Meas Noise Variance: {:.4f}'.format(R), 'RMS Pos Err: {:.4f}'.format(rms_pos)]
-plt.annotate('\n'.join(str), xy=(0.6, 0.6), xycoords='figure fraction')
+str = ['RMS Pos Err: {:.4f}'.format(rms_pos)]
+plt.annotate('\n'.join(str), xy=(0.2, 0.55), xycoords='figure fraction')
 plt.subplot(2, 1, 2)
 plt.plot(range(num_samples), x_true[1, :], 'b--*', label='Truth')
 plt.plot(range(num_samples), x_hat[1, :], 'd:k', label='Estimate')
@@ -109,7 +117,7 @@ plt.legend(loc='best')
 plt.xlabel('Time (s)')
 plt.ylabel('Velocity (m/sec)')
 str = ['RMS Vel Err: {:.4f}'.format(rms_vel)]
-plt.annotate('\n'.join(str), xy=(0.7, 0.4), xycoords='figure fraction')
+plt.annotate('\n'.join(str), xy=(0.65, 0.42), xycoords='figure fraction')
 
 print('Error:')
 print(x_hat[:, num_samples - 1] - x_true[:, num_samples - 1])

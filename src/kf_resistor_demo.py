@@ -10,27 +10,28 @@ import movavgs as ma
 import math
 from collate import collate
 
-num_samples = 50
+num_samples = 30
 truth = 220.6  # static state model
 truth_vec = truth*np.ones((num_samples,))
+# State vector
+x_true = truth_vec  # True state
+x_hat = np.zeros((num_samples,))    # Data series to hold state estimates
 
 # Kalman-specific parameters:
 Phi = 1         # Constant dynamics
-Q   = 0.5**2    # Process noise covariance (1x1 matrix):  Should be small since we "know" process is constant!
+Q   = 4.0         # Process noise covariance (1x1 matrix):  Should be small since we "know" process is constant!
 P0  = 1.0**2    # Initial estimation error covariance (1x1 matrix)
-R   = 0.5**2    # Initial measurement noise covariance (1x1 matrix)
+R   = 1.0**2    # Initial measurement noise covariance (1x1 matrix)
 
-# Measurement: 
+# Measurements: 
 rg = np.random.default_rng(1)
 mu=0
 sigma = math.sqrt(R)
 z = truth_vec + rg.normal(mu,sigma,num_samples)
-
-H=1        # Measurement matrix (1x1) (will be no need to take transposes or inverses) 
-
-x_true = truth_vec  # True state
-x_hat = np.zeros((num_samples,))    # Data series to hold state estimates
 x_hat[0]= z[0] # Initial state estimate / guess; could also be based on truth + init_percent*truth
+
+H=1     # Measurement matrix (1x1) (will be no need to take transposes or inverses) 
+
 
 # Process Noise stats
 # initial percentage error in guess:
@@ -55,22 +56,17 @@ for k in range(1,num_samples):   # Start at k=2, because we already have k=1 as 
 
 # Plot results:
 time = np.arange(0,num_samples)
-#plt.figure(1)
-#plt.plot(time,x_true,'b--*',time,z,'r--o',time,x_hat,'d:k')
-#plt.legend(['Truth','Measurements','Estimates'],loc='lower right')
-#plt.xlabel('Time')
-#plt.ylabel('Resistance (Ohms)')
-#plt.title('Kalman Estimator: Resistor')
-#plt.ylim([truth-init_percent*truth*10,truth+init_percent*truth*10])
-#plt.show()
+
 
 print('Estimate: ', x_hat)
 print('Residual: ', x_hat-x_true)
 
+param_string = f'Q={Q},  R={R}, x_hat[0]={round(x_hat[0],2)}, P[0]={round(P[0],2)}'
 avgtype = 'Kalman Filter'
-title = avgtype + ' Estimator:  ' + ' Resistance ' 
+title = f'{avgtype} Estimator:  Resistance \n {param_string}' 
 ylabel = 'Resistance (Ohms)'
-ma.tme_plot(2,truth_vec, z, x_hat, ylabel, title, sigma) 
+ylim = (216,224)  # y axis scaling to be comparable with running average
+ma.tme_plot(2,truth_vec, z, x_hat, ylabel, title, sigma,ylim) 
 
 
 # To get a sawtooth plot, you can use the imported function called collate.
@@ -84,7 +80,7 @@ t=time
 new_time = collate(t,t)
 plt.figure(3)
 plt.plot(new_time,collated)
-plt.title('Variance in Resistance (some Process Noise)')
+plt.title(f'Variance in Resistance (some Process Noise)\n {param_string}')
 plt.xlabel('Time')
 plt.ylabel('Variance (Ohms^2)')
 plt.show()
