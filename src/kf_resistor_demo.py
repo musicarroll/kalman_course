@@ -19,7 +19,7 @@ x_hat = np.zeros((num_samples,))    # Data series to hold state estimates
 
 # Kalman-specific parameters:
 Phi = 1         # Constant dynamics
-Q   = 4.0         # Process noise covariance (1x1 matrix):  Should be small since we "know" process is constant!
+Q   = 4.0       # Process noise covariance (1x1 matrix):  Should be small since we "know" process is constant!
 P0  = 1.0**2    # Initial estimation error covariance (1x1 matrix)
 R   = 1.0**2    # Initial measurement noise covariance (1x1 matrix)
 
