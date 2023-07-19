@@ -31,7 +31,7 @@ x_true = np.zeros((2, num_samples))
 # True vs. assumed process noise:
 # Make this parameter=1, if you want the truth and the model to have the same process
 # noise stats.  Otherwise, make it any non-negative value you like for parametric studies.
-process_noise_assumption_factor = 0.5  
+process_noise_assumption_factor = 0.8  
 w1_true = process_noise_assumption_factor * np.sqrt(Q[0, 0]) * np.random.randn(num_samples) 
 w2_true = process_noise_assumption_factor * np.sqrt(Q[1, 1]) * np.random.randn(num_samples)
 w_true = np.vstack((w1_true, w2_true))
@@ -81,7 +81,7 @@ axs[0].plot(times, x_true[0, :], 'b--*', label='Truth')
 axs[0].plot(times, z, 'r--o', label='Measurements')
 axs[0].plot(times, x_hat[0, :], 'd:k', label='Estimate')
 axs[0].legend(loc='lower left')
-axs[0].set_xlabel(f'Time (s) delta_t ={delta_t}')
+axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
 axs[0].set_ylabel('Position (m)')
 axs[0].set_title('Kalman Estimator: Damped Harmonic Oscillator\n'+param_string)
 str_text = f"RMS Pos Err: {np.round(rms_pos,4)}"
