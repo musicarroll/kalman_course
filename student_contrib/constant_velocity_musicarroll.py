@@ -39,7 +39,7 @@ x_true[1,:] = np.ones((1,num_samples))
 # True vs. assumed process noise:
 # Make this parameter=1, if you want the truth and the model to have the same process
 # noise stats.  Otherwise, make it any non-negative value you like for parametric studies.
-process_noise_assumption_factor = 0.1
+process_noise_assumption_factor = 0.8
 # Process noise sample trajectory:
 w1_true = process_noise_assumption_factor * np.sqrt(Q[0, 0]) * np.random.randn(num_samples) 
 w2_true = process_noise_assumption_factor * np.sqrt(Q[1, 1]) * np.random.randn(num_samples)
@@ -75,7 +75,6 @@ pre[1,0] = P[1, 1, 0]
 # Initialize measurement sequence (= truth + meas noise):
 z[0,0] = x_true[0, 0] + np.sqrt(R[0,0]) * np.random.randn()
 z[1,0] = x_true[1, 0] + np.sqrt(R[1,1]) * np.random.randn()
-np.linalg.inv(H.dot(prior_P[:, :, k]).dot(H.T) + R)
 # The Kalman loop:
 for k in range(1, num_samples):
     # Extrapolation:
