@@ -18,7 +18,7 @@ def recursive_moving_avg(meas,gain,prior_est,oldest_meas):
 
 def tme_plot(plotnum,truth_data, meas_data=None, 
              est_data=None, ylabel='y', title='', 
-             sigma=1.0):
+             sigma=1.0,ylim=None):
     plt.figure(plotnum)
     plt.plot(truth_data,'.-b')
     legend = []
@@ -33,6 +33,27 @@ def tme_plot(plotnum,truth_data, meas_data=None,
     plt.ylabel(ylabel)
     plt.legend(legend,loc='lower left')
     plt.title(title)
+    plt.ylim(ylim)
     plt.show()
 
+def tme_subplots(numsubplots, times, x_true, meas_array, x_hat, 
+                 ylabels, title_string, xlabel_string):
+    fig, axs = plt.subplots(numsubplots, 1, 
+                figsize=(8, 8),
+                sharex='col', sharey='row'
+                )
+    for i in range(numsubplots):
+        axs[i].plot(times, x_true[i, :], 'b--*', label='Truth')
+        if type(meas_array[i])!=type(None):
+            axs[i].plot(times, meas_array[i], 'r--o', label='Measurements')
+        axs[i].plot(times, x_hat[0, :], 'd:k', label='Estimate')
+        axs[i].legend(loc='lower left')
+        # axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
+        axs[i].set_ylabel(ylabels[i])
+        if i==0:
+            axs[i].set_title(title_string)
+            
+        axs[i].set_xlabel(xlabel_string) 
 
+        
+                

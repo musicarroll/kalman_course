@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.linalg import expm
 from collate import collate
+from movavgs import tme_subplots
 
 np.random.seed(0)  # Set random seed for reproducibility
 
@@ -75,37 +76,52 @@ posQ = f'Pos Q={np.round(Q[0,0],6)}'
 velQ = f'Vel Q={np.round(Q[1,1],6)}'
 pos_init_est = f'Pos={np.round(x_hat[0,0],2)}'
 vel_init_est = f'Vel={np.round(x_hat[1,0],2)}'
+
 param_string = f'Model Init: {pos_init_est}, {vel_init_est}, {posQ}, {velQ},\n Pos P={np.round(P[0,0,0],4)}, Vel P={np.round(P[1,1,0],4)}, R={np.round(R,6)}'
+rms_text = f"RMS Pos Err: {np.round(rms_pos,4)}, RMS Vel Err: {np.round(rms_vel,4)}"
 
-fig, axs = plt.subplots(2, 1, figsize=(8, 8))
+title_string = f'Kalman Estimator: Damped Harmonic Oscillator\n{param_string}\n{rms_text}'
+xlabel_string = f'Time (s), $\Delta t$={delta_t}'
+
 times = delta_t*np.arange(1, num_samples+1)
-axs[0].plot(times, x_true[0, :], 'b--*', label='Truth')
-axs[0].plot(times, z, 'r--o', label='Measurements')
-axs[0].plot(times, x_hat[0, :], 'd:k', label='Estimate')
-axs[0].legend(loc='lower left')
-axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
-axs[0].set_ylabel('Position (m)')
-axs[0].set_title('Kalman Estimator: Damped Harmonic Oscillator\n'+param_string)
-str_text = f"RMS Pos Err: {np.round(rms_pos,4)}"
-axs[0].text(0.5, 0.1, str_text, transform=axs[0].transAxes)
-axs[1].plot(times, x_true[1, :], 'b--*', label='Truth')
-axs[1].plot(times, x_hat[1, :], 'd:k', label='Estimate')
-axs[1].legend(loc='lower left')
-axs[1].set_xlabel(f'Time (s), $\Delta t$={delta_t}') 
-axs[1].set_ylabel('Velocity (m/sec)')
-str_text = f"RMS Vel Err: {np.round(rms_vel,4)}"
-axs[1].text(0.5, 0.1, str_text, transform=axs[1].transAxes)
 
+meas_array = [z,None]
+
+# fig, axs = plt.subplots(2, 1, 
+#                         figsize=(8, 8),
+#                         sharex='col', sharey='row'
+#                         )
+# axs[0].plot(times, x_true[0, :], 'b--*', label='Truth')
+# axs[0].plot(times, z, 'r--o', label='Measurements')
+# axs[0].plot(times, x_hat[0, :], 'd:k', label='Estimate')
+# axs[0].legend(loc='lower left')
+# # axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
+# axs[0].set_ylabel('Position (m)')
+# axs[0].set_title(title_string)
+
+
+# axs[1].plot(times, x_true[1, :], 'b--*', label='Truth')
+# axs[1].plot(times, x_hat[1, :], 'd:k', label='Estimate')
+# axs[1].legend(loc='lower left')
+# axs[1].set_xlabel(xlabel_string) 
+# axs[1].set_ylabel('Velocity (m/sec)')
+
+ylabels =['Position (m)','Velocity (m/sec)']
+tme_subplots(2, times, x_true, meas_array, x_hat, 
+                 ylabels, title_string, xlabel_string)
 print('Error:')
 print(x_hat[:, -1] - x_true[:, -1])
 
 collated = collate(pre[0,:], post[0,:])
 
 new_time = collate(times, times)
+
+title_string = f'Variance in Position Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}'
+
 plt.figure(2)
 plt.plot(new_time, collated)
-plt.title('Variance in Position Estimate (w/ Pos Sensor Only)\n'+param_string)
-plt.xlabel(f'Time(s), $\Delta t$={delta_t} ')
+plt.title(title_string)
+plt.xlabel(xlabel_string)
 plt.ylabel('Variance (m^2)')
 
 plt.show()
@@ -113,10 +129,13 @@ plt.show()
 collated = collate(pre[1,:], post[1,:])
 
 new_time = collate(times, times)
+
+title_string = f'Variance in Velocity Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}'
+
 plt.figure(3)
 plt.plot(new_time, collated)
-plt.title('Variance in Velocity Estimate (w/ Pos Sensor Only)\n'+param_string)
-plt.xlabel(f'Time(s), $\Delta t$={delta_t} ')
+plt.title(title_string)
+plt.xlabel(xlabel_string)
 plt.ylabel('Variance (m^2)')
 
 plt.show()
