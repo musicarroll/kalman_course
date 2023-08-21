@@ -46,8 +46,8 @@ x_hat[:, 0] = np.array([1, 0])
 
 P = np.zeros((2, 2, num_samples))
 prior_P = np.zeros((2, 2, num_samples))
-pre  = np.zeros(num_samples)
-post = np.zeros(num_samples)
+pre = np.zeros((2,num_samples))
+post = np.zeros((2,num_samples))
 
 # Pre-compute Measurements:
 v = np.sqrt(R) * np.random.randn(num_samples)
@@ -61,11 +61,13 @@ pre[0] = P[0, 0, 0]
 for k in range(1, num_samples):
     prior_est[:, k] = Phi.dot(x_hat[:, k-1])
     prior_P[:, :, k] = Phi.dot(P[:, :, k-1]).dot(Phi.T) + Q
-    pre[k] = prior_P[0, 0, k]
+    pre[0,k] = prior_P[0, 0, k]
+    pre[1,k] = prior_P[1, 1, k]
     K = prior_P[:, :, k].dot(H.T) / (H.dot(prior_P[:, :, k]).dot(H.T) + R)
     x_hat[:, k] = prior_est[:, k] + K * (z[k] - H.dot(prior_est[:, k]))
     P[:, :, k] = (np.eye(2) - K.dot(H)).dot(prior_P[:, :, k]).dot((np.eye(2) - K.dot(H)).T) + K.dot(R).dot(K.T)
-    post[k] = P[0, 0, k]
+    post[0,k] = P[0, 0, k]
+    post[1,k] = P[1, 1, k]
 
 rms_pos = np.sqrt(np.mean((x_true[0, :] - x_hat[0, :])**2))
 rms_vel = np.sqrt(np.mean((x_true[1, :] - x_hat[1, :])**2))
@@ -97,12 +99,23 @@ axs[1].text(0.5, 0.1, str_text, transform=axs[1].transAxes)
 print('Error:')
 print(x_hat[:, -1] - x_true[:, -1])
 
-collated = collate(pre, post)
+collated = collate(pre[0,:], post[0,:])
 
 new_time = collate(times, times)
-plt.figure()
+plt.figure(2)
 plt.plot(new_time, collated)
-plt.title('Variance in Position Estimate (with Process Noise)\n'+param_string)
+plt.title('Variance in Position Estimate (w/ Pos Sensor Only)\n'+param_string)
+plt.xlabel(f'Time(s), $\Delta t$={delta_t} ')
+plt.ylabel('Variance (m^2)')
+
+plt.show()
+
+collated = collate(pre[1,:], post[1,:])
+
+new_time = collate(times, times)
+plt.figure(3)
+plt.plot(new_time, collated)
+plt.title('Variance in Velocity Estimate (w/ Pos Sensor Only)\n'+param_string)
 plt.xlabel(f'Time(s), $\Delta t$={delta_t} ')
 plt.ylabel('Variance (m^2)')
 
