@@ -47,7 +47,7 @@ def tme_subplots(numsubplots, times, x_true, meas_array, x_hat,
         axs[i].plot(times, x_true[i, :], 'b--*', label='Truth')
         if type(meas_array[i])!=type(None):
             axs[i].plot(times, meas_array[i], 'r--o', label='Measurements')
-        axs[i].plot(times, x_hat[0, :], 'd:k', label='Estimate')
+        axs[i].plot(times, x_hat[i, :], 'd:k', label='Estimate')
         axs[i].legend(loc='lower left')
         # axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
         axs[i].set_ylabel(ylabels[i])
