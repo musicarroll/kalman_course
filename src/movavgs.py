@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from collate import collate
 
 def sma(data,w_size):
     n=data.size # Assumes data is numpy array
@@ -55,5 +56,23 @@ def tme_subplots(numsubplots, times, x_true, meas_array, x_hat,
             
         axs[i].set_xlabel(xlabel_string) 
 
+def sawtooth_plots(pre,post,
+                   times, title_strings, 
+                   xlabel_string, 
+                   ylabel_string,
+                   plotnumbase=100):        
+    (m,_)=pre.shape
+    
+    new_time = collate(times, times)
+    
+    for i in range(m):
+        collated = collate(pre[0,:], post[0,:])
         
-                
+        plt.figure(plotnumbase+i)
+        plt.plot(new_time, collated)
+        plt.title(title_strings[i])
+        plt.xlabel(xlabel_string)
+        plt.ylabel(ylabel_string[i])
+        
+        plt.show()
+                    

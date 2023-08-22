@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.linalg import expm
 from collate import collate
-from movavgs import tme_subplots
+from movavgs import tme_subplots, sawtooth_plots
 
 np.random.seed(0)  # Set random seed for reproducibility
 
@@ -55,8 +55,8 @@ v = np.sqrt(R) * np.random.randn(num_samples)
 z = x_true[0,:] + v
 
 P[:, :, 0] = P0
-post[0] = P[0, 0, 0]
-pre[0] = P[0, 0, 0]
+post[0,0] = P[0, 0, 0]
+pre[0,0] = P[0, 0, 0]
 
 
 for k in range(1, num_samples):
@@ -87,56 +87,22 @@ times = delta_t*np.arange(1, num_samples+1)
 
 meas_array = [z,None]
 
-# fig, axs = plt.subplots(2, 1, 
-#                         figsize=(8, 8),
-#                         sharex='col', sharey='row'
-#                         )
-# axs[0].plot(times, x_true[0, :], 'b--*', label='Truth')
-# axs[0].plot(times, z, 'r--o', label='Measurements')
-# axs[0].plot(times, x_hat[0, :], 'd:k', label='Estimate')
-# axs[0].legend(loc='lower left')
-# # axs[0].set_xlabel(f'Time (s) $\Delta_t$ ={delta_t}')
-# axs[0].set_ylabel('Position (m)')
-# axs[0].set_title(title_string)
-
-
-# axs[1].plot(times, x_true[1, :], 'b--*', label='Truth')
-# axs[1].plot(times, x_hat[1, :], 'd:k', label='Estimate')
-# axs[1].legend(loc='lower left')
-# axs[1].set_xlabel(xlabel_string) 
-# axs[1].set_ylabel('Velocity (m/sec)')
-
 ylabels =['Position (m)','Velocity (m/sec)']
 tme_subplots(2, times, x_true, meas_array, x_hat, 
                  ylabels, title_string, xlabel_string)
 print('Error:')
 print(x_hat[:, -1] - x_true[:, -1])
 
+# Generate sawtooth plots
+
 collated = collate(pre[0,:], post[0,:])
 
 new_time = collate(times, times)
 
-title_string = f'Variance in Position Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}'
+title_strings = [f'Variance in Position Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}',
+                 f'Variance in Velocity Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}']
+ylabel_strings = ['Variance (m^2)','Variance ((m/s)^2)']
 
-plt.figure(2)
-plt.plot(new_time, collated)
-plt.title(title_string)
-plt.xlabel(xlabel_string)
-plt.ylabel('Variance (m^2)')
+sawtooth_plots(pre,post,times, title_strings, xlabel_string, ylabel_strings)
 
-plt.show()
-
-collated = collate(pre[1,:], post[1,:])
-
-new_time = collate(times, times)
-
-title_string = f'Variance in Velocity Estimate (w/ Pos Sensor Only)\n{param_string}\n{rms_text}'
-
-plt.figure(3)
-plt.plot(new_time, collated)
-plt.title(title_string)
-plt.xlabel(xlabel_string)
-plt.ylabel('Variance (m^2)')
-
-plt.show()
 
