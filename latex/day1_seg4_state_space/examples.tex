@@ -1,0 +1,150 @@
+% day1_seg2_equations/examples.tex
+\begin{frame}
+\onslide<1->{\frametitle{Examples}
+}
+ \begin{itemize}
+ \onslide<2->{\item Scalar Constant Dynamics
+}
+\onslide<3->{\item Scalar Constant Dynamics with Recursive Estimator
+}
+ \onslide<4->{\item Scalar Ramp Dynamics with Recursive Estimator
+ \item Damped Harmonic Oscillator 
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+ \onslide<1->{\frametitle{ Scalar Constant Dynamics}
+}
+ \begin{itemize}
+ \onslide<2->{\item MATLAB/Simulink Model
+}
+ \onslide<3->{\item Very Simple
+}
+ \onslide<4->{\item Additive Noise
+}
+ \onslide<5->{\item No feedback loops
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.80]{matlab/scalar_const_noise.jpg}
+\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Constant Dynamics with Recursive Estimator}
+}
+ \begin{itemize}
+ \onslide<2->{\item MATLAB/Simulink Model
+}
+\onslide<3->{ \item Very Simple Dynamics
+}
+\onslide<4->{ \item Additive Noise
+}
+ \onslide<5->{\item Estimation loop implementing recursive simple averaging
+}
+ \onslide<6->{\item Simple open loop gain input
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.80]{day1_seg4_state_space/scalar_const_est.jpg}
+\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Scalar Ramp Dynamics with Recursive Estimator}
+}
+ \begin{itemize}
+ \onslide<2->{\item MATLAB/Simulink Model
+}
+ \onslide<3->{\item Scalar Dynamics with known ramp
+}
+ \onslide<4->{\item Additive Noise
+}
+ \onslide<5->{\item Estimation loop implementing recursive simple averaging
+}
+ \onslide<6->{\item Simple open loop gain input
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.80]{matlab/scalar_ramp_noise_est.jpg}
+\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Vector Dynamics: Damped Harmonic Oscillator}
+}
+ \begin{itemize}
+ \onslide<2->{\item MATLAB/Simulink Model
+}
+ \onslide<3->{\item 2-dimensional Vector Dynamics
+}
+ \onslide<4->{\item Deterministic, Continuous Model
+}
+\onslide<5->{
+\[
+\begin{bmatrix}
+\dot{x}_1\\
+\dot{x}_2
+\end{bmatrix} =
+\begin{bmatrix}
+0 & 1\\
+-k/m & -c/m
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+\]
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.80]{day1_seg4_state_space/damped_harmosc_det.jpg}
+\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Vector Dynamics: Damped Harmonic Oscillator}
+}
+ \begin{itemize}
+ \onslide<2->{\item Discrete model would look like this}
+\onslide<3->{ 
+\[\begin{bmatrix}
+x_{1}(k)\\
+x_{2}(k)
+\end{bmatrix}=\exp
+\left(
+\begin{bmatrix}
+0 & 1\\
+-k/m & -c/m
+\end{bmatrix}
+\Delta t
+\right)
+\begin{bmatrix}
+x_{1}(k-1)\\
+x_{2}(k-1)
+\end{bmatrix}
+\]
+}
+\onslide<3->{\item Here $\Delta t=t_k - t_{k-1}$
+}
+\onslide<4->{\item Note that $\exp$ is a matrix exponential
+}
+\onslide<5->{\item In the continuous case, the state transition matrix is a matrix exponential whenever the system dynamics matrix is a constant (i.e., time invariant) matrix
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}

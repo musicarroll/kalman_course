@@ -1,0 +1,95 @@
+
+
+\begin{frame}
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey State Space Model (Equations)}
+		The state space equations for a Lotka-Volterra predator-prey system can be written as follows:
+		
+		\[
+		\frac{dV}{dt} = r_v V - c_{vp} V P
+		\]
+		
+		\[
+		\frac{dP}{dt} = c_{pv} V P - d_p P
+		\]
+		
+		Where:
+		\begin{align*}
+		V & : \text{Prey population} \\
+		P & : \text{Predator population} \\
+		r_v & : \text{Prey intrinsic growth rate} \\
+		c_{vp} & : \text{Predation rate} \\
+		c_{pv} & : \text{Conversion efficiency} \\
+		d_p & : \text{Predator death rate}
+		\end{align*}
+		
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Assumptions Underlying Predator-Prey Equations}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Sufficient food is always available for the prey population 
+		}
+		\onslide<3->{
+			\item  Food supply of predator population depends only on size of prey population (predators eat only one kind of thing)
+		}
+		\onslide<4->{
+			\item  Current rate of change of population is proportional to its current size
+		}
+		\onslide<5->{
+			\item Environment does not change to favor one species over another
+		}
+		\onslide<6-> {
+			\item Genetic adaptation is negligible
+		}
+		\onslide<7->{
+			\item Predators are insatiable
+		}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+	
+	\begin{frame}
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey State Space Model (Matrix Form)}
+		In matrix form, the state space model can be expressed as:
+		
+		\[
+		\left[\begin{array}{c}
+		\frac{dV}{dt} \\
+		\frac{dP}{dt}
+		\end{array}\right]
+		=
+		\left[\begin{array}{cc}
+		r_v & -c_{vp} \\
+		c_{pv} & -d_p
+		\end{array}\right]
+		\left[\begin{array}{c}
+		V \\
+		P
+		\end{array}\right]
+		\]
+		
+	\end{frame}
+
+
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Example:  Predator-Prey Equations, Real World}
+}
+  \onslide<2->{
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/predprey.png}
+\end{center}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+

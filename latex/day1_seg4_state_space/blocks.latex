@@ -1,0 +1,46 @@
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7347,4833)(316,-4753)
+{\color[rgb]{0,0,0}\thinlines
+\put(6622,-3404){\circle{524}}
+}%
+{\color[rgb]{0,0,0}\put(1756,-1366){\framebox(675,900){}}
+}%
+{\color[rgb]{0,0,0}\put(6301,-1366){\framebox(675,900){}}
+}%
+{\color[rgb]{0,0,0}\put(1748,-3018){\line( 4,-3){669.600}}
+\put(2423,-3513){\line(-5,-3){675}}
+\put(1748,-3918){\line( 0, 1){900}}
+\put(1748,-3018){\line( 0, 1){  0}}
+}%
+{\color[rgb]{0,0,0}\put(6616,-4741){\vector( 0, 1){1080}}
+}%
+{\color[rgb]{0,0,0}\put(6886,-3391){\vector( 1, 0){765}}
+}%
+{\color[rgb]{0,0,0}\put(5311,-3391){\vector( 1, 0){1035}}
+}%
+\put(856,-196){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Integrator (Simulink)}%
+}}}
+\put(6526,-1006){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\int$}%
+}}}
+\put(5626,-196){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Integrator (alternative)}%
+}}}
+\put(1981,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\dfrac{1}{s}$}%
+}}}
+\put(1846,-3571){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k}%
+}}}
+\put(6166,-3211){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}+}%
+}}}
+\put(6301,-3886){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}+}%
+}}}
+\put(316,-2761){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Scalor or Gain Multiplier}%
+}}}
+\put(5626,-2806){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Summation Point}%
+}}}
+\end{picture}

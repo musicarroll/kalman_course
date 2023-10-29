@@ -1,0 +1,108 @@
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Example:  DC Motor with Inertial Load}
+	}
+	\begin{center}
+		\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/dc_motor_w_inertial_load.png}
+	\end{center}
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+	
+	\begin{frame}{State Space Model for a DC Motor with Inertial Load}
+		
+		\begin{block}{System Description}
+			Consider a DC motor with an inertial load. The key variables and constants are as follows:
+			\begin{align*}
+			R & : \text{Motor resistance} \\
+			L & : \text{Motor inductance} \\
+			v_{\text{app}} & : \text{Applied voltage} \\
+			v_{\text{emf}} & : \text{Back EMF} \\
+			\theta & : \text{Rotational position of the load} \\
+			\omega & : \text{Rate of change of }\theta \\
+			K_f & : \text{Frictional constant} \\
+			K_b & : \text{EMF constant} \\
+			\tau & : \text{Torque} \\
+			K_m & : \text{Armature constant}
+			\end{align*}
+		\end{block}
+		
+	\end{frame}
+	
+	\begin{frame}{State Space Equations}
+		The state space equations for the DC motor with an inertial load can be written as follows:
+		
+		\[
+		\frac{d\theta}{dt} = \omega
+		\]
+		
+		\[
+		L\frac{di}{dt} = v_{\text{app}} - v_{\text{emf}} - Ri
+		\]
+		
+		\[
+		J\frac{d\omega}{dt} = \tau - K_f\omega
+		\]
+		
+		\[
+		v_{\text{emf}} = K_b\omega
+		\]
+		
+		Where:
+		\begin{align*}
+		\theta & : \text{Rotational position} \\
+		\omega & : \text{Angular velocity} \\
+		i & : \text{Current through the motor} \\
+		J & : \text{Moment of inertia of the load} \\
+		\tau & : \text{Applied torque}
+		\end{align*}
+		
+		These equations describe the dynamics of the DC motor and the load.
+	\end{frame}
+	
+	\begin{frame}{Matrix Form}
+		In matrix form, the state space model can be expressed as:
+		
+		\[
+		\left[\begin{array}{c}
+		\frac{d\theta}{dt} \\
+		\frac{di}{dt} \\
+		\frac{d\omega}{dt}
+		\end{array}\right]
+		=
+		\left[\begin{array}{ccc}
+		0 & 0 & 1 \\
+		0 & -\frac{R}{L} & -\frac{K_b}{L} \\
+		0 & \frac{K_b}{J} & -\frac{K_f}{J}
+		\end{array}\right]
+		\left[\begin{array}{c}
+		\theta \\
+		i \\
+		\omega
+		\end{array}\right]
+		+
+		\left[\begin{array}{c}
+		0 \\
+		\frac{1}{L} \\
+		0
+		\end{array}\right]
+		v_{\text{app}}
+		\]
+	The next slide shows the results for an applied voltage of 1.0V and various nominal parameter values.	
+	\end{frame}
+	
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Example:  DC Motor with Inertial Load}
+	}
+	\begin{center}
+		\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/dc_motor_w_inertial_load_plot.png}
+	\end{center}
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}

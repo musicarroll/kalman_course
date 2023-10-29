@@ -1,0 +1,663 @@
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems} 
+  \framesubtitle{Differential Equations and the Concept of State Space}
+}
+  
+\begin{itemize}
+  \onslide<2->{
+\item Time-dependent behavior of physical systems often
+ modeled analytically by \emph{differential equations}
+}
+  \onslide<3->{
+\item  Called \textit{\textbf{dynamic systems}} or
+ \textit{\textbf{dynamical systems}}
+}
+  \onslide<4->{
+	\item  Smooth processes:  described by continuous, differentiable functions of time
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+	\onslide<1->{\frametitle{Dynamic Systems}
+	\framesubtitle{Newton's Laws of Motion} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Newton's first two laws specify what happens when a body is subjected to a force.   
+		}
+		\onslide<3->{
+			\item Whenever a net force acts on a body, the body's velocity will change, i.e., it will accelerate or decelerate  (First Law)
+		}
+		\onslide<4->{
+			\item For a constant net force, the motion will be such that the product of the body's mass and its acceleration will be invariant (i.e., the same for all bodies) (Second Law)
+		}
+		\begin{itemize}
+		\onslide<5->{
+			\item Under the same constant force, large bodies will exhibit a small acceleration, while small bodies will exhibit a larger acceleration
+		}
+		\end{itemize}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems}
+  \framesubtitle{Newton's Laws of Motion}
+ }
+\begin{itemize}
+  \onslide<2->{
+\item In Newton's Second law $F=ma$, the resultant force $F$ acts on the mass $m$ to produce an acceleration:
+\begin{equation}
+F=ma=m\dot{v}=m\deriv{v}{t}=m\secondderiv{y}{t}=m\ddot{y}
+\end{equation}  
+}
+  \onslide<3->{
+	\item Since acceleration is the second derivative of position, Newton's Second law often leads to \textbf{second order} differential equations (whenever the acceleration is constant, i.e., $\dot{a}=0$); the solution $y(t)$ is considered to be the \textbf{output} of the dynamical system   
+}
+  \onslide<4->{
+	\item The resultant force is the vector sum of all forces acting on the body, both \textbf{internal} coupling forces and \textbf{external} input forces  
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Dynamic Systems} 
+	\framesubtitle{A Note on Notation}
+	}
+	\begin{itemize}
+		\onslide<2->{ \item In pure mathematics, one often sees $y$ as a function of $x$:  $y=f(x)$.  
+		}
+		\onslide<3->{
+			\item  However, in engineering work, the variable $x$ is often reserved to be used as the (vector) state variable.
+		}
+		\onslide<4->{
+			\item Moreover, in dynamic systems, $y$ is generally considered to be a function of time $t$.  Hence our use of symbols such as \\ $y(t)$, $\dfrac{dy}{dt}$, $\Dopnth{n}{t}{y}$, $\dot{y}$, $\ddot{y}$, etc.
+		}
+		\onslide<5->{
+			\item  In physics, the variable $r=r(t)$ is often used to stand for displacement (position), with 3d coordinates of $x,y,z$.
+		}
+		\onslide<6->{
+			\item In these slides we are mostly using standard engineering notation.
+		}
+		\onslide<7->{
+			\item It is also common in engineering notation to use $u=u(t)$ as the symbol for external input -- or control -- function.
+		}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems} }
+\begin{itemize}
+  \onslide<2->{ \item Which forces are considered internal and which external depends on how the system boundary is drawn  
+}
+  \onslide<3->{
+\item  Simple harmonic oscillator has one internal force determining system behavior: $F=-ky$, because the spring itself is often considered a (massless) part of the system  \\(more complicated oscillators may also include internal frictional and/or external driving forces)
+}
+\onslide<4->{
+	\item Spring forces (e.g., Hooke's law, where $F=-ky$) are often considered to be \textbf{internal} to system
+}
+  \onslide<5->{
+\item  External forces (e.g., constant or time-dependent forcing functions) may also be present, e.g.:
+ \[\frac{d^2y}{dt^2}+\frac{k}{m}y=\dfrac{1}{m}\sin\omega t\]
+}
+\onslide<6->{
+	\item Internal forces are generally not viewed as \textbf{inputs}
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems} }
+\begin{itemize}
+  \onslide<2->{
+\item Most general second-order equation for a mechanical
+ system of this type (according to Newton's law) is:
+\begin{equation}\label{second ord}
+ \ddot{y} =\frac{1}{m}F(y,\dot{y},t)
+\end{equation}  
+}
+  \onslide<3->{
+\item If $F(y,\dot{y},t)$ can be expressed 
+as sum of $F_1(y,\dot{y})$ and $F_2(t)$, then
+ we can write this in input-output form:
+  \[\ddot{y}-\frac{1}{m}F_1(y,\dot{y})=\frac{1}{m}F_2(t)\]
+}
+  \onslide<4->{
+	\item Note that the left hand side is a function only of $y$ and its derivatives, while the right hand side is a function of time only.
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+  	\frametitle{Dynamic Systems}
+	\framesubtitle{Measurement Models}  
+ }
+\begin{itemize}
+  \onslide<2->{
+	\item  In engineering applications, we often model not
+	 only system dynamics but also the processes by which we \textbf{measure} system outputs
+	}
+	\begin{itemize}
+		\onslide<3->{\item This is usually because we need to control the system dynamics
+		}
+		\onslide<4->{\item But more often than not we need to estimate certain quantities of interest associated with our system
+		}
+		\onslide<5->{\item And we can't control or change the behavior of something we can't accurately estimate!
+		}
+	\end{itemize}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Dynamic Systems}
+		\framesubtitle{Measurement Models}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item  But outputs are not always directly observable!! They might have a complicated relationship to something we can physically measure
+		}
+		\onslide<3->{
+			\item Thus, in modeling dynamic systems, we often add a second set of 
+			equations, usually algebraic or functional in nature, that relates
+			the output $y$ (and possibly the input $u$) to some measured or observed quantities
+			\[z = h(y)+g(u)\]  
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{The Concept of State} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Concept of state involves in some sense the instantaneous internal arrangement and relationships of a system's components
+		}
+		\onslide<3->{
+			\item In practical  situations, the state variables may represent attributes of the  system that we wish to know something about 
+		}
+		\onslide<4->{
+			\item Also intuitively, state variables are usually naturally coupled in some sense; 
+			this is obvious when they are derived from a single differential equation in which all quantities are derivatives 
+			of a single variable (the output variable)  
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{State as Initial Conditions}  
+}
+\begin{itemize}
+  \onslide<2->{
+	\item \footnotesize{"How is a dynamic system (linear or nonlinear) described?
+		The fundamental concept is the notion of the state.  By this is meant, intuitively, some quantitative information 
+		(a set of numbers, a function, etc.) which is the least amount of data one has to know about the past behavior of 
+		the system in order to predict its future behavior."\\
+		Rudolf Kalman, in seminal paper (1960)}
+}
+  \onslide<3->{
+\item To determine behavior of deterministic system at any future time requires knowledge of two things:
+\begin{enumerate}
+\item Equations governing the system dynamics (usually differential of difference equations)
+\item Initial conditions
+\end{enumerate}  
+}
+  \onslide<4->{
+\item But initial conditions for an $n^{\text{th}}$-order continuous dynamic system are simply values of first $n$ derivatives at initial time (the Identity operator can be considered the 0th order derivative)
+}
+  \onslide<5->{
+	\item The $n^{\text{th}}$-order derivative is given essentially by the differential equation itself
+}
+
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} }
+\begin{itemize}
+  \onslide<2->{
+\item At any point in time, we can think of instantaneous values of first $n$ derivatives as initial conditions for all future dynamic evolution  
+}
+  \onslide<3->{
+\item The first $n$ derivatives are the $0^\text{th},1^\text{st},\ldots,(n-1)^\text{st}$ derivatives of the output function $y$
+}
+  \onslide<4->{
+	\item These values capture the "state" of the dynamic system at any time after the time of the initial conditions  
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Concept of "state" also encoded in Taylor series of a function 
+}
+  \onslide<3->{
+\item Taylor's theorem: if a function $y(t)$ has derivatives of all orders near $t_0$, then its value at any point $t$ near $t_0$ can be determined from the values of its derivatives at $t_0$:
+}
+  \onslide<4->{
+\begin{equation}
+\taylor{y}{t}{t_0}
+\end{equation}
+}
+  \onslide<5->{
+	\item I.e., the value of the function at a time near $t_0$ is completely determined by its value and the values of all of its derivatives at $t_0$\\ (Note that this works for time points in the past as well as those in the future, provided they are sufficiently close to $t_0$)
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+}
+\begin{itemize}
+  \onslide<2->{
+\item In the language of dynamic systems, the quantity $t-t_0$\\ (if $>0$) is simply the time elapsed since the initial time $t_0$ (otherwise, it is the negative duration from $t_0$ to a past time point $t$).  
+}
+  \onslide<3->{
+\item Thus, if you have knowledge of the state at time $t_0$, i.e., if you know the values of all the (infinitely many) derivatives, then you can determine the value of the function at any later time (sufficiently close to $t_0$).  
+}
+  \onslide<4->{
+\item  This is because all of the dynamic information is contained in the derivatives.
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+  
+}
+  \onslide<2-> {
+	If $y(t)$ is smooth, each of its derivatives also has a Taylor series:
+}
+  \onslide<3-> {
+	\footnotesize{\begin{multline}
+	\left[\begin{array}{c}
+	y(t) \\
+	\Dopnth{1}{t}{y}(t) \\
+	\vdots \\
+	\Dopnth{n}{t}{y}(t) \\
+	\end{array}\right] \approx\\
+	\Taylormats{n}{t}{y}{n}{(t-t_0)}
+	\end{multline}}
+}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} }
+\begin{itemize}
+  \onslide<2->{
+\item  Mechanical systems like a moving particle have three simultaneous attributes:  position, velocity, and
+ acceleration. 
+}
+  \onslide<3->{
+\item Newton tells us that acceleration is often a function
+ of position, velocity and perhaps time.
+}
+  \onslide<4->{
+\item However, as we just saw, a force that acts on a system as a function of
+ time only should be considered an external forcing function,
+ i.e., an input to the system.  
+}
+  \onslide<5 -> {
+\item Thus we are led to think of position and velocity as the
+primary state variables of interest in mechanical systems.  
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  A general $n$-th order linear differential equation can be expressed as a system of first-order differential equations.
+}
+  \onslide<3->{
+\item Ignoring the input $u$ for the moment, consider:
+ \[p(D)y = D^ny+a_{n-1}D^{n-1}y+\cdots +a_1Dy+a_0y,\]
+ where $D$ is the differential operator (suppressing the $t$); we have put the operator polynomial in normal form, i.e., such that its leading coefficient is 1 (e.g., dividing through by $m$ in $F=ma$).  
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item We define new variables, setting $x_1=y,x_2=Dy,\ldots$:
+\begin{align*}
+  x_1(t) & = y(t) \\
+  x_2(t) & = Dy(t) \\
+    \cdots \\
+  x_n(t) & = D^{n-1}y(t).
+\end{align*}  
+}
+  \onslide<3->{
+\item The functions $x_i(t)$ are called the \textbf{states} or \textbf{state variables} of the system    
+}
+  \onslide<4->{
+	\item These variables are merely definitions, but the derivative of $n^{\text{th}}$ variable will in fact deliver the essential characteristics of the system, since it will be the differential equation itself.
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  Taking the derivative of these $n$ state variables and making use of the
+ original differential equation yields:
+\begin{align*}
+  Dx_1(t) & = x_2(t) \\
+  Dx_2(t) & = x_3(t) \\
+    \cdots \\
+  Dx_n(t) & =-a_0x_1(t)-a_1x_2(t)-\cdots -a_{n-1}x_n(t) .
+\end{align*} 
+}
+  \onslide<3->{
+\item  These $n$ equations can now be written more compactly in vector matrix
+ form:  $Dx(t)=Ax(t)$ or $\dot{x}(t)=Ax(t)$. 
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  In the equation $\dot{x}(t)=Ax(t)$, we have:
+ \[x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\\\vdots \\
+ x_n(t)\end{bmatrix}\]
+ and
+ \[A=\begin{bmatrix}
+ 0 & 1 & 0 &\cdots & 0\\
+ 0 & 0 & 1 & \cdots & 0\\
+ \vdots & & \ddots & & \vdots \\
+ 0 & 0  & 0 & 0 & 1\\
+ -a_{0} &-a_{1} & \cdots & -a_{n-2} & -a_{n-1}
+ \end{bmatrix},\]
+ the \textit{\textbf{companion matrix}} of the differential
+ equation. 
+}
+\end{itemize}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item If there is an input function $u$ and it is present via its
+ derivatives, then we can write:
+\begin{equation}\label{statedyn}
+  \dot{x}=Ax+Bu
+\end{equation}
+forming $B$ in much the same way we formed $A$, and suppressing
+the time variable $t$.   
+}
+  \onslide<3->{
+\item  Equation \eqref{statedyn} expresses the system's \textit{\textbf{state dynamics}}.
+ \item Later we will include white noise as an input.  However,
+ that will make the differential equations stochastic, and that will require a deeper dive into stochastic processes. 
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item To obtain the original output $y$ as a function of the internal state of the system, we require one
+ additional vector-matrix equation:
+\begin{equation}\label{measdyn1}
+  y = Cx + Du
+\end{equation}
+where the matrix $D$ (not to be confused with the differential operator!) represents a \textbf{\textit{direct feedthrough}} of the input to the output.    
+}
+  \onslide<3->{
+\item  The output equation is derived directly from the $b_i$ coefficients in the original matrix differential equation.
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  Kalman filter theory often assumes the matrix $D$ in the output equation is 0, and uses a measurement model instead:
+\begin{equation}\label{measdyn2}
+  z = Hx
+\end{equation} 
+}
+  \onslide<3->{
+\item Note that $H$ implicitly includes $C$ as a factor.  
+}
+  \onslide<4->{
+\item Note also that we have not placed any restrictions on the size of
+ the measurement column vector $z$.  As long as $H$ has $n$ columns it can have as many rows as desired.  
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation: Example} }
+\begin{itemize}
+  \onslide<2->{
+\item Consider again the simple harmonic oscillator (suppressing $t$):
+ \[m\frac{d^2y}{dt^2}+ky=0\]
+ and convert this to state space form:
+\begin{align*}
+  x_1 & =y \\
+  x_2 & =Dy
+\end{align*}
+and $\dot{x}_2 = - \frac{k}{m}x_1 - 0\cdot x_2 $.
+}
+  \onslide<3->{
+\item Therefore, in matrix and vector form:
+ \[
+ \begin{bmatrix}
+ \dot{x}_1\\
+ \dot{x}_2
+ \end{bmatrix}
+ =
+\begin{bmatrix}
+ 0 & 1 \\
+ -k/m & 0
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}.
+ \]
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation: Example} }
+\begin{itemize}
+  \onslide<2->{
+\item  For a measurement model, we could consider a camera with a strobe flash that periodically records the instantaneous position of the sliding mass.
+}
+  \onslide<3->{
+\item   In this case, only the position would be observable and we would write the measurement or observation model as:
+ \[
+ z =
+\begin{bmatrix}
+ 1 & 0
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}.
+ \]
+(Remember that we are ignoring both process and measurement noise.)   
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Add Python package overview
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item A single $n^\text{th}$ order ordinary differential equation presents only one way of deriving a state space representation for a dynamic system 
+}
+  \onslide<3->{
+\item Can also derive state space models directly from systems of coupled ODEs
+}
+  \onslide<4->{
+\begin{itemize}
+\item Real world systems consisting of electrical, mechanical, thermal, hydraulic components are coupled in this way:  e.g., a DC motor driving an inertial load
+\end{itemize}
+}
+  \onslide<5->{
+\item In discrete time, ordinary difference equations also lead to state space models
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{coupled_odes.tex}
+% predprey.tex
+% dc_motor_w_load.tex
+
+% difference_eq.tex
+\input{difference_eq.tex}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Stability} }
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/poincare.jpg}
+\end{center}
+\begin{tiny}
+Source: By Freesodas - Gimp, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=67990034
+\end{tiny}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame} 
+  \onslide<1-> { \frametitle{Software Tools}
+    \framesubtitle{MATLAB toolboxes and Simulink blocks}
+  }
+\begin{itemize}
+ \onslide<2-> { 
+ \item MATLAB Control System Toolbox
+} 
+  \begin{itemize}
+    \onslide<3-> {
+	  \item Linear System Models:  LTI models as either transfer function or state space representation
+	}
+    \onslide<4-> {
+	  \item Functions for interconnecting models in series or parallel
+	}
+	\onslide<5-> {
+	  \item Functions for roundtrip converting from continuous-time to discrete-time
+	}
+	\onslide<6-> {
+      \item Functions for scaling state space models 
+	}
+  \end{itemize} 
+    \onslide<7-> {
+	   \item Simulink:  Intuitive Block Diagram GUI Drag and Drop approach (see later slides)
+	}
+\end{itemize}  
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation:  Summary} }
+\begin{itemize}
+  \onslide<2->{
+\item State variables sometimes provided by
+ $0^\text{th}$ through $n-1^\text{st}$ derivatives of single $n^\text{th}$-order differential equation plus internal dynamic coupling  
+}
+  \onslide<3->{
+\item  Equivalently, outputs of $n$ integrators of system 
+}
+  \onslide<4->{
+\item They represent implicit or explicit internal coupling of the system 
+}
+  \onslide<5->{
+\item In both natural and artificial systems, state space representations are often derived directly from observed or designed couplings 
+}
+  \onslide<6->{
+\item MATLAB Control Systems Toolbox and MATLAB / Simulink have many functions and blocks facilitating state space components and interconnections  
+}
+  \onslide<7-> {
+     \item Stability an important topic but beyond scope of this course
+  }
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+		\framesubtitle{Matlab / Simulink Example} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Four parameters $A,B,C,D$ from Matlab workspace  
+		}
+		\onslide<3->{
+			\item Measurement model added external to Simulink's state space block  
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.6]{\dayonesegfour/state_space_blocks.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.5]{\dayonesegfour/state_space_block_params.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+

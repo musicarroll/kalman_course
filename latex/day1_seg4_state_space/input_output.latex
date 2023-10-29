@@ -1,0 +1,23 @@
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5289,1065)(3409,-1918)
+\thinlines
+{\color[rgb]{0,0,0}\put(5311,-1906){\framebox(1575,1035){}}
+}%
+{\color[rgb]{0,0,0}\put(3421,-1411){\vector( 1, 0){1800}}
+}%
+{\color[rgb]{0,0,0}\put(6886,-1366){\vector( 1, 0){1800}}
+}%
+\put(5671,-1366){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$f$}%
+}}}
+\put(7201,-1141){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$y(t)$}%
+}}}
+\put(3871,-1231){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u(t)$}%
+}}}
+\end{picture}

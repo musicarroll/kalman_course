@@ -1,0 +1,46 @@
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Models}
+		\framesubtitle{Satellite Orbits}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item 	Simplified model of a circular orbit about a perfectly spherical planet\\  (Note: Earth is an oblate spheroid, not a sphere!)	
+		}
+		\onslide<3->{
+			\item     The state vector consists of position and velocity components in the Planet-Centered Inertial (PCI) frame:
+		\[
+		\mathbf{x} = \begin{bmatrix}
+		x \\ y \\ z \\ \dot{x} \\ \dot{y} \\ \dot{z}
+		\end{bmatrix}
+		\]
+		}
+	\end{itemize}		
+\end{frame}
+
+\begin{frame}
+	\frametitle{State Space Models}
+\framesubtitle{Satellite Orbits}
+	The dynamics of the satellite are governed by the following differential equations:
+	\begin{align*}
+	\dot{x} &= \dot{u} \\
+	\dot{y} &= \dot{v} \\
+	\dot{z} &= \dot{w} \\
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{State Space Models}
+\framesubtitle{Satellite Orbits}
+	\begin{align*}
+	\ddot{x} &= -\frac{GM}{r^3}x \\
+	\ddot{y} &= -\frac{GM}{r^3}y \\
+	\ddot{z} &= -\frac{GM}{r^3}z
+	\end{align*}
+	Where:
+	\begin{itemize}
+		\item \(G\) is the gravitational constant.
+		\item \(M\) is the mass of the planet.
+		\item \(r = \sqrt{x^2 + y^2 + z^2}\) is the distance from the satellite to the center of the planet.
+	\end{itemize}
+\end{frame}

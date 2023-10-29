@@ -1,0 +1,62 @@
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Examples:  DC Motor with Inertial Load}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Electromechanical:  Torque $\tau$ proportional to current $i$ induced by applied voltage:  $\tau(t)=K_m i(t)$, \\ where$K_m$ is armature constant (related to magnetic field strength, number of turns of wire, etc.)
+}
+  \onslide<3->{
+\item Electomechanical Back EMF:  $v_{emf}(t)=K_b\omega(t)$, \\ where $K_b$ is EMF constant
+}
+  \onslide<4->{
+\item Mechanical (from Newton's laws): $J\deriv{\omega}{t}=-K_f\omega(t) + K_m i(t)$,\\ where  $K_f\omega$ is linear approximation of viscouous friction
+}
+  \onslide<5->{
+\item Electrical: $v_{app}(t)=L\deriv{i}{t}+R i(t)+v_{emf}(t)=L\deriv{i}{t}+R i(t)+K_b\omega(t)$,\\ where $v_{app}$ is applied voltage, $L$ is inductance, and $R$ is resistance 
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Examples:  DC Motor with Inertial Load}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Equations for $\deriv{i}{t}$ and $\deriv{\omega}{t}$ lead to state space form
+}
+  \onslide<3->{
+\item   $\deriv{}{t}
+ \begin{bmatrix}
+ i\\
+ \omega
+ \end{bmatrix}
+=
+\begin{bmatrix}
+ -\dfrac{R}{L} & -\dfrac{K_b}{L} \\
+ \dfrac{K_m}{J} & -\dfrac{K_f}{J}
+ \end{bmatrix}
+ \begin{bmatrix}
+ i\\
+ \omega
+ \end{bmatrix} +
+ \begin{bmatrix}
+ 1/L\\
+ 0
+ \end{bmatrix} v_{app}(t)
+$
+}
+  \onslide<4->{
+\item   Note the presence of control input $v_{app}(t)$
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+

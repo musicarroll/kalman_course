@@ -1,0 +1,141 @@
+% coupled_damposcs.tex
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Coupled ODEs} 
+		\framesubtitle{Coupled Damped Harmonic Oscillator}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Two damped harmonic oscillators can be coupled via a third spring between the masses.
+		}
+		\onslide<3->{
+			\item Consider two masses, $m_1$ and $m_2$, attached to springs with spring constants $k_1$ and $k_2$, respectively. 
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item The two masses are connected by a coupling spring with a spring constant $k_3$. The damping coefficients for the two masses are denoted as $b_1$ and $b_2$, respectively.
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item A schematic drawing of this system is depicted on the next slide 
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Coupled ODEs} 
+		\framesubtitle{Coupled Damped Harmonic Oscillator}  
+	}
+	\begin{center}
+		\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/coupled_damped_harmosc.png}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Coupled ODEs} 
+		\framesubtitle{Coupled Damped Harmonic Oscillator}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item We can define the state variables as follows:
+			\begin{itemize}
+				\item $x_1$ = displacement of mass $m_1$ from its equilibrium position
+				\item $x_2$ = displacement of mass $m_2$ from its equilibrium position
+				\item $v_1$ = velocity of mass $m_1$
+				\item $v_2$ = velocity of mass $m_2$
+			\end{itemize}
+			
+		}
+		\onslide<3->{
+			\item The state space equations can be written as:
+			
+			\[
+			\frac{{dx_1}}{{dt}} = v_1
+			\]
+			\[
+			\frac{{dx_2}}{{dt}} = v_2
+			\]
+			\[
+			\frac{{dv_1}}{{dt}} = \frac{{-k_1 \cdot x_1 - k_3 \cdot (x_1 - x_2) - b_1 \cdot v_1}}{{m_1}}
+			\]
+			\[
+			\frac{{dv_2}}{{dt}} = \frac{{-k_2 \cdot x_2 + k_3 \cdot (x_1 - x_2) - b_2 \cdot v_2}}{{m_2}}
+			\]
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Coupled ODEs} 
+		\framesubtitle{Coupled Damped Harmonic Oscillator}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item In matrix form, the state space model can be written as:
+			
+\[
+\left[\begin{array}{cccc}
+\frac{dx_1}{dt} \\
+\frac{dx_2}{dt} \\
+\frac{dv_1}{dt} \\
+\frac{dv_2}{dt} \\
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cccc}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+-\frac{k_1}{m_1} & \frac{k_3}{m_1} & -\frac{b_1}{m_1} & 0 \\
+\frac{k_3}{m_2} & -\frac{k_2}{m_2} & 0 & -\frac{b_2}{m_2} \\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1 \\
+x_2 \\
+v_1 \\
+v_2 \\
+\end{array}
+\right]
+\]
+}
+	\onslide<3-> {
+		\item A plot of a python simulation of this system is shown in the next slide.	
+}
+
+	\end{itemize}
+	\onslide<3->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Coupled ODEs} 
+		\framesubtitle{Coupled Damped Harmonic Oscillator}  
+	}
+	\begin{center}
+	\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/coupled_damposc.png}
+\end{center}
+	\onslide<2->{\center --------------------------------------------------------------------}
+	
+\end{frame}
