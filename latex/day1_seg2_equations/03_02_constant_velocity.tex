@@ -1,8 +1,8 @@
 % Example:  Constant Velocity (non-accelerated motion)
 
 \begin{frame}
-  \onslide<1->{\frametitle{Non-Accelerated Motion } 
-  \framesubtitle{Constant Velocity}
+  \onslide<1->{\frametitle{Constant Velocity Motion } 
+  \framesubtitle{Non-accelerated, kinematic motion in 1 dimension}
   }
 \begin{itemize}
   \onslide<2->{\item Number of states: 2\\ $x_1(k)$ is the position at time step $k$ 
@@ -12,26 +12,45 @@
 	x_1(k)&=x_1(k-1)+x_2(k-1)\Delta t\\
 	x_2(k)&=x_2(k-1)
       \end{align*} }
-  \onslide<4->{\item Measurement Model:  $z(k)=x_1(k)+v(k)$, where $v(k)$ is zero mean, 
+  \onslide<4->{\item Measurement Model: Position-only $z(k)=x_1(k)+v(k)$, where $v(k)$ is zero mean, 
 Gaussian white noise with variance $\sigma^2$}
     \onslide<5->{\item Thus, $\Phi  = \begin{bmatrix}
 1 & \Delta t\\
 0 & 1
 \end{bmatrix}$, $\Delta t=t_k-t_{k-1}$ (assumed constant), $H_k=\begin{bmatrix}1 & 0\end{bmatrix}$, $Q_k=0$, $R_k=\sigma^2$}
-  \onslide<6->{\item Note that we are assuming the acceleration is truly zero.  Any uncertainty 
-in that assumption could be dealt with by adding a very small process noise to the velocity component.}
 \end{itemize}
-\onslide<7->{\center --------------------------------------------------------------------}
+\onslide<6->{\center --------------------------------------------------------------------}
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion } 
+	\framesubtitle{Non-Accelerated Motion}
+	}
+	\begin{itemize}
+ 	   \onslide<2->{\item Note that we are assuming the acceleration is truly zero. }
+		\begin{itemize}
+			\onslide<3->{\item Any uncertainty in that assumption could be dealt with by adding very small process noise to the velocity component}
+		\end{itemize}
+		\onslide<4->{ 
+			\item We will start without any process noise ($Q=0$)  
+		}
+		\onslide<5->{
+			\item  Later we will add some process noise 
+		}
+	\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
 	\framesubtitle{Covariance Extrapolation}}
 \begin{itemize}
   \onslide<2->{\item $\altcovextrapeq$ becomes:  }
 \begin{align*} 
-\onslide<3->{\covmat{k}{-} 
-&=		\begin{bmatrix}
+\onslide<3->{
+\covmat{k}{-} &=
+		\begin{bmatrix}
 			1 & \Delta t\\
 			0 & 1
 		\end{bmatrix} 
@@ -43,6 +62,10 @@ in that assumption could be dealt with by adding a very small process noise to t
 			1 & 0\\
 			\Delta t & 1
 		\end{bmatrix}
+		+\begin{bmatrix}
+		q_{11} & 0\\
+		0 & q_{22}
+		\end{bmatrix}
 	}\\
 \onslide<4->{
 &= 		\begin{bmatrix}
@@ -53,11 +76,15 @@ in that assumption could be dealt with by adding a very small process noise to t
 		1 & 0\\
 		\Delta t & 1
 		\end{bmatrix}
+		+\begin{bmatrix}
+q_{11} & 0\\
+0 & q_{22}
+\end{bmatrix}
 	}\\
 \onslide<5->{
 &=		\begin{bmatrix}
-			p_{11}+\left(p_{12}+p_{21}\right)\Delta t + p_{22}\Delta t^2 & p_{12}+p_{22}\Delta t\\
-			p_{12}+p_{22}\Delta t & p_{22}
+			p_{11}+\left(p_{12}+p_{21}\right)\Delta t + p_{22}\Delta t^2 +q_{11} & p_{12}+p_{22}\Delta t\\
+			p_{12}+p_{22}\Delta t & p_{22}+q_{22}
 		\end{bmatrix}
 	}
 \end{align*} 
@@ -69,7 +96,7 @@ in that assumption could be dealt with by adding a very small process noise to t
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)} 
+  \onslide<1->{\frametitle{Constant Velocity Motion } 
   \framesubtitle{Filter Performance (without Process Noise)}}
   \onslide<2->{
 \begin{figure}
@@ -81,8 +108,8 @@ in that assumption could be dealt with by adding a very small process noise to t
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
-	\framesubtitle{Filter Sawtooth}}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
+	\framesubtitle{Filter Sawtooth Plot}}
 Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in covariance extrapolation; causes increase in uncertainty:
   \onslide<2->{
 \begin{equation*}
@@ -99,7 +126,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
 	\framesubtitle{Filter Performance (with Process Noise)}}
   \onslide<2->{
 \begin{figure}
@@ -111,7 +138,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
   \framesubtitle{Filter Sawtooth with Process Noise}}
   \onslide<2->{
 \begin{figure}
@@ -123,7 +150,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}  
+  \onslide<1->{\frametitle{Constant Velocity Motion }  
   \framesubtitle{Filter Performance (30 samples; large Process Noise)}}
   \onslide<2->{
 \begin{figure}
@@ -134,7 +161,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
   \framesubtitle{Filter Sawtooth with Process Noise (30 samples; large Process Noise)}}
   \onslide<2->{
 \begin{figure}
@@ -145,7 +172,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
 \framesubtitle{Filter Performance \\(30 samples; large Process Noise; large Measurement Noise)}}
   \onslide<2->{\begin{figure}
   \includegraphics[width=0.95\textwidth]{\dayonesegtwo/const_vel_w_large_proc_noise_large_meas_noise_30_samples.png}
@@ -155,7 +182,7 @@ Note uptick in uncertainty even without process noise, due to $\Phi\neq I$ in co
 \end{frame}
 
 \begin{frame}
-  \onslide<1->{\frametitle{Constant Velocity Motion (constant velocity)}
+  \onslide<1->{\frametitle{Constant Velocity Motion }
   \framesubtitle{Filter Sawtooth with Process Noise \\ 
   (30 samples; large Process Noise; large Measurement Noise)}}
 

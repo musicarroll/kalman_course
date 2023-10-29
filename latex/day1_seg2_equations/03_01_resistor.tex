@@ -57,14 +57,14 @@ where $P$ is a $1\times 1$ matrix or scalar.}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=0.95\textwidth]{\graphics/runavgplot.png}
-      \caption{Simple Running Average Estimator}
+      \caption{{\tiny Simple Running Average Estimator}}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=0.95\textwidth]{\dayonesegtwo/kf_resistor_plot.png}
-      \caption{Kalman Estimator}
+      \caption{{\tiny Kalman Estimator}}
     \end{subfigure}
-\caption{Comparing Running Average and Kalman Estimators}
+\caption{{\small Comparing Running Average and Kalman Estimators}}
 
 \end{figure}
 
@@ -78,12 +78,13 @@ where $P$ is a $1\times 1$ matrix or scalar.}
  With constant dynamics ($\Phi=I$) and no process noise ($Q=0$) $\rightarrow$ no upticks:
    \onslide<2->{
 \begin{figure}
-  \includegraphics[width=0.95\textwidth]{\dayonesegtwo/kf_resistor_variance_no_process_noise.png}
+  \includegraphics[width=0.75\textwidth]{\dayonesegtwo/kf_resistor_variance_no_process_noise.png}
 \end{figure}
 }
 \onslide<3->{\center --------------------------------------------------------------------}
 \end{frame}
 
+\begin{comment}
 \begin{frame}[fragile]
   \frametitle{Python Code Example}
   
@@ -94,3 +95,4 @@ print("Hello, World!")
   
 \end{frame}
 
+\end{comment}
