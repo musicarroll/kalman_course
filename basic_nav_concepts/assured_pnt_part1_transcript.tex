@@ -1,0 +1,417 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\definecolor{navy}{HTML}{102A43}
+\definecolor{blue}{HTML}{1F5A94}
+\definecolor{cyan}{HTML}{187E8A}
+\definecolor{softgray}{HTML}{526575}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdftitle={Assured PNT, Part 1: Voice-Track Transcript},
+  pdfauthor={Michael L. Carroll}
+}
+\titleformat{\section}{\Large\bfseries\color{navy}}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\color{blue}}{}{0pt}{}
+\newcommand{\timing}[1]{\textcolor{softgray}{\textbf{Target: #1}}}
+\newcommand{\cue}[1]{%
+  \par\noindent\fcolorbox{cyan!70}{cyan!7}{%
+    \parbox{0.94\linewidth}{\textbf{Production cue:} #1}}\par}
+\newenvironment{narration}{\begin{quote}\itshape}{\end{quote}}
+
+\title{Assured PNT, Part 1\\\large Navigation When GPS Cannot Be Trusted}
+\author{Voice-track transcript for Michael L. Carroll}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \textbf{Recording target: 17--18 minutes} \quad $\vert$ \quad
+  \textbf{15 logical slides / 44 build pages}
+\end{center}
+
+\section*{Recording notes}
+
+This script contains about 1,800 spoken words. The 17-minute-20-second timing
+plan assumes a deliberately measured technical delivery, including build cues
+and pauses; a brisk continuous read will be closer to 14--15 minutes. Text in
+the narration blocks is intended to be spoken. Production cues are not spoken.
+A short pause means about one second; a full pause means two to three seconds.
+Advance each build at the sentence indicated, leaving enough time for the
+viewer to read the new element.
+
+Pronunciations: PNT is ``pee-en-tee''; GNSS is ``gee-en-ess-ess''; INS is
+``eye-en-ess''; IMU is ``eye-em-you''; NIS is ``en-eye-ess.'' Read $P$ as
+``P,'' $R$ as ``R,'' and $\nu$ as ``nu.''
+
+\section{Slide 1 --- Assured PNT}
+\timing{0:25}
+
+\cue{Open on the complete title slide. No build.}
+
+\begin{narration}
+What happens when a navigation system gives a precise, confident answer---and
+that answer is wrong? In this first episode on assured position, navigation,
+and timing, we will look at the system behavior required when GPS is blocked,
+jammed, or deliberately manipulated. The central theme is simple: resilience
+does not come from one perfect sensor. It comes from prediction, disciplined
+trust, and deliberate recovery.
+\end{narration}
+
+\section{Slide 2 --- A confident answer can still be wrong}
+\timing{1:15}
+
+\cue{Begin on build 1. Advance once after ``those are different failures.''}
+
+\begin{narration}
+The most dangerous navigation failure is not always a blank screen. It is a
+solution that still looks healthy after its reference has been manipulated.
+The receiver may continue producing position, velocity, and time. The output
+may be smooth. Its reported uncertainty may even remain small. Yet the answer
+can be moving away from truth.
+
+[Short pause.] A loss of availability says, ``I no longer have the
+measurement.'' A loss of integrity says, ``I have a measurement, but I should
+not rely on it.'' Those are different failures.
+
+[Advance.] That distinction gives us three rules for the rest of the episode.
+Availability is not integrity. Precision is not truth. And putting a
+measurement into a fusion algorithm does not automatically make that
+measurement trustworthy. A resilient system must keep its confidence tied to
+evidence.
+\end{narration}
+
+\section{Slide 3 --- What PNT provides}
+\timing{1:05}
+
+\cue{Reveal Position, Navigation, and Timing one at a time. Reveal the summary last.}
+
+\begin{narration}
+[Build 1.] PNT begins with position: where am I?
+
+[Build 2.] Navigation adds motion and intent: where am I going, how fast am I
+moving, and how is the vehicle oriented?
+
+[Build 3.] Timing asks when an observation or event occurred. Timing is not an
+afterthought. It supports measurement alignment, communication, sensing, and
+the clock states inside a GNSS solution.
+
+[Build 4.] The important engineering question is not whether every one of
+these quantities remains perfect under every condition. It is which
+combination of position, velocity, attitude, and time the mission actually
+needs---and what error it can tolerate. Assurance begins by turning that need
+into explicit performance limits.
+\end{narration}
+
+\section{Slide 4 --- GPS is powerful---and physically fragile}
+\timing{1:20}
+
+\cue{Start with the left block. Reveal the right block, then the concluding line.}
+
+\begin{narration}
+GPS is an extraordinary navigation reference. It is global, common to many
+users, and capable of providing position, velocity, and precise time with very
+little infrastructure on the user platform. Its errors are also bounded over
+the long term, which makes it an excellent partner for inertial navigation.
+
+[Advance.] But the signal arriving at the antenna is weak. Buildings, terrain,
+foliage, and vehicle structure can block it. Reflections can create multipath.
+Radio-frequency interference can overpower it. And a counterfeit signal can
+attempt to draw a receiver toward a false solution.
+
+[Advance.] So our design objective cannot be nominal GPS accuracy alone. We
+have to design for both loss and manipulation. That means preserving useful
+navigation when measurements disappear, and protecting the estimator when
+measurements remain present but become misleading.
+\end{narration}
+
+\section{Slide 5 --- Two failures, two different hazards}
+\timing{1:25}
+
+\cue{Show jamming first. Reveal spoofing second. Reveal the Kalman-filter caveat last.}
+
+\begin{narration}
+Jamming and spoofing create different estimator problems.
+
+Jamming denies service. Interference raises the effective noise floor or
+overwhelms the authentic satellite signal. A receiver may lose tracking, lose
+satellites, or declare degraded performance. That is serious, but the failure
+is often observable: the external updates stop, and the navigator must bridge
+the gap.
+
+[Advance.] Spoofing counterfeits the measurement. False GNSS-like data can
+appear plausible and can pull the estimated state away from reality. If the
+fusion system accepts that data repeatedly, it may also corrupt estimates of
+inertial sensor bias or clock error. The damage can therefore persist after
+the immediate event.
+
+[Advance.] Statistical consistency checks can reject measurements that
+disagree with prediction. But a Kalman filter, by itself, does not authenticate
+a radio signal. A sophisticated false input can remain statistically plausible.
+Integrity requires multiple layers of evidence.
+\end{narration}
+
+\section{Slide 6 --- Assurance is a behavior, not a sensor}
+\timing{1:20}
+
+\cue{Advance through Protect, Detect, Respond, and Recover; then reveal the descriptions and final pill.}
+
+\begin{narration}
+[Build 1.] Protect the system by reducing avoidable exposure: sound antenna
+installation, interference awareness, secure interfaces, and sensible
+operating procedures.
+
+[Build 2.] Detect anomalies quickly. Monitor receiver health, signal
+conditions, estimator consistency, and agreement among independent sources.
+
+[Build 3.] Respond in a controlled way. Isolate a suspect input, change its
+weight, switch modes, and continue only at a level of performance the system
+can support.
+
+[Build 4.] Recover deliberately. A source that has returned is not necessarily
+a source that should be trusted immediately.
+
+[Build 5.] These four actions connect technical design to operations: prevent
+what we can, recognize what remains, degrade gracefully, and test sources
+before re-admission.
+
+[Build 6.] The system must know what it trusts---and why. That is behavior of
+the complete architecture, not a property we can buy in a single sensor.
+\end{narration}
+
+\section{Slide 7 --- Inertial navigation provides the bridge}
+\timing{1:20}
+
+\cue{Begin with INS strengths. Reveal the uncertainty plot and limitation together.}
+
+\begin{narration}
+An inertial navigation system is the natural bridge through a GPS outage. Once
+initialized, it is self-contained. Accelerometers and gyroscopes support a
+high-rate estimate of position, velocity, and attitude. Because the measurement
+is mechanical rather than radio-frequency based, an IMU is not disabled by an
+RF jammer. And over short intervals, inertial propagation is smooth and
+responsive.
+
+[Advance.] The price is drift. Accelerometer bias is integrated into velocity
+and then position. Gyroscope bias creates attitude error, which projects
+gravity and specific force in the wrong direction. Noise and imperfect models
+accumulate.
+
+The curve is conceptual, not a universal error law. Its message is operational:
+uncertainty grows with outage time. The vehicle may continue only until the
+predicted uncertainty reaches the mission limit. INS gives us time, but it does
+not give us infinite time.
+\end{narration}
+
+\section{Slide 8 --- Resilience comes from complementary errors}
+\timing{1:15}
+
+\cue{Show GNSS plus INS, add the other aids, then reveal the design test.}
+
+\begin{narration}
+[Build 1.] GPS and INS work well together because their errors are
+complementary. Inertial sensors provide continuity and rapid dynamics but
+drift. GNSS provides an external reference that can bound that drift, but its
+signals can disappear or be deceived.
+
+[Build 2.] The same reasoning extends to air data, barometric altitude,
+terrestrial radio ranging, terrain matching, and vision. Each source observes
+some part of the state, with its own geometry, update rate, environment, and
+failure mechanisms.
+
+[Build 3.] Simply adding sensors is not resilience. A useful source has failure
+modes that are sufficiently independent of the sources already present. Its
+measurements must also make the mission-critical states observable. Ten sensors
+that share the same hidden dependency may provide less assurance than two
+carefully chosen sources based on different physics.
+\end{narration}
+
+\section{Slide 9 --- The Kalman filter is the integration engine}
+\timing{1:30}
+
+\cue{The full diagram is visible. Trace it from left to right with the narration.}
+
+\begin{narration}
+The Kalman filter gives this architecture a disciplined predict-and-update
+cycle.
+
+IMU samples drive the prediction. The mechanization propagates the navigation
+state, while the process model propagates the covariance, $P$. The superscript
+minus means this is the prior estimate: our best prediction before using the
+new external measurement.
+
+External measurements then pass through validation. Does the observation agree
+with what the predicted state and its uncertainty say is plausible? Do other
+independent sources support it? Is the receiver healthy? If the evidence is
+adequate, the update corrects the state and reduces uncertainty. The
+superscript plus marks the posterior estimate.
+
+If the evidence is poor, the system can reject the measurement, isolate the
+source, or increase its assumed noise so that it receives less weight. The
+important point is that prediction carries the solution through a gap, while
+trusted updates bound drift. An update is beneficial only when accepting it is
+safer than continuing without it.
+\end{narration}
+
+\section{Slide 10 --- A practical error-state model}
+\timing{1:10}
+
+\cue{Reveal the state vector, then the table, then the design-choice pill.}
+
+\begin{narration}
+[Build 1.] Many integrated navigators use an error-state filter. The inertial
+mechanization carries the full navigation solution, and the Kalman filter
+estimates small errors around that solution.
+
+[Build 2.] Here the state contains position and velocity error, small attitude
+error, accelerometer and gyro biases, and receiver clock bias and drift.
+Estimating the inertial biases is especially important: an external reference
+does more than correct the current position. It calibrates error sources that
+would otherwise drive future drift.
+
+[Build 3.] This vector is an example, not a universal recipe. The state is a
+design choice. Add a quantity when the mission needs it, when a credible model
+exists, and when the available measurements can actually observe it. A larger
+state that cannot be supported by the measurement geometry can create false
+confidence rather than capability.
+\end{narration}
+
+\section{Slide 11 --- Trust begins with the innovation}
+\timing{1:30}
+
+\cue{Reveal the innovation, then NIS, then the validation list, and finally the caveat.}
+
+\begin{narration}
+[Build 1.] The innovation is the measured value, $z$, minus the value predicted
+from the prior state. In plain language: what did the sensor say that the
+filter did not expect?
+
+A large difference may indicate interference, a failed sensor, a bad model, or
+an aggressive maneuver the estimator did not represent well. The residual is
+evidence, not yet a diagnosis.
+
+[Build 2.] The normalized innovation squared---the NIS---scales the residual by
+its predicted covariance, $S$. This matters because ten meters may be alarming
+in one geometry and entirely plausible in another. Under the filter's modeling
+assumptions, the NIS can be compared with a statistical threshold.
+
+[Build 3.] A practical validator does more. It checks persistence over time,
+compares independent sources, considers signal and receiver health, and uses
+explicit recovery logic.
+
+[Build 4.] A gate tells us that a measurement is inconsistent with the current
+model and evidence. It does not prove whether the cause was spoofing, jamming,
+multipath, a sensor fault, or a bad assumption. Good assurance preserves that
+distinction.
+\end{narration}
+
+\section{Slide 12 --- What the system should do during an outage}
+\timing{1:25}
+
+\cue{Advance through the timeline phases, then reveal the graceful-degradation block.}
+
+\begin{narration}
+[Build 1.] Before an event, trusted GNSS updates keep the inertial solution and
+its bias estimates calibrated.
+
+[Build 2.] When an anomaly appears, the system should detect it promptly and
+stop treating the affected input as ordinary truth. That decision may be based
+on several monitors rather than one threshold crossing.
+
+[Build 3.] During the outage, the INS propagates the state. Other trusted aids
+can continue updating the filter. Covariance, $P$, must grow consistently with
+the remaining sensor errors and the weaker measurement geometry.
+
+[Build 4.] When the source returns, validate it before reuse. Compare it against
+the propagated solution and independent aids. Require a suitable interval of
+consistent behavior. Re-admission may be gradual rather than instantaneous.
+
+[Build 5.] This is graceful degradation: continue only while estimated
+uncertainty remains inside a declared operational bound. When it does not,
+transition to a safe mode. The estimate should never look healthier merely
+because its best reference disappeared.
+\end{narration}
+
+\section{Slide 13 --- Four design rules for assured PNT}
+\timing{1:15}
+
+\cue{Reveal one numbered rule at a time, then reveal the final sentence.}
+
+\begin{narration}
+[Build 1.] First, diversify. Combine sources that use different physics and do
+not share all of the same failure modes.
+
+[Build 2.] Second, manage trust. A precise measurement is not necessarily an
+authentic measurement. Weight must follow evidence.
+
+[Build 3.] Third, expose uncertainty. Propagate covariance realistically,
+validate it where possible, and compare it with the error the mission can
+tolerate.
+
+[Build 4.] Fourth, plan recovery before the failure occurs. Define how a source
+is declared suspect, how it is isolated, what conditions permit continued
+operation, and how it is tested before re-admission.
+
+[Build 5.] These rules reinforce one another. Assurance is the controlled
+behavior of the whole navigation system---including its estimator, monitors,
+modes, interfaces, and operating procedures.
+\end{narration}
+
+\section{Slide 14 --- The central idea}
+\timing{0:55}
+
+\cue{Hold on the complete summary slide.}
+
+\begin{narration}
+The central idea can be reduced to three verbs: predict continuously,
+challenge measurements, and recover deliberately.
+
+A resilient navigator does not promise perfect availability. No physical
+system can. It promises that performance is known, uncertainty is visible, and
+behavior remains safe when important inputs are lost or challenged.
+
+In Part Two, we will move from architecture to aiding sources. We will compare
+barometric, radio, terrain, and vision-based measurements, and then examine how
+terrain-referenced navigation can bound inertial drift when GNSS is not
+available.
+\end{narration}
+
+\section{Slide 15 --- Primary references}
+\timing{0:10}
+
+\cue{Leave the references on screen for at least ten seconds. Do not narrate the individual URLs.}
+
+\begin{narration}
+The primary government references used for this episode are shown here and are
+also linked in the video description.
+\end{narration}
+
+\section*{Source links for the video description}
+
+\begin{itemize}[leftmargin=*]
+  \item FAA, \emph{GPS and GNSS Interference Resource Guide}, 2025:\\
+    \href{https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs400/afs410/GNSS}{FAA GPS/GNSS Interference Resource Guide page}
+  \item GPS.gov, \emph{Resilience Through Responsible Use of PNT}:\\
+    \url{https://www.gps.gov/resilience-through-responsible-use-pnt}
+  \item NIST IR 8323 Rev. 1, \emph{Foundational PNT Profile}, 2023:\\
+    \url{https://doi.org/10.6028/NIST.IR.8323r1}
+  \item DHS, \emph{Resilient PNT Reference Architecture}, 2022:\\
+    \url{https://www.dhs.gov/sites/default/files/2022-06/22_0609_st_resilient_pnt_ra.pdf}
+  \item U.S. DOT, \emph{Complementary PNT Action Plan}, 2024:\\
+    \url{https://www.transportation.gov/pnt/complementary-pnt-action-plan}
+  \item DHS, \emph{Best Practices for Resilient PNT Supporting Critical
+    Infrastructure}, 2025:\\
+    \url{https://www.dhs.gov/sites/default/files/2025-02/25_0220_st_pnt_best_practices_ci.pdf}
+\end{itemize}
+
+\end{document}
