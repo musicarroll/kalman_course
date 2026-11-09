@@ -1,0 +1,155 @@
+#LyX file created by  tex2lyx 0.1.2
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass slides
+\begin_preamble
+
+\end_preamble
+\options landscape,leqno
+\language english
+\inputencoding latin1
+\fontscheme default
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% day1_seg2_diff_eq/state_space_main.tex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Segment 3
+\newline
+ Differential Equations and Difference Equations
+\newline
+ Topics
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Input-Output Representation 
+\end_layout
+
+\begin_layout Itemize
+
+Differential Equations and Difference Equations 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Include \input{input_output.lyx}
+preview false
+
+\end_inset
+
+ 
+\begin_inset Include \input{diff_eq.lyx}
+preview false
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+input{day1_seg3_state_space/stoch_diff_eq.tex}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+input{day1_seg3_diff_eq/exercises.tex}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

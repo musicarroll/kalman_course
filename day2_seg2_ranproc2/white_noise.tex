@@ -1,0 +1,72 @@
+% day2_seg2_ranproc2/white_noise.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Some Important Random Processes} 
+	\framesubtitle{White Noise}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item White noise can be defined as a process whose
+ autocorrelation function is a Dirac delta function:
+\begin{equation}\label{dirac}
+  \delta(\tau)=
+  \begin{cases}
+    \infty & \text{if }, \tau=0 \\
+    0 & \text{otherwise}.
+  \end{cases}
+\end{equation}
+}
+  \onslide<3->{
+ \item There's only one mathematical problem:  this is not a real function
+}
+  \onslide<4->{
+ \item There's also a physical problem:  such a process would have
+ infinite mean-squared value and hence infinite energy
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Some Important Random Processes} 
+	\framesubtitle{White Noise}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item There is a way to properly define the Dirac delta as a linear functional (a distribution) rather than 
+ a function, and to show that it retains all of its desired properties
+  }
+  \onslide<3->{
+ \item However, we'll proceed as if this concept of white noise were well-defined and use the 
+ delta function's integration properties to define some other processes such as random walk.
+}
+  \onslide<4->{
+ \item Characteristic feature of white noise to be uncorrelated in time.  This is the intent of using the 
+ Dirac delta functional as its defining autocorrelation function
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Some Important Random Processes} 
+	\framesubtitle{White Noise}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item MATLAB / Simulink block for white noise makes it a bandlimited signal, so that the bandwidth is not 
+ infinite as it otherwise would be for pure white noise
+}
+  \onslide<3->{
+ \item Valid assumption as long as noise bandwidth is
+ sufficiently greater than that of the system under consideration
+ }
+  \onslide<4->{
+ \item In MATLAB you can simulate a discrete white noise sequence
+ by drawing a random number at each time step from a normal distribution
+}
+  \onslide<5->{
+ \item Bottom line:  Random sequence for white noise needs to have a correlation time much smaller than 
+ the shortest time constant of the system
+}
+\end{itemize}
+\end{frame}
+

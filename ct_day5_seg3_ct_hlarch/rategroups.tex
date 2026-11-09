@@ -1,0 +1,96 @@
+% day5_seg3_ct_hlarch/rategroups.tex
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+   \item Primary Kalman Cycle: Every 10 seconds or .1 Hz
+	\begin{itemize}
+		\item Final extrapolation and application of observation update
+	 	\item Doppler compensation (weighted averages)
+		\item Kalman initialization
+		\item Buffering of Kalman data from 4 Hz and 1 Hz
+		\item Mag Var initialization
+		\item Weighted averaging
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item Secondary 1 Hz calculations of ...
+  \begin{itemize}
+	\item Earth rate, Earth radii and their inverses
+	\item TAS, wind, temperature
+    \item CEP
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item Secondary 1 Hz calculations (cont)
+  \begin{itemize}
+	\item Mag Var
+	\item Gravity
+    \item Geographic Position Errors
+  	\item GPS Alt Cal deltas and EVE means / standard devs.
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item Secondary 4 Hz subcyle processing performs ...
+  \begin{itemize}
+	\item INU Mode Conrol
+  	\item F02 transmission (if in alignment)
+	\item Transport rate and Coriolis rate calcs
+	\item Doppler groundtrack and drift angles (vestiges of the now defunct Doppler filter)
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item 4 Hz processing performs (cont)...
+  \begin{itemize}
+	\item Direction cosines computation
+	\item Geographic position and wander angle calcs
+	\item Position fix and alt cal processing
+	\item Navigation mode control
+	\item Observation accumulation
+	\item Transition matrix accumulation
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item Third Tier Kalman Subcycle: 8 Hz computations for ...
+	\begin{itemize}
+		\item Raw Doppler processing
+		\item Doppler compensation
+		\item Direction cosine extrapolation
+		\item Geographic position
+		\item Non-inertial vertical channel
+		\item Doppler DR
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter: Rate Group Drilldown
+\begin{itemize}
+  \item Fourth Tier Kalman Minor Cycle: 16 Hz calculations for ...
+	\begin{itemize}
+		\item High-rate INS compensation
+		\item Geographic position, velocity, altitude
+		\item Angles: Attitude, heading, groundtrack, angle of attack
+	\end{itemize}
+\end{itemize} 
+\end{frame}

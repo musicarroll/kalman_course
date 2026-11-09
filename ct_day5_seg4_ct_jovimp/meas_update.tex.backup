@@ -1,0 +1,9 @@
+% day5_seg4_ct_jovimp/meas_update.tex
+\begin{slide}
+Measurement Update Processing
+ \begin{itemize}
+ \item Primary Kalman Cycle Measurement Update: KF'UPDATE'PROCESSING'CONTROL
+ \item Secondary Subcycles:
+ \item
+\end{itemize}
+\end{slide}

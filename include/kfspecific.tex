@@ -1,0 +1,70 @@
+% Kalman specific definitions
+
+% States:
+
+% kfspecific.tex
+\wlog{Processing kfspecific.tex}
+\typeout{Processing kfspecific.tex}
+\message{Processing kfspecific.tex}
+
+
+% State and Measurement Models
+\newcommand{\damposcdiffeq}[1]{m\ddot{#1}+b\dot{#1}+k #1=0}
+\newcommand{\statevec}[1]{x(#1)}
+\newcommand{\statedyneq}{x(k)=\stm{k}x(k-1)+ \sdm{k}w(k)}
+\newcommand{\statedynctrleq}{x(k)=\stm{k}x(k-1)+ \Lambda(k) u(k-1) +\sdm{k}w(k)}
+\newcommand{\simplestatedyneq}{x(k)=\stm{k}x(k-1) + \procnoise{k}}
+\newcommand{\measmodeleq}{\meas{k}=\measmat{k}x(k)+\measnoise{k}}
+%\newcommand{\stateest}[2]{\widehat{x}^{#2}(#1)}
+\newcommand{\stateest}[2]{\hat{x}^{#2}(#1)}
+\newcommand{\stmlong}[2]{\Phi(#1,#2)}
+\newcommand{\stm}[1]{\Phi(#1)}
+\newcommand{\stmeq}[1]{\Phi(#1)=\Phi(#1,#1-1)}
+\newcommand{\abc}{\Phi}
+\newcommand{\stmtransprop}{\stmlong{t_2}{t_0}=\stmlong{t_2}{t_1}\stmlong{t_1}{t_0}}
+\newcommand{\stmeqtwo}[2]{\Phi(#2)=\Phi(#1,#2)}
+\newcommand{\sdm}[1]{\Gamma(#1)}
+\newcommand{\stateextrapeq}{\stateest{k}{-}=\stm{k}\stateest{k-1}{+}}
+\newcommand{\stateextraparrow}{\hat{x} & \leftarrow \Phi \hat{x}}
+\newcommand{\procnoisemat}[1]{Q(#1)}
+\newcommand{\procnoisematdef}[1]{\procnoisemat{#1}:=\expect{w(#1)w(#1)\trans}}
+\newcommand{\procnoise}[1]{w(#1)}
+\newcommand{\esterr}{\tilde{x}^{+}(k)}
+\newcommand{\esterrminus}{\tilde{x}^{-}(k)}
+\newcommand{\esterrdef}{\esterr=\stateest{k}{+}-\statevec{k}}
+\newcommand{\esterrdefminus}{\esterrminus=\stateest{k}{-}-\statevec{k}}
+\newcommand{\gencovmatdef}{P=\expect{(x-\hat{x})(x-\hat{x})\trans}}
+\newcommand{\covmat}[2]{P^{#2}\left( #1 \right)}
+\newcommand{\covmatdef}{\covmat{k}{+}=\expect{\esterr\left[\esterr\right]\trans}}
+\newcommand{\covextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
++ \sdm{k}\procnoisemat{k}\sdm{k}\trans}
+\newcommand{\altcovextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
++ \procnoisemat{k}}
+\newcommand{\altcovextrapeqarg}[1]{\covmat{#1}{-}=\stm{#1}\covmat{#1-1}{+}\stm{#1}\trans
+	+ \procnoisemat{#1}}
+\newcommand{\onestepriccatieq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+- \stm{k}\covmat{k-1}{+}\measmat{k-1}\trans
+\left[\measmat{k-1}\covmat{k-1}{-}\measmat{k-1}\trans + \measnoisemat{k-1}\right]^{-1}
+\measmat{k-1}\covmat{k-1}{+}\stm{k}\trans + \procnoisemat{k}}
+\newcommand{\covextraparrow}{P & \leftarrow \Phi P \Phi\trans
++ \sdm{k}Q\sdm{k}\trans}
+\newcommand{\measmat}[1]{H(#1)}
+\newcommand{\kalgain}[1]{K(#1)}
+\newcommand{\measnoise}[1]{v(#1)}
+\newcommand{\measnoisemat}[1]{R(#1)}
+\newcommand{\measnoisematdef}[1]{\measnoisemat{#1}:=\expect{v(#1)v(#1)\trans}}
+\newcommand{\kalgaineq}{\kalgain{k}=\covmat{k}{-}\measmat{k}\trans\left[\measmat{k}\covmat{k}{-}\measmat{k}\trans + \measnoisemat{k}\right]^{-1}}
+\newcommand{\genkalgaineq}{K=P^{-}H\trans\left[HP^{-}H\trans + R\right]^{-1}}
+\newcommand{\meas}[1]{z(#1)}
+\newcommand{\innovation}[1]{\meas{#1}-\measmat{#1}\stateest{#1}{-}}
+\newcommand{\stateupdateeq}{\stateest{k}{+}=\stateest{k}{-}+\kalgain{k}\left[\innovation{k}\right]}
+\newcommand{\covupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}}
+\newcommand{\gencovupdateeq}{P^{+}=\left[I-KH\right]P^{-}}
+\newcommand{\josephcovupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}\left[I-\kalgain{k}\measmat{k}\right]\trans+\kalgain{k}\measnoisemat{k}\kalgain{k}\trans}
+\newcommand{\stateupdatearrow}{\hat{x} & \leftarrow \hat{x}+K \left[z-H\hat{x} \right]}
+\newcommand{\covupdatearrow}{P & \leftarrow\left[I-KH\right]P}
+\newcommand{\dvcovupdateeq}{P(+) = P(-) - GK\trans - \left[ GK\trans \right]\trans}
+\newcommand{\lveqcont}{\dot{P}=FP+PF\trans+Q}
+\newcommand{\matrixriccatieq}{\dot{P}=FP+PF\trans+Q - PH\trans R^{-1}HP}
+\newcommand{\expmeas}{\measmat{k}\stateest{k}{-}}
+\newcommand{\woodbury}[4]{\left(#1+#2#3#4\right)^{-1}=#1^{-1}-#1^{-1}#2\left(#3^{-1}+#4#1^{-1}#2\right)^{-1}#4#1^{-1}}

@@ -1,0 +1,25 @@
+\begin{slide}
+Alternatives to Weighting: Decentralized Filtering
+\begin{itemize}
+  \item Decentralized filtering without feedback
+  \item Decentralized filtering with feedback
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Decentralized Filtering without Feedback
+\begin{itemize}
+  \item Assume two local filters (like CT I)
+  \item Then for the global error covariance we have:
+\[P^{-1}=P_1^{-1}+M_1^{-1}+P_2^{-1}+M_2^{-1}+M^{-1}\]
+where $P_1,P_2$ are updated local error covariances for each filter, $M_1,M_2$ are extrapolated local error covariances prior to update, and $M$ is the global filter's prior error covariance.
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Decentralized Filtering without Feedback
+\begin{itemize}
+  \item The global filter's estimate is
+\[\hat{x}=P\left[P_1^{-1}\hat{x}_1-M_1m_1^{-1}+P_1^{-1}\hat{x}_2-M_2m_1^{-1}\right]\]
+\end{itemize} 
+\end{slide}

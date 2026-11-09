@@ -1,0 +1,24 @@
+\begin{frame}
+KF'COVARIANCE'RATE'LIMIT
+\begin{verbatim}
+     FUNCTION: The KFCOVRL subfunction shall calculate the process noise
+     MATRIX DIAGONAL ELEMENTS FOR THE COVARIANCE MATRIX EXTRAPOLATION.
+     The process noise matrix is filter-dependent. KFCOVRL shall
+     determine the system mode and computer the appropriate process
+     noise matrix diagonal elements by accessing the approprate
+     subfunctions.  This module returns the covariance rate limit
+     vectors used in the covarinace matrix extrapolation.  KFCOVRL
+     shall provide capability of varible rate limiting based upon
+     sensor error budgets input over the MUX.  KFCOVRL shall further
+     provide capability for gimbal and strapdown applications for the
+     INS filters.  KFCOVRL shall user the same formulat for coarse air
+     align and aided Navigation.
+
+     To allow the filter to accept unreasonable (3 sigma criteria)
+     position fixes forced by the operator, KFCOVRL shall multiply the
+     present postion by 100x, and add to the COV rate limiting to
+     decorrelate postion from the other states, after which the
+     position covariance will come back down to the level of noise.
+
+\end{verbatim}
+\end{frame}

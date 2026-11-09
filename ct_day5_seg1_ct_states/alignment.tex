@@ -1,0 +1,50 @@
+% day5_seg1_ct_states/alignment.tex
+\begin{frame}
+Alignment
+ \begin{itemize}
+ \item Stationary Alignment
+	\begin{itemize}
+		\item Gyrocompassing
+		\item Coarse Leveling
+		\item Fine Alignment
+	\end{itemize}
+ \item Motion Alignment
+	\begin{itemize}
+		\item Air Alignment
+		\item Transfer Align
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Stationary Alignment
+\begin{itemize}
+  \item Motion is bad
+	\begin{itemize}
+		\item Don't change the heading!
+		\begin{itemize}
+		\item Heading changes are attributed to gyro biases
+		\end{itemize}
+		\item Don't lie to the filter about position!
+		\begin{itemize}
+			\item Position drives gyrocompassing and plumb-bob gravity model
+		\end{itemize}
+  \item Allowances made for wind buffeting in process noise
+	\end{itemize}
+  \item Gyrocompassing: find north through sensing of earth rate
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Motion Alignment
+\begin{itemize}
+  \item Typically In-Air
+  \item Coarse and Fine Alignment Phases
+  \item Velocity Aided
+	\begin{itemize}
+		\item GPS (but position as well!)
+		\item DVS
+		\item Other INS (transfer align)
+	\end{itemize}
+\end{itemize} 
+\end{frame}

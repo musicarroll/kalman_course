@@ -1,0 +1,54 @@
+% day5_seg4_ct_jovimp/extrapolation.tex
+\begin{slide}
+Extrapolation
+ \begin{itemize}
+ \item System Dynamics and Transition Matrix Structure
+ \item Transition Matrix Accumulation
+ \item State Extrapolation and Covariance Extrapolation
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+System Dynamics and Transition Matrix Structure
+\begin{itemize}
+  \item Block partitioning based on Varying and Non-varying states
+  \item Singer used $A$ for system dynamics matrix and $F$ for state transition matrix
+	\begin{itemize}
+		\item instead of usual $F$ for system dynamics and $\Phi$ for transition matrix
+	\end{itemize}
+\end{itemize} 
+
+\end{slide}
+
+\begin{slide}
+System Dynamics and Transition Matrix Structure
+\begin{itemize}
+  \item $\Phi$ block structure: 
+\end{itemize} 
+\begin{equation}
+\Phi = 
+\begin{bmatrix}
+F_{\text{vv}} & F_{\text{nv}}\\
+0 & I
+\end{bmatrix}
+\end{equation} 
+where $F_{\text{vv}}$ is the block propagating varying states, while $F_{\text{nv}}$ propagates non-varying states.
+\end{slide}
+
+\begin{slide}
+Extrapolation: Transition Matrix Formation and Use
+\begin{itemize}
+  \item Transition Matrix Formation: KF'TRANS'MATRIX'CALCULATION
+  \item Sparse Matrix Multiplication: KF'SPARSE'MAT'VECT'MULT
+  \item Let's go code snorkeling!
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Covariance Extrapolation
+\begin{itemize}
+  \item Covariance Rate Limiting: KF'COVARIANCE'RATE'LIMIT
+  \item Covariance Extaploation: KF'COV'EXTRAPOLATION
+  \item Prepare to snorkel ...
+\end{itemize} 
+\end{slide}

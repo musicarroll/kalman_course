@@ -1,0 +1,1452 @@
+Model {
+  Name			  "SDID_test"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Oct 04 12:57:01 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "k079210"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Oct 07 14:24:02 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:100>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "2000.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "SDID_test"
+    Location		    [2, 70, 1022, 720]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "94"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Averaging voltmeter"
+      Ports		      [1, 2]
+      Position		      [250, 201, 350, 274]
+      BackgroundColor	      "yellow"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      Port {
+	PortNumber		1
+	Name			"every 10 seconds"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Averaging voltmeter"
+	Location		[55, 78, 828, 555]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"110"
+	Block {
+	  BlockType		  Inport
+	  Name			  "U_input"
+	  Position		  [20, 373, 50, 387]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "(n-1)/n"
+	  Position		  [235, 210, 295, 240]
+	  BackgroundColor	  "yellow"
+	  Expr			  "(u-1)/u"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "1/n"
+	  Position		  [235, 325, 295, 355]
+	  BackgroundColor	  "yellow"
+	  Expr			  "1/u"
+	}
+	Block {
+	  BlockType		  HitCross
+	  Name			  "10 seconds\ndetection"
+	  Ports			  [1, 1]
+	  Position		  [245, 106, 285, 144]
+	  BackgroundColor	  "red"
+	  HitCrossingOffset	  "1000"
+	  HitCrossingDirection	  "either"
+	  ShowOutputPort	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [330, 332, 365, 363]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [330, 202, 365, 233]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Reset"
+	  Position		  [480, 273, 510, 307]
+	  Orientation		  "left"
+	  BackgroundColor	  "lightBlue"
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Sample"
+	  Position		  [15, 208, 45, 242]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [405, 210, 425, 230]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [70, 215, 90, 235]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "n"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch 1"
+	  Position		  [395, 138, 430, 182]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch 2"
+	  Position		  [140, 283, 175, 327]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch 3"
+	  Position		  [550, 213, 585, 257]
+	  BackgroundColor	  "orange"
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "delay 1"
+	  Position		  [330, 143, 365, 177]
+	  Orientation		  "left"
+	  BackgroundColor	  "cyan"
+	  X0			  "0"
+	  SampleTime		  "0.01"
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "delay 2"
+	  Position		  [90, 289, 120, 321]
+	  Orientation		  "left"
+	  BackgroundColor	  "cyan"
+	  X0			  "0"
+	  SampleTime		  "0.01"
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "delay 3"
+	  Position		  [555, 284, 585, 316]
+	  Orientation		  "left"
+	  BackgroundColor	  "cyan"
+	  X0			  "0"
+	  SampleTime		  "0.01"
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Data ready"
+	  Position		  [650, 118, 680, 132]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Voltmeter\noutput"
+	  Position		  [650, 228, 680, 242]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "1/n"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(n-1)/n"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "Switch 1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Switch 3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "delay 1"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, 50]
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "U_input"
+	  SrcPort		  1
+	  Points		  [255, 0; 0, -25]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch 1"
+	  SrcPort		  1
+	  DstBlock		  "delay 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sample"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "n"
+	  Labels		  [0, 1]
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    Branch {
+	      DstBlock		      "(n-1)/n"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 115]
+	      DstBlock		      "1/n"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -100]
+	      DstBlock		      "10 seconds\ndetection"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 95]
+	    DstBlock		    "Switch 2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "delay 2"
+	  SrcPort		  1
+	  Points		  [-5, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch 2"
+	  SrcPort		  1
+	  DstBlock		  "delay 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "10 seconds\ndetection"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  Branch {
+	    Points		    [0, -35; -185, 0; 0, 215]
+	    DstBlock		    "Switch 2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [95, 0]
+	    Branch {
+	      Points		      [0, 35]
+	      Branch {
+		DstBlock		"Switch 1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 75]
+		DstBlock		"Switch 3"
+		DstPort			2
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Data ready"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Reset"
+	  SrcPort		  1
+	  Points		  [-10, 0]
+	  Branch {
+	    DstBlock		    "Switch 2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -145]
+	    DstBlock		    "Switch 1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "delay 3"
+	  SrcPort		  1
+	  Points		  [-25, 0; 0, -50]
+	  DstBlock		  "Switch 3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch 3"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "delay 3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Voltmeter\noutput"
+	    DstPort		    1
+	  }
+	}
+	Annotation {
+	  Position		  [663, 138]
+	}
+	Annotation {
+	  Position		  [211, 45]
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gyro noise"
+      Ports		      [0, 1]
+      Position		      [65, 139, 100, 171]
+      BackgroundColor	      "lightBlue"
+      SourceBlock	      "libsb2sl/SNG/CNormalRandom"
+      SourceType	      "SGN-Palette"
+      SEED		      "7"
+      T0		      "0"
+      MEAN		      "0.000000"
+      STD		      "0.12"
+      INTM		      "Linear"
+      TS		      "0.01"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [385, 54, 628, 157]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      SourceBlock	      "simulink3/Signals\n& Systems/Model Info"
+      SourceType	      "CMBlock"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "\nRATE SENSOR TEST\n---------------------------"
+"-------\n\n\nThales Avionics / JRC\nOctober 2002\n"
+      MaskDisplayString	      "\\nRATE SENSOR TEST\\n-------------------------"
+"---------\\n\\n\\nThales Avionics / JRC\\nOctober 2002\\n"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "SDID_test"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info2"
+      Ports		      []
+      Position		      [210, 374, 410, 452]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "simulink3/Signals\n& Systems/Model Info"
+      SourceType	      "CMBlock"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "\nThis test has to be performed at ambiant\nroo"
+"m temperature, so that rate sensor\noutput should remain constant.\n"
+      MaskDisplayString	      "\\nThis test has to be performed at ambiant\\nr"
+"oom temperature, so that rate sensor\\noutput should remain constant.\\n"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "SDID_test"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Rate sensor\nbias step :\n40 °/h at\nt = 1000 s"
+"ec"
+      Position		      [65, 288, 100, 322]
+      BackgroundColor	      "lightBlue"
+      Time		      "1000"
+      Before		      "0"
+      After		      "40/3600"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Rate sensor\ndrift (°/s)"
+      Position		      [65, 223, 100, 257]
+      BackgroundColor	      "lightBlue"
+      Value		      "0.1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Rate sensor\ndrift estimator"
+      Ports		      [1, 3, 1]
+      Position		      [460, 247, 610, 323]
+      BackgroundColor	      "yellow"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Rate sensor\ndrift estimator"
+	Location		[0, 78, 1012, 744]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"127"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Rate"
+	  Position		  [230, 148, 260, 162]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  Ports			  []
+	  Position		  [180, 45, 200, 65]
+	  BackgroundColor	  "red"
+	  StatesWhenEnabling	  "held"
+	  ShowOutputPort	  off
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Bandwidth"
+	  Position		  [445, 445, 505, 475]
+	  BackgroundColor	  "cyan"
+	  Expr			  "1/u^2"
+	}
+	Block {
+	  BlockType		  Clock
+	  Name			  "Clock"
+	  Position		  [25, 105, 45, 125]
+	  BackgroundColor	  "orange"
+	  DisplayTime		  off
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Convergence"
+	  Position		  [410, 230, 480, 270]
+	  BackgroundColor	  "orange"
+	  Gain			  "25"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Drift estimator\ninitialize"
+	  Ports			  [2, 1]
+	  Position		  [240, 252, 270, 283]
+	  BackgroundColor	  "red"
+	  Operator		  "AND"
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Gyro drift\nestimator"
+	  Ports			  [1, 1]
+	  Position		  [475, 295, 510, 335]
+	  Orientation		  "left"
+	  BackgroundColor	  "magenta"
+	  IntegratorMethod	  "ForwardEuler"
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  SampleTime		  "0.01"
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Init"
+	  Position		  [310, 68, 340, 102]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Loop main parameter\nequivalent to time con"
+"stant"
+	  Position		  [315, 418, 345, 452]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "0.05"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [510, 182, 545, 213]
+	  Orientation		  "left"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [625, 182, 660, 213]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Rate\nintegration"
+	  Ports			  [1, 1]
+	  Position		  [500, 100, 535, 140]
+	  BackgroundColor	  "magenta"
+	  IntegratorMethod	  "ForwardEuler"
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  SampleTime		  "0.01"
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Scale factor"
+	  Position		  [610, 100, 680, 140]
+	  BackgroundColor	  "orange"
+	  Gain			  "1000"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Stability"
+	  Position		  [445, 395, 505, 425]
+	  BackgroundColor	  "cyan"
+	  Expr			  "2/u"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Start"
+	  Position		  [155, 257, 185, 288]
+	  BackgroundColor	  "red"
+	  Operator		  ">"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [335, 145, 355, 165]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [2, 1]
+	  Position		  [460, 110, 480, 130]
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch 1"
+	  Position		  [400, 98, 435, 142]
+	  BackgroundColor	  "orange"
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch 2"
+	  Position		  [650, 293, 685, 337]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "T start"
+	  Position		  [95, 283, 125, 317]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "10"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "To"
+	  Position		  [90, 193, 120, 227]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "300"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "pseudo-attitude\ncomputation"
+	  Position		  [155, 187, 185, 218]
+	  BackgroundColor	  "red"
+	  Operator		  "<="
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "t > 300 s"
+	  Ports			  [1, 1]
+	  Position		  [240, 189, 270, 221]
+	  BackgroundColor	  "red"
+	  Operator		  "NOT"
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Rate sensor drift"
+	  Position		  [390, 333, 420, 347]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Pseudo\nattitude"
+	  Position		  [705, 113, 735, 127]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Start test"
+	  Position		  [295, 198, 325, 212]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "pseudo-attitude\ncomputation"
+	  SrcPort		  1
+	  Points		  [15, 0; 5, 0]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Drift estimator\ninitialize"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -85]
+	    DstBlock		    "Switch 1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "t > 300 s"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [85, 0; 0, 130]
+	  DstBlock		  "Switch 2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [-35, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch 2"
+	  SrcPort		  1
+	  DstBlock		  "Gyro drift\nestimator"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [4, 0]
+	  SrcBlock		  "Drift estimator\ninitialize"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 110; 435, 0; 0, -65]
+	  DstBlock		  "Switch 2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Start"
+	  SrcPort		  1
+	  DstBlock		  "Drift estimator\ninitialize"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "T start"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Start"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Init"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 20]
+	  DstBlock		  "Switch 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "Switch 1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 95]
+	    DstBlock		    "Convergence"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch 1"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Rate\nintegration"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "To"
+	  SrcPort		  1
+	  DstBlock		  "pseudo-attitude\ncomputation"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Clock"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    Points		    [60, 0]
+	    DstBlock		    "pseudo-attitude\ncomputation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 150]
+	    DstBlock		    "Start"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Convergence"
+	  SrcPort		  1
+	  Points		  [245, 0; 0, 50]
+	  DstBlock		  "Switch 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Loop main parameter\nequivalent to time con"
+"stant"
+	  SrcPort		  1
+	  Points		  [0, 0; 75, 0]
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "Stability"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Bandwidth"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Stability"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, -205]
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Bandwidth"
+	  SrcPort		  1
+	  Points		  [90, 0; 0, -255]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Rate\nintegration"
+	  SrcPort		  1
+	  Points		  [0, 0; 45, 0]
+	  Branch {
+	    Points		    [0, 70]
+	    Branch {
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Product2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "Scale factor"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gyro drift\nestimator"
+	  SrcPort		  1
+	  Points		  [0, 0; -125, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Rate sensor drift"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Scale factor"
+	  SrcPort		  1
+	  DstBlock		  "Pseudo\nattitude"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "t > 300 s"
+	  SrcPort		  1
+	  DstBlock		  "Start test"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [132, 317]
+	}
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Rate sensor\nscale factor\n25 mV/(°/s)"
+      Position		      [170, 216, 225, 264]
+      BackgroundColor	      "orange"
+      Gain		      "0.025"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [3]
+      Position		      [825, 239, 895, 361]
+      BackgroundColor	      "lightBlue"
+      Floating		      off
+      Location		      [147, 249, 781, 609]
+      Open		      off
+      NumInputPorts	      "3"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+	axes2			""
+	axes3			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "0.0975~-1.5~0"
+      YMax		      "0.115~3~1"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      MaxDataPoints	      "5000"
+      Decimation	      "10"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Step detection"
+      Ports		      [2, 1, 1]
+      Position		      [665, 329, 775, 396]
+      BackgroundColor	      "yellow"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Step detection"
+	Location		[326, 254, 954, 640]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"102"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pseudo att"
+	  Position		  [90, 108, 120, 122]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Test\nstart"
+	  Position		  [275, 188, 305, 202]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  Ports			  []
+	  Position		  [75, 50, 95, 70]
+	  BackgroundColor	  "red"
+	  StatesWhenEnabling	  "held"
+	  ShowOutputPort	  off
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  Position		  [165, 100, 195, 130]
+	  BackgroundColor	  "cyan"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  Ports			  [2, 1]
+	  Position		  [405, 127, 435, 158]
+	  BackgroundColor	  "red"
+	  Operator		  "OR"
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  Position		  [405, 195, 435, 225]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  X0			  "0"
+	  InheritSampleTime	  off
+	  RTWStateStorageClass	  "Auto"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Start"
+	  Position		  [265, 107, 295, 138]
+	  BackgroundColor	  "red"
+	  Operator		  ">"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Test"
+	  Ports			  [2, 1]
+	  Position		  [335, 117, 365, 148]
+	  BackgroundColor	  "red"
+	  Operator		  "AND"
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Threshold"
+	  Position		  [160, 180, 205, 210]
+	  BackgroundColor	  "lightBlue"
+	  Value			  "0.125"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "WARNING"
+	  Position		  [510, 138, 540, 152]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "WARNING"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Memory"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  Points		  [-25, 0; 0, -60]
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Threshold"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -65]
+	  DstBlock		  "Start"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Start"
+	  SrcPort		  1
+	  DstBlock		  "Test"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Test"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Test\nstart"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Test"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Start"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pseudo att"
+	  SrcPort		  1
+	  DstBlock		  "Abs"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [143, 178]
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [3, 1]
+      Position		      [125, 230, 145, 250]
+      BackgroundColor	      "red"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "+++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Volt  to °/s"
+      Position		      [385, 261, 440, 309]
+      BackgroundColor	      "orange"
+      Gain		      "40"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Line {
+      SrcBlock		      "Gyro noise"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rate sensor\nbias step :\n40 °/h at\nt = 1000 s"
+"ec"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "Sum2"
+      DstPort		      3
+    }
+    Line {
+      Name		      "every 10 seconds"
+      Labels		      [0, 1]
+      SrcBlock		      "Averaging voltmeter"
+      SrcPort		      1
+      Points		      [0, 0; 180, 0]
+      Branch {
+	Points			[185, 0]
+	DstBlock		"Step detection"
+	DstPort			enable
+      }
+      Branch {
+	DstBlock		"Rate sensor\ndrift estimator"
+	DstPort			enable
+      }
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "Rate sensor\nscale factor\n25 mV/(°/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rate sensor\nscale factor\n25 mV/(°/s)"
+      SrcPort		      1
+      DstBlock		      "Averaging voltmeter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Averaging voltmeter"
+      SrcPort		      2
+      Points		      [15, 0]
+      DstBlock		      "Volt  to °/s"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Volt  to °/s"
+      SrcPort		      1
+      DstBlock		      "Rate sensor\ndrift estimator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rate sensor\ndrift (°/s)"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Rate sensor\ndrift estimator"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rate sensor\ndrift estimator"
+      SrcPort		      2
+      Points		      [25, 0; 0, 15]
+      Branch {
+	Points			[0, 45]
+	DstBlock		"Step detection"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Scope"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Rate sensor\ndrift estimator"
+      SrcPort		      3
+      Points		      [10, 0; 0, 70]
+      DstBlock		      "Step detection"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Step detection"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Annotation {
+      Position		      [85, 187]
+      VerticalAlignment	      "top"
+      Text		      "sigma # 0.12 deg/s \nin [0 , 100 Hz]"
+    }
+    Annotation {
+      Position		      [305, 363]
+    }
+    Annotation {
+      Position		      [194, 525]
+    }
+    Annotation {
+      Position		      [196, 373]
+    }
+  }
+}

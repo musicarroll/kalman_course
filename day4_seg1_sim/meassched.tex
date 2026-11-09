@@ -1,0 +1,34 @@
+% day4_seg1_sim/meassched.tex
+\begin{frame}
+Measurement Scheduling
+ \begin{itemize}
+ \item Art / Science unto itself
+ \item Determining which measurements to process when
+ \item Usually fixed schedule with potential operator override
+	\begin{itemize}
+		\item E.g., Position Fix and Altitude Cal
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Measurement Scheduling
+\begin{itemize}
+  \item Sequential Processing of Measurements
+	\begin{itemize}
+  		\item Scalarize to avoid matrix inversion of $HPH\trans + R$
+		\item Or at least reduce dimension
+		\item feasible if $R$ matrix can be block partitioned into uncorrelated blocks
+	\end{itemize} 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Measurement Scheduling
+\begin{itemize}
+  \item Examining eigenevalues of $P$
+  \item The larger the eigenvalue, the less observable the associated state eigenvector
+  \item State eigenvector is linear combination of states
+  \item Measurements can be scheduled to improve observability
+\end{itemize} 
+\end{frame}

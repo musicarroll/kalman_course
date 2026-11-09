@@ -1,0 +1,526 @@
+% Slide 1: Overview of Difference Equations
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Difference Equations} 
+		\framesubtitle{Overview}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Definition and Importance
+			\autoadvance{2} % Wait 5 seconds before the next item
+		}
+		\onslide<3->{
+			\item Examples and Applications
+			\autoadvance{2} % Wait 5 seconds
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item Control Systems
+				\item Signal Processing
+				\item Finance
+			\end{itemize}
+			\autoadvance{4} % Wait 7 seconds
+		}
+		\onslide<5->{
+			\item Relationship to Differential Equations
+			\autoadvance{3} % Wait 5 seconds
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------
+		\autoadvance{8} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 1a: Importance of Difference Equations
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Difference Equations}
+		\framesubtitle{Importance and Relevance}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Modeling Dynamic Systems:}
+			\begin{itemize}
+				\item Captures changes between discrete time steps.
+				\item Useful in systems where variables evolve over time (e.g., population growth, economic indicators).
+			\end{itemize}
+			\autoadvance{8} % Wait 12 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Bridge to Differential Equations:}
+			\begin{itemize}
+				\item Difference equations are the discrete-time counterparts to differential equations.
+				\item Used when systems are sampled at discrete intervals or in digital settings.
+			\end{itemize}
+			\autoadvance{8} % Wait 12 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{8} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 1b: Applications of Difference Equations
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Applications of Difference Equations}
+		\framesubtitle{Key Areas of Use}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Control Systems:}
+			\begin{itemize}
+				\item Feedback loops, system stability, and controller design.
+			\end{itemize}
+			\autoadvance{6} % Wait 6 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Signal Processing:}
+			\begin{itemize}
+				\item Filtering and analysis of discrete-time signals.
+			\end{itemize}
+			\autoadvance{6} % Wait 6 seconds
+		}
+		\onslide<4->{
+			\item \textbf{Finance:}
+			\begin{itemize}
+				\item Modeling investments, loans, and asset dynamics over time.
+			\end{itemize}
+			\autoadvance{6} % Wait 6 seconds
+		}
+		\onslide<5->{
+			\item \textbf{Epidemiology:}
+			\begin{itemize}
+				\item Predicting disease spread using discrete time models.
+			\end{itemize}
+			\autoadvance{6} % Wait 6 seconds
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+
+% Slide 2: Definitions (Scalar and Vector Case)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Difference Equations}
+		\framesubtitle{Definitions}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Scalar Difference Equation:} An equation involving differences between successive values of a scalar sequence.
+			\begin{itemize}
+				\item Example of a scalar difference equation:
+				\[
+				y(n+1) = a(1) y(n) + a(2) y(n-1) + \cdots + a(k) y(n-k+1) + b
+				\]
+				\item \( y(n) \) is a scalar output at time step \( n \), and \( a(i) \) are scalar coefficients.
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Vector Difference Equation:} When the output \( y(n) \) is a vector, the difference equation becomes:
+			\[
+			y_i(n+1) = \sum_{j=1}^{k} a_{ij} y_j(n) + b_i
+			\]
+			\begin{itemize}
+				\item \( y_i(n) \) is the \( i \)-th component of the output vector at time step \( n \).
+				\item \( a_{ij} \) are the matrix coefficients, and \( b_i \) are constants (or functions of time).
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<4->{
+			\item The scalar equation is a special case of the vector equation when \( y(n) \) is one-dimensional.
+			\autoadvance{5} % Wait 5 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 2b: Higher-Order Scalar vs. First-Order Vector Difference Equations
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Higher-Order vs. First-Order Difference Equations}
+		\framesubtitle{Scalar vs. Vector Representation}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Higher-Order Scalar Difference Equation:}
+			\begin{itemize}
+				\item Example: \( y(n+1) = a(1) y(n) + a(2) y(n-1) + b \)
+				\item This equation depends on multiple past values of \( y(n) \), such as \( y(n) \), \( y(n-1) \), etc.
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \textbf{First-Order Vector Difference Equation:}
+			\begin{itemize}
+				\item First-order equations involve only the current and next time steps.
+				\item Example: \( x(n+1) = A x(n) + B u(n) \)
+				\item Higher-order scalar equations can be converted into first-order vector equations.
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 2c: Converting Higher-Order Scalar to First-Order Vector Equations (Step 1)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Converting Higher-Order Scalar to First-Order Vector Equations}
+		\framesubtitle{Step 1: Introducing State Variables}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Example:} Start with a second-order scalar equation:
+			\[
+			y(n+1) = a(1) y(n) + a(2) y(n-1) + b
+			\]
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Step 1:} Introduce state variables to represent the past time steps.
+			\[
+			x_1(n) = y(n), \quad x_2(n) = y(n-1)
+			\]
+			These state variables capture the dynamics of \( y(n) \) and its past value.
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 2d: Converting Higher-Order Scalar to First-Order Vector Equations (Step 2 and Non-Linear Difference Equations)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Converting Higher-Order Scalar to First-Order Vector Equations}
+		\framesubtitle{Step 2: State-Space Representation and Non-Linear Equations}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Step 2:} Write the state-space equations:
+			\[
+			x_1(n+1) = a(1) x_1(n) + a(2) x_2(n) + b
+			\]
+			\[
+			x_2(n+1) = x_1(n)
+			\]
+			This converts the second-order scalar equation into a system of first-order equations.
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item The system can now be represented as a vector equation:
+			\[
+			x(n+1) = A x(n) + B u(n)
+			\]
+			\autoadvance{7} % Wait 7 seconds
+		}
+		\onslide<4->{
+			\item \textbf{Non-linear Difference Equation:} Involves non-linear functions of the sequence values or the time indices.
+			\autoadvance{5} % Wait 5 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 3a: State Variables and Outputs (Vector Nature)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Difference Equations}
+		\framesubtitle{State Variables and Outputs (Vector Nature)}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{State Variables:} $ x(n) $
+			\begin{itemize}
+				\item \( x(n) \) is a \textbf{state vector} representing the system's internal state at time step \( n \).
+				\item Dimension: \( x(n) \in \mathbb{R}^d \) (where \( d \) is the number of states).
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Outputs:} $ y(n) $
+			\begin{itemize}
+				\item \( y(n) \) is the \textbf{output vector}, representing the observed outputs of the system at time step \( n \).
+				\item Dimension: \( y(n) \in \mathbb{R}^m \) (where \( m \) is the number of outputs).
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 3b: State-Space Output Equation
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State-Space Output Equation}
+		\framesubtitle{Relationship Between State and Output}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item The output \( y(n) \) is related to the state \( x(n) \) by the matrix \( C \):
+			\[
+			y(n) = C x(n)
+			\]
+			\autoadvance{7} % Wait 7 seconds
+		}
+		\onslide<3->{
+			\item \( C \) is an \( m \times d \) matrix, where:
+			\begin{itemize}
+				\item \( m \) is the number of outputs.
+				\item \( d \) is the number of states.
+			\end{itemize}
+			\autoadvance{7} % Wait 7 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 3c: Control Inputs, Noise, and State Transition
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Transition and Inputs}
+		\framesubtitle{Control Inputs and Noise (Vector Nature)}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Control Inputs:} $ u(n) $
+			\begin{itemize}
+				\item \( u(n) \) is the \textbf{input vector}, representing external inputs at time step \( n \).
+				\item Dimension: \( u(n) \in \mathbb{R}^p \) (where \( p \) is the number of control inputs).
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \textbf{Noise Inputs:} $ w(n) $
+			\begin{itemize}
+				\item \( w(n) \) is the \textbf{noise vector}, representing process noise at time step \( n \).
+				\item Dimension: \( w(n) \in \mathbb{R}^q \) (where \( q \) is the dimension of the noise).
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<4->{
+			\item The state transition equation is given by:
+			\[
+			x(n+1) = A x(n) + B u(n) + G w(n)
+			\]
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 4a: Defining the State for a Simple System
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Difference Equations}
+		\framesubtitle{Defining the State for a Simple System}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Start with a simple linear difference equation:
+			\[
+			y(n+1) = a y(n) + b u(n)
+			\]
+			This models how the output \( y(n) \) changes over time based on its previous value and input \( u(n) \).
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item Define the state variable \( x(n) \) to represent the internal state of the system:
+			\[
+			x(n) = y(n)
+			\]
+			In this case, the state coincides with the output, but it’s helpful to treat them as distinct for generalization.
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+% Slide 4b: State-Space Representation (General Form)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State-Space Representation}
+		\framesubtitle{General Form}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Using \( x(n) \) as the state vector, we can write the general form of the state-space representation:
+			\[
+			x(n+1) = A x(n) + B u(n)
+			\]
+			\begin{itemize}
+				\item \( A \) is an \( d \times d \) matrix, where \( d \) is the number of state variables.
+				\item \( B \) is an \( d \times p \) matrix, where \( p \) is the number of inputs.
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item The output \( y(n) \) is related to the state \( x(n) \) via the matrix \( C \):
+			\[
+			y(n) = C x(n)
+			\]
+			\begin{itemize}
+				\item \( C \) is an \( m \times d \) matrix, where \( m \) is the number of outputs.
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<4->{
+			\item In general, the system parameters \( A \), \( B \), and \( C \) are matrices with the following dimensions:
+			\begin{itemize}
+				\item \( A \in \mathbb{R}^{d \times d} \)
+				\item \( B \in \mathbb{R}^{d \times p} \)
+				\item \( C \in \mathbb{R}^{m \times d} \)
+			\end{itemize}
+			\autoadvance{10} % Wait 8 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 5a1: AR Component of ARMA Models
+\begin{frame}
+	\onslide<1->{
+		\frametitle{ARMA Models}
+		\framesubtitle{Autoregressive (AR) Component}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Autoregressive (AR):}
+			\[
+			y(n) = \mu_{AR} + \sum_{i=1}^{p} a(i) y(n-i) + w(n)
+			\]
+			\autoadvance{5} % Wait 5 seconds
+		}
+		\onslide<3->{
+			\begin{itemize}
+				\item \( \mu_{AR} \) is a constant drift term in the AR component.
+				\item \( a(i) \) are the AR coefficients.
+				\item \( w(n) \) is white noise, representing process noise.
+			\end{itemize}
+			\autoadvance{7} % Wait 7 seconds
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 5a2: MA Component and Combined ARMA Model
+\begin{frame}
+	\onslide<1->{
+		\frametitle{ARMA Models}
+		\framesubtitle{Moving Average (MA) Component and ARMA Summary}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \textbf{Moving Average (MA):}
+			\[
+			y(n) = \mu_{MA} + w(n) + \sum_{j=1}^{q} b(j) w(n-j)
+			\]
+			\autoadvance{5} % Wait 5 seconds
+		}
+		\onslide<3->{
+			\begin{itemize}
+				\item \( \mu_{MA} \) is a constant drift term in the MA component.
+				\item \( b(j) \) are the MA coefficients.
+				\item \( w(n) \) is white noise, used as an input.
+			\end{itemize}
+			\autoadvance{7} % Wait 7 seconds
+		}
+		\onslide<4->{
+			\item \textbf{ARMA(p, q):}
+			\[
+			y(n) = \mu + \sum_{i=1}^{p} a(i) y(n-i) + w(n) + \sum_{j=1}^{q} b(j) w(n-j)
+			\]
+			where \( \mu = \mu_{AR} + \mu_{MA} \).
+			\autoadvance{7} % Wait 7 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+% Slide 5b: Explanation of Mu in ARMA Models - AR Part (Revised)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Explanation of \( \mu \) in ARMA Models}
+		\framesubtitle{Role of the Constant Term \( \mu_{AR} \) in AR}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item \( \mu_{AR} \) represents the drift term in the AR component of the ARMA model.
+			\autoadvance{5} % Wait 5 seconds
+		}
+\onslide<3->{
+	\item The AR component can be written as:
+	\[
+	y(n) = \mu_{AR} + \sum_{i=1}^{p} a(i) y(n-i) + w(n)
+	\]
+	This version ensures that the drift term \( \mu_{AR} \) is applied correctly.
+	\autoadvance{8} % Wait 12 seconds
+}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------
+		\autoadvance{10} % Wait 3 seconds before the next slide
+	}
+\end{frame}
+
+
+
+% Slide 5c: Explanation of Mu in ARMA Models - MA Part (Revised)
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Explanation of \( \mu \) in ARMA Models}
+		\framesubtitle{Role of the Constant Term \( \mu_{MA} \) in MA}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item In the MA part, \( \mu_{MA} \) shifts the series, adjusting the overall level.
+			\[
+			y(n) = \mu_{MA} + w(n) + \sum_{j=1}^{q} b(j) w(n-j)
+			\]
+			\autoadvance{10} % Wait 8 seconds
+		}
+		\onslide<3->{
+			\item \( \mu_{MA} \) represents the long-term mean around which the series fluctuates.
+			\autoadvance{5} % Wait 5 seconds
+		}
+		\onslide<4->{
+			\item \( \mu_{MA} \) is not the mean of the noise \( w(n) \) (which is zero), but a constant drift.
+			\autoadvance{5} % Wait 5 seconds
+		}
+	\end{itemize}
+	\onslide<5->{\center --------------------------------------------------------------------
+		\autoadvance{5} % Wait 3 seconds before the next slide
+	}
+\end{frame}

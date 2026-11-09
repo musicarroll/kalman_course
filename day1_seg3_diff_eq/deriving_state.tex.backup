@@ -1,0 +1,8 @@
+% day1_seg3_state_space/deriving_state.tex
+\begin{slide}
+Deriving States from Diff. Eqs. and Block Diagrams
+ \begin{itemize}
+ \item Continuous states can be identified as outputs of integrators
+ \item Discrete states can be identified either as sampled continous states or as outputs of delayors
+\end{itemize}
+\end{slide}

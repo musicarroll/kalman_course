@@ -1,0 +1,77 @@
+\begin{frame}
+\frametitle{Overview}
+\begin{itemize}
+  \item Etymology of the term 'Navigation':  Latin $navis$='ship' and $agere$='to move or direct'
+  \item Arose out of marine or ship navigation due to the challenge of navigating without landmarks
+  \item Modern distinction between navigation and guidance
+  \begin{itemize}
+    \item navigation associated with state determination (open loop)
+    \item guidance associated with control feedback (closed loop)
+  \end{itemize} 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Navigation Problem from a Mathematical Perspective}
+With respect to some mathematical reference frame, determine ...
+\begin{itemize}
+  \item vector displacement (3d position) and its time derivatives (velocity, acceleration, ...)
+  \item rotational orientation (3d attitude) and its time derivatives (angular velocity, angular acceleration, ...) 
+  \item Note:  This is a pure mathematics problem ... sensors do not enter into it
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Navigation Problem from a Mathematical Perspective}
+\begin{itemize}
+  \item Reference frame is crucial:
+  \begin{itemize}
+    \item Position:  origin and three linearly independent vectors yields three numbers
+    \item Attitude:  rotations about three linearly indepedent vectors yields three numbers
+  \item I.e., 6 DOF = six degrees of freedom (3 position coordinates + 3 attitude coordinates)
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{The Navigation Problem from a Real World Physical Perspective}
+\begin{itemize}
+  \item Which reference frame should we use?
+  \item Rectilinear or curvilenar coordinate system?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+ \frametitle{The Navigation Problem from a Real World Physical Perspective}
+\framesubtitle{Position}
+For terrestrial navigation, global spherical (spheroidal) coordinates are used:
+\begin{itemize}
+  \item Latitude:  $\pm 90$ degrees north(+) or south(-) of the equator.
+  \item Longitude: $\pm 180$ degrees east(+) or west(-) of the prime meridian through Greenwich, England
+  \item Height:  Above the ellipsoid (normal to surface), or radius from center of earth
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+ \frametitle{The Navigation Problem from a Real World Physical Perspective}
+\framesubtitle{Direction:  Bearing, Course, Track}
+\begin{itemize}
+  \item North Reference:  True and Magnetic. Direction angles are usually referenced clockwise with respect to north.
+  \item  Bearing:  The angle with respect to north from one point on earth to another
+  \item  Track:    The angle made by velocity vector with respect to north
+  \item  Course:   Sometimes used synonym for track; sometimes expresses desired track vs. actual track
+  \item  Heading:  Direction vehicle is pointing in with respect to north
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+ \frametitle{The Navigation Problem from a Real World Physical Perspective}
+\framesubtitle{The Need for Sensors}
+\begin{itemize}
+  \item Reference frames are necessary, but not sufficient for real world navigation
+  \item Also need real world sensor measurement data indicative of locations, distances, angles, etc. with respect to these reference frames
+  \item But real world sensors are not perfect!  They only provide apparent positions, distances, angles, etc.
+\end{itemize} 
+\end{frame}

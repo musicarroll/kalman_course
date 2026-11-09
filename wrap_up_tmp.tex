@@ -1,0 +1,198 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+\usepackage{booktabs} 
+\usepackage[english]{babel} 
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz 5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{include/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt}
+  \begin{tiny}@copyright 2018 by\hfill\insertshortauthor\hfill\insertpagenumber\end{tiny}}}
+\setbeamertemplate{navigation symbols}{}
+
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory\\ with Applications to Navigation \\
+Part 2
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\currenttime\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Filter Class 2018} 
+	\framesubtitle{Wrap-up}
+}
+\begin{itemize}
+  \onslide<2->{
+\item What have we learned?  
+}
+  \onslide<3->{
+\item Kalman Filtering is really a kind of recursive averaging;  recursive, weighted least squares, in fact  
+}
+  \onslide<4->{
+\item Full-blown Kalman filtering is mathematically rich, employing concepts from caclulus, linear algebra, statistics, optimization  
+}
+  \onslide<5->{
+\item  Kalman Filtering is all about estimating the dynamic state of a system using all the information (or uncertainties) at our displ
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Filter Class 2018} 
+	\framesubtitle{Wrap-up}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Kalman Filters only work optimally when certain assumptions are met
+}
+  \onslide<3->{
+\item  But there are workarounds for situations where the assumptions are violated
+}
+  \onslide<4->{
+\item  Going beyond these assumptions is subject of much current research:  Particle Filters, Unscented Kalman Filters,
+$H_{\infty}$ Filters, higher order filters, machine learning techniques based on recurrent neural networks, general Bayesian filters, 
+ensemble Kalman Filters (used in weather forecasting), smoothers, ...
+}
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Filter Class 2018} 
+	\framesubtitle{Wrap-up}
+} 
+\begin{itemize}
+  \onslide<2->{
+\item Where to go from here?
+}
+  \onslide<3->{
+\item For OCX, read the NAV ADD documents, especially the gcore.pdf file (which is an appendix)  
+}
+  \onslide<4->{
+\item Explore the Doxygen HTML files for the main OCX filter
+}
+  \onslide<5->{
+\item  Read the NAV ADD Appendix B re the Ensemble Timescale Filter developed by Dr. Ken Senior and Dr. Michael Coleman of NRL.  
+Did you know that GPS Time is the product of a Kalman Filter?
+}
+  \onslide<6->{
+\item  Read the NIM ADD on Batch Least Squares (BLS) algorithms
+
+}
+  \onslide<7->{
+\item  Read the NAV ISC filter documentation
+
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Filter Class 2018} 
+	\framesubtitle{Wrap-up}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Terms and Concepts you should now be able to understand and explain 
+}
+  \onslide<3->{
+\item Dynamic System; Process Model; State Transition Matrix, State Space and State Vector; 
+Random Variable; Random Process; Process Noise; Covariance ($P,Q,R$); Measurement Model;  White
+Noise; Random Walk;  Gauss-Markov Process; Residual; SRIF
+}
+  \onslide<4->{
+\item  The Five Equations!!
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Five Kalman Equations}
+\begin{footnotesize}
+  \onslide<1->{\begin{equation}
+\textbf{State Extrapolation: }\stateextrapeq
+\end{equation}} 
+\onslide<2->{\begin{equation}
+\textbf{Covariance Extrapolation: }\altcovextrapeq
+\end{equation}} 
+\onslide<3->{\begin{equation}
+\textbf{Kalman Gain: }\kalgaineq
+\end{equation}} 
+\onslide<4->{\begin{equation}
+\textbf{State Update: }\stateupdateeq
+\end{equation}} 
+\onslide<5->{\begin{equation}
+\textbf{Covariance Update: }\covupdateeq
+\end{equation} 
+or $\josephcovupdateeq$
+}
+\end{footnotesize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Definitions for the Five Equations }}
+\begin{itemize}
+  \onslide<2->{\item $\covmatdef$ is the estimation error covariance matrix\\ Often just referred to as the 'covariance matrix' }
+  \onslide<3->{\item $\esterrdef$ is the estimation error  }
+  \onslide<4->{\item $\procnoisematdef{k}$ is the process noise covariance matrix }
+  \onslide<5->{\item $\measnoisematdef{k}$ is the measurement noise covariance matrix }
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Filter Class 2018} 
+	\framesubtitle{Wrap-up}
+}
+\begin{itemize}
+  \onslide<2->{
+\item You've been a great class!  
+}
+  \onslide<3->{
+\item Send me feedback on how I can make the course better? 
+}
+  \onslide<4->{
+\item Send me ideas on additional topics that might be useful:  Control theory; frequency domain analysis; 
+ensemble KFs; Drilldown on OCX KFs;  KF-related performance metrics (URE, URA, ERD, ORD, etc.)   
+}
+  \onslide<5->{
+\item  Happy Trails!  Until we meet again!
+}
+\end{itemize}
+\end{frame}
+\end{document}

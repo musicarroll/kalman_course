@@ -1,0 +1,52 @@
+\begin{frame}
+  The Navigation Problem from a Mathematical Perspective \\ \\
+With respect to some external reference frame, determine ...
+\begin{itemize}
+  \item vector displacement (3d position) and its time derivatives (velocity, acceleration, ...)
+  \item rotational orientation (3d attitude) and its time derivatives (angular velocity, angular acceleration, ...) 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+  The Navigation Problem from a Mathematical Perspective
+\begin{itemize}
+  \item Reference frame is crucial:
+  \begin{itemize}
+    \item Position:  origin and three linearly independent vectors yields three numbers
+    \item Attitude:  rotations about three linearly indepedent vectors yields three numbers
+  \item I.e., 6 DOF = six degrees of freedom (3 position coordinates + 3 attitude coordinates)
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+ The Navigation Problem from a Real World Physical Perspective
+\begin{itemize}
+  \item Which reference frame?
+  \item Rectilinear or curvilenar coordinate system?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+ The Navigation Problem from a Real World Physical Perspective\\
+Position\\
+For terrestrial navigation, global spherical (spheroidal) coordinates are used:
+\begin{itemize}
+  \item Latitude:  $\pm 90$ degrees north(+) or south(-) of the equator.
+  \item Longitude: $\pm 180$ degrees east(+) or west(-) of the prime meridian through Greenwich, England
+  \item Height:  Above the ellipsoid (normal to surface), or radius from center of earth
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+ The Navigation Problem from a Real World Physical Perspective\\
+Direction:  Bearing, Course, Track
+\begin{itemize}
+  \item North Reference:  True and Magnetic. Direction angles are usually referenced clockwise with respect to north.
+  \item  Bearing:  The angle with respect to north from one point on earth to another
+  \item  Track:    The angle made by velocity vector with respect to north
+  \item  Course:   Sometimes used synonym for track; sometimes expresses desired track vs. actual track
+  \item  Heading:  Direction vehicle is pointing in with respect to north
+\end{itemize} 
+\end{frame}

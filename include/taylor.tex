@@ -1,0 +1,107 @@
+% \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+
+
+% \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+
+
+\newcommand{\derivop}[2]{\left[\frac{d}{d#2}\right]#1}
+\newcommand{\Dop}[2]{D_{#2}#1}
+\newcommand{\derivnth}[3]{\dfrac{d^{#3}#1}{d#2^{#3}}}
+\newcommand{\derivopnth}[3]{\left[\frac{d^{#3}}{d#2^{#3}}\right]#1}
+\newcommand{\Dopnth}[3]{D^{#1}_{#2}#3}
+\newcommand{\pderivop}[2]{\left[\frac{\partial}{\partial#2}\right]#1}
+\newcommand{\pDop}[2]{\partial_{#2}\left(#1\right)}
+\newcommand{\pderivnth}[3]{\frac{\partial^{#3}#1}{\partial#2^{#3}}}
+\newcommand{\pderivopnth}[3]{\left[\frac{\partial^{#3}}{\partial#2^{#3}}\right]#1}
+\newcommand{\pDopnth}[3]{\partial^{#3}_{#2}\left(#1\right)}
+\newcommand{\derivsum}[4]{#4_{#3}\derivnth{#1}{#2}{#3}+\cdots+#4_1\deriv{#1}{#2}+#4_0}
+\newcommand{\derivsumtv}[4]{#4_{#3}(#2)\derivnth{#1}{#2}{#3}+\cdots+#4_1(#2)\deriv{#1}{#2}+#4_0(#2)}
+\newcommand{\Dopsum}[4]{#4_{#3}\Dopnth{#1}{#2}{#3}+\cdots+#4_1\Dop{#1}{#2}+#4_0}
+\newcommand{\Dopsumtv}[4]{#4_{#3}(#2)\Dopnth{#1}{#2}{#3}+\cdots+#4_1(#2)\Dop{#1}{#2}+#4_0(#2)}
+\newcommand{\Taylordot}[4]{
+\left[\begin{array}{cccc}
+\frac{1}{0!}&\frac{#4}{1!}&\cdots &\frac{#4^{#3}}{#3 !}\\
+\end{array}\right]
+\left[\begin{array}{c}
+#1\left(#2_0\right) \\
+\Dop{#1}{#2}\left(#2_0\right) \\
+\vdots \\
+\Dopnth{#1}{#2}{#3}\left(#2_0\right) \\
+\end{array}\right]
+}
+\newcommand{\Taylormat}[4]
+{
+\left[\begin{array}{ccccc}
+1&\dfrac{#4}{1!}&\cdots&\cdots &\dfrac{#4^{#1}}{#1!}\\
+0&1&\dfrac{#4}{1!}&\cdots &\dfrac{#4^{#1-1}}{(#1-1)!}\\
+\vdots&\vdots&\vdots&\vdots&\vdots\\
+0&0&\cdots&\cdots &1\\
+\end{array}\right]
+\left[\begin{array}{c}
+#3\left(#2_0\right) \\
+\Dopnth{1}{#2}{#3}\left(#2_0\right) \\
+\vdots \\
+\Dopnth{#1}{#2}{#3}\left(#2_0\right) \\
+\end{array}\right]
+}
+
+\newcommand{\Taylormats}[5]
+{
+	\left[\begin{array}{ccccc}
+		1&\sfrac{#5}{1!}&\cdots&\cdots &\sfrac{#5^{#1}}{#1!}\\
+		0&1&\sfrac{#5}{1!}&\cdots &\sfrac{#5^{#1-1}}{(#1-1)!}\\
+		\vdots&\vdots&\vdots&\vdots&\vdots\\
+		0&0&\cdots&\cdots &1\\
+	\end{array}\right]
+	\left[\begin{array}{c}
+		#3\left(#2_0\right) \\
+		\Dopnth{1}{#2}{#3}\left(#2_0\right) \\
+		\vdots \\
+		\Dopnth{#1}{#2}{#3}\left(#2_0\right) \\
+	\end{array}\right]
+}
+
+
+\newcommand{\mvartaylortermsym}[3]
+{
+D^{#1}_{#2,#2_0}#3
+}
+%args: {k}{x}{f}{x_0}
+\newcommand{\mvartaylorterm}[4]
+{
+\left(\displaystyle \sum_{i=1}^n(#2_i-[#4]_i)\pderiv{#3}{#2_i}\Bigr|_{\substack{#4}}\right)^#1
+}
+\newcommand{\mvartaylortermsymdef}[4]
+{
+\mvartaylortermsym{#1}{#2}{#3}:=\mvartaylorterm{#1}{#2}{#3}{#4}
+}
+\newcommand{\mvartaylorseries}[2]
+{
+#2(#1)=#2(#1_0)+\mvartaylortermsym{1}{#1}{#2}+\dfrac{1}{2!}\mvartaylortermsym{2}{#1}{#2}
+	+\dfrac{1}{3!}\mvartaylortermsym{3}{#1}{#2}+\cdots
+}
+% args:  f x_0  X
+\newcommand{\Dopsumtaylor}[3]
+{
+#1\left(#2_0\right)+\Dopnth{1}{#3,#2}{#1}
+  +\frac{1}{2 !}\Dopnth{2}{#3,#2}{#1}   + \cdots
+}
+%args: {k}{x}{f}{x_0}
+\newcommand{\svartaylorterm}[4]
+{
+ (#2-#4)^{#1}\derivnth{#3}{#2}{#1}\Bigr|_{\substack{#4}}
+}
+\newcommand{\Dopsumtayloralt}[4]
+{
+#1\left(#2_0\right)+\frac{1}{2!}\Dop{#1}{#2}\left(#2_0\right)#4
+   +\cdots
+   +\frac{1}{n!}\Dopnth{#1}{#2}{#3}\left(#2_0\right){#3 !}#4^{#3}
+}
+\newcommand{\tayloropdef}[4]
+{
+\mvartaylortermsym{#1}{#2}{#3}:=
+\begin{cases}
+	\svartaylorterm{#1}{#2}{#3}{#2_0}, &\text{if dim$(x)=1$;}\\
+	\mvartaylorterm{#1}{#2}{#3}{#2_0}, &\text{if dim$(x)>1$.}
+\end{cases}
+}

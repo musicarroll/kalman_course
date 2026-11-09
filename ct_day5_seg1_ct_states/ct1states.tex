@@ -1,0 +1,110 @@
+\begin{frame}
+The 23 States of the Combat Talon I Kalman Filter
+ \begin{itemize}
+ \item 11 Time Varying States
+ \item 12 Non-Time Varying States
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Combat Talon I Kalman Filter States: 11 Time Varying States
+\begin{itemize}
+  \item 9 Canonical Inertial Error States
+  \item 2 Baro Inertial Loop States
+\end{itemize} 
+\end{frame}
+\begin{frame}
+11 Time-Varying States (P\$KALTYPES.CPL)
+\begin{verbatim}
+  308  TYPE INS'SV'VAR'ITEM   TABLE;
+  309    BEGIN
+  310       ITEM  KAL'INS'X'POS'ERROR                REAL;
+  311       ITEM  KAL'INS'Y'POS'ERROR                REAL;
+  312       ITEM  KAL'INS'Z'POS'ERROR                REAL;
+  313       ITEM  KAL'INS'X'VEL'ERROR                REAL;
+  314       ITEM  KAL'INS'Y'VEL'ERROR                REAL;
+  315       ITEM  KAL'INS'Z'VEL'ERROR                REAL;
+  316       ITEM  KAL'INS'X'TILT'ERROR               REAL;
+  317       ITEM  KAL'INS'Y'TILT'ERROR               REAL;
+  318       ITEM  KAL'INS'HEADING'ERROR              REAL;
+  319       ITEM  KAL'INS'BARO'ALTI'ERROR            REAL;
+  320       ITEM  KAL'INS'VERT'CHANNEL'ERROR         REAL;
+  321    END
+ \end{verbatim}
+\end{frame}
+
+\begin{frame}
+Combat Talon I Kalman Filter States: Canonical 9-State Navigation Errors (SRS Symbology)
+\begin{itemize}
+\item Position Errors: $\ctposerr{X},\ctposerr{Y},\ctposerr{Z}$
+\item Velocity Errors: $\ctvelerr{X},\ctvelerr{Y},\ctvelerr{Z}$
+\item Attitude Errors: $\cttilt{X},
+\cttilt{Y},\ctazerr$
+\end{itemize}
+\end{frame}
+\begin{frame}
+Combat Talon I Kalman Filter States: Baro-Inertial Loop States
+\begin{itemize}
+\item Baro Altimeter Bias: $\ctbarofirst$
+\item $3^{\text{rd}}$-order baro-inertial loop error state: $\ctbarosecond$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+Combat Talon I Kalman Filter States: 12 Non-Varying States
+\begin{itemize}
+	\item 3 Gyro Errors
+	\item 6 Doppler Errors
+	\item 3 Accelerometer Errors
+\end{itemize} 
+\end{frame}
+\begin{frame}
+12 Non-Varying States (P\$KALTYPES.CPL)
+\begin{verbatim}
+  325   TYPE INS'SV'FIX'ITEM     TABLE;
+  326    BEGIN
+  327       ITEM  KAL'INS'X'GYRO'BIAS'ERROR          REAL;
+  328       ITEM  KAL'INS'Y'GYRO'BIAS'ERROR          REAL;
+  329       ITEM  KAL'INS'Z'GYRO'BIAS'ERROR          REAL;
+  330       ITEM  KAL'INS'DOP'X'SF'ERROR             REAL;
+  331       ITEM  KAL'INS'DOP'Z'BS'ERROR             REAL;
+  332       ITEM  KAL'INS'DOP'Y'BS'ERROR             REAL;
+  333       ITEM  KAL'INS'DOP'X'B'ERROR              REAL;
+  334       ITEM  KAL'INS'DOP'Y'B'ERROR              REAL;
+  335       ITEM  KAL'INS'DOP'Z'B'ERROR              REAL;
+  336       ITEM  KAL'INS'X'ACC'BIAS'ERROR           REAL;
+  337       ITEM  KAL'INS'Y'ACC'BIAS'ERROR           REAL;
+  338       ITEM  KAL'INS'Z'ACC'BIAS'ERROR           REAL;
+  339    END
+\end{verbatim}
+\end{frame}
+
+ 
+
+\begin{frame}
+Combat Talon I Kalman Filter States: 3 INS Gyro Bias Errors
+\begin{itemize}
+\item $\ctgbias{X},\ctgbias{Y},\ctgbias{Z}$
+\item Modeled as random constants: $\dot{x}=0$
+\item Used in computing tilt derivatives in 4 Hz slow nav extrapolation: SN'INS'ERROR'EXTRAP
+\end{itemize}
+\end{frame}
+\begin{frame}
+Combat Talon I Kalman Filter States: 6 Doppler Errors
+\begin{itemize}
+\item $X$ scale factor error: $\ctdopsfdx$
+\item $Z$ and $Y$ boresight errors: $\ctdopbore{Z},\ctdopbore{Y}$
+\item $X,Y,Z$ bias errors:  
+$\ctdopbias{X},\ctdopbias{Y},\ctdopbias{Z}$
+\item Used in compensating Doppler velocity observations
+\end{itemize}
+\end{frame}
+\begin{frame}
+Combat Talon I Kalman Filter States: 3 INS Accelerometer Bias Errors
+\begin{itemize}
+\item $\ctabias{X},\ctabias{Y},\ctabias{Z}$
+\item Used in computing velocity derivatives in 4 Hz slow nav extrapolation: SN'INS'ERROR'EXTRAP
+\end{itemize}
+\end{frame}
+

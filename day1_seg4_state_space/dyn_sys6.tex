@@ -1,0 +1,106 @@
+% dyn_sys5.tex
+
+
+% difference_eq.tex
+\input{difference_eq.tex}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Stability} }
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/poincare.jpg}
+\end{center}
+\begin{tiny}
+Source: By Freesodas - Gimp, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=67990034
+\end{tiny}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame} 
+  \onslide<1-> { \frametitle{Software Tools}
+    \framesubtitle{MATLAB toolboxes and Simulink blocks}
+  }
+\begin{itemize}
+ \onslide<2-> { 
+ \item MATLAB Control System Toolbox
+} 
+  \begin{itemize}
+    \onslide<3-> {
+	  \item Linear System Models:  LTI models as either transfer function or state space representation
+	}
+    \onslide<4-> {
+	  \item Functions for interconnecting models in series or parallel
+	}
+	\onslide<5-> {
+	  \item Functions for roundtrip converting from continuous-time to discrete-time
+	}
+	\onslide<6-> {
+      \item Functions for scaling state space models 
+	}
+  \end{itemize} 
+    \onslide<7-> {
+	   \item Simulink:  Intuitive Block Diagram GUI Drag and Drop approach (see later slides)
+	}
+\end{itemize}  
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation:  Summary} }
+\begin{itemize}
+  \onslide<2->{
+\item State variables sometimes provided by
+ $0^\text{th}$ through $n-1^\text{st}$ derivatives of single $n^\text{th}$-order differential equation plus internal dynamic coupling  
+}
+  \onslide<3->{
+\item  Equivalently, outputs of $n$ integrators of system 
+}
+  \onslide<4->{
+\item They represent implicit or explicit internal coupling of the system 
+}
+  \onslide<5->{
+\item In both natural and artificial systems, state space representations are often derived directly from observed or designed couplings 
+}
+  \onslide<6->{
+\item MATLAB Control Systems Toolbox and MATLAB / Simulink have many functions and blocks facilitating state space components and interconnections  
+}
+  \onslide<7-> {
+     \item Stability an important topic but beyond scope of this course
+  }
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+		\framesubtitle{Matlab / Simulink Example} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Four parameters $A,B,C,D$ from Matlab workspace  
+		}
+		\onslide<3->{
+			\item Measurement model added external to Simulink's state space block  
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.6]{\dayonesegfour/state_space_blocks.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.5]{\dayonesegfour/state_space_block_params.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+

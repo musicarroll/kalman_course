@@ -1,0 +1,135 @@
+% runavgb.tex
+%\begin{comment}
+\begin{frame}
+\onslide<1->{\frametitle{Recursive Running Average
+Python Scripts: dyn\_simple\_moving\_avg\_demo.py}
+}
+\onslide<2->{
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{\dayonesegone/runavg_truth_meas_est.png}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Running Average} 
+	\framesubtitle{Shortcomings}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Uses (implicitly) all data points, even those from the "remote" past  
+}
+  \onslide<3->{
+\item Gain gets smaller and smaller ... running average filter goes to sleep, becomes insensitive to new information  
+}
+  \onslide<4->{
+\item Can improve things with a simple moving average (sliding window)  
+}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Simple Moving Average} 
+	\framesubtitle{Addressing the Shotcomings}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Simple Moving Average of Window Size $M$ only averages the $M$ most recent measurements    
+}
+  \onslide<3->{
+\item Has a fixed gain of $1/M$ which never goes to zero  
+}
+  \onslide<4->{
+\item Assume the number of available data points is $N>M$  
+}
+  \onslide<5->{
+\item  Simple Moving Average of window size $M$ is $s(k,M) = \dfrac{1}{M}\sum_{j=k-M+1}^{k} z(j)$, 
+valid for $k\geq M-1$ if indexing starts at 0 (we can set the SMA equal to the running average for $k< M-1$)
+}
+  \onslide<6->{
+\item Recursive SMA formula:  $s(k,M):=s(k-1,M) + \dfrac{1}{M}\left[z(k)-z(k-M+1)\right]$  
+}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Simple Moving Average
+Python Scripts: simple\_moving\_avg\_demo.py of window size 10}
+}
+\onslide<2->{
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{\dayonesegone/sma_truth_meas_est_w10.png}
+\end{figure}
+}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Running Average} 
+	\framesubtitle{Addressing the Shotcomings}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Note that the recursive SMA seems to have shortcomings of its own 
+}
+  \onslide<3->{
+\item   First, it seems overly conservative about updating the previous SMA value
+}
+\begin{itemize}
+  \onslide<4->{ 
+    \item However, this is because unchanging process dynamics means that measurements do not change much  
+}
+  \onslide<5->{ 
+    \item Performs worse than running average on constant dynamics, but better with changing dynamics (See next slide)
+}
+\end{itemize}
+  \onslide<6->{
+\item   A more aggresive formulation of the recursive SMA can be defined by using a weighting scheme whereby the oldest measurement is 
+weighted less than the most recent
+}
+  \onslide<7->{
+\item Neither of these averaging filters explicitly takes into account the degree of uncertainty in the process dynamics   
+}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Simple Moving Average
+Python Scripts: dyn\_simple\_moving\_avg\_demo.py of window size 10}
+}
+\onslide<2->{
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{\dayonesegone/sma_dyn_truth_meas_est_w10.png}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Simple Moving Average
+Python Scripts: dyn\_simple\_moving\_avg\_demo.py of window size 5}
+}
+\onslide<2->{
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{\dayonesegone/sma_dyn_truth_meas_est_w5.png}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Simple Moving Average
+Python Scripts: dyn\_simple\_moving\_avg\_demo.py of window size 5}
+}
+\onslide<2->{
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{\dayonesegone/runavg_dyn_truth_meas_est.png}
+\end{figure}
+}
+\end{frame}
+
+%\end{comment}

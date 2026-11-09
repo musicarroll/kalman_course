@@ -1,0 +1,24 @@
+% day3_seg3_9-state/whole_error.tex
+\begin{slide}
+Whole State vs. Error State Filters
+\begin{itemize}
+ \item Whole state filters ...
+ \begin{itemize}
+ \item model whole position, velocity, attitude
+ \item deal with large and rapidly varying quantities
+ \item are highly non-linear
+ \end{itemize}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Whole State vs. Error State Filters
+\begin{itemize}
+  \item Error state filters ...
+	\begin{itemize}
+	  \item remove some of the linearities by differencing outputs from aiding sensors with corresponding quantities from INS
+	  \item exhibit slowly varying dynamics:  easier to linearize
+	  \item have smaller quantities that allow us to take advantage of small angle assmptions
+	\end{itemize}
+\end{itemize} 
+\end{slide}

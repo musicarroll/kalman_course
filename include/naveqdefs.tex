@@ -1,0 +1,33 @@
+% naveqdefs.tex
+\newcommand{\specforce}{a_{\text{sf}}}
+\newcommand{\lat}{\phi}
+\newcommand{\lon}{\lambda}
+\newcommand{\altitude}{h}
+\newcommand{\corioliseq}{\dot{v}^A=\dot{v}^B+\rotvec{A}{B}^A\times v^B}
+\newcommand{\coriolismateq}{\dot{v}^A=\dot{v}^B+\rotmat{A}{B}^A v^B}
+\newcommand{\ltoieq}{\dot{v}^I=\dot{v}^L+\rotvec{I}{L}^I\times v^L}
+\newcommand{\itoleq}{\dot{v}^L=\dot{v}^I-\rotvec{I}{L}^I\times v^L}
+\newcommand{\veleq}{v=\dot{r}^E=\dot{r}^I-\rotvec{I}{E}^I\times r^E}
+\newcommand{\acceleq}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times \dot{r}^I}
+\newcommand{\acceleqtwo}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times v^E - \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right)}
+\newcommand{\acceleqtwoalt}{\dot{v}^I=\ddot{r}^I-\rotmat{I}{E}^Iv^E-(\rotmat{I}{E}^I)^2r^E}
+\newcommand{\veleqmain}{\dot{v}^L=\ddot{r}^I- \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right) - \left( \rotvec{I}{E}^I+\rotvec{I}{L}^I\right)\times v^E}
+\newcommand{\veleqmaintwo}{\dot{v}^L=\specforce+ g'-\left(2\rotvec{I}{E} + \rho \right)\times v }
+\newcommand{\veleqmainthree}{\dot{v}^L=\specforce+ g'-\left(2\rotmat{I}{E} + \rotmat{E}{L} \right)v }
+\newcommand{\strapveleq}{\dot{v}^L=\dcm{B}{L}\specforce^B+ g'-\left(2\rotmat{I}{E}^L + \rotmat{E}{L}^L \right)v^L }
+\newcommand{\cbldot}{\dot{C}_B^L}
+\newcommand{\cbleq}{\cbldot=\dcm{B}{L}\rotmat{I}{B}^B - \left( \rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\dcm{B}{L}}
+\newcommand{\centripetal}{\rotvec{I}{E}\times \left( \rotvec{I}{E}\times r\right)}
+\newcommand{\plumbbobgeq}{g'=g-\centripetal}
+\newcommand{\spatialrateeq}{\rotvec{I}{L}=\rho+\eratevec}
+\newcommand{\cortranseq}{\rotvec{I}{E}+\rotvec{I}{L}=\rotvec{I}{E}+\rho+\eratevec=2\eratevec+\rho}
+\newcommand{\scalarinveq}{\sum_{i=1}^3 \dot{v}_i^A e_A^i=\sum_{i=1}^3 \dot{v}_i^B e_B^i}
+\newcommand{\trateeq}{\rotvec{E}{L}^L=\dfrac{1}{r}u_r^L\times v^L}
+\newcommand{\cleeq}{\dot{C}_L^E=C_L^E\rotmat{E}{L}^L}
+\newcommand{\erateeq}{\rotvec{I}{E}^L=\left[\dcm{L}{E} \right]\trans \rotvec{I}{E}^E}
+\newcommand{\trateneq}{\rho_N=\dfrac{v_E}{R_e}\left[1-\dfrac{h}{R_e}-e\sin^2\lat\right]}
+\newcommand{\trateeeq}{\rho_E=-\dfrac{v_N}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3\cos^2 \lat\right)\right]}
+\newcommand{\latrateeq}{\dot{\lat}=-\rho_E}
+\newcommand{\lonrateeq}{\dot{\lon}=\rho_N \sec\lat}
+\newcommand{\xtrateeq}{\rho_x&=-\dfrac{v_y}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{22}^2-d_{21}^2\right)\right]-\dfrac{v_x}{R_e}\left(2d_{21}d_{22}\right)e}
+\newcommand{\ytrateeq}{\rho_y&=\dfrac{v_x}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{21}^2-d_{22}^2\right)\right]+\dfrac{v_y}{R_e}\left(2d_{21}d_{22}\right)e}

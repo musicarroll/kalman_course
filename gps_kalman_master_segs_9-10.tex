@@ -1,0 +1,56 @@
+\documentclass{beamer}
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory and Applications\\
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{June 7, 2007\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2007 by Michael L. Carroll
+\end{tiny}
+}
+\maketitle
+
+% ----------------------------------------------------------------
+\begin{frame}
+\textbf{Segments 9-10: Kalman Filter Applications:  Terrestial Navigation\\}
+ \begin{itemize}
+ \item Some Practical Considerations (Numerical)
+ \item The Navigation Problem and Reference Frames
+ \item Simple Examples of Kalman Filtering Applied to Navigation
+ \item Inertial Error Dynamics
+ \item The Basic 9-State Kalman Filter
+ \item Challenges of INS Filters
+\end{itemize}
+\end{frame}
+\input{day3_seg1_numerical/numerical_main.tex}
+\input{day3_seg2_navproblem/navproblem_main.tex}
+\input{day3_seg2_navproblem/simple_nav_apps.tex}
+\input{day3_seg2_inertial/inertial_main.tex}
+\input{day3_seg3_9-state/9-state_main.tex}
+\input{day3_seg4_ins_challenges/ins_chal_main.tex}
+\input{day4_seg2_navaids/navaids_main.tex}
+% ----------------------------------------------------------------
+\end{document}

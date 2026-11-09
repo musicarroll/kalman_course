@@ -1,0 +1,26 @@
+% day4_seg1_sim/covbump.tex
+\begin{slide}
+Covariance Bumping
+ \begin{itemize}
+ \item Covariance bumping refers to the addition of process noise to keep the filter from going to sleep
+ \item Usually based on ad hoc rules
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+In CT I GPS Observation Processing, three different kinds of bumping:
+\begin{verbatim}
+146   DEF  ITEM  POSITION'BUMP	 STATIC REAL = 10.0;
+147   DEF  ITEM  V'BUMP          STATIC REAL = 10.0;
+148   DEF  ITEM  COVARIANCE'BUMP STATIC REAL = 50.0;
+...
+182   OBS'COV'SCALER = POSITION'BUMP *
+      OBS'COUNT'SCALER;
+---
+185   NOISE'VECTOR(3) = (Y'KAL'OBS(INU,11) *
+      OBS'COUNT'SCALER * OBS'COV'SCALER * V'BUMP) **2;
+---
+245   OBS'COV'SCALER = COVARIANCE'BUMP *
+      OBS'COUNT'SCALER;
+\end{verbatim}
+\end{slide}

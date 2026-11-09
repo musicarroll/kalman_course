@@ -1,0 +1,3235 @@
+Model {
+  Name			  "kcat_tv"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Oct 14 12:41:52 2002"
+  Creator		  "mcar"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mcarroll"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Nov  3 16:16:15 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:355>"
+  ConfigurationManager	  "sourcesafe"
+  SimParamPage		  "WorkspaceI/O"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "100.0"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  on
+  ExternalInput		  "[inStruct]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "StructureWithTime"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  off
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      From
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Goto
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "kcat_tv"
+    Location		    [110, 121, 1390, 856]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "156"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "inStruct"
+      Position		      [225, 478, 255, 492]
+      PortDimensions	      "[28 28]"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute \nTransition Matrix"
+      Ports		      [1, 1]
+      Position		      [175, 386, 265, 434]
+      Orientation	      "left"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute \nTransition Matrix"
+	Location		[104, 106, 1356, 863]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [30, 168, 60, 182]
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Diagonal of Phi"
+	  Ports			  [1]
+	  Position		  [735, 156, 770, 224]
+	  Location		  [6, 401, 330, 640]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  YMin			  "0"
+	  YMax			  "2"
+	  SaveName		  "ScopeData3"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Phi"
+	  Ports			  [1]
+	  Position		  [155, 265, 1215, 515]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "diag(Phi)"
+	  Position		  [590, 175, 650, 205]
+	  MATLABFcn		  "diag(u)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Phi(k-1)"
+	  Position		  [730, 88, 760, 102]
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 60; 195, 0]
+	  Branch {
+	    Points		    [-195, 0; 0, 155]
+	    DstBlock		    "Phi"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -140; 235, 0]
+	    Branch {
+	      Labels		      [1, 0]
+	      DstBlock		      "Phi(k-1)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 95]
+	      DstBlock		      "diag(Phi)"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "diag(Phi)"
+	  SrcPort		  1
+	  DstBlock		  "Diagonal of Phi"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Compute Transition Matrix"
+	  Position		  [158, 52]
+	  FontSize		  18
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Note:  KCAT uses a constant F matrix\nfor s"
+"implicity.  This only works for LTI\nsystems.  In KCAT-TV, it is assumed that"
+" a \ntime-varying state transition matrix is provided\nexplicitly by the unde"
+"rlying matlab script.  See\ncmigits28.m."
+	  Position		  [56, 112]
+	  HorizontalAlignment	  "left"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Kalman Gain"
+      Ports		      [3, 1]
+      Position		      [515, 232, 615, 358]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Kalman Gain"
+	Location		[196, 75, 874, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "H"
+	  Position		  [30, 233, 60, 247]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "R"
+	  Position		  [30, 278, 60, 292]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "P(k)(-)"
+	  Position		  [30, 183, 60, 197]
+	  Port			  "3"
+	  ShowAdditionalParam	  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Compute Gain \nDenominator\nHPH'+R"
+	  Ports			  [3, 2]
+	  Position		  [120, 211, 230, 299]
+	  TreatAsAtomicUnit	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "HPH'+R\n"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	  System {
+	    Name		    "Compute Gain \nDenominator\nHPH'+R"
+	    Location		    [33, 112, 608, 671]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P(k)(-)"
+	      Position		      [180, 173, 210, 187]
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "H"
+	      Position		      [35, 90, 65, 110]
+	      NamePlacement	      "alternate"
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "R"
+	      Position		      [350, 63, 380, 77]
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [300, 115, 355, 150]
+	      Multiplication	      "Matrix(*)"
+	      Port {
+		PortNumber		1
+		Name			"HP"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      Ports		      [2, 1]
+	      Position		      [465, 175, 515, 250]
+	      Multiplication	      "Matrix(*)"
+	      ShowAdditionalParam     on
+	      InputSameDT	      off
+	      Port {
+		PortNumber		1
+		Name			"HPH'"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [530, 90, 550, 110]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	      ShowAdditionalParam     on
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "transpose"
+	      Ports		      [1, 1]
+	      Position		      [225, 313, 285, 347]
+	      Operator		      "transpose"
+	      Port {
+		PortNumber		1
+		Name			"H'"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "HPH'+R"
+	      Position		      [575, 93, 605, 107]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "H'"
+	      Position		      [575, 323, 605, 337]
+	      Port		      "2"
+	    }
+	    Line {
+	      Name		      "H'"
+	      Labels		      [0, 0]
+	      SrcBlock		      "transpose"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, -55]
+	      Branch {
+		Points			[0, 55]
+		DstBlock		"H'"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"Product1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "HPH'"
+	      Labels		      [2, 0]
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "HP"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [45, 0; 0, 60]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "H"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		Points			[155, 0]
+		DstBlock		"Product"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 230]
+		DstBlock		"transpose"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "R"
+	      SrcPort		      1
+	      Points		      [95, 0; 0, 30]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "HPH'+R"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "P(k)(-)"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Name		      "Compute Gain Denominator"
+	      Position		      [214, 31]
+	      FontSize		      18
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Diagonal of \ninv(HPH'+R)"
+	  Ports			  [1]
+	  Position		  [830, 32, 880, 198]
+	  Location		  [50, 53, 913, 350]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "100"
+	  YMin			  "0.0006"
+	  YMax			  "0.002"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [865, 315, 895, 345]
+	  ShowAdditionalParam	  on
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "HPH'+R"
+	  Ports			  [1]
+	  Position		  [470, 555, 720, 665]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Identity?"
+	  Ports			  [1]
+	  Position		  [635, 434, 885, 506]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Invert via UD"
+	  Ports			  [1, 1]
+	  Position		  [375, 78, 480, 152]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Invert via UD"
+	    Location		    [135, 117, 973, 673]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "HPH'+R"
+	      Position		      [35, 188, 65, 202]
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "D"
+	      Ports		      [1]
+	      Position		      [495, 76, 745, 174]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "D1"
+	      Ports		      [1]
+	      Position		      [130, 396, 380, 494]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "D2"
+	      Ports		      [1]
+	      Position		      [600, 446, 850, 544]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Diag of Unit Matrix?"
+	      Ports		      [1]
+	      Position		      [710, 314, 740, 346]
+	      Location		      [21, 63, 982, 296]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      YMin		      "0.99"
+	      YMax		      "1.03"
+	      SaveName		      "ScopeData10"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display"
+	      Ports		      [1]
+	      Position		      [105, 97, 255, 163]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Eigenvalues of inv(HPH'+R)"
+	      Ports		      [1]
+	      Position		      [400, 44, 430, 76]
+	      Location		      [188, 306, 890, 539]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      SaveName		      "ScopeData6"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [455, 316, 500, 349]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Unit Matrix?"
+	      Ports		      [1]
+	      Position		      [590, 384, 620, 416]
+	      Location		      [30, 63, 732, 296]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      SaveName		      "ScopeData9"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "diag(u)"
+	      Position		      [605, 315, 665, 345]
+	      MATLABFcn		      "diag(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "eig(u)"
+	      Position		      [305, 130, 365, 160]
+	      Orientation	      "up"
+	      MATLABFcn		      "eig(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "ud_inv"
+	      Position		      [250, 205, 310, 235]
+	      MATLABFcn		      "ud_inv(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "inv(HPH'+R)"
+	      Position		      [660, 213, 690, 227]
+	    }
+	    Line {
+	      SrcBlock		      "HPH'+R"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[145, 0]
+		DstBlock		"ud_inv"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 145]
+		Branch {
+		  Points		  [0, 105]
+		  DstBlock		  "D1"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "ud_inv"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"eig(u)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[70, 0]
+		Branch {
+		  Points		  [35, 0]
+		  Branch {
+		    DstBlock		    "inv(HPH'+R)"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -95]
+		    DstBlock		    "D"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  Points		  [0, 105]
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "eig(u)"
+	      SrcPort		      1
+	      Points		      [0, -15]
+	      Branch {
+		Points			[0, -50]
+		DstBlock		"Eigenvalues of inv(HPH'+R)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[-65, 0]
+		DstBlock		"Display"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[55, 0]
+		DstBlock		"diag(u)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		Branch {
+		  DstBlock		  "Unit Matrix?"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 95]
+		  DstBlock		  "D2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "diag(u)"
+	      SrcPort		      1
+	      DstBlock		      "Diag of Unit Matrix?"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Calls Matlab m-file script ud_inv.m\nto"
+" generate the unit upper triangular \nmatrix per the UD factorization."
+	      Position		      [209, 275]
+	      HorizontalAlignment     "left"
+	    }
+	    Annotation {
+	      Name		      "KCAT/Compute Kalman Gain/Invert via UD"
+	      Position		      [292, 24]
+	      FontSize		      18
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "PH'*inv(HPH'+R)"
+	  Ports			  [2, 1]
+	  Position		  [640, 310, 685, 370]
+	  Multiplication	  "Matrix(*)"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Kalman\nGain"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [405, 301, 450, 334]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "PH'"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [540, 451, 585, 484]
+	  Multiplication	  "Matrix(*)"
+	  ShowAdditionalParam	  on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "diag(HPH'+R)"
+	  Position		  [625, 100, 685, 130]
+	  MATLABFcn		  "diag(u)"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "inv(HPH'+R)\nDisplay"
+	  Ports			  [1]
+	  Position		  [535, 194, 785, 266]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "K(k)"
+	  Position		  [1000, 323, 1030, 337]
+	}
+	Line {
+	  Name			  "HPH'+R\n"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Compute Gain \nDenominator\nHPH'+R"
+	  SrcPort		  1
+	  Points		  [0, 0; 85, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -120]
+	    DstBlock		    "Invert via UD"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 240]
+	    Branch {
+	      Points		      [0, 135]
+	      DstBlock		      "HPH'+R"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Product4"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "R"
+	  SrcPort		  1
+	  DstBlock		  "Compute Gain \nDenominator\nHPH'+R"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "diag(HPH'+R)"
+	  SrcPort		  1
+	  DstBlock		  "Diagonal of \ninv(HPH'+R)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Invert via UD"
+	  SrcPort		  1
+	  Points		  [0, 0; 20, 0]
+	  Branch {
+	    DstBlock		    "diag(HPH'+R)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 85]
+	    Branch {
+	      Points		      [0, 30]
+	      DstBlock		      "inv(HPH'+R)\nDisplay"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 155]
+	      Branch {
+		DstBlock		"PH'*inv(HPH'+R)"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 105]
+		DstBlock		"Product4"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compute Gain \nDenominator\nHPH'+R"
+	  SrcPort		  2
+	  Points		  [115, 0; 0, 45]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "PH'"
+	  Labels		  [2, 0]
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "PH'*inv(HPH'+R)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  DstBlock		  "Identity?"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "H"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 15]
+	  DstBlock		  "Compute Gain \nDenominator\nHPH'+R"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "P(k)(-)"
+	  SrcPort		  1
+	  Points		  [0, 0; 25, 0]
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "Compute Gain \nDenominator\nHPH'+R"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [285, 0; 0, 120]
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "Kalman\nGain"
+	  Labels		  [0, 0]
+	  SrcBlock		  "PH'*inv(HPH'+R)"
+	  SrcPort		  1
+	  Points		  [145, 0; 0, -10]
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "K(k)"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Compute Kalman Gain"
+	  Position		  [173, 67]
+	  FontSize		  18
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Warning: \nMatlab/Simulink \nWILL add a 1x1"
+" matrix to \na nxn martrix as if the \n1x1 matrix were a\nnxn with the same e"
+"lement\nin each entry!!!!"
+	  Position		  [172, 527]
+	  HorizontalAlignment	  "left"
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Covariance\nDisplay"
+      Ports		      [1]
+      Position		      [445, 586, 535, 774]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Covariance\nScope"
+      Ports		      [13]
+      Position		      [1870, 16, 1915, 774]
+      Location		      [6, 70, 1026, 752]
+      Open		      off
+      NumInputPorts	      "13"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+	axes5			"%<SignalLabel>"
+	axes6			"%<SignalLabel>"
+	axes7			"%<SignalLabel>"
+	axes8			"%<SignalLabel>"
+	axes9			"%<SignalLabel>"
+	axes10			"%<SignalLabel>"
+	axes11			"%<SignalLabel>"
+	axes12			"%<SignalLabel>"
+	axes13			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+	axes2			""
+	axes3			""
+	axes4			""
+	axes5			""
+	axes6			""
+	axes7			""
+	axes8			""
+	axes9			""
+	axes10			""
+	axes11			""
+	axes12			""
+	axes13			""
+      }
+      TimeRange		      "10"
+      YMin		      "-20~-5~-5~-5~-5~-5~-5~-5~-5~-5~-5~-5~-5"
+      YMax		      "120~5~5~5~5~5~5~5~5~5~5~5~5"
+      SaveName		      "ScopeData11"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 28]
+      Position		      [1075, 29, 1090, 806]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "28"
+      Port {
+	PortNumber		1
+	Name			"X Pos Err Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		2
+	Name			"Y Pos Err Cov "
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		3
+	Name			"Z Pos Err Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		4
+	Name			"X Vel Err Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		5
+	Name			"Y Vel Err Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		6
+	Name			"Z Vel Err Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		7
+	Name			"X Tilt Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		8
+	Name			"Y Tilt Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		9
+	Name			"Az Tilt Cov"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		11
+	Name			"GPS Clock Requency Error Rate"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		12
+	Name			"GPS Clock Frequency Error"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		13
+	Name			"GPS Clock Bias Error"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Extrapolate Error\nCovariance Matrix"
+      Ports		      [3, 1]
+      Position		      [175, 192, 260, 268]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Extrapolate Error\nCovariance Matrix"
+	Location		[-11, 83, 997, 726]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Q(k-1)"
+	  Position		  [465, 268, 495, 282]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "P(k-1)(+)"
+	  Position		  [75, 203, 105, 217]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Phi(k-1)"
+	  Position		  [75, 90, 105, 100]
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  Position		  [545, 640, 575, 670]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs1"
+	  Position		  [555, 550, 585, 580]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [700, 287, 975, 363]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display of Eigenvalues of P(k)(-)"
+	  Ports			  [1]
+	  Position		  [700, 477, 975, 553]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Eigenvalues\nprior to\nextrapolation"
+	  Ports			  [1]
+	  Position		  [162, 425, 438, 505]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Eigenvalues of P(k)(-)"
+	  Ports			  [1]
+	  Position		  [455, 631, 485, 679]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Location		  [6, 62, 974, 301]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData8"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Eigenvalues of P(k-1)(+)"
+	  Ports			  [1]
+	  Position		  [355, 320, 385, 350]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Location		  [7, 468, 976, 707]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  YMin			  "1"
+	  YMax			  "8.5"
+	  SaveName		  "ScopeData7"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction"
+	  Ports			  [1, 1]
+	  Position		  [275, 77, 325, 113]
+	  Operator		  "transpose"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Max Eigenvalue"
+	  Ports			  [1]
+	  Position		  [370, 533, 405, 597]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Location		  [6, 186, 974, 425]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "100"
+	  YMin			  "0"
+	  YMax			  "4e+072"
+	  SaveName		  "ScopeData12"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Norm of P-P' \nafter extrapolation"
+	  Ports			  [1]
+	  Position		  [755, 225, 785, 255]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Location		  [17, 402, 975, 611]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  YMin			  "0"
+	  YMax			  "35"
+	  SaveName		  "ScopeData15"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Norm of P-P' \nbefore\n extrapolation"
+	  Ports			  [1]
+	  Position		  [85, 395, 115, 425]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Location		  [17, 56, 975, 233]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  YMin			  "0"
+	  YMax			  "35"
+	  SaveName		  "ScopeData16"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Phi*P*Phi'"
+	  Ports			  [3, 1]
+	  Position		  [475, 81, 520, 209]
+	  Inputs		  "3"
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [565, 85, 585, 105]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "eig(P(k)(-)"
+	  Position		  [605, 385, 665, 415]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "eig(u)"
+	  OutputSignalType	  "complex"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "eig(P(k-1)(+))"
+	  Position		  [340, 245, 400, 275]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "eig(u)"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "max eigenvalue"
+	  Position		  [455, 550, 515, 580]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "max(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "norm(u-u')"
+	  Position		  [740, 150, 800, 180]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "norm(u-u')"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "norm(u-u')2"
+	  Position		  [90, 310, 150, 340]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "norm(u-u')"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P(k)(-)"
+	  Position		  [905, 88, 935, 102]
+	}
+	Line {
+	  SrcBlock		  "Math\nFunction"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 90]
+	  DstBlock		  "Phi*P*Phi'"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "max eigenvalue"
+	  SrcPort		  1
+	  DstBlock		  "Max Eigenvalue"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Abs1"
+	  SrcPort		  1
+	  DstBlock		  "max eigenvalue"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Eigenvalues of P(k)(-)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "norm(u-u')2"
+	  SrcPort		  1
+	  Points		  [0, 35]
+	  DstBlock		  "Norm of P-P' \nbefore\n extrapolation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "norm(u-u')"
+	  SrcPort		  1
+	  DstBlock		  "Norm of P-P' \nafter extrapolation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "eig(P(k)(-)"
+	  SrcPort		  1
+	  Points		  [0, 95]
+	  Branch {
+	    Points		    [0, 50]
+	    Branch {
+	      DstBlock		      "Abs1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 90]
+	      DstBlock		      "Abs"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Display of Eigenvalues of P(k)(-)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "eig(P(k-1)(+))"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 15]
+	  Branch {
+	    Points		    [40, 0; 0, 105; -110, 0]
+	    DstBlock		    "Eigenvalues\nprior to\nextrapolation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Eigenvalues of P(k-1)(+)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Q(k-1)"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "P(k-1)(+)"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [170, 0]
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "Phi*P*Phi'"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, 20]
+	      DstBlock		      "eig(P(k-1)(+))"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "norm(u-u')2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Phi(k-1)"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  Branch {
+	    Points		    [0, -45; 180, 0; 0, 55]
+	    DstBlock		    "Phi*P*Phi'"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Math\nFunction"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [165, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "norm(u-u')"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "P(k)(-)"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 215]
+	    Branch {
+	      Points		      [0, 45; 35, 0]
+	      DstBlock		      "eig(P(k)(-)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [85, 0]
+	      DstBlock		      "Display"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Phi*P*Phi'"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -50]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "The eigenvalues of P(k)(-) should all be no"
+"n-negative, \nif it is to be a positive semi-definite matrix."
+	  Position		  [691, 448]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "The eigenvalues of P(k-1)(+) should all be"
+"\nnon-negative, if it is to be a positive \nsemi-definite matrix."
+	  Position		  [131, 378]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "Transition matrix from \nprevious cycle \n("
+"see Gelb pg 110)"
+	  Position		  [85, 140]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "Output:  P(k)(-) = Phi(k)*P(k-1)(+)Phi(k)' "
+"+ Q(k-1)"
+	  Position		  [724, 63]
+	}
+	Annotation {
+	  Name			  "Updated Value of\ncovariance matrix  from "
+"\nprevious cycle."
+	  Position		  [131, 238]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "Extrapolate Error Covariance Matrix"
+	  Position		  [250, 23]
+	  FontSize		  18
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Geometry\nMatrix"
+      Position		      [360, 140, 390, 170]
+      Value		      "H"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      MATLABFcn
+      Name		      "Get Diagonal\nElements"
+      Position		      [885, 235, 945, 265]
+      MATLABFcn		      "diag(u)"
+      Output1D		      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Measurement Noise\nCovariance Matrix"
+      Position		      [360, 215, 390, 245]
+      Value		      "R"
+      VectorParams1D	      off
+      ShowAdditionalParam     on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Process Noise\nCovariance Matrix"
+      Position		      [20, 190, 50, 220]
+      Value		      "Q"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [900, 584, 930, 616]
+      Location		      [6, 492, 330, 731]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "10"
+      YMin		      "-20"
+      YMax		      "120"
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      Position		      [355, 315, 395, 355]
+      NamePlacement	      "alternate"
+      X0		      "P0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Update Error \nCovariance Matrix"
+      Ports		      [4, 1]
+      Position		      [715, 170, 780, 505]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Update Error \nCovariance Matrix"
+	Location		[48, 180, 1024, 653]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "H"
+	  Position		  [35, 398, 65, 412]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K"
+	  Position		  [40, 118, 70, 132]
+	  Port			  "2"
+	  ShowAdditionalParam	  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "P(k)(-)"
+	  Position		  [35, 468, 65, 482]
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "R"
+	  Position		  [325, 118, 355, 132]
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "(I-KH)P(k)(-)"
+	  Ports			  [2, 1]
+	  Position		  [635, 288, 680, 372]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "(I-KH)P(k)(-)(I-KH)'"
+	  Ports			  [2, 1]
+	  Position		  [805, 150, 860, 230]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Covariance Matrix"
+	  Ports			  [1]
+	  Position		  [1420, 310, 1450, 350]
+	  Location		  [8, 63, 883, 301]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  YMin			  "-60"
+	  YMax			  "80"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Diagonal of Err Cov Matrix"
+	  Ports			  [1]
+	  Position		  [1425, 390, 1455, 430]
+	  Location		  [51, 315, 958, 570]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  YMin			  "0"
+	  YMax			  "5000"
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Error Covariance Display"
+	  Ports			  [1]
+	  Position		  [1290, 455, 1630, 525]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From A"
+	  Position		  [990, 536, 1030, 564]
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "A"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From B"
+	  Position		  [990, 596, 1030, 624]
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "B"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto A"
+	  Position		  [1045, 210, 1085, 240]
+	  GotoTag		  "A"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "GotoB"
+	  Position		  [1025, 365, 1065, 395]
+	  GotoTag		  "B"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Identify Matrix"
+	  Position		  [420, 355, 450, 385]
+	  Value			  "I"
+	  VectorParams1D	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Joseph Switch"
+	  Ports			  [2, 1]
+	  Position		  [995, 282, 1025, 318]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  sw			  "1"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "KR"
+	  Ports			  [2, 1]
+	  Position		  [515, 46, 560, 79]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [750, 530, 755, 570]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Norm of P-P': \nprior / post / RSS ratio of"
+" post-prior"
+	  Ports			  [3]
+	  Position		  [540, 550, 570, 580]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Location		  [10, 158, 968, 568]
+	  Open			  off
+	  NumInputPorts		  "3"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "10"
+	  YMin			  "0~0~0"
+	  YMax			  "40~2~0.05"
+	  SaveName		  "ScopeData13"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [410, 276, 455, 309]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [590, 76, 635, 109]
+	  Multiplication	  "Matrix(*)"
+	  InputSameDT		  off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [1]
+	  Position		  [1215, 539, 1245, 571]
+	  Location		  [11, 66, 876, 305]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData14"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [545, 285, 565, 305]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|-+"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [890, 80, 910, 100]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  Port {
+	    PortNumber		    1
+	    Name		    "(I-KH)P(k)(-)(I-KH)'+KRK'"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [1085, 545, 1105, 565]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Symmetrization"
+	  Ports			  [2, 1]
+	  Position		  [920, 417, 950, 453]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  sw			  "1"
+	  action		  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "(I-KH)P(k)(-)"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "daig(P)"
+	  Position		  [1250, 395, 1310, 425]
+	  MATLABFcn		  "diag(u)"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "norm"
+	  Position		  [1130, 540, 1190, 570]
+	  MATLABFcn		  "norm(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "norm(u-u')"
+	  Position		  [240, 530, 300, 560]
+	  MATLABFcn		  "norm(u-u')"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "norm(u-u')1"
+	  Position		  [1105, 415, 1165, 445]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "norm(u-u')"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "rss_ratio"
+	  Position		  [665, 535, 725, 565]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  MATLABFcn		  "rss_ratio(u(1),u(2))"
+	  OutputSignalType	  "real"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "symmetrize"
+	  Position		  [810, 430, 870, 460]
+	  MATLABFcn		  ".5*(u+u')"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "transpose"
+	  Position		  [330, 190, 390, 220]
+	  MATLABFcn		  "u'"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "transpose1"
+	  Position		  [675, 195, 735, 225]
+	  MATLABFcn		  "u'"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P(k)(+)"
+	  Position		  [1230, 293, 1260, 307]
+	}
+	Line {
+	  SrcBlock		  "H"
+	  SrcPort		  1
+	  Points		  [215, 0; 0, -105]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "K"
+	  SrcPort		  1
+	  Points		  [210, 0]
+	  Branch {
+	    Points		    [0, 80]
+	    Branch {
+	      Points		      [0, 80]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "transpose"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "KR"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "P(k)(-)"
+	  SrcPort		  1
+	  Points		  [115, 0]
+	  Branch {
+	    Points		    [420, 0; 0, -125]
+	    DstBlock		    "(I-KH)P(k)(-)"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "norm(u-u')"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Identify Matrix"
+	  SrcPort		  1
+	  Points		  [100, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "(I-KH)P(k)(-)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -85]
+	    DstBlock		    "transpose1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "R"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  DstBlock		  "KR"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "transpose"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, -50; 120, 0]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(I-KH)P(k)(-)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [40, 0]
+	    Branch {
+	      Labels		      [1, 0]
+	      Points		      [0, -160]
+	      DstBlock		      "(I-KH)P(k)(-)(I-KH)'"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [2, 0]
+	      Points		      [110, 0; 0, 95]
+	      DstBlock		      "Symmetrization"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [40, 0; 0, 115]
+	    DstBlock		    "symmetrize"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "transpose1"
+	  SrcPort		  1
+	  DstBlock		  "(I-KH)P(k)(-)(I-KH)'"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(I-KH)P(k)(-)(I-KH)'"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -5]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "symmetrize"
+	  SrcPort		  1
+	  DstBlock		  "Symmetrization"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "(I-KH)P(k)(-)"
+	  SrcBlock		  "Symmetrization"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -55]
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -70]
+	    DstBlock		    "Joseph Switch"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "GotoB"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Joseph Switch"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  Branch {
+	    DstBlock		    "P(k)(+)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    Branch {
+	      DstBlock		      "norm(u-u')1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [65, 0]
+	      Branch {
+		Points			[0, 60]
+		Branch {
+		  DstBlock		  "daig(P)"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 80]
+		  DstBlock		  "Error Covariance Display"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[135, 0; 0, -20]
+		DstBlock		"Covariance Matrix"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  Name			  "(I-KH)P(k)(-)(I-KH)'+KRK'"
+	  Labels		  [2, 0]
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, 135]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Joseph Switch"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Goto A"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "norm(u-u')"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -40; 205, 0]
+	    DstBlock		    "Norm of P-P': \nprior / post / RSS ratio "
+"of post-prior"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65; 455, 0; 0, -50]
+	    DstBlock		    "Mux"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "norm(u-u')1"
+	  SrcPort		  1
+	  Points		  [0, 55; -400, 0]
+	  Branch {
+	    Points		    [-180, 0]
+	    DstBlock		    "Norm of P-P': \nprior / post / RSS ratio "
+"of post-prior"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "Mux"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "rss_ratio"
+	  SrcPort		  1
+	  Points		  [-40, 0; 0, -25; -55, 0]
+	  DstBlock		  "Norm of P-P': \nprior / post / RSS ratio of"
+" post-prior"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "rss_ratio"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From B"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From A"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "norm"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "norm"
+	  SrcPort		  1
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "daig(P)"
+	  SrcPort		  1
+	  DstBlock		  "Diagonal of Err Cov Matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "KR"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 20]
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Update Error Covariance Matrix"
+	  Position		  [222, 33]
+	  FontSize		  18
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Name			  "Joseph Form\nof Covariance\nUpdate"
+	  Position		  [1010, 116]
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "P(k)(-)"
+      Position		      [530, 503, 560, 517]
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "P(k)((+)"
+      Position		      [900, 433, 930, 447]
+      Port		      "2"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "K(k)"
+      Position		      [665, 328, 695, 342]
+      Port		      "3"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Phi(k)"
+      Position		      [200, 323, 230, 337]
+      Port		      "4"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Pos Err Cov"
+      Position		      [1530, 13, 1560, 27]
+      Port		      "5"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Pos Err Cov"
+      Position		      [1815, 108, 1845, 122]
+      Port		      "6"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Pos Err Cov"
+      Position		      [1810, 168, 1840, 182]
+      Port		      "7"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Vel Err Cov"
+      Position		      [1810, 228, 1840, 242]
+      Port		      "8"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Vel Err Cov"
+      Position		      [1785, 273, 1815, 287]
+      Port		      "9"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Vel Err Cov"
+      Position		      [1795, 348, 1825, 362]
+      Port		      "10"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Tilt Cov"
+      Position		      [1810, 413, 1840, 427]
+      Port		      "11"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Tilt Cov"
+      Position		      [1705, 473, 1735, 487]
+      Port		      "12"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Az Tilt Cov"
+      Position		      [1715, 533, 1745, 547]
+      Port		      "13"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Clk Freq Rate Error"
+      Position		      [1765, 593, 1795, 607]
+      Port		      "14"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Clk Freq Error"
+      Position		      [1790, 653, 1820, 667]
+      Port		      "15"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Clk Bias Error"
+      Position		      [1790, 713, 1820, 727]
+      Port		      "16"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Pos Change Cov"
+      Position		      [1430, 398, 1460, 412]
+      Port		      "17"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Pos Change Cov"
+      Position		      [1430, 428, 1460, 442]
+      Port		      "18"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Pos Change Cov"
+      Position		      [1430, 463, 1460, 477]
+      Port		      "19"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Gyro SF Err Cov"
+      Position		      [1430, 498, 1460, 512]
+      Port		      "20"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Gyro SF Err Cov"
+      Position		      [1430, 528, 1460, 542]
+      Port		      "21"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Gyro SF Err Cov"
+      Position		      [1430, 558, 1460, 572]
+      Port		      "22"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Accel SF Err Cov"
+      Position		      [1430, 593, 1460, 607]
+      Port		      "23"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Accel SF Err Cov"
+      Position		      [1430, 623, 1460, 637]
+      Port		      "24"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Accel SF Err Cov"
+      Position		      [1430, 653, 1460, 667]
+      Port		      "25"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Gyro Bias Err Cov"
+      Position		      [1425, 693, 1455, 707]
+      Port		      "26"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Gyro Bias Err Cov"
+      Position		      [1420, 723, 1450, 737]
+      Port		      "27"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Gyro Bias Err Cov"
+      Position		      [1415, 753, 1445, 767]
+      Port		      "28"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "X Accel Bias Err Cov"
+      Position		      [1405, 783, 1435, 797]
+      Port		      "29"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y Accel Bias Err Cov"
+      Position		      [1405, 813, 1435, 827]
+      Port		      "30"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Z Accel Bias Err Cov"
+      Position		      [1405, 848, 1435, 862]
+      Port		      "31"
+    }
+    Line {
+      SrcBlock		      "Update Error \nCovariance Matrix"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	Points			[30, 0]
+	Branch {
+	  Points		  [25, 0; 0, 100]
+	  DstBlock		  "P(k)((+)"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 260]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -90]
+	    DstBlock		    "Get Diagonal\nElements"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
+	Points			[0, 215; -710, 0; 0, -325]
+	DstBlock		"Extrapolate Error\nCovariance Matrix"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      Points		      [0, 0; 35, 0]
+      Branch {
+	DstBlock		"Compute Kalman Gain"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, 45]
+	Branch {
+	  DstBlock		  "Update Error \nCovariance Matrix"
+	  DstPort		  3
+	}
+	Branch {
+	  Points		  [0, 130]
+	  DstBlock		  "P(k)(-)"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Compute Kalman Gain"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	DstBlock		"Update Error \nCovariance Matrix"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 40]
+	DstBlock		"K(k)"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Process Noise\nCovariance Matrix"
+      SrcPort		      1
+      DstBlock		      "Extrapolate Error\nCovariance Matrix"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Extrapolate Error\nCovariance Matrix"
+      SrcPort		      1
+      Points		      [30, 0; 0, 105]
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Compute \nTransition Matrix"
+      SrcPort		      1
+      Points		      [-25, 0; 0, -80]
+      Branch {
+	Points			[0, -75]
+	DstBlock		"Extrapolate Error\nCovariance Matrix"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"Phi(k)"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Geometry\nMatrix"
+      SrcPort		      1
+      Points		      [80, 0; 0, 90]
+      Branch {
+	Points			[0, 10]
+	DstBlock		"Compute Kalman Gain"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Update Error \nCovariance Matrix"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Measurement Noise\nCovariance Matrix"
+      SrcPort		      1
+      Points		      [65, 0; 0, 65]
+      Branch {
+	DstBlock		"Compute Kalman Gain"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 170]
+	DstBlock		"Update Error \nCovariance Matrix"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "inStruct"
+      SrcPort		      1
+      Points		      [55, 0; 0, -75]
+      DstBlock		      "Compute \nTransition Matrix"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Get Diagonal\nElements"
+      SrcPort		      1
+      Points		      [90, 0]
+      Branch {
+	Points			[-50, 0; 0, 430]
+	DstBlock		"Covariance\nDisplay"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 170]
+	DstBlock		"Demux"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Az Tilt Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      Points		      [490, 0; 0, 236]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			9
+      }
+      Branch {
+	Points			[95, -1; 0, 25]
+	DstBlock		"Az Tilt Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Y Tilt Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      Points		      [520, 1; 0, 224]
+      Branch {
+	Points			[45, 0; 0, -25]
+	DstBlock		"Covariance\nScope"
+	DstPort			8
+      }
+      Branch {
+	DstBlock		"Y Tilt Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "X Tilt Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      Points		      [540, 0; 0, 166]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			7
+      }
+      Branch {
+	Points			[160, -1]
+	DstBlock		"X Tilt Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Z Vel Err Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      Points		      [560, 1; 0, 144]
+      Branch {
+	Points			[0, -15]
+	DstBlock		"Covariance\nScope"
+	DstPort			6
+      }
+      Branch {
+	Points			[0, 5]
+	DstBlock		"Z Vel Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Y Vel Err Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      Points		      [610, 0; 0, 135]
+      Branch {
+	Points			[150, 0]
+	DstBlock		"Covariance\nScope"
+	DstPort			5
+      }
+      Branch {
+	Points			[40, 0; 0, -35]
+	DstBlock		"Y Vel Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "X Vel Err Cov"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      Points		      [630, 0; 0, 60]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			4
+      }
+      Branch {
+	Points			[70, 0]
+	DstBlock		"X Vel Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Z Pos Err Cov"
+      Labels		      [2, 1]
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [380, 0; 0, -48; 300, 0; 1, 73]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			3
+      }
+      Branch {
+	Points			[-1, 0; 0, 20]
+	DstBlock		"Z Pos Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "X Pos Err Cov"
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [325, 0; 0, -30; 40, 0]
+      Branch {
+	Points			[395, 0]
+	DstBlock		"Covariance\nScope"
+	DstPort			1
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[0, -30]
+	DstBlock		"X Pos Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      10
+      Points		      [465, 0; 0, 271]
+      DstBlock		      "Covariance\nScope"
+      DstPort		      10
+    }
+    Line {
+      Name		      "GPS Clock Requency Error Rate"
+      Labels		      [3, 1]
+      SrcBlock		      "Demux"
+      SrcPort		      11
+      Points		      [440, 0; 0, 306; 120, -1]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			11
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Clk Freq Rate Error"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "GPS Clock Frequency Error"
+      SrcBlock		      "Demux"
+      SrcPort		      12
+      Points		      [420, 1; 0, 340; 135, -1]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			12
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[0, -35]
+	DstBlock		"Clk Freq Error"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "GPS Clock Bias Error"
+      Labels		      [3, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      13
+      Points		      [400, 0; 0, 376; 155, -1]
+      Branch {
+	DstBlock		"Covariance\nScope"
+	DstPort			13
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Clk Bias Error"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Y Pos Err Cov "
+      Labels		      [3, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [355, 0; 1, -39; 334, -1]
+      Branch {
+	Points			[70, 1]
+	DstBlock		"Covariance\nScope"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"Y Pos Err Cov"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      14
+      DstBlock		      "X Pos Change Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      15
+      Points		      [160, 0; 0, 5]
+      DstBlock		      "Y Pos Change Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      16
+      Points		      [160, 0; 0, 15]
+      DstBlock		      "Z Pos Change Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      17
+      Points		      [260, 0; 0, 26]
+      DstBlock		      "X Gyro SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      18
+      Points		      [240, 1; 0, 29]
+      DstBlock		      "Y Gyro SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      19
+      Points		      [215, 0; 0, 36]
+      DstBlock		      "Z Gyro SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      20
+      Points		      [195, 0; 0, 45]
+      DstBlock		      "X Accel SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      21
+      Points		      [170, 0; 0, 50]
+      DstBlock		      "Y Accel SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      22
+      Points		      [150, 1; 0, 54]
+      DstBlock		      "Z Accel SF Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      23
+      Points		      [140, 0; 0, 70]
+      DstBlock		      "X Gyro Bias Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      24
+      Points		      [130, 0; 0, 75]
+      DstBlock		      "Y Gyro Bias Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      25
+      Points		      [120, 0; 0, 80]
+      DstBlock		      "Z Gyro Bias Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      26
+      Points		      [110, 0; 0, 85]
+      DstBlock		      "X Accel Bias Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      27
+      Points		      [100, 0; 0, 90]
+      DstBlock		      "Y Accel Bias Err Cov"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      28
+      Points		      [90, 0; 0, 100]
+      DstBlock		      "Z Accel Bias Err Cov"
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Kalman Covariance Analysis Tool - Time Varying"
+"\n(KCAT-TV)"
+      Position		      [651, 64]
+      FontSize		      18
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "Note:  KCAT-TV differs from KCAT only in the \n"
+"Compute Transition Matrix block"
+      Position		      [535, 108]
+    }
+  }
+}

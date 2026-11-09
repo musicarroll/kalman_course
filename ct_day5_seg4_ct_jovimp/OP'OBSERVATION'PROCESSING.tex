@@ -1,0 +1,100 @@
+\begin{frame}
+OP'OBSERVATION'PROCESSING
+\begin{verbatim}
+     FUNCTION: The observation processing  subfunction shall choose the
+     best observation for the operational filters.  OBPRC shall choose
+     the same observation for the INU's if both are in aided nav or
+     fin  air align.  If an INU is in coarse air align the best
+     available velocity observation shall be chosen for that INU.
+     During fine air align all available aids shall be chosen from
+     those consistent with the alignment type (TAS, GPS, Transfer or
+     DVS).  DIscrete aids shall always be chosen if available (the
+     operator must see th response to requested fix).  The diescrete
+     aids shall include postion fixes and radar altitude calibrations.
+
+     The "available" observation shall be dependent or the system Nav
+     Mode for Aided Naviagtion an the Motion align type for motion
+     align.
+
+     Observation processing shall not preform BITE processing on data
+     availablility but rather shall respond to changes in mode from NAV
+     mode control.  OPOBPRC shall coutn data availability (as a
+     functionof mode) and make the information available to Nav mode
+     control, which will perform  the requisite mode changes.  For each
+     mode, OPOBPRC shall monitor availability of the "prime" aid.
+     these prime modes are noted by atserisks (*) in the aid table.
+
+     The CT acumulators shall be reset when a new observation is
+     chosen.  The time differences between  the valid Navigation data
+     and observation data shall be used to time synchronize the
+     Navigation data with the observation data.  The synchronization
+     shall be sent to the Kalman filter for observation processing.
+
+     Once an observation is deselected in favor of another, it shall
+     not be relsected in the same Kalman cycle.
+
+     Nav mode available observation are as follows :
+
+
+     AUTO               GPS-INS                     DVS-INS
+     ======             =======                     =======
+     GPS VEL/POS        * GPS VEL/POS               * DVS
+     DVS                RADAR CAL                   RADAR CAL
+     RADAR CAL          BARO                        BARO
+     BARO               VIS POS FIX                 VIS POS FIX
+     VIS POS FIX        RADAR POS FIX               RADAR POS FIX
+     RADAR POS FIX
+
+     AIDED INS          AIDED DVS
+     =========          =========
+     RADAR CAL          GPS VEL/POS
+     BARO               BARO
+     VIS POS FIX        VIS POS FIX
+     RADAR POS FIX      RADAR POS FIX
+
+     GPS                UNAIDED INU                 UNAIDED DVS
+     ====               ===========                 ===========
+     NONE               NONE                        NONE
+
+     NO NAV             TAS
+     ======             ===
+       -                NONE
+
+     Motion align available observation are as follows:
+
+     AUTO               GPS-INS                     DVS-INS
+     ======             =======                     =======
+     COARSE             COARSE                      COARSE
+     ======             ======                      =======
+     GPS VEL            * GPS VEL                   * DVS
+     DVS
+     TRANSFER VEL
+     TAS
+
+     AUTO               GPS-INS                     DVS-INS
+     ======             =======                     =======
+     FINE               FINE                        FINE
+     ======             =======                     =======
+     GPS VEL/POS        * GPS VEL/POS               * DVS
+     DVS                RADAR CAL                   RADAR CAL
+     RADAR CAL          BARO                        BARO
+     BARO               VIS POS FIX                 VIS POS FIX
+     VIS POS FIX        RADAR POS FIX               RADAR POS FIX
+     RADAR POS FIX
+
+     TAS                TRANSFER
+     ======             =========
+     COARSE             COARSE
+     ======             =========
+     * TAS              * TRANSFER VEL
+
+     FINE               FINE
+     ======             =========
+     TAS                * TRANSFER POS
+     RADAR CAL          RADAR CAL
+     BARO               BARO
+     VIS POS FIX        VIS POS FIX
+     RADAR POS FIX      RADAR POS FIX
+
+\end{verbatim}
+\end{frame}

@@ -1,0 +1,1366 @@
+ct_kf_cmnds.tex:\newcommand{\ctgbias}[1]{\epsilon D#1}
+ct_kf_cmnds.tex:\newcommand{\ctgbias}[1]{\epsilon D#1}
+ct_kf_cmnds.tex:\newcommand{\ctabias}[1]{\epsilon B#1}
+ct_kf_cmnds.tex:\newcommand{\ctabias}[1]{\epsilon B#1}
+ct_kf_cmnds.tex:\newcommand{\ctdopbias}[1]{\epsilon BD#1}
+ct_kf_cmnds.tex:\newcommand{\ctdopbias}[1]{\epsilon BD#1}
+ct_kf_cmnds.tex:\newcommand{\ctdopbore}[1]{\delta B#1}
+ct_kf_cmnds.tex:\newcommand{\ctdopbore}[1]{\delta B#1}
+ct_kf_cmnds.tex:\newcommand{\ctdopsfdx}{\epsilon SFDX}
+ct_kf_cmnds.tex:\newcommand{\ctdopsfdx}{\epsilon SFDX}
+ct_kf_cmnds.tex:\newcommand{\ctposerr}[1]{\Delta R#1}
+ct_kf_cmnds.tex:\newcommand{\ctposerr}[1]{\Delta R#1}
+ct_kf_cmnds.tex:\newcommand{\ctvelerr}[1]{\epsilon V#1}
+ct_kf_cmnds.tex:\newcommand{\ctvelerr}[1]{\epsilon V#1}
+ct_kf_cmnds.tex:\newcommand{\cttilt}[1]{\Theta#1}
+ct_kf_cmnds.tex:\newcommand{\cttilt}[1]{\Theta#1}
+ct_kf_cmnds.tex:\newcommand{\ctazerr}{\Psi Z}
+ct_kf_cmnds.tex:\newcommand{\ctazerr}{\Psi Z}
+ct_kf_cmnds.tex:\newcommand{\ctbarofirst}{\epsilon\Delta H}
+ct_kf_cmnds.tex:\newcommand{\ctbarofirst}{\epsilon\Delta H}
+ct_kf_cmnds.tex:\newcommand{\ctbarosecond}{I\Delta H}
+ct_kf_cmnds.tex:\newcommand{\ctbarosecond}{I\Delta H}
+ct_kf_cmnds.tex:\newcommand{\tderiv}{\dfrac{d}{dt}}
+ct_kf_cmnds.tex:\newcommand{\tderiv}{\dfrac{d}{dt}}
+ct_kf_cmnds.tex:\newcommand{\dbaro}{D_\text{baro}}
+ct_kf_cmnds.tex:\newcommand{\dbaro}{D_\text{baro}}
+ct_kf_cmnds.tex:\newcommand{\cbaro}{C_\text{baro}}
+ct_kf_cmnds.tex:\newcommand{\cbaro}{C_\text{baro}}
+ct_kf_cmnds.tex:\newcommand{\ctperex}{\Delta\dot{R}_{x}=\rho_z\ctposerr{y}-\rho_y\ctposerr{z}+\ctvelerr{x}}
+ct_kf_cmnds.tex:\newcommand{\ctperex}{\Delta\dot{R}_{x}=\rho_z\ctposerr{y}-\rho_y\ctposerr{z}+\ctvelerr{x}}
+ct_kf_cmnds.tex:\newcommand{\ctperey}{\Delta\dot{R}_{y}=-\rho_z\ctposerr{x}+\rho_x\ctposerr{y}+\ctvelerr{y}}
+ct_kf_cmnds.tex:\newcommand{\ctperey}{\Delta\dot{R}_{y}=-\rho_z\ctposerr{x}+\rho_x\ctposerr{y}+\ctvelerr{y}}
+ct_kf_cmnds.tex:\newcommand{\ctperez}{\Delta\dot{R}_{z}=\rho_y\ctposerr{x}-\rho_x\ctposerr{y}-\dbaro\ctposerr{z}+\ctvelerr{z}+\dbaro\ctbarofirst}
+ct_kf_cmnds.tex:\newcommand{\ctperez}{\Delta\dot{R}_{z}=\rho_y\ctposerr{x}-\rho_x\ctposerr{y}-\dbaro\ctposerr{z}+\ctvelerr{z}+\dbaro\ctbarofirst}
+ct_kf_cmnds.tex:\newcommand{\ctverex}{\lefteqn{ \epsilon\dot{V}_x=\dfrac{A_y}{R_e}\ctposerr{x}+\left(2\omega_{z}+\rho_z\right)\ctvelerr{y}-\left(2\omega_{y}+\rho_y\right)\ctvelerr{z} }\nonumber\\
+ct_kf_cmnds.tex:\newcommand{\ctverex}{\lefteqn{ \epsilon\dot{V}_x=\dfrac{A_y}{R_e}\ctposerr{x}+\left(2\omega_{z}+\rho_z\right)\ctvelerr{y}-\left(2\omega_{y}+\rho_y\right)\ctvelerr{z} }\nonumber\\
+ct_kf_cmnds.tex:%\newcommand{\velerreq}{ \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+ct_kf_cmnds.tex:%\newcommand{\velerreq}{ \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+errdyneqdefs.tex:\newcommand{\cblerreq}{\delta\cbldot=\delta\dcm{B}{L}\rotmat{I}{B}^B +\dcm{B}{L}\delta\rotmat{I}{B}^B
+errdyneqdefs.tex:\newcommand{\cblerreq}{\delta\cbldot=\delta\dcm{B}{L}\rotmat{I}{B}^B +\dcm{B}{L}\delta\rotmat{I}{B}^B
+errdyneqdefs.tex:\newcommand{\strapvelerreq}{\delta\dot{v}^L=\delta\dcm{B}{L}\specforce^B+\dcm{B}{L}\delta\specforce^B + \delta g'
+errdyneqdefs.tex:\newcommand{\strapvelerreq}{\delta\dot{v}^L=\delta\dcm{B}{L}\specforce^B+\dcm{B}{L}\delta\specforce^B + \delta g'
+errdyneqdefs.tex:\newcommand{\cleerreq}{\delta\dot{C}_L^E=\delta C_L^E\rotmat{E}{L}^L +C_L^E\delta\rotmat{E}{L}^L}
+errdyneqdefs.tex:\newcommand{\cleerreq}{\delta\dot{C}_L^E=\delta C_L^E\rotmat{E}{L}^L +C_L^E\delta\rotmat{E}{L}^L}
+errdyneqdefs.tex:\newcommand{\tilteq}{\dot{\Phi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\Phi^L-\dcm{B}{L}\delta\rotmat{I}{B}^B + \rotmat{I}{E}^LE^L + \delta \rotmat{E}{L}^L }
+errdyneqdefs.tex:\newcommand{\tilteq}{\dot{\Phi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\Phi^L-\dcm{B}{L}\delta\rotmat{I}{B}^B + \rotmat{I}{E}^LE^L + \delta \rotmat{E}{L}^L }
+errdyneqdefs.tex:\newcommand{\velerreq}{ \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+errdyneqdefs.tex:\newcommand{\velerreq}{ \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+errdyneqdefs.tex:\newcommand{\trateerreq}{\delta\omega_{EL}^L = \dfrac{1}{R_e}\left(u_R^L\times \delta v^L\right)-\dfrac{\delta h}{R_e^2}\left(u_R^L\times v^L\right)+\delta \rho_R u_R^L}
+errdyneqdefs.tex:\newcommand{\trateerreq}{\delta\omega_{EL}^L = \dfrac{1}{R_e}\left(u_R^L\times \delta v^L\right)-\dfrac{\delta h}{R_e^2}\left(u_R^L\times v^L\right)+\delta \rho_R u_R^L}
+errdyneqdefs.tex:\newcommand{\trateerreqsphere}{\delta\omega_{EL}^L = \dfrac{1}{R}\left(u_R^L\times \delta v^L\right)-\dfrac{\delta h}{R^2}\left(u_R^L\times v^L\right)}
+errdyneqdefs.tex:\newcommand{\trateerreqsphere}{\delta\omega_{EL}^L = \dfrac{1}{R}\left(u_R^L\times \delta v^L\right)-\dfrac{\delta h}{R^2}\left(u_R^L\times v^L\right)}
+errdyneqdefs.tex:\newcommand{\paeeq}{\dot{e}^L=-\rotmat{E}{L}^L e^L+ \delta\omega_{EL}^L}
+errdyneqdefs.tex:\newcommand{\paeeq}{\dot{e}^L=-\rotmat{E}{L}^L e^L+ \delta\omega_{EL}^L}
+errdyneqdefs.tex:\newcommand{\deltardoteq}{\delta \dot{R}^L=\delta v^L-\rotmat{E}{L}^L \poserr^L}
+errdyneqdefs.tex:\newcommand{\deltardoteq}{\delta \dot{R}^L=\delta v^L-\rotmat{E}{L}^L \poserr^L}
+errdyneqdefs.tex:\newcommand{\velerreqpsi}{\lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \psi^L -\dfrac{g}{R_e}\Delta R_H^L-\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+errdyneqdefs.tex:\newcommand{\velerreqpsi}{\lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \psi^L -\dfrac{g}{R_e}\Delta R_H^L-\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+errdyneqdefs.tex:\newcommand{\telscopeeq}{\dot{\psi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\psi^L-\dcm{B}{L}\delta\omega_{IB}^B }
+errdyneqdefs.tex:\newcommand{\telscopeeq}{\dot{\psi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\psi^L-\dcm{B}{L}\delta\omega_{IB}^B }
+gensymdefs.tex:\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+gensymdefs.tex:\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+gensymdefs.tex:\newcommand{\errop}[1]{\delta#1=\hat{#1}-#1}
+gensymdefs.tex:\newcommand{\errop}[1]{\delta#1=\hat{#1}-#1}
+gensymdefs.tex:\newcommand{\h}{\mathcal{H}}
+gensymdefs.tex:\newcommand{\h}{\mathcal{H}}
+gensymdefs.tex:\newcommand{\s}{\mathcal{S}}
+gensymdefs.tex:\newcommand{\s}{\mathcal{S}}
+gensymdefs.tex:\newcommand{\A}{\mathcal{A}}
+gensymdefs.tex:\newcommand{\A}{\mathcal{A}}
+gensymdefs.tex:\newcommand{\J}{\mathcal{J}}
+gensymdefs.tex:\newcommand{\J}{\mathcal{J}}
+gensymdefs.tex:\newcommand{\M}{\mathcal{M}}
+gensymdefs.tex:\newcommand{\M}{\mathcal{M}}
+gensymdefs.tex:\newcommand{\W}{\mathcal{W}}
+gensymdefs.tex:\newcommand{\W}{\mathcal{W}}
+gensymdefs.tex:\newcommand{\X}{\mathcal{X}}
+gensymdefs.tex:\newcommand{\X}{\mathcal{X}}
+gensymdefs.tex:\newcommand{\ltwo}{\textit{l}^2}
+gensymdefs.tex:\newcommand{\ltwo}{\textit{l}^2}
+gensymdefs.tex:\newcommand{\Ltwo}{\mathcal{L}^2}
+gensymdefs.tex:\newcommand{\Ltwo}{\mathcal{L}^2}
+gensymdefs.tex:\newcommand{\Quat}{\mathbb{H}}
+gensymdefs.tex:\newcommand{\Quat}{\mathbb{H}}
+gensymdefs.tex:\newcommand{\Nat}{\mathbb{N}}
+gensymdefs.tex:\newcommand{\Nat}{\mathbb{N}}
+gensymdefs.tex:\newcommand{\Int}{\mathbb{Z}}
+gensymdefs.tex:\newcommand{\Int}{\mathbb{Z}}
+gensymdefs.tex:\newcommand{\Real}{\mathbb{R}}
+gensymdefs.tex:\newcommand{\Real}{\mathbb{R}}
+gensymdefs.tex:\newcommand{\Complex}{\mathbb{C}}
+gensymdefs.tex:\newcommand{\Complex}{\mathbb{C}}
+gensymdefs.tex:\newcommand{\Rational}{\mathbb{Q}}
+gensymdefs.tex:\newcommand{\Rational}{\mathbb{Q}}
+gensymdefs.tex:\newcommand{\Rat}{\mathbb{Q}}
+gensymdefs.tex:\newcommand{\Rat}{\mathbb{Q}}
+gensymdefs.tex:\newcommand{\Field}{\mathbb{K}}
+gensymdefs.tex:\newcommand{\Field}{\mathbb{K}}
+gensymdefs.tex:\newcommand{\RPlus}{\Real^{+}}
+gensymdefs.tex:\newcommand{\RPlus}{\Real^{+}}
+gensymdefs.tex:\newcommand{\Borel}{\mathcal{B}}
+gensymdefs.tex:\newcommand{\Borel}{\mathcal{B}}
+gensymdefs.tex:\newcommand{\Polar}{\mathcal{P}_{\s}}
+gensymdefs.tex:\newcommand{\Polar}{\mathcal{P}_{\s}}
+gensymdefs.tex:\newcommand{\Poly}{\mathcal{P}(E)}
+gensymdefs.tex:\newcommand{\Poly}{\mathcal{P}(E)}
+gensymdefs.tex:\newcommand{\EssD}{\mathcal{D}}
+gensymdefs.tex:\newcommand{\EssD}{\mathcal{D}}
+gensymdefs.tex:\newcommand{\Lom}{\mathcal{L}}
+gensymdefs.tex:\newcommand{\Lom}{\mathcal{L}}
+gensymdefs.tex:\newcommand{\States}{\mathcal{T}}
+gensymdefs.tex:\newcommand{\States}{\mathcal{T}}
+gensymdefs.tex:\newcommand{\id}{\text{id}}
+gensymdefs.tex:\newcommand{\id}{\text{id}}
+gensymdefs.tex:\newcommand{\eval}{\text{eval}}
+gensymdefs.tex:\newcommand{\eval}{\text{eval}}
+gensymdefs.tex:\newcommand{\Cinf}{C^\infty[a,b]}
+gensymdefs.tex:\newcommand{\Cinf}{C^\infty[a,b]}
+gensymdefs.tex:\newcommand{\CzT}{C^\infty[0,T]}
+gensymdefs.tex:\newcommand{\CzT}{C^\infty[0,T]}
+gensymdefs.tex:\newcommand{\Diff}{\text{Diff}}
+gensymdefs.tex:\newcommand{\Diff}{\text{Diff}}
+gensymdefs.tex:\newcommand{\tfunc}{C_c^\infty}
+gensymdefs.tex:\newcommand{\tfunc}{C_c^\infty}
+gensymdefs.tex:\newcommand{\tfuncstar}{\left[\tfunc\right]^*}
+gensymdefs.tex:\newcommand{\tfuncstar}{\left[\tfunc\right]^*}
+gensymdefs.tex:\newcommand{\cond}{\text{cond}}
+gensymdefs.tex:\newcommand{\cond}{\text{cond}}
+gensymdefs.tex:\newcommand{\prob}{\text{prob}}
+gensymdefs.tex:\newcommand{\prob}{\text{prob}}
+gensymdefs.tex:\newcommand{\card}[1]{\abs{#1}}
+gensymdefs.tex:\newcommand{\card}[1]{\abs{#1}}
+gensymdefs.tex:%\newcommand{\arg}{\text{arg}}
+gensymdefs.tex:%\newcommand{\arg}{\text{arg}}
+gps_cmds.tex:\newcommand{\svposvec}[1]{r_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\svposvec}[1]{r_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\svrefposvec}[1]{r_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\svrefposvec}[1]{r_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\svsaposvec}[1]{r_{\text{sa}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\svsaposvec}[1]{r_{\text{sa}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\msantposvec}[1]{r_{\text{m}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\msantposvec}[1]{r_{\text{m}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\msantphaseposvec}[1]{r_{\text{ma}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\msantphaseposvec}[1]{r_{\text{ma}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvvel}[1]{v_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvvel}[1]{v_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvvel}[1]{v_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvvel}[1]{v_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsolarone}[1]{k_1\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsolarone}[1]{k_1\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsolartwo}[1]{k_2\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsolartwo}[1]{k_2\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsolarvec}[1]{
+gps_cmds.tex:\newcommand{\currsolarvec}[1]{
+gps_cmds.tex:\newcommand{\refsolarone}[1]{k_{1,\text{ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsolarone}[1]{k_{1,\text{ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsolartwo}[1]{k_{2,\text{ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsolartwo}[1]{k_{2,\text{ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsolarvec}[1]{
+gps_cmds.tex:\newcommand{\refsolarvec}[1]{
+gps_cmds.tex:\newcommand{\currsvclockbias}[1]{\tau_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockbias}[1]{\tau_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockdrift}[1]{\dot{\tau}_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockdrift}[1]{\dot{\tau}_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockdriftrate}[1]{\ddot{\tau}_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockdriftrate}[1]{\ddot{\tau}_{\text{s}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\currsvclockstatevec}[1]{
+gps_cmds.tex:\newcommand{\currsvclockstatevec}[1]{
+gps_cmds.tex:\newcommand{\refsvclockbias}[1]{\tau_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockbias}[1]{\tau_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockdrift}[1]{\dot{\tau}_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockdrift}[1]{\dot{\tau}_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockdriftrate}[1]{\ddot{\tau}_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockdriftrate}[1]{\ddot{\tau}_{\text{s,ref}}\left(#1\right)}
+gps_cmds.tex:\newcommand{\refsvclockstatevec}[1]{
+gps_cmds.tex:\newcommand{\refsvclockstatevec}[1]{
+gps_cmds.tex:\newcommand{\corrpr}{\text{SPR}_\text{C}}
+gps_cmds.tex:\newcommand{\corrpr}{\text{SPR}_\text{C}}
+gps_cmds.tex:\newcommand{\corradr}{\Delta\text{ADR}_\text{C}}
+gps_cmds.tex:\newcommand{\corradr}{\Delta\text{ADR}_\text{C}}
+gps_cmds.tex:\newcommand{\svmsmeasvec}{\left[\corrpr,\; \corradr\right]\trans}
+gps_cmds.tex:\newcommand{\svmsmeasvec}{\left[\corrpr,\; \corradr\right]\trans}
+includetest2.tex:\newcommand{\zeromat}[1]{\left[0\right]_{#1}}
+includetest2.tex:\newcommand{\zeromat}[1]{\left[0\right]_{#1}}
+includetest2.tex:\newcommand{\idmat}[1]{\left[ I\right]_{#1}}
+includetest2.tex:\newcommand{\idmat}[1]{\left[ I\right]_{#1}}
+insgpsdefs.tex:\newcommand{\poserr}{\delta R}
+insgpsdefs.tex:\newcommand{\poserr}{\delta R}
+insgpsdefs.tex:\newcommand{\cmposerr}{\Delta R}
+insgpsdefs.tex:\newcommand{\cmposerr}{\Delta R}
+insgpsdefs.tex:\newcommand{\velerr}{\delta V}
+insgpsdefs.tex:\newcommand{\velerr}{\delta V}
+insgpsdefs.tex:\newcommand{\tilt}{\phi}
+insgpsdefs.tex:\newcommand{\tilt}{\phi}
+insgpsdefs.tex:\newcommand{\tiltx}{\phi_x}
+insgpsdefs.tex:\newcommand{\tiltx}{\phi_x}
+insgpsdefs.tex:\newcommand{\tilty}{\phi_y}
+insgpsdefs.tex:\newcommand{\tilty}{\phi_y}
+insgpsdefs.tex:\newcommand{\az}{\psi_z}
+insgpsdefs.tex:\newcommand{\az}{\psi_z}
+insgpsdefs.tex:\newcommand{\azdrift}{\theta_z}
+insgpsdefs.tex:\newcommand{\azdrift}{\theta_z}
+insgpsdefs.tex:\newcommand{\azdrifteq}{\azdrift=p_z + p_z\dfrac{\sin^2\theta}{6}}
+insgpsdefs.tex:\newcommand{\azdrifteq}{\azdrift=p_z + p_z\dfrac{\sin^2\theta}{6}}
+insgpsdefs.tex:\newcommand{\hdgref}{\Delta H_R}
+insgpsdefs.tex:\newcommand{\hdgref}{\Delta H_R}
+insgpsdefs.tex:\newcommand{\caz}{c\az-1}
+insgpsdefs.tex:\newcommand{\caz}{c\az-1}
+insgpsdefs.tex:\newcommand{\baroerr}{\Delta h}
+insgpsdefs.tex:\newcommand{\baroerr}{\Delta h}
+insgpsdefs.tex:\newcommand{\roterr}{\Delta \theta_L}
+insgpsdefs.tex:\newcommand{\roterr}{\Delta \theta_L}
+insgpsdefs.tex:\newcommand{\azerrchange}{\Delta \az} % State 11
+insgpsdefs.tex:\newcommand{\azerrchange}{\Delta \az} % State 11
+insgpsdefs.tex:\newcommand{\dfr}{\Delta FR}
+insgpsdefs.tex:\newcommand{\dfr}{\Delta FR}
+insgpsdefs.tex:\newcommand{\df}{\Delta F}
+insgpsdefs.tex:\newcommand{\df}{\Delta F}
+insgpsdefs.tex:\newcommand{\gpsrangebias}{\Delta P}
+insgpsdefs.tex:\newcommand{\gpsrangebias}{\Delta P}
+insgpsdefs.tex:\newcommand{\poschange}{\Delta P}
+insgpsdefs.tex:\newcommand{\poschange}{\Delta P}
+insgpsdefs.tex:\newcommand{\xtherm}{\Delta B_{Tx}}
+insgpsdefs.tex:\newcommand{\xtherm}{\Delta B_{Tx}}
+insgpsdefs.tex:\newcommand{\ytherm}{\Delta B_{Ty}}
+insgpsdefs.tex:\newcommand{\ytherm}{\Delta B_{Ty}}
+insgpsdefs.tex:\newcommand{\lever}{\Delta L}
+insgpsdefs.tex:\newcommand{\lever}{\Delta L}
+insgpsdefs.tex:\newcommand{\gyrobias}[1]{\Delta B_{g#1}}
+insgpsdefs.tex:\newcommand{\gyrobias}[1]{\Delta B_{g#1}}
+insgpsdefs.tex:\newcommand{\accelbias}[1]{\Delta B_{a#1}}
+insgpsdefs.tex:\newcommand{\accelbias}[1]{\Delta B_{a#1}}
+insgpsdefs.tex:\newcommand{\gyrosf}[1]{\Delta K_{g#1}}
+insgpsdefs.tex:\newcommand{\gyrosf}[1]{\Delta K_{g#1}}
+insgpsdefs.tex:\newcommand{\accelsf}[1]{\Delta K_{a#1}}
+insgpsdefs.tex:\newcommand{\accelsf}[1]{\Delta K_{a#1}}
+insgpsdefs.tex:\newcommand{\gyrosfmat}{\Delta K_{g}}
+insgpsdefs.tex:\newcommand{\gyrosfmat}{\Delta K_{g}}
+insgpsdefs.tex:\newcommand{\accelsfmat}{\Delta K_{a}}
+insgpsdefs.tex:\newcommand{\accelsfmat}{\Delta K_{a}}
+insgpsdefs.tex:\newcommand{\forxyz}{\text{ for }i=x,y,z}
+insgpsdefs.tex:\newcommand{\forxyz}{\text{ for }i=x,y,z}
+insgpsdefs.tex:\newcommand{\forjxyz}{\text{ for }j=x,y,z}
+insgpsdefs.tex:\newcommand{\forjxyz}{\text{ for }j=x,y,z}
+insgpsdefs.tex:\newcommand{\forXYZ}{\text{ for }i=X,Y,Z}
+insgpsdefs.tex:\newcommand{\forXYZ}{\text{ for }i=X,Y,Z}
+insgpsdefs.tex:\newcommand{\forjXYZ}{\text{ for }j=X,Y,Z}
+insgpsdefs.tex:\newcommand{\forjXYZ}{\text{ for }j=X,Y,Z}
+insgpsdefs.tex:\newcommand{\intdeltaT}{\int_0^{\Delta T}}
+insgpsdefs.tex:\newcommand{\intdeltaT}{\int_0^{\Delta T}}
+insgpsdefs.tex:\newcommand{\cscmat}{\left[ \hat{x},P \right]}
+insgpsdefs.tex:\newcommand{\cscmat}{\left[ \hat{x},P \right]}
+insgpsdefs.tex:\newcommand{\numstates}{28}
+insgpsdefs.tex:\newcommand{\numstates}{28}
+insgpsdefs.tex:\newcommand{\numstatesplusone}{29}
+insgpsdefs.tex:\newcommand{\numstatesplusone}{29}
+insgpsdefs.tex:\newcommand{\colextrapeq}{\jthcol{\cscmat}{j}\leftarrow\Phi\jthcol{\cscmat}{j}}
+insgpsdefs.tex:\newcommand{\colextrapeq}{\jthcol{\cscmat}{j}\leftarrow\Phi\jthcol{\cscmat}{j}}
+insgpsdefs.tex:\newcommand{\rowextrapeq}{\ithrow{\cscmat}{i}\leftarrow\Phi\left[\ithrow{\cscmat}{i}\right]\trans}
+insgpsdefs.tex:\newcommand{\rowextrapeq}{\ithrow{\cscmat}{i}\leftarrow\Phi\left[\ithrow{\cscmat}{i}\right]\trans}
+kalman_cmdmaster.tex:\newcommand{\highbar}[1]{\overset{\overline{\hspace{6pt}\vspace{1pt}}}{#1}}
+kalman_cmdmaster.tex:\newcommand{\highbar}[1]{\overset{\overline{\hspace{6pt}\vspace{1pt}}}{#1}}
+kalman_cmdmaster.tex:\newcommand{\widebar}[1]{\overset{\overline{\hspace{10pt}}}{#1}}
+kalman_cmdmaster.tex:\newcommand{\widebar}[1]{\overset{\overline{\hspace{10pt}}}{#1}}
+kalman_cmdmaster.tex:\newcommand{\subsubsubsection}[2]{\textbf{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.#1 #2 }}
+kalman_cmdmaster.tex:\newcommand{\subsubsubsection}[2]{\textbf{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.#1 #2 }}
+kalman_cmdmaster.tex:\newcommand{\st}{\; : \;}
+kalman_cmdmaster.tex:\newcommand{\st}{\; : \;}
+kalman_cmdmaster.tex:\newcommand{\set}[1]{\left\{#1\right\}}
+kalman_cmdmaster.tex:\newcommand{\set}[1]{\left\{#1\right\}}
+kalman_cmdmaster.tex:\newcommand{\eps}{\varepsilon}
+kalman_cmdmaster.tex:\newcommand{\eps}{\varepsilon}
+kalman_cmdmaster.tex:\newcommand{\demorganone}{X\setminus (A\cap B)=(X\setminus A) \cup (X\setminus B)}
+kalman_cmdmaster.tex:\newcommand{\demorganone}{X\setminus (A\cap B)=(X\setminus A) \cup (X\setminus B)}
+kalman_cmdmaster.tex:\newcommand{\demorgantwo}{X\setminus (A\cup B)=(X\setminus A) \cap (X\setminus B)}
+kalman_cmdmaster.tex:\newcommand{\demorgantwo}{X\setminus (A\cup B)=(X\setminus A) \cap (X\setminus B)}
+kalman_cmdmaster.tex:\newcommand{\simpledemorganone}{(A\cap B)'=A' \cup B'}
+kalman_cmdmaster.tex:\newcommand{\simpledemorganone}{(A\cap B)'=A' \cup B'}
+kalman_cmdmaster.tex:\newcommand{\simpledemorgantwo}{(A\cup B)'=A' \cap B'}
+kalman_cmdmaster.tex:\newcommand{\simpledemorgantwo}{(A\cup B)'=A' \cap B'}
+kalman_cmdmaster.tex:\newcommand{\arbunion}{\bigcup_{i\in I}A_i = \set{a: (\exists i)[i\in I \wedge a\in A_i]}}
+kalman_cmdmaster.tex:\newcommand{\arbunion}{\bigcup_{i\in I}A_i = \set{a: (\exists i)[i\in I \wedge a\in A_i]}}
+kalman_cmdmaster.tex:\newcommand{\arbintersection}{\bigcap_{i\in I}A_i = \set{a: (\forall i)[i\in I \Rightarrow a\in A_i]}}
+kalman_cmdmaster.tex:\newcommand{\arbintersection}{\bigcap_{i\in I}A_i = \set{a: (\forall i)[i\in I \Rightarrow a\in A_i]}}
+kalman_cmdmaster.tex:\newcommand{\intdistunion}{A\cap (B\cup C)=(A\cap B)\cup (A\cap C)}
+kalman_cmdmaster.tex:\newcommand{\intdistunion}{A\cap (B\cup C)=(A\cap B)\cup (A\cap C)}
+kalman_cmdmaster.tex:\newcommand{\uniondistint}{A\cup(B\cap C)=(A\cup B)\cap(A\cup C)}
+kalman_cmdmaster.tex:\newcommand{\uniondistint}{A\cup(B\cap C)=(A\cup B)\cap(A\cup C)}
+kalman_cmdmaster.tex:\newcommand{\crect}[2]{[#1,#2]\times[#1,#2]}
+kalman_cmdmaster.tex:\newcommand{\crect}[2]{[#1,#2]\times[#1,#2]}
+kalman_cmdmaster.tex:\newcommand{\dom}[1]{\text{dom}\left(#1\right)}
+kalman_cmdmaster.tex:\newcommand{\dom}[1]{\text{dom}\left(#1\right)}
+kalman_cmdmaster.tex:\newcommand{\rng}[1]{\text{rng}\left(#1\right)}
+kalman_cmdmaster.tex:\newcommand{\rng}[1]{\text{rng}\left(#1\right)}
+kalman_cmdmaster.tex:\newcommand{\To}{\longrightarrow}
+kalman_cmdmaster.tex:\newcommand{\To}{\longrightarrow}
+kalman_cmdmaster.tex:\newcommand{\scolvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\scolvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\rowvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\rowvec}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvecthree}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvecthree}[2]{
+kalman_cmdmaster.tex:\newcommand{\rowvecthree}[2]{
+kalman_cmdmaster.tex:\newcommand{\rowvecthree}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvecsum}[3]{
+kalman_cmdmaster.tex:\newcommand{\colvecsum}[3]{
+kalman_cmdmaster.tex:\newcommand{\colvecthreesum}[2]{
+kalman_cmdmaster.tex:\newcommand{\colvecthreesum}[2]{
+kalman_cmdmaster.tex:\newcommand{\colveck}[3]{
+kalman_cmdmaster.tex:\newcommand{\colveck}[3]{
+kalman_cmdmaster.tex:\newcommand{\altcolveck}[3]{
+kalman_cmdmaster.tex:\newcommand{\altcolveck}[3]{
+kalman_cmdmaster.tex:\newcommand{\seq}[1]{\left<#1\right>}
+kalman_cmdmaster.tex:\newcommand{\seq}[1]{\left<#1\right>}
+kalman_cmdmaster.tex:\newcommand{\ip}[2]{\left<#1,#2\right>}
+kalman_cmdmaster.tex:\newcommand{\ip}[2]{\left<#1,#2\right>}
+kalman_cmdmaster.tex:\newcommand{\dprod}[2]{#1^\top #2}  % x'x
+kalman_cmdmaster.tex:\newcommand{\dprod}[2]{#1^\top #2}  % x'x
+kalman_cmdmaster.tex:\newcommand{\abs}[1]{\left\vert#1\right\vert}
+kalman_cmdmaster.tex:\newcommand{\abs}[1]{\left\vert#1\right\vert}
+kalman_cmdmaster.tex:\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+kalman_cmdmaster.tex:\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+kalman_cmdmaster.tex:\newcommand{\normsq}[1]{\dprod{#1}{#1}}
+kalman_cmdmaster.tex:\newcommand{\normsq}[1]{\dprod{#1}{#1}}
+kalman_cmdmaster.tex:\newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+kalman_cmdmaster.tex:\newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+kalman_cmdmaster.tex:\newcommand{\trace}[1]{\text{tr}\left[ #1 \right]}
+kalman_cmdmaster.tex:\newcommand{\trace}[1]{\text{tr}\left[ #1 \right]}
+kalman_cmdmaster.tex:\newcommand{\varlist}[2]{#1=1,\ldots,#2}
+kalman_cmdmaster.tex:\newcommand{\varlist}[2]{#1=1,\ldots,#2}
+kalman_cmdmaster.tex:\newcommand{\genmat}[1]{\left[ #1 \right]}
+kalman_cmdmaster.tex:\newcommand{\genmat}[1]{\left[ #1 \right]}
+kalman_cmdmaster.tex:\newcommand{\mat}[3]{
+kalman_cmdmaster.tex:\newcommand{\mat}[3]{
+kalman_cmdmaster.tex:%\newcommand{\trans}{^{\textsc{\begin{tiny}T\end{tiny}}}}
+kalman_cmdmaster.tex:%\newcommand{\trans}{^{\textsc{\begin{tiny}T\end{tiny}}}}
+kalman_cmdmaster.tex:\newcommand{\trans}{^\top}
+kalman_cmdmaster.tex:\newcommand{\trans}{^\top}
+kalman_cmdmaster.tex:\newcommand{\B}{
+kalman_cmdmaster.tex:\newcommand{\B}{
+kalman_cmdmaster.tex:\newcommand{\C}
+kalman_cmdmaster.tex:\newcommand{\C}
+kalman_cmdmaster.tex:\newcommand{\skewsymmat}[4]{
+kalman_cmdmaster.tex:\newcommand{\skewsymmat}[4]{
+kalman_cmdmaster.tex:\newcommand{\skewsymmatone}[4]{
+kalman_cmdmaster.tex:\newcommand{\skewsymmatone}[4]{
+kalman_cmdmaster.tex:\newcommand{\qloss}{\tilde{x}^\top\tilde{x}} %\top = top TRUE symbol in logic used for transpose.
+kalman_cmdmaster.tex:\newcommand{\qloss}{\tilde{x}^\top\tilde{x}} %\top = top TRUE symbol in logic used for transpose.
+kalman_cmdmaster.tex:\newcommand{\Gint}{\int_{t_0}^{t}\Phi(t,\tau)G(\tau)w(\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\Gint}{\int_{t_0}^{t}\Phi(t,\tau)G(\tau)w(\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\Lint}{\int_{t_0}^{t}\Phi(t,\tau)L(\tau)u(\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\Lint}{\int_{t_0}^{t}\Phi(t,\tau)L(\tau)u(\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\Xhat}{\hat{X}_i(t)}
+kalman_cmdmaster.tex:\newcommand{\Xhat}{\hat{X}_i(t)}
+kalman_cmdmaster.tex:\newcommand{\Xo}{X_{0i}(t)}
+kalman_cmdmaster.tex:\newcommand{\Xo}{X_{0i}(t)}
+kalman_cmdmaster.tex:\newcommand{\xdot}{\colvec{\dot{x}}{n}}
+kalman_cmdmaster.tex:\newcommand{\xdot}{\colvec{\dot{x}}{n}}
+kalman_cmdmaster.tex:\newcommand{\state}{\colvec{x}{n}}
+kalman_cmdmaster.tex:\newcommand{\state}{\colvec{x}{n}}
+kalman_cmdmaster.tex:\newcommand{\statek}{\colveck{x}{n}{k}}
+kalman_cmdmaster.tex:\newcommand{\statek}{\colveck{x}{n}{k}}
+kalman_cmdmaster.tex:\newcommand{\altstatek}{\altcolveck{x}{n}{k}}
+kalman_cmdmaster.tex:\newcommand{\altstatek}{\altcolveck{x}{n}{k}}
+kalman_cmdmaster.tex:\newcommand{\sxdot}{\scolvec{\dot{x}}{n}}
+kalman_cmdmaster.tex:\newcommand{\sxdot}{\scolvec{\dot{x}}{n}}
+kalman_cmdmaster.tex:\newcommand{\sstate}{\scolvec{x}{n}}
+kalman_cmdmaster.tex:\newcommand{\sstate}{\scolvec{x}{n}}
+kalman_cmdmaster.tex:\newcommand{\expstm}{\exp\left[A(t-t_0)\right]}
+kalman_cmdmaster.tex:\newcommand{\expstm}{\exp\left[A(t-t_0)\right]}
+kalman_cmdmaster.tex:\newcommand{\expstmalt}{\exp\left[F(t-t_0)\right]}
+kalman_cmdmaster.tex:\newcommand{\expstmalt}{\exp\left[F(t-t_0)\right]}
+kalman_cmdmaster.tex:\newcommand{\gvpdf}{\frac{1}{\sqrt{(2\pi)^n \det(C)}}
+kalman_cmdmaster.tex:\newcommand{\gvpdf}{\frac{1}{\sqrt{(2\pi)^n \det(C)}}
+kalman_cmdmaster.tex:\newcommand{\variance}[1]{\text{Var}(#1)}
+kalman_cmdmaster.tex:\newcommand{\variance}[1]{\text{Var}(#1)}
+kalman_cmdmaster.tex:\newcommand{\cov}[2]{\text{Cov}(#1,#2)}
+kalman_cmdmaster.tex:\newcommand{\cov}[2]{\text{Cov}(#1,#2)}
+kalman_cmdmaster.tex:\newcommand{\std}[1]{\sqrt{\variance{#1}}}
+kalman_cmdmaster.tex:\newcommand{\std}[1]{\sqrt{\variance{#1}}}
+kalman_cmdmaster.tex:\newcommand{\expect}[1]{\text{E}\left[#1\right]}
+kalman_cmdmaster.tex:\newcommand{\expect}[1]{\text{E}\left[#1\right]}
+kalman_cmdmaster.tex:\newcommand{\shortexp}[1]{\text{E}#1}
+kalman_cmdmaster.tex:\newcommand{\shortexp}[1]{\text{E}#1}
+kalman_cmdmaster.tex:\newcommand{\msconv}{\xrightarrow{\text{m.s.}}}
+kalman_cmdmaster.tex:\newcommand{\msconv}{\xrightarrow{\text{m.s.}}}
+kalman_cmdmaster.tex:\newcommand{\minfint}[1]{\underbrace{\int_{-\infty}^{+\infty}\cdots}}
+kalman_cmdmaster.tex:\newcommand{\minfint}[1]{\underbrace{\int_{-\infty}^{+\infty}\cdots}}
+kalman_cmdmaster.tex:\newcommand{\rsintfull}[4]{\int_{#1}^{#2}#3(t)d#4(t)}
+kalman_cmdmaster.tex:\newcommand{\rsintfull}[4]{\int_{#1}^{#2}#3(t)d#4(t)}
+kalman_cmdmaster.tex:\newcommand{\rsint}[2]{\rsintfull{a}{b}{#1}{#2}}
+kalman_cmdmaster.tex:\newcommand{\rsint}[2]{\rsintfull{a}{b}{#1}{#2}}
+kalman_cmdmaster.tex:\newcommand{\drsint}[2]{\iint\limits_{\crect{a}{b}}#1(s)#1(t)d_{s}d_{t}#2(s,t)}
+kalman_cmdmaster.tex:\newcommand{\drsint}[2]{\iint\limits_{\crect{a}{b}}#1(s)#1(t)d_{s}d_{t}#2(s,t)}
+kalman_cmdmaster.tex:\newcommand{\rint}[1]{\int_{a}^{b}#1dt}
+kalman_cmdmaster.tex:\newcommand{\rint}[1]{\int_{a}^{b}#1dt}
+kalman_cmdmaster.tex:\newcommand{\infint}{\int\limits_{-\infty}^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\infint}{\int\limits_{-\infty}^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\limint}{\lim_{T\rightarrow \infty}\frac{1}{T}\int_0^T}
+kalman_cmdmaster.tex:\newcommand{\limint}{\lim_{T\rightarrow \infty}\frac{1}{T}\int_0^T}
+kalman_cmdmaster.tex:\newcommand{\halfint}{\int\limits_0^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\halfint}{\int\limits_0^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\halfintplus}{\int\limits_{0^+}^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\halfintplus}{\int\limits_{0^+}^{\infty}}
+kalman_cmdmaster.tex:\newcommand{\deriv}[2]{\dfrac{d#1}{d#2}}
+kalman_cmdmaster.tex:\newcommand{\deriv}[2]{\dfrac{d#1}{d#2}}
+kalman_cmdmaster.tex:\newcommand{\pderiv}[2]{\dfrac{\partial#1}{\partial#2}}
+kalman_cmdmaster.tex:\newcommand{\pderiv}[2]{\dfrac{\partial#1}{\partial#2}}
+kalman_cmdmaster.tex:%\newcommand{\pderiv}[1]{\left[\partial / \partial #1\right]}
+kalman_cmdmaster.tex:%\newcommand{\pderiv}[1]{\left[\partial / \partial #1\right]}
+kalman_cmdmaster.tex:\newcommand{\grad}[2]{\dfrac{\partial #1}{\partial #2}}
+kalman_cmdmaster.tex:\newcommand{\grad}[2]{\dfrac{\partial #1}{\partial #2}}
+kalman_cmdmaster.tex:\newcommand{\diffeq}{\sum_{i=0}^{n}a_i\frac{d^iy}{dt^i} = \sum_{i=0}^{m}b_i\frac{d^iu}{dt^i}
+kalman_cmdmaster.tex:\newcommand{\diffeq}{\sum_{i=0}^{n}a_i\frac{d^iy}{dt^i} = \sum_{i=0}^{m}b_i\frac{d^iu}{dt^i}
+kalman_cmdmaster.tex:\newcommand{\armaeq}{\sum_{i=0}^na_{n-i}y(k+n-i) = \sum_{i=0}^mb_{m-i}u(k+m-i)}
+kalman_cmdmaster.tex:\newcommand{\armaeq}{\sum_{i=0}^na_{n-i}y(k+n-i) = \sum_{i=0}^mb_{m-i}u(k+m-i)}
+kalman_cmdmaster.tex:\newcommand{\armaeqfull}{a_ny(n+k)+\cdots+a_0y(k)=b_mu(k+m)+\cdots+b_0y(k)}
+kalman_cmdmaster.tex:\newcommand{\armaeqfull}{a_ny(n+k)+\cdots+a_0y(k)=b_mu(k+m)+\cdots+b_0y(k)}
+kalman_cmdmaster.tex:\newcommand{\companion}{
+kalman_cmdmaster.tex:\newcommand{\companion}{
+kalman_cmdmaster.tex:\newcommand{\taylor}[3]{#1(#2)=#1(#3)+\dot{#1}(#3)(#2-#3)+\frac{1}{2!}\ddot{#1}(#3)(#2-#3)^2+\cdots}
+kalman_cmdmaster.tex:\newcommand{\taylor}[3]{#1(#2)=#1(#3)+\dot{#1}(#3)(#2-#3)+\frac{1}{2!}\ddot{#1}(#3)(#2-#3)^2+\cdots}
+kalman_cmdmaster.tex:\newcommand{\gentaylorsingle}[3]{#1(#2)=#1(#3)+\dfrac{d#1}{d#2}(#3)(#2-#3)+\dfrac{1}{2!}\dfrac{d^2#1}{d#2^2}(#3)(#2-#3)^2+\cdots}
+kalman_cmdmaster.tex:\newcommand{\gentaylorsingle}[3]{#1(#2)=#1(#3)+\dfrac{d#1}{d#2}(#3)(#2-#3)+\dfrac{1}{2!}\dfrac{d^2#1}{d#2^2}(#3)(#2-#3)^2+\cdots}
+kalman_cmdmaster.tex:\newcommand{\gentaylordouble}[5]{#1(#2,#3)
+kalman_cmdmaster.tex:\newcommand{\gentaylordouble}[5]{#1(#2,#3)
+kalman_cmdmaster.tex:\newcommand{\harmoscdiffeqhom}{m\ddot{x}+c\dot{x}+kx=0}
+kalman_cmdmaster.tex:\newcommand{\harmoscdiffeqhom}{m\ddot{x}+c\dot{x}+kx=0}
+kalman_cmdmaster.tex:\newcommand{\harmoscdiffeqnonhom}{m\ddot{x}+c\dot{x}+kx=w(t)}
+kalman_cmdmaster.tex:\newcommand{\harmoscdiffeqnonhom}{m\ddot{x}+c\dot{x}+kx=w(t)}
+kalman_cmdmaster.tex:\newcommand{\productrule}{D(f\cdot g)=[Df]\cdot g+f\cdot [Dg]}
+kalman_cmdmaster.tex:\newcommand{\productrule}{D(f\cdot g)=[Df]\cdot g+f\cdot [Dg]}
+kalman_cmdmaster.tex:\newcommand{\chainrule}{D(f\circ g) = [Df]\circ g \cdot [Dg]}
+kalman_cmdmaster.tex:\newcommand{\chainrule}{D(f\circ g) = [Df]\circ g \cdot [Dg]}
+kalman_cmdmaster.tex:\newcommand{\multichainrule}{D(f\circ g\circ h) = ([Df]\circ g \circ h) \cdot ([Dg] \circ h) \cdot [Dh]}
+kalman_cmdmaster.tex:\newcommand{\multichainrule}{D(f\circ g\circ h) = ([Df]\circ g \circ h) \cdot ([Dg] \circ h) \cdot [Dh]}
+kalman_cmdmaster.tex:\newcommand{\compdist}{(f\cdot g)\circ h=(f\circ h) \cdot (g\circ h)}
+kalman_cmdmaster.tex:\newcommand{\compdist}{(f\cdot g)\circ h=(f\circ h) \cdot (g\circ h)}
+kalman_cmdmaster.tex:\newcommand{\zetaf}[1]{\exp\left[\frac{1}{#1^2-1}\right]}
+kalman_cmdmaster.tex:\newcommand{\zetaf}[1]{\exp\left[\frac{1}{#1^2-1}\right]}
+kalman_cmdmaster.tex:\newcommand{\laplace}{F(s)=\mathcal{L}[f(t)]=\int_{0^+}^{\infty}f(\tau)\exp(-s\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\laplace}{F(s)=\mathcal{L}[f(t)]=\int_{0^+}^{\infty}f(\tau)\exp(-s\tau)d\tau}
+kalman_cmdmaster.tex:\newcommand{\ithrow}[2]{#1_{(#2)}}
+kalman_cmdmaster.tex:\newcommand{\ithrow}[2]{#1_{(#2)}}
+kalman_cmdmaster.tex:\newcommand{\jthcol}[2]{#1^{(#2)}}
+kalman_cmdmaster.tex:\newcommand{\jthcol}[2]{#1^{(#2)}}
+kalman_cmdmaster.tex:\newcommand{\ijthelem}[1]{\left[ #1 \right]_{(i,j)}}
+kalman_cmdmaster.tex:\newcommand{\ijthelem}[1]{\left[ #1 \right]_{(i,j)}}
+kalman_cmdmaster.tex:\newcommand{\eratevec}{\rotvec{I}{E}}
+kalman_cmdmaster.tex:\newcommand{\eratevec}{\rotvec{I}{E}}
+kalman_cmdmaster.tex:\newcommand{\rotvec}[2]{\omega_{#1#2}}
+kalman_cmdmaster.tex:\newcommand{\rotvec}[2]{\omega_{#1#2}}
+kalman_cmdmaster.tex:\newcommand{\rotmat}[2]{\Omega_{#1#2}}
+kalman_cmdmaster.tex:\newcommand{\rotmat}[2]{\Omega_{#1#2}}
+kalman_cmdmaster.tex:\newcommand{\erate}{\Omega_e}
+kalman_cmdmaster.tex:\newcommand{\erate}{\Omega_e}
+kalman_cmdmaster.tex:\newcommand{\eradius}{R_e}
+kalman_cmdmaster.tex:\newcommand{\eradius}{R_e}
+kalman_cmdmaster.tex:\newcommand{\erateval}{\erate=7.2921151467\times 10^{-5} \text{ rad/sec}}
+kalman_cmdmaster.tex:\newcommand{\erateval}{\erate=7.2921151467\times 10^{-5} \text{ rad/sec}}
+kalman_cmdmaster.tex:\newcommand{\eradiusval}{\eradius=6,378,137 \text{ meters}}
+kalman_cmdmaster.tex:\newcommand{\eradiusval}{\eradius=6,378,137 \text{ meters}}
+kalman_cmdmaster.tex:\newcommand{\eratex}{\Omega_x}
+kalman_cmdmaster.tex:\newcommand{\eratex}{\Omega_x}
+kalman_cmdmaster.tex:\newcommand{\eratexeq}{\eratex&=\erate\cos\lat\sin\alpha}
+kalman_cmdmaster.tex:\newcommand{\eratexeq}{\eratex&=\erate\cos\lat\sin\alpha}
+kalman_cmdmaster.tex:\newcommand{\eratey}{\Omega_y}
+kalman_cmdmaster.tex:\newcommand{\eratey}{\Omega_y}
+kalman_cmdmaster.tex:\newcommand{\erateyeq}{\eratey&=\erate\cos\lat\cos\alpha}
+kalman_cmdmaster.tex:\newcommand{\erateyeq}{\eratey&=\erate\cos\lat\cos\alpha}
+kalman_cmdmaster.tex:\newcommand{\eratez}{\Omega_z}
+kalman_cmdmaster.tex:\newcommand{\eratez}{\Omega_z}
+kalman_cmdmaster.tex:\newcommand{\eratezeq}{\eratez&=\erate\sin\lat}
+kalman_cmdmaster.tex:\newcommand{\eratezeq}{\eratez&=\erate\sin\lat}
+kalman_cmdmaster.tex:\newcommand{\avgearth}{\highbar{\Omega}_i}
+kalman_cmdmaster.tex:\newcommand{\avgearth}{\highbar{\Omega}_i}
+kalman_cmdmaster.tex:\newcommand{\avgeartheq}{\avgearth = \intdeltaT \Omega_i(t) dt,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgeartheq}{\avgearth = \intdeltaT \Omega_i(t) dt,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\trate}{\rotvec{E}{L}}
+kalman_cmdmaster.tex:\newcommand{\trate}{\rotvec{E}{L}}
+kalman_cmdmaster.tex:\newcommand{\avgrelvec}{\highbar{\rho}}
+kalman_cmdmaster.tex:\newcommand{\avgrelvec}{\highbar{\rho}}
+kalman_cmdmaster.tex:\newcommand{\avgrel}{\highbar{\rho}_i}
+kalman_cmdmaster.tex:\newcommand{\avgrel}{\highbar{\rho}_i}
+kalman_cmdmaster.tex:\newcommand{\avgreleq}{\avgrel=\intdeltaT \rho_i dt,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgreleq}{\avgrel=\intdeltaT \rho_i dt,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgrelx}{\highbar{\rho}_x}
+kalman_cmdmaster.tex:\newcommand{\avgrelx}{\highbar{\rho}_x}
+kalman_cmdmaster.tex:\newcommand{\avgrelxeq}{\avgrelx&=-\dfrac{\highbar{V}_y}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgrelxeq}{\avgrelx&=-\dfrac{\highbar{V}_y}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgrely}{\highbar{\rho}_y}
+kalman_cmdmaster.tex:\newcommand{\avgrely}{\highbar{\rho}_y}
+kalman_cmdmaster.tex:\newcommand{\avgrelyeq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgrelyeq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgrelz}{\highbar{\rho}_z}
+kalman_cmdmaster.tex:\newcommand{\avgrelz}{\highbar{\rho}_z}
+kalman_cmdmaster.tex:\newcommand{\avgrelxspheroideq}{\avgrelx&=
+kalman_cmdmaster.tex:\newcommand{\avgrelxspheroideq}{\avgrelx&=
+kalman_cmdmaster.tex:\newcommand{\avgrelyspheroideq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgrelyspheroideq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\avgspatial}{\highbar{\omega}_i}
+kalman_cmdmaster.tex:\newcommand{\avgspatial}{\highbar{\omega}_i}
+kalman_cmdmaster.tex:\newcommand{\avgspatialeq}{\avgspatial = \avgearth + \avgrel,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgspatialeq}{\avgspatial = \avgearth + \avgrel,\forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgCoriolis}{\highbar{\omega}_{ci}}
+kalman_cmdmaster.tex:\newcommand{\avgCoriolis}{\highbar{\omega}_{ci}}
+kalman_cmdmaster.tex:\newcommand{\avgCorioliseq}{\avgCoriolis=\avgearth + \avgspatial}
+kalman_cmdmaster.tex:\newcommand{\avgCorioliseq}{\avgCoriolis=\avgearth + \avgspatial}
+kalman_cmdmaster.tex:\newcommand{\Schulerfreq}{\omega_s}
+kalman_cmdmaster.tex:\newcommand{\Schulerfreq}{\omega_s}
+kalman_cmdmaster.tex:\newcommand{\Schulerfreqeq}{\Schulerfreq = \sqrt{\frac{g}{R}}}
+kalman_cmdmaster.tex:\newcommand{\Schulerfreqeq}{\Schulerfreq = \sqrt{\frac{g}{R}}}
+kalman_cmdmaster.tex:\newcommand{\localgeq}{g=\dfrac{A^2}{R^2}g_0}
+kalman_cmdmaster.tex:\newcommand{\localgeq}{g=\dfrac{A^2}{R^2}g_0}
+kalman_cmdmaster.tex:\newcommand{\dcm}[2]{C_{#1}^{#2}}
+kalman_cmdmaster.tex:\newcommand{\dcm}[2]{C_{#1}^{#2}}
+kalman_cmdmaster.tex:\newcommand{\compdcm}[2]{\widehat{C}_{#1}^{#2}}
+kalman_cmdmaster.tex:\newcommand{\compdcm}[2]{\widehat{C}_{#1}^{#2}}
+kalman_cmdmaster.tex:\newcommand{\bodytoll}{C_B^L}
+kalman_cmdmaster.tex:\newcommand{\bodytoll}{C_B^L}
+kalman_cmdmaster.tex:\newcommand{\lltoearth}{C_L^E}
+kalman_cmdmaster.tex:\newcommand{\lltoearth}{C_L^E}
+kalman_cmdmaster.tex:\newcommand{\earthtoll}{C_E^L}
+kalman_cmdmaster.tex:\newcommand{\earthtoll}{C_E^L}
+kalman_cmdmaster.tex:\newcommand{\bodytonav}[1]{C_B^L(#1)}
+kalman_cmdmaster.tex:\newcommand{\bodytonav}[1]{C_B^L(#1)}
+kalman_cmdmaster.tex:\newcommand{\Ctminuseq}{\bodytonav{t^{-}}=\Ctzero \bodytonav{0}}
+kalman_cmdmaster.tex:\newcommand{\Ctminuseq}{\bodytonav{t^{-}}=\Ctzero \bodytonav{0}}
+kalman_cmdmaster.tex:\newcommand{\Ctzero}{C_{t0}}
+kalman_cmdmaster.tex:\newcommand{\Ctzero}{C_{t0}}
+kalman_cmdmaster.tex:\newcommand{\Ctzeroeq}{
+kalman_cmdmaster.tex:\newcommand{\Ctzeroeq}{
+kalman_cmdmaster.tex:\newcommand{\Ctzerocomm}[2]{\dfrac{1}{2}\left[\Ctzero(#1,#2)-\Ctzero(#2,#1)\right]}
+kalman_cmdmaster.tex:\newcommand{\Ctzerocomm}[2]{\dfrac{1}{2}\left[\Ctzero(#1,#2)-\Ctzero(#2,#1)\right]}
+kalman_cmdmaster.tex:\newcommand{\peq}[3]{p_{#1}&=\dfrac{\theta_{#1} }
+kalman_cmdmaster.tex:\newcommand{\peq}[3]{p_{#1}&=\dfrac{\theta_{#1} }
+kalman_cmdmaster.tex:\newcommand{\avgbodytoll}{\highbar{C}_B^L}
+kalman_cmdmaster.tex:\newcommand{\avgbodytoll}{\highbar{C}_B^L}
+kalman_cmdmaster.tex:\newcommand{\avgbodytolleq}{\avgbodytoll=\intdeltaT \bodytoll dt}
+kalman_cmdmaster.tex:\newcommand{\avgbodytolleq}{\avgbodytoll=\intdeltaT \bodytoll dt}
+kalman_cmdmaster.tex:\newcommand{\croll}{\cos\phi}
+kalman_cmdmaster.tex:\newcommand{\croll}{\cos\phi}
+kalman_cmdmaster.tex:\newcommand{\sroll}{\sin\phi}
+kalman_cmdmaster.tex:\newcommand{\sroll}{\sin\phi}
+kalman_cmdmaster.tex:\newcommand{\cpitch}{\cos\theta}
+kalman_cmdmaster.tex:\newcommand{\cpitch}{\cos\theta}
+kalman_cmdmaster.tex:\newcommand{\spitch}{\sin\theta}
+kalman_cmdmaster.tex:\newcommand{\spitch}{\sin\theta}
+kalman_cmdmaster.tex:\newcommand{\cyaw}{\cos\psi}
+kalman_cmdmaster.tex:\newcommand{\cyaw}{\cos\psi}
+kalman_cmdmaster.tex:\newcommand{\syaw}{\sin\psi}
+kalman_cmdmaster.tex:\newcommand{\syaw}{\sin\psi}
+kalman_cmdmaster.tex:\newcommand{\bodytolleq}{\bodytoll&=
+kalman_cmdmaster.tex:\newcommand{\bodytolleq}{\bodytoll&=
+kalman_cmdmaster.tex:\newcommand{\avgvelvec}{\highbar{V}}
+kalman_cmdmaster.tex:\newcommand{\avgvelvec}{\highbar{V}}
+kalman_cmdmaster.tex:\newcommand{\avgvel}{\highbar{V}_i}
+kalman_cmdmaster.tex:\newcommand{\avgvel}{\highbar{V}_i}
+kalman_cmdmaster.tex:\newcommand{\avgveleq}{\avgvel=\intdeltaT V_i dt, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\avgveleq}{\avgvel=\intdeltaT V_i dt, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\sensedaccel}{\highbar{A}_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\sensedaccel}{\highbar{A}_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\sensedacceleq}{\sensedaccel = \intdeltaT A_{Bi} dt, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\sensedacceleq}{\sensedaccel = \intdeltaT A_{Bi} dt, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\sensedrate}{\highbar{\omega}_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\sensedrate}{\highbar{\omega}_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\sensedrateeq}{\sensedrate = \intdeltaT \omega_{Bi} dt, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\sensedrateeq}{\sensedrate = \intdeltaT \omega_{Bi} dt, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\sensedaccellev}{\highbar{A}_{L}}
+kalman_cmdmaster.tex:\newcommand{\sensedaccellev}{\highbar{A}_{L}}
+kalman_cmdmaster.tex:\newcommand{\sensedaccelleveq}{\sensedaccellev = \intdeltaT \bodytoll A_{B} dt}
+kalman_cmdmaster.tex:\newcommand{\sensedaccelleveq}{\sensedaccellev = \intdeltaT \bodytoll A_{B} dt}
+kalman_cmdmaster.tex:\newcommand{\avgbodyaccel}{A_{aBi}}
+kalman_cmdmaster.tex:\newcommand{\avgbodyaccel}{A_{aBi}}
+kalman_cmdmaster.tex:\newcommand{\avgbodyacceleq}{\avgbodyaccel=\frac{\sensedaccel}{\Delta T}, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\avgbodyacceleq}{\avgbodyaccel=\frac{\sensedaccel}{\Delta T}, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\avgbodyrate}{\omega_{aBi}}
+kalman_cmdmaster.tex:\newcommand{\avgbodyrate}{\omega_{aBi}}
+kalman_cmdmaster.tex:\newcommand{\avgbodyrateeq}{\avgbodyrate=\frac{\sensedrate}{\Delta T}, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\avgbodyrateeq}{\avgbodyrate=\frac{\sensedrate}{\Delta T}, \forXYZ}
+kalman_cmdmaster.tex:\newcommand{\psix}{\psi_x}
+kalman_cmdmaster.tex:\newcommand{\psix}{\psi_x}
+kalman_cmdmaster.tex:\newcommand{\psixeq}{\psix &= \phi_x + \frac{\Delta R_y}{R}}
+kalman_cmdmaster.tex:\newcommand{\psixeq}{\psix &= \phi_x + \frac{\Delta R_y}{R}}
+kalman_cmdmaster.tex:\newcommand{\psiy}{\psi_y}
+kalman_cmdmaster.tex:\newcommand{\psiy}{\psi_y}
+kalman_cmdmaster.tex:\newcommand{\psiyeq}{\psiy &= \phi_y - \frac{\Delta R_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\psiyeq}{\psiy &= \phi_y - \frac{\Delta R_x}{R}}
+kalman_cmdmaster.tex:\newcommand{\posderivx}{\delta R_x}
+kalman_cmdmaster.tex:\newcommand{\posderivx}{\delta R_x}
+kalman_cmdmaster.tex:\newcommand{\posderivxeq}{\posderivx &= \Delta V_x \Delta T+\highbar{V}_y\psi_z-\highbar{V}_z\phi_y-\avgrely\Delta R_z}
+kalman_cmdmaster.tex:\newcommand{\posderivxeq}{\posderivx &= \Delta V_x \Delta T+\highbar{V}_y\psi_z-\highbar{V}_z\phi_y-\avgrely\Delta R_z}
+kalman_cmdmaster.tex:\newcommand{\stmposerrxeq}{\poserr_x(k+1)=\poserr_x(k)+
+kalman_cmdmaster.tex:\newcommand{\stmposerrxeq}{\poserr_x(k+1)=\poserr_x(k)+
+kalman_cmdmaster.tex:\newcommand{\posderivy}{\delta R_y}
+kalman_cmdmaster.tex:\newcommand{\posderivy}{\delta R_y}
+kalman_cmdmaster.tex:\newcommand{\posderivyeq}{\posderivy &= \Delta V_y \Delta T+\highbar{V}_z\phi_x-\highbar{V}_x\psi_z+\avgrelx\Delta R_z}
+kalman_cmdmaster.tex:\newcommand{\posderivyeq}{\posderivy &= \Delta V_y \Delta T+\highbar{V}_z\phi_x-\highbar{V}_x\psi_z+\avgrelx\Delta R_z}
+kalman_cmdmaster.tex:\newcommand{\posderivz}{\delta R_z}
+kalman_cmdmaster.tex:\newcommand{\posderivz}{\delta R_z}
+kalman_cmdmaster.tex:\newcommand{\posderivzeq}{\posderivz &= \Delta V_z \Delta T+\highbar{V}_x\phi_y-\highbar{V}_y\phi_x+\avgrely\Delta R_x-\avgrelx\Delta R_y}
+kalman_cmdmaster.tex:\newcommand{\posderivzeq}{\posderivz &= \Delta V_z \Delta T+\highbar{V}_x\phi_y-\highbar{V}_y\phi_x+\avgrely\Delta R_x-\avgrelx\Delta R_y}
+kalman_cmdmaster.tex:\newcommand{\posderiv}{\delta R}
+kalman_cmdmaster.tex:\newcommand{\posderiv}{\delta R}
+kalman_cmdmaster.tex:\newcommand{\posderiveq}{\posderiv = \Delta V \Delta T + \highbar{V}\times \psistar - \avgrelvec \times \Delta R}
+kalman_cmdmaster.tex:\newcommand{\posderiveq}{\posderiv = \Delta V \Delta T + \highbar{V}\times \psistar - \avgrelvec \times \Delta R}
+kalman_cmdmaster.tex:\newcommand{\attderivx}{\delta \phi_x}
+kalman_cmdmaster.tex:\newcommand{\attderivx}{\delta \phi_x}
+kalman_cmdmaster.tex:\newcommand{\attderivxeq}{\attderivx &= \highbar{\omega}_z \psi_y -\highbar{\omega}_y\psi_z-\frac{\delta R_y}{R}+\highbar{\epsilon}_x}
+kalman_cmdmaster.tex:\newcommand{\attderivxeq}{\attderivx &= \highbar{\omega}_z \psi_y -\highbar{\omega}_y\psi_z-\frac{\delta R_y}{R}+\highbar{\epsilon}_x}
+kalman_cmdmaster.tex:\newcommand{\attderivy}{\delta \phi_y}
+kalman_cmdmaster.tex:\newcommand{\attderivy}{\delta \phi_y}
+kalman_cmdmaster.tex:\newcommand{\attderivyeq}{\attderivy &= \highbar{\omega}_x \psi_z -\highbar{\omega}_z\psi_x+\frac{\delta R_x}{R}+\highbar{\epsilon}_y}
+kalman_cmdmaster.tex:\newcommand{\attderivyeq}{\attderivy &= \highbar{\omega}_x \psi_z -\highbar{\omega}_z\psi_x+\frac{\delta R_x}{R}+\highbar{\epsilon}_y}
+kalman_cmdmaster.tex:\newcommand{\attderivz}{\delta \psi_z}
+kalman_cmdmaster.tex:\newcommand{\attderivz}{\delta \psi_z}
+kalman_cmdmaster.tex:\newcommand{\attderivzeq}{\attderivz &= \highbar{\omega}_y \psi_x -\highbar{\omega}_x\psi_y+\highbar{\epsilon}_z}
+kalman_cmdmaster.tex:\newcommand{\attderivzeq}{\attderivz &= \highbar{\omega}_y \psi_x -\highbar{\omega}_x\psi_y+\highbar{\epsilon}_z}
+kalman_cmdmaster.tex:\newcommand{\psistar}{\psi^*}
+kalman_cmdmaster.tex:\newcommand{\psistar}{\psi^*}
+kalman_cmdmaster.tex:\newcommand{\psistareq}{\psistar =
+kalman_cmdmaster.tex:\newcommand{\psistareq}{\psistar =
+kalman_cmdmaster.tex:\newcommand{\dpsistar}{\delta\psi^*}
+kalman_cmdmaster.tex:\newcommand{\dpsistar}{\delta\psi^*}
+kalman_cmdmaster.tex:\newcommand{\dpsistareq}{\dpsistar =
+kalman_cmdmaster.tex:\newcommand{\dpsistareq}{\dpsistar =
+kalman_cmdmaster.tex:\newcommand{\psieq}{\psi =
+kalman_cmdmaster.tex:\newcommand{\psieq}{\psi =
+kalman_cmdmaster.tex:\newcommand{\psidoteq}{\dot{\psi}=-\omega\times\psi+\epsilon}
+kalman_cmdmaster.tex:\newcommand{\psidoteq}{\dot{\psi}=-\omega\times\psi+\epsilon}
+kalman_cmdmaster.tex:\newcommand{\angposerr}{\delta \theta}
+kalman_cmdmaster.tex:\newcommand{\angposerr}{\delta \theta}
+kalman_cmdmaster.tex:\newcommand{\angposerreq}{\angposerr=
+kalman_cmdmaster.tex:\newcommand{\angposerreq}{\angposerr=
+kalman_cmdmaster.tex:\newcommand{\xop}[1]{\left[\; #1\times \; \right]}
+kalman_cmdmaster.tex:\newcommand{\xop}[1]{\left[\; #1\times \; \right]}
+kalman_cmdmaster.tex:\newcommand{\xopdef}[1]{
+kalman_cmdmaster.tex:\newcommand{\xopdef}[1]{
+kalman_cmdmaster.tex:\newcommand{\vxomegax}{\xop{V}\xop{\Omega}}
+kalman_cmdmaster.tex:\newcommand{\vxomegax}{\xop{V}\xop{\Omega}}
+kalman_cmdmaster.tex:\newcommand{\vxomegaxeq}{\vxomegax=\xopdef{V}\xopdef{\Omega}}
+kalman_cmdmaster.tex:\newcommand{\vxomegaxeq}{\vxomegax=\xopdef{V}\xopdef{\Omega}}
+kalman_cmdmaster.tex:\newcommand{\T}{T}
+kalman_cmdmaster.tex:\newcommand{\T}{T}
+kalman_cmdmaster.tex:\newcommand{\Teq}{\T=\frac{1}{\Delta T}\left[ \dpsistar + \highbar{\omega}_c\times \psistar \right]}
+kalman_cmdmaster.tex:\newcommand{\Teq}{\T=\frac{1}{\Delta T}\left[ \dpsistar + \highbar{\omega}_c\times \psistar \right]}
+kalman_cmdmaster.tex:\newcommand{\altTeq}{\T=\frac{1}{\Delta T}\left[\: \highbar{\Omega}\times \psistar + \highbar{\epsilon}\: \right]}
+kalman_cmdmaster.tex:\newcommand{\altTeq}{\T=\frac{1}{\Delta T}\left[\: \highbar{\Omega}\times \psistar + \highbar{\epsilon}\: \right]}
+kalman_cmdmaster.tex:\newcommand{\dV}{\delta V}
+kalman_cmdmaster.tex:\newcommand{\dV}{\delta V}
+kalman_cmdmaster.tex:\newcommand{\dVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+kalman_cmdmaster.tex:\newcommand{\dVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+kalman_cmdmaster.tex:\newcommand{\altdVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+kalman_cmdmaster.tex:\newcommand{\altdVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+kalman_cmdmaster.tex:\newcommand{\Corratecrossop}{\xop{\highbar{\omega}_c}}
+kalman_cmdmaster.tex:\newcommand{\Corratecrossop}{\xop{\highbar{\omega}_c}}
+kalman_cmdmaster.tex:\newcommand{\Corratecrossopeq}{\Corratecrossop=
+kalman_cmdmaster.tex:\newcommand{\Corratecrossopeq}{\Corratecrossop=
+kalman_cmdmaster.tex:\newcommand{\delRdot}{\Delta\dot{R}}
+kalman_cmdmaster.tex:\newcommand{\delRdot}{\Delta\dot{R}}
+kalman_cmdmaster.tex:\newcommand{\delRdoteq}{\delRdot=\Delta V+V\times\psi-\rho\times\Delta R}
+kalman_cmdmaster.tex:\newcommand{\delRdoteq}{\delRdot=\Delta V+V\times\psi-\rho\times\Delta R}
+kalman_cmdmaster.tex:\newcommand{\velderivx}{\delta V_x}
+kalman_cmdmaster.tex:\newcommand{\velderivx}{\delta V_x}
+kalman_cmdmaster.tex:\newcommand{\velderivxeq}{\velderivx &\leftarrow \velderivx - g\phi_y\Delta T +\highbar{\nabla}_x}
+kalman_cmdmaster.tex:\newcommand{\velderivxeq}{\velderivx &\leftarrow \velderivx - g\phi_y\Delta T +\highbar{\nabla}_x}
+kalman_cmdmaster.tex:\newcommand{\velderivy}{\delta V_y}
+kalman_cmdmaster.tex:\newcommand{\velderivy}{\delta V_y}
+kalman_cmdmaster.tex:\newcommand{\velderivyeq}{\velderivy &\leftarrow \velderivy + g\phi_x\Delta T +\highbar{\nabla}_y}
+kalman_cmdmaster.tex:\newcommand{\velderivyeq}{\velderivy &\leftarrow \velderivy + g\phi_x\Delta T +\highbar{\nabla}_y}
+kalman_cmdmaster.tex:\newcommand{\velderivz}{\delta V_z}
+kalman_cmdmaster.tex:\newcommand{\velderivz}{\delta V_z}
+kalman_cmdmaster.tex:\newcommand{\velderivzeq}{\velderivz &\leftarrow \velderivz + 2\Schulerfreq^2\Delta R_z\Delta T +\highbar{\nabla}_z}
+kalman_cmdmaster.tex:\newcommand{\velderivzeq}{\velderivz &\leftarrow \velderivz + 2\Schulerfreq^2\Delta R_z\Delta T +\highbar{\nabla}_z}
+kalman_cmdmaster.tex:\newcommand{\accelsfmismat}{\accelsfmat}
+kalman_cmdmaster.tex:\newcommand{\accelsfmismat}{\accelsfmat}
+kalman_cmdmaster.tex:\newcommand{\accelsfmis}{\ijthelem{\accelsfmismat}}
+kalman_cmdmaster.tex:\newcommand{\accelsfmis}{\ijthelem{\accelsfmismat}}
+kalman_cmdmaster.tex:\newcommand{\accelerrbody}{\nabla_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\accelerrbody}{\nabla_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\accelerrbodyeq}{\accelerrbody=\accelbias{i} + \sum_{j\in\set{X,Y,Z}}\accelsfmis A_{aBj}}
+kalman_cmdmaster.tex:\newcommand{\accelerrbodyeq}{\accelerrbody=\accelbias{i} + \sum_{j\in\set{X,Y,Z}}\accelsfmis A_{aBj}}
+kalman_cmdmaster.tex:\newcommand{\accelerrlev}{\highbar{\nabla}_{i}}
+kalman_cmdmaster.tex:\newcommand{\accelerrlev}{\highbar{\nabla}_{i}}
+kalman_cmdmaster.tex:\newcommand{\accelerrleveq}{\accelerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \nabla_{Bj}, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\accelerrleveq}{\accelerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \nabla_{Bj}, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\gyrosfmismat}{\gyrosfmat}
+kalman_cmdmaster.tex:\newcommand{\gyrosfmismat}{\gyrosfmat}
+kalman_cmdmaster.tex:\newcommand{\gyrosfmis}{\ijthelem{\gyrosfmismat}}
+kalman_cmdmaster.tex:\newcommand{\gyrosfmis}{\ijthelem{\gyrosfmismat}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrbody}{\epsilon_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrbody}{\epsilon_{Bi}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrbodyeq}{\gyroerrbody=\gyrobias{i} + \sum_{j\in\set{X,Y,Z}}\gyrosfmis \omega_{aBj}, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\gyroerrbodyeq}{\gyroerrbody=\gyrobias{i} + \sum_{j\in\set{X,Y,Z}}\gyrosfmis \omega_{aBj}, \forxyz}
+kalman_cmdmaster.tex:\newcommand{\gyroerrlev}{\highbar{\epsilon}_{i}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrlev}{\highbar{\epsilon}_{i}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrleveq}{\gyroerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \epsilon_{Bj}}
+kalman_cmdmaster.tex:\newcommand{\gyroerrleveq}{\gyroerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \epsilon_{Bj}}
+kalman_cmdmaster.tex:\newcommand{\simprateerreq}[3]{\epsilon\omega_#1=\gyrobias{#1}+\gyrosf{#1}\omega_#1 + \gyromisalign{#1}{#2}\omega_#2 + \gyromisalign{#1}{#3}\omega_#3}
+kalman_cmdmaster.tex:\newcommand{\simprateerreq}[3]{\epsilon\omega_#1=\gyrobias{#1}+\gyrosf{#1}\omega_#1 + \gyromisalign{#1}{#2}\omega_#2 + \gyromisalign{#1}{#3}\omega_#3}
+kalman_cmdmaster.tex:\newcommand{\simpaccelerreq}[3]{\epsilon a_#1=\accelbias{#1}+\accelsf{#1}a_#1+ \accelmisalign{#1}{#2}a_#2 + \accelmisalign{#1}{#3}a_#3}
+kalman_cmdmaster.tex:\newcommand{\simpaccelerreq}[3]{\epsilon a_#1=\accelbias{#1}+\accelsf{#1}a_#1+ \accelmisalign{#1}{#2}a_#2 + \accelmisalign{#1}{#3}a_#3}
+kalman_cmdmaster.tex:\newcommand{\gyromisalign}[2]{\theta_{g#1#2}}
+kalman_cmdmaster.tex:\newcommand{\gyromisalign}[2]{\theta_{g#1#2}}
+kalman_cmdmaster.tex:\newcommand{\accelmisalign}[2]{\theta_{a#1#2}}
+kalman_cmdmaster.tex:\newcommand{\accelmisalign}[2]{\theta_{a#1#2}}
+kalman_cmdmaster.tex:\newcommand{\distmat}[1]{C_{Q#1}}
+kalman_cmdmaster.tex:\newcommand{\distmat}[1]{C_{Q#1}}
+kalman_cmdmaster.tex:\newcommand{\distmateq}{\distmat{j}=
+kalman_cmdmaster.tex:\newcommand{\distmateq}{\distmat{j}=
+kalman_cmdmaster.tex:\newcommand{\distmatpropeq}{\ijthelem{C_{Qk}}=C_{ik}C_{jk}}
+kalman_cmdmaster.tex:\newcommand{\distmatpropeq}{\ijthelem{C_{Qk}}=C_{ik}C_{jk}}
+kalman_cmdmaster.tex:\newcommand{\velvecbody}{V_B(t_n)}
+kalman_cmdmaster.tex:\newcommand{\velvecbody}{V_B(t_n)}
+kalman_cmdmaster.tex:\newcommand{\velvecbodyelem}[1]{\V_{B#1}}
+kalman_cmdmaster.tex:\newcommand{\velvecbodyelem}[1]{\V_{B#1}}
+kalman_cmdmaster.tex:\newcommand{\velvecbodyeq}{\velvecbody=\left[\bodytoll\right]\trans V(t_{n})}
+kalman_cmdmaster.tex:\newcommand{\velvecbodyeq}{\velvecbody=\left[\bodytoll\right]\trans V(t_{n})}
+kalman_cmdmaster.tex:\newcommand{\dvelbody}{\Delta V_B(t_n)}
+kalman_cmdmaster.tex:\newcommand{\dvelbody}{\Delta V_B(t_n)}
+kalman_cmdmaster.tex:\newcommand{\dvelbodyeq}{\dvelbody=V_B(t_{n})-V_B(t_{n-1})}
+kalman_cmdmaster.tex:\newcommand{\dvelbodyeq}{\dvelbody=V_B(t_{n})-V_B(t_{n-1})}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoise}{r_{\Delta V i}}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoise}{r_{\Delta V i}}
+kalman_cmdmaster.tex:\newcommand{\accelwhitenoise}{q_{vwi}}
+kalman_cmdmaster.tex:\newcommand{\accelwhitenoise}{q_{vwi}}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoiseeq}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{V_{Bj}^2(t_n)-V_{Bj}^2(t_{n-1})}+\accelwhitenoise\Delta T}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoiseeq}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{V_{Bj}^2(t_n)-V_{Bj}^2(t_{n-1})}+\accelwhitenoise\Delta T}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoiseeqalt}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{\Delta V_{Bj}(t_n)\left[V_{Bj}(t_{n})+V_{Bj}(t_{n-1})\right]}+\accelwhitenoise\Delta T}
+kalman_cmdmaster.tex:\newcommand{\accelprocnoiseeqalt}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{\Delta V_{Bj}(t_n)\left[V_{Bj}(t_{n})+V_{Bj}(t_{n-1})\right]}+\accelwhitenoise\Delta T}
+kalman_cmdmaster.tex:\newcommand{\velstatenoise}{Q_{\Delta V}}
+kalman_cmdmaster.tex:\newcommand{\velstatenoise}{Q_{\Delta V}}
+kalman_cmdmaster.tex:\newcommand{\velstatenoiseeq}{\velstatenoise
+kalman_cmdmaster.tex:\newcommand{\velstatenoiseeq}{\velstatenoise
+kalman_cmdmaster.tex:\newcommand{\bodyrateint}{\highbar{\omega}_{Bi}(t_n)}
+kalman_cmdmaster.tex:\newcommand{\bodyrateint}{\highbar{\omega}_{Bi}(t_n)}
+kalman_cmdmaster.tex:\newcommand{\bodyrateinteq}{\bodyrateint = \int\limits_{t_n-\Delta
+kalman_cmdmaster.tex:\newcommand{\bodyrateinteq}{\bodyrateint = \int\limits_{t_n-\Delta
+kalman_cmdmaster.tex:\newcommand{\gyroprocnoise}{r_{\Delta \phi i}}
+kalman_cmdmaster.tex:\newcommand{\gyroprocnoise}{r_{\Delta \phi i}}
+kalman_cmdmaster.tex:\newcommand{\gyroprocnoiseeq}{\gyroprocnoise=\sum_{j\in\set{X,Y,Z}}\gyrosf{ij}^2\left[
+kalman_cmdmaster.tex:\newcommand{\gyroprocnoiseeq}{\gyroprocnoise=\sum_{j\in\set{X,Y,Z}}\gyrosf{ij}^2\left[
+kalman_cmdmaster.tex:\newcommand{\attstatenoise}{Q_{\Delta \phi}}
+kalman_cmdmaster.tex:\newcommand{\attstatenoise}{Q_{\Delta \phi}}
+kalman_cmdmaster.tex:\newcommand{\unmodelledgsensdrift}{\epsilon_{Gg}^2}
+kalman_cmdmaster.tex:\newcommand{\unmodelledgsensdrift}{\epsilon_{Gg}^2}
+kalman_cmdmaster.tex:\newcommand{\attstatenoiseeq}{\attstatenoise=\sum_{i\in\set{X,Y,Z}}\gyroprocnoise \distmat{i}
+kalman_cmdmaster.tex:\newcommand{\attstatenoiseeq}{\attstatenoise=\sum_{i\in\set{X,Y,Z}}\gyroprocnoise \distmat{i}
+kalman_cmdmaster.tex:\newcommand{\poschangeeq}{P_i(n)=\avgvel + P_i(n-1)}
+kalman_cmdmaster.tex:\newcommand{\poschangeeq}{P_i(n)=\avgvel + P_i(n-1)}
+kalman_cmdmaster.tex:\newcommand{\faposmeas}{z_{\Delta R i}=P_i(n)}
+kalman_cmdmaster.tex:\newcommand{\faposmeas}{z_{\Delta R i}=P_i(n)}
+kalman_cmdmaster.tex:\newcommand{\posmeasmateq}{H_{\Delta R i}(j)=1}
+kalman_cmdmaster.tex:\newcommand{\posmeasmateq}{H_{\Delta R i}(j)=1}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeas}{z_{\Delta\psi z}}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeas}{z_{\Delta\psi z}}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeaseq}{\hdgchangemeas=\theta_z}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeaseq}{\hdgchangemeas=\theta_z}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeasmat}{H_{\Delta\psi z}}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeasmat}{H_{\Delta\psi z}}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeasmateq}{\hdgchangemeasmat(11)=1}
+kalman_cmdmaster.tex:\newcommand{\hdgchangemeasmateq}{\hdgchangemeasmat(11)=1}
+kalman_cmdmaster.tex:\newcommand{\gpsantennapos}{\Delta \highbar{P}_{PRF}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennapos}{\Delta \highbar{P}_{PRF}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposecef}{\Delta \highbar{P}_{PRE}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposecef}{\Delta \highbar{P}_{PRE}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdelta}{\Delta \highbar{P}_{DPRF}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdelta}{\Delta \highbar{P}_{DPRF}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdeltaecef}{\Delta \highbar{P}_{DPRE}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdeltaecef}{\Delta \highbar{P}_{DPRE}}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposecefeq}{\gpsantennaposecef=\left[\earthtoll\right]\trans \gpsantennapos}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposecefeq}{\gpsantennaposecef=\left[\earthtoll\right]\trans \gpsantennapos}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdeltaecefeq}{\gpsantennaposdeltaecef=\left[\earthtoll\right]\trans \gpsantennaposdelta}
+kalman_cmdmaster.tex:\newcommand{\gpsantennaposdeltaecefeq}{\gpsantennaposdeltaecef=\left[\earthtoll\right]\trans \gpsantennaposdelta}
+kalman_cmdmaster.tex:\newcommand{\prn}{\text{PRN}}
+kalman_cmdmaster.tex:\newcommand{\prn}{\text{PRN}}
+kalman_cmdmaster.tex:\newcommand{\ctow}{T_{\text{SVC}}}
+kalman_cmdmaster.tex:\newcommand{\ctow}{T_{\text{SVC}}}
+kalman_cmdmaster.tex:\newcommand{\ftow}{T_{\text{SVF}}}
+kalman_cmdmaster.tex:\newcommand{\ftow}{T_{\text{SVF}}}
+kalman_cmdmaster.tex:\newcommand{\ecefposvec}{\highbar{R}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefposvec}{\highbar{R}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefposveceq}{\ecefposvec&=\highbar{R}_0+\dot{\highbar{R}}_0\Delta T_{\text{F}}+\ddot{\highbar{R}}_0\Delta T_{\text{F}}^2}
+kalman_cmdmaster.tex:\newcommand{\ecefposveceq}{\ecefposvec&=\highbar{R}_0+\dot{\highbar{R}}_0\Delta T_{\text{F}}+\ddot{\highbar{R}}_0\Delta T_{\text{F}}^2}
+kalman_cmdmaster.tex:\newcommand{\ecefvelvec}{\dot{\highbar{R}}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefvelvec}{\dot{\highbar{R}}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefvelveceq}{\ecefvelvec&=\dot{\highbar{R}}_0+2\ddot{\highbar{R}}_0\Delta T_{\text{F}}}
+kalman_cmdmaster.tex:\newcommand{\ecefvelveceq}{\ecefvelvec&=\dot{\highbar{R}}_0+2\ddot{\highbar{R}}_0\Delta T_{\text{F}}}
+kalman_cmdmaster.tex:\newcommand{\ecefhalfaccelvec}{\ddot{\highbar{R}}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefhalfaccelvec}{\ddot{\highbar{R}}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\ecefhalfaccelveceq}{\ecefhalfaccelvec&=\ddot{\highbar{R}}_0}
+kalman_cmdmaster.tex:\newcommand{\ecefhalfaccelveceq}{\ecefhalfaccelvec&=\ddot{\highbar{R}}_0}
+kalman_cmdmaster.tex:\newcommand{\clockerr}{\rho_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\clockerr}{\rho_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\clockerreq}{\clockerr&=\rho_0}
+kalman_cmdmaster.tex:\newcommand{\clockerreq}{\clockerr&=\rho_0}
+kalman_cmdmaster.tex:\newcommand{\clockerrrate}{\dot{\rho}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\clockerrrate}{\dot{\rho}_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\clockerrrateeq}{\clockerrrate&=\dot{\rho}_0+\ddot{\rho}\Delta T_{\text{F}}}
+kalman_cmdmaster.tex:\newcommand{\clockerrrateeq}{\clockerrrate&=\dot{\rho}_0+\ddot{\rho}\Delta T_{\text{F}}}
+kalman_cmdmaster.tex:\newcommand{\posvar}{\sigma^2_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\posvar}{\sigma^2_{\text{SV}}}
+kalman_cmdmaster.tex:\newcommand{\svf}{\text{SVF}}
+kalman_cmdmaster.tex:\newcommand{\svf}{\text{SVF}}
+kalman_cmdmaster.tex:\newcommand{\rotangle}{\theta_p}
+kalman_cmdmaster.tex:\newcommand{\rotangle}{\theta_p}
+kalman_cmdmaster.tex:\newcommand{\propdelay}{t_{p1}}
+kalman_cmdmaster.tex:\newcommand{\propdelay}{t_{p1}}
+kalman_cmdmaster.tex:\newcommand{\rotangleeq}{\rotangle=\erate \propdelay}
+kalman_cmdmaster.tex:\newcommand{\rotangleeq}{\rotangle=\erate \propdelay}
+kalman_cmdmaster.tex:\newcommand{\rngvec}{S_f}
+kalman_cmdmaster.tex:\newcommand{\rngvec}{S_f}
+kalman_cmdmaster.tex:\newcommand{\rngvecbar}{\highbar{S}_f}
+kalman_cmdmaster.tex:\newcommand{\rngvecbar}{\highbar{S}_f}
+kalman_cmdmaster.tex:\newcommand{\rngvecbareq}{\rngvecbar=\highbar{R}_{\text{S}}-\highbar{R}_{\text{AE}}}
+kalman_cmdmaster.tex:\newcommand{\rngvecbareq}{\rngvecbar=\highbar{R}_{\text{S}}-\highbar{R}_{\text{AE}}}
+kalman_cmdmaster.tex:\newcommand{\rngveceq}{\rngvec=\sqrt{S_{fX}^2+S_{fY}^2+S_{fZ}^2}}
+kalman_cmdmaster.tex:\newcommand{\rngveceq}{\rngvec=\sqrt{S_{fX}^2+S_{fY}^2+S_{fZ}^2}}
+kalman_cmdmaster.tex:\newcommand{\losuvecef}{\highbar{u}_{Ef}}
+kalman_cmdmaster.tex:\newcommand{\losuvecef}{\highbar{u}_{Ef}}
+kalman_cmdmaster.tex:\newcommand{\losuvnav}{\highbar{u}_{Nf}}
+kalman_cmdmaster.tex:\newcommand{\losuvnav}{\highbar{u}_{Nf}}
+kalman_cmdmaster.tex:\newcommand{\losunitveceqe}{\losuvecef=(\dfrac{1}{\rngvec})\rngvecbar}
+kalman_cmdmaster.tex:\newcommand{\losunitveceqe}{\losuvecef=(\dfrac{1}{\rngvec})\rngvecbar}
+kalman_cmdmaster.tex:\newcommand{\CNEF}{\left[C_{NEF}\right]}
+kalman_cmdmaster.tex:\newcommand{\CNEF}{\left[C_{NEF}\right]}
+kalman_cmdmaster.tex:\newcommand{\losunitveceqn}{\losuvnav=\CNEF\losuvecef}
+kalman_cmdmaster.tex:\newcommand{\losunitveceqn}{\losuvnav=\CNEF\losuvecef}
+kalman_cmdmaster.tex:\newcommand{\navaxlosveceq}{\highbar{u}_N=\left[u_{Nf}\right]_{SPF}}
+kalman_cmdmaster.tex:\newcommand{\navaxlosveceq}{\highbar{u}_N=\left[u_{Nf}\right]_{SPF}}
+kalman_cmdmaster.tex:\newcommand{\propdelayeq}{\propdelay=\dfrac{\rngvec}{c}}
+kalman_cmdmaster.tex:\newcommand{\propdelayeq}{\propdelay=\dfrac{\rngvec}{c}}
+kalman_cmdmaster.tex:\newcommand{\delayrateeq}{\text{If }t_p\neq0 \text{ then } \Delta t_p=\propdelay - t_p}
+kalman_cmdmaster.tex:\newcommand{\delayrateeq}{\text{If }t_p\neq0 \text{ then } \Delta t_p=\propdelay - t_p}
+kalman_cmdmaster.tex:\newcommand{\nextdelayeq}{t_p=\propdelay}
+kalman_cmdmaster.tex:\newcommand{\nextdelayeq}{t_p=\propdelay}
+kalman_cmdmaster.tex:\newcommand{\zenithangeq}{\cos(z)=\sqrt{(K_{I0}u_{Nz})^2+K_{I1}}}
+kalman_cmdmaster.tex:\newcommand{\zenithangeq}{\cos(z)=\sqrt{(K_{I0}u_{Nz})^2+K_{I1}}}
+kalman_cmdmaster.tex:\newcommand{\rangetointerseceq}{\Delta u_I=r_I/R_I=\cos(z)-K_{I0}u_{Nz}}
+kalman_cmdmaster.tex:\newcommand{\rangetointerseceq}{\Delta u_I=r_I/R_I=\cos(z)-K_{I0}u_{Nz}}
+kalman_cmdmaster.tex:\newcommand{\obliquityfactoreq}{F_I=r_I/h_I=K_{I2}\Delta u_I}
+kalman_cmdmaster.tex:\newcommand{\obliquityfactoreq}{F_I=r_I/h_I=K_{I2}\Delta u_I}
+kalman_cmdmaster.tex:\newcommand{\vertuvnaveq}{  \begin{split}
+kalman_cmdmaster.tex:\newcommand{\vertuvnaveq}{  \begin{split}
+kalman_cmdmaster.tex:\newcommand{\vertuvecefeq}{\highbar{u}_{IE}=\CNEF\trans \highbar{u}_{IN}}
+kalman_cmdmaster.tex:\newcommand{\vertuvecefeq}{\highbar{u}_{IE}=\CNEF\trans \highbar{u}_{IN}}
+kalman_cmdmaster.tex:\newcommand{\maglat}{\phi_M}
+kalman_cmdmaster.tex:\newcommand{\maglat}{\phi_M}
+kalman_cmdmaster.tex:\newcommand{\maglateq}{\maglat=\sin^{-1}(\highbar{u}_{IE}\cdot\highbar{u}_{ME})\text{
+kalman_cmdmaster.tex:\newcommand{\maglateq}{\maglat=\sin^{-1}(\highbar{u}_{IE}\cdot\highbar{u}_{ME})\text{
+kalman_cmdmaster.tex:\newcommand{\longintersecteq}{\lambda_I=\tan^{-1}(u_{IEY}/u_{IEX})\text{   semi-circles}}
+kalman_cmdmaster.tex:\newcommand{\longintersecteq}{\lambda_I=\tan^{-1}(u_{IEY}/u_{IEX})\text{   semi-circles}}
+kalman_cmdmaster.tex:\newcommand{\localtimeeq}{T_L=43200\lambda_I+T_{\text{GPS}}}
+kalman_cmdmaster.tex:\newcommand{\localtimeeq}{T_L=43200\lambda_I+T_{\text{GPS}}}
+kalman_cmdmaster.tex:\newcommand{\periodeq}{T_P=\left[(\beta_3\maglat+\beta_2)\maglat+\beta_1\right]\maglat+\beta_0}
+kalman_cmdmaster.tex:\newcommand{\periodeq}{T_P=\left[(\beta_3\maglat+\beta_2)\maglat+\beta_1\right]\maglat+\beta_0}
+kalman_cmdmaster.tex:\newcommand{\limitperiodeq}{\text{If }T_P\geq 72000, \text{ then } T_P=7200 }
+kalman_cmdmaster.tex:\newcommand{\limitperiodeq}{\text{If }T_P\geq 72000, \text{ then } T_P=7200 }
+kalman_cmdmaster.tex:\newcommand{\phaseshifteq}{\theta=(T_L-50400)/T_P\text{   circles}}
+kalman_cmdmaster.tex:\newcommand{\phaseshifteq}{\theta=(T_L-50400)/T_P\text{   circles}}
+kalman_cmdmaster.tex:\newcommand{\squaredargtest}{\text{If }\theta^2\geq 0.0625, \text{ then } T_I=5\times 10^{-9}\text{ sec}}
+kalman_cmdmaster.tex:\newcommand{\squaredargtest}{\text{If }\theta^2\geq 0.0625, \text{ then } T_I=5\times 10^{-9}\text{ sec}}
+kalman_cmdmaster.tex:\newcommand{\alphaeq}{C_I=\left[(\alpha_3\maglat+\alpha_2)\maglat+\alpha_1\right]\maglat+\alpha_0}
+kalman_cmdmaster.tex:\newcommand{\alphaeq}{C_I=\left[(\alpha_3\maglat+\alpha_2)\maglat+\alpha_1\right]\maglat+\alpha_0}
+kalman_cmdmaster.tex:\newcommand{\finalampeq}{T_I=\left[(64.9394\theta^2-19.7392)\theta^2+1\right]+5\times 10^{-9}\text{  sec}}
+kalman_cmdmaster.tex:\newcommand{\finalampeq}{T_I=\left[(64.9394\theta^2-19.7392)\theta^2+1\right]+5\times 10^{-9}\text{  sec}}
+kalman_cmdmaster.tex:\newcommand{\grpdelay}{t_{\text{GD}}}
+kalman_cmdmaster.tex:\newcommand{\grpdelay}{t_{\text{GD}}}
+kalman_cmdmaster.tex:\newcommand{\corrmeterseq}{\Delta S_{I}=(\grpdelay-F_I T_I)c_T\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\corrmeterseq}{\Delta S_{I}=(\grpdelay-F_I T_I)c_T\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorr}{\rho_{h}}
+kalman_cmdmaster.tex:\newcommand{\tropocorr}{\rho_{h}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqone}{\tropocorr=(-2.2395\times10^{-8}h-3.248\times10^{-4})h+2.5119\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqone}{\tropocorr=(-2.2395\times10^{-8}h-3.248\times10^{-4})h+2.5119\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqtwo}{\tropocorr=-0.1191+\exp(0.1226-1.226\times 10^{-4})h\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqtwo}{\tropocorr=-0.1191+\exp(0.1226-1.226\times 10^{-4})h\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqthree}{\tropocorr=0.7376\exp(1.2816-1.424\times 10^{-4})h\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\tropocorrecteqthree}{\tropocorr=0.7376\exp(1.2816-1.424\times 10^{-4})h\text{  meters}}
+kalman_cmdmaster.tex:\newcommand{\coseleveq}{\cos(E)=\sqrt{u_{Nx}^2+u_{Ny}^2}}
+kalman_cmdmaster.tex:\newcommand{\coseleveq}{\cos(E)=\sqrt{u_{Nx}^2+u_{Ny}^2}}
+kalman_cmdmaster.tex:\newcommand{\sineleveq}{\sin(E)=u_{Nz}}
+kalman_cmdmaster.tex:\newcommand{\sineleveq}{\sin(E)=u_{Nz}}
+kalman_cmdmaster.tex:\newcommand{\tempstoreqone}{T_1=\sin(E)+0.0455\cos(E)}
+kalman_cmdmaster.tex:\newcommand{\tempstoreqone}{T_1=\sin(E)+0.0455\cos(E)}
+kalman_cmdmaster.tex:\newcommand{\tempstoreqtwo}{T_2=0.000143\cos(E)+T_1\sin(E)}
+kalman_cmdmaster.tex:\newcommand{\tempstoreqtwo}{T_2=0.000143\cos(E)+T_1\sin(E)}
+kalman_cmdmaster.tex:\newcommand{\DeltaSTeq}{\Delta S_T=\tropocorr T_1/T_2}
+kalman_cmdmaster.tex:\newcommand{\DeltaSTeq}{\Delta S_T=\tropocorr T_1/T_2}
+kalman_cmdmaster.tex:\newcommand{\ionotropoeq}{\Delta S_{IT}=\Delta S_T - \Delta S_I}
+kalman_cmdmaster.tex:\newcommand{\ionotropoeq}{\Delta S_{IT}=\Delta S_T - \Delta S_I}
+kalman_cmdmaster.tex:\newcommand{\pr}{\text{PR}}
+kalman_cmdmaster.tex:\newcommand{\pr}{\text{PR}}
+kalman_cmdmaster.tex:\newcommand{\pseudorangeeq}{\pr_M=\left[\pr_{SV}\right]_{\text{Fix}}}
+kalman_cmdmaster.tex:\newcommand{\pseudorangeeq}{\pr_M=\left[\pr_{SV}\right]_{\text{Fix}}}
+kalman_cmdmaster.tex:\newcommand{\prfeq}{\pr_F=S_f-\rho_{SV}c+S_{CB}}
+kalman_cmdmaster.tex:\newcommand{\prfeq}{\pr_F=S_f-\rho_{SV}c+S_{CB}}
+kalman_cmdmaster.tex:\newcommand{\prmeaseq}{z_{PR}=\left[\pr_{M}-\pr_{F}\right]_{\text{SPF}}-\Delta S_{IT}}
+kalman_cmdmaster.tex:\newcommand{\prmeaseq}{z_{PR}=\left[\pr_{M}-\pr_{F}\right]_{\text{SPF}}-\Delta S_{IT}}
+kalman_cmdmaster.tex:\newcommand{\prmeasmat}{H_{\text{PR}}}
+kalman_cmdmaster.tex:\newcommand{\prmeasmat}{H_{\text{PR}}}
+kalman_cmdmaster.tex:\newcommand{\prmeasmateq}{
+kalman_cmdmaster.tex:\newcommand{\prmeasmateq}{
+kalman_cmdmaster.tex:\newcommand{\measinterval}{t_d}
+kalman_cmdmaster.tex:\newcommand{\measinterval}{t_d}
+kalman_cmdmaster.tex:\newcommand{\poschangeecefeq}{\Delta \bar{S}=\ecefvelvec \measinterval - \gpsantennaposdeltaecef}
+kalman_cmdmaster.tex:\newcommand{\poschangeecefeq}{\Delta \bar{S}=\ecefvelvec \measinterval - \gpsantennaposdeltaecef}
+kalman_cmdmaster.tex:\newcommand{\proptimechangeeq}{\Delta\measinterval=(\highbar{u}_E\cdot\Delta \highbar{S})\dfrac{1}{c}}
+kalman_cmdmaster.tex:\newcommand{\proptimechangeeq}{\Delta\measinterval=(\highbar{u}_E\cdot\Delta \highbar{S})\dfrac{1}{c}}
+kalman_cmdmaster.tex:\newcommand{\efftimeintervaleq}{t_{dl}=\measinterval-\Delta\measinterval}
+kalman_cmdmaster.tex:\newcommand{\efftimeintervaleq}{t_{dl}=\measinterval-\Delta\measinterval}
+kalman_cmdmaster.tex:\newcommand{\changesatposecefeq}{\Delta\ecefposvec=t_{dl}(\ecefvelvec-\ecefhalfaccelvec t_{dl})}
+kalman_cmdmaster.tex:\newcommand{\changesatposecefeq}{\Delta\ecefposvec=t_{dl}(\ecefvelvec-\ecefhalfaccelvec t_{dl})}
+kalman_cmdmaster.tex:\newcommand{\poschangeroteq}{
+kalman_cmdmaster.tex:\newcommand{\poschangeroteq}{
+kalman_cmdmaster.tex:\newcommand{\uemeq}{\highbar{u}_{Em}=\highbar{u}_{Ef}-\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+kalman_cmdmaster.tex:\newcommand{\uemeq}{\highbar{u}_{Em}=\highbar{u}_{Ef}-\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+kalman_cmdmaster.tex:\newcommand{\iniestrngeq}{\Delta S = \Delta \highbar{S}\cdot \highbar{u}_{Em}}
+kalman_cmdmaster.tex:\newcommand{\iniestrngeq}{\Delta S = \Delta \highbar{S}\cdot \highbar{u}_{Em}}
+kalman_cmdmaster.tex:\newcommand{\corrcoeff}{\epsilon/4}
+kalman_cmdmaster.tex:\newcommand{\corrcoeff}{\epsilon/4}
+kalman_cmdmaster.tex:\newcommand{\corrcoeffeq}{\corrcoeff=\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+kalman_cmdmaster.tex:\newcommand{\corrcoeffeq}{\corrcoeff=\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+kalman_cmdmaster.tex:\newcommand{\poschangeeqtwo}{\Delta S=\Delta S+\Delta S (\corrcoeff)}
+kalman_cmdmaster.tex:\newcommand{\poschangeeqtwo}{\Delta S=\Delta S+\Delta S (\corrcoeff)}
+kalman_cmdmaster.tex:\newcommand{\midpointloseq}{\highbar{u}_{Ef}=\highbar{u}_{Ef}+\highbar{u}_{Ef}(\corrcoeff)}
+kalman_cmdmaster.tex:\newcommand{\midpointloseq}{\highbar{u}_{Ef}=\highbar{u}_{Ef}+\highbar{u}_{Ef}(\corrcoeff)}
+kalman_cmdmaster.tex:\newcommand{\midpointlosnaveq}{\highbar{u}_{Nm}=\left[C_{NEF}\right]\highbar{u}_{Em}}
+kalman_cmdmaster.tex:\newcommand{\midpointlosnaveq}{\highbar{u}_{Nm}=\left[C_{NEF}\right]\highbar{u}_{Em}}
+kalman_cmdmaster.tex:\newcommand{\dpr}{\text{DPR}}
+kalman_cmdmaster.tex:\newcommand{\dpr}{\text{DPR}}
+kalman_cmdmaster.tex:\newcommand{\measdpreq}{\dpr_M=\left[\dpr_{SV}\right]_{\text{Fix}}}
+kalman_cmdmaster.tex:\newcommand{\measdpreq}{\dpr_M=\left[\dpr_{SV}\right]_{\text{Fix}}}
+kalman_cmdmaster.tex:\newcommand{\preddpreq}{\dpr_F=\Delta S-\clockerrrate\measinterval c}
+kalman_cmdmaster.tex:\newcommand{\preddpreq}{\dpr_F=\Delta S-\clockerrrate\measinterval c}
+kalman_cmdmaster.tex:\newcommand{\dprfiltmeaseq}{z_{DPR}=\left[\dpr_M-\dpr_F\right]_{SPF}}
+kalman_cmdmaster.tex:\newcommand{\dprfiltmeaseq}{z_{DPR}=\left[\dpr_M-\dpr_F\right]_{SPF}}
+kalman_cmdmaster.tex:\newcommand{\measmatdpr}{H_{\text{DPR}}}
+kalman_cmdmaster.tex:\newcommand{\measmatdpr}{H_{\text{DPR}}}
+kalman_cmdmaster.tex:\newcommand{\measmatdpreq}{
+kalman_cmdmaster.tex:\newcommand{\measmatdpreq}{
+kalman_cmdmaster.tex:\newcommand{\fsvec}{
+kalman_cmdmaster.tex:\newcommand{\fsvec}{
+kalman_cmdmaster.tex:\newcommand{\fssdm}{
+kalman_cmdmaster.tex:\newcommand{\fssdm}{
+kfspecific.tex:\newcommand{\statevec}[1]{x(#1)}
+kfspecific.tex:\newcommand{\statevec}[1]{x(#1)}
+kfspecific.tex:\newcommand{\statedyneq}{x(k)=\stm{k}x(k-1)+ \sdm{k}w(k)}
+kfspecific.tex:\newcommand{\statedyneq}{x(k)=\stm{k}x(k-1)+ \sdm{k}w(k)}
+kfspecific.tex:\newcommand{\statedynctrleq}{x(k)=\stm{k}x(k-1)+ \Lambda_k u(k) +\sdm{k}w(k)}
+kfspecific.tex:\newcommand{\statedynctrleq}{x(k)=\stm{k}x(k-1)+ \Lambda_k u(k) +\sdm{k}w(k)}
+kfspecific.tex:\newcommand{\simplestatedyneq}{x(k)=\stm{k}x(k-1) + \procnoise{k}}
+kfspecific.tex:\newcommand{\simplestatedyneq}{x(k)=\stm{k}x(k-1) + \procnoise{k}}
+kfspecific.tex:\newcommand{\measmodeleq}{\meas{k}=\measmat{k}x(k)+\measnoise{k}}
+kfspecific.tex:\newcommand{\measmodeleq}{\meas{k}=\measmat{k}x(k)+\measnoise{k}}
+kfspecific.tex:\newcommand{\stateest}[2]{\widehat{x}^{#2}(#1)}
+kfspecific.tex:\newcommand{\stateest}[2]{\widehat{x}^{#2}(#1)}
+kfspecific.tex:\newcommand{\stmlong}[2]{\Phi(#1,#2)}
+kfspecific.tex:\newcommand{\stmlong}[2]{\Phi(#1,#2)}
+kfspecific.tex:\newcommand{\stm}[1]{\Phi_{#1}}
+kfspecific.tex:\newcommand{\stm}[1]{\Phi_{#1}}
+kfspecific.tex:\newcommand{\stmeq}[1]{\Phi_{#1}=\Phi(#1,#1-1)}
+kfspecific.tex:\newcommand{\stmeq}[1]{\Phi_{#1}=\Phi(#1,#1-1)}
+kfspecific.tex:\newcommand{\stmeqtwo}[2]{\Phi_{#2}=\Phi(#1,#2)}
+kfspecific.tex:\newcommand{\stmeqtwo}[2]{\Phi_{#2}=\Phi(#1,#2)}
+kfspecific.tex:\newcommand{\sdm}[1]{\Gamma_{#1}}
+kfspecific.tex:\newcommand{\sdm}[1]{\Gamma_{#1}}
+kfspecific.tex:\newcommand{\stateextrapeq}{\stateest{k}{-}=\stm{k}\stateest{k-1}{+}}
+kfspecific.tex:\newcommand{\stateextrapeq}{\stateest{k}{-}=\stm{k}\stateest{k-1}{+}}
+kfspecific.tex:\newcommand{\stateextraparrow}{\hat{x} & \leftarrow \Phi \hat{x}}
+kfspecific.tex:\newcommand{\stateextraparrow}{\hat{x} & \leftarrow \Phi \hat{x}}
+kfspecific.tex:\newcommand{\procnoisemat}[1]{Q_{#1}}
+kfspecific.tex:\newcommand{\procnoisemat}[1]{Q_{#1}}
+kfspecific.tex:\newcommand{\procnoisematdef}[1]{\procnoisemat{#1}:=\expect{w(#1)w(#1)\trans}}
+kfspecific.tex:\newcommand{\procnoisematdef}[1]{\procnoisemat{#1}:=\expect{w(#1)w(#1)\trans}}
+kfspecific.tex:\newcommand{\procnoise}[1]{w(#1)}
+kfspecific.tex:\newcommand{\procnoise}[1]{w(#1)}
+kfspecific.tex:\newcommand{\covmat}[2]{P_{#1}^{#2}}
+kfspecific.tex:\newcommand{\covmat}[2]{P_{#1}^{#2}}
+kfspecific.tex:\newcommand{\esterr}{\tilde{x}(k)}
+kfspecific.tex:\newcommand{\esterr}{\tilde{x}(k)}
+kfspecific.tex:\newcommand{\esterrdef}{\esterr=\statevec{k}-\stateest{k}{+}}
+kfspecific.tex:\newcommand{\esterrdef}{\esterr=\statevec{k}-\stateest{k}{+}}
+kfspecific.tex:\newcommand{\covmatdef}{\covmat{k}{+}=\expect{\esterr^{+}(k)[\esterr^{+}(k)]\trans}}
+kfspecific.tex:\newcommand{\covmatdef}{\covmat{k}{+}=\expect{\esterr^{+}(k)[\esterr^{+}(k)]\trans}}
+kfspecific.tex:\newcommand{\covextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\covextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\altcovextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\altcovextrapeq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\onestepriccatieq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\onestepriccatieq}{\covmat{k}{-}=\stm{k}\covmat{k-1}{+}\stm{k}\trans
+kfspecific.tex:\newcommand{\covextraparrow}{P & \leftarrow \Phi P \Phi\trans
+kfspecific.tex:\newcommand{\covextraparrow}{P & \leftarrow \Phi P \Phi\trans
+kfspecific.tex:\newcommand{\measmat}[1]{H_{#1}}
+kfspecific.tex:\newcommand{\measmat}[1]{H_{#1}}
+kfspecific.tex:\newcommand{\kalgain}[1]{K_{#1}}
+kfspecific.tex:\newcommand{\kalgain}[1]{K_{#1}}
+kfspecific.tex:\newcommand{\measnoise}[1]{v(#1)}
+kfspecific.tex:\newcommand{\measnoise}[1]{v(#1)}
+kfspecific.tex:\newcommand{\measnoisemat}[1]{R_{#1}}
+kfspecific.tex:\newcommand{\measnoisemat}[1]{R_{#1}}
+kfspecific.tex:\newcommand{\measnoisematdef}[1]{\measnoisemat{#1}:=\expect{v(#1)v(#1)\trans}}
+kfspecific.tex:\newcommand{\measnoisematdef}[1]{\measnoisemat{#1}:=\expect{v(#1)v(#1)\trans}}
+kfspecific.tex:\newcommand{\kalgaineq}{\kalgain{k}=\covmat{k}{-}\measmat{k}\trans\left[\measmat{k}\covmat{k}{-}\measmat{k}\trans + \measnoisemat{k}\right]^{-1}}
+kfspecific.tex:\newcommand{\kalgaineq}{\kalgain{k}=\covmat{k}{-}\measmat{k}\trans\left[\measmat{k}\covmat{k}{-}\measmat{k}\trans + \measnoisemat{k}\right]^{-1}}
+kfspecific.tex:\newcommand{\meas}[1]{z(#1)}
+kfspecific.tex:\newcommand{\meas}[1]{z(#1)}
+kfspecific.tex:\newcommand{\innovation}[1]{\meas{#1}-\measmat{#1}\stateest{#1}{-}}
+kfspecific.tex:\newcommand{\innovation}[1]{\meas{#1}-\measmat{#1}\stateest{#1}{-}}
+kfspecific.tex:\newcommand{\stateupdateeq}{\stateest{k}{+}=\stateest{k}{-}+\kalgain{k}\left[\innovation{k}\right]}
+kfspecific.tex:\newcommand{\stateupdateeq}{\stateest{k}{+}=\stateest{k}{-}+\kalgain{k}\left[\innovation{k}\right]}
+kfspecific.tex:\newcommand{\covupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}}
+kfspecific.tex:\newcommand{\covupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}}
+kfspecific.tex:\newcommand{\josephcovupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}\left[I-\kalgain{k}\measmat{k}\right]\trans+\kalgain{k}\measnoisemat{k}\kalgain{k}\trans}
+kfspecific.tex:\newcommand{\josephcovupdateeq}{\covmat{k}{+}=\left[I-\kalgain{k}\measmat{k}\right]\covmat{k}{-}\left[I-\kalgain{k}\measmat{k}\right]\trans+\kalgain{k}\measnoisemat{k}\kalgain{k}\trans}
+kfspecific.tex:\newcommand{\stateupdatearrow}{\hat{x} & \leftarrow \hat{x}+K \left[z-H\hat{x} \right]}
+kfspecific.tex:\newcommand{\stateupdatearrow}{\hat{x} & \leftarrow \hat{x}+K \left[z-H\hat{x} \right]}
+kfspecific.tex:\newcommand{\covupdatearrow}{P & \leftarrow\left[I-KH\right]P}
+kfspecific.tex:\newcommand{\covupdatearrow}{P & \leftarrow\left[I-KH\right]P}
+kfspecific.tex:\newcommand{\dvcovupdateeq}{P(+) = P(-) - GK\trans - \left[ GK\trans \right]\trans}
+kfspecific.tex:\newcommand{\dvcovupdateeq}{P(+) = P(-) - GK\trans - \left[ GK\trans \right]\trans}
+kfspecific.tex:\newcommand{\lveqcont}{\dot{P}=FP+PF\trans+Q}
+kfspecific.tex:\newcommand{\lveqcont}{\dot{P}=FP+PF\trans+Q}
+kfspecific.tex:\newcommand{\matrixriccatieq}{\dot{P}=FP+PF\trans+Q - PH\trans R^{-1}HP}
+kfspecific.tex:\newcommand{\matrixriccatieq}{\dot{P}=FP+PF\trans+Q - PH\trans R^{-1}HP}
+kfspecific.tex:\newcommand{\expmeas}{\measmat{k}\stateest{k}{-}}
+kfspecific.tex:\newcommand{\expmeas}{\measmat{k}\stateest{k}{-}}
+markov.tex:\newcommand{\mstates}{\mathcal{S}}
+markov.tex:\newcommand{\mstates}{\mathcal{S}}
+markov.tex:\newcommand{\mactions}{\mathcal{A}}
+markov.tex:\newcommand{\mactions}{\mathcal{A}}
+markov.tex:\newcommand{\mprobs}{\mathcal{P}}
+markov.tex:\newcommand{\mprobs}{\mathcal{P}}
+markov.tex:\newcommand{\mrewards}{\mathcal{R}}
+markov.tex:\newcommand{\mrewards}{\mathcal{R}}
+markov.tex:\newcommand{\discount}{\gamma}
+markov.tex:\newcommand{\discount}{\gamma}
+markov.tex:\newcommand{\mobs}{\mathcal{O}}
+markov.tex:\newcommand{\mobs}{\mathcal{O}}
+markov.tex:\newcommand{\mdppair}{<\mathcal{PR},\discount>}
+markov.tex:\newcommand{\mdppair}{<\mathcal{PR},\discount>}
+markov.tex:\newcommand{\markovtuple}{<\mstates,\mactions,\mprobs,\mrewards,\discount>}
+markov.tex:\newcommand{\markovtuple}{<\mstates,\mactions,\mprobs,\mrewards,\discount>}
+markov.tex:\newcommand{\mdptriple}{<\mprobs,\mrewards,\discount>}
+markov.tex:\newcommand{\mdptriple}{<\mprobs,\mrewards,\discount>}
+markov.tex:\newcommand{\mdptripleparam}[1]{<\mprobs_{#1},\mrewards_{#1},\discount>}
+markov.tex:\newcommand{\mdptripleparam}[1]{<\mprobs_{#1},\mrewards_{#1},\discount>}
+markov.tex:\newcommand{\mdppairparam}[1]{<\mathcal{PR}_{#1},\discount>}
+markov.tex:\newcommand{\mdppairparam}[1]{<\mathcal{PR}_{#1},\discount>}
+markov.tex:\newcommand{\mprobsdef}{\mathcal{P}=\set{P_1,\ldots,P_M}}
+markov.tex:\newcommand{\mprobsdef}{\mathcal{P}=\set{P_1,\ldots,P_M}}
+markov.tex:\newcommand{\mrewardsdef}{\mathcal{R}=\set{R_1,\ldots,R_M}}
+markov.tex:\newcommand{\mrewardsdef}{\mathcal{R}=\set{R_1,\ldots,R_M}}
+markov.tex:\newcommand{\costfunc}[3]{C_{#1}(#2,#3)}
+markov.tex:\newcommand{\costfunc}[3]{C_{#1}(#2,#3)}
+markov.tex:\newcommand{\benefunc}[3]{B_{#1}(#2,#3)}
+markov.tex:\newcommand{\benefunc}[3]{B_{#1}(#2,#3)}
+markov.tex:\newcommand{\rewfunc}[3]{R(#1,#2,#3)=\benefunc{#1}{#2}{#3}-\costfunc{#1}{#2}{#3}}
+markov.tex:\newcommand{\rewfunc}[3]{R(#1,#2,#3)=\benefunc{#1}{#2}{#3}-\costfunc{#1}{#2}{#3}}
+markov.tex:\newcommand{\valueeq}[2]{V(#1,#2)=\sum_{j\in\mstates}P_{#1(#2)}(#2,j)\left[R_{#1(#2)}(#2,j)+\gamma V(#1,j)\right]}
+markov.tex:\newcommand{\valueeq}[2]{V(#1,#2)=\sum_{j\in\mstates}P_{#1(#2)}(#2,j)\left[R_{#1(#2)}(#2,j)+\gamma V(#1,j)\right]}
+markov.tex:\newcommand{\valueeqact}[3]{V_{#3+1}(#1,#2)=\sum_{j\in\mstates}P_{#1}(#2,j)\left[R_{#1}(#2,j)+\gamma V_{#3}(#1,j)\right]}
+markov.tex:\newcommand{\valueeqact}[3]{V_{#3+1}(#1,#2)=\sum_{j\in\mstates}P_{#1}(#2,j)\left[R_{#1}(#2,j)+\gamma V_{#3}(#1,j)\right]}
+markov.tex:\newcommand{\valueiter}[3]{V_{#3+1}(#2)=\max_{#1\in\mactions}\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma V_{#3}(j)]\right]}
+markov.tex:\newcommand{\valueiter}[3]{V_{#3+1}(#2)=\max_{#1\in\mactions}\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma V_{#3}(j)]\right]}
+markov.tex:\newcommand{\valueiteralt}[4]{V_{#4+1}(#1)=\max_{1\leq #3\leq A}\left[\sum_{1\leq #2\leq S}P_{#3}(#1,#2)[R_{#3}(#1,#2)+\gamma V_{#4}(#2)]\right]}
+markov.tex:\newcommand{\valueiteralt}[4]{V_{#4+1}(#1)=\max_{1\leq #3\leq A}\left[\sum_{1\leq #2\leq S}P_{#3}(#1,#2)[R_{#3}(#1,#2)+\gamma V_{#4}(#2)]\right]}
+markov.tex:\newcommand{\optpolicy}[2]{\pi(#2)=\arg \max_{#1\in\mactions}\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma V(#1,j)]\right]}
+markov.tex:\newcommand{\optpolicy}[2]{\pi(#2)=\arg \max_{#1\in\mactions}\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma V(#1,j)]\right]}
+markov.tex:\newcommand{\stochmat}{P_1=\begin{bmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&&0&0\end{bmatrix}}
+markov.tex:\newcommand{\stochmat}{P_1=\begin{bmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&&0&0\end{bmatrix}}
+markov.tex:\newcommand{\qvaliter}[3]{Q_{#3+1}(#2,#1)=\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma \max_{#1'\in\mactions}Q_{#3}(j,#1')]\right]}
+markov.tex:\newcommand{\qvaliter}[3]{Q_{#3+1}(#2,#1)=\left[\sum_{j\in\mstates}P_{#1}(#2,j)[R_{#1}(#2,j)+\gamma \max_{#1'\in\mactions}Q_{#3}(j,#1')]\right]}
+markov.tex:\newcommand{\qlearning}[2]{Q(#1,#2)\leftarrow (1-\alpha)Q(#1,#2)+\alpha\left[r+\gamma\max_{#2'\in\mactions}Q(#1',#2')\right]}
+markov.tex:\newcommand{\qlearning}[2]{Q(#1,#2)\leftarrow (1-\alpha)Q(#1,#2)+\alpha\left[r+\gamma\max_{#2'\in\mactions}Q(#1',#2')\right]}
+markov.tex:\newcommand{\qlearningalt}[2]{Q(#1,#2)\leftarrow Q(#1,#2)+\alpha\left[r+\gamma\max_{#2'\in\mactions}Q(#1',#2')-Q(#1,#2)\right]}
+markov.tex:\newcommand{\qlearningalt}[2]{Q(#1,#2)\leftarrow Q(#1,#2)+\alpha\left[r+\gamma\max_{#2'\in\mactions}Q(#1',#2')-Q(#1,#2)\right]}
+markov.tex:\newcommand{\qvaldef}{V(s)=\max_{a\in\mactions}Q(s,a)}
+markov.tex:\newcommand{\qvaldef}{V(s)=\max_{a\in\mactions}Q(s,a)}
+markov.tex:\newcommand{\valueeqalt}[2]{V(#1,#2)=E\left[R_{#1(#2)}(#2,j)+\gamma V(#1,j)\right]}
+markov.tex:\newcommand{\valueeqalt}[2]{V(#1,#2)=E\left[R_{#1(#2)}(#2,j)+\gamma V(#1,j)\right]}
+markov.tex:\newcommand{\valeqsplit}[2]{\begin{split}V(#1,#2)&=E\left[R_{#1(#2)}(#2,j_1)+\gamma R_{#1(j_1)}(j_1,j_2)+\gamma^2 R_{#1(j_2)}(j_2,j_3)+\cdots\right] \\
+markov.tex:\newcommand{\valeqsplit}[2]{\begin{split}V(#1,#2)&=E\left[R_{#1(#2)}(#2,j_1)+\gamma R_{#1(j_1)}(j_1,j_2)+\gamma^2 R_{#1(j_2)}(j_2,j_3)+\cdots\right] \\
+markov.tex:\newcommand{\tempdiffeq}[2]{V(#1_#2)\leftarrow V(#1_#2)+\alpha\left[ R_{#2+1}+\gamma V(#1_{#2+1})-V(#1_#2)\right]}
+markov.tex:\newcommand{\tempdiffeq}[2]{V(#1_#2)\leftarrow V(#1_#2)+\alpha\left[ R_{#2+1}+\gamma V(#1_{#2+1})-V(#1_#2)\right]}
+markov.tex:\newcommand{\qlearneq}[1]{Q(s_#1,a_#1)\leftarrow Q(s_#1,a_#1) + \alpha \left[ R_{#1+1}+\gamma\max_{a\in\mactions} Q(s_{#1+1},a)-Q(s_#1,a_#1)\right]}
+markov.tex:\newcommand{\qlearneq}[1]{Q(s_#1,a_#1)\leftarrow Q(s_#1,a_#1) + \alpha \left[ R_{#1+1}+\gamma\max_{a\in\mactions} Q(s_{#1+1},a)-Q(s_#1,a_#1)\right]}
+markov.tex:\newcommand{\bigtimes}[2]{{\sf X}_{#1\in #2}}
+markov.tex:\newcommand{\bigtimes}[2]{{\sf X}_{#1\in #2}}
+markov.tex:\newcommand{\decmprobsdef}[1]{\mprobs = \mprobs_1\times\cdots\times\mprobs_{#1}}
+markov.tex:\newcommand{\decmprobsdef}[1]{\mprobs = \mprobs_1\times\cdots\times\mprobs_{#1}}
+markov.tex:\newcommand{\decmobsdef}[1]{\mobs = \mobs_1\times\cdots\times\mobs_{#1}}
+markov.tex:\newcommand{\decmobsdef}[1]{\mobs = \mobs_1\times\cdots\times\mobs_{#1}}
+markov.tex:\newcommand{\decpomdptuple}{<I,S,\mprobs,\mrewards,\mobs,h>}
+markov.tex:\newcommand{\decpomdptuple}{<I,S,\mprobs,\mrewards,\mobs,h>}
+markov.tex:\newcommand{\gammaseq}[2]{\Gamma(#1,\ldots,#2)}
+markov.tex:\newcommand{\gammaseq}[2]{\Gamma(#1,\ldots,#2)}
+markov.tex:\newcommand{\tensorprod}[2]{#1\otimes #2}
+markov.tex:\newcommand{\tensorprod}[2]{#1\otimes #2}
+markov.tex:\newcommand{\tensorsum}[2]{#1\oplus #2}
+markov.tex:\newcommand{\tensorsum}[2]{#1\oplus #2}
+markov.tex:\newcommand{\realmatrices}[2]{M_{#1,#2}(\Real)}
+markov.tex:\newcommand{\realmatrices}[2]{M_{#1,#2}(\Real)}
+markov.tex:\newcommand{\valueiteralttensor}[4]{V_{#4+1}(#1)=\max_{#3\in\Gamma(M_1,M_2)}\left[\sum_{#2\in\Gamma(N_1,N_2)}P_{#3}(#1,#2)[R_{#3}(#1,#2)+\gamma V_{#4}(#2)]\right]}
+markov.tex:\newcommand{\valueiteralttensor}[4]{V_{#4+1}(#1)=\max_{#3\in\Gamma(M_1,M_2)}\left[\sum_{#2\in\Gamma(N_1,N_2)}P_{#3}(#1,#2)[R_{#3}(#1,#2)+\gamma V_{#4}(#2)]\right]}
+markov.tex:\newcommand{\tsinterchange}{(A\oplus B) + (C\oplus D) = (A+C)\oplus (B+D)}
+markov.tex:\newcommand{\tsinterchange}{(A\oplus B) + (C\oplus D) = (A+C)\oplus (B+D)}
+markov.tex:\newcommand{\kronhad}{(A\otimes B)\odot (C\oplus D)=(A\odot C) \oplus (B\odot D)}
+markov.tex:\newcommand{\kronhad}{(A\otimes B)\odot (C\oplus D)=(A\odot C) \oplus (B\odot D)}
+markov.tex:\newcommand{\gammaset}[1]{\Gamma(#1_1,\ldots,#1_m)}
+markov.tex:\newcommand{\gammaset}[1]{\Gamma(#1_1,\ldots,#1_m)}
+markov.tex:\newcommand{\gammasetnm}[2]{\Gamma^{#1}_{#2}}
+markov.tex:\newcommand{\gammasetnm}[2]{\Gamma^{#1}_{#2}}
+markov.tex:\newcommand{\gammasetnmdef}{\Gamma^n_m=\gammaset{n}, \text{when all } n_i=n, i=1,\ldots,m}
+markov.tex:\newcommand{\gammasetnmdef}{\Gamma^n_m=\gammaset{n}, \text{when all } n_i=n, i=1,\ldots,m}
+markov.tex:\newcommand{\tsumblock}[4]{#1_{#2 #3}1_{mn}+#4}
+markov.tex:\newcommand{\tsumblock}[4]{#1_{#2 #3}1_{mn}+#4}
+markov.tex:\newcommand{\rtranscol}[2]{\matcol{R^{\text{T}}_{#1}}{#2}}
+markov.tex:\newcommand{\rtranscol}[2]{\matcol{R^{\text{T}}_{#1}}{#2}}
+markov.tex:\newcommand{\maxtsum}{\max \left( A\oplus B\right)}
+markov.tex:\newcommand{\maxtsum}{\max \left( A\oplus B\right)}
+markov.tex:\newcommand{\maxtsumeq}{\max \left( A\oplus B\right)=\max(A)\oplus \max(B)}
+markov.tex:\newcommand{\maxtsumeq}{\max \left( A\oplus B\right)=\max(A)\oplus \max(B)}
+markov.tex:\newcommand{\tsumaltdef}{A\oplus_3 B:=A\otimes 1_B + 1_A\otimes B}
+markov.tex:\newcommand{\tsumaltdef}{A\oplus_3 B:=A\otimes 1_B + 1_A\otimes B}
+markov.tex:\newcommand{\matcol}[2]{\left[ #1 \right]^{(#2)}}
+markov.tex:\newcommand{\matcol}[2]{\left[ #1 \right]^{(#2)}}
+markov.tex:\newcommand{\matrow}[2]{\left[ #1 \right]_{(#2)}}
+markov.tex:\newcommand{\matrow}[2]{\left[ #1 \right]_{(#2)}}
+markov.tex:\newcommand{\distkronovertsum}[4]{\left( #1 \otimes #2\right)\left( #3\oplus #4\right)= #1#3\oplus #2#4}
+markov.tex:\newcommand{\distkronovertsum}[4]{\left( #1 \otimes #2\right)\left( #3\oplus #4\right)= #1#3\oplus #2#4}
+markov.tex:\newcommand{\ijelem}[3]{\left[#1 \right]_{#2#3}}
+markov.tex:\newcommand{\ijelem}[3]{\left[#1 \right]_{#2#3}}
+markov.tex:\newcommand{\ijblock}[3]{\left[#1 \right]_{\left[#2#3\right]}}
+markov.tex:\newcommand{\ijblock}[3]{\left[#1 \right]_{\left[#2#3\right]}}
+markov.tex:\newcommand{\krondist}[4]{\left(#1\otimes #2\right)\left(#3\otimes #4 \right)=#1#3\otimes #2#4}
+markov.tex:\newcommand{\krondist}[4]{\left(#1\otimes #2\right)\left(#3\otimes #4 \right)=#1#3\otimes #2#4}
+markov.tex:\newcommand{\lexpairdef}{(i,j)\leq (k,l) \Leftrightarrow i<j \, \text{or} (i=j \, \text{and} \,k\leq l)}
+markov.tex:\newcommand{\lexpairdef}{(i,j)\leq (k,l) \Leftrightarrow i<j \, \text{or} (i=j \, \text{and} \,k\leq l)}
+markov.tex:\newcommand{\krondefeq}[3]{#1_{\alpha,\beta}=\prod_{t=1}^{#3}#2_{\alpha(t),\beta(t)}(t)}
+markov.tex:\newcommand{\krondefeq}[3]{#1_{\alpha,\beta}=\prod_{t=1}^{#3}#2_{\alpha(t),\beta(t)}(t)}
+markov.tex:\newcommand{\tensorpolicy}{\pi\left(\sigma\right):=\left(\pi^{*}_1\left[\sigma(1)\right],\pi^{*}_2\left[\sigma(2)\right]\right)}
+markov.tex:\newcommand{\tensorpolicy}{\pi\left(\sigma\right):=\left(\pi^{*}_1\left[\sigma(1)\right],\pi^{*}_2\left[\sigma(2)\right]\right)}
+markov.tex:\newcommand{\globalpolicy}{\pi^{*}\left(\sigma\right):=\left(\pi^{*}_1\left[\sigma(1)\right],\pi^{*}_2\left[\sigma(2)\right]\right)}
+markov.tex:\newcommand{\globalpolicy}{\pi^{*}\left(\sigma\right):=\left(\pi^{*}_1\left[\sigma(1)\right],\pi^{*}_2\left[\sigma(2)\right]\right)}
+markov.tex:\newcommand{\sspacedef}[1]{S(#1):=\set{1,\ldots,N_{#1}}}
+markov.tex:\newcommand{\sspacedef}[1]{S(#1):=\set{1,\ldots,N_{#1}}}
+markov.tex:\newcommand{\aspacedef}[1]{A(#1):=\set{1,\ldots,M_{#1}}}
+markov.tex:\newcommand{\aspacedef}[1]{A(#1):=\set{1,\ldots,M_{#1}}}
+markov.tex:\newcommand{\sspace}[1]{S(#1)}
+markov.tex:\newcommand{\sspace}[1]{S(#1)}
+markov.tex:\newcommand{\aspace}[1]{A(#1)}
+markov.tex:\newcommand{\aspace}[1]{A(#1)}
+markov.tex:\newcommand{\optcriterion}[2]{V\left(#1^{*},#2\right)\geq V\left(#1,#2\right)}
+markov.tex:\newcommand{\optcriterion}[2]{V\left(#1^{*},#2\right)\geq V\left(#1,#2\right)}
+markov.tex:\newcommand{\tensoroptcriterion}[3]{V\left(#1^{*}_1,#2_1\right)\oplus\ldots\oplus V\left(#1^{*}_{#3},#2_{#3}\right)\geq V\left(#1_1,#2_1\right)\oplus\ldots\oplus V\left(#1_{#3},#2_{#3}\right)}
+markov.tex:\newcommand{\tensoroptcriterion}[3]{V\left(#1^{*}_1,#2_1\right)\oplus\ldots\oplus V\left(#1^{*}_{#3},#2_{#3}\right)\geq V\left(#1_1,#2_1\right)\oplus\ldots\oplus V\left(#1_{#3},#2_{#3}\right)}
+markov.tex:\newcommand{\topttwo}[2]{V\left(#1^{*}_1,#2_1\right)\oplus V\left(#1^{*}_2,#2_2\right)\geq V\left(#1_1,#2_1\right)\oplus V\left(#1_2,#2_2\right)}
+markov.tex:\newcommand{\topttwo}[2]{V\left(#1^{*}_1,#2_1\right)\oplus V\left(#1^{*}_2,#2_2\right)\geq V\left(#1_1,#2_1\right)\oplus V\left(#1_2,#2_2\right)}
+markov.tex:\newcommand{\topttwoseq}[2]{V\left(#1^{*}_1,#2(1)\right)\oplus V\left(#1^{*}_2,#2(2)\right)\geq V\left(#1_1,#2(1)\right)\oplus V\left(#1_2,#2(2)\right)}
+markov.tex:\newcommand{\topttwoseq}[2]{V\left(#1^{*}_1,#2(1)\right)\oplus V\left(#1^{*}_2,#2(2)\right)\geq V\left(#1_1,#2(1)\right)\oplus V\left(#1_2,#2(2)\right)}
+markov.tex:\newcommand{\policies}[1]{\aspace{\mathcal{#1}}^{\sspace{\mathcal{#1}}}}
+markov.tex:\newcommand{\policies}[1]{\aspace{\mathcal{#1}}^{\sspace{\mathcal{#1}}}}
+markov.tex:\newcommand{\proj}[1]{\phi^{#1}_i}
+markov.tex:\newcommand{\proj}[1]{\phi^{#1}_i}
+markov.tex:\newcommand{\policycd}[2]{
+markov.tex:\newcommand{\policycd}[2]{
+markov.tex:\newcommand{\pcommute}[2]{#2\;\proj{S} = \proj{A}\; #1}
+markov.tex:\newcommand{\pcommute}[2]{#2\;\proj{S} = \proj{A}\; #1}
+markov.tex:\newcommand{\projpolicy}[1]{#1\left[\sigma(i)\right]:=\proj{A}\left[\pi^{*}(\sigma)\right]}
+markov.tex:\newcommand{\projpolicy}[1]{#1\left[\sigma(i)\right]:=\proj{A}\left[\pi^{*}(\sigma)\right]}
+naveqdefs.tex:\newcommand{\specforce}{a_{\text{sf}}}
+naveqdefs.tex:\newcommand{\specforce}{a_{\text{sf}}}
+naveqdefs.tex:\newcommand{\lat}{\phi}
+naveqdefs.tex:\newcommand{\lat}{\phi}
+naveqdefs.tex:\newcommand{\lon}{\lambda}
+naveqdefs.tex:\newcommand{\lon}{\lambda}
+naveqdefs.tex:\newcommand{\altitude}{h}
+naveqdefs.tex:\newcommand{\altitude}{h}
+naveqdefs.tex:\newcommand{\corioliseq}{\dot{v}^A=\dot{v}^B+\rotvec{A}{B}^A\times v^B}
+naveqdefs.tex:\newcommand{\corioliseq}{\dot{v}^A=\dot{v}^B+\rotvec{A}{B}^A\times v^B}
+naveqdefs.tex:\newcommand{\coriolismateq}{\dot{v}^A=\dot{v}^B+\rotmat{A}{B}^A v^B}
+naveqdefs.tex:\newcommand{\coriolismateq}{\dot{v}^A=\dot{v}^B+\rotmat{A}{B}^A v^B}
+naveqdefs.tex:\newcommand{\ltoieq}{\dot{v}^I=\dot{v}^L+\rotvec{I}{L}^I\times v^L}
+naveqdefs.tex:\newcommand{\ltoieq}{\dot{v}^I=\dot{v}^L+\rotvec{I}{L}^I\times v^L}
+naveqdefs.tex:\newcommand{\itoleq}{\dot{v}^L=\dot{v}^I-\rotvec{I}{L}^I\times v^L}
+naveqdefs.tex:\newcommand{\itoleq}{\dot{v}^L=\dot{v}^I-\rotvec{I}{L}^I\times v^L}
+naveqdefs.tex:\newcommand{\veleq}{v=\dot{r}^E=\dot{r}^I-\rotvec{I}{E}^I\times r^E}
+naveqdefs.tex:\newcommand{\veleq}{v=\dot{r}^E=\dot{r}^I-\rotvec{I}{E}^I\times r^E}
+naveqdefs.tex:\newcommand{\acceleq}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times \dot{r}^I}
+naveqdefs.tex:\newcommand{\acceleq}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times \dot{r}^I}
+naveqdefs.tex:\newcommand{\acceleqtwo}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times v^E - \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right)}
+naveqdefs.tex:\newcommand{\acceleqtwo}{\dot{v}^I=\ddot{r}^I-\rotvec{I}{E}^I\times v^E - \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right)}
+naveqdefs.tex:\newcommand{\acceleqtwoalt}{\dot{v}^I=\ddot{r}^I-\rotmat{I}{E}^Iv^E-(\rotmat{I}{E}^I)^2r^E}
+naveqdefs.tex:\newcommand{\acceleqtwoalt}{\dot{v}^I=\ddot{r}^I-\rotmat{I}{E}^Iv^E-(\rotmat{I}{E}^I)^2r^E}
+naveqdefs.tex:\newcommand{\veleqmain}{\dot{v}^L=\ddot{r}^I- \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right) - \left( \rotvec{I}{E}^I+\rotvec{I}{L}^I\right)\times v^E}
+naveqdefs.tex:\newcommand{\veleqmain}{\dot{v}^L=\ddot{r}^I- \rotvec{I}{E}^I\times \left( \rotvec{I}{E}^I\times r^E\right) - \left( \rotvec{I}{E}^I+\rotvec{I}{L}^I\right)\times v^E}
+naveqdefs.tex:\newcommand{\veleqmaintwo}{\dot{v}^L=\specforce+ g'-\left(2\rotvec{I}{E} + \rho \right)\times v }
+naveqdefs.tex:\newcommand{\veleqmaintwo}{\dot{v}^L=\specforce+ g'-\left(2\rotvec{I}{E} + \rho \right)\times v }
+naveqdefs.tex:\newcommand{\veleqmainthree}{\dot{v}^L=\specforce+ g'-\left(2\rotmat{I}{E} + \rotmat{E}{L} \right)v }
+naveqdefs.tex:\newcommand{\veleqmainthree}{\dot{v}^L=\specforce+ g'-\left(2\rotmat{I}{E} + \rotmat{E}{L} \right)v }
+naveqdefs.tex:\newcommand{\strapveleq}{\dot{v}^L=\dcm{B}{L}\specforce^B+ g'-\left(2\rotmat{I}{E}^L + \rotmat{E}{L}^L \right)v^L }
+naveqdefs.tex:\newcommand{\strapveleq}{\dot{v}^L=\dcm{B}{L}\specforce^B+ g'-\left(2\rotmat{I}{E}^L + \rotmat{E}{L}^L \right)v^L }
+naveqdefs.tex:\newcommand{\cbldot}{\dot{C}_B^L}
+naveqdefs.tex:\newcommand{\cbldot}{\dot{C}_B^L}
+naveqdefs.tex:\newcommand{\cbleq}{\cbldot=\dcm{B}{L}\rotmat{I}{B}^B - \left( \rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\dcm{B}{L}}
+naveqdefs.tex:\newcommand{\cbleq}{\cbldot=\dcm{B}{L}\rotmat{I}{B}^B - \left( \rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\dcm{B}{L}}
+naveqdefs.tex:\newcommand{\centripetal}{\rotvec{I}{E}\times \left( \rotvec{I}{E}\times r\right)}
+naveqdefs.tex:\newcommand{\centripetal}{\rotvec{I}{E}\times \left( \rotvec{I}{E}\times r\right)}
+naveqdefs.tex:\newcommand{\plumbbobgeq}{g'=g-\centripetal}
+naveqdefs.tex:\newcommand{\plumbbobgeq}{g'=g-\centripetal}
+naveqdefs.tex:\newcommand{\spatialrateeq}{\rotvec{I}{L}=\rho+\eratevec}
+naveqdefs.tex:\newcommand{\spatialrateeq}{\rotvec{I}{L}=\rho+\eratevec}
+naveqdefs.tex:\newcommand{\cortranseq}{\rotvec{I}{E}+\rotvec{I}{L}=\rotvec{I}{E}+\rho+\eratevec=2\eratevec+\rho}
+naveqdefs.tex:\newcommand{\cortranseq}{\rotvec{I}{E}+\rotvec{I}{L}=\rotvec{I}{E}+\rho+\eratevec=2\eratevec+\rho}
+naveqdefs.tex:\newcommand{\scalarinveq}{\sum_{i=1}^3 \dot{v}_i^A e_A^i=\sum_{i=1}^3 \dot{v}_i^B e_B^i}
+naveqdefs.tex:\newcommand{\scalarinveq}{\sum_{i=1}^3 \dot{v}_i^A e_A^i=\sum_{i=1}^3 \dot{v}_i^B e_B^i}
+naveqdefs.tex:\newcommand{\trateeq}{\rotvec{E}{L}^L=\dfrac{1}{r}u_r^L\times v^L}
+naveqdefs.tex:\newcommand{\trateeq}{\rotvec{E}{L}^L=\dfrac{1}{r}u_r^L\times v^L}
+naveqdefs.tex:\newcommand{\cleeq}{\dot{C}_L^E=C_L^E\rotmat{E}{L}^L}
+naveqdefs.tex:\newcommand{\cleeq}{\dot{C}_L^E=C_L^E\rotmat{E}{L}^L}
+naveqdefs.tex:\newcommand{\erateeq}{\rotvec{I}{E}^L=\left[\dcm{L}{E} \right]\trans \rotvec{I}{E}^E}
+naveqdefs.tex:\newcommand{\erateeq}{\rotvec{I}{E}^L=\left[\dcm{L}{E} \right]\trans \rotvec{I}{E}^E}
+naveqdefs.tex:\newcommand{\trateneq}{\rho_N=\dfrac{v_E}{R_e}\left[1-\dfrac{h}{R_e}-e\sin^2\lat\right]}
+naveqdefs.tex:\newcommand{\trateneq}{\rho_N=\dfrac{v_E}{R_e}\left[1-\dfrac{h}{R_e}-e\sin^2\lat\right]}
+naveqdefs.tex:\newcommand{\trateeeq}{\rho_E=-\dfrac{v_N}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3\cos^2 \lat\right)\right]}
+naveqdefs.tex:\newcommand{\trateeeq}{\rho_E=-\dfrac{v_N}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3\cos^2 \lat\right)\right]}
+naveqdefs.tex:\newcommand{\latrateeq}{\dot{\lat}=-\rho_E}
+naveqdefs.tex:\newcommand{\latrateeq}{\dot{\lat}=-\rho_E}
+naveqdefs.tex:\newcommand{\lonrateeq}{\dot{\lon}=\rho_N \sec\lat}
+naveqdefs.tex:\newcommand{\lonrateeq}{\dot{\lon}=\rho_N \sec\lat}
+naveqdefs.tex:\newcommand{\xtrateeq}{\rho_x&=-\dfrac{v_y}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{22}^2-d_{21}^2\right)\right]-\dfrac{v_x}{R_e}\left(2d_{21}d_{22}\right)e}
+naveqdefs.tex:\newcommand{\xtrateeq}{\rho_x&=-\dfrac{v_y}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{22}^2-d_{21}^2\right)\right]-\dfrac{v_x}{R_e}\left(2d_{21}d_{22}\right)e}
+naveqdefs.tex:\newcommand{\ytrateeq}{\rho_y&=\dfrac{v_x}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{21}^2-d_{22}^2\right)\right]+\dfrac{v_y}{R_e}\left(2d_{21}d_{22}\right)e}
+naveqdefs.tex:\newcommand{\ytrateeq}{\rho_y&=\dfrac{v_x}{R_e}\left[1-\dfrac{h}{R_e}-e\left(1-3d_{21}^2-d_{22}^2\right)\right]+\dfrac{v_y}{R_e}\left(2d_{21}d_{22}\right)e}
+orbitfilter_cmds.tex:%\newcommand{}[]{}
+orbitfilter_cmds.tex:%\newcommand{}[]{}
+orbitfilter_cmds.tex:\newcommand{\zeromat}[1]{\left[0\right]_{#1}}
+orbitfilter_cmds.tex:\newcommand{\zeromat}[1]{\left[0\right]_{#1}}
+orbitfilter_cmds.tex:\newcommand{\idmat}[1]{\left[ I\right]_{#1}}
+orbitfilter_cmds.tex:\newcommand{\idmat}[1]{\left[ I\right]_{#1}}
+orbitfilter_cmds.tex:\newcommand{\twobodyeq}{\ddot{r}= -\dfrac{\mu r}{\norm{r}^3}}
+orbitfilter_cmds.tex:\newcommand{\twobodyeq}{\ddot{r}= -\dfrac{\mu r}{\norm{r}^3}}
+orbitfilter_cmds.tex:\newcommand{\twobodywhere}{\mu=G(m_1+m_2) \text{ and }G\text{ is the gravitational constant}}
+orbitfilter_cmds.tex:\newcommand{\twobodywhere}{\mu=G(m_1+m_2) \text{ and }G\text{ is the gravitational constant}}
+orbitfilter_cmds.tex:\newcommand{\angmom}{h:=r\times \dot{r}}
+orbitfilter_cmds.tex:\newcommand{\angmom}{h:=r\times \dot{r}}
+orbitfilter_cmds.tex:\newcommand{\muearth}{\mu_E:=3.986004418\times 10^{14}\text{ m}^3/\text{sec}^2}
+orbitfilter_cmds.tex:\newcommand{\muearth}{\mu_E:=3.986004418\times 10^{14}\text{ m}^3/\text{sec}^2}
+orbitfilter_cmds.tex:\newcommand{\sveqmotion}[2]{\dot{#1}=#2(#1,t)}
+orbitfilter_cmds.tex:\newcommand{\sveqmotion}[2]{\dot{#1}=#2(#1,t)}
+orbitfilter_cmds.tex:\newcommand{\wheresveqmotion}[5]{#1=\left[#1_{#2},#1_{#3},#1_{#4},\dot{#1}_{#2},\dot{#1}_{#3},\dot{#1}_{#4}, #5 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\wheresveqmotion}[5]{#1=\left[#1_{#2},#1_{#3},#1_{#4},\dot{#1}_{#2},\dot{#1}_{#3},\dot{#1}_{#4}, #5 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\tsbeqmo}{\sveqmotion{\underbar{X}}{F}}
+orbitfilter_cmds.tex:\newcommand{\tsbeqmo}{\sveqmotion{\underbar{X}}{F}}
+orbitfilter_cmds.tex:\newcommand{\tsbwhereeqmo}{\wheresveqmotion{\underbar{X}}{X}{Y}{Z}{\beta}}
+orbitfilter_cmds.tex:\newcommand{\tsbwhereeqmo}{\wheresveqmotion{\underbar{X}}{X}{Y}{Z}{\beta}}
+orbitfilter_cmds.tex:\newcommand{\myeqmo}{\sveqmotion{X}{F}}
+orbitfilter_cmds.tex:\newcommand{\myeqmo}{\sveqmotion{X}{F}}
+orbitfilter_cmds.tex:\newcommand{\mywhereeqmo}{\wheresveqmotion{X}{1}{2}{3}{\gamma}}
+orbitfilter_cmds.tex:\newcommand{\mywhereeqmo}{\wheresveqmotion{X}{1}{2}{3}{\gamma}}
+orbitfilter_cmds.tex:\newcommand{\myXdoteq}{\sveqmotion{X}{F}=\left[F_1,F_2,F_3,F_4,F_5,F_6,F_7 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\myXdoteq}{\sveqmotion{X}{F}=\left[F_1,F_2,F_3,F_4,F_5,F_6,F_7 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\gomanonlineq}{x(t_{k+1})=f(x(t_k))+G(t_k)w(t_k)}
+orbitfilter_cmds.tex:\newcommand{\gomanonlineq}{x(t_{k+1})=f(x(t_k))+G(t_k)w(t_k)}
+orbitfilter_cmds.tex:\newcommand{\gomaeqmo}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+orbitfilter_cmds.tex:\newcommand{\gomaeqmo}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+orbitfilter_cmds.tex:\newcommand{\gomaepochstateeq}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+orbitfilter_cmds.tex:\newcommand{\gomaepochstateeq}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+orbitfilter_cmds.tex:\newcommand{\gomawhereeqmo}{\wheresveqmotion{x}{1}{2}{3}{\gamma}}
+orbitfilter_cmds.tex:\newcommand{\gomawhereeqmo}{\wheresveqmotion{x}{1}{2}{3}{\gamma}}
+orbitfilter_cmds.tex:\newcommand{\gomaxdoteqseven}{f(x(t))=\left[f_1,f_2,f_3,f_4,f_5,f_6,f_7 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\gomaxdoteqseven}{f(x(t))=\left[f_1,f_2,f_3,f_4,f_5,f_6,f_7 \right]\trans}
+orbitfilter_cmds.tex:\newcommand{\gomarefepochstate}{x_0=x_{\text{ref}}(t_0)}
+orbitfilter_cmds.tex:\newcommand{\gomarefepochstate}{x_0=x_{\text{ref}}(t_0)}
+orbitfilter_cmds.tex:\newcommand{\svvectwodseven}[2]{\left[ #1, #2,\dot{#1}, \dot{#2}, \mu, MS_1, MS_2\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\svvectwodseven}[2]{\left[ #1, #2,\dot{#1}, \dot{#2}, \mu, MS_1, MS_2\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\dotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},\ddot{#1}, \ddot{#2}, \dot{\mu}, \dot{MS_1}, \dot{MS_2}\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\dotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},\ddot{#1}, \ddot{#2}, \dot{\mu}, \dot{MS_1}, \dot{MS_2}\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\altdotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},-\dfrac{\mu#1}{r^3}, -\dfrac{\mu#2}{r^3}, 0, 0, 0\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\altdotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},-\dfrac{\mu#1}{r^3}, -\dfrac{\mu#2}{r^3}, 0, 0, 0\right]\trans}
+orbitfilter_cmds.tex:\newcommand{\Asvtwodseven}[2]{
+orbitfilter_cmds.tex:\newcommand{\Asvtwodseven}[2]{
+orbitfilter_cmds.tex:\newcommand{\linrefeq}[1]{\dot{#1}(t)=\dot{#1}^{*}(t)+\left[ \dfrac{\partial\dot{#1}(t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\linrefeq}[1]{\dot{#1}(t)=\dot{#1}^{*}(t)+\left[ \dfrac{\partial\dot{#1}(t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\altlinrefeq}[2]{\dot{#1}(t)=#2({#1}^{*},t)+\left[ \dfrac{\partial #2(#1,t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\altlinrefeq}[2]{\dot{#1}(t)=#2({#1}^{*},t)+\left[ \dfrac{\partial #2(#1,t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\svstatedef}[2]{#1(t):=#2(t)-#2^{*}(t)}
+orbitfilter_cmds.tex:\newcommand{\svstatedef}[2]{#1(t):=#2(t)-#2^{*}(t)}
+orbitfilter_cmds.tex:\newcommand{\svdyneq}[2]{\dot{#1}(t)=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}#1(t)}
+orbitfilter_cmds.tex:\newcommand{\svdyneq}[2]{\dot{#1}(t)=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}#1(t)}
+orbitfilter_cmds.tex:\newcommand{\gomalinrefeq}[2]{\dot{#1}(t)=\dot{#1}_{\text{ref}}(t)+\left[ \dfrac{\partial #2(t)}{\partial \lambda}\right]_{\lambda=#1_{\text{ref}}}\left[ #1(t)-#1_{\text{ref}}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\gomalinrefeq}[2]{\dot{#1}(t)=\dot{#1}_{\text{ref}}(t)+\left[ \dfrac{\partial #2(t)}{\partial \lambda}\right]_{\lambda=#1_{\text{ref}}}\left[ #1(t)-#1_{\text{ref}}(t)\right] +\cdots}
+orbitfilter_cmds.tex:\newcommand{\gomacurrentstateresidual}[2]{\delta #1 (#2)=#1(#2)-#1_{\text{ref}}(#2)}
+orbitfilter_cmds.tex:\newcommand{\gomacurrentstateresidual}[2]{\delta #1 (#2)=#1(#2)-#1_{\text{ref}}(#2)}
+orbitfilter_cmds.tex:\newcommand{\gomaepochstateresidual}{\delta x_0(t)=x_0(t)-x_{0}}
+orbitfilter_cmds.tex:\newcommand{\gomaepochstateresidual}{\delta x_0(t)=x_0(t)-x_{0}}
+orbitfilter_cmds.tex:\newcommand{\dynmatdef}[2]{#1(t):=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}}
+orbitfilter_cmds.tex:\newcommand{\dynmatdef}[2]{#1(t):=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}}
+orbitfilter_cmds.tex:\newcommand{\svdynmatdef}{\dynmatdef{A}{X}}
+orbitfilter_cmds.tex:\newcommand{\svdynmatdef}{\dynmatdef{A}{X}}
+orbitfilter_cmds.tex:\newcommand{\svdyneqAx}{\dot{x}(t)=Ax(t)}
+orbitfilter_cmds.tex:\newcommand{\svdyneqAx}{\dot{x}(t)=Ax(t)}
+orbitfilter_cmds.tex:\newcommand{\svsolneqlong}[2]{x(#1)=\stmlong{#1}{#2}x(#2)}
+orbitfilter_cmds.tex:\newcommand{\svsolneqlong}[2]{x(#1)=\stmlong{#1}{#2}x(#2)}
+orbitfilter_cmds.tex:\newcommand{\svsolneq}{\svsolneqlong{t}{t_0}}
+orbitfilter_cmds.tex:\newcommand{\svsolneq}{\svsolneqlong{t}{t_0}}
+orbitfilter_cmds.tex:\newcommand{\svAmat}{
+orbitfilter_cmds.tex:\newcommand{\svAmat}{
+orbitfilter_cmds.tex:\newcommand{\phidiffeq}[1]{\dot{\Phi}(t,#1)=A(t,#1)\Phi(t,#1)}
+orbitfilter_cmds.tex:\newcommand{\phidiffeq}[1]{\dot{\Phi}(t,#1)=A(t,#1)\Phi(t,#1)}
+phimdp.tex:\newcommand{\etalchar}[1]{$^{#1}$}
+phimdp.tex:\newcommand{\etalchar}[1]{$^{#1}$}
+taylor.tex:% \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+taylor.tex:% \newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+taylor.tex:\newcommand{\derivop}[2]{\left[\frac{d}{d#2}\right]#1}
+taylor.tex:\newcommand{\derivop}[2]{\left[\frac{d}{d#2}\right]#1}
+taylor.tex:\newcommand{\Dop}[2]{D_{#2}\left[#1\right]}
+taylor.tex:\newcommand{\Dop}[2]{D_{#2}\left[#1\right]}
+taylor.tex:\newcommand{\derivnth}[3]{\dfrac{d^{#3}#1}{d#2^{#3}}}
+taylor.tex:\newcommand{\derivnth}[3]{\dfrac{d^{#3}#1}{d#2^{#3}}}
+taylor.tex:\newcommand{\derivopnth}[3]{\left[\frac{d^{#3}}{d#2^{#3}}\right]#1}
+taylor.tex:\newcommand{\derivopnth}[3]{\left[\frac{d^{#3}}{d#2^{#3}}\right]#1}
+taylor.tex:\newcommand{\Dopnth}[3]{D^{#1}_{#2}#3}
+taylor.tex:\newcommand{\Dopnth}[3]{D^{#1}_{#2}#3}
+taylor.tex:%\newcommand{\pderiv}[2]{\frac{\partial#1}{\partial#2}}
+taylor.tex:%\newcommand{\pderiv}[2]{\frac{\partial#1}{\partial#2}}
+taylor.tex:\newcommand{\pderivop}[2]{\left[\frac{\partial}{\partial#2}\right]#1}
+taylor.tex:\newcommand{\pderivop}[2]{\left[\frac{\partial}{\partial#2}\right]#1}
+taylor.tex:\newcommand{\pDop}[2]{\partial_{#2}\left(#1\right)}
+taylor.tex:\newcommand{\pDop}[2]{\partial_{#2}\left(#1\right)}
+taylor.tex:\newcommand{\pderivnth}[3]{\frac{\partial^{#3}#1}{\partial#2^{#3}}}
+taylor.tex:\newcommand{\pderivnth}[3]{\frac{\partial^{#3}#1}{\partial#2^{#3}}}
+taylor.tex:\newcommand{\pderivopnth}[3]{\left[\frac{\partial^{#3}}{\partial#2^{#3}}\right]#1}
+taylor.tex:\newcommand{\pderivopnth}[3]{\left[\frac{\partial^{#3}}{\partial#2^{#3}}\right]#1}
+taylor.tex:\newcommand{\pDopnth}[3]{\partial^{#3}_{#2}\left(#1\right)}
+taylor.tex:\newcommand{\pDopnth}[3]{\partial^{#3}_{#2}\left(#1\right)}
+taylor.tex:\newcommand{\derivsum}[4]{#4_{#3}\derivnth{#1}{#2}{#3}+\cdots+#4_1\deriv{#1}{#2}+#4_0}
+taylor.tex:\newcommand{\derivsum}[4]{#4_{#3}\derivnth{#1}{#2}{#3}+\cdots+#4_1\deriv{#1}{#2}+#4_0}
+taylor.tex:\newcommand{\derivsumtv}[4]{#4_{#3}(#2)\derivnth{#1}{#2}{#3}+\cdots+#4_1(#2)\deriv{#1}{#2}+#4_0(#2)}
+taylor.tex:\newcommand{\derivsumtv}[4]{#4_{#3}(#2)\derivnth{#1}{#2}{#3}+\cdots+#4_1(#2)\deriv{#1}{#2}+#4_0(#2)}
+taylor.tex:\newcommand{\Dopsum}[4]{#4_{#3}\Dopnth{#1}{#2}{#3}+\cdots+#4_1\Dop{#1}{#2}+#4_0}
+taylor.tex:\newcommand{\Dopsum}[4]{#4_{#3}\Dopnth{#1}{#2}{#3}+\cdots+#4_1\Dop{#1}{#2}+#4_0}
+taylor.tex:\newcommand{\Dopsumtv}[4]{#4_{#3}(#2)\Dopnth{#1}{#2}{#3}+\cdots+#4_1(#2)\Dop{#1}{#2}+#4_0(#2)}
+taylor.tex:\newcommand{\Dopsumtv}[4]{#4_{#3}(#2)\Dopnth{#1}{#2}{#3}+\cdots+#4_1(#2)\Dop{#1}{#2}+#4_0(#2)}
+taylor.tex:\newcommand{\Taylordot}[4]
+taylor.tex:\newcommand{\Taylordot}[4]
+taylor.tex:\newcommand{\Taylormat}[4]
+taylor.tex:\newcommand{\Taylormat}[4]
+taylor.tex:\newcommand{\mvartaylortermsym}[3]
+taylor.tex:\newcommand{\mvartaylortermsym}[3]
+taylor.tex:\newcommand{\mvartaylorterm}[4]
+taylor.tex:\newcommand{\mvartaylorterm}[4]
+taylor.tex:\newcommand{\mvartaylortermsymdef}[4]
+taylor.tex:\newcommand{\mvartaylortermsymdef}[4]
+taylor.tex:\newcommand{\mvartaylorseries}[2]
+taylor.tex:\newcommand{\mvartaylorseries}[2]
+taylor.tex:\newcommand{\Dopsumtaylor}[3]
+taylor.tex:\newcommand{\Dopsumtaylor}[3]
+taylor.tex:\newcommand{\svartaylorterm}[4]
+taylor.tex:\newcommand{\svartaylorterm}[4]
+taylor.tex:\newcommand{\Dopsumtayloralt}[4]
+taylor.tex:\newcommand{\Dopsumtayloralt}[4]
+taylor.tex:\newcommand{\tayloropdef}[4]
+taylor.tex:\newcommand{\tayloropdef}[4]

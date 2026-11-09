@@ -1,0 +1,128 @@
+% day1_seg4_prob/sample_space.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{Sample Spaces}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Experiments 
+}
+  \onslide<3->{
+\item Sample Space:  $\Omega$  
+\begin{itemize}
+ \item consists of all possible outcomes $\omega$.
+ \end{itemize}
+}
+  \onslide<4->{
+\item Events:  Subsets of $\Omega$ forming a $\sigma$-algebra.  Not necessarily \textit{all} subsets.  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{Examples:  Experiment and Sample Space}
+}
+\begin{itemize}
+  \onslide<2->{
+\item 1.  Experiment:  Single coin toss
+  \begin{itemize}
+  \item Sample Space:  $\Omega=\set{H,T}$
+  \end{itemize}  
+}
+  \onslide<3->{
+\item 2. Experiment:  Toss coin twice
+  \begin{itemize}
+  \item Sample Space:  $\Omega=\set{HH,HT,TH,TT}$
+  \end{itemize}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{$\sigma$-Algebras}
+}
+\begin{itemize}
+  \onslide<2->{
+\item In probability, we are often less concerned with individual outcomes and more with sets of outcomes.  
+}
+  \onslide<3->{
+\item Sets of outcomes, i.e., subsets of the sample space $\Omega$, are called "events".    
+}
+  \onslide<4->{
+\item Not every subset of the sample space $\Omega$ qualifies as an event.     
+}
+  \onslide<5->{
+\item Qualified events form an "event algebra", known in mathematics as a \textbf{$\sigma$-algebra}  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{$\sigma$-Algebras}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  A $\sigma$-algebra $\mathcal{M}$ is a
+ collection of subsets of $\Omega$ that is closed under arbitrary unions and
+ intersections, set complementation, and which also contains the whole
+ space $\Omega$ as well. 
+}
+  \onslide<3->{
+\item A $\sigma$-algebra can be expressed in structural notation as\\
+ $<\mathcal{M},\cup,\cap,\:',\emptyset,\Omega>$  
+}
+  \onslide<4->{
+\item $\Omega$ is the certain event; $\emptyset$ is the impossible event
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{Examples: $\sigma$-algebras}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Double coin toss:
+}
+  \onslide<3->{
+  \begin{itemize}
+  \item Sample Space: $\Omega=\set{HH,HT,TH,TT}$
+  \item $\sigma$-algebra: $\mathcal{M}=\set{\emptyset, \set{HH},\set{HT,TH,TT},\Omega}$
+   \item Note that for this $\sigma$-algebra, the set $\set{TT}$ is not considered an event
+  \end{itemize}  
+}  
+   \onslide<4->{
+  \item The power set $\mathcal{P}(\Omega)$, consisting of all subsets of $\Omega$, is a $\sigma$-algebra
+}
+   \onslide<5->{
+  \item The set consisting of just the empty set and the sample space itself is also a $\sigma$-algebra:  
+  $\mathcal{M}=\set{\emptyset,\Omega}$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Probability} 
+	\framesubtitle{Mutually Exclusive Events}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Events $A,B\in\mathcal{M}$ are called \textbf{\textit{mutually exclusive}}, 
+if they are disjoint as sets, i.e., if $A\cap B=\emptyset$
+}
+  \onslide<3->{
+\item In previous example, events $\set{HH}$ and $\set{HT,TH,TT}$ are mutually exclusive
+}
+\end{itemize}
+\end{frame}
+

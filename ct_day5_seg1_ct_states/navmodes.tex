@@ -1,0 +1,57 @@
+% day5_seg1_ct_states/navmodes.tex
+\begin{frame}
+Navigation Modes
+ \begin{itemize}
+ \item Aided Inertial
+	\begin{itemize}
+		\item INS + one or more of the following navaids: GPS/DVS/TAS
+		\item Position Fixes available in all aided modes
+	\end{itemize}
+ \item Unaided (Free) Inertial
+ \item Legacy Mode (no longer available): DVS/TAS - the so-called Doppler filter 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Aided Inertial
+\begin{itemize}
+  \item Kalman filter operational
+  \item Position Fixes
+	\begin{itemize}
+		\item geodetic: filter uses covariance ($P$) to determine how much posfix delta to allow
+		\item 100\% deterministic 
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+\begin{frame}
+Aided Inertial
+\begin{itemize}
+  \item Navigation Kalman filter begins operating when
+	\begin{itemize}
+		\item INU is operational and 
+		\item in NAV mode for more than 5 minutes and
+		\item groundspeed $\leq$ 30 ft/sec (17 kts)
+	\end{itemize}
+	\item Alignment filter operates in INU is in either
+	\begin{itemize}
+		\item ground fine alignment
+		\item air alignment
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+Unaided Inertial
+\begin{itemize}
+  \item No Kalman filter running!
+  \item Only 100\% posfixes allowed
+  \item Unaided modes
+	\begin{itemize}
+		\item Doppler Dead Reckoning (DR) 
+		\item TAS DR
+		\item GPS
+		\item No Nav
+	\end{itemize}
+\end{itemize} 
+\end{frame}

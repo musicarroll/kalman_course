@@ -1,0 +1,18 @@
+% arch_overview.tex
+\begin{frame}
+CT I Kalman Filter Software Architecture Overview
+\begin{itemize}
+  \item Primary Kalman Cycle: Every 10 sec or .1 Hz
+  \item Secondary Kalman Subcycles: 1 Hz and 4 Hz
+  \item Third Tier Kalman Subcycle: 8 Hz
+  \item Fourth Tier Kalman Minor Cycle: 16 Hz
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+CT I Kalman Filter Software Architecture Overview
+\begin{itemize}
+  \item Highly intertwined with general navigation calculations
+  \item Some of the same utilities are called at various rates
+\end{itemize} 
+\end{frame}

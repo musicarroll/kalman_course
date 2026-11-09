@@ -1,0 +1,17 @@
+% day4_seg4_redund/ct_weighting.tex
+\begin{frame}
+Typical Weighting Scheme
+ \begin{itemize}
+ \item Two separate INS error dynamics filters
+ \item Use error covariance outputs from each filter to weight state estimates
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Typical Weighting Scheme
+ \begin{itemize}
+ \item Weighting scheme:
+\[w_i(x)=\dfrac{\sigma_j(x)}{\sigma_1(x)+\sigma_2(x)}\]
+where $i\neq j\in\set{1,2}$ and $x$ is the parameter in question
+\end{itemize}
+\end{frame}

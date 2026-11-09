@@ -1,0 +1,30 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\input{orbitfilter_cmds.tex}  % Put in kalman_cmdmaster.tex !!!
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{Test}
+\input{orbit_filter.tex}
+
+
+
+\end{document}

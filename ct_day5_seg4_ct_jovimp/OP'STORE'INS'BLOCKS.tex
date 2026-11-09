@@ -1,0 +1,17 @@
+\begin{frame}
+OP'STORE'INS'BLOCKS
+\begin{verbatim}
+FUNCTION:  To store the INS data blocks for synchronizing with GPS data.
+           This module is called when the filter is in motion align or 
+           in a GPS aided nav mode.  
+           It stores the INS data and the INS sum blocks at 4 Hz.
+           When GPS'POS or GPS'VEL is selected as the observation, 
+           this data is used to synchronize the INS data to the GPS data.  
+           The INS data is stored at 4 Hz
+           during the first 1.25 seconds after observation processing is turned 
+           on in a 20-second cycle.  
+           Then a GPS observation falling in this 1.25 second interval is looked
+           for.
+
+\end{verbatim}
+\end{frame}

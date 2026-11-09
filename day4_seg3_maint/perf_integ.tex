@@ -1,0 +1,79 @@
+% day4_seg3_maint/perf_integ.tex
+\begin{frame}
+Filter Performance and Integrity Monitoring
+ \begin{itemize}
+ \item Covariance Monitoring
+ \item Innovations Monitoring
+ \item Corrective Action
+\end{itemize}
+\end{frame}
+\begin{frame}
+Covariance Monitoring
+\begin{itemize}
+  \item Ensuring Symmetry
+  \item Managing Observability
+  \item Ensuring Positive Definiteness
+\end{itemize} 
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Ensuring Symmetry
+\begin{itemize}
+  \item $P$ is supposed to be positive definite and symmetric
+  \item Symmetry means that $P\trans = P$, i.e., for each element $p_{ij}$ of $P$ we must have $p_{ij}=p_{ji}$
+  \item Roundoff error can cause loss of symmetry
+  \item The best way to ensure symmetry is to work only with items on or (say) above the diagonal and simply define elements below he diagonal by fiat.
+\end{itemize} 
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Ensuring Symmetry
+\begin{itemize}
+  \item Both $P(+)$ and $P(-)$ need to be symmetrized
+\begin{itemize}
+  \item After extrapolation: symmetrize
+  \item After update: symmetrize
+\end{itemize}
+\end{itemize} 
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Managing Observability
+\begin{itemize}
+  \item Observability means there is a linear path from the measurements to states
+  \item Structural observability determined by $\Phi$ and $H$:
+\end{itemize}
+ If $H$ is $1\times n$, where $n$ is the size of the state vector, then the state $x_0$ is said to be \textbf{observable }from $n$ scalar measurements $\set{z_0,\ldots,z_{n-1}}$ if the block matrix
+\[
+\begin{bmatrix}
+H\trans&\Phi\trans H\trans & \cdots & (\Phi\trans)^{n-1}H\trans
+\end{bmatrix}
+\]
+is of rank $n$
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Managing Observability
+\begin{itemize}
+  \item If unobservable states are also unstable, estimation errors will be unstable and $P$ will show symptoms 
+\begin{itemize}
+  \item $\text{diag}(P)\rightarrow \infty$
+  \item I.e., one or more diagonal elements of $P$ will grow without bound
+\end{itemize}
+  \item Not the same as divergence: "feature" of the design
+\end{itemize}
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Managing Observability
+\begin{itemize}
+  \item Note also that the state estimation error variances (i.e., the diagonals of $P$) will naturally grow in the absence of measurements
+  \item Going for a long time without incorporating a measurement is equivalent to lack of observability in the associated states
+  \item Use covariance analysis simulation to detect non-observability
+  \item The only real solution is to add new measurements
+\end{itemize}
+\end{frame}
+\begin{frame}
+Covariance Monitoring:  Ensuring Positive Definiteness
+\begin{itemize}
+  \item $P$ is supposed to be positive definite
+  \item This means that $x'Px>0$ whenever $x\neq0$
+  \item States modeled as random constants or other deterministic states can cause loss of positivity
+  \item Add covariance bumping:  Add small amounts of process noise to diagonal elements of $Q$ for these states
+\end{itemize}
+\end{frame}

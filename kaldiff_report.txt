@@ -1,0 +1,3295 @@
+*** ./basic_nav_concepts/basicnavprob.tex	2017-11-01 16:33:00.000000000 -0500
+--- ../from_rtx/basicnavprob.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 20,26 ****
+  %\begin{itemize}
+  %  \item Solution easy in inertial space because ...
+  %  \begin{itemize}
+! %	\item inertial instruments sense acceleration and rotational % rate with respect to inertial coordinate frame 
+  %	\item inertial frame attached to sensor platform
+  %    \item Note: You still need to rotate accelerations from body %to inertial coordinates prior to integration (strapdown)
+  %  \end{itemize}
+--- 20,26 ----
+  %\begin{itemize}
+  %  \item Solution easy in inertial space because ...
+  %  \begin{itemize}
+! %	\item inertial instruments sense acceleration and rotational % rate with respect to inertial reference frame 
+  %	\item inertial frame attached to sensor platform
+  %    \item Note: You still need to rotate accelerations from body %to inertial coordinates prior to integration (strapdown)
+  %  \end{itemize}
+*** ./basic_nav_concepts/coordconv.tex	2017-11-01 16:33:00.000000000 -0500
+--- ../from_rtx/coordconv.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 1,6 ****
+  % day3_seg1_navproblem/coordconv.tex
+  \begin{frame}
+! \frametitle{Coordinate Frames}
+   \begin{itemize}
+   \item Inertial
+   \item Earth Fixed
+--- 1,6 ----
+  % day3_seg1_navproblem/coordconv.tex
+  \begin{frame}
+! \frametitle{Coordinate Systems and Conversions}
+   \begin{itemize}
+   \item Inertial
+   \item Earth Fixed
+***************
+*** 9,15 ****
+  \end{itemize}
+  \end{frame}
+  \begin{frame}
+! \frametitle{Coordinate Frames}
+   \begin{itemize}
+    \item Technically speaking, all frames are earth-centered
+    \begin{itemize}
+--- 9,15 ----
+  \end{itemize}
+  \end{frame}
+  \begin{frame}
+! \frametitle{Coordinate Systems and Conversions}
+   \begin{itemize}
+    \item Technically speaking, all frames are earth-centered
+    \begin{itemize}
+*** ./basic_nav_concepts/earthrev.tex	2017-11-01 16:33:00.000000000 -0500
+--- ../from_rtx/earthrev.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 9,16 ****
+   \end{itemize}
+   \item Complications:
+   \begin{itemize}
+!    \item Earth surface is curved (ellipsoid)
+!    \item Earth is turning (can usually ignore motion about the Sun for terrestrial nav)
+   \end{itemize}
+  \end{itemize}
+  \end{frame}
+--- 9,19 ----
+   \end{itemize}
+   \item Complications:
+   \begin{itemize}
+!    \item Surface of earth is curved (ellipsoid)
+!    \begin{itemize}
+!      \item Constant velocity motion of the surface induces rotation in inertial space
+!    \end{itemize}
+!    \item Earth itself is rotating (can usually ignore motion about the Sun for terrestrial nav)
+   \end{itemize}
+  \end{itemize}
+  \end{frame}
+***************
+*** 24,30 ****
+    \begin{itemize}
+     \item Semi-major axis:  6,378,137.0 m
+          \item Semi-minor axis:  6,356,752.314  m
+    \end{itemize}
+!   \item Not the same as geoid:  no terrain or gravity model
+  \end{itemize} 
+  \end{frame}
+--- 27,34 ----
+    \begin{itemize}
+  	\item Semi-major axis:  6,378,137.0 m
+      \item Semi-minor axis:  6,356,752.314 m
++ 	\item Rotational rate:  $7.2921150 +/ 0.0000001\times 10^{-5}$ radians per SI second
+    \end{itemize}
+!   \item Not the same as geoid model:  no terrain or gravity model (EGM2008)
+  \end{itemize} 
+  \end{frame}
+*** ./basic_nav_concepts/gps.tex	2018-09-01 12:54:10.000000000 -0500
+--- ../from_rtx/gps.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 33,40 ****
+  	\frametitle{Satellite Position}
+  	\begin{itemize}
+  		\item How do we know which satellite is transmitting? Answer:  Unique Pseudorandom Noise (PRN)
+! 		\item How we know the position of the 
+! satellite at time of transmission?  Answer:
+  		\begin{itemize}
+  			\item Six Keplerian elements
+  			\item User receiver converts to WGS-84 X,Y,Z ECEF coordinates
+--- 33,39 ----
+  	\frametitle{Satellite Position}
+  	\begin{itemize}
+  		\item How do we know which satellite is transmitting? Answer:  Unique Pseudorandom Noise (PRN)
+! 		\item How do we know the position of the satellite at time of transmission?  Answer:
+  		\begin{itemize}
+  			\item Six Keplerian elements
+  			\item User receiver converts to WGS-84 X,Y,Z ECEF coordinates
+*** ./basic_nav_concepts/navproblem_main.tex	2017-11-01 16:33:00.000000000 -0500
+--- ../from_rtx/navproblem_main.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 1,11 ****
+  % day3_seg1_navproblem/navproblem_main.tex
+  \begin{frame}
+  \frametitle{\textbf{The Navigation Problem and Reference Frames}}
+  \framesubtitle{Topics}
+   \begin{itemize}
+   \item Basic Navigation Problem and Solutions
+   \item Earth Referenced Navigation
+!  \item Coordinate Frame Conversion
+   \item Basic Strapdown Navigation Equations
+  \end{itemize}
+  \end{frame}
+--- 1,12 ----
+  % day3_seg1_navproblem/navproblem_main.tex
++ \subsection{Basic Navigation Concepts}
+  \begin{frame}
+  \frametitle{\textbf{The Navigation Problem and Reference Frames}}
+  \framesubtitle{Topics}
+   \begin{itemize}
+   \item Basic Navigation Problem and Solutions
+   \item Earth Referenced Navigation
+!  \item Coordinate Conversion
+   \item Basic Strapdown Navigation Equations
+  \end{itemize}
+  \end{frame}
+***************
+*** 13,16 ****
+--- 14,18 ----
+  \input{basic_nav_concepts/basicnavprob.tex}
+  \input{basic_nav_concepts/earthrev.tex}
+  \input{basic_nav_concepts/coordconv.tex}
++ \subsection{Strapdown Inertial Navigation}
+  \input{basic_nav_concepts/strapdown.tex}
+*** ./basic_nav_concepts/overview.tex	2017-11-01 16:33:00.000000000 -0500
+--- ../from_rtx/overview.tex	2020-06-15 15:03:42.000000000 -0500
+***************
+*** 1,77 ****
+  \begin{frame}
+! \frametitle{Overview}
+  \begin{itemize}
+!   \item Etymology of the term 'Navigation':  Latin $navis$='ship' and $agere$='to move or direct'
+!   \item Arose out of marine or ship navigation due to the challenge of navigating without landmarks
+!   \item Modern distinction between navigation and guidance
+    \begin{itemize}
+!     \item navigation associated with state determination (open loop)
+!     \item guidance associated with control feedback (closed loop)
+    \end{itemize} 
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+!   \frametitle{The Navigation Problem from a Mathematical Perspective}
+! With respect to some mathematical reference frame, determine ...
+  \begin{itemize}
+!   \item vector displacement (3d position) and its time derivatives (velocity, acceleration, ...)
+!   \item rotational orientation (3d attitude) and its time derivatives (angular velocity, angular acceleration, ...) 
+!   \item Note:  This is a pure mathematics problem ... sensors do not enter into it
+  \end{itemize} 
+  \end{frame}
+  
+  
+  \begin{frame}
+!   \frametitle{The Navigation Problem from a Mathematical Perspective}
+  \begin{itemize}
+!   \item Reference frame is crucial:
+    \begin{itemize}
+!     \item Position:  origin and three linearly independent vectors yields three numbers
+!     \item Attitude:  rotations about three linearly indepedent vectors yields three numbers
+!   \item I.e., 6 DOF = six degrees of freedom (3 position coordinates + 3 attitude coordinates)
+    \end{itemize}
+  \end{itemize} 
+  \end{frame}
+  
+  
+  \begin{frame}
+!  \frametitle{The Navigation Problem from a Real World Physical Perspective}
+  \begin{itemize}
+!   \item Which reference frame should we use?
+!   \item Rectilinear or curvilenar coordinate system?
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+!  \frametitle{The Navigation Problem from a Real World Physical Perspective}
+! \framesubtitle{Position}
+! For terrestrial navigation, global spherical (spheroidal) coordinates are used:
+  \begin{itemize}
+!   \item Latitude:  $\pm 90$ degrees north(+) or south(-) of the equator.
+!   \item Longitude: $\pm 180$ degrees east(+) or west(-) of the prime meridian through Greenwich, England
+!   \item Height:  Above the ellipsoid (normal to surface), or radius from center of earth
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+!  \frametitle{The Navigation Problem from a Real World Physical Perspective}
+! \framesubtitle{Direction:  Bearing, Course, Track}
+  \begin{itemize}
+!   \item North Reference:  True and Magnetic. Direction angles are usually referenced clockwise with respect to north.
+!   \item  Bearing:  The angle with respect to north from one point on earth to another
+!   \item  Track:    The angle made by velocity vector with respect to north
+!   \item  Course:   Sometimes used synonym for track; sometimes expresses desired track vs. actual track
+!   \item  Heading:  Direction vehicle is pointing in with respect to north
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+!  \frametitle{The Navigation Problem from a Real World Physical Perspective}
+! \framesubtitle{The Need for Sensors}
+  \begin{itemize}
+!   \item Reference frames are necessary, but not sufficient for real world navigation
+!   \item Also need real world sensor measurement data indicative of locations, distances, angles, etc. with respect to these reference frames
+!   \item But real world sensors are not perfect!  They only provide apparent positions, distances, angles, etc.
+  \end{itemize} 
+  \end{frame}
+--- 1,229 ----
++ % overview.tex
++ \section{Course Overview}
+  \begin{frame}
+! \onslide<1->{\frametitle{Course Overview}}
+   \begin{itemize}
+! \onslide<2->{\item Topic Overview}
+! \onslide<3->{\item Course Structure}
+! \onslide<4->{\item Detailed Topic List}
+! \onslide<5->{\item Instructor Background}
+! \end{itemize}
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Course Overview: Topic Overview}}
+!  \begin{itemize}
+!  \onslide<2->{\item Kalman Filtering}
+!  \begin{itemize}
+! 	\onslide<3->{\item General Theory Overview w/o proofs}
+! 	\onslide<4->{\item Practical Aspects of Application}
+!         \onslide<5->{\item Matlab and Simulink Examples}
+!  \end{itemize}
+!  \onslide<6->{\item Applications to GPS Control Segment}
+! \end{itemize}
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Course Overview: Course Structure}}
+!  \begin{itemize}
+!    \onslide<2->{\item Originally 10 segments (derived from author's 5-day engineering short course)}
+!    \onslide<3->{\item Approximately 1 hour per segment }
+!    \onslide<4->{\item Informational Course}
+!    \begin{itemize}
+!      \onslide<5->{\item Concepts}
+!      \onslide<6->{\item Examples}
+!      \onslide<7->{\item Exercises (optional)}
+!    \end{itemize}
+!  \end{itemize}
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Course Overview: Detailed Topic List}}
+! \begin{itemize}
+! \onslide<2->{\item Part I:   The Basic Kalman Equations, Part I -- Heuristic Overview, Equation Drilldown, State Space Concepts }
+! \onslide<3->{\item Part II:  The Basic Kalman Equations, Part II -- Probability, Statistics and Random Processes}
+! \onslide<4->{\item Part III: Implementation Issues and Remedies, Applications to Navigation }
+! \onslide<5->{\item Part IV:  Applications to GPS Control Segment Kalman Filters}
+! \end{itemize} 
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Course Overview: Instructor Background}}
+  \begin{itemize}
+! \onslide<2->{\item Michael Carroll}
+! \onslide<3->{\item Masters Degree in Mathematics}
+! \onslide<4->{\item Raytheon Navigation Mission Lead on GPS OCX Program}
+! \onslide<5->{\item 37 years in Aerospace and Defense Industry}
+! \onslide<6->{\item Navigation Systems and Algorithms}
+  \end{itemize} 
++ \end{frame}
++ 
++ \begin{frame}
++ \onslide<1->{\frametitle{Course Overview: Instructor Background}}
++ \begin{itemize}
++ \onslide<2->{\item Mikhail Kosyan}
++ \onslide<3->{\item Masters Degree in Aerospace Engineering}
++ \onslide<4->{\item Raytheon Mission Vehicle Management (MVM) System Engineer on GPS OCX Program}
++ \onslide<5->{\item 7 years in Aerospace and Defense Industry}
++ \onslide<6->{\item Guidance, Navigation and Control}
+  \end{itemize} 
+  \end{frame}
+  
++ 
++ \section{Kalman Filter Overview}
++ 
+  \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{What is a Kalman Filter?}}
+  \begin{itemize}
+! \onslide<2->{
+! \item Optimal state estimator for linear, stochastic dynamic system
+! }
+! \begin{itemize}
+! \onslide<3->{
+!   \item  Estimation based on noisy, indirect measurements of state
+! }
+! \end{itemize}
+! \onslide<4->{
+! \item Essentially, it's a Recursive Weighted Least Squares (RWLS) estimator}
+! \onslide<5->{\item 
+! 	B.L.U.E. = Best Linear Unbiased Estimator
+! }
+! % \begin{verbatim}
+! % http://www.cs.unc.edu/~welch/kalman/kalmanPaper.html
+! % \end{verbatim}
+  \end{itemize}
+  \end{frame}
+  
++ \begin{frame}
++ \onslide<1->{\frametitle{Kalman Filter Overview}
++ \framesubtitle{History}}
++ \begin{itemize}
++ \onslide<2-> {
++ \item 
++ Rudolf E. Kalman\\
++ Seminal paper in 1960:  "A New Approach to Linear Filtering and Prediction Problems"
++ }
++ \onslide<3->{\item Actually preceded by work of Peter Swerling at RAND Corp in 1950s}
++ \onslide<4->{\item Least squares goes back to Coates(1722), Boscovich(1757), Laplace(1799), Legendre(1805), Gauss(1809)
++ }
++ \onslide<5->{\item Rigorous mathematical foundation built on work of mathematician David Hilbert in 1920s
++ }
++ \begin{itemize}
++ \onslide<6->{\item Kalman filtering now recognized as orthogonal projection in infinite dimensional Hilbert Space
++ }
++ \end{itemize}
++ \end{itemize}
++ \end{frame}
++ % 
+  
+  \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{History}}
+  \begin{itemize}
+! \onslide<2->{\item Kalman also built upon work by the Russian Pontrayagin (optimal control theory)
+! }
+  \begin{itemize}
+! \onslide<3->{
+! \item Kalman showed duality between Controllability and Observability
+! }
+! \onslide<4->{\item Worked in \textbf{time domain}, which is favorable to MIMO (multiple input multiple output) systems, 
+! in contrast to Norbert Wiener's filtering in \textbf{frequency domain}
+! }
+  \end{itemize}
++ \onslide<5->{\item State space concepts known to physicists:  Gibbs coined term "phase space" in 1901}
++ \onslide<6->{\item Elie Cartan:  1869-1951:  "espace des etats"}
+  \end{itemize}
+  \end{frame}
+  
++ \begin{frame}
++   \onslide<1->{
++ 	\frametitle{Kalman Filter Overview} 
++ 	\framesubtitle{Least Squares Luminaries}
++ }
++ 		\begin{figure}
++ Roger Boscovich, S.J.
++ 		\includegraphics[scale=0.50]{boscovich.jpg}
++ 		\end{figure}
++ 		\begin{figure}
++ Carl F. Gauss
++ 		\includegraphics[scale=0.25]{gauss_60.jpg}
++ 		\end{figure} 
++ \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+! 	\frametitle{Kalman Filter Overview} 
+! 	\framesubtitle{Recursive Least Squares Luminaries} }
+! \begin{figure}
+! Peter Swerling
+! \includegraphics[scale=0.33]{Peter_Swerling.jpg}
+! \end{figure}
+! \begin{figure}
+! Rudolf Kalman
+! \includegraphics[scale=0.50]{RudolfKalman.jpg}
+! \end{figure}
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{History}}
+! \begin{itemize}
+! \onslide<2->{\item Used in early 1960s by Schmidt on Apollo program}
+! \onslide<3->{\item Kalman filters are now ubiquitous, especially in navigation}
+    \begin{itemize}
+!     \onslide<4->{
+!       \item But also in signal processing, econometrics, finance, seismology, weather forecasting, sensor tracking
+!     }
+!   \end{itemize}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{KF uses in GPS}
+! }
+  \begin{itemize}
+! \onslide<2->{\item All three segments have Kalman filters}
+! \onslide<3->{\item Control Segment:  ECEST = Ephemeris and Clock Estimator (legacy term), RTGx (JPL's Real-Time GPSY) and NRL's Ensemble Time Filter}
+! \onslide<4->{\item AEP's ECEST estimates inertial positions and velocities of SVs, solar pressure parameters, 
+! SV and MS clock error dynamics, and troposphere state at each MS}
+! \onslide<5->{\item In US receivers, satellite nav software, and offline computations}
+! \onslide<6->{\item E.g., used in aircraft Operational Flight Programs (OFPs) and Inertial Navigation Systems (INSs) to integrate GPS and other external 
+! navaids to optimally estimate INS error states }
+! \onslide<7->{\item 1990s:  Paradigm shift in navigation:\\
+!   Was: "INS/GPS"\;\;\;\;  Is: "GPS/INS" }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}}
+  \begin{itemize}
+! \onslide<2->{\item State estimation as branch of applied mathematics:   Filtering uses techniques and results from many mathematical subjects:\\
+! linear algebra, differential equations, measure theory, probability, statistics, functional analysis (Hilbert space) 
+! }
+! \onslide<3->{\item But essentials are very intuitive}
+! \begin{itemize}
+!  \item Can be understood with minimal math background (matrix algebra, basic calculus, probability and statistics )
+! \end{itemize}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}}
+! \framesubtitle{Some Notational Conventions}
+  \begin{itemize}
+! \onslide<2->{\item Time-dependent scalar or vector quantities:\\
+!   $x(k)$ (discrete), $x(t)$ (continuous) }
+! \onslide<3->{\item Corresponding vector components:\\
+! $x_i(k)$ or $x_i(t)$ }
+! \onslide<4->{\item Time-dependent matrix quantities (capital letters):\\
+!   $P(k)$ (discrete), $P(t)$ (continuous) }
+! \onslide<5->{\item Corresponding matrix components (elements):\\
+!  $p_{ij}(k)$ or $p_{ij}(t)$ }
+! \onslide<6->{
+!   \item Use hats for estimated quantities and special superscripts to indicate pre- and post-update values:  \\
+! $\hat{x}^{+}(k)$ and $P^{-}(k)$
+! }
+  \end{itemize}
+  \end{frame}
+*** ./basic_nav_concepts/strapdown.tex	2018-10-15 11:08:52.000000000 -0500
+--- ../from_rtx/strapdown.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 1,6 ****
+  % day3_seg1_navproblem/strapdown.tex
+  \begin{frame}
+! \frametitle{Inertial navigation Systems}
+  \framesubtitle{Strapdown Navigation:  Strapdown vs. Gimbaled}
+  \begin{itemize}
+    \item Gimbaled INS:
+--- 1,6 ----
+  % day3_seg1_navproblem/strapdown.tex
+  \begin{frame}
+! \frametitle{Inertial Navigation Systems}
+  \framesubtitle{Strapdown Navigation:  Strapdown vs. Gimbaled}
+  \begin{itemize}
+    \item Gimbaled INS:
+***************
+*** 81,92 ****
+     \item Equation for velocity (uses $\dcm{B}{L}$)
+     \item Equation for local level to earth for position DCM $\dcm{L}{E}$
+   \end{itemize}
+- \end{itemize}
+- \end{frame}
+- 
+- \begin{frame}
+- Strapdown Navigation Equations
+-  \begin{itemize}
+   \item Two Algebraic Equations
+   \begin{itemize}
+     \item Equation for converting velocity to transport rate (to be explained)
+--- 81,86 ----
+***************
+*** 95,100 ****
+--- 89,95 ----
+   \end{itemize}
+  \end{itemize}
+  \end{frame}
++ 
+  \begin{frame}
+  \frametitle{Strapdown Navigation Equations}
+  \framesubtitle{The Three Differential Equations}
+*** ./day1_seg2_equations/01_summary.tex	2020-04-30 22:05:20.716664200 -0500
+--- ../from_rtx/01_summary.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 10,29 ****
+    	\onslide<3->{	\item State Dynamics Model\\ (sometimes called the System or Process Model)}
+    	\onslide<4->{	\item Measurement Model\\ (sometimes called the Observation Model)}
+      \end{itemize}
+    \onslide<5->{ \item Find the optimal linear gain $K(k)$ with which to weight the measurement residual 
+  		(or innovation) 
+  	}	
+! 	\onslide<6->{\item Use the weighted residual to additively update the state estimate 
+! 		and the estimation error covariance (estimation uncertainty)}
+   \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding the Notation}
+    \framesubtitle{Kalman Filter Problem Summary\\General, Non-Linear, Time-Invariant,
+! Discrete-Time Formulation}}
+! Given: 
+   \begin{itemize}
+     \onslide<2->{ \item State Dynamics Model:  $x(k)=f[x(k-1)] + w(k)$}
+     \begin{itemize}
+--- 10,31 ----
+    	\onslide<3->{	\item State Dynamics Model\\ (sometimes called the System or Process Model)}
+    	\onslide<4->{	\item Measurement Model\\ (sometimes called the Observation Model)}
+      \end{itemize}
++ 	\begin{itemize}
+    \onslide<5->{ \item Find the optimal linear gain $K(k)$ with which to weight the measurement residual 
+  		(or innovation)
+  }		
+!   \onslide<6->{
+!     \item Weighted residual is then used to additively update the state estimate 
+! 		and the estimation error covariance (estimation uncertainty)
+! }
+!  \end{itemize}
+   \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding the Notation}
+    \framesubtitle{Kalman Filter Problem Summary\\General, Non-Linear, Time-Invariant,
+! Discrete-Time Formulation\\Given: }}
+   \begin{itemize}
+     \onslide<2->{ \item State Dynamics Model:  $x(k)=f[x(k-1)] + w(k)$}
+     \begin{itemize}
+***************
+*** 40,46 ****
+       $\hat{x}(k) = f[\hat{x}(k-1)] + K(k)\;[\;z(k)-h(f[\hat{x}(k-1)])\;]$}
+    \onslide<8->{ \item We'll discuss the form of the covariance update later!}
+  \end{itemize}
+- \onslide<9->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 42,47 ----
+***************
+*** 61,75 ****
+    \onslide<5->{ \item Find a gain $K(k)$ in form of multiplier (i.e., a gain matrix)}
+  
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding the Notation}
+    \framesubtitle{Kalman Filter Problem Summary\\ (Linear Discrete Formulation)\\
+   }
+- }
+- Given:
+  \begin{itemize}
+    \onslide<2->{\item State Dynamics Model:
+    $x(k)=\Phi x(k-1)+w(k)$}
+--- 62,74 ----
+    \onslide<5->{ \item Find a gain $K(k)$ in form of multiplier (i.e., a gain matrix)}
+  
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding the Notation}
+    \framesubtitle{Kalman Filter Problem Summary\\ (Linear Discrete Formulation)\\
++ Given: }
+  }
+  \begin{itemize}
+    \onslide<2->{\item State Dynamics Model:
+    $x(k)=\Phi x(k-1)+w(k)$}
+***************
+*** 88,94 ****
+   	$\hat{x}(k) = \Phi \hat{x}(k-1) + K(k)[z(k)-H \Phi \hat{x}(k-1)]$ }
+  	  \onslide<7->{\item Note that $\Phi \hat{x}(k-1)$ extrapolates of the previous estimate to the current time}
+  \end{itemize}
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 87,92 ----
+***************
+*** 102,108 ****
+  \[\hat{x}^{-}(k)=\Phi \hat{x}^{+}(k-1)=\text{predicted estimate prior to update}\]
+  \[\hat{x}^{+}(k)=\text{updated state estimate}\] }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 100,105 ----
+***************
+*** 123,129 ****
+    \item This now looks a lot like the running average problem!
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 120,125 ----
+***************
+*** 136,145 ****
+  \onslide<5->{\item When we arrive at the general solution, we'll get an added benefit: While trying to come up with $\stateest{k}{+}$ and $K(k)$, we'll also end up 
+  with a recursive estimate of our estimation uncertainty! This is the so-called error covariance matrix.}
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  %\begin{frame}
+  %\includegraphics{day1_seg1_heuristic/kf_block.jpg}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  %\end{frame}
+\ No newline at end of file
+--- 132,139 ----
+*** ./day1_seg2_equations/02_notation.tex	2020-04-30 22:16:45.793461200 -0500
+--- ../from_rtx/02_notation.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 9,15 ****
+   elements, written as a column vector:}
+  \onslide<4->{ \item $x(k)=\state (k)=\statek$}
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 9,14 ----
+***************
+*** 22,42 ****
+  \onslide<5->{ \item $\stm{k}$ is called the \textbf{state transition matrix}.  It is 
+  $n\times n$ in size.}
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding Kalman Filter Notation\\
+  Drilldown on State Dynamics}}
+   \begin{itemize}
+! \onslide<2->{ \item State Transition Matrix: $\stmeq{k}$}
+  \onslide<3->{ \item Extrapolates state vector from time step $k-1$ to time step
+   $k$ (pulling from past to present)}
+  \onslide<4->{ \item Tells you how the state would evolve in the absence of forcing functions}
+  \onslide<5->{ \item Remember: this is still just a model.  We don't really know
+   what the true state is, because the random forcing function (process noise) generates disturbances!}
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 21,39 ----
+  \onslide<5->{ \item $\stm{k}$ is called the \textbf{state transition matrix}.  It is 
+  $n\times n$ in size.}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Understanding Kalman Filter Notation\\
+  Drilldown on State Dynamics}}
+   \begin{itemize}
+! \onslide<2->{ \item State Transition Matrix: $\stmeqtwo{k}{k-1}$}
+  \onslide<3->{ \item Extrapolates state vector from time step $k-1$ to time step
+   $k$ (pulling from past to present)}
+  \onslide<4->{ \item Tells you how the state would evolve in the absence of forcing functions}
+  \onslide<5->{ \item Remember: this is still just a model.  We don't really know
+   what the true state is, because the random forcing function (process noise) generates disturbances!}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 54,60 ****
+  \onslide<6->{ \item We are deliberately trying to keep the notation as simple as
+   possible}
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 51,56 ----
+***************
+*** 71,77 ****
+  Thus, on average, the equation is homogeneous and we should therefore use the homogeneous solution, i.e., 
+  the state transition matrix.}
+  \end{itemize} 
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 67,72 ----
+***************
+*** 89,95 ****
+  \onslide<6->{\item $Q(k)$ measures the amount of dispersion in the white noise forcing function $w(k)$}
+  \onslide<7->{\item Later we'll learn how to define $P(k)$ in terms of the expected error in the estimation $\esterrdef$}
+  \end{itemize} 
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 84,89 ----
+***************
+*** 104,110 ****
+  \onslide<5->{\item The other term $Q(k)$ represents the increased uncertainty added at each step due to 
+  the process noise inherent in the system }
+  \end{itemize} 
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 98,103 ----
+***************
+*** 120,126 ****
+  \[\measmodeleq\] 
+  }
+  \end{itemize} 
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 113,118 ----
+***************
+*** 133,139 ****
+  where $z(k)$ is the measurement and $H(k)$ is the measurment matrix at time $k$.
+  }
+  \end{itemize} 
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 125,130 ----
+***************
+*** 146,162 ****
+  } 
+  \onslide<3->{\item This is not a good form to use in numerical work!}
+  \onslide<4->{\item Better to use the Joseph form:}\\
+! \onslide<5->{ \begin{footnotesize}\[\josephcovupdateeq\]\end{footnotesize} }
+  \begin{itemize}
+  \onslide<6->{\item Better preserves symmetry of $P$}
+  \end{itemize}
+  \end{itemize} 
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{The Five Kalman Equations}
+- \begin{footnotesize}
+  \onslide<1->{\begin{equation}
+  \textbf{State Extrapolation: }\stateextrapeq
+  \end{equation}} 
+--- 137,155 ----
+  } 
+  \onslide<3->{\item This is not a good form to use in numerical work!}
+  \onslide<4->{\item Better to use the Joseph form:}\\
+! \onslide<5->{ 
+!   \begin{footnotesize}
+!     \[\josephcovupdateeq\] 
+!   \end{footnotesize}
+! }
+  \begin{itemize}
+  \onslide<6->{\item Better preserves symmetry of $P$}
+  \end{itemize}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{The Five Kalman Equations}
+  \onslide<1->{\begin{equation}
+  \textbf{State Extrapolation: }\stateextrapeq
+  \end{equation}} 
+***************
+*** 173,182 ****
+  \textbf{Covariance Update: }\covupdateeq
+  \end{equation} 
+  or 
+     $\josephcovupdateeq$
+-    }
+  \end{footnotesize}
+! \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 166,177 ----
+  \textbf{Covariance Update: }\covupdateeq
+  \end{equation} 
+  or 
++ \begin{footnotesize}
+    $\josephcovupdateeq$
+  \end{footnotesize}
+! }
+! 
+!  
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 187,192 ****
+    \onslide<4->{\item $\procnoisematdef{k}$ is the process noise covariance matrix }
+    \onslide<5->{\item $\measnoisematdef{k}$ is the measurement noise covariance matrix }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+--- 182,186 ----
+*** ./day1_seg2_equations/03_03_damposc.tex	2020-04-30 22:09:59.161130700 -0500
+--- ../from_rtx/03_03_damposc.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 5,11 ****
+    \includegraphics[width=0.85\textwidth]{day1_seg2_equations/spring_mass_damper.jpg}
+  \end{figure}
+  }
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+--- 5,10 ----
+***************
+*** 46,54 ****
+  matrices from the underlying differential equations. }
+    \onslide<5->{\item Here $\Delta t=t_k - t_{k-1}$, $m$ is the mass, $k$ is the 
+  spring constant, and $b$ is the damping constant}
+!   \onslide<6->{\item Note that $\exp$ is a matrix exponential.}
+  \end{itemize} 
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 45,52 ----
+  matrices from the underlying differential equations. }
+    \onslide<5->{\item Here $\Delta t=t_k - t_{k-1}$, $m$ is the mass, $k$ is the 
+  spring constant, and $b$ is the damping constant}
+!   \onslide<6->{\item Note that $\exp$ is a matrix exponential}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 61,72 ****
+  \end{bmatrix}
+  \]}
+    \onslide<3->{  \item This means that there is a small amount of position noise and an even
+! smaller amount of velocity.}
+    \onslide<4->{  \item It also means that the noises in position and velocity are statistically 
+! uncorrelated (i.e., no non-zero off-diagonal elements in $Q_k$.)}
+    \onslide<5->{  \item One may think of process noise as due to unmodelled dynamic effects}
+  \end{itemize} 
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 59,69 ----
+  \end{bmatrix}
+  \]}
+    \onslide<3->{  \item This means that there is a small amount of position noise and an even
+! smaller amount of velocity noise}
+    \onslide<4->{  \item It also means that the noises in position and velocity are statistically 
+! uncorrelated (i.e., no non-zero off-diagonal elements in $Q_k$)}
+    \onslide<5->{  \item One may think of process noise as due to unmodelled dynamic effects}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 81,89 ****
+  \]
+  where the measurement noise $v(k)$ has variance $\sigma^2$}
+    \onslide<3->{  \item Thus $H_k=\begin{bmatrix}1 & 0\end{bmatrix}$}
+!   \onslide<4->{  \item Note that we only have a position measurement (similar to constant velocity example).}
+  \end{itemize} 
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 78,85 ----
+  \]
+  where the measurement noise $v(k)$ has variance $\sigma^2$}
+    \onslide<3->{  \item Thus $H_k=\begin{bmatrix}1 & 0\end{bmatrix}$}
+!   \onslide<4->{  \item Note that we only have a position measurement\\ (similar to constant velocity example).}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 97,110 ****
+  \]}
+    \onslide<3->{  \item Or we can use Matlab's expm function for specific values of $k$,$c$,$m$, and $\Delta t$.}
+  \end{itemize} 
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Damped Harmonic Oscillator:  Kalman Gain}}
+  \begin{itemize}
+!   \onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form.}
+!   \onslide<3->{  \item However, the gain equation $\kalgaineq$ looks like this:
+  \begin{align*}
+  K_k &=
+  \begin{bmatrix}
+--- 93,105 ----
+  \]}
+    \onslide<3->{  \item Or we can use Matlab's expm function for specific values of $k$,$c$,$m$, and $\Delta t$.}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Damped Harmonic Oscillator:  Kalman Gain}}
+  \begin{itemize}
+!   \onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form}
+!   \onslide<3->{  \item However, the gain equation $\kalgaineq$\\ looks like this:
+  \begin{align*}
+  K_k &=
+  \begin{bmatrix}
+***************
+*** 130,138 ****
+  \dfrac{p_{21}}{p_{11}+\sigma^2}
+  \end{bmatrix}
+  \end{align*}
+! where we have once again suppresed the +/- superscripts and $k$'s.}
+  \end{itemize} 
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 125,133 ----
+  \dfrac{p_{21}}{p_{11}+\sigma^2}
+  \end{bmatrix}
+  \end{align*}
+! Note that we have suppresed the +/- superscripts and $k$'s.
+! }
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 142,148 ****
+    \includegraphics[width=0.85\textwidth]{day1_seg2_equations/damposc.jpg}
+  \end{figure}
+  }
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 137,142 ----
+***************
+*** 152,156 ****
+    \includegraphics[width=0.85\textwidth]{day1_seg2_equations/damposc_variance.jpg}
+  \end{figure}
+  }
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+--- 146,149 ----
+*** ./day1_seg4_state_space/block_diagrams.tex	2020-04-30 22:25:21.515375500 -0500
+--- ../from_rtx/block_diagrams.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 19,36 ****
+   \end{itemize}
+   \end{itemize}
+  \end{itemize}
+- \onslide<11->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+  \frametitle{Block Diagrams}
+! \framesubtitle{Example:  MATLAB/Simulink Clock Model}
+  \includegraphics[scale=0.75]{day1_seg4_state_space/clock_block_diagram_model.jpg}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  %\begin{frame}
+  %missing graphic %sample_bd_01.latex
+  %\input{day1_seg4_state_space/sample_bd_01.latex}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  %\end{frame}
+--- 19,33 ----
+   \end{itemize}
+   \end{itemize}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+  \frametitle{Block Diagrams}
+! \framesubtitle{Example:  MATLAB/Simulink Clock Model with Truth Model}
+  \includegraphics[scale=0.75]{day1_seg4_state_space/clock_block_diagram_model.jpg}
+  \end{frame}
+  
+  %\begin{frame}
+  %missing graphic %sample_bd_01.latex
+  %\input{day1_seg4_state_space/sample_bd_01.latex}
+  %\end{frame}
+*** ./day1_seg4_state_space/dyn_sys.tex	2020-04-30 22:40:16.467373600 -0500
+--- ../from_rtx/dyn_sys.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 12,18 ****
+   \textit{\textbf{dynamical systems}}
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 12,17 ----
+***************
+*** 31,37 ****
+   \item Internal forces not considered as an input \textit{per se}
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 30,35 ----
+***************
+*** 49,55 ****
+   \[\frac{d^2y}{dt^2}+\frac{k}{m}y=\sin\omega t\]
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 47,52 ----
+***************
+*** 69,75 ****
+    \[\frac{d^2y}{dt^2}-\frac{1}{m}F_1(y,\dot{y})=\frac{1}{m}F_2(t)\]
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 66,71 ----
+***************
+*** 90,96 ****
+    \[z = h(y)+g(u)\]  
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 86,91 ----
+***************
+*** 107,120 ****
+  \item But initial conditions for $n^{\text{th}}$-order continuous dynamic system are simply values of first $n-1$ derivatives at initial time
+  }
+    \onslide<4->{
+!   \item "How is a dynamic system (linear or nonlinear) described?
+!   The fundamental concept is the notion of the state.  By this is meant, intuitively, some quantitative information 
+!   (a set of numbers, a function, etc.) which is the least amount of data one has to know about the past behavior of 
+!   the system in order to predict its future behavior."
+    Rudolf Kalman, in seminal paper (1960)
+    }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 102,117 ----
+  \item But initial conditions for $n^{\text{th}}$-order continuous dynamic system are simply values of first $n-1$ derivatives at initial time
+  }
+    \onslide<4->{
+!   \item "How is a dynamic system (linear or nonlinear) described? The
+! fundamental concept is the notion of the state. By this is meant,
+! intuitively, some quantitative information (a set of numbers, a
+! function, etc.) which is the least amount of data one has to know
+! about the past behavior of the system in order to predict its future
+! behavior."\\
+  Rudolf Kalman, in seminal paper (1960)
+  }
++ 
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 127,133 ****
+  \item These values capture the "state" of the dynamic system at that time  
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 124,129 ----
+***************
+*** 146,152 ****
+  	\item Note that this works for time points in the past as well as those in the future, provided they are sufficiently close to $t_0$.
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 142,147 ----
+***************
+*** 165,171 ****
+    \item Of course, if $y(t)$ is infinitely differentiable, then you can also express each of the derivatives of $y$ at time $t$ in terms of their values at time $t_0$ by means of their Taylor series, and thus from the state at $t_0$ you can compute the state at time $t$.
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 160,165 ----
+***************
+*** 179,208 ****
+  \vdots \\
+  \Dopnth{n}{t}{y}\left(t\right) \\
+  \end{array}\right] \approx\\
+! \Taylormat{n}{t}{y}{n}{(t-t_0)}
+  \end{multline}
+  }
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{The Concept of State} }
+  \begin{itemize}
+    \onslide<2->{
+! \item Concept of state involves in some sense the instantaneous internal arrangement of a system
+  }
+    \onslide<3->{
+! \item In practical  situations, the state variables may represent attributes of the  system that we wish to know something about 
+  }
+    \onslide<4->{
+! \item Also intuitively, state variables are usually naturally coupled in some sense; 
+! this is obvious when they are derived from a single differential equation in which all quantities are derivatives 
+! of a single variable (the output variable)  
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 173,201 ----
+  \vdots \\
+  \Dopnth{n}{t}{y}\left(t\right) \\
+  \end{array}\right] \approx\\
+! \Taylormat{n}{t}{y}{(t-t_0)}
+  \end{multline}
+  }
+  \end{frame}
+  
+  
+  
+  \begin{frame}
+!   \onslide<1->{
+! 	\frametitle{The Concept of State} 
+! }
+  \begin{itemize}
+    \onslide<2->{
+! \item Concept of state involves instantaneous internal arrangement of a system  
+  }
++ 
+    \onslide<3->{
+! \item In practical situations, state variables may represent system attributes we need to know something about
+  }
+    \onslide<4->{
+! \item Also intuitively, state variables are usually naturally coupled in some sense; this is obvious when they are derived from a single differential equation in which all quantities are derivatives of a single variable (the output variable)
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 226,232 ****
+  primary state variables of interest.  
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 219,224 ----
+***************
+*** 241,247 ****
+   where we have put the polynomial in normal form, i.e., such that its leading coefficient is 1.  
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 233,238 ----
+***************
+*** 262,268 ****
+  \item The functions $x_i(t)$ are called the \textit{\textbf{state variables}}.  
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 253,258 ----
+***************
+*** 283,289 ****
+   form:  $Dx(t)=Ax(t)$ or $\dot{x}(t)=Ax(t)$. 
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 273,278 ----
+***************
+*** 305,311 ****
+   equation. 
+  }
+  \end{itemize}
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 294,299 ----
+***************
+*** 327,333 ****
+   yet ready for that. 
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 315,320 ----
+***************
+*** 345,351 ****
+  \item  The output equation is derived directly from the $b_i$ coefficients in the original matrix differential equation.
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 332,337 ----
+***************
+*** 365,371 ****
+   the measurement column vector $z$.  As long as $H$ has $n$ columns it can have as many rows as desired.  
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 351,356 ----
+***************
+*** 400,406 ****
+   \]
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 385,390 ----
+***************
+*** 424,430 ****
+  (Remember that we are ignoring both process and measurement noise.)   
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+--- 408,413 ----
+***************
+*** 438,444 ****
+  \item Measurement model added external to Simulink's state space block  
+  }
+  \end{itemize}
+- \onslide<4->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 421,426 ----
+***************
+*** 446,455 ****
+  	\frametitle{State Space Representation: Matlab / Simulink Example} 
+  }
+  \begin{center}
+! \includegraphics[scale=0.6]{day1_seg4_state_space/state_space_blocks.jpg}
+  \end{center}
+  
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 428,436 ----
+  	\frametitle{State Space Representation: Matlab / Simulink Example} 
+  }
+  \begin{center}
+! \includegraphics[scale=0.8]{day1_seg4_state_space/state_space_blocks.jpg}
+  \end{center}
+  
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 460,466 ****
+  \includegraphics[scale=0.5]{day1_seg4_state_space/state_space_block_params.jpg}
+  \end{center}
+  
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+--- 441,446 ----
+***************
+*** 482,501 ****
+  \item In discrete time, ordinary difference equations also lead to state space models
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Example:  Predator-Prey Equations, Real World}
+  }
+    \onslide<2->{
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.6\textheight]{day1_seg4_state_space/lynx_hare.jpg}
+  \end{center}
+  }
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 462,479 ----
+  \item In discrete time, ordinary difference equations also lead to state space models
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Examples:  Predator-Prey Equations, Real World}
+  }
+    \onslide<2->{
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.8\textheight]{day1_seg4_state_space/lynx_hare.jpg}
+  \end{center}
+  }
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 523,529 ****
+  \item Predators are insatiable
+  }
+  \end{itemize}
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 501,506 ----
+***************
+*** 559,592 ****
+   \]
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Example:  Predator-Prey Equations, Simulated}
+  }
+    \onslide<2->{
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.6\textheight]{day1_seg4_state_space/pred_prey.jpg}
+  \end{center}
+  }
+- \onslide<3->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Example:  DC Motor with Inertial Load}
+  }
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.6\textheight]{day1_seg4_state_space/dc_motor_inertial_load.jpg}
+  \end{center}
+  \begin{tiny}
+  Source: MATLAB Tutorial 
+  \end{tiny}
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 536,566 ----
+   \]
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Examples:  Predator-Prey Equations, Simulated}
+  }
+    \onslide<2->{
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.8\textheight]{day1_seg4_state_space/pred_prey.jpg}
+  \end{center}
+  }
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+  	\frametitle{State Space Representation} 
+! 	\framesubtitle{Examples:  DC Motor with Inertial Load}
+  }
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.8\textheight]{day1_seg4_state_space/dc_motor_inertial_load.jpg}
+  \end{center}
+  \begin{tiny}
+  Source: MATLAB Tutorial 
+  \end{tiny}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 608,614 ****
+  \item Electrical: $v_{app}(t)=L\deriv{i}{t}+R i(t)+v_{emf}(t)=L\deriv{i}{t}+R i(t)+K_b\omega(t)$,\\ where $v_{app}$ is applied voltage, $L$ is inductance, and $R$ is resistance 
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 582,587 ----
+***************
+*** 645,651 ****
+  \item   Note the presence of control input $v_{app}(t)$
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+--- 618,623 ----
+***************
+*** 672,678 ****
+  \item The right side of Eq. \eqref{armaeq} is the \textbf{Moving Average} part  
+  }
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  
+--- 644,649 ----
+***************
+*** 694,700 ****
+    \item A state space model can now be derived using the companion matrix method exactly as for differential equations
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 665,670 ----
+***************
+*** 735,758 ****
+    \onslide<6->{
+  \begin{tiny}The insertion of the $u$'s as a matrix-vector product is left as an exercise. \end{tiny}
+  }
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+- 
+  \begin{frame}
+    \onslide<1->{\frametitle{Stability} }
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.6\textheight]{day1_seg4_state_space/poincare.jpg}
+  \end{center}
+  \begin{tiny}
+  Source: By Freesodas - Gimp, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=67990034
+  \end{tiny}
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame} 
+!   \onslide<1-> { \frametitle{Software Tools}
+!     \framesubtitle{MATLAB toolboxes and Simulink blocks}
+    }
+  \begin{itemize}
+   \onslide<2-> { 
+--- 705,726 ----
+    \onslide<6->{
+  \begin{tiny}The insertion of the $u$'s as a matrix-vector product is left as an exercise. \end{tiny}
+  }
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Stability} }
+  \begin{center}
+! \includegraphics[width=.9\textwidth,height=.8\textheight]{day1_seg4_state_space/poincare.jpg}
+  \end{center}
+  \begin{tiny}
+  Source: By Freesodas - Gimp, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=67990034
+  \end{tiny}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+! 	\frametitle{Software Tools} 
+! 	\framesubtitle{MATLAB toolboxes and Simulink blocks (R2018a)}
+  }
+  \begin{itemize}
+    \onslide<2->{
+***************
+*** 766,784 ****
+  	  \item Functions for interconnecting models in series or parallel
+  	}
+  	\onslide<5-> {
+! 	  \item Functions for roundtrip converting from continuous-time to discrete-time
+  	}
+  	\onslide<6-> {
+!       \item Functions for scaling state space models 
+  	}
+    \end{itemize} 
+      \onslide<7-> {
+  	   \item Simulink:  Intuitive Block Diagram GUI Drag and Drop approach (see later slides)
+  	}
+  \end{itemize}  
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{State Space Representation:  Summary} }
+  \begin{itemize}
+--- 734,753 ----
+  \item Functions for interconnecting models in series or parallel 
+  }
+    \onslide<5->{
+! \item Functions for roundtrip converting from continuous-time to discrete 
+  }
+    \onslide<6->{
+! \item Functions for scaling state-space models 
+  }
+  \end{itemize}
+    \onslide<7->{
+  \item Simulink:  Intuitive Block Diagram GUI Drag and Drop approach (see later slides)
+  }
++ 
+  \end{itemize}
+  \end{frame}
+  
++ 
+  \begin{frame}
+    \onslide<1->{\frametitle{State Space Representation:  Summary} }
+  \begin{itemize}
+***************
+*** 796,806 ****
+  \item In both natural and artificial systems, state space representations are often derived directly from observed or designed couplings 
+  }
+    \onslide<6->{
+! \item MATLAB Control Systems Toolbox and MATLAB / Simulink have many functions and blocks facilitating state space components and interconnections  
+  }
+    \onslide<7-> {
+!      \item Stability an important topic but beyond scope of this course
+    }
+  \end{itemize}
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+--- 765,777 ----
+  \item In both natural and artificial systems, state space representations are often derived directly from observed or designed couplings 
+  }
+    \onslide<6->{
+! \item Stability an important topic but beyond scope of this course  
+  }
+    \onslide<7->{
+! \item MATLAB Control Systems Toolbox and MATLAB / Simulink have many functions and blocks facilitating state space components and interconnections  
+  }
+  \end{itemize}
+  \end{frame}
++ 
++ 
++ 
+*** ./day1_seg4_state_space/examples.tex	2020-04-30 22:24:02.529070700 -0500
+--- ../from_rtx/examples.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 11,21 ****
+   \item Damped Harmonic Oscillator 
+  }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!  \onslide<1->{\frametitle{ Scalar Constant Dynamics}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+--- 11,22 ----
+   \item Damped Harmonic Oscillator 
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+!  \onslide<1->{
+!  \frametitle{Examples}
+!  \framesubtitle{ Scalar Constant Dynamics}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+***************
+*** 27,42 ****
+   \onslide<5->{\item No feedback loops
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{matlab/scalar_const_noise.jpg}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{Scalar Constant Dynamics with Recursive Estimator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+--- 28,43 ----
+   \onslide<5->{\item No feedback loops
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{matlab/scalar_const_noise.jpg}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+!  \frametitle{Examples}
+!  \framesubtitle{Scalar Constant Dynamics with Recursive Estimator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+***************
+*** 50,65 ****
+   \onslide<6->{\item Simple open loop gain input
+  }
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{day1_seg4_state_space/scalar_const_est.jpg}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{Scalar Ramp Dynamics with Recursive Estimator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+--- 51,66 ----
+   \onslide<6->{\item Simple open loop gain input
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{day1_seg4_state_space/scalar_const_est.jpg}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+!    \frametitle{Examples}
+!   \framesubtitle{Scalar Ramp Dynamics with Recursive Estimator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+***************
+*** 73,88 ****
+   \onslide<6->{\item Simple open loop gain input
+  }
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+! \includegraphics[scale=0.80]{matlab/scalar_ramp_noise_est.jpg}
+! \onslide<1->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{Vector Dynamics: Damped Harmonic Oscillator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+--- 74,89 ----
+   \onslide<6->{\item Simple open loop gain input
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+! \includegraphics[scale=0.75]{matlab/scalar_ramp_noise_est.jpg}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+!   \frametitle{Examples}
+!   \framesubtitle{Vector Dynamics: Damped Harmonic Oscillator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item MATLAB/Simulink Model
+***************
+*** 108,123 ****
+  \]
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{day1_seg4_state_space/damped_harmosc_det.jpg}
+- \onslide<1->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{Vector Dynamics: Damped Harmonic Oscillator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item Discrete model would look like this}
+--- 109,124 ----
+  \]
+  }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+  \includegraphics[scale=0.80]{day1_seg4_state_space/damped_harmosc_det.jpg}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+!    \frametitle{Examples}
+!   \framesubtitle{Vector Dynamics: Damped Harmonic Oscillator}
+  }
+   \begin{itemize}
+   \onslide<2->{\item Discrete model would look like this}
+***************
+*** 146,150 ****
+  \onslide<5->{\item In the continuous case, the state transition matrix is a matrix exponential whenever the system dynamics matrix is a constant (i.e., time invariant) matrix
+  }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+--- 147,150 ----
+*** ./day2_seg1_prob/empirical_stats.tex	2018-10-15 18:35:48.000000000 -0500
+--- ../from_rtx/empirical_stats.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 6,20 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+! \item Previously defined quantities $\mu_X,\sigma_X,\ldots$ were all theoretical properties, sometimes referred to 
+  as population statistics  
+  }
+    \onslide<3->{
+! \item With real data we rarely know the true statistics;  we only have sampled data to go on  
+  }
+    \onslide<4->{
+! \item But we can define quantities analogous to $\mu_X,\sigma_X,\ldots$ that we can actually compute 
+! using real data and that are generally in some sense approximations to the true values
+  }
+  \end{itemize}
+  \end{frame}
+--- 6,20 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+! \item Previously defined quantities $\mu_X,\sigma_X,\ldots$ were theoretical properties, sometimes referred to 
+  as population statistics  
+  }
+    \onslide<3->{
+! \item With real data we rarely know the true statistics;  we only have sampled data to work with  
+  }
+    \onslide<4->{
+! \item But using empirical data we can compute quantities analogous to $\mu_X,\sigma_X,\ldots$  
+! that are approximations to the true values
+  }
+  \end{itemize}
+  \end{frame}
+*** ./day2_seg1_prob/moments.tex	2018-10-13 09:42:28.000000000 -0500
+--- ../from_rtx/moments.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 14,19 ****
+--- 14,22 ----
+    \onslide<4->{
+  \item Higher Order Moments  
+  }
++   \onslide<5->{
++ \item Joint Moments  
++ }
+  \end{itemize}
+  \end{frame}
+  \begin{frame}
+***************
+*** 140,147 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+!  \item The variance of a random variable is defined as the mean square deviation from the mean:
+! \[\sigma^2 = \expect{(X-\mu)^2}\]
+  }
+  \end{itemize}
+  \end{frame}
+--- 143,153 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+!  \item The \textbf{variance} of a random variable is defined as the mean square deviation from the mean:
+! \[\sigma^2 = \expect{(X-\mu_X)^2}\]
+! }
+!   \onslide<3->{
+! \item   Also sometimes written $\variance{X}$
+  }
+  \end{itemize}
+  \end{frame}
+***************
+*** 223,232 ****
+  after removing their means: $\covdef{X}{Y}$ 
+  }
+    \onslide<5->{
+! \item Their correlation is their covariance normalized by the product of their standard deviations:
+  $\corrdef{X}{Y}$
+  }
+  \end{itemize}
+  \end{frame}
+  
+  
+--- 229,278 ----
+  after removing their means: $\covdef{X}{Y}$ 
+  }
+    \onslide<5->{
+! \item Their \textbf{correlation} is their covariance normalized by the product of their standard deviations:
+  $\corrdef{X}{Y}$
+  }
+  \end{itemize}
+  \end{frame}
+  
++ \begin{frame}
++   \onslide<1->{
++ 	\frametitle{Statistics} 
++ 	\framesubtitle{Properties of Covariance and Correlation}
++ }
++ \begin{itemize}
++   \onslide<2->{
++ \item   $\cov{X}{Y}=\expect{XY}-\expect{X}\expect{Y}$
++ }
++   \onslide<3->{
++ \item   \textbf{Independence} of random variables:  $\expect{XY}=\expect{X}\expect{Y}$
++ }
++   \onslide<4->{
++ \item   \textbf{Uncorrelated} if $\cov{X}{Y}=0$
++ }
++   \onslide<5->{
++ \item   Independence implies uncorrelated (but the converse is \textbf{not} true!)
++ }
++   \onslide<6->{
++ \item   $\cov{X}{X}=\variance{X}$
++ }
++   \onslide<7->{
++ \item   Covariance is \textbf{bilinear}:  $\cov{aX+bY}{Z}=a\cov{X}{Z}+b\cov{Y}{Z}$  (Similarly for second argument)
++ }
++ \end{itemize}
++ \end{frame}
++ \begin{frame}
++   \onslide<1->{
++ 	\frametitle{Statistics} 
++ 	\framesubtitle{Joint and Conditional Moments}
++ }
++ \begin{itemize}
++   \onslide<2->{
++ \item   Joint expectation:  $\expect{XY}:=\int \int_{\Real}xyf_{X,Y}(x,y)dxdy$
++ }
++   \onslide<3->{
++ \item   Conditional expectation:  $\expect{X|Y=y}:=\int_{-\infty}^{+\infty}xf_{X|Y}(x|y)dx$ 
++ }
++ \end{itemize}
++ \end{frame}
+  
+*** ./day2_seg1_prob/prob_dist.tex	2018-09-28 07:48:00.000000000 -0500
+--- ../from_rtx/prob_dist.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 136,141 ****
+--- 136,165 ----
+  }
+  \end{itemize}
+  \end{frame}
++ \begin{frame}
++   \onslide<1->{
++ 	\frametitle{Statistics} 
++ 	\framesubtitle{Continuous Distributions:  Conditional Probability Density Functions}
++ }
++ \begin{itemize}
++   \onslide<2->{
++ \item  Two continuous random variables $X$ and $Y$ are said to have a \textbf{joint density function} $f_{X,Y}(x,y)$
++ defined by 
++ \[
++ f_{X,Y}(x,y):= \dfrac{\partial^2 F(x,y)}{\partial x \partial y}
++ \]
++ provided the partial derivatives exist for the joint distribution function $F(x,y)=P\set{X<x,Y<y}$.
++ }
++   \onslide<3->{
++ \item   If $X$ and $Y$ have a joint density function then we can define the 
++ \textbf{conditional density function} by\\
++ \[
++ f_{X|Y}(x|y):= \dfrac{f_{X,Y}(x,y)}{f_Y(y)}
++ \]
++ where $f_{X,Y}(x,y)$ is the joint p.d.f. of $X$ and $Y$, and $f_Y(y)$ is the p.d.f. of $Y$
++ }
++ \end{itemize}
++ \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+*** ./day2_seg1_prob/prob_measures.tex	2018-09-23 20:47:58.000000000 -0500
+--- ../from_rtx/prob_measures.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 146,152 ****
+  \item Let $\Omega$ be any finite set of cardinality $n$.  Let the
+   $\sigma$-algebra be the set of all subsets of $\Omega$ and let
+   $|\cdot|$ denote the counting measure, i.e. for $A\subseteq\Omega$,
+!  $\|A|=$number of elements in $A$.  Define a probability measure
+   by $P=\frac{1}{n}|\cdot|$.  
+  }
+    \onslide<3->{
+--- 146,152 ----
+  \item Let $\Omega$ be any finite set of cardinality $n$.  Let the
+   $\sigma$-algebra be the set of all subsets of $\Omega$ and let
+   $|\cdot|$ denote the counting measure, i.e. for $A\subseteq\Omega$,
+!  $|A|=$number of elements in $A$.  Define a probability measure
+   by $P=\frac{1}{n}|\cdot|$.  
+  }
+    \onslide<3->{
+***************
+*** 166,172 ****
+  \item Let $\Omega=[0,1]$ and let $\mathcal{B}$ be the Borel
+   $\sigma$-algebra on the interval $[0,1]$.  Define $P=\lambda$,
+   the Lebesgue measure on $\mathcal{B}$.  Note that for any
+!  open subinterval $(a,b)$ of $[a,b]$, we have $P(a,b)=b-a$.  
+  }
+  \end{itemize}
+  \end{frame}
+--- 166,172 ----
+  \item Let $\Omega=[0,1]$ and let $\mathcal{B}$ be the Borel
+   $\sigma$-algebra on the interval $[0,1]$.  Define $P=\lambda$,
+   the Lebesgue measure on $\mathcal{B}$.  Note that for any
+!  open subinterval $(c,d)$ of $[a,b]$, we have $P(c,d)=d-c$.  
+  }
+  \end{itemize}
+  \end{frame}
+*** ./day2_seg1_ranproc1/corrcov.tex	2018-10-13 11:55:22.000000000 -0500
+--- ../from_rtx/corrcov.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 6,18 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+!  \item Since at each $t$ $X(t)$ is a random variable in its own right, it makes sense to talk about the correlation of two such random variables $X(t)$ and $X(s)$.
+  }
+    \onslide<3->{
+!  \item Since both random variables come from the same underlying process, we refer to this as autocorrelation.
+  }
+    \onslide<4->{
+!  \item Similarly, autocovariance involves first centering the process about its mean process $\mu_t$.
+  }
+  \end{itemize}
+  \end{frame}
+--- 6,19 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+!  \item Since at each $t$ $X(t)$ is a random variable in its own right, it makes sense to talk about the covariance and correlation of two such random variables $X(t)$ and $X(s)$.
+  }
+    \onslide<3->{
+!  \item Since both random variables come from the same underlying process, we refer to this as \textbf{autocovariance} 
+!  or \textbf{autocorrelation}.
+  }
+    \onslide<4->{
+!  \item Autocovariance involves first centering the process about its mean process $\mu_t$.
+  }
+  \end{itemize}
+  \end{frame}
+***************
+*** 26,37 ****
+    \onslide<2->{
+   \item The function $\expect{X(t)X(t+\tau)}$ is called the \textit{\textbf{autocorrelation
+   function}} of $X$ and for a weakly stationary process $X$, and it is denoted by
+!  $R_{XX}(\tau)$, since it is a function of $\tau$ alone.
+  }
+    \onslide<3->{
+!  \item The \textit{\textbf{autocovariance}} function for a weakly stationary process is formed
+   by subtracting out the means:
+!  $C_{XX}(\tau)=\expect{(X(t)-\mu_t)(X(t+\tau)-\mu_{t+\tau})}$.
+  }
+    \onslide<4->{
+   \item Cross correlation and cross covariance between two different random processes $X$
+--- 27,38 ----
+    \onslide<2->{
+   \item The function $\expect{X(t)X(t+\tau)}$ is called the \textit{\textbf{autocorrelation
+   function}} of $X$ and for a weakly stationary process $X$, and it is denoted by
+!  $R_{XX}(\tau)$, since it is a function of $\tau$ alone
+  }
+    \onslide<3->{
+!  \item The \textbf{autocovariance function} for a weakly stationary process is formed
+   by subtracting out the means:
+!  $C_{XX}(\tau)=\expect{(X(t)-\mu_{X(t)})(X(t+\tau)-\mu_{X(t+\tau)})}$
+  }
+    \onslide<4->{
+   \item Cross correlation and cross covariance between two different random processes $X$
+*** ./day2_seg2_ranproc2/markov_proc.tex	2018-10-15 14:15:02.000000000 -0500
+--- ../from_rtx/markov_proc.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 85,91 ****
+  \begin{equation}\label{gaussvec}
+    f(x_1,\ldots,x_n)=\gvpdf
+  \end{equation}
+! for a real, positive definite symmetric matrix $C$ and
+  $\mu=(\mu_1,\ldots,\mu_n)$.
+  }
+    \onslide<3->{
+--- 85,91 ----
+  \begin{equation}\label{gaussvec}
+    f(x_1,\ldots,x_n)=\gvpdf
+  \end{equation}
+! for a real, $n\times n$ positive definite symmetric matrix $C$ and
+  $\mu=(\mu_1,\ldots,\mu_n)$.
+  }
+    \onslide<3->{
+***************
+*** 94,99 ****
+--- 94,106 ----
+  }
+  \end{itemize}
+  \end{frame}
++ \begin{frame}
++   \onslide<1->{
++ 	\frametitle{Some Important Processes} 
++ 	\framesubtitle{Gaussian Processes}
++ }
++ \includegraphics[scale=0.50]{graphics/multivariate_gaussian.jpg}
++ \end{frame}
+  
+  \begin{frame}
+    \onslide<1->{
+***************
+*** 107,116 ****
+    \exp\left[ -\frac{1}{2}Q_{C^{-1}}(x-\mu) \right]\]
+  }
+    \onslide<3->{
+! \item $C^{-1}$ is sometimes called the information matrix,
+!  because its inverse, the covariance matrix, often expresses the
+   uncertainty (or lack of information) associated with the random
+!  variables.
+  }
+  \end{itemize}
+  \end{frame}
+--- 114,123 ----
+    \exp\left[ -\frac{1}{2}Q_{C^{-1}}(x-\mu) \right]\]
+  }
+    \onslide<3->{
+! \item $C^{-1}$ is called the \textbf{information matrix},
+!  because its inverse, the covariance matrix, quantifies the
+   uncertainty (or lack of information) associated with the random
+!  variables
+  }
+  \end{itemize}
+  \end{frame}
+*** ./day2_seg3_kalstats/est_prob.tex	2018-10-16 17:11:24.000000000 -0500
+--- ../from_rtx/est_prob.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 511,518 ****
+      &= E[(x-m_x)(x-m_x)^\top H^\top]\\
+  \end{align*}
+  }
+! \end{itemize}
+  because $x$,$z$ independent $\Rightarrow E[(x-m_x)(v-m_v)^\top]=0$.
+  \end{small}
+  \end{frame}
+  
+--- 511,520 ----
+      &= E[(x-m_x)(x-m_x)^\top H^\top]\\
+  \end{align*}
+  }
+!   \onslide<4->{
+  because $x$,$z$ independent $\Rightarrow E[(x-m_x)(v-m_v)^\top]=0$.
++ }
++ \end{itemize}
+  \end{small}
+  \end{frame}
+  
+*** ./day3_seg1_numerical/observability.tex	2018-10-17 19:32:02.000000000 -0500
+--- ../from_rtx/observability.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 9,21 ****
+   \item Structural observability is concerned with how $H$ maps measurements into states
+  }
+    \onslide<3->{
+!   \item Observability means there is a linear path from the measurements to states
+  }
+    \onslide<4->{
+!   \item Structural observability determined by $\Phi$ and $H$:
+  }
+    \onslide<5->{
+! \item  If $H$ is $1\times n$, where $n$ is the size of the state vector, then the state $x_0$ 
+  is said to be \textbf{observable }from $n$ scalar measurements $\set{z_0,\ldots,z_{n-1}}$ if the block matrix
+  \[
+  \begin{bmatrix}
+--- 9,21 ----
+   \item Structural observability is concerned with how $H$ maps measurements into states
+  }
+    \onslide<3->{
+!   \item Implies a linear path of information flow from measurements to states (eventually)
+  }
+    \onslide<4->{
+!   \item Determined by $\Phi$ and $H$:
+  }
+    \onslide<5->{
+! \item  If $H$ is $1\times n$ and $\Phi$ is $n\times n$ then the state $x_0$ 
+  is said to be \textbf{observable} from $n$ scalar measurements $\set{z_0,\ldots,z_{n-1}}$ if the block matrix
+  \[
+  \begin{bmatrix}
+*** ./day3_seg1_numerical/roundoff.tex	2018-10-17 20:23:38.000000000 -0500
+--- ../from_rtx/roundoff.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 86,93 ****
+  \begin{itemize}
+    \onslide<2->{
+  \item   The gain in standard Kalman gain equation
+! \[\kalgaineq\] can be written as
+! \[K=FD^{-1}.\]
+  }
+    \onslide<3->{
+  \item   Using Eqs.~(\ref{Feq}) and ~(\ref{Deq}), we compute
+--- 86,92 ----
+  \begin{itemize}
+    \onslide<2->{
+  \item   The gain in standard Kalman gain equation
+! \[\kalgaineq\] can be written as $K=FD^{-1}$
+  }
+    \onslide<3->{
+  \item   Using Eqs.~(\ref{Feq}) and ~(\ref{Deq}), we compute
+*** ./day3_seg1_numerical/theory_vs_reality.tex	2018-10-18 09:12:30.000000000 -0500
+--- ../from_rtx/theory_vs_reality.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 6,22 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+! \item Kalman Assumptions
+  }
+    \onslide<3->{
+- \begin{itemize}
+- \item All states linear are modeled correctly
+  \item Noise parameters are accurately known
+  \item Initial values are appropriate
+  \item Process and measurement noise are both Gaussian:  $w\sim\text{N}(0,Q)$, and $v\sim\text{N}(0,R)$
+  \item Process noise and measurement noise are uncorrelated
+- \item Measurements are taken at regularly scheduled intervals
+- \end{itemize} 
+  }
+  \end{itemize}
+  \end{frame}
+--- 6,24 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+! \item State dynamics are linear and modeled accurately  
+  }
+    \onslide<3->{
+  \item Noise parameters are accurately known
++ }
++   \onslide<4->{
+  \item Initial values are appropriate
++ }
++   \onslide<5->{
+  \item Process and measurement noise are both Gaussian:  $w\sim\text{N}(0,Q)$, and $v\sim\text{N}(0,R)$
++ }
++   \onslide<6->{
+  \item Process noise and measurement noise are uncorrelated
+  }
+  \end{itemize}
+  \end{frame}
+***************
+*** 39,45 ****
+    \onslide<5->{
+  \item  Discrete filters acceptable provided continuous estimates are not required 
+  }
+!   \onslide<5->{
+  \item  Suboptimality 
+  }
+  \end{itemize}
+--- 41,47 ----
+    \onslide<5->{
+  \item  Discrete filters acceptable provided continuous estimates are not required 
+  }
+!   \onslide<6->{
+  \item  Suboptimality 
+  }
+  \end{itemize}
+***************
+*** 55,73 ****
+    \item How do you select appropriate sensors for the problem at hand?
+  }
+    \onslide<3->{
+!   \item Some obvious general rules:
+    \begin{itemize}
+  	\item The lower the sensor noise characteristics, the more accurate the estimates (narrow sensor noise variance)
+  }
+!   \onslide<4->{
+      \item The more the merrier, i.e., the more sensors the better\\
+! 	Greater number of lower quality sensors can outperform smaller number of higher quality ones (see kalcompare.m)
+  }
+!   \onslide<5->{
+      \item Maximize the number of directly observable states
+- \end{itemize}
+  }
+  \end{itemize}
+  \end{frame}
+  
+  
+--- 57,79 ----
+    \item How do you select appropriate sensors for the problem at hand?
+  }
+    \onslide<3->{
+!   \item Some general rules:
+! }
+    \begin{itemize}
++   \onslide<4->{
+  	\item The lower the sensor noise characteristics, the more accurate the estimates (narrow sensor noise variance)
+  }
+!   \onslide<5->{
+      \item The more the merrier, i.e., the more sensors the better\\
+! 	Greater number of lower quality sensors can outperform smaller number of higher quality ones (see kalcompare.m)\\
+! 	But may entail addition of nuisance variables to state vector
+  }
+!   \onslide<6->{
+      \item Maximize the number of directly observable states
+  }
+  \end{itemize}
++ 
++ \end{itemize}
+  \end{frame}
+  
+  
+***************
+*** 105,120 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+!   \item Choose sensors to match states.\\
+  E.g., consider the state model
+  \[
+  \begin{bmatrix}
+  \dot{x}_1\\
+  \dot{x}_2
+  \end{bmatrix}
+! = \begin{bmatrix}
+! 0\\
+! 0
+  \end{bmatrix}
+  \]
+  with the measurement model
+--- 111,131 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+!   \item Choose sensors to match states\\
+  E.g., consider the state model
+  \[
+  \begin{bmatrix}
+  \dot{x}_1\\
+  \dot{x}_2
+  \end{bmatrix}
+! = 
+! \begin{bmatrix}
+! 1&0\\
+! 0&1
+! \end{bmatrix}
+! \begin{bmatrix}
+! x_1\\
+! x_2
+  \end{bmatrix}
+  \]
+  with the measurement model
+***************
+*** 140,150 ****
+  }
+  \begin{itemize}
+    \onslide<2->{
+!   \item Examine the $H$ matrix that you would use with this sensor!
+  }
+    \onslide<3->{
+!   \item If it renders some states unobservable, then consider adding 
+!   additional sensors for those states, or replacing this sensor with one that is more favorable
+  }
+  \end{itemize}
+  \end{frame}
+--- 151,162 ----
+  }
+  \begin{itemize}
+    \onslide<2->{
+!   \item Examine $H$ matrix for this sensor
+  }
+    \onslide<3->{
+!   \begin{itemize}
+! 	\item If $H$ renders some states unobservable, consider adding additional sensors for those states, 
+!   \end{itemize}
+  }
+  \end{itemize}
+  \end{frame}
+*** ./day3_seg2_inertial/align.tex	2017-11-01 16:33:02.000000000 -0500
+--- ../from_rtx/align.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 1,6 ****
+  % day3_seg2_inertial/align.tex
+  \begin{frame}
+! Initialization:  Alignment
+   \begin{itemize}
+   \item Coarse Leveling
+    \begin{itemize}
+--- 1,6 ----
+  % day3_seg2_inertial/align.tex
+  \begin{frame}
+! \frametitle{Initialization:  Alignment}
+   \begin{itemize}
+   \item Coarse Leveling
+    \begin{itemize}
+***************
+*** 10,15 ****
+  	\item Yields third row of DCM to begin fine alignment
+    \end{itemize}
+   \item Fine Alignment
+!  \item Alignment filter aids in further leveling
+  \end{itemize}
+  \end{frame}
+--- 10,67 ----
+  	\item Yields third row of DCM to begin fine alignment
+    \end{itemize}
+   \item Fine Alignment
+!  \item Often a separate Kalman filter for alignment 
+!  \item Motion Alignment
+  \end{itemize}
+  \end{frame}
++ 
++ \begin{frame}
++ \frametitle{Alignment}
++  \begin{itemize}
++  \item Stationary Alignment
++ 	\begin{itemize}
++ 		\item Gyrocompassing
++ 		\item Coarse Leveling
++ 		\item Fine Alignment
++ 	\end{itemize}
++  \item Motion Alignment
++ 	\begin{itemize}
++ 		\item Air Alignment
++ 		\item Transfer Align
++ 	\end{itemize}
++ \end{itemize}
++ \end{frame}
++ 
++ \begin{frame}
++ \frametitle{Stationary Alignment}
++ \begin{itemize}
++   \item Motion is bad
++ 	\begin{itemize}
++ 		\item Don't change the heading!
++ 		\begin{itemize}
++ 		\item Heading changes are attributed to gyro biases
++ 		\end{itemize}
++ 		\item Don't lie to the filter about position!
++ 		\begin{itemize}
++ 			\item Position drives gyrocompassing and plumb-bob gravity model
++ 		\end{itemize}
++   \item Allowances made for wind buffeting in process noise
++ 	\end{itemize}
++   \item Gyrocompassing: find north through sensing of earth rate
++ \end{itemize} 
++ \end{frame}
++ 
++ \begin{frame}
++ \frametitle{Motion Alignment}
++ \begin{itemize}
++   \item Typically In-Air
++   \item Coarse and Fine Alignment Phases
++   \item Velocity Aided
++ 	\begin{itemize}
++ 		\item GPS (but position as well!)
++ 		\item DVS
++ 		\item Other INS (transfer align)
++ 	\end{itemize}
++ \end{itemize} 
++ \end{frame}
++ 
+*** ./day3_seg2_inertial/inertial_main.tex	2018-10-18 09:19:08.000000000 -0500
+--- ../from_rtx/inertial_main.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 17,24 ****
+  \end{itemize}
+  \end{frame}
+  \input{day3_seg2_inertial/impinst.tex}
+- \subsection{Strapdown Error Dynamics}
+  \input{day3_seg2_inertial/straperr.tex}
+! \subsection{Inertial Alignment}
+  \input{day3_seg2_inertial/align.tex}
+  %\input{day3_seg2_inertial/exercises.tex}
+--- 17,23 ----
+  \end{itemize}
+  \end{frame}
+  \input{day3_seg2_inertial/impinst.tex}
+  \input{day3_seg2_inertial/straperr.tex}
+! \subsection{Inertial Alignment Filtering}
+  \input{day3_seg2_inertial/align.tex}
+  %\input{day3_seg2_inertial/exercises.tex}
+*** ./day3_seg4_ins_challenges/ins_chal_main.tex	2018-10-18 17:39:34.000000000 -0500
+--- ../from_rtx/ins_chal_main.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 21,26 ****
+  \end{frame}
+  \input{day3_seg4_ins_challenges/9notenough.tex}
+  \input{day3_seg4_ins_challenges/notconstcoeff.tex}
+- \input{day3_seg4_ins_challenges/nonlinear.tex}
+  \input{day3_seg4_ins_challenges/insobservability.tex}
+  \input{day3_seg4_ins_challenges/exercises.tex}
+--- 21,25 ----
+*** ./day3_seg4_ins_challenges/nonlinear.tex	2018-10-18 17:44:20.000000000 -0500
+--- ../from_rtx/nonlinear.tex	2020-06-15 15:03:40.000000000 -0500
+***************
+*** 16,18 ****
+--- 16,114 ----
+  }
+  \end{itemize}
+  \end{frame}
++ 
++ \begin{frame}
++   \onslide<1->{\frametitle{General Linearization} }
++ \begin{itemize}
++   \onslide<2->{ 
++ \item  Typically, we linearize about an equilibrium point $x_0$ or a reference (or nominal) function $x_{\text{ref}}(t)$
++ }
++   \onslide<3->{
++ \item   Equilibrium:  $\dot{x}=f(x_0)=0$, define $\delta x(t)=x(t)-x_0$.  Then, since $x_0$ is a constant, we have\\
++ $\deriv{\delta x(t)}{t}=\deriv{x(t)}{t}-\deriv{x_0}{t}=\dot{x}(t)-0=\dot{x}(t)$
++ }
++   \onslide<4->{
++ \item   Reference function:  $\deriv{\delta x(t)}{t}=\deriv{\left[x(t)-x_{\text{ref}}(t)\right]}{t}=
++ \dot{x}(t)-\dot{x}_{\text{ref}}(t)$
++ }
++   \onslide<5->{
++ \item Note:  Equilibrium points are called critical points in mathematics (points where the gradient is zero)
++ }
++ \end{itemize}
++ \end{frame}
++ 
++ 
++ \begin{frame}
++   \onslide<1->{\frametitle{Linearization about a Nominal Trajectory:  Taylor Series} }
++ \begin{itemize}
++   \onslide<2->{
++ \item   To fully appreciate the linearization about a nominal trajectory, we need to make a detour into Taylor Series
++ }
++ \begin{itemize}
++   \onslide<3->{
++ \item   Single Variable Taylor Series
++ }
++   \onslide<4->{
++ \item   Multivariable Taylor Series
++ }
++ \end{itemize}
++ \end{itemize}
++ \end{frame}
++ 
++ \begin{frame}
++   \onslide<1->{\frametitle{Single Variable Taylor Series} }
++ \begin{itemize}
++   \onslide<2->{
++ \item   If $f$ is a \textbf{scalar}, real-valued continuous function with continuous derivatives of all orders in a neighborhood of a point $x_0$,
++ then the value of $f$ at any other point $x$ in that neighborhood can be expressed as an infinite series as follows:\\
++ }
++   \onslide<3->{
++ \begin{equation}
++ f(x)=\Dopsumtaylor{f}{x}{x_0}
++ \end{equation}
++ where $\Dopnth{k}{x,x_0}{f}:= \svartaylorterm{k}{x}{f}{x_0}.$
++ }
++   \onslide<4->{
++ \item   $x$ is a \textbf{scalar variable}
++ }
++ \end{itemize}
++ \end{frame}
++ 
++ \begin{frame}
++   \onslide<1->{\frametitle{Multivariable Taylor Series} }
++ \begin{itemize}
++   \onslide<2->{
++ \item   For a \textbf{vector-valued} function $f$ of a vector variable $x$ the notation can be made similar, 
++ using sums of partial derivatives instead of ordinary derivatives:
++ }
++   \onslide<3->{
++ \begin{equation}
++ \mvartaylorseries{x}{f}
++ \end{equation}
++ where $\mvartaylortermsymdef{k}{x}{f}{x_0}$.
++ }
++   \onslide<4->{
++ \item Note that $x$ is also (in our applications) an implicit vector-valued function of time $x=x(t)$.
++ But we are ignoring that for now.  
++ }
++ 
++ \end{itemize}
++ \end{frame}
++ 
++ \begin{frame}
++   \onslide<1->{\frametitle{Linearization} }
++ \begin{itemize}
++   \onslide<2->{
++ \item   We can unify the multivariable and single variable notation with the following definition:
++ }
++   \onslide<3->{
++ \begin{equation}
++ \tayloropdef{k}{x}{f}{x_0}
++ \end{equation}
++ }
++   \onslide<4->{
++   \item We will return to linearization when we consider precise orbit determination
++   }
++ \end{itemize}
++ \end{frame}
++ 
+*** ./gps_kalman_master_part1.tex	2020-04-29 23:13:49.162807900 -0500
+--- ../from_rtx/gps_kalman_master_part1.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 3,16 ****
+  \usepackage{color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+  \usepackage{graphicx}
+  \usepackage{verbatim}
+! \usetheme{Warsaw}
+! %\setbeamertemplate{footline}[frame number]{}
+! \setbeamertemplate{footline}[text line]
+! {%
+!   \parbox{\linewidth}{\vspace*{-8pt}some text\hfill\insertshortauthor\hfill\insertpagenumber}
+! }
+! \setbeamertemplate{navigation symbols}{}
+! 
+  \usepackage{booktabs} 
+  \usepackage[english]{babel} 
+  \usepackage[yyyymmdd,hhmmss]{datetime}
+--- 3,9 ----
+  \usepackage{color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+  \usepackage{graphicx}
+  \usepackage{verbatim}
+! \usetheme{Berlin}
+  \usepackage{booktabs} 
+  \usepackage[english]{babel} 
+  \usepackage[yyyymmdd,hhmmss]{datetime}
+***************
+*** 39,45 ****
+  \pagestyle{plain}
+  %%% --------------------------------------------------------------
+  \newcounter{exercisecounter}
+- 
+  \begin{document}
+  \title{
+  \vfill \hrulefill \vfill
+--- 32,37 ----
+***************
+*** 53,59 ****
+  \currenttime\\
+  \vfill \hrulefill \vspace*{.25in} \vfill
+  \begin{tiny}
+! \copyright 2020 by Michael L. Carroll
+  \end{tiny}
+  } \maketitle
+  % ----------------------------------------------------------------
+--- 45,51 ----
+  \currenttime\\
+  \vfill \hrulefill \vspace*{.25in} \vfill
+  \begin{tiny}
+! \copyright 2018 by Michael L. Carroll
+  \end{tiny}
+  } \maketitle
+  % ----------------------------------------------------------------
+*** ./gps_kalman_master_part3.tex	2018-10-17 17:44:26.000000000 -0500
+--- ../from_rtx/gps_kalman_master_part3.tex	2020-06-15 15:07:32.000000000 -0500
+***************
+*** 58,70 ****
+  \input{day3_seg1_numerical/numerical_main.tex}
+  \section{Square Root Information Filer (SRIF)}
+  \input{SRIF/srif_main.tex}
+  \section{Navigation Applications}
+  \input{basic_nav_concepts/overview.tex}
+  \input{basic_nav_concepts/navproblem_main.tex}
+- \input{basic_nav_concepts/gps.tex}
+  \input{day3_seg2_inertial/inertial_main.tex}
+  \input{day3_seg3_9-state/9-state_main.tex}
+  \input{day3_seg4_ins_challenges/ins_chal_main.tex}
+  \input{orbit_filter/orbit_filter.tex}
+  % ----------------------------------------------------------------
+  \end{document}
+--- 58,74 ----
+  \input{day3_seg1_numerical/numerical_main.tex}
+  \section{Square Root Information Filer (SRIF)}
+  \input{SRIF/srif_main.tex}
++ \section{Extended Kalman Filter}
++ \input{day3_seg4_ins_challenges/nonlinear.tex}
+  \section{Navigation Applications}
+  \input{basic_nav_concepts/overview.tex}
+  \input{basic_nav_concepts/navproblem_main.tex}
+  \input{day3_seg2_inertial/inertial_main.tex}
++ \subsection{GPS Concepts:  User Perspective}
++ \input{basic_nav_concepts/gps.tex}
+  \input{day3_seg3_9-state/9-state_main.tex}
+  \input{day3_seg4_ins_challenges/ins_chal_main.tex}
++ \subsection{Precise Orbit Determination}
+  \input{orbit_filter/orbit_filter.tex}
+  % ----------------------------------------------------------------
+  \end{document}
+*** ./include/errdyneqdefs.tex	2018-10-03 13:06:50.000000000 -0500
+--- ../from_rtx/errdyneqdefs.tex	2020-06-15 15:03:42.000000000 -0500
+***************
+*** 24,30 ****
+  \newcommand{\deltardoteq}{\delta \dot{R}^L=\delta v^L-\rotmat{E}{L}^L \poserr^L}
+  \newcommand{\velerreqpsi}{\lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + 
+    \specforce^B\times \psi^L -\dfrac{g}{R_e}\Delta R_H^L-\left(2\omega_{IE}^L+
+!   \omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+  & & -\left(\delta \omega_{EL}^L - 2 e^L\times\omega_{IE}^L\right)\times v^L + 
+  \dfrac{2g\delta h}{R_e} u_R^L +\delta g^L}
+  \newcommand{\telscopeeq}{
+--- 24,30 ----
+  \newcommand{\deltardoteq}{\delta \dot{R}^L=\delta v^L-\rotmat{E}{L}^L \poserr^L}
+  \newcommand{\velerreqpsi}{\lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + 
+    \specforce^B\times \psi^L -\dfrac{g}{R_e}\Delta R_H^L-\left(2\omega_{IE}^L+
+!   \omega_{EL}^L\right)\times\delta v^L }\nonumber\\ 
+  & & -\left(\delta \omega_{EL}^L - 2 e^L\times\omega_{IE}^L\right)\times v^L + 
+  \dfrac{2g\delta h}{R_e} u_R^L +\delta g^L}
+  \newcommand{\telscopeeq}{
+*** ./include/kalman_cmdmaster.tex	2018-10-18 16:16:04.000000000 -0500
+--- ../from_rtx/kalman_cmdmaster.tex	2020-06-15 15:26:46.000000000 -0500
+***************
+*** 146,152 ****
+  \newcommand{\variance}[1]{\text{Var}(#1)}
+  \newcommand{\sigsq}[1]{\sigma^2_{#1}}
+  \newcommand{\cov}[2]{\text{Cov}(#1,#2)}
+! \newcommand{\covdef}[2]{\cov{#1}{#2}:=\expect{(#1-\mu{#1})(#2-\mu{#2})}}
+  \newcommand{\corrdef}[2]{\rho_{#1#2}:=\dfrac{\cov{#1}{#2}}{\sigma_{#1}\sigma_{#2}}}
+  \newcommand{\std}[1]{\sqrt{\variance{#1}}}
+  \newcommand{\expect}[1]{\text{E}\left[#1\right]}
+--- 146,152 ----
+  \newcommand{\variance}[1]{\text{Var}(#1)}
+  \newcommand{\sigsq}[1]{\sigma^2_{#1}}
+  \newcommand{\cov}[2]{\text{Cov}(#1,#2)}
+! \newcommand{\covdef}[2]{\cov{#1}{#2}:=\expect{(#1-\mu_{#1})(#2-\mu_{#2})}}
+  \newcommand{\corrdef}[2]{\rho_{#1#2}:=\dfrac{\cov{#1}{#2}}{\sigma_{#1}\sigma_{#2}}}
+  \newcommand{\std}[1]{\sqrt{\variance{#1}}}
+  \newcommand{\expect}[1]{\text{E}\left[#1\right]}
+*** ./include/taylor.tex	2020-04-14 16:48:58.278771300 -0500
+--- ../from_rtx/taylor.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 5,11 ****
+  
+  
+  \newcommand{\derivop}[2]{\left[\frac{d}{d#2}\right]#1}
+! \newcommand{\Dop}[2]{D_{#2}\left[#1\right]}
+  \newcommand{\derivnth}[3]{\dfrac{d^{#3}#1}{d#2^{#3}}}
+  \newcommand{\derivopnth}[3]{\left[\frac{d^{#3}}{d#2^{#3}}\right]#1}
+  \newcommand{\Dopnth}[3]{D^{#1}_{#2}#3}
+--- 5,11 ----
+  
+  
+  \newcommand{\derivop}[2]{\left[\frac{d}{d#2}\right]#1}
+! \newcommand{\Dop}[2]{D_{#1}\left[#2\right]}
+  \newcommand{\derivnth}[3]{\dfrac{d^{#3}#1}{d#2^{#3}}}
+  \newcommand{\derivopnth}[3]{\left[\frac{d^{#3}}{d#2^{#3}}\right]#1}
+  \newcommand{\Dopnth}[3]{D^{#1}_{#2}#3}
+***************
+*** 38,45 ****
+  0&0&\cdots&\cdots &1\\
+  \end{array}\right]
+  \left[\begin{array}{c}
+! #1\left(#2_0\right) \\
+! \Dop{#1}{#2}\left(#2_0\right) \\
+  \vdots \\
+  \Dopnth{#1}{#2}{#3}\left(#2_0\right) \\
+  \end{array}\right]
+--- 38,45 ----
+  0&0&\cdots&\cdots &1\\
+  \end{array}\right]
+  \left[\begin{array}{c}
+! #3\left(#2_0\right) \\
+! \Dopnth{1}{#2}{#3}\left(#2_0\right) \\
+  \vdots \\
+  \Dopnth{#1}{#2}{#3}\left(#2_0\right) \\
+  \end{array}\right]
+*** ./orbit_filter/orbit_filter.tex	2018-11-02 10:26:57.147357200 -0500
+--- ../from_rtx/orbit_filter.tex	2020-06-15 15:03:42.000000000 -0500
+***************
+*** 68,144 ****
+  \end{itemize}
+  \end{frame}
+  
+- \begin{frame}
+-   \onslide<1->{\frametitle{Linearization about a Nominal Trajectory:  Taylor Series} }
+- \begin{itemize}
+-   \onslide<2->{
+- \item   To fully appreciate the linearization of orbit equations about a nominal trajectory, we need to make a detour into Taylor Series
+- }
+-   \onslide<3->{
+- \item   Single Variable Taylor Series
+- }
+-   \onslide<4->{
+- \item   Multivariable Taylor Series
+- }
+- \end{itemize}
+- \end{frame}
+- 
+- \begin{frame}
+-   \onslide<1->{\frametitle{Single Variable Taylor Series} }
+- \begin{itemize}
+-   \onslide<2->{
+- \item   If $f$ is a real-valued continuous function with continuous derivatives of all orders in a neighborhood of a point $x_0$,
+- then the value of $f$ at any other point $x$ in that neighborhood can be expressed as an infinite series as follows:\\
+- }
+-   \onslide<3->{
+- \begin{equation}
+- f(x)=\Dopsumtaylor{f}{x}{x_0}
+- \end{equation}
+- where $\Dopnth{k}{x,x_0}{f}:= \svartaylorterm{k}{x}{f}{x_0}.$
+- }
+-   \onslide<4->{
+- \item   $x$ is a scalar variable
+- }
+- \end{itemize}
+- \end{frame}
+- 
+- \begin{frame}
+-   \onslide<1->{\frametitle{Multivariable Taylor Series} }
+- \begin{itemize}
+-   \onslide<2->{
+- \item   For a vector-valued function $f$ of a vector variable $x$ the notation can be made similar, 
+- using sums of partial derivatives instead of ordinary derivatives:
+- }
+-   \onslide<3->{
+- \begin{equation}
+- \mvartaylorseries{x}{f}
+- \end{equation}
+- where $\mvartaylortermsymdef{k}{x}{f}{x_0}$, and it is understood that the exponent $k$ applies to the derivative operator to form the $k^{\text{th}}$-order derivative \textbf{before} evaluating that derivative at the vector point $x_0$.
+- }
+-   \onslide<4->{
+- \item Note that $x$ is also (in our applications) an implicit vector-valued function of time $x=x(t)$.
+- But we are ignoring that for now.  
+- }
+- 
+- \end{itemize}
+- \end{frame}
+- 
+- \begin{frame}
+-   \onslide<1->{\frametitle{Linearization} }
+- \begin{itemize}
+-   \onslide<2->{
+- \item   We can unify the multivariable and single variable notation with the following definition:
+- }
+-   \onslide<3->{
+- \begin{equation}
+- \tayloropdef{k}{x}{f}{x_0}
+- \end{equation}
+- }
+- \end{itemize}
+- \end{frame}
+- 
+- 
+- 
+  
+  \begin{frame}
+    \onslide<1->{\frametitle{Precise Orbit Determination (POD): Linearization} }
+--- 68,73 ----
+***************
+*** 153,180 ****
+  
+  
+  \begin{frame}
+-   \onslide<1->{\frametitle{General Linearization} }
+- \begin{itemize}
+-   \onslide<2->{ 
+- \item  Typically, we linearize about an equilibrium point $x_0$ or a reference (or nominal) function $x_{\text{ref}}(t)$
+- }
+-   \onslide<3->{
+- \item   Equilibrium:  $\dot{x}=f(x_0)=0$, define $\delta x(t)=x(t)-x_0$.  Then, since $x_0$ is a constant, we have\\
+- $\deriv{\delta x(t)}{t}=\deriv{x(t)}{t}-\deriv{x_0}{t}=\dot{x}(t)-0=\dot{x}(t)$
+- }
+-   \onslide<4->{
+- \item   Reference function:  $\deriv{\delta x(t)}{t}=\deriv{\left[x(t)-x_{\text{ref}}(t)\right]}{t}=
+- \dot{x}(t)-\dot{x}_{\text{ref}}(t)$
+- }
+-   \onslide<5->{
+- \item Note:  Equilibrium points are called critical points in mathematics (points where the gradient is zero)
+- }
+- \end{itemize}
+- \end{frame}
+- 
+- 
+- 
+- \begin{frame}
+    \onslide<1->{\frametitle{Precise Orbit Determination (POD): Linearization} }
+  \begin{itemize}
+    \onslide<2->{\item Introduce the delta state:  $\gomacurrentstateresidual{x}{t}$ }
+--- 82,87 ----
+***************
+*** 195,204 ****
+  \item Five standard orbital math models: SGP, SGP4, SDP4, SGP8 and SDP8
+  }
+    \onslide<3->{
+! \item  SGP:  Simplified General Perturbations (orbital period < 225 minutes) 
+  }
+    \onslide<4->{
+! \item   SDP:  Simplified Deep Space Perturbations (orbital period > 225 minutes)
+  }
+    \onslide<5->{
+  \item  Many implementations available:  Python, MATLAB, FORTRAN, C 
+--- 102,111 ----
+  \item Five standard orbital math models: SGP, SGP4, SDP4, SGP8 and SDP8
+  }
+    \onslide<3->{
+! \item  SGP:  Simplified General Perturbations (orbital period $<$ 225 minutes) 
+  }
+    \onslide<4->{
+! \item   SDP:  Simplified Deep Space Perturbations (orbital period $>$ 225 minutes)
+  }
+    \onslide<5->{
+  \item  Many implementations available:  Python, MATLAB, FORTRAN, C 
+*** ./overview.tex	2020-04-30 14:16:53.128668600 -0500
+--- ../from_rtx/overview.tex	2020-06-15 15:03:42.000000000 -0500
+***************
+*** 8,14 ****
+  \onslide<4->{\item Detailed Topic List}
+  \onslide<5->{\item Instructor Background}
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 8,13 ----
+***************
+*** 18,28 ****
+   \begin{itemize}
+  	\onslide<3->{\item General Theory Overview w/o proofs}
+  	\onslide<4->{\item Practical Aspects of Application}
+!         \onslide<5->{\item Spreadsheet and Python Examples}
+   \end{itemize}
+   \onslide<6->{\item Applications to GPS Control Segment}
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 17,26 ----
+   \begin{itemize}
+  	\onslide<3->{\item General Theory Overview w/o proofs}
+  	\onslide<4->{\item Practical Aspects of Application}
+!         \onslide<5->{\item Matlab and Simulink Examples}
+   \end{itemize}
+   \onslide<6->{\item Applications to GPS Control Segment}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 37,43 ****
+       \onslide<7->{\item Exercises (optional)}
+     \end{itemize}
+   \end{itemize}
+- \onslide<8->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 35,40 ----
+***************
+*** 48,60 ****
+  \onslide<4->{\item Part III: Implementation Issues and Remedies, Applications to Navigation }
+  \onslide<5->{\item Part IV:  Applications to GPS Control Segment Kalman Filters}
+  \end{itemize} 
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+! \onslide<1->{
+!     \frametitle{Course Overview: Instructor Background}
+! }
+  \begin{itemize}
+  \onslide<2->{\item Michael Carroll}
+  \onslide<3->{\item Masters Degree in Mathematics}
+--- 45,54 ----
+  \onslide<4->{\item Part III: Implementation Issues and Remedies, Applications to Navigation }
+  \onslide<5->{\item Part IV:  Applications to GPS Control Segment Kalman Filters}
+  \end{itemize} 
+  \end{frame}
+  
+  \begin{frame}
+! \onslide<1->{\frametitle{Course Overview: Instructor Background}}
+  \begin{itemize}
+  \onslide<2->{\item Michael Carroll}
+  \onslide<3->{\item Masters Degree in Mathematics}
+***************
+*** 62,79 ****
+  \onslide<5->{\item 37 years in Aerospace and Defense Industry}
+  \onslide<6->{\item Navigation Systems and Algorithms}
+  \end{itemize} 
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \section{Kalman Filter Overview}
+  
+  \begin{frame}
+  \onslide<1->{\frametitle{Kalman Filter Overview}
+!       \framesubtitle{What is a Kalman Filter?}
+! }
+  \begin{itemize}
+  \onslide<2->{
+! \item Optimal state estimator of a linear, stochastic dynamic system
+  }
+  \begin{itemize}
+  \onslide<3->{
+--- 56,83 ----
+  \onslide<5->{\item 37 years in Aerospace and Defense Industry}
+  \onslide<6->{\item Navigation Systems and Algorithms}
+  \end{itemize} 
+  \end{frame}
+  
++ \begin{frame}
++ \onslide<1->{\frametitle{Course Overview: Instructor Background}}
++ \begin{itemize}
++ \onslide<2->{\item Mikhail Kosyan}
++ \onslide<3->{\item Masters Degree in Aerospace Engineering}
++ \onslide<4->{\item Raytheon Mission Vehicle Management (MVM) System Engineer on GPS OCX Program}
++ \onslide<5->{\item 7 years in Aerospace and Defense Industry}
++ \onslide<6->{\item Guidance, Navigation and Control}
++ \end{itemize} 
++ \end{frame}
++ 
++ 
+  \section{Kalman Filter Overview}
+  
+  \begin{frame}
+  \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{What is a Kalman Filter?}}
+  \begin{itemize}
+  \onslide<2->{
+! \item Optimal state estimator for linear, stochastic dynamic system
+  }
+  \begin{itemize}
+  \onslide<3->{
+***************
+*** 81,93 ****
+  }
+  \end{itemize}
+  \onslide<4->{
+! \item Essentially Recursive Weighted Least Squares (RWLS) estimator
+! }
+! \onslide<5->{
+!   \item B.L.U.E. = Best Linear Unbiased Estimator
+! }
+  \end{itemize}
+- \onslide<6->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 85,98 ----
+  }
+  \end{itemize}
+  \onslide<4->{
+! \item Essentially, it's a Recursive Weighted Least Squares (RWLS) estimator}
+! \onslide<5->{\item 
+! 	B.L.U.E. = Best Linear Unbiased Estimator
+! }
+! % \begin{verbatim}
+! % http://www.cs.unc.edu/~welch/kalman/kalmanPaper.html
+! % \end{verbatim}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 109,115 ****
+  }
+  \end{itemize}
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  % 
+  
+--- 114,119 ----
+***************
+*** 117,127 ****
+  \onslide<1->{\frametitle{Kalman Filter Overview}
+  \framesubtitle{History}}
+  \begin{itemize}
+! \onslide<2->{\item Kalman built upon work by the Russian Pontrayagin (optimal control theory)
+  }
+  \begin{itemize}
+  \onslide<3->{
+! \item Kalman showed the duality between Controllability and Observability
+  }
+  \onslide<4->{\item Worked in \textbf{time domain}, which is favorable to MIMO (multiple input multiple output) systems, 
+  in contrast to Norbert Wiener's filtering in \textbf{frequency domain}
+--- 121,131 ----
+  \onslide<1->{\frametitle{Kalman Filter Overview}
+  \framesubtitle{History}}
+  \begin{itemize}
+! \onslide<2->{\item Kalman also built upon work by the Russian Pontrayagin (optimal control theory)
+  }
+  \begin{itemize}
+  \onslide<3->{
+! \item Kalman showed duality between Controllability and Observability
+  }
+  \onslide<4->{\item Worked in \textbf{time domain}, which is favorable to MIMO (multiple input multiple output) systems, 
+  in contrast to Norbert Wiener's filtering in \textbf{frequency domain}
+***************
+*** 130,162 ****
+  \onslide<5->{\item State space concepts known to physicists:  Gibbs coined term "phase space" in 1901}
+  \onslide<6->{\item Elie Cartan:  1869-1951:  "espace des etats"}
+  \end{itemize}
+- \onslide<7->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{\frametitle{Kalman Filter Overview} 
+! \framesubtitle{Least Squares Luminaries}}
+  \begin{figure}
+! Roger Boscovich
+! \includegraphics[height=.33\textheight,width=.33\textwidth]{boscovich.jpg}
+  \end{figure}
+  \begin{figure}
+! Karl F. Gauss
+! \includegraphics[height=.33\textheight,width=.33\textwidth]{gauss.jpg}
+  \end{figure}
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  \begin{frame}
+!   \onslide<1->{\frametitle{Least Squares Luminaries} }
+  \begin{figure}
+  Peter Swerling
+! \includegraphics[height=.33\textheight,width=.33\textwidth]{Peter_Swerling.jpg}
+  \end{figure}
+  \begin{figure}
+  Rudolf Kalman
+! \includegraphics[height=.33\textheight,width=.33\textwidth]{RudolfKalman.jpg}
+  \end{figure}
+- \onslide<2->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 134,168 ----
+  \onslide<5->{\item State space concepts known to physicists:  Gibbs coined term "phase space" in 1901}
+  \onslide<6->{\item Elie Cartan:  1869-1951:  "espace des etats"}
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+!   \onslide<1->{
+! 	\frametitle{Kalman Filter Overview} 
+! 	\framesubtitle{Least Squares Luminaries}
+! }
+  		\begin{figure}
+! Roger Boscovich, S.J.
+! 		\includegraphics[scale=0.50]{boscovich.jpg}
+  		\end{figure}
+  		\begin{figure}
+! Carl F. Gauss
+! 		\includegraphics[scale=0.25]{gauss_60.jpg}
+  		\end{figure} 
+  \end{frame}
++ 
+  \begin{frame}
+!   \onslide<1->{
+! 	\frametitle{Kalman Filter Overview} 
+! 	\framesubtitle{Recursive Least Squares Luminaries} }
+  \begin{figure}
+  Peter Swerling
+! \includegraphics[scale=0.33]{Peter_Swerling.jpg}
+  \end{figure}
+  \begin{figure}
+  Rudolf Kalman
+! \includegraphics[scale=0.50]{RudolfKalman.jpg}
+  \end{figure}
+  \end{frame}
+  
+  \begin{frame}
+***************
+*** 171,177 ****
+       }
+    \end{itemize}
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+  \begin{frame}
+--- 177,182 ----
+***************
+*** 180,224 ****
+  }
+  \begin{itemize}
+  \onslide<2->{\item All three segments have Kalman filters}
+! \onslide<3->{\item CS:  ECEST = Ephemeris and Clock Estimator (legacy term), RTGx (JPL's Real-Time GPSY) and NRL's Ensemble Time Filter}
+  \onslide<4->{\item AEP's ECEST estimates inertial positions and velocities of SVs, solar pressure parameters, 
+  SV and MS clock error dynamics, and troposphere state at each MS}
+! \end{itemize}
+! \onslide<5->{\center --------------------------------------------------------------------}
+! \end{frame}
+! 
+! \begin{frame}
+! \onslide<1->{\frametitle{Kalman Filter Overview}
+! \framesubtitle{KF uses in GPS}
+! }
+! \begin{itemize}
+! \onslide<2->{\item In User Segment receivers, satellite nav software, and offline computations}
+! \onslide<3->{\item E.g., used in aircraft Operational Flight Programs (OFPs) and Inertial Navigation Systems (INSs) to integrate GPS and other external 
+  navaids to optimally estimate INS error states }
+! \onslide<4->{\item 1990s:  Paradigm shift in navigation:\\
+    Was: "INS/GPS"\;\;\;\;  Is: "GPS/INS" }
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+- 
+  \begin{frame}
+  \onslide<1->{\frametitle{Kalman Filter Overview}}
+  \begin{itemize}
+! \onslide<2->{
+! 	\item State estimation as branch of applied mathematics: 
+! 	Kalman filtering uses techniques and results from many mathematical subjects:\\
+  linear algebra, differential equations, measure theory, probability, statistics, functional analysis (Hilbert space) 
+  }
+! \onslide<3->{
+! 	\item But essentials are very intuitive
+! }	
+  	\begin{itemize}
+! 	\onslide<4->{
+! 		\item Can be understood with minimal math background (matrix algebra, calculus, probability and statistics )
+! 	}
+  	\end{itemize}
+  \end{itemize}
+- \onslide<5->{\center --------------------------------------------------------------------}
+  \end{frame}
+  
+--- 185,229 ----
+  }
+  \begin{itemize}
+  \onslide<2->{\item All three segments have Kalman filters}
+! \onslide<3->{\item Control Segment:  ECEST = Ephemeris and Clock Estimator (legacy term), RTGx (JPL's Real-Time GPSY) and NRL's Ensemble Time Filter}
+  \onslide<4->{\item AEP's ECEST estimates inertial positions and velocities of SVs, solar pressure parameters, 
+  SV and MS clock error dynamics, and troposphere state at each MS}
+! \onslide<5->{\item In US receivers, satellite nav software, and offline computations}
+! \onslide<6->{\item E.g., used in aircraft Operational Flight Programs (OFPs) and Inertial Navigation Systems (INSs) to integrate GPS and other external 
+  navaids to optimally estimate INS error states }
+! \onslide<7->{\item 1990s:  Paradigm shift in navigation:\\
+    Was: "INS/GPS"\;\;\;\;  Is: "GPS/INS" }
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+  \onslide<1->{\frametitle{Kalman Filter Overview}}
+  \begin{itemize}
+! \onslide<2->{\item State estimation as branch of applied mathematics:   Filtering uses techniques and results from many mathematical subjects:\\
+  linear algebra, differential equations, measure theory, probability, statistics, functional analysis (Hilbert space) 
+  }
+! \onslide<3->{\item But essentials are very intuitive}
+  \begin{itemize}
+!  \item Can be understood with minimal math background (matrix algebra, basic calculus, probability and statistics )
+  \end{itemize}
+  \end{itemize}
+  \end{frame}
+  
++ \begin{frame}
++ \onslide<1->{\frametitle{Kalman Filter Overview}}
++ \framesubtitle{Some Notational Conventions}
++ \begin{itemize}
++ \onslide<2->{\item Time-dependent scalar or vector quantities:\\
++   $x(k)$ (discrete), $x(t)$ (continuous) }
++ \onslide<3->{\item Corresponding vector components:\\
++ $x_i(k)$ or $x_i(t)$ }
++ \onslide<4->{\item Time-dependent matrix quantities (capital letters):\\
++   $P(k)$ (discrete), $P(t)$ (continuous) }
++ \onslide<5->{\item Corresponding matrix components (elements):\\
++  $p_{ij}(k)$ or $p_{ij}(t)$ }
++ \onslide<6->{
++   \item Use hats for estimated quantities and special superscripts to indicate pre- and post-update values:  \\
++ $\hat{x}^{+}(k)$ and $P^{-}(k)$
++ }
++ \end{itemize}
++ \end{frame}
+*** ./slide_template.tex	2018-10-13 10:20:26.000000000 -0500
+--- ../from_rtx/slide_template.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 16,20 ****
+--- 16,32 ----
+    \onslide<5->{
+  \item   
+  }
++   \onslide<6->{
++ \item   
++ }
++   \onslide<7->{
++ \item   
++ }
++   \onslide<8->{
++ \item   
++ }
++   \onslide<9->{
++ \item  
++ }
+  \end{itemize}
+  \end{frame}
+*** ./SRIF/srif_main.tex	2018-10-18 17:16:06.000000000 -0500
+--- ../from_rtx/srif_main.tex	2020-06-15 16:01:34.000000000 -0500
+***************
+*** 80,86 ****
+  \item  Note that the information matrix is updated without knowledge of the gain!
+  }
+    \onslide<3->{
+! \item  The gain comutation takes on a very simple form:  $K=\Lambda^{+}H\trans R^{-1}$  
+  }
+    \onslide<4->{
+  \item  The state is then updated using the gain in the normal way 
+--- 80,86 ----
+  \item  Note that the information matrix is updated without knowledge of the gain!
+  }
+    \onslide<3->{
+! \item  The gain computation takes on a very simple form:  $K=\Lambda^{+}H\trans R^{-1}$  
+  }
+    \onslide<4->{
+  \item  The state is then updated using the gain in the normal way 
+*** ./wrap_up.tex	2018-11-02 10:11:14.560166600 -0500
+--- ../from_rtx/wrap_up.tex	2020-06-15 15:03:42.000000000 -0500
+***************
+*** 13,19 ****
+  \special{landscape}
+  % Fuzz -----------------------------------------------------------
+  \hfuzz 5pt % Don't bother to report overfull boxes < 5pt
+- 
+  % MATH -----------------------------------------------------------
+  \input{include/kalman_cmdmaster.tex}
+  % THEOREM ENV. ---------------------------------------------------
+--- 13,18 ----
+***************
+*** 52,58 ****
+  
+  \begin{frame}
+    \onslide<1->{
+! 	\frametitle{Kalman Filter Class 2018} 
+  	\framesubtitle{Wrap-up}
+  }
+  \begin{itemize}
+--- 51,57 ----
+  
+  \begin{frame}
+    \onslide<1->{
+! 	\frametitle{Kalman Filter Class 2019} 
+  	\framesubtitle{Wrap-up}
+  }
+  \begin{itemize}

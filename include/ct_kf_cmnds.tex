@@ -1,0 +1,29 @@
+% ct_kf_cmnds.tex
+% 23 filter states
+\newcommand{\ctgbias}[1]{\epsilon D#1}
+\newcommand{\ctabias}[1]{\epsilon B#1}
+\newcommand{\ctdopbias}[1]{\epsilon BD#1}
+\newcommand{\ctdopbore}[1]{\delta B#1}
+\newcommand{\ctdopsfdx}{\epsilon SFDX}
+\newcommand{\ctposerr}[1]{\Delta R#1}
+\newcommand{\ctvelerr}[1]{\epsilon V#1}
+\newcommand{\cttilt}[1]{\Theta#1}
+\newcommand{\ctazerr}{\Psi Z}
+\newcommand{\ctbarofirst}{\epsilon\Delta H}
+\newcommand{\ctbarosecond}{I\Delta H}
+\newcommand{\tderiv}{\dfrac{d}{dt}}
+\newcommand{\dbaro}{D_\text{baro}}
+\newcommand{\cbaro}{C_\text{baro}}
+% System dynamics
+% Position error dynamics
+\newcommand{\ctperex}{\Delta\dot{R}_{x}=\rho_z\ctposerr{y}-\rho_y\ctposerr{z}+\ctvelerr{x}}
+\newcommand{\ctperey}{\Delta\dot{R}_{y}=-\rho_z\ctposerr{x}+\rho_x\ctposerr{y}+\ctvelerr{y}}
+\newcommand{\ctperez}{\Delta\dot{R}_{z}=\rho_y\ctposerr{x}-\rho_x\ctposerr{y}-\dbaro\ctposerr{z}+\ctvelerr{z}+\dbaro\ctbarofirst}
+% Velocity Error Dynamics
+\newcommand{\ctverex}{\lefteqn{ \epsilon\dot{V}_x=\dfrac{A_y}{R_e}\ctposerr{x}+\left(2\omega_{z}+\rho_z\right)\ctvelerr{y}-\left(2\omega_{y}+\rho_y\right)\ctvelerr{z} }\nonumber\\
+& & -\left(A_z+\abs{g_z}\right)\cttilt{y}A_y\ctazerr
+\nonumber\\
+& & +\left[\dcm{B}{L}\right]_{(1,1)}\ctabias{x}+\left[\dcm{B}{L}\right]_{(1,2)}\ctabias{y}+\left[\dcm{B}{L}\right]_{(1,3)}\ctabias{z}}
+
+%\newcommand{\velerreq}{ \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+%& & -\left(\delta \omega_{EL}^L - 2 e^L\times\omega_{IE}^L\right)\times v^L + \dfrac{2g\delta h}{R_e} u_R^L +\delta g^L}

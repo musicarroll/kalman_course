@@ -1,0 +1,9 @@
+% day4_seg2_navaids/posfix.tex
+\begin{slide}
+Position Fix
+ \begin{itemize}
+ \item Overfly Fix
+ \item Known location
+ \item Delta formed between overfly location and indicated, Kalman-compensated INS position
+\end{itemize}
+\end{slide}

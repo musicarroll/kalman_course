@@ -1,0 +1,55 @@
+\begin{frame}
+OP'GPS'POS'VEL'OBS
+\begin{verbatim}
+     FUNCTION: 
+
+     Prepares GPS'POS OR GPS'VEL observation to be passed to Kalman filter.  
+     Determines if GPS data must be translated to the position of INS, and 
+     if so, sets the correct translation vector, based on the lever arms.  
+     The lever arms are the distances from INSs to GPS antenna (lever arm A for 
+     INS1 and lever B for INS2).  
+     It interpolates the INS data between the two blocks of stored data closest 
+     to time of GPS data.   
+     It takes the difference of INS and GPS data, and sets up other items needed
+     in the observation.
+     The items are listed below.
+
+         GPS'POS
+
+         Y'OBSERVATION (INU, 1)        Delta-X  NAV frame
+         Y'OBSERVATION (INU, 2)        Delta-Y  NAV frame
+         Y'OBSERVATION (INU, 3)        observation iteration count
+         Y'OBSERVATION (INU, 4)        unused
+         Y'OBSERVATION (INU, 5)        unused
+         Y'OBSERVATION (INU, 6)        unused
+         Y'OBSERVATION (INU, 7)        Delta-Z  NAV frame
+         Y'OBSERVATION (INU, 8)        unused
+         Y'OBSERVATION (INU, 9)        unused
+         Y'OBSERVATION (INU, 10)       Estimated Horizontal Error
+         Y'OBSERVATION (INU, 11)       unused
+         Y'OBSERVATION (INU, 12)       1.0 -> No translation
+                                       0.0 -> Translation
+         GPS'VEL
+
+         Y'OBSERVATION (INU, 1)        Delta-Vel-X  NAV frame
+         Y'OBSERVATION (INU, 2)        Delta-Vel-Y  NAV frame
+         Y'OBSERVATION (INU, 3)        observation iteration count
+         Y'OBSERVATION (INU, 4)        Marid radius
+         Y'OBSERVATION (INU, 5)        Prime radius
+         Y'OBSERVATION (INU, 6)        Delta-Vel-Z  NAV frame
+         Y'OBSERVATION (INU, 7)        unused
+         Y'OBSERVATION (INU, 8)        unused
+         Y'OBSERVATION (INU, 9)        unused
+         Y'OBSERVATION (INU, 10)       INS X-Velocity  NAV frame
+         Y'OBSERVATION (INU, 11)       INS Y-Velocity  NAV frame
+         Y'OBSERVATION (INU, 12)       1.0 -> No translation
+                                          0.0 -> Translation
+         Y'OBSERVATION (INU, 13)       INS Z-Velocity  NAV frame
+         Y'OBSERVATION (INU, 14)       unused
+         Y'OBSERVATION (INU, 15)       unused
+         Y'OBSERVATION (INU, 16)       GPS Velocity Cov. X  NAV frame
+         Y'OBSERVATION (INU, 17)       GPS Velocity Cov. Y  NAV frame
+         Y'OBSERVATION (INU, 18)       GPS Velocity Cov. Z  NAV frame
+
+\end{verbatim}
+\end{frame}

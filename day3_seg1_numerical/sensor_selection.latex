@@ -1,0 +1,1597 @@
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(11304,7119)(1084,-7033)
+\thinlines
+{\color[rgb]{0,0,0}\put(1126,-2896){\vector( 0, 1){2970}}
+\put(1126,-2896){\vector( 1, 0){11205}}
+}%
+{\color[rgb]{0,0,0}\put(1171,-6991){\vector( 0, 1){2970}}
+\put(1171,-6991){\vector( 1, 0){11205}}
+}%
+{\color[rgb]{0,0,0}\put(4546,-2851){\line( 1, 0){  2}}
+\multiput(4548,-2851)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(4552,-2850){\line( 1, 0){  7}}
+\multiput(4559,-2850)(9.89190,1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(4569,-2849){\line( 1, 0){ 14}}
+\put(4583,-2848){\line( 6, 1){ 16.865}}
+\put(4600,-2846){\line( 6, 1){ 19.784}}
+\put(4620,-2844){\line( 6, 1){ 22.703}}
+\put(4643,-2842){\line( 6, 1){ 23.676}}
+\put(4667,-2840){\line( 6, 1){ 25.784}}
+\put(4693,-2837){\line( 1, 0){ 27}}
+\put(4720,-2835){\line( 6, 1){ 28.703}}
+\put(4749,-2832){\line( 6, 1){ 28.703}}
+\put(4778,-2829){\line( 6, 1){ 31.622}}
+\put(4810,-2826){\line( 6, 1){ 32.757}}
+\put(4843,-2822){\line( 6, 1){ 34.541}}
+\put(4878,-2819){\line( 6, 1){ 37.622}}
+\put(4916,-2815){\line( 6, 1){ 38.757}}
+\put(4955,-2810){\line( 6, 1){ 40.541}}
+\put(4996,-2806){\line( 6, 1){ 43.622}}
+\put(5040,-2801){\line( 6, 1){ 38.595}}
+\put(5079,-2797){\line( 6, 1){ 32.757}}
+\put(5112,-2793){\line( 6, 1){ 24.811}}
+\put(5137,-2790){\line( 1, 0){ 19}}
+\put(5156,-2789){\line( 1, 0){ 13}}
+\multiput(5169,-2788)(8.91890,1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5178,-2787){\line( 1, 0){  5}}
+\put(5183,-2787){\line( 1, 0){  4}}
+\put(5187,-2787){\line( 1, 0){  4}}
+\put(5191,-2787){\line( 1, 0){  5}}
+\multiput(5196,-2787)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5204,-2786)(11.83780,1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5216,-2785){\line( 6, 1){ 16.865}}
+\put(5233,-2783){\line( 6, 1){ 23.027}}
+\put(5256,-2779){\line( 6, 1){ 29.027}}
+\put(5285,-2774){\line( 6, 1){ 34.054}}
+\put(5319,-2768){\line( 5, 1){ 36.923}}
+\put(5356,-2761){\line( 5, 1){ 37.115}}
+\put(5393,-2753){\line( 5, 1){ 33.077}}
+\put(5426,-2746){\line( 5, 1){ 27.115}}
+\put(5453,-2740){\line( 4, 1){ 21.882}}
+\put(5475,-2735){\line( 4, 1){ 16.941}}
+\multiput(5492,-2731)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5503,-2728)(8.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5511,-2726)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5517,-2725)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5521,-2723)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5525,-2722)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5530,-2721)(7.93100,3.17240){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5538,-2718)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5549,-2715){\line( 5, 2){ 15}}
+\put(5564,-2709){\line( 3, 1){ 19.800}}
+\put(5584,-2703){\line( 3, 1){ 25.200}}
+\put(5609,-2694){\line( 5, 2){ 29.655}}
+\put(5639,-2683){\line( 5, 2){ 31.724}}
+\put(5671,-2671){\line( 5, 2){ 35.862}}
+\put(5707,-2657){\line( 5, 2){ 31.207}}
+\put(5738,-2644){\line( 5, 2){ 25.345}}
+\put(5763,-2633){\line( 2, 1){ 20}}
+\put(5783,-2623){\line( 2, 1){ 14}}
+\multiput(5797,-2616)(8.82350,5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5806,-2611)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5812,-2607)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5817,-2604)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5822,-2600)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5828,-2596)(8.08820,4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5836,-2591){\line( 5, 3){ 11.912}}
+\put(5848,-2584){\line( 5, 3){ 16.912}}
+\put(5865,-2574){\line( 2, 1){ 22}}
+\put(5887,-2563){\line( 2, 1){ 26}}
+\put(5913,-2550){\line( 2, 1){ 28}}
+\put(5941,-2536){\line( 2, 1){ 30}}
+\put(5971,-2521){\line( 2, 1){ 24.800}}
+\put(5996,-2509){\line( 2, 1){ 16.800}}
+\multiput(6013,-2501)(10.00000,4.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6023,-2497)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6028,-2495)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6029,-2496)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6027,-2499)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6026,-2500)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6027,-2501)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6032,-2499)(11.20000,5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6043,-2493){\line( 5, 3){ 17.647}}
+\put(6061,-2483){\line( 5, 3){ 26.912}}
+\put(6088,-2467){\line( 3, 2){ 32.538}}
+\put(6121,-2446){\line( 3, 2){ 27.692}}
+\put(6149,-2428){\line( 3, 2){ 25.846}}
+\put(6175,-2411){\line( 3, 2){ 24}}
+\put(6199,-2395){\line( 3, 2){ 20.308}}
+\put(6219,-2381){\line( 3, 2){ 16.154}}
+\put(6235,-2370){\line( 3, 2){ 12}}
+\multiput(6247,-2362)(8.90240,7.12192){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6256,-2355)(8.08820,4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6264,-2350)(6.88000,5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6271,-2345)(6.88000,5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6278,-2340)(8.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6286,-2334)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6296,-2326){\line( 3, 2){ 13.154}}
+\put(6309,-2317){\line( 4, 3){ 17.120}}
+\put(6326,-2304){\line( 4, 3){ 21.760}}
+\put(6348,-2288){\line( 4, 3){ 26.240}}
+\put(6374,-2268){\line( 4, 3){ 29.760}}
+\put(6404,-2246){\line( 5, 4){ 31.707}}
+\put(6436,-2221){\line( 5, 4){ 31.707}}
+\put(6468,-2196){\line( 5, 4){ 27.805}}
+\put(6496,-2174){\line( 5, 4){ 25}}
+\put(6521,-2154){\line( 5, 4){ 18.902}}
+\put(6540,-2139){\line( 6, 5){ 14.164}}
+\put(6554,-2127){\line( 6, 5){ 11.410}}
+\multiput(6565,-2117)(8.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6573,-2111)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6578,-2105)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6582,-2101)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6586,-2097)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6591,-2092)(7.00000,7.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6598,-2085)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6608,-2077){\line( 1, 1){ 11.500}}
+\put(6620,-2066){\line( 6, 5){ 16.918}}
+\put(6637,-2052){\line( 6, 5){ 20.164}}
+\put(6657,-2035){\line( 5, 4){ 23.902}}
+\put(6681,-2016){\line( 5, 4){ 25}}
+\put(6706,-1996){\line( 5, 4){ 30}}
+\put(6736,-1972){\line( 5, 4){ 25}}
+\put(6761,-1952){\line( 5, 4){ 17.805}}
+\put(6779,-1938){\line( 4, 3){ 12}}
+\multiput(6791,-1929)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6797,-1924)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6799,-1922)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6800,-1921){\line( 0, 1){  1}}
+\multiput(6800,-1920)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6802,-1919)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6808,-1915)(10.88000,8.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6819,-1907){\line( 3, 2){ 16.154}}
+\put(6835,-1896){\line( 3, 2){ 23.308}}
+\put(6858,-1880){\line( 3, 2){ 28.154}}
+\put(6886,-1861){\line( 3, 2){ 25.154}}
+\put(6911,-1844){\line( 3, 2){ 21.692}}
+\put(6933,-1830){\line( 4, 3){ 17.760}}
+\put(6951,-1817){\line( 3, 2){ 13.154}}
+\multiput(6964,-1808)(8.16390,6.80325){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6972,-1801)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6977,-1796)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6979,-1793)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6980,-1790)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6981,-1787)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6984,-1784)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6990,-1779)(11.20000,5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7001,-1773){\line( 2, 1){ 17.200}}
+\put(7018,-1764){\line( 2, 1){ 23.600}}
+\put(7042,-1753){\line( 5, 2){ 32.069}}
+\put(7074,-1740){\line( 5, 2){ 36.724}}
+\put(7111,-1726){\line( 3, 1){ 32.100}}
+\put(7143,-1715){\line( 3, 1){ 30.900}}
+\put(7174,-1705){\line( 4, 1){ 28.235}}
+\put(7202,-1697){\line( 4, 1){ 25.177}}
+\put(7227,-1690){\line( 3, 1){ 19.800}}
+\put(7247,-1684){\line( 3, 1){ 16.800}}
+\multiput(7264,-1679)(12.94120,3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7277,-1676)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7288,-1673)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7298,-1671)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7306,-1670)(8.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7314,-1668)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7324,-1666)(11.02700,1.83783){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7335,-1664){\line( 6, 1){ 13.946}}
+\put(7349,-1662){\line( 6, 1){ 18}}
+\put(7367,-1659){\line( 6, 1){ 22.054}}
+\put(7389,-1655){\line( 6, 1){ 25.946}}
+\put(7415,-1651){\line( 6, 1){ 30.973}}
+\put(7446,-1646){\line( 6, 1){ 33.892}}
+\put(7480,-1641){\line( 6, 1){ 35.838}}
+\put(7516,-1636){\line( 6, 1){ 42.649}}
+\put(7559,-1631){\line( 1, 0){ 38}}
+\put(7597,-1628){\line( 1, 0){ 30}}
+\put(7627,-1626){\line( 1, 0){ 22}}
+\put(7649,-1625){\line( 1, 0){ 15}}
+\multiput(7664,-1625)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7673,-1626)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7678,-1627)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7681,-1629)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7684,-1630)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7689,-1632)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7697,-1633){\line( 1, 0){ 14}}
+\put(7711,-1634){\line( 1, 0){ 20}}
+\put(7731,-1635){\line( 1, 0){ 27}}
+\put(7758,-1636){\line( 1, 0){ 34}}
+\put(7792,-1636){\line( 1, 0){ 39}}
+\put(7831,-1636){\line( 1, 0){ 39}}
+\put(7870,-1636){\line( 1, 0){ 34}}
+\put(7904,-1636){\line( 1, 0){ 28}}
+\put(7932,-1636){\line( 1, 0){ 21}}
+\put(7953,-1636){\line( 1, 0){ 15}}
+\put(7968,-1636){\line( 1, 0){  9}}
+\put(7977,-1636){\line( 1, 0){  7}}
+\put(7984,-1636){\line( 1, 0){  5}}
+\put(7989,-1636){\line( 1, 0){  4}}
+\put(7993,-1636){\line( 1, 0){  7}}
+\put(8000,-1636){\line( 1, 0){  9}}
+\put(8009,-1636){\line( 1, 0){ 15}}
+\put(8024,-1636){\line( 1, 0){ 21}}
+\put(8045,-1636){\line( 1, 0){ 28}}
+\put(8073,-1636){\line( 1, 0){ 34}}
+\put(8107,-1636){\line( 1, 0){ 39}}
+\put(8146,-1636){\line( 1, 0){ 39}}
+\put(8185,-1636){\line( 1, 0){ 34}}
+\put(8219,-1636){\line( 1, 0){ 28}}
+\put(8247,-1636){\line( 1, 0){ 21}}
+\put(8268,-1635){\line( 1, 0){ 15}}
+\multiput(8283,-1635)(8.91890,1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8292,-1634)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8299,-1633)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8304,-1632){\line( 1, 0){  4}}
+\multiput(8308,-1632)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8315,-1631){\line( 1, 0){  9}}
+\put(8324,-1631){\line( 1, 0){ 15}}
+\put(8339,-1630){\line( 1, 0){ 21}}
+\put(8360,-1631){\line( 1, 0){ 28}}
+\put(8388,-1632){\line( 1, 0){ 34}}
+\put(8422,-1634){\line( 1, 0){ 39}}
+\put(8461,-1636){\line( 1, 0){ 38}}
+\put(8499,-1639){\line( 6,-1){ 33.568}}
+\put(8533,-1642){\line( 1, 0){ 27}}
+\put(8560,-1644){\line( 6,-1){ 18.811}}
+\multiput(8579,-1646)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8590,-1647){\line( 1, 0){  7}}
+\put(8597,-1647){\line( 1, 0){  2}}
+\put(8599,-1647){\line( 1, 0){  1}}
+\put(8600,-1647){\line( 1, 0){  1}}
+\multiput(8601,-1647)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8604,-1648)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8612,-1649){\line( 5,-1){ 14.039}}
+\put(8626,-1652){\line( 6,-1){ 23.027}}
+\put(8649,-1656){\line( 6,-1){ 33.081}}
+\put(8682,-1662){\line( 5,-1){ 43.077}}
+\put(8725,-1671){\line( 5,-1){ 50.962}}
+\put(8776,-1681){\line( 5,-1){ 39.038}}
+\put(8815,-1689){\line( 4,-1){ 38.824}}
+\put(8854,-1698){\line( 5,-1){ 36.154}}
+\put(8890,-1706){\line( 5,-1){ 32.115}}
+\put(8922,-1713){\line( 5,-1){ 29.038}}
+\put(8951,-1719){\line( 4,-1){ 24}}
+\put(8975,-1725){\line( 5,-1){ 20}}
+\put(8995,-1729){\line( 5,-1){ 18.077}}
+\put(9013,-1733){\line( 5,-1){ 15}}
+\multiput(9028,-1736)(12.97300,-2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9041,-1738)(12.94120,-3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9054,-1741)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9066,-1744)(12.97300,-2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(9079,-1746){\line( 4,-1){ 15.059}}
+\put(9094,-1750){\line( 4,-1){ 16.941}}
+\put(9111,-1754){\line( 4,-1){ 19.059}}
+\put(9130,-1759){\line( 4,-1){ 24}}
+\put(9154,-1765){\line( 3,-1){ 26.700}}
+\put(9181,-1773){\line( 3,-1){ 29.700}}
+\put(9211,-1782){\line( 3,-1){ 33.600}}
+\put(9245,-1792){\line( 3,-1){ 35.100}}
+\put(9280,-1804){\line( 3,-1){ 36}}
+\put(9316,-1816){\line( 3,-1){ 45.300}}
+\put(9361,-1832){\line( 5,-2){ 36.207}}
+\put(9397,-1847){\line( 5,-2){ 26.207}}
+\put(9423,-1858){\line( 2,-1){ 17.200}}
+\multiput(9440,-1867)(8.82350,-5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9449,-1872)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9452,-1874)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(9451,-1876){\line(-1, 0){  4}}
+\multiput(9447,-1876)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9444,-1877)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9441,-1878)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9443,-1881)(5.90160,-7.08192){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(9449,-1888){\line( 4,-3){ 13.120}}
+\put(9462,-1898){\line( 3,-2){ 19.846}}
+\put(9482,-1911){\line( 3,-2){ 27.462}}
+\put(9509,-1930){\line( 3,-2){ 31.846}}
+\put(9541,-1951){\line( 3,-2){ 30}}
+\put(9571,-1971){\line( 3,-2){ 29.308}}
+\put(9600,-1991){\line( 3,-2){ 25.154}}
+\put(9625,-2008){\line( 3,-2){ 21}}
+\put(9646,-2022){\line( 3,-2){ 17.308}}
+\put(9663,-2034){\line( 4,-3){ 13.760}}
+\put(9677,-2044){\line( 3,-2){ 12}}
+\multiput(9689,-2052)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9698,-2058)(8.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9706,-2064)(8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9714,-2069)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9723,-2075)(10.88000,-8.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(9734,-2083){\line( 4,-3){ 13.120}}
+\put(9747,-2093){\line( 4,-3){ 16}}
+\put(9763,-2105){\line( 3,-2){ 20.308}}
+\put(9783,-2119){\line( 4,-3){ 22.240}}
+\put(9805,-2136){\line( 5,-4){ 25}}
+\put(9830,-2156){\line( 4,-3){ 26.240}}
+\put(9856,-2176){\line( 6,-5){ 33.836}}
+\put(9890,-2204){\line( 6,-5){ 23.902}}
+\put(9913,-2225){\line( 1,-1){ 12.500}}
+\multiput(9925,-2238)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9928,-2244)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9923,-2245)(-inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9916,-2243)(-inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9909,-2242)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(9905,-2243)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(9909,-2249){\line( 1,-1){ 13.500}}
+\put(9923,-2262){\line( 4,-3){ 28}}
+\put(9951,-2283){\line( 3,-2){ 40.615}}
+\put(9991,-2311){\line( 3,-2){ 27.692}}
+\put(10019,-2329){\line( 3,-2){ 27.692}}
+\put(10047,-2347){\line( 5,-3){ 26.177}}
+\put(10073,-2363){\line( 5,-3){ 23.088}}
+\put(10096,-2377){\line( 3,-2){ 19.846}}
+\put(10116,-2390){\line( 5,-3){ 16.912}}
+\put(10133,-2400){\line( 5,-3){ 13.823}}
+\put(10147,-2408){\line( 5,-3){ 11.912}}
+\multiput(10159,-2415)(10.15380,-6.76920){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10169,-2422)(10.00000,-5.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10179,-2427)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10188,-2433)(11.20000,-5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(10199,-2439){\line( 5,-3){ 11.912}}
+\put(10211,-2446){\line( 2,-1){ 16}}
+\put(10227,-2454){\line( 5,-3){ 17.647}}
+\put(10245,-2464){\line( 2,-1){ 22.800}}
+\put(10268,-2475){\line( 2,-1){ 27.200}}
+\put(10295,-2489){\line( 2,-1){ 30.800}}
+\put(10326,-2504){\line( 2,-1){ 33.600}}
+\put(10360,-2520){\line( 5,-2){ 36.552}}
+\put(10396,-2536){\line( 5,-2){ 39.138}}
+\put(10435,-2552){\line( 5,-2){ 34.138}}
+\put(10469,-2566){\line( 5,-2){ 27.931}}
+\put(10497,-2577){\line( 5,-2){ 20.862}}
+\put(10518,-2585){\line( 3,-1){ 14.100}}
+\multiput(10532,-2590)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10540,-2592)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(10545,-2593){\line( 1, 0){  1}}
+\put(10546,-2593){\line( 0, 1){  1}}
+\put(10546,-2592){\line( 0, 1){  1}}
+\put(10546,-2591){\line( 1, 0){  2}}
+\put(10548,-2591){\line( 1, 0){  4}}
+\multiput(10552,-2591)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(10562,-2592){\line( 4,-1){ 15.059}}
+\put(10577,-2596){\line( 5,-1){ 23.077}}
+\put(10600,-2601){\line( 4,-1){ 29.882}}
+\put(10630,-2608){\line( 5,-1){ 38.077}}
+\put(10668,-2616){\line( 4,-1){ 42.824}}
+\put(10711,-2626){\line( 5,-1){ 37.115}}
+\put(10748,-2634){\line( 5,-1){ 36.154}}
+\put(10784,-2642){\line( 5,-1){ 33.077}}
+\put(10817,-2649){\line( 5,-1){ 28.077}}
+\put(10845,-2655){\line( 5,-1){ 24.038}}
+\put(10869,-2660){\line( 4,-1){ 20}}
+\put(10889,-2665){\line( 5,-1){ 15}}
+\multiput(10904,-2668)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10916,-2671)(9.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10925,-2674)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10933,-2676)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10940,-2679)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10947,-2681)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10955,-2683)(10.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(10965,-2685)(12.94120,-3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(10978,-2688){\line( 6,-1){ 17.027}}
+\put(10995,-2691){\line( 6,-1){ 21.892}}
+\put(11017,-2694){\line( 6,-1){ 26.919}}
+\put(11044,-2698){\line( 6,-1){ 33.730}}
+\put(11078,-2702){\line( 6,-1){ 37.784}}
+\put(11116,-2707){\line( 6,-1){ 43.622}}
+\put(11160,-2712){\line( 6,-1){ 45.405}}
+\put(11206,-2716){\line( 6,-1){ 46.378}}
+\put(11253,-2720){\line( 1, 0){ 44}}
+\put(11297,-2723){\line( 1, 0){ 41}}
+\put(11338,-2725){\line( 1, 0){ 37}}
+\put(11375,-2726){\line( 1, 0){ 32}}
+\put(11407,-2726){\line( 1, 0){ 27}}
+\put(11434,-2726){\line( 1, 0){ 22}}
+\put(11456,-2725){\line( 1, 0){ 20}}
+\put(11476,-2724){\line( 1, 0){ 16}}
+\put(11492,-2723){\line( 6, 1){ 14.919}}
+\put(11507,-2721){\line( 1, 0){ 14}}
+\multiput(11521,-2720)(12.97300,2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(11534,-2718){\line( 6, 1){ 13.946}}
+\put(11548,-2716){\line( 1, 0){ 15}}
+\put(11563,-2715){\line( 1, 0){ 16}}
+\put(11579,-2714){\line( 1, 0){ 19}}
+\put(11598,-2713){\line( 1, 0){ 21}}
+\put(11619,-2712){\line( 1, 0){ 24}}
+\put(11643,-2712){\line( 1, 0){ 25}}
+\put(11668,-2712){\line( 1, 0){ 27}}
+\put(11695,-2713){\line( 1, 0){ 27}}
+\put(11722,-2714){\line( 6,-1){ 23.676}}
+\put(11746,-2716){\line( 6,-1){ 36.811}}
+\multiput(11783,-2721)(12.06900,-4.82760){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(11795,-2726)(-8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(11787,-2731){\line(-5,-1){ 20.962}}
+\put(11766,-2735){\line(-6,-1){ 27.892}}
+\put(11738,-2739){\line(-6,-1){ 26.757}}
+\put(11711,-2742){\line(-6,-1){ 23.027}}
+\put(11688,-2746){\line(-5,-2){ 12.931}}
+\multiput(11675,-2751)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(11679,-2756){\line( 4,-1){ 21.882}}
+\put(11701,-2761){\line( 6,-1){ 18.811}}
+\put(11720,-2763){\line( 6,-1){ 21.730}}
+\put(11742,-2765){\line( 1, 0){ 22}}
+\put(11764,-2766){\line( 1, 0){ 20}}
+\put(11784,-2766){\line( 1, 0){ 19}}
+\put(11803,-2765){\line( 1, 0){ 17}}
+\put(11820,-2765){\line( 1, 0){ 15}}
+\put(11835,-2764){\line( 6, 1){ 13.946}}
+\put(11849,-2762){\line( 1, 0){ 13}}
+\put(11862,-2761){\line( 1, 0){ 14}}
+\put(11876,-2760){\line( 6, 1){ 14.919}}
+\put(11891,-2758){\line( 1, 0){ 16}}
+\put(11907,-2757){\line( 1, 0){ 19}}
+\put(11926,-2757){\line( 1, 0){ 21}}
+\put(11947,-2756){\line( 1, 0){ 25}}
+\put(11972,-2756){\line( 1, 0){ 28}}
+\put(12000,-2757){\line( 1, 0){ 30}}
+\put(12030,-2759){\line( 1, 0){ 31}}
+\put(12061,-2761){\line( 6,-1){ 41.514}}
+\put(12103,-2765){\line( 6,-1){ 33.892}}
+\put(12137,-2770){\line( 5,-1){ 25.962}}
+\put(12163,-2775){\line( 4,-1){ 20.941}}
+\put(12184,-2780){\line( 3,-1){ 15.900}}
+\put(12200,-2785){\line( 2,-1){ 12.800}}
+\multiput(12213,-2791)(10.00000,-4.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(12223,-2795)(8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(12231,-2800)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(12236,-2803)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(12240,-2805)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+}%
+{\color[rgb]{0,0,0}\put(1260,-6986){\line( 1, 0){  2}}
+\multiput(1262,-6986)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(1266,-6985){\line( 1, 0){  7}}
+\multiput(1273,-6985)(9.89190,1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(1283,-6984){\line( 1, 0){ 14}}
+\put(1297,-6983){\line( 6, 1){ 16.865}}
+\put(1314,-6981){\line( 6, 1){ 19.784}}
+\put(1334,-6979){\line( 6, 1){ 22.703}}
+\put(1357,-6977){\line( 6, 1){ 23.676}}
+\put(1381,-6975){\line( 6, 1){ 25.784}}
+\put(1407,-6972){\line( 1, 0){ 27}}
+\put(1434,-6970){\line( 6, 1){ 28.703}}
+\put(1463,-6967){\line( 6, 1){ 28.703}}
+\put(1492,-6964){\line( 6, 1){ 31.622}}
+\put(1524,-6961){\line( 6, 1){ 32.757}}
+\put(1557,-6957){\line( 6, 1){ 34.541}}
+\put(1592,-6954){\line( 6, 1){ 37.622}}
+\put(1630,-6950){\line( 6, 1){ 38.757}}
+\put(1669,-6945){\line( 6, 1){ 40.541}}
+\put(1710,-6941){\line( 6, 1){ 43.622}}
+\put(1754,-6936){\line( 6, 1){ 38.595}}
+\put(1793,-6932){\line( 6, 1){ 32.757}}
+\put(1826,-6928){\line( 6, 1){ 24.811}}
+\put(1851,-6925){\line( 1, 0){ 19}}
+\put(1870,-6924){\line( 1, 0){ 13}}
+\multiput(1883,-6923)(8.91890,1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(1892,-6922){\line( 1, 0){  5}}
+\put(1897,-6922){\line( 1, 0){  4}}
+\put(1901,-6922){\line( 1, 0){  4}}
+\put(1905,-6922){\line( 1, 0){  5}}
+\multiput(1910,-6922)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(1918,-6921)(11.83780,1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(1930,-6920){\line( 6, 1){ 16.865}}
+\put(1947,-6918){\line( 6, 1){ 23.027}}
+\put(1970,-6914){\line( 6, 1){ 29.027}}
+\put(1999,-6909){\line( 6, 1){ 34.054}}
+\put(2033,-6903){\line( 5, 1){ 36.923}}
+\put(2070,-6896){\line( 5, 1){ 37.115}}
+\put(2107,-6888){\line( 5, 1){ 33.077}}
+\put(2140,-6881){\line( 5, 1){ 27.115}}
+\put(2167,-6875){\line( 4, 1){ 21.882}}
+\put(2189,-6870){\line( 4, 1){ 16.941}}
+\multiput(2206,-6866)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2217,-6863)(8.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2225,-6861)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2231,-6860)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2235,-6858)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2239,-6857)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2244,-6856)(7.93100,3.17240){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2252,-6853)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(2263,-6850){\line( 5, 2){ 15}}
+\put(2278,-6844){\line( 3, 1){ 19.800}}
+\put(2298,-6838){\line( 3, 1){ 25.200}}
+\put(2323,-6829){\line( 5, 2){ 29.655}}
+\put(2353,-6818){\line( 5, 2){ 31.724}}
+\put(2385,-6806){\line( 5, 2){ 35.862}}
+\put(2421,-6792){\line( 5, 2){ 31.207}}
+\put(2452,-6779){\line( 5, 2){ 25.345}}
+\put(2477,-6768){\line( 2, 1){ 20}}
+\put(2497,-6758){\line( 2, 1){ 14}}
+\multiput(2511,-6751)(8.82350,5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2520,-6746)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2526,-6742)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2531,-6739)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2536,-6735)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2542,-6731)(8.08820,4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(2550,-6726){\line( 5, 3){ 11.912}}
+\put(2562,-6719){\line( 5, 3){ 16.912}}
+\put(2579,-6709){\line( 2, 1){ 22}}
+\put(2601,-6698){\line( 2, 1){ 26}}
+\put(2627,-6685){\line( 2, 1){ 28}}
+\put(2655,-6671){\line( 2, 1){ 30}}
+\put(2685,-6656){\line( 2, 1){ 24.800}}
+\put(2710,-6644){\line( 2, 1){ 16.800}}
+\multiput(2727,-6636)(10.00000,4.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2737,-6632)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2742,-6630)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2743,-6631)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2741,-6634)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2740,-6635)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2741,-6636)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2746,-6634)(11.20000,5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(2757,-6628){\line( 5, 3){ 17.647}}
+\put(2775,-6618){\line( 5, 3){ 26.912}}
+\put(2802,-6602){\line( 3, 2){ 32.538}}
+\put(2835,-6581){\line( 3, 2){ 27.692}}
+\put(2863,-6563){\line( 3, 2){ 25.846}}
+\put(2889,-6546){\line( 3, 2){ 24}}
+\put(2913,-6530){\line( 3, 2){ 20.308}}
+\put(2933,-6516){\line( 3, 2){ 16.154}}
+\put(2949,-6505){\line( 3, 2){ 12}}
+\multiput(2961,-6497)(8.90240,7.12192){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2970,-6490)(8.08820,4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2978,-6485)(6.88000,5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2985,-6480)(6.88000,5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2992,-6475)(8.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3000,-6469)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(3010,-6461){\line( 3, 2){ 13.154}}
+\put(3023,-6452){\line( 4, 3){ 17.120}}
+\put(3040,-6439){\line( 4, 3){ 21.760}}
+\put(3062,-6423){\line( 4, 3){ 26.240}}
+\put(3088,-6403){\line( 4, 3){ 29.760}}
+\put(3118,-6381){\line( 5, 4){ 31.707}}
+\put(3150,-6356){\line( 5, 4){ 31.707}}
+\put(3182,-6331){\line( 5, 4){ 27.805}}
+\put(3210,-6309){\line( 5, 4){ 25}}
+\put(3235,-6289){\line( 5, 4){ 18.902}}
+\put(3254,-6274){\line( 6, 5){ 14.164}}
+\put(3268,-6262){\line( 6, 5){ 11.410}}
+\multiput(3279,-6252)(8.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3287,-6246)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3292,-6240)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3296,-6236)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3300,-6232)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3305,-6227)(7.00000,7.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3312,-6220)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(3322,-6212){\line( 1, 1){ 11.500}}
+\put(3334,-6201){\line( 6, 5){ 16.918}}
+\put(3351,-6187){\line( 6, 5){ 20.164}}
+\put(3371,-6170){\line( 5, 4){ 23.902}}
+\put(3395,-6151){\line( 5, 4){ 25}}
+\put(3420,-6131){\line( 5, 4){ 30}}
+\put(3450,-6107){\line( 5, 4){ 25}}
+\put(3475,-6087){\line( 5, 4){ 17.805}}
+\put(3493,-6073){\line( 4, 3){ 12}}
+\multiput(3505,-6064)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3511,-6059)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3513,-6057)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(3514,-6056){\line( 0, 1){  1}}
+\multiput(3514,-6055)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3516,-6054)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3522,-6050)(10.88000,8.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(3533,-6042){\line( 3, 2){ 16.154}}
+\put(3549,-6031){\line( 3, 2){ 23.308}}
+\put(3572,-6015){\line( 3, 2){ 28.154}}
+\put(3600,-5996){\line( 3, 2){ 25.154}}
+\put(3625,-5979){\line( 3, 2){ 21.692}}
+\put(3647,-5965){\line( 4, 3){ 17.760}}
+\put(3665,-5952){\line( 3, 2){ 13.154}}
+\multiput(3678,-5943)(8.16390,6.80325){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3686,-5936)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3691,-5931)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3693,-5928)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3694,-5925)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3695,-5922)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3698,-5919)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3704,-5914)(11.20000,5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(3715,-5908){\line( 2, 1){ 17.200}}
+\put(3732,-5899){\line( 2, 1){ 23.600}}
+\put(3756,-5888){\line( 5, 2){ 32.069}}
+\put(3788,-5875){\line( 5, 2){ 36.724}}
+\put(3825,-5861){\line( 3, 1){ 32.100}}
+\put(3857,-5850){\line( 3, 1){ 30.900}}
+\put(3888,-5840){\line( 4, 1){ 28.235}}
+\put(3916,-5832){\line( 4, 1){ 25.177}}
+\put(3941,-5825){\line( 3, 1){ 19.800}}
+\put(3961,-5819){\line( 3, 1){ 16.800}}
+\multiput(3978,-5814)(12.94120,3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3991,-5811)(11.05880,2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4002,-5808)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4012,-5806)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4020,-5805)(8.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4028,-5803)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4038,-5801)(11.02700,1.83783){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(4049,-5799){\line( 6, 1){ 13.946}}
+\put(4063,-5797){\line( 6, 1){ 18}}
+\put(4081,-5794){\line( 6, 1){ 22.054}}
+\put(4103,-5790){\line( 6, 1){ 25.946}}
+\put(4129,-5786){\line( 6, 1){ 30.973}}
+\put(4160,-5781){\line( 6, 1){ 33.892}}
+\put(4194,-5776){\line( 6, 1){ 35.838}}
+\put(4230,-5771){\line( 6, 1){ 42.649}}
+\put(4273,-5766){\line( 1, 0){ 38}}
+\put(4311,-5763){\line( 1, 0){ 30}}
+\put(4341,-5761){\line( 1, 0){ 22}}
+\put(4363,-5760){\line( 1, 0){ 15}}
+\multiput(4378,-5760)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4387,-5761)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4392,-5762)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4395,-5764)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4398,-5765)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4403,-5767)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(4411,-5768){\line( 1, 0){ 14}}
+\put(4425,-5769){\line( 1, 0){ 20}}
+\put(4445,-5770){\line( 1, 0){ 27}}
+\put(4472,-5771){\line( 1, 0){ 34}}
+\put(4506,-5771){\line( 1, 0){ 39}}
+\put(4545,-5771){\line( 1, 0){ 39}}
+\put(4584,-5771){\line( 1, 0){ 34}}
+\put(4618,-5771){\line( 1, 0){ 28}}
+\put(4646,-5771){\line( 1, 0){ 21}}
+\put(4667,-5771){\line( 1, 0){ 15}}
+\put(4682,-5771){\line( 1, 0){  9}}
+\put(4691,-5771){\line( 1, 0){  7}}
+\put(4698,-5771){\line( 1, 0){  5}}
+\put(4703,-5771){\line( 1, 0){  4}}
+\put(4707,-5771){\line( 1, 0){  7}}
+\put(4714,-5771){\line( 1, 0){  9}}
+\put(4723,-5771){\line( 1, 0){ 15}}
+\put(4738,-5771){\line( 1, 0){ 21}}
+\put(4759,-5771){\line( 1, 0){ 28}}
+\put(4787,-5771){\line( 1, 0){ 34}}
+\put(4821,-5771){\line( 1, 0){ 39}}
+\put(4860,-5771){\line( 1, 0){ 39}}
+\put(4899,-5771){\line( 1, 0){ 34}}
+\put(4933,-5771){\line( 1, 0){ 28}}
+\put(4961,-5771){\line( 1, 0){ 21}}
+\put(4982,-5770){\line( 1, 0){ 15}}
+\multiput(4997,-5770)(8.91890,1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5006,-5769)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5013,-5768)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5018,-5767){\line( 1, 0){  4}}
+\multiput(5022,-5767)(inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5029,-5766){\line( 1, 0){  9}}
+\put(5038,-5766){\line( 1, 0){ 15}}
+\put(5053,-5765){\line( 1, 0){ 21}}
+\put(5074,-5766){\line( 1, 0){ 28}}
+\put(5102,-5767){\line( 1, 0){ 34}}
+\put(5136,-5769){\line( 1, 0){ 39}}
+\put(5175,-5771){\line( 1, 0){ 38}}
+\put(5213,-5774){\line( 6,-1){ 33.568}}
+\put(5247,-5777){\line( 1, 0){ 27}}
+\put(5274,-5779){\line( 6,-1){ 18.811}}
+\multiput(5293,-5781)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5304,-5782){\line( 1, 0){  7}}
+\put(5311,-5782){\line( 1, 0){  2}}
+\put(5313,-5782){\line( 1, 0){  1}}
+\put(5314,-5782){\line( 1, 0){  1}}
+\multiput(5315,-5782)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5318,-5783)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5326,-5784){\line( 5,-1){ 14.039}}
+\put(5340,-5787){\line( 6,-1){ 23.027}}
+\put(5363,-5791){\line( 6,-1){ 33.081}}
+\put(5396,-5797){\line( 5,-1){ 43.077}}
+\put(5439,-5806){\line( 5,-1){ 50.962}}
+\put(5490,-5816){\line( 5,-1){ 39.038}}
+\put(5529,-5824){\line( 4,-1){ 38.824}}
+\put(5568,-5833){\line( 5,-1){ 36.154}}
+\put(5604,-5841){\line( 5,-1){ 32.115}}
+\put(5636,-5848){\line( 5,-1){ 29.038}}
+\put(5665,-5854){\line( 4,-1){ 24}}
+\put(5689,-5860){\line( 5,-1){ 20}}
+\put(5709,-5864){\line( 5,-1){ 18.077}}
+\put(5727,-5868){\line( 5,-1){ 15}}
+\multiput(5742,-5871)(12.97300,-2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5755,-5873)(12.94120,-3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5768,-5876)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5780,-5879)(12.97300,-2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(5793,-5881){\line( 4,-1){ 15.059}}
+\put(5808,-5885){\line( 4,-1){ 16.941}}
+\put(5825,-5889){\line( 4,-1){ 19.059}}
+\put(5844,-5894){\line( 4,-1){ 24}}
+\put(5868,-5900){\line( 3,-1){ 26.700}}
+\put(5895,-5908){\line( 3,-1){ 29.700}}
+\put(5925,-5917){\line( 3,-1){ 33.600}}
+\put(5959,-5927){\line( 3,-1){ 35.100}}
+\put(5994,-5939){\line( 3,-1){ 36}}
+\put(6030,-5951){\line( 3,-1){ 45.300}}
+\put(6075,-5967){\line( 5,-2){ 36.207}}
+\put(6111,-5982){\line( 5,-2){ 26.207}}
+\put(6137,-5993){\line( 2,-1){ 17.200}}
+\multiput(6154,-6002)(8.82350,-5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6163,-6007)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6166,-6009)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6165,-6011){\line(-1, 0){  4}}
+\multiput(6161,-6011)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6158,-6012)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6155,-6013)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6157,-6016)(5.90160,-7.08192){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6163,-6023){\line( 4,-3){ 13.120}}
+\put(6176,-6033){\line( 3,-2){ 19.846}}
+\put(6196,-6046){\line( 3,-2){ 27.462}}
+\put(6223,-6065){\line( 3,-2){ 31.846}}
+\put(6255,-6086){\line( 3,-2){ 30}}
+\put(6285,-6106){\line( 3,-2){ 29.308}}
+\put(6314,-6126){\line( 3,-2){ 25.154}}
+\put(6339,-6143){\line( 3,-2){ 21}}
+\put(6360,-6157){\line( 3,-2){ 17.308}}
+\put(6377,-6169){\line( 4,-3){ 13.760}}
+\put(6391,-6179){\line( 3,-2){ 12}}
+\multiput(6403,-6187)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6412,-6193)(8.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6420,-6199)(8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6428,-6204)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6437,-6210)(10.88000,-8.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6448,-6218){\line( 4,-3){ 13.120}}
+\put(6461,-6228){\line( 4,-3){ 16}}
+\put(6477,-6240){\line( 3,-2){ 20.308}}
+\put(6497,-6254){\line( 4,-3){ 22.240}}
+\put(6519,-6271){\line( 5,-4){ 25}}
+\put(6544,-6291){\line( 4,-3){ 26.240}}
+\put(6570,-6311){\line( 6,-5){ 33.836}}
+\put(6604,-6339){\line( 6,-5){ 23.902}}
+\put(6627,-6360){\line( 1,-1){ 12.500}}
+\multiput(6639,-6373)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6642,-6379)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6637,-6380)(-inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6630,-6378)(-inf,inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6623,-6377)(-inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6619,-6378)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6623,-6384){\line( 1,-1){ 13.500}}
+\put(6637,-6397){\line( 4,-3){ 28}}
+\put(6665,-6418){\line( 3,-2){ 40.615}}
+\put(6705,-6446){\line( 3,-2){ 27.692}}
+\put(6733,-6464){\line( 3,-2){ 27.692}}
+\put(6761,-6482){\line( 5,-3){ 26.177}}
+\put(6787,-6498){\line( 5,-3){ 23.088}}
+\put(6810,-6512){\line( 3,-2){ 19.846}}
+\put(6830,-6525){\line( 5,-3){ 16.912}}
+\put(6847,-6535){\line( 5,-3){ 13.823}}
+\put(6861,-6543){\line( 5,-3){ 11.912}}
+\multiput(6873,-6550)(10.15380,-6.76920){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6883,-6557)(10.00000,-5.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6893,-6562)(9.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6902,-6568)(11.20000,-5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(6913,-6574){\line( 5,-3){ 11.912}}
+\put(6925,-6581){\line( 2,-1){ 16}}
+\put(6941,-6589){\line( 5,-3){ 17.647}}
+\put(6959,-6599){\line( 2,-1){ 22.800}}
+\put(6982,-6610){\line( 2,-1){ 27.200}}
+\put(7009,-6624){\line( 2,-1){ 30.800}}
+\put(7040,-6639){\line( 2,-1){ 33.600}}
+\put(7074,-6655){\line( 5,-2){ 36.552}}
+\put(7110,-6671){\line( 5,-2){ 39.138}}
+\put(7149,-6687){\line( 5,-2){ 34.138}}
+\put(7183,-6701){\line( 5,-2){ 27.931}}
+\put(7211,-6712){\line( 5,-2){ 20.862}}
+\put(7232,-6720){\line( 3,-1){ 14.100}}
+\multiput(7246,-6725)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7254,-6727)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7259,-6728){\line( 1, 0){  1}}
+\put(7260,-6728){\line( 0, 1){  1}}
+\put(7260,-6727){\line( 0, 1){  1}}
+\put(7260,-6726){\line( 1, 0){  2}}
+\put(7262,-6726){\line( 1, 0){  4}}
+\multiput(7266,-6726)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7276,-6727){\line( 4,-1){ 15.059}}
+\put(7291,-6731){\line( 5,-1){ 23.077}}
+\put(7314,-6736){\line( 4,-1){ 29.882}}
+\put(7344,-6743){\line( 5,-1){ 38.077}}
+\put(7382,-6751){\line( 4,-1){ 42.824}}
+\put(7425,-6761){\line( 5,-1){ 37.115}}
+\put(7462,-6769){\line( 5,-1){ 36.154}}
+\put(7498,-6777){\line( 5,-1){ 33.077}}
+\put(7531,-6784){\line( 5,-1){ 28.077}}
+\put(7559,-6790){\line( 5,-1){ 24.038}}
+\put(7583,-6795){\line( 4,-1){ 20}}
+\put(7603,-6800){\line( 5,-1){ 15}}
+\multiput(7618,-6803)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7630,-6806)(9.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7639,-6809)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7647,-6811)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7654,-6814)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7661,-6816)(8.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7669,-6818)(10.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7679,-6820)(12.94120,-3.23530){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(7692,-6823){\line( 6,-1){ 17.027}}
+\put(7709,-6826){\line( 6,-1){ 21.892}}
+\put(7731,-6829){\line( 6,-1){ 26.919}}
+\put(7758,-6833){\line( 6,-1){ 33.730}}
+\put(7792,-6837){\line( 6,-1){ 37.784}}
+\put(7830,-6842){\line( 6,-1){ 43.622}}
+\put(7874,-6847){\line( 6,-1){ 45.405}}
+\put(7920,-6851){\line( 6,-1){ 46.378}}
+\put(7967,-6855){\line( 1, 0){ 44}}
+\put(8011,-6858){\line( 1, 0){ 41}}
+\put(8052,-6860){\line( 1, 0){ 37}}
+\put(8089,-6861){\line( 1, 0){ 32}}
+\put(8121,-6861){\line( 1, 0){ 27}}
+\put(8148,-6861){\line( 1, 0){ 22}}
+\put(8170,-6860){\line( 1, 0){ 20}}
+\put(8190,-6859){\line( 1, 0){ 16}}
+\put(8206,-6858){\line( 6, 1){ 14.919}}
+\put(8221,-6856){\line( 1, 0){ 14}}
+\multiput(8235,-6855)(12.97300,2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8248,-6853){\line( 6, 1){ 13.946}}
+\put(8262,-6851){\line( 1, 0){ 15}}
+\put(8277,-6850){\line( 1, 0){ 16}}
+\put(8293,-6849){\line( 1, 0){ 19}}
+\put(8312,-6848){\line( 1, 0){ 21}}
+\put(8333,-6847){\line( 1, 0){ 24}}
+\put(8357,-6847){\line( 1, 0){ 25}}
+\put(8382,-6847){\line( 1, 0){ 27}}
+\put(8409,-6848){\line( 1, 0){ 27}}
+\put(8436,-6849){\line( 6,-1){ 23.676}}
+\put(8460,-6851){\line( 6,-1){ 36.811}}
+\multiput(8497,-6856)(12.06900,-4.82760){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8509,-6861)(-8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8501,-6866){\line(-5,-1){ 20.962}}
+\put(8480,-6870){\line(-6,-1){ 27.892}}
+\put(8452,-6874){\line(-6,-1){ 26.757}}
+\put(8425,-6877){\line(-6,-1){ 23.027}}
+\put(8402,-6881){\line(-5,-2){ 12.931}}
+\multiput(8389,-6886)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\put(8393,-6891){\line( 4,-1){ 21.882}}
+\put(8415,-6896){\line( 6,-1){ 18.811}}
+\put(8434,-6898){\line( 6,-1){ 21.730}}
+\put(8456,-6900){\line( 1, 0){ 22}}
+\put(8478,-6901){\line( 1, 0){ 20}}
+\put(8498,-6901){\line( 1, 0){ 19}}
+\put(8517,-6900){\line( 1, 0){ 17}}
+\put(8534,-6900){\line( 1, 0){ 15}}
+\put(8549,-6899){\line( 6, 1){ 13.946}}
+\put(8563,-6897){\line( 1, 0){ 13}}
+\put(8576,-6896){\line( 1, 0){ 14}}
+\put(8590,-6895){\line( 6, 1){ 14.919}}
+\put(8605,-6893){\line( 1, 0){ 16}}
+\put(8621,-6892){\line( 1, 0){ 19}}
+\put(8640,-6892){\line( 1, 0){ 21}}
+\put(8661,-6891){\line( 1, 0){ 25}}
+\put(8686,-6891){\line( 1, 0){ 28}}
+\put(8714,-6892){\line( 1, 0){ 30}}
+\put(8744,-6894){\line( 1, 0){ 31}}
+\put(8775,-6896){\line( 6,-1){ 41.514}}
+\put(8817,-6900){\line( 6,-1){ 33.892}}
+\put(8851,-6905){\line( 5,-1){ 25.962}}
+\put(8877,-6910){\line( 4,-1){ 20.941}}
+\put(8898,-6915){\line( 3,-1){ 15.900}}
+\put(8914,-6920){\line( 2,-1){ 12.800}}
+\multiput(8927,-6926)(10.00000,-4.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8937,-6930)(8.08820,-4.85292){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8945,-6935)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8950,-6938)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8954,-6940)(inf,-inf){1}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+}%
+{\color[rgb]{0,0,0}\multiput(2198,-2855)(2.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2200,-2855)(4.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2204,-2855)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2212,-2854)(12.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2224,-2854)(7.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2239,-2853)(9.40540,1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2258,-2851)(7.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2281,-2850)(7.89190,1.31532){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2305,-2848)(8.91893,1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2332,-2845)(8.91893,1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2359,-2842)(9.62163,1.60361){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2388,-2838)(9.62163,1.60361){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2417,-2834)(7.74038,1.54808){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2448,-2828)(7.74038,1.54808){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2479,-2822)(8.00000,2.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2511,-2814)(8.17500,2.72500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2544,-2804)(8.70000,2.90000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2579,-2793)(8.44828,3.37931){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2613,-2780)(8.83620,3.53448){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2648,-2765)(8.00000,4.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2688,-2745)(8.27205,4.96323){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2721,-2725)(8.61540,5.74360){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2747,-2708)(8.45900,7.04917){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2764,-2694)(6.00000,6.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2776,-2682)(6.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2782,-2674)(4.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2786,-2666)(1.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2787,-2660)(1.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2788,-2654)(1.32430,7.94580){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2789,-2646)(5.00000,10.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2794,-2636)(3.57355,5.95592){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2801,-2624)(6.00000,8.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2813,-2608)(5.60110,6.72132){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2830,-2588)(6.50273,7.80328){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2850,-2565)(6.00000,6.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2873,-2540)(5.90165,7.08198){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2897,-2512)(6.50273,7.80328){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2917,-2489)(6.80330,8.16396){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2931,-2473)(4.54920,5.45904){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2940,-2462)(5.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2945,-2456)(2.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2947,-2454)(1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2948,-2454)(1.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2949,-2453)(1.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2950,-2451)(4.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2954,-2445)(4.00000,6.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2962,-2433)(5.42645,9.04408){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2973,-2415)(5.48717,8.23075){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2989,-2390)(4.92307,7.38461){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3008,-2360)(4.21323,7.02204){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3025,-2332)(4.40000,8.80000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3039,-2306)(4.38237,7.30394){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3052,-2284)(4.30000,8.60000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3061,-2267)(3.30000,6.60000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3068,-2254)(5.29410,8.82350){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3073,-2245)(2.82760,7.06900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3076,-2238)(3.00000,5.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3079,-2233)(3.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3082,-2227)(2.82760,7.06900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3085,-2220)(5.00000,10.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3090,-2210)(2.82760,7.06900){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3096,-2196)(4.70000,9.40000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3105,-2177)(3.93333,7.86667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3116,-2153)(3.03448,7.58619){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3129,-2123)(3.32757,8.31894){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3143,-2090)(3.29310,8.23275){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3156,-2057)(3.00000,7.50000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3168,-2027)(2.76667,8.30000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3176,-2002)(3.30000,9.90000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3182,-1982)(1.50000,7.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3185,-1967)(1.81080,10.86480){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3186,-1956)(-1.48650,8.91900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3185,-1947)(-1.16220,6.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3184,-1940)(-1.16220,6.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3183,-1933)(0.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3183,-1925)(1.64860,9.89160){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3184,-1915)(2.15000,6.45000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3188,-1902)(3.17240,7.93100){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3194,-1886)(5.00000,10.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3204,-1866)(4.52940,7.54900){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3217,-1843)(5.17950,7.76925){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3233,-1820)(5.62600,7.03250){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3250,-1799)(5.50000,5.50000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3266,-1782)(6.25000,6.25000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3279,-1770)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3289,-1762)(6.91180,4.14708){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3296,-1758)(4.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3300,-1756)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3302,-1755)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3304,-1756)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3306,-1757)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3310,-1758)(6.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3316,-1758)(9.03850,1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3325,-1756)(7.05880,1.76470){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3339,-1752)(9.90000,3.30000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3359,-1746)(8.30000,2.76667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3384,-1738)(9.72550,2.43138){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3413,-1730)(7.76470,1.94118){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3444,-1722)(9.64707,2.41177){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3473,-1715)(8.33333,1.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3498,-1710)(9.51925,1.90385){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3517,-1706)(12.97300,2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3530,-1704)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3540,-1702)(6.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3546,-1701)(6.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3552,-1700)(5.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3557,-1699)(8.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3565,-1699)(10.86490,1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3576,-1698)(7.94595,1.32432){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3592,-1696)(7.89190,1.31532){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3616,-1694)(9.89190,1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3646,-1691)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3685,-1688)(8.60000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3728,-1685)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3764,-1683)(8.50000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3798,-1681)(10.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3828,-1680)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3853,-1680)(10.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3873,-1679)(7.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3888,-1679)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3899,-1680)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3908,-1680)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3914,-1681)(5.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3919,-1681)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3925,-1682)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3931,-1683)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3940,-1683)(11.83780,-1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3952,-1684)(8.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3969,-1684)(11.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3991,-1685)(9.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4019,-1685)(8.25000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4052,-1685)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4091,-1685)(8.40000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4133,-1685)(8.40000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4175,-1685)(10.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4215,-1685)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4251,-1685)(10.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4281,-1685)(8.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4305,-1685)(9.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4324,-1685)(8.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4340,-1685)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4351,-1685)(10.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4361,-1685)(8.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4369,-1685)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4378,-1685)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4387,-1685)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4398,-1685)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4412,-1685)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4430,-1685)(7.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4453,-1685)(9.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4480,-1685)(8.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4512,-1685)(8.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4547,-1685)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4583,-1685)(8.60000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4626,-1685)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4662,-1685)(9.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4691,-1684)(10.37840,1.72973){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4712,-1682)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4726,-1681)(9.00000,3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4735,-1678)(6.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4741,-1676)(3.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4744,-1674)(3.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4747,-1672)(4.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4751,-1670)(6.97300,1.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4758,-1669)(10.86490,1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4769,-1668)(7.45945,-1.24324){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4784,-1670)(9.97295,-1.66216){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4804,-1673)(7.69230,-1.53846){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4827,-1678)(8.70587,-2.17647){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4853,-1685)(8.90803,-3.56321){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4880,-1695)(6.93333,-3.46667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4901,-1705)(7.60000,-3.80000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4916,-1713)(9.13790,-3.65516){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4925,-1717)(4.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4929,-1719)(-1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4928,-1719)(-1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4927,-1719)(0.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4927,-1721)(3.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4930,-1727)(3.57355,-5.95592){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4937,-1739)(6.00000,-9.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4949,-1757)(4.61538,-6.92306){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4967,-1785)(4.20000,-7.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4988,-1820)(4.14705,-6.91175){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5004,-1848)(4.66667,-9.33333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5018,-1876)(4.33333,-8.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5031,-1902)(3.93333,-7.86667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5042,-1926)(4.17240,-10.43100){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5050,-1947)(3.00000,-9.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5056,-1965)(2.50000,-7.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5061,-1980)(2.16220,-12.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5063,-1993)(1.83780,-11.02680){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5065,-2004)(1.83780,-11.02680){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5067,-2015)(1.81080,-10.86480){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5068,-2026)(2.00000,-12.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5070,-2038)(2.15000,-6.45000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5074,-2051)(2.65000,-7.95000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5079,-2067)(3.58620,-8.96550){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5086,-2085)(3.66667,-7.33333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5097,-2107)(4.33333,-8.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5110,-2133)(4.32353,-7.20587){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5127,-2162)(4.67647,-7.79413){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5146,-2193)(5.38462,-8.07694){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5168,-2225)(4.96800,-6.62400){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5193,-2258)(6.02460,-7.22952){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5217,-2287)(6.66667,-8.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5237,-2311)(5.83333,-5.83333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5254,-2329)(6.75000,-6.75000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5268,-2342)(10.00000,-8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5278,-2350)(6.88000,-5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5285,-2355)(6.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5291,-2358)(5.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5296,-2360)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5300,-2361)(6.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5306,-2364)(7.93100,-3.17240){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5314,-2367)(11.20000,-5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5325,-2373)(7.50000,-4.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5340,-2382)(8.88000,-6.66000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5358,-2395)(7.76923,-5.17949){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5381,-2411)(6.86538,-4.57692){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5408,-2430)(7.50000,-5.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5438,-2450)(8.13462,-5.42308){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5471,-2471)(7.21155,-4.80770){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5500,-2490)(7.94117,-4.76470){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5524,-2504)(9.04410,-5.42646){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5542,-2515)(6.60000,-3.30000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5555,-2522)(8.82350,-5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5564,-2527)(5.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5569,-2530)(4.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5573,-2533)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5577,-2534)(5.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5582,-2537)(9.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5591,-2540)(6.40000,-3.20000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5604,-2546)(8.96550,-3.58620){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5622,-2553)(7.93103,-3.17241){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5646,-2562)(9.59770,-3.83908){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5675,-2573)(8.32500,-2.77500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5708,-2585)(8.17500,-2.72500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5741,-2595)(9.60000,-3.20000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5770,-2604)(7.68627,-1.92157){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5793,-2610)(8.51350,-1.41892){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5810,-2613)(11.05880,-2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5821,-2616)(6.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5827,-2616)(3.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5830,-2616)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5832,-2615)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5834,-2614)(3.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5837,-2613)(7.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5844,-2613)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5857,-2614)(9.40540,-1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5876,-2616)(8.97297,-1.49549){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5903,-2620)(8.71622,-1.45270){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5938,-2625)(9.93243,-1.65540){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5978,-2630)(8.43243,-1.40540){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6012,-2634)(7.98648,-1.33108){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6044,-2639)(9.24323,-1.54054){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6072,-2642)(7.94593,-1.32432){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6096,-2645)(9.40540,-1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6115,-2647)(6.97295,-1.16216){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6129,-2649)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6139,-2650)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6145,-2651)(5.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6150,-2652)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6154,-2653)(4.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6158,-2653)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6164,-2654)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6172,-2655)(11.83780,-1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6184,-2656)(8.91890,-1.48648){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6202,-2658)(7.56757,-1.26126){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6225,-2660)(9.89190,-1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6255,-2663)(9.25000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6292,-2666)(8.52972,-1.42162){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6335,-2671)(9.47028,-1.57838){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6383,-2675)(8.10810,-1.35135){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6424,-2679)(8.20000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6465,-2682)(9.50000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6503,-2685)(8.14865,-1.35811){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6536,-2688)(9.89190,-1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6566,-2691)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6591,-2692)(10.86485,-1.81081){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6613,-2694)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6631,-2695)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6645,-2696)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6658,-2697)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6669,-2697)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6679,-2698)(10.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6689,-2698)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6700,-2698)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6713,-2699)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6727,-2700)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6745,-2701)(10.37840,-1.72973){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6766,-2703)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6791,-2704)(9.56757,-1.59459){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6820,-2707)(8.14865,-1.35811){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6853,-2710)(8.87838,-1.47973){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6889,-2713)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6928,-2716)(9.89190,-1.64865){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6968,-2720)(8.24325,-1.37387){7}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7018,-2725)(8.69190,-1.44865){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7062,-2729)(8.91892,-1.48649){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7098,-2733)(8.59460,-1.43243){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7124,-2736)(8.91890,-1.48648){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7142,-2738)(12.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7154,-2740)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7160,-2741)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7162,-2742)(1.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7163,-2743)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7165,-2744)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7171,-2745)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7180,-2747)(7.94595,-1.32432){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7196,-2749)(7.62163,-1.27027){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7219,-2752)(10.27027,-1.71171){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7250,-2756)(9.16215,-1.52703){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7287,-2760)(8.14054,-1.35676){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7328,-2765)(9.40540,-1.56757){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7366,-2769)(8.95945,-1.49324){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7402,-2774)(10.21620,-1.70270){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7433,-2777)(8.91893,-1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7460,-2780)(7.56757,-1.26126){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7483,-2782)(8.43245,-1.40541){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7500,-2784)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7514,-2785)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7525,-2786)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7534,-2787)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7542,-2788)(7.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7549,-2788)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7558,-2789)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7568,-2790)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7581,-2791)(8.43245,-1.40541){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7598,-2793)(9.89190,-1.64865){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7618,-2795)(7.94593,-1.32432){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7642,-2798)(9.24323,-1.54054){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7670,-2801)(10.32433,-1.72072){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7701,-2806)(7.94595,-1.32432){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7733,-2810)(8.36756,-1.39459){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7775,-2816)(8.51352,-1.41892){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7809,-2822)(8.32433,-1.38739){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7834,-2826)(7.98075,-1.59615){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7850,-2829)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7859,-2831)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7863,-2832)(1.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7864,-2833)(1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7865,-2833)(3.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7868,-2834)(7.05880,-1.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7875,-2836)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7887,-2839)(9.03845,-1.80769){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7905,-2843)(8.31373,-2.07843){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7930,-2849)(9.35897,-1.87179){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7958,-2855)(8.02885,-1.60577){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7990,-2862)(9.64707,-2.41177){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8019,-2869)(8.00000,-2.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8043,-2875)(10.00000,-2.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8063,-2880)(9.05880,-2.26470){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8081,-2885)(8.00000,-2.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8097,-2889)(7.01925,-1.40385){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8111,-2892)(11.10000,-3.70000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8122,-2896)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8131,-2898)(5.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(8136,-2899)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+}%
+{\color[rgb]{0,0,0}\multiput(2018,-6946)(2.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2020,-6946)(4.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2024,-6946)(7.94590,1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2032,-6945)(12.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2044,-6945)(7.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2059,-6944)(9.40540,1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2078,-6942)(7.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2101,-6941)(7.89190,1.31532){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2125,-6939)(8.91893,1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2152,-6936)(8.91893,1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2179,-6933)(9.62163,1.60361){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2208,-6929)(9.62163,1.60361){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2237,-6925)(7.74038,1.54808){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2268,-6919)(7.74038,1.54808){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2299,-6913)(8.00000,2.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2331,-6905)(8.17500,2.72500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2364,-6895)(8.70000,2.90000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2399,-6884)(8.44828,3.37931){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2433,-6871)(8.83620,3.53448){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2468,-6856)(8.00000,4.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2508,-6836)(8.27205,4.96323){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2541,-6816)(8.61540,5.74360){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2567,-6799)(8.45900,7.04917){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2584,-6785)(6.00000,6.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2596,-6773)(6.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2602,-6765)(4.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2606,-6757)(1.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2607,-6751)(1.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2608,-6745)(1.32430,7.94580){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2609,-6737)(5.00000,10.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2614,-6727)(3.57355,5.95592){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2621,-6715)(6.00000,8.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2633,-6699)(5.60110,6.72132){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2650,-6679)(6.50273,7.80328){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2670,-6656)(6.00000,6.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2693,-6631)(5.90165,7.08198){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2717,-6603)(6.50273,7.80328){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2737,-6580)(6.80330,8.16396){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2751,-6564)(4.54920,5.45904){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2760,-6553)(5.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2765,-6547)(2.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2767,-6545)(1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2768,-6545)(1.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2769,-6544)(1.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2770,-6542)(4.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2774,-6536)(4.00000,6.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2782,-6524)(5.42645,9.04408){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2793,-6506)(5.48717,8.23075){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2809,-6481)(4.92307,7.38461){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2828,-6451)(4.21323,7.02204){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2845,-6423)(4.40000,8.80000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2859,-6397)(4.38237,7.30394){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2872,-6375)(4.30000,8.60000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2881,-6358)(3.30000,6.60000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2888,-6345)(5.29410,8.82350){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2893,-6336)(2.82760,7.06900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2896,-6329)(3.00000,5.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2899,-6324)(3.00000,6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2902,-6318)(2.82760,7.06900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2905,-6311)(5.00000,10.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2910,-6301)(2.82760,7.06900){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2916,-6287)(4.70000,9.40000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2925,-6268)(3.93333,7.86667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2936,-6244)(3.03448,7.58619){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2949,-6214)(3.32757,8.31894){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2963,-6181)(3.29310,8.23275){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2976,-6148)(3.00000,7.50000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2988,-6118)(2.76667,8.30000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(2996,-6093)(3.30000,9.90000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3002,-6073)(1.50000,7.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3005,-6058)(1.81080,10.86480){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3006,-6047)(-1.48650,8.91900){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3005,-6038)(-1.16220,6.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3004,-6031)(-1.16220,6.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3003,-6024)(0.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3003,-6016)(1.64860,9.89160){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3004,-6006)(2.15000,6.45000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3008,-5993)(3.17240,7.93100){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3014,-5977)(5.00000,10.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3024,-5957)(4.52940,7.54900){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3037,-5934)(5.17950,7.76925){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3053,-5911)(5.62600,7.03250){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3070,-5890)(5.50000,5.50000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3086,-5873)(6.25000,6.25000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3099,-5861)(10.00000,8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3109,-5853)(6.91180,4.14708){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3116,-5849)(4.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3120,-5847)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3122,-5846)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3124,-5847)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3126,-5848)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3130,-5849)(6.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3136,-5849)(9.03850,1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3145,-5847)(7.05880,1.76470){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3159,-5843)(9.90000,3.30000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3179,-5837)(8.30000,2.76667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3204,-5829)(9.72550,2.43138){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3233,-5821)(7.76470,1.94118){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3264,-5813)(9.64707,2.41177){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3293,-5806)(8.33333,1.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3318,-5801)(9.51925,1.90385){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3337,-5797)(12.97300,2.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3350,-5795)(10.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3360,-5793)(6.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3366,-5792)(6.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3372,-5791)(5.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3377,-5790)(8.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3385,-5790)(10.86490,1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3396,-5789)(7.94595,1.32432){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3412,-5787)(7.89190,1.31532){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3436,-5785)(9.89190,1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3466,-5782)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3505,-5779)(8.60000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3548,-5776)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3584,-5774)(8.50000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3618,-5772)(10.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3648,-5771)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3673,-5771)(10.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3693,-5770)(7.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3708,-5770)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3719,-5771)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3728,-5771)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3734,-5772)(5.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3739,-5772)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3745,-5773)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3751,-5774)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3760,-5774)(11.83780,-1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3772,-5775)(8.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3789,-5775)(11.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3811,-5776)(9.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3839,-5776)(8.25000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3872,-5776)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3911,-5776)(8.40000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3953,-5776)(8.40000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(3995,-5776)(10.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4035,-5776)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4071,-5776)(10.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4101,-5776)(8.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4125,-5776)(9.50000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4144,-5776)(8.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4160,-5776)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4171,-5776)(10.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4181,-5776)(8.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4189,-5776)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4198,-5776)(9.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4207,-5776)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4218,-5776)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4232,-5776)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4250,-5776)(7.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4273,-5776)(9.00000,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4300,-5776)(8.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4332,-5776)(8.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4367,-5776)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4403,-5776)(8.60000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4446,-5776)(9.00000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4482,-5776)(9.66667,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4511,-5775)(10.37840,1.72973){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4532,-5773)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4546,-5772)(9.00000,3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4555,-5769)(6.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4561,-5767)(3.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4564,-5765)(3.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4567,-5763)(4.00000,2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4571,-5761)(6.97300,1.16217){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4578,-5760)(10.86490,1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4589,-5759)(7.45945,-1.24324){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4604,-5761)(9.97295,-1.66216){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4624,-5764)(7.69230,-1.53846){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4647,-5769)(8.70587,-2.17647){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4673,-5776)(8.90803,-3.56321){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4700,-5786)(6.93333,-3.46667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4721,-5796)(7.60000,-3.80000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4736,-5804)(9.13790,-3.65516){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4745,-5808)(4.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4749,-5810)(-1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4748,-5810)(-1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4747,-5810)(0.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4747,-5812)(3.00000,-6.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4750,-5818)(3.57355,-5.95592){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4757,-5830)(6.00000,-9.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4769,-5848)(4.61538,-6.92306){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4787,-5876)(4.20000,-7.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4808,-5911)(4.14705,-6.91175){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4824,-5939)(4.66667,-9.33333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4838,-5967)(4.33333,-8.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4851,-5993)(3.93333,-7.86667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4862,-6017)(4.17240,-10.43100){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4870,-6038)(3.00000,-9.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4876,-6056)(2.50000,-7.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4881,-6071)(2.16220,-12.97320){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4883,-6084)(1.83780,-11.02680){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4885,-6095)(1.83780,-11.02680){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4887,-6106)(1.81080,-10.86480){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4888,-6117)(2.00000,-12.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4890,-6129)(2.15000,-6.45000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4894,-6142)(2.65000,-7.95000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4899,-6158)(3.58620,-8.96550){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4906,-6176)(3.66667,-7.33333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4917,-6198)(4.33333,-8.66667){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4930,-6224)(4.32353,-7.20587){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4947,-6253)(4.67647,-7.79413){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4966,-6284)(5.38462,-8.07694){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(4988,-6316)(4.96800,-6.62400){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5013,-6349)(6.02460,-7.22952){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5037,-6378)(6.66667,-8.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5057,-6402)(5.83333,-5.83333){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5074,-6420)(6.75000,-6.75000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5088,-6433)(10.00000,-8.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5098,-6441)(6.88000,-5.16000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5105,-6446)(6.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5111,-6449)(5.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5116,-6451)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5120,-6452)(6.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5126,-6455)(7.93100,-3.17240){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5134,-6458)(11.20000,-5.60000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5145,-6464)(7.50000,-4.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5160,-6473)(8.88000,-6.66000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5178,-6486)(7.76923,-5.17949){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5201,-6502)(6.86538,-4.57692){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5228,-6521)(7.50000,-5.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5258,-6541)(8.13462,-5.42308){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5291,-6562)(7.21155,-4.80770){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5320,-6581)(7.94117,-4.76470){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5344,-6595)(9.04410,-5.42646){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5362,-6606)(6.60000,-3.30000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5375,-6613)(8.82350,-5.29410){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5384,-6618)(5.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5389,-6621)(4.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5393,-6624)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5397,-6625)(5.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5402,-6628)(9.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5411,-6631)(6.40000,-3.20000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5424,-6637)(8.96550,-3.58620){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5442,-6644)(7.93103,-3.17241){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5466,-6653)(9.59770,-3.83908){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5495,-6664)(8.32500,-2.77500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5528,-6676)(8.17500,-2.72500){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5561,-6686)(9.60000,-3.20000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5590,-6695)(7.68627,-1.92157){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5613,-6701)(8.51350,-1.41892){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5630,-6704)(11.05880,-2.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5641,-6707)(6.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5647,-6707)(3.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5650,-6707)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5652,-6706)(2.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5654,-6705)(3.00000,1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5657,-6704)(7.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5664,-6704)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5677,-6705)(9.40540,-1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5696,-6707)(8.97297,-1.49549){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5723,-6711)(8.71622,-1.45270){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5758,-6716)(9.93243,-1.65540){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5798,-6721)(8.43243,-1.40540){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5832,-6725)(7.98648,-1.33108){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5864,-6730)(9.24323,-1.54054){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5892,-6733)(7.94593,-1.32432){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5916,-6736)(9.40540,-1.56757){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5935,-6738)(6.97295,-1.16216){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5949,-6740)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5959,-6741)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5965,-6742)(5.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5970,-6743)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5974,-6744)(4.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5978,-6744)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5984,-6745)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(5992,-6746)(11.83780,-1.97297){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6004,-6747)(8.91890,-1.48648){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6022,-6749)(7.56757,-1.26126){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6045,-6751)(9.89190,-1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6075,-6754)(9.25000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6112,-6757)(8.52972,-1.42162){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6155,-6762)(9.47028,-1.57838){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6203,-6766)(8.10810,-1.35135){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6244,-6770)(8.20000,0.00000){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6285,-6773)(9.50000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6323,-6776)(8.14865,-1.35811){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6356,-6779)(9.89190,-1.64865){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6386,-6782)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6411,-6783)(10.86485,-1.81081){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6433,-6785)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6451,-6786)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6465,-6787)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6478,-6788)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6489,-6788)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6499,-6789)(10.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6509,-6789)(11.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6520,-6789)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6533,-6790)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6547,-6791)(9.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6565,-6792)(10.37840,-1.72973){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6586,-6794)(8.33333,0.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6611,-6795)(9.56757,-1.59459){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6640,-6798)(8.14865,-1.35811){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6673,-6801)(8.87838,-1.47973){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6709,-6804)(9.75000,0.00000){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6748,-6807)(9.89190,-1.64865){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6788,-6811)(8.24325,-1.37387){7}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6838,-6816)(8.69190,-1.44865){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6882,-6820)(8.91892,-1.48649){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6918,-6824)(8.59460,-1.43243){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6944,-6827)(8.91890,-1.48648){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6962,-6829)(12.00000,-2.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6974,-6831)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6980,-6832)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6982,-6833)(1.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6983,-6834)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6985,-6835)(6.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(6991,-6836)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7000,-6838)(7.94595,-1.32432){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7016,-6840)(7.62163,-1.27027){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7039,-6843)(10.27027,-1.71171){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7070,-6847)(9.16215,-1.52703){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7107,-6851)(8.14054,-1.35676){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7148,-6856)(9.40540,-1.56757){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7186,-6860)(8.95945,-1.49324){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7222,-6865)(10.21620,-1.70270){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7253,-6868)(8.91893,-1.48649){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7280,-6871)(7.56757,-1.26126){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7303,-6873)(8.43245,-1.40541){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7320,-6875)(7.00000,0.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7334,-6876)(10.86490,-1.81082){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7345,-6877)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7354,-6878)(7.94590,-1.32432){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7362,-6879)(7.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7369,-6879)(8.91890,-1.48648){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7378,-6880)(9.89190,-1.64865){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7388,-6881)(13.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7401,-6882)(8.43245,-1.40541){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7418,-6884)(9.89190,-1.64865){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7438,-6886)(7.94593,-1.32432){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7462,-6889)(9.24323,-1.54054){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7490,-6892)(10.32433,-1.72072){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7521,-6897)(7.94595,-1.32432){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7553,-6901)(8.36756,-1.39459){6}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7595,-6907)(8.51352,-1.41892){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7629,-6913)(8.32433,-1.38739){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7654,-6917)(7.98075,-1.59615){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7670,-6920)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7679,-6922)(4.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7683,-6923)(1.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7684,-6924)(1.00000,0.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7685,-6924)(3.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7688,-6925)(7.05880,-1.76470){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7695,-6927)(12.00000,-3.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7707,-6930)(9.03845,-1.80769){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7725,-6934)(8.31373,-2.07843){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7750,-6940)(9.35897,-1.87179){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7778,-6946)(8.02885,-1.60577){5}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7810,-6953)(9.64707,-2.41177){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7839,-6960)(8.00000,-2.00000){4}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7863,-6966)(10.00000,-2.50000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7883,-6971)(9.05880,-2.26470){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7901,-6976)(8.00000,-2.00000){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7917,-6980)(7.01925,-1.40385){3}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7931,-6983)(11.10000,-3.70000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7942,-6987)(9.03850,-1.80770){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7951,-6989)(5.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+\multiput(7956,-6990)(2.00000,-1.00000){2}{\makebox(1.5875,11.1125){\SetFigFont{5}{6}{\rmdefault}{\mddefault}{\updefault}.}}
+}%
+\put(1441,-1366){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}System Frequency Response}%
+}}}
+\put(7111,-1411){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sensor Frequency Response}%
+}}}
+\put(1486,-5461){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}System Frequency Response}%
+}}}
+\put(4231,-556){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Poor Choice}%
+}}}
+\put(4321,-4606){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Good Choice}%
+}}}
+\put(5626,-6271){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sensor Frequency Response}%
+}}}
+\end{picture}

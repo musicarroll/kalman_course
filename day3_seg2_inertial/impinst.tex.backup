@@ -1,0 +1,93 @@
+% day3_seg2_inertial/impinst.tex
+\begin{slide}
+Imperfect Inertial Instruments
+ \begin{itemize}
+ \item Accelerometers and Gyros have inherent imperfections
+ \item Bias, scale factor, $g^2$ terms, noise, random walks, etc.
+ \item Inertial sensor clusters also have errors: misalignments
+ \item Many error sources are calibrated out using rate tables during ATP
+ \item Residual effects will influence strapdown nav equations
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Imperfect Inertial Instruments
+\begin{itemize}
+  \item Strapdown nav equations very sensitive to gyro errors
+  \item Gyro biases yield erroneous $\dcm{B}{L}$ matrix which in turn causes erroneous accelerations to be computed in local level frame
+  \item Thus, gyro errors affect not only attitude, but also position and velocity
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Simple Inertial Error Models
+\begin{itemize}
+  \item Gyros
+\[
+\simprateerreq{x}{y}{z}
+\]
+\[
+\simprateerreq{y}{z}{x}
+\]
+\[
+\simprateerreq{z}{x}{y}
+\]
+
+where $\gyrobias{i}$ is the $i^\text{th}$ gyro bias, $\gyrosf{i}$ the $i^\text{th}$ gyro scale factor, and $\gyromisalign{i}{j}$ is the misalignment of the $i^\text{th}$ gyro axis toward the $j^\text{th}$ gyro axis. 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Simple Inertial Error Models
+\begin{itemize}
+  \item Accelerometers
+\[
+\simpaccelerreq{x}{y}{z}
+\]
+\[
+\simpaccelerreq{y}{z}{x}
+\]
+\[
+\simpaccelerreq{z}{x}{y}
+\]
+where $\accelbias{i}$ is the $i^\text{th}$ accelerometer bias, $\accelsf{i}$ the $i^\text{th}$ accelerometer scale factor, and $\accelmisalign{i}{j}$ is the misalignment of the $i^\text{th}$ accelerometer axis toward the $j^\text{th}$ accelerometer axis. 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Bias Models
+\begin{itemize}
+  \item Bias in both types of instruments can be further broken down into several components:
+  \begin{itemize}
+	\item fixed bias -- constant from turn-on to turn-on -- should be calibrated out
+	\item bias stability -- varies from turn-on to turn-on -- can't be calibrated out, but can be characterized in terms of variance -- can model as random constant
+	\item bias drift -- usually modeled as random walk
+  \end{itemize} 
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Scale Factor Models
+\begin{itemize}
+  \item Scale factor can also be modeled as a sum of three components
+  \item Often in nav filters, scale factor residual is modeled as a random constant
+  \item Important to keep in mind that the contribution of scale factor error is a function of input (rate or acceleration) 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Higher Order Models
+\begin{itemize}
+  \item In expanding the output error as a Taylor series function of input, bias, scale factor, and misalignment show up as zero and first order terms.
+  \item Higher order terms are also present, especially second order terms.
+  \item In some calibration and alignment filters, such higher order effects are modelled
+  \item SNU-84-1 includes error budgets associated with all the combined, higher order effects.  
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Taylor Series of Two Variables:
+\begin{align*}
+\gentaylordouble{f}{x}{y}{x_0}{y_0}
+\end{align*}
+Taylor Series provides basis for all error analysis.
+\end{slide}

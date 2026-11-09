@@ -1,0 +1,15 @@
+% day5_seg3_ct_hlarch/htarch_main.tex
+\begin{slide}
+\textbf{Day 5, Segment 3\\
+The High-Level Combat Talon Software Architecture\\
+Topics}
+ \begin{itemize}
+ \item Architecture Overview
+ \item Rate Group Drilldown
+ \item Sequencing
+\end{itemize}
+\end{slide}
+\input{day5_seg3_ct_hlarch/arch_overview.tex}
+\input{day5_seg3_ct_hlarch/rategroups.tex}
+\input{day5_seg3_ct_hlarch/sequencing.tex}
+\input{day5_seg3_ct_hlarch/exercises.tex}

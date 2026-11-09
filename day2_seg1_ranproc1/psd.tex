@@ -1,0 +1,95 @@
+% day2_seg1_ranproc1/psd.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Power Spectral Density}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The \textit{\textbf{power spectral density}} (PSD) function is the
+ Fourier transform of the autocorrelation function:
+\begin{equation}\label{psd}
+  P_{XX}(\omega)=\infint R_{XX}(\tau)\exp(-j\omega\tau)d\tau
+\end{equation}
+where $j=\sqrt{-1}$ and $\omega$ is angular frequency in rad/sec (not an outcome of the sample space!).
+}
+  \onslide<3->{
+ \item Units:  If $X$ is in volts(V), then
+ $P_{XX}$ has units of $\text{V}^2/(2\pi \text{Hz})$ or $\text{V}^2\;\text{sec}/\text{rad}$, 
+ due to $R_{XX}$ being a product of samples in volts and transform kernel
+ being in 1/rad:
+ $\exp(-j\omega\tau)=\frac{1}{\exp(j\omega\tau)}$.  $d\tau$ is in sec.
+}
+ \onslide<4->{
+	\item Note: $2\pi\text{ rad/cycle }1\text{Hz}=2\pi\text{ rad/cycle }1\text{ cycle}/\text{sec}=2\pi\text{ rad/sec}$.
+ }
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Power Spectral Density}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Sometimes the definition in equation \eqref{psd} is referred to as the autospectral
+ density, since the autocorrelation function is involved
+}
+  \onslide<3->{
+ \item The cross-spectral density function is defined in the same
+ way, but with $R_{XY}$ substituted for $R_{XX}$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Power Spectral Density}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Another way to obtain power spectral density is through
+ Fourier transform of the original process
+}
+ \onslide<3->{
+\item Let's change our notation:  We've been using uppercase letters such as $X$ and $Y$ to
+denote random variables and processes and we've been using $\omega$ to denote a
+point of the sample space $\Omega$
+}
+  \onslide<4->{
+\item Now we'll use lowercase letters like $x(t)$ and $y(t)$
+to denote processes in the time domain but uppercase letters for
+Fourier transforms in the frequency domain  
+}
+  \onslide<5->{
+\item Also, lowercase $\omega$ will often stand for frequency in rad/sec
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Power Spectral Density}
+}
+\begin{itemize}
+  \onslide<2->{
+\item The finite Fourier transform of a random process $x(t)$ is
+\[X(\omega,T)=\int_0^Tx(\tau)\exp(-j\omega\tau)d\tau\]
+}
+  \onslide<3->{
+\item The PSD can be expressed as follows:
+\begin{equation}\label{wiener_khinchin}
+  P_{XY}(\omega) = \lim_{T\rightarrow \infty}\frac{1}{T}\expect{X^*(\omega,T)Y(\omega,T)}
+\end{equation}
+where $X(\omega,T)$ and $Y(\omega,T)$ are the finite Fourier
+transforms of $x(t)$ and $y(t)$, respectively, and
+$X^*(\omega,t)$ is the complex conjugate of $X(\omega,t)$. \\
+$\omega$ is frequency in rad/sec.
+}
+  \onslide<4->{
+\item Both Eq. \eqref{wiener_khinchin} and \eqref{psd} are referred to as the Wiener-Khinchin equation
+}
+\end{itemize}
+\end{frame}
+

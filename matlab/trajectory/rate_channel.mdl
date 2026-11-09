@@ -1,0 +1,837 @@
+Model {
+  Name			  "rate_channel"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Oct 08 14:26:51 2002"
+  Creator		  "mcar"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mcar"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Feb 15 15:28:17 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:14>"
+  ConfigurationManager	  "sourcesafe"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "100"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "rate_channel"
+    Location		    [223, 79, 986, 701]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Integrator
+      Name		      "Bias\nRepeatability\n(deg/hr)"
+      Ports		      [1, 1]
+      Position		      [195, 210, 225, 240]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "10+3*rand                                      "
+"                         "
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      Port {
+	PortNumber		1
+	Name			"Bias \nRepeatability"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [250, 570, 280, 600]
+      Value		      "10*3.14159/180"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [130, 210, 160, 240]
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      Ports		      [1]
+      Position		      [560, 75, 650, 105]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display1"
+      Ports		      [1]
+      Position		      [705, 165, 770, 195]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display2"
+      Ports		      [1]
+      Position		      [515, 355, 585, 385]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display3"
+      Ports		      [1]
+      Position		      [685, 355, 750, 385]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display4"
+      Ports		      [1]
+      Position		      [190, 349, 255, 381]
+      Orientation	      "left"
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Ports		      [1, 1]
+      Position		      [85, 330, 115, 360]
+      Orientation	      "left"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0                                              "
+"                                      "
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator2"
+      Ports		      [1, 1]
+      Position		      [500, 290, 530, 320]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0                                              "
+"                                 "
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      Port {
+	PortNumber		1
+	Name			"Angle"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch"
+      Ports		      [2, 1]
+      Position		      [360, 542, 390, 578]
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+      Port {
+	PortNumber		1
+	Name			"Rate Input (deg/sec)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Rate White Noise\n(deg/hr)"
+      Ports		      [0, 1]
+      Position		      [135, 490, 165, 520]
+      SourceBlock	      "simulink3/Sources/Band-Limited\nWhite Noise"
+      SourceType	      "Continuous White Noise."
+      Cov		      "[360^2]"
+      Ts		      "0.1"
+      seed		      "[23341]"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope1"
+      Ports		      [1]
+      Position		      [670, 209, 700, 241]
+      Floating		      off
+      Location		      [28, 384, 352, 623]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope2"
+      Ports		      [1]
+      Position		      [530, 129, 560, 161]
+      Floating		      off
+      Location		      [17, 84, 341, 323]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope3"
+      Ports		      [3]
+      Position		      [655, 445, 685, 535]
+      Floating		      off
+      Location		      [65, 93, 389, 620]
+      Open		      on
+      NumInputPorts	      "3"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-0.1~-100~-100"
+      YMax		      "0.8~100~100"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope4"
+      Ports		      [1]
+      Position		      [250, 284, 280, 316]
+      Orientation	      "left"
+      Floating		      off
+      Location		      [38, 428, 362, 667]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100"
+      YMin		      "-0.02"
+      YMax		      "0.03"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope5"
+      Ports		      [1]
+      Position		      [30, 194, 60, 226]
+      Orientation	      "left"
+      Floating		      off
+      Location		      [459, 105, 783, 344]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sinusoidal Rate Input"
+      Position		      [250, 505, 280, 535]
+      Amplitude		      "1"
+      Frequency		      "10*pi/180/3600"
+      Phase		      "0"
+      SampleTime	      "0"
+      VectorParams1D	      on
+      Port {
+	PortNumber		1
+	Name			"Input Rate"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [3, 1]
+      Position		      [380, 295, 400, 315]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+++"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Rate+Bias+Noise"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv1"
+      Position		      [295, 208, 340, 242]
+      Gain		      "3.14159/(3600*180)"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Bias \nRepeatability (rad/sec)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv2"
+      Position		      [500, 209, 575, 241]
+      Gain		      "180/pi"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Bias \nRepeatability (deg)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv3"
+      Position		      [297, 355, 343, 385]
+      Orientation	      "up"
+      Gain		      "3.14159/(3600*180)"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv4"
+      Position		      [107, 395, 153, 425]
+      Orientation	      "up"
+      Gain		      "3.14159/(3600*180)"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv8"
+      Position		      [590, 289, 665, 321]
+      Gain		      "180/pi"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Angle (deg)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rad2deg"
+      Position		      [428, 395, 472, 425]
+      Orientation	      "down"
+      Gain		      "180/pi"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Rate+Bias+Noise (deg/sec)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rad2deg1"
+      Position		      [465, 515, 505, 545]
+      Gain		      "180/pi"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Input Rate (deg/sec)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rad2deg2"
+      Position		      [53, 260, 97, 290]
+      Orientation	      "up"
+      Gain		      "180/pi"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Line {
+      Name		      "Bias \nRepeatability"
+      Labels		      [0, 0]
+      SrcBlock		      "Bias\nRepeatability\n(deg/hr)"
+      SrcPort		      1
+      DstBlock		      "conv1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Rate+Bias+Noise"
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"Integrator2"
+	DstPort			1
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[0, 75]
+	DstBlock		"rad2deg"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Rate White Noise\n(deg/hr)"
+      SrcPort		      1
+      Points		      [0, -65]
+      Branch {
+	Points			[0, -15; 100, 0]
+	Branch {
+	  Points		  [50, 0]
+	  DstBlock		  "conv3"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "Display4"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	DstBlock		"conv4"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Angle"
+      Labels		      [0, 0]
+      SrcBlock		      "Integrator2"
+      SrcPort		      1
+      DstBlock		      "conv8"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Angle (deg)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv8"
+      SrcPort		      1
+      Points		      [0, 65; -35, 0]
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Scope3"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Display3"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Bias \nRepeatability (rad/sec)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv1"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	Points			[0, 68]
+	DstBlock		"Sum"
+	DstPort			1
+      }
+      Branch {
+	Points			[15, 0]
+	Branch {
+	  DstBlock		  "conv2"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -80; 90, 0]
+	  Branch {
+	    DstBlock		    "Scope2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Line {
+      Name		      "Bias \nRepeatability (deg)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv2"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"Scope1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -45]
+	DstBlock		"Display1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "conv3"
+      SrcPort		      1
+      Points		      [0, 0; 0, -35]
+      Branch {
+	DstBlock		"Sum"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -15]
+	DstBlock		"Scope4"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Rate+Bias+Noise (deg/sec)"
+      Labels		      [0, 0]
+      SrcBlock		      "rad2deg"
+      SrcPort		      1
+      Points		      [0, 10; 40, 0]
+      Branch {
+	Labels			[1, 0]
+	Points			[0, 50]
+	DstBlock		"Scope3"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -70]
+	DstBlock		"Display2"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Input Rate (deg/sec)"
+      Labels		      [2, 0]
+      SrcBlock		      "rad2deg1"
+      SrcPort		      1
+      Points		      [0, -10]
+      DstBlock		      "Scope3"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [60, 0]
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      Name		      "Input Rate"
+      Labels		      [0, 0]
+      SrcBlock		      "Sinusoidal Rate Input"
+      SrcPort		      1
+      Points		      [60, 0]
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Rate Input (deg/sec)"
+      Labels		      [0, 0]
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      Points		      [0, 0; 40, 0]
+      Branch {
+	Points			[15, 0]
+	DstBlock		"rad2deg1"
+	DstPort			1
+      }
+      Branch {
+	Labels			[2, 0]
+	Points			[-45, 0]
+	DstBlock		"Sum"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [-5, 0]
+      DstBlock		      "rad2deg2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "conv4"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "rad2deg2"
+      SrcPort		      1
+      DstBlock		      "Scope5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Bias\nRepeatability\n(deg/hr)"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [178, 166]
+      Text		      "Random Constant using \nNormally Distibuted Ini"
+"tial Condition"
+    }
+    Annotation {
+      Position		      [292, 48]
+      Text		      "Rate Channel Model"
+      FontSize		      20
+    }
+  }
+}

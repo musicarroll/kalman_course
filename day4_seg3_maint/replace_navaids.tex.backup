@@ -1,0 +1,11 @@
+% day4_seg3_maint/replace_navaids.tex
+\begin{slide}
+Replacing Navaids
+ \begin{itemize}
+ \item Replacing a given sensor with another of the same type usually requires no changes to the state model
+	\begin{itemize}
+		\item unless replacement sensor has significant errory dynamics that need to be modeled (see adding new sensors and state augmentation)
+	\end{itemize}
+ \item Measurement noise covariance generally has to change however
+\end{itemize}
+\end{slide}

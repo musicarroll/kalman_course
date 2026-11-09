@@ -1,0 +1,70 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usetheme{Berlin}
+\usepackage{booktabs} 
+\usepackage[english]{babel} 
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{subfig}
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{include/kalman_cmdmaster.tex}
+\input{include/orbitfilter_cmds.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory\\ with Applications to Navigation \\
+Part III
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\currenttime\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+% ----------------------------------------------------------------
+\begin{frame}{Table of Contents} 
+\tableofcontents 
+\end{frame} 
+% ----------------------------------------------------------------
+\section{Practical Kalman Filter: Numerical Implementation Issues}
+\input{day3_seg1_numerical/numerical_main.tex}
+\section{Square Root Information Filer (SRIF)}
+\input{SRIF/srif_main.tex}
+\section{Navigation Applications}
+\input{basic_nav_concepts/overview.tex}
+\input{basic_nav_concepts/navproblem_main.tex}
+\input{basic_nav_concepts/gps.tex}
+\input{day3_seg2_inertial/inertial_main.tex}
+\input{day3_seg3_9-state/9-state_main.tex}
+\input{day3_seg4_ins_challenges/ins_chal_main.tex}
+\input{orbit_filter/orbit_filter.tex}
+% ----------------------------------------------------------------
+\end{document}

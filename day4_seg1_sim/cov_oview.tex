@@ -1,0 +1,82 @@
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item Covariance propagation and covariance update can be be accomplished without actually dealing with the state vector at all.
+\begin{equation}\label{altcovextrapeq}
+\altcovextrapeq
+\end{equation}
+\begin{equation}\label{covupdateeq}
+  \covupdateeq
+\end{equation}
+  \item Of course, the Kalman gain still has to be computed for use in Eq. \eqref{covupdateeq} above, the update equation.  The gain is:
+\begin{equation}\label{kalgaineq}
+\kalgaineq
+\end{equation}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item As in real-time implementation, the Joseph form of the gain equation is generally preferred, because of its superior numerical properties:
+\begin{equation}
+\josephcovupdateeq
+\end{equation} 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item The only items driving the covariance equations are the state dynamics $F$, the process noise $Q$, and the measurement noise $R$
+  \item Thus, covariance analysis can provide  good insight into how well balanced the $Q$ and $R$ matrices are
+  \item More importantly, covariance analysis is crucial in exploring what-if scenarios with new measurement sources
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item As an example, suppose you want to evaluate several different GPS receivers as navaids
+  \item You can use a manufacturer's published $1\sigma$ accuracy specifications in your measurement noise matrix $R$ and run several covariance simulations to see what the expected performance is
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis
+\begin{itemize}
+  \item Of course, if GPS is your only navaid, this is a no brainer:  the receiver with the least measurement noise performs best
+  \item However, if this sensor is just one of several, you might find that some less expensive receiver when thrown into the mix with other navaids is good enough 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item Other uses: Debugging the filter
+  \item If you save the actually used process noise $Q$ and measurement noise $R$ from a real-time mission (using a maintenance logging facility), then thse matrices can be fed into the covariance simulation to see what effect these have on the gains.
+  \item Or to see how the offline gains compare with the real-time gains.
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item Covariance analysis is quite often used to determine proper error budgets
+  \item Error budget:  How error sources are allocated to various states and sensors
+  \item E.g., in a nav application, to meet overall system position accuracy requirements, certain combinations of misalignement, instrument bias, scale factor, and inertial noise error, etc., will work when coupled with sensor errors
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Covariance Analysis: Overview
+\begin{itemize}
+  \item Optimal vs. Suboptimal
+  \item Evaluating finite wordlength effects 
+  \item Bottom Line: Covariance analysis essential to filter maintenance
+	\begin{itemize}
+		\item If you are planning to modify a Kalman filter at all, you need to run covariance analysis simulations
+		\item It is very risky not to do so!
+	\end{itemize}
+\end{itemize} 
+\end{frame}

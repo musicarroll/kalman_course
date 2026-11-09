@@ -1,0 +1,13 @@
+% day3_seg3_9-state/9states.tex
+\begin{slide}
+The Canonical Nine States
+ \begin{itemize}
+ \item 3 position errors: $\poserr_x,\poserr_y,\poserr_z$ in local level coordinates
+ \item 3 velocity errors: $\velerr_x,\velerr_y,\velerr_z$ in local level coordinates
+ \item 3 attitude errors: $\tiltx,\tilty,\az$
+	\begin{itemize}
+	  \item $\tiltx,\tilty$ known as tilt errors
+	  \item $\az$ known as azimuth error
+	\end{itemize}
+\end{itemize}
+\end{slide}

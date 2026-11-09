@@ -1,0 +1,82 @@
+% day2_seg3_kalstats/cov_mat.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Covariance Matrices} 
+	\framesubtitle{$Q,R,P$}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item There are several covariance matrices associated with the Kalman filter: 
+ $ \procnoisemat{k},\measnoisemat{k}, P(k)$
+}
+  \onslide<3->{
+ \item In general, a covariance matrix is associated with a random vector $X$ as in the following definition:
+\[C_X = \expect{XX\trans}\]
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Covariance Matrices} 
+	\framesubtitle{$Q,R,P$}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item This is precisely how $\procnoisemat{k}$ and $\measnoisemat{k}$ are defined:
+\[\procnoisemat{k}=\expect{w(k)w\trans(k)}\] and
+\[\measnoisemat{k}=\expect{v(k)v\trans(k)}\]
+}
+  \onslide<3->{
+\item $\covmat{k}{+}$, on the other hand is called the error covariance, because it is associated with $\esterr$
+\[\covmatdef\]
+where $\esterrdef$.
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Covariance Matrices} 
+	\framesubtitle{Positive Definite Symmetric Matrices}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Covariance Matrices are \textbf{positive definite}: The quadratic form $x\trans C x>0$ for all nonzero vectors $x$  
+}
+  \onslide<3->{
+\item We write $C>0$ for positive definite matrices  
+}
+  \onslide<4->{
+\item $C>0$ iff all eigenvalues of $C$ are positive 
+}
+  \onslide<5->{
+\item All diagonal elements of $C$ are positive if $C>0$  
+}
+  \onslide<6->{
+\item If $C>0$ and $S$ non-singular (invertible), then $SCS\trans>0$ and $S\trans CS>0$
+}
+  \onslide<7->{
+\item If $C>0$ then $C$ is non-singular and $C^{-1}>0$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Covariance Matrices} 
+	\framesubtitle{Lower Triangular Cholesky Decomposition}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  If $C>0$ then a lower triangular matrix $L$ can be found such that $C=LL\trans$ 
+}
+  \onslide<3->{
+\item $L$ is called a \textbf{matrix square root} of $C$  
+}
+  \onslide<4->{
+\item  Square root matrices are not unique;  $TL$ is also a square root of $C$ if $L$ is such and if $T$ is orthogonal $TT\trans=I$ 
+}
+  \onslide<5->{
+\item We'll learn more about square root matrices when we study square root filtering  
+}
+\end{itemize}
+\end{frame}

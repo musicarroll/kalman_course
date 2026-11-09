@@ -1,0 +1,94 @@
+\documentclass{beamer}
+%  Use something like this Perl command to substitute across all files:
+% $ perl -p -i -e 's/\\subfolder\//\\dayonesegone\//g' *.tex
+
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usepackage{subfig}
+\usetheme{Warsaw}
+\newcommand{\includes}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/include}
+\newcommand{\graphics}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/graphics}
+%\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{.}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{\includes/kalman_cmdmaster.tex}
+\input{\includes/orbitfilter_cmds.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Orbital Perturbations: Variation of Parameters
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2020 by Michael L. Carroll
+\end{tiny}
+}
+\maketitle
+
+% ----------------------------------------------------------------
+%\input{equations_main_video4.tex}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Catalog of Orbital Equations} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+   \item Basic Two-Body Equation: $\twobodyeq$,\\ 
+      $\twobodywhere$ 
+}
+  \onslide<3->{
+   \item $\mu$ of Earth is $\muearth$
+}
+  \onslide<4->{
+   \item Angular Momentum:  $\angmom$
+}
+  \onslide<5->{
+   \item Classical Orbital Elements: $a,e,i,\Omega,\omega,T$ where\\
+   $\semimajordef$,\\
+   $\eccdef$,\\
+   $\incdef$,\\
+   $\longanode$,\\
+   $\argperiapsis$,\\
+   $\timeperiapsis$.
+}
+  \onslide<6->{
+   \item
+}
+  \onslide<7->{
+   \item
+}
+  \onslide<8->{
+   \item
+}
+  \onslide<9->{
+  \item
+
+}
+\end{itemize}
+\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\end{document}

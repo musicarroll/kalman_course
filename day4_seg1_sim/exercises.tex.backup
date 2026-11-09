@@ -1,0 +1,8 @@
+% day4_seg1_sim/exercises.tex
+\begin{slide}
+Exercises
+ \begin{enumerate}
+ \item  For fixed $R=3.0$, what will the the effect of increasing $Q$ be in the model harmosc\_riccati.mat? 
+ \item Run the simulation with various values of $Q$ and check to see if the predicted behavior is achieved.
+\end{enumerate}
+\end{slide}

@@ -1,0 +1,72 @@
+% day2_seg3_kalstats/proc_noise.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Process Noise} 
+	\framesubtitle{Characteristics}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The process noise $w(k)$ is assumed to be a white, zero-mean, Gaussian sequence.
+}
+  \onslide<3->{
+ \item Although the continuous-time form of white noise does not really exist, it is sufficient in the 
+ discrete-time case  to consider a random process sequence $w(k)$ that is uncorrelated from 
+ step to step: $\expect{w(j)w\trans (k)}=0$ 
+ if $j\neq k$
+}
+  \onslide<4->{
+ \item This can be achieved if $w(k)$ is the result of sampling a Gauss-Markov process whose exponential 
+autocorrelation function rapidly approaches 0 before the next sample is taken 
+}
+  \onslide<5->{
+\item  Process noise is is thought to arise from unmodelled or negligible states that in aggregate 
+behave is a normally-distributed fashion 
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Process Noise} 
+	\framesubtitle{Process Noise Covariance Matrix $Q$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Process noise covariance matrix $Q$ affects the Kalman gain indirectly through the 
+covariance propagation equation for $\covmat{k}{-}$:
+\[\altcovextrapeq\]
+}
+  \onslide<3->{
+\item This updated error covariance is then included in both the "numerator" and "denominator" of the Kalman gain:
+\[\kalgaineq\]
+}
+  \onslide<4->{
+\item If $Q$ is large relative to $R$ then $K\approx I$ causing $\hat{x}^{-}$ to cancel out and 
+the updated state estimate $\hat{x}^{+}$ will be nearly identical to the measurement $z$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Process Noise} 
+	\framesubtitle{Importance for Filter Tuning}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Since $w(k)$ is an unknown, random forcing function, its parameters have to be selected in a 
+process called \textbf{filter tuning}  
+}
+  \onslide<3->{
+\item  Filter tuning means selecting appropriate values for the entries of $Q$ 
+}
+  \onslide<4->{
+\item Techniques to augment the state vector are also used to tune the process noise
+}
+  \onslide<5->{
+\item  Process noise covariance $Q$ is one of two key tuning parameters, the other being measurement noise covariance $R$
+}
+\end{itemize}
+\end{frame}
+

@@ -1,0 +1,67 @@
+% day3_seg4_ins_challenges/observability.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Observability} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Structural observability is concerned with how $H$ maps measurements into states
+}
+  \onslide<3->{
+  \item Observability means there is a linear path from the measurements to states
+}
+  \onslide<4->{
+  \item Structural observability determined by $\Phi$ and $H$:
+}
+  \onslide<5->{
+\item  If $H$ is $1\times n$, where $n$ is the size of the state vector, then the state $x_0$ 
+is said to be \textbf{observable }from $n$ scalar measurements $\set{z_0,\ldots,z_{n-1}}$ if the block matrix
+\[
+\begin{bmatrix}
+H\trans&\Phi\trans H\trans & \cdots & (\Phi\trans)^{n-1}H\trans
+\end{bmatrix}
+\]
+is of rank $n$
+
+}
+  \onslide<6->{
+ \item Will making measurements as governed by $H$ actually enable us to estimate all of the states 
+ in the state vector? 
+}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Observability} 
+	\framesubtitle{Designing Observability into the Filter}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Observability challenge for filters is often a matter of choosing right kinds of sensors
+}
+  \onslide<3->{
+  \item Choosing the right measurement scheduling
+}
+  \onslide<4->{
+  \item Certain kinds of divergence can be the result of poor observability
+}
+  \onslide<5->{
+\item   Example: Let $H=\left[1\;\;0\;\; 0\;\; 0\;\; 0\right]$, 
+$\Phi=
+\begin{bmatrix}
+0&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+0&0&0&0&1\\
+1& 2&3&4&5
+\end{bmatrix}$
+}
+  \onslide<6->{
+	\item What is the rank 
+	of $\left[H\trans\;\;\Phi H\trans\;\;\Phi^2 H\trans\;\; \Phi^3 H\trans\;\;\Phi^4 H\trans\right]$?
+}
+\end{itemize}
+\end{frame}
+

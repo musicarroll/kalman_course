@@ -1,0 +1,42 @@
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7944,2756)(1654,-3525)
+\thinlines
+{\color[rgb]{0,0,0}\put(4006,-1681){\framebox(675,900){}}
+}%
+\put(4231,-1321){\makebox(0,0)[lb]{\smash{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\dfrac{1}{s}$}%
+}}}
+{\color[rgb]{0,0,0}\put(2977,-1244){\circle{524}}
+}%
+{\color[rgb]{0,0,0}\put(6068,-2613){\line(-4,-3){669.600}}
+\put(5393,-3108){\line( 5,-3){675}}
+\put(6068,-3513){\line( 0, 1){900}}
+\put(6068,-2613){\line( 0, 1){  0}}
+}%
+{\color[rgb]{0,0,0}\put(2971,-3121){\vector( 0, 1){1620}}
+}%
+{\color[rgb]{0,0,0}\put(3241,-1231){\vector( 1, 0){765}}
+}%
+{\color[rgb]{0,0,0}\put(1666,-1231){\vector( 1, 0){1035}}
+}%
+{\color[rgb]{0,0,0}\put(5401,-3121){\line(-1, 0){2385}}
+}%
+{\color[rgb]{0,0,0}\put(4681,-1231){\line( 1, 0){3555}}
+\put(8236,-1231){\line( 0,-1){1890}}
+\put(8236,-3121){\vector(-1, 0){2115}}
+}%
+{\color[rgb]{0,0,0}\put(8191,-1231){\vector( 1, 0){1395}}
+}%
+\put(5806,-3166){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k}%
+}}}
+\put(2521,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}+}%
+}}}
+\put(2656,-1726){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}+}%
+}}}
+\end{picture}

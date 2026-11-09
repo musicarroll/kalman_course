@@ -1,0 +1,50 @@
+% day2_seg2_ranproc2/rand_ramp.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Some Important Random Processes} 
+	\framesubtitle{Random Constant and Random Ramp}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item A random constant process $x$ such that the sample trajectories are constant with respect to time\\
+\begin{footnotesize} But the constant value is different for each sample trajectory in the ensemble\\
+$x(\omega_1,t)\neq x(\omega_2,t)$, for $\omega_1\neq \omega_2$
+\end{footnotesize}
+}
+  \onslide<3->{
+ \item A random ramp requires two state variables: a random constant (y-intercept or bias) and the integral of a
+ random constant (yields random slope)
+}
+  \onslide<4->{
+ \item In principle,
+ however, this constant value could vary with $\omega$, i.e., across the
+ ensemble, thus making the process non-Ergodic.
+}
+  \onslide<5->{
+ \item Random constants are very useful in many applications to model biases that vary from
+ turn-on to turn-on
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Some Important Random Processes} 
+	\framesubtitle{Random Constant and Random Ramp}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item See Matlab Simulink demos:  rand\_const.mdl and
+ rand\_ramp.mdl
+}
+  \onslide<3->{
+ \item In modeling gyro biases, a combination of a random constant
+ (bias stability) and random walk (bias drift) is common.
+}
+  \onslide<4->{
+ \item Gyro scale factors are modeled similarly.
+}
+  \onslide<5->{
+ \item Deterministic biases and scale factors are also part of the model, but these generally are calibrated out.
+}
+\end{itemize}
+\end{frame}

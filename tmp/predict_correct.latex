@@ -1,0 +1,45 @@
+\setlength{\unitlength}{4144sp}
+%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#1pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(9990,5097) (126,-5698)
+\put(126,-3211){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\hat{x}(k-1)$}%
+}}}
+\put(10216,-3166){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\hat{x}(k)$}%
+}}}
+\put(6886,-2131){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Correct}%
+}}}
+\put(2926,-2041){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Predict}%
+}}}
+\put(4906,-4696){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Unit Delay}%
+}}}
+\put(2656,-2671){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$k-1 \rightarrow k$}%
+}}}
+\put(4996,-5281){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$k \rightarrow k-1$}%
+}}}
+\thicklines
+{\color[rgb]{0,0,0}\put(6526,-2986){\framebox(2115,1485){}}
+}%
+{\color[rgb]{0,0,0}\put(2521,-2941){\framebox(2115,1485){}}
+}%
+{\color[rgb]{0,0,0}\put(4456,-5686){\framebox(3015,1710){}}
+}%
+\thicklines
+{\color[rgb]{0,0,0}\put(4411,-4786){\line(-1, 0){3150}}
+\put(1261,-4786){\line( 0, 1){2565}}
+\put(1261,-2221){\vector( 1, 0){1170}}
+}%
+{\color[rgb]{0,0,0}\put(4681,-2176){\vector( 1, 0){1755}}
+}%
+{\color[rgb]{0,0,0}\put(8641,-2221){\line( 1, 0){1350}}
+\put(9991,-2221){\line( 0,-1){2520}}
+\put(9991,-4741){\vector(-1, 0){2475}}
+}%
+\put(1441,-916){\makebox(0,0)[lb]{\smash{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Kalman Filter Predictor-Corrector Model}%
+}}}
+\end{picture}

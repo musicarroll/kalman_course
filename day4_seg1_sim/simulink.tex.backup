@@ -1,0 +1,103 @@
+\begin{slide}
+Introduction to Simulink
+\begin{itemize}
+  \item Matlab
+  \item Simulink
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{itemize}
+  \item Matrix-oriented scientfic computing tool from Mathworks
+	\begin{itemize}
+	  \item Everything is a matrix: scalars are 1-by-1 matrices
+	\end{itemize}
+  \item Lots of built-in numerical tools for matrix manipulation
+  \item Industry standard
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{verbatim}
+%   Row vector:
+v = [1 2 3]; % Or separate columns with comma: v = [1, 2, 3];
+%   Column vector:
+u = [1;2;3]; % Note: Rows separated with semicolon
+% Natural multiplication:
+x=v*u;
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{verbatim}
+%Displaying values:
+v
+u
+x
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{verbatim}
+% Matrices: Combinations of rows and columns:
+A = [1 2 3; 4 5 6; 7 8 9];
+w = A*u;
+% Matrix operators like inverse and transpose:
+B = inv(A);
+C = A';
+D = u*u'; % Symmetric matrix
+\end{verbatim}
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{itemize}
+  \item Full-fledged programming language with control constructs and looping
+  \item Data structures
+  \item Many c-like functions
+  \item Extensive plotting 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Matlab
+\begin{itemize}
+  \item Expensive: $>$\$2K / license
+  \item Toolboxes and add-ons are extra
+  \item Freeware alternative:  Octave (go to www.gnu.org)
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Simulink
+\begin{itemize}
+  \item Simulation of Continuous and Discrete Systems
+  \item Linear and Non-Linear
+  \item Easy to Use, Drag and Drop, Block Diagram Interface
+	\begin{itemize}
+		\item Large collection of block libraries
+	\end{itemize}
+  \item Easy integration with external routines, Matlab functions / scripts, S-functions
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Simulink
+\begin{itemize}
+  \item Hierarchical Nesting of Subsystems
+  \item Can build hybrid discrete / continuous systems
+  \item Integrate inputs and outputs with Matlab Workspace
+  \item Models can be executed in batch (from script or command line) or interactively in GUI
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Simulink
+\begin{itemize}
+  \item See demo of Model Construction
+\end{itemize} 
+\end{slide}

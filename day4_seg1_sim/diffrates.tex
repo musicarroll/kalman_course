@@ -1,0 +1,32 @@
+% day4_seg1_sim/diffrates.tex
+\begin{frame}
+Real-Time: Different Processing Rates
+ \begin{itemize}
+ \item In real-time apps, you cannot waste processing cycles
+	\begin{itemize}
+		\item there are numerous other mission processing tasks to accomplish besides filtering
+	\end{itemize}
+ \item Some, fast varying quanitites need to be updated often; others, less often
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Real-Time: Different Processing Rates
+\begin{itemize}
+  \item For example: body rates and quantities highly-dependent on them need to be updated as rapidly as possible
+ \item Depends, of course, on platform dynamics
+ \item Transport rates don't need to be updated as often
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Rate Allocation Example: A Transport Aircraft Navigation Filter
+\begin{itemize}
+  \item Kalman Gain Calcuation, State and Covariance Update: 0.1 Hz (was originally 0.05 Hz)
+  \item State and Covariance Extrapolation: 4 Hz
+  \begin{itemize}
+	\item dependent on some 16 Hz Fast Nav calcs: body rates and attitudes 
+    \item dependent of some 8 Hz Slow Nav calcs: transport rates
+  \end{itemize}  
+\end{itemize} 
+\end{frame}

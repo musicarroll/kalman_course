@@ -1,0 +1,130 @@
+% day2_seg4_numerical/roundoff.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Round-Off Errors} 
+	\framesubtitle{Joseph Form}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Computer round-off in floating point arithmetic
+}
+  \onslide<3->{
+ \item Unit round-off value is largest number $\eps$ such that $1+\eps=1$
+}
+  \onslide<4->{
+ \item In Matlab, the global symbol "eps" stores the unit round-off value
+}
+  \onslide<5->{
+  \item Round-off errors generally plague the classical covariance update algorithm
+\[\covupdateeq\]
+\begin{itemize}
+  \item Alternative, called the Joseph form, is more robust:
+\[\josephcovupdateeq\]
+\end{itemize} 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Round-Off Errors} 
+	\framesubtitle{De Vries Mechanization}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   This form in turn leads to the De Vries mechanization of the
+Kalman gain equation.  To see this, first expand
+the Joseph form (omitting subscripts for clarity):
+
+}
+  \onslide<3->{
+\begin{align*}
+   P(+)&= P(-)-KHP(-)-P(-)H\trans K\trans+ KHP(-)H\trans K\trans +
+   KRK\trans.
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Round-Off} 
+	\framesubtitle{De Vries}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   Define
+\begin{equation}\label{Feq}
+  F=PH\trans
+\end{equation}
+and
+\begin{equation}\label{Deq}
+  D=HF+R.
+\end{equation}
+
+}
+  \onslide<3->{
+\item   We note that $D$ is symmetric, because
+\begin{align*}
+  D\trans &= [HF+R]\trans \\
+  &= [HPH\trans + R]\trans \\
+  &= [HPH\trans] \trans + R\trans \\
+  &= [H\trans]\trans P\trans H\trans + R\trans \\
+  &= HPH\trans + R & \text{(because $P$ and $R$ are symmetric)}\\
+  &= HF + R \\
+  &= D.
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Round-Off} 
+	\framesubtitle{De Vries}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   The gain in standard Kalman gain equation
+\[\kalgaineq\] can be written as
+\[K=FD^{-1}.\]
+}
+  \onslide<3->{
+\item   Using Eqs.~(\ref{Feq}) and ~(\ref{Deq}), we compute
+\begin{align*}
+  P(+) &= P(-) - KF\trans - FK\trans + KDK\trans \\
+  &= P(-)-K\left[F\trans - \frac{DK\trans}{2} \right] - \left[
+  F-\frac{KD}{2}\right]K\trans.
+\end{align*}
+
+}
+  \onslide<4->{
+\item   Letting $G=F-\dfrac{KD}{2}$, we obtain
+\begin{equation}\label{dvcovupdateeq}
+  \dvcovupdateeq.
+\end{equation}
+
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Round-Off} 
+	\framesubtitle{De Vries}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   The De Vries mechanization implements Eq.~(\ref{dvcovupdateeq}) by
+subtracting the $ij^{th}$ element of $GK\trans$ from both the
+$ij^{th}$ and $ji^{th}$ elements of $P(-)$. 
+}
+  \onslide<3->{
+\item   The De Vries form of
+the covariance update equation is valid for any arbitrary gain
+matrix $K$, not just the optimal gains computed from
+Eqs.~(\ref{Feq}) and (\ref{Deq}).
+
+}
+\end{itemize}
+\end{frame}

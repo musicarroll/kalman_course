@@ -1,0 +1,235 @@
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item With polynomials of differential operators we can now
+ define ordinary differential equations.
+ \item An equation of the form
+ \[p(D)f=q(D)g\]
+ where  $f,g\in \Cinf$ and $p(D),q(D)\in \Real(\Diff)$,
+ is called an ordinary differential equation with constant
+ coefficients.
+\end{itemize}
+\end{frame}
+% orddiffeqs.tex
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item It is probably more familiar if we use $y$
+ instead of $f$ and $u$ instead of $g$, and if we show the
+ independent variable, say t, explicitly:
+ \[a_n\frac{d^ny}{dt^n}+\cdots +a_1\frac{dy}{dt}+a_0y =
+ b_m\frac{d^mu}{dt^m}+\cdots + b_1\frac{du}{dt}+b_0u\]
+ or
+\begin{equation}\label{diffeq}
+\diffeq
+\end{equation}
+ \item For our purposes, the function $u=u(t)$ is called the \textit{\textbf{input}},
+ while the function $y=y(t)$ is called the \textit{\textbf{output}}.  The
+ independent variable $t$ is thought of as time.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item In \eqref{diffeq}, $u$ is ordinarily assumed to be known or given,
+ while $y$ is unknown and sought.
+ \item Any function $y$
+ satisfying \eqref{diffeq} is called a solution of the
+ differential equation.
+ \item A differential equation such as \eqref{diffeq} is called
+ \textit{\textbf{homogeneous}} when the input function $u$ is identically zero
+ for all $t\in[a,b]$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item Thus far we have only dealt with linear differential equations
+ with constant coefficients.
+ \item We could allow the coefficients to be time-dependent
+ functions.  However, for most of our applications, this will not
+ be necessary.
+\end{itemize}
+\end{frame}
+% orddiffeqs.tex
+\begin{frame}
+Ordinary Differential Equations: Examples
+ \begin{itemize}
+ \item From physics we have Hooke's law: the restoring force of a
+ spring is proportional to the distance stretched:  $-ky = m\frac{d^2y}{dt^2}$.
+ \item This is just an application of Newton's $F=ma$, where $a$
+ is the acceleration: $a=d^2y/dt^2$.
+ \item Rewriting this in the form of \eqref{diffeq} we have
+ \[m\frac{d^2y}{dt^2}+ky=0\]
+ \item Therefore, this is a homogeneous equation of order 2.
+\end{itemize}
+\end{frame}
+% orddiffeqs.tex
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item We have used $y$ rather than $x$ as in most physics books,
+ because we want to be consistent with \eqref{diffeq}.
+ \item It is common to rewrite such equations so that the leading
+ coefficient is 1.  Thus we have:
+ \[\frac{d^2y}{dt^2}+\frac{k}{m}y=0.\]
+ \item It is easily verified that $\sin\omega_0 t$, where
+ $\omega_0=\sqrt{\frac{k}{m}}$, satisfies this differential equation.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item Equation \eqref{diffeq}
+ \[\diffeq\]
+ is called
+ \textit{\textbf{time-invariant}}, because the coefficients are
+ constant and also because the independent variable $t$ does not
+ appear explicitly in the equation.
+ \item Note that \eqref{diffeq} is linear in terms of both the
+ input and the output, because the polynomial differential
+ operator on each side of the equation is a linear operator.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item This double linearity means, on the one hand, that the output $y$ due to several inputs acting
+ at the same time is equal to the sum of the outputs due to each
+ input acting alone.
+ \item On the other hand, it also means that if $y_1$ and $y_2$
+ are both solutions to the homogeneous version of \eqref{diffeq},
+ then so is $c_1y_1+c_2y_2$ where $c_1$ and $c_2$ are any real
+ constants.
+ \item A maximal set of $n$ such solutions to the homogeneous
+ equation that are also linearly independent (as vectors) is
+ called a \textit{\textbf{fundamental set}}.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item You can find a fundamental set by solving the
+ \textit{\textbf{characteristic equation}} for the equation.  This equation is
+ nothing other than the original polynomial equation in $D$, but
+ with $D$ replaced by an unknown such as $z$.
+ \item Thus, the characteristic equation for \eqref{diffeq} is
+ \[a_nz^n+\cdots + a_1z + a_0=0\]
+ \item We use $z$ because the roots of this equation are in
+ general complex (thanks, once again, to Dr. Gauss).
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item In solving the characteristic equation, two cases emerge:
+ \begin{enumerate}
+ \item The roots of the characteristic equation are all distinct.
+ \item Some roots are repeated, i.e., each root $r_i$ has
+ multiplicity $n_i$.
+ \end{enumerate}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item In case 1, a fundamental set is easily constructed:
+ \[y_1(t)=\exp(r_1t),\ldots,y_n(t)=\exp(r_nt) \]
+ where the $r_i$ are the distinct roots.
+ \item In case 2, each root $r_i$ of multiplicity $n_i$ contributes
+ $n_i$ functions to the fundamental set:
+ \[y_{i1}(t)=\exp(r_it),t\exp(r_it),\ldots,t^{n_i-1}\exp(r_it) \]
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item To fully solve the differential equation, the initial
+ conditions need to be taken into account.
+ \item These are the values of the function and its first $n-1$
+ derivatives at the start of the time interval.
+ \item We will specialize our interval $[a,b]$ to the case in which $a=0$
+ and $b=T$, some unspecified time in the future.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item The \textit{\textbf{free response}} is the solution to the homogeneous
+ equation in which the initial conditions are specified but the input is zero, i.e., there is no forcing function.:
+\begin{equation}\label{initcond}
+  y(0),Dy(0),\ldots,D^{n-1}y(0)
+\end{equation}
+ \item The \textit{\textbf{forced response}} reverses this situation; it allows the
+ input function to be non-zero, but it requires all the initial
+ conditions in \eqref{initcond} to be zero.
+ \item The \textit{\textbf{total response}} is the sum of the free and forced
+ responses.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations: Example of Free, Forced and Total
+Responses
+ \begin{itemize}
+ \item Consider $D^2y+3Dy-1y=u$ with initial conditions:
+ $y(0)=1,Dy(0)=-1$.
+ \item The roots (found using Matlab's roots function) are $r_1=-3.3028$ and $r_2=0.3028$, and they are
+ distinct.
+ \item Therefore, a fundamental set is
+ $\set{\exp(-3.3028t),\exp(0.3028t)}$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations: Example of Free, Forced and Total
+Responses
+ \begin{itemize}
+ \item With the fundamental set and the initial conditions we can
+ form a set of $n$ linear equations in $n$ unknowns (here, $n=2$):
+\begin{align*}
+  c_1y_1(0)+c_2y_2(0) & =y(0) \\
+  c_1Dy_1(0)+c_2Dy_2(0) & =Dy(0)
+\end{align*}
+or
+\begin{align*}
+  1\cdot c_1+1\cdot c_2 & =0 \\
+  -3.3028\cdot c_1+0.3028\cdot c_2 & =-1
+\end{align*}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item The previous linear system is of the form $Ax=b$.  Using
+ Matlab's matrix division operator $\backslash$, the solution is
+ $x = A\backslash b$ or
+\begin{align*}
+  c_1 & =    0.2773 \\
+  c_2 & =   -0.2773
+\end{align*}
+%\item We can easily verify that
+%$y(t)=0.2773\exp(-3.3028t)-0.2773\exp(0.3028t)$ is indeed the free
+%response by plugging and chugging
+%\begin{align*}
+%  D^2y+3Dy-1y & =D^2[0.2773\exp(-3.3028t)-0.2773\exp(0.3028t)]\\
+%   & \quad +3D[0.2773\exp(-3.3028t)-0.2773\exp(0.3028t)]\\
+%   & \quad -1[0.2773\exp(-3.3028t)-0.2773\exp(0.3028t)] \\
+%   & = 0.2773\cdot 3.3028^2\exp(-3.3028t)\\
+%   & \quad -0.2773\cdot 0.3028^2\exp(0.3028t)\\
+%   & \quad +3\cdot 0.2773\cdot (-3.3028)\exp(-3.3028t)\\
+%   & \quad -3\cdot 0.2773\cdot 0.3028\exp(0.3028t)\\
+%   & \quad -0.2773\exp(-3.3028t)+0.2773\exp(0.3028t)
+%\end{align*}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Ordinary Differential Equations
+ \begin{itemize}
+ \item The total response can also be decomposed into transient
+ and steady state responses
+ \item The \textit{\textbf{transient}} response is that part of the total response
+ that decays to 0 as $t\rightarrow \infty$.
+ \item The \textit{\textbf{steady state response}} is the difference between the
+ total response and the transient response.
+\end{itemize}
+\end{frame}
+\input{day1_seg3_state_space/lti.tex}

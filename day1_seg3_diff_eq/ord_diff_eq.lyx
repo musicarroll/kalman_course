@@ -1,0 +1,1562 @@
+#LyX file created by  tex2lyx 0.1.2
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass slides
+\begin_preamble
+
+\end_preamble
+\options landscape,leqno
+\language english
+\inputencoding latin1
+\fontscheme default
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+With polynomials of differential operators we can now define ordinary differential equations. 
+\end_layout
+
+\begin_layout Itemize
+
+An equation of the form 
+\begin_inset Formula \[p(D)f=q(D)g\]
+\end_inset
+
+ where 
+\begin_inset Formula $f,g\in \Cinf$
+\end_inset
+
+ and 
+\begin_inset Formula $p(D),q(D)\in \Real(\Diff)$
+\end_inset
+
+, is called an ordinary differential equation with constant coefficients. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% orddiffeqs.tex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+It is probably more familiar if we use 
+\begin_inset Formula $y$
+\end_inset
+
+ instead of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ instead of 
+\begin_inset Formula $g$
+\end_inset
+
+, and if we show the independent variable, say t, explicitly: 
+\begin_inset Formula \[a_n\frac{d^ny}{dt^n}+\cdots +a_1\frac{dy}{dt}+a_0y =
+ b_m\frac{d^mu}{dt^m}+\cdots + b_1\frac{du}{dt}+b_0u\]
+\end_inset
+
+ or 
+\begin_inset Formula \begin{equation}\label{diffeq}
+\diffeq
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+For our purposes, the function 
+\begin_inset Formula $u=u(t)$
+\end_inset
+
+ is called the 
+\shape italic
+
+\series bold
+input
+\series default
+
+\shape default
+, while the function 
+\begin_inset Formula $y=y(t)$
+\end_inset
+
+ is called the 
+\shape italic
+
+\series bold
+output
+\series default
+
+\shape default
+. The independent variable 
+\begin_inset Formula $t$
+\end_inset
+
+ is thought of as time. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+In 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+, 
+\begin_inset Formula $u$
+\end_inset
+
+ is ordinarily assumed to be known or given, while 
+\begin_inset Formula $y$
+\end_inset
+
+ is unknown and sought. 
+\end_layout
+
+\begin_layout Itemize
+
+Any function 
+\begin_inset Formula $y$
+\end_inset
+
+ satisfying 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ is called a solution of the differential equation. 
+\end_layout
+
+\begin_layout Itemize
+
+A differential equation such as 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ is called 
+\shape italic
+
+\series bold
+homogeneous
+\series default
+
+\shape default
+ when the input function 
+\begin_inset Formula $u$
+\end_inset
+
+ is identically zero for all 
+\begin_inset Formula $t\in[a,b]$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+Thus far we have only dealt with linear differential equations with constant coefficients. 
+\end_layout
+
+\begin_layout Itemize
+
+We could allow the coefficients to be time-dependent functions. However, for most of our applications, this will not be necessary. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% orddiffeqs.tex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations: Examples 
+\end_layout
+
+\begin_layout Itemize
+
+From physics we have Hooke's law: the restoring force of a spring is proportional to the distance stretched: 
+\begin_inset Formula $-ky = m\frac{d^2y}{dt^2}$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+This is just an application of Newton's 
+\begin_inset Formula $F=ma$
+\end_inset
+
+, where 
+\begin_inset Formula $a$
+\end_inset
+
+ is the acceleration: 
+\begin_inset Formula $a=d^2y/dt^2$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+Rewriting this in the form of 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ we have 
+\begin_inset Formula \[m\frac{d^2y}{dt^2}+ky=0\]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Therefore, this is a homogeneous equation of order 2. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% orddiffeqs.tex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+We have used 
+\begin_inset Formula $y$
+\end_inset
+
+ rather than 
+\begin_inset Formula $x$
+\end_inset
+
+ as in most physics books, because we want to be consistent with 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+It is common to rewrite such equations so that the leading coefficient is 1. Thus we have: 
+\begin_inset Formula \[\frac{d^2y}{dt^2}+\frac{k}{m}y=0.\]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+It is easily verified that 
+\begin_inset Formula $\sin\omega_0 t$
+\end_inset
+
+, where 
+\begin_inset Formula $\omega_0=\sqrt{\frac{k}{m}}$
+\end_inset
+
+, satisfies this differential equation. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+Equation 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ 
+\begin_inset Formula \[\diffeq\]
+\end_inset
+
+ is called 
+\shape italic
+
+\series bold
+time-invariant
+\series default
+
+\shape default
+, because the coefficients are constant and also because the independent variable 
+\begin_inset Formula $t$
+\end_inset
+
+ does not appear explicitly in the equation. 
+\end_layout
+
+\begin_layout Itemize
+
+Note that 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ is linear in terms of both the input and the output, because the polynomial differential operator on each side of the equation is a linear operator. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+This double linearity means, on the one hand, that the output 
+\begin_inset Formula $y$
+\end_inset
+
+ due to several inputs acting at the same time is equal to the sum of the outputs due to each input acting alone. 
+\end_layout
+
+\begin_layout Itemize
+
+On the other hand, it also means that if 
+\begin_inset Formula $y_1$
+\end_inset
+
+ and 
+\begin_inset Formula $y_2$
+\end_inset
+
+ are both solutions to the homogeneous version of 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+, then so is 
+\begin_inset Formula $c_1y_1+c_2y_2$
+\end_inset
+
+ where 
+\begin_inset Formula $c_1$
+\end_inset
+
+ and 
+\begin_inset Formula $c_2$
+\end_inset
+
+ are any real constants. 
+\end_layout
+
+\begin_layout Itemize
+
+A maximal set of 
+\begin_inset Formula $n$
+\end_inset
+
+ such solutions to the homogeneous equation that are also linearly independent (as vectors) is called a 
+\shape italic
+
+\series bold
+fundamental set
+\series default
+
+\shape default
+. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+You can find a fundamental set by solving the 
+\shape italic
+
+\series bold
+characteristic equation
+\series default
+
+\shape default
+ associated with the differential equation. This equation is nothing other than the original polynomial equation in 
+\begin_inset Formula $D$
+\end_inset
+
+, but with 
+\begin_inset Formula $D$
+\end_inset
+
+ replaced by an unknown such as 
+\begin_inset Formula $z$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+Thus, the characteristic equation for 
+\begin_inset LatexCommand \eqref{diffeq}
+
+\end_inset
+
+ is 
+\begin_inset Formula \[a_nz^n+\cdots + a_1z + a_0=0\]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+We use 
+\begin_inset Formula $z$
+\end_inset
+
+ because the roots of this equation are in general complex (thanks, once again, to Dr. Gauss). 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+In solving the characteristic equation, two cases emerge: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+The roots of the characteristic equation are all distinct. 
+\end_layout
+
+\begin_layout Enumerate
+
+Some roots are repeated, i.e., each root 
+\begin_inset Formula $r_i$
+\end_inset
+
+ has multiplicity 
+\begin_inset Formula $n_i$
+\end_inset
+
+. 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+In case 1, a fundamental set is easily constructed: 
+\begin_inset Formula \[y_1(t)=\exp(r_1t),\ldots,y_n(t)=\exp(r_nt) \]
+\end_inset
+
+ where the 
+\begin_inset Formula $r_i$
+\end_inset
+
+ are the distinct roots. 
+\end_layout
+
+\begin_layout Itemize
+
+In case 2, each root 
+\begin_inset Formula $r_i$
+\end_inset
+
+ of multiplicity 
+\begin_inset Formula $n_i$
+\end_inset
+
+ contributes 
+\begin_inset Formula $n_i$
+\end_inset
+
+ functions to the fundamental set: 
+\begin_inset Formula \[y_{i1}(t)=\exp(r_it),y_{i2}(t)=t\exp(r_it),\ldots,y_{in_i}(t)=t^{n_i-1}\exp(r_it) \]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+To fully solve the differential equation, the initial conditions need to be taken into account. 
+\end_layout
+
+\begin_layout Itemize
+
+These are the values of the function and its first 
+\begin_inset Formula $n-1$
+\end_inset
+
+ derivatives at the start of the time interval. 
+\end_layout
+
+\begin_layout Itemize
+
+We will specialize our interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ to the case in which 
+\begin_inset Formula $a=0$
+\end_inset
+
+ and 
+\begin_inset Formula $b=T$
+\end_inset
+
+, some unspecified time in the future. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+The 
+\shape italic
+
+\series bold
+free response
+\series default
+
+\shape default
+ is the solution to the homogeneous equation in which the initial conditions are specified but the input is zero, i.e., there is no forcing function.: 
+\begin_inset Formula \begin{equation}\label{initcond}
+  y(0),Dy(0),\ldots,D^{n-1}y(0)
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+The 
+\shape italic
+
+\series bold
+forced response
+\series default
+
+\shape default
+ reverses this situation; it allows the input function to be non-zero, but it requires all the initial conditions in 
+\begin_inset LatexCommand \eqref{initcond}
+
+\end_inset
+
+ to be zero. 
+\end_layout
+
+\begin_layout Itemize
+
+The 
+\shape italic
+
+\series bold
+total response
+\series default
+
+\shape default
+ is the sum of the free and forced responses. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations: Example of Free, Forced and Total Responses 
+\end_layout
+
+\begin_layout Itemize
+
+Consider 
+\begin_inset Formula $D^2y+3Dy-1y=u$
+\end_inset
+
+ with initial conditions: 
+\begin_inset Formula $y(0)=1,Dy(0)=-1$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+The roots (found using Matlab's roots function) are 
+\begin_inset Formula $r_1=-3.3028$
+\end_inset
+
+ and 
+\begin_inset Formula $r_2=0.3028$
+\end_inset
+
+, and they are distinct. 
+\end_layout
+
+\begin_layout Itemize
+
+Therefore, a fundamental set is 
+\begin_inset Formula $\set{\exp(-3.3028t),\exp(0.3028t)}$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations: Example of Free, Forced and Total Responses 
+\end_layout
+
+\begin_layout Itemize
+
+With the fundamental set and the initial conditions we can form a set of 
+\begin_inset Formula $n$
+\end_inset
+
+ linear equations in 
+\begin_inset Formula $n$
+\end_inset
+
+ unknowns (here, 
+\begin_inset Formula $n=2$
+\end_inset
+
+): 
+\begin_inset Formula \begin{align*}
+  c_1y_1(0)+c_2y_2(0) & =y(0) \\
+  c_1Dy_1(0)+c_2Dy_2(0) & =Dy(0)
+\end{align*}
+\end_inset
+
+ or 
+\begin_inset Formula \begin{align*}
+  1\cdot c_1+1\cdot c_2 & =0 \\
+  -3.3028\cdot c_1+0.3028\cdot c_2 & =-1
+\end{align*}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+The previous linear system is of the form 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+. Using Matlab's matrix division operator 
+\begin_inset Formula $\backslash$
+\end_inset
+
+, the solution is 
+\begin_inset Formula $x = A\backslash b$
+\end_inset
+
+ or 
+\begin_inset Formula \begin{align*}
+  c_1 & =    0.2773 \\
+  c_2 & =   -0.2773
+\end{align*}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item We can easily verify that
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%$y(t)=0.2773
+\backslash
+exp(-3.3028t)-0.2773
+\backslash
+exp(0.3028t)$ is indeed the free
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%response by plugging and chugging
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  D^2y+3Dy-1y & =D^2[0.2773
+\backslash
+exp(-3.3028t)-0.2773
+\backslash
+exp(0.3028t)]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad +3D[0.2773
+\backslash
+exp(-3.3028t)-0.2773
+\backslash
+exp(0.3028t)]
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad -1[0.2773
+\backslash
+exp(-3.3028t)-0.2773
+\backslash
+exp(0.3028t)] 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & = 0.2773
+\backslash
+cdot 3.3028^2
+\backslash
+exp(-3.3028t)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad -0.2773
+\backslash
+cdot 0.3028^2
+\backslash
+exp(0.3028t)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad +3
+\backslash
+cdot 0.2773
+\backslash
+cdot (-3.3028)
+\backslash
+exp(-3.3028t)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad -3
+\backslash
+cdot 0.2773
+\backslash
+cdot 0.3028
+\backslash
+exp(0.3028t)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%   & 
+\backslash
+quad -0.2773
+\backslash
+exp(-3.3028t)+0.2773
+\backslash
+exp(0.3028t)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{align*}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Ordinary Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+The total response can also be decomposed into transient and steady state responses 
+\end_layout
+
+\begin_layout Itemize
+
+The 
+\shape italic
+
+\series bold
+transient
+\series default
+
+\shape default
+ response is that part of the total response that decays to 0 as 
+\begin_inset Formula $t\rightarrow \infty$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+The 
+\shape italic
+
+\series bold
+steady state response
+\series default
+
+\shape default
+ is the difference between the total response and the transient response. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Include \input{lti.lyx}
+preview false
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,32 @@
+% day5_seg4_ct_jovimp/jovimp_main.tex
+\begin{frame}
+\textbf{Day 5, Segment 5\\
+The JOVIAL Implementation\\
+Topics}
+ \begin{itemize}
+ \item Code Structure
+ \item Extrapolation
+ \item Measurement Update Processing
+% \item Synchronizing Multiple Filters
+\end{itemize}
+\end{frame}
+\begin{frame}
+Combat Talon I Kalman Filter Code Structure
+\begin{itemize}
+  \item Separate tasks and real-time execs for each rate group
+	\begin{itemize}
+		\item .1 Hz $\Rightarrow$ REP005HZ $\Rightarrow$  KF'NAV'05'HERTZ'EXEC
+		\item 1 Hz $\Rightarrow$ REP1HZ $\Rightarrow$ KF'NAV'1'HERTZ'EXEC
+		\item 4 Hz $\Rightarrow$ REP4HZ $\Rightarrow$ KF'NAV'4'HERTZ'EXEC
+		\item 8 Hz $\Rightarrow$ REP8HZ $\Rightarrow$ KF'NAV'8'HERTZ'EXEC
+		\item 16 Hz $\Rightarrow$ REP16HZ $\Rightarrow$ KF'NAV'16'HERTZ'EXEC
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+\input{day5_seg4_ct_jovimp/rep005hz_kf_level_3.tex}
+\input{day5_seg4_ct_jovimp/extrapolation.tex}
+%\input{day5_seg4_ct_jovimp/KF'EXTRAP'ERROR'STATE'VECTOR.tex}
+%\input{day5_seg4_ct_jovimp/KF'COV'EXTRAPOLATION.tex}
+\input{day5_seg4_ct_jovimp/meas_update.tex}
+% \input{day5_seg4_ct_jovimp/synch.tex}
+% \input{day5_seg4_ct_jovimp/exercises.tex}

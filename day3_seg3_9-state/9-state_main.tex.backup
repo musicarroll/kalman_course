@@ -1,0 +1,16 @@
+% day3_seg3_9-state/9-state_main.tex
+\begin{slide}
+\textbf{Day 3, Segment 3\\
+The Basic 9-State Kalman Filter\\
+Topics}
+ \begin{itemize}
+ \item Whole State Filters vs. Error State Filters
+ \item The Canonical Nine States
+ \item INS Error State Dynamics and Transition Matrix
+\end{itemize}
+\end{slide}
+\input{day3_seg3_9-state/whole_error.tex}
+\input{day3_seg3_9-state/9states.tex}
+\input{day3_seg3_9-state/inserrdyn.tex}
+\input{day3_seg3_9-state/exercises.tex}
+\input{day3_seg3_9-state/15states.tex}

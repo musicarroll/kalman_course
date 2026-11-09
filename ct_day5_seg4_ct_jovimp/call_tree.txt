@@ -1,0 +1,2376 @@
+
+****************
+Procedure AR'ALERTS calls:
+	
+
+****************
+Procedure AR'COMPUTATIONS calls:
+	AR'DZ'CARP; AR'DZ'HAHO; AR'DZ'HALO; AR'DZ'TWO'STAGE; AR'COMPUTE'POSITION; 
+
+****************
+Procedure AR'DZ'TWO'STAGE calls:
+	
+
+****************
+Procedure AR'DZ'CARP calls:
+	
+
+****************
+Procedure AR'DZ'HAHO calls:
+	
+
+****************
+Procedure AR'DZ'HALO calls:
+	
+
+****************
+Procedure AR'COMPUTE'POSITION calls:
+	
+
+****************
+Procedure AR'DZ'RANGE'TO'GO calls:
+	
+
+****************
+Procedure AR'DZ'TIME'TO'GO calls:
+	
+
+****************
+Procedure AR'DZ'VERTICAL'OFF'TRACK calls:
+	
+
+****************
+Procedure AR'EXECUTIVE calls:
+	AR'COMPUTATIONS; AR'COMPUTE'POSITION; AR'DZ'RANGE'TO'GO; AR'DZ'TIME'TO'GO; AR'STEERING'CORRECTION; AR'DZ'VERTICAL'OFF'TRACK; AR'ALERTS; 
+
+****************
+Procedure AR'STEERING'CORRECTION calls:
+	
+
+****************
+Procedure BI'ADC'BITE calls:
+	
+
+****************
+Procedure BI'BACKGROUND'BITE calls:
+	BI'BACKGROUND'CHKSUM; 
+
+****************
+Procedure BI'05HZ'BACKGROUND'BITE calls:
+	BI'INIT'MICROCODE'TEST; 
+
+****************
+Procedure BI'1HZ'BACKGROUND'BITE calls:
+	DIRINPUT; BI'INIT'MICROCODE'TEST; 
+
+****************
+Procedure BI'BIU'BITE calls:
+	
+
+****************
+Procedure BI'C12'BITE calls:
+	
+
+****************
+Procedure BI'CARA'BITE calls:
+	
+
+****************
+Procedure BI'CDU'BITE calls:
+	
+
+****************
+Procedure BI'COMMANDED'BITE calls:
+	BI'PROGRAM'CHKSUM; BI'MEMORY'TEST; BI'INST'TEST; BI'FAIL'SAFE; BI'DIRECT'IO'BITE; 
+
+****************
+Procedure BI'DIRECT'IO'BITE calls:
+	DIROUTPUT; DIRINPUT; BI'FAIL'SAFE; 
+
+****************
+Procedure BI'DSC'BITE calls:
+	
+
+****************
+Procedure BI'INIT'DTS'SLFTST calls:
+	
+
+****************
+Procedure BI'DTS'BITE calls:
+	BI'INIT'DTS'SLFTST; 
+
+****************
+Procedure BI'DVS'BITE calls:
+	
+
+****************
+Procedure BI'EXEC'1HZ calls:
+	BI'1HZ'BACKGROUND'BITE; BI'ADC'BITE; BI'COMMANDED'BITE; BI'MC'BITE; BI'CDU'BITE; BI'CARA'BITE; BI'GPS'BITE; BI'C12'BITE; BI'DTS'BITE; BI'IRWR'BITE; BI'DVS'BITE; BI'INS'BITE; BI'MMR'BITE; BI'OATS'BITE; BI'RALT'BITE; BI'GSA'BITE; BI'STAB'AMP'BITE; BI'NVGHUD'BITE; BI'BIU'BITE; BI'DSC'BITE; 
+
+****************
+Procedure BI'GPS'BITE calls:
+	MO'GPS'MC'REQ; 
+
+****************
+Procedure BI'GSA'BITE calls:
+	
+
+****************
+Procedure BI'INITIALIZATION'BITE calls:
+	SI'DELAY; DIRINPUT; BI'PROGRAM'CHKSUM; BI'MEMORY'TEST; BI'INST'TEST; BI'FAIL'SAFE; BI'INIT'MICROCODE'TEST; BI'DIRECT'IO'BITE; 
+
+****************
+Procedure BI'INS'BITE calls:
+	
+
+****************
+Procedure BI'IRWR'BITE calls:
+	
+
+****************
+Procedure BI'MC'BITE calls:
+	BI'FAIL'SAFE; MX'BUS'EDIT; 
+
+****************
+Procedure BI'INIT'MICROCODE'TEST calls:
+	DIRIN; 
+
+****************
+Procedure BI'MMR'BITE calls:
+	
+
+****************
+Procedure BI'MUX'MSG'EDIT calls:
+	MX'BUS'EDIT; 
+
+****************
+Procedure BI'MUX'BITE calls:
+	
+
+****************
+Procedure BI'NVGHUD'BITE calls:
+	
+
+****************
+Procedure BI'OATS'BITE calls:
+	
+
+****************
+Procedure BI'RALT'BITE calls:
+	
+
+****************
+Procedure BI'STAB'AMP'BITE calls:
+	
+
+****************
+Procedure BI'BACKGROUND'CHKSUM calls:
+	BI'PROGRAM'CHKSUM; BI'FAIL'SAFE; 
+
+****************
+Procedure BI'FAIL'SAFE calls:
+	BI'INIT'MICROCODE'TEST; 
+
+****************
+Procedure BI'BACKGROUND'CHKSUM calls:
+	BI'PROGRAM'CHKSUM; BI'FAIL'SAFE; 
+
+****************
+Procedure BI'FAIL'SAFE calls:
+	BI'INIT'MICROCODE'TEST; 
+
+****************
+Procedure ET'MUX'DEVICE'SELFTST calls:
+	
+
+****************
+Procedure MC'MC'EXEC calls:
+	MX'PR'P01; MX'PR'R01; MX'PR'R02; MX'PR'R03; MX'PR'R04; MX'PR'R05; MX'PR'R06; MX'PR'R07; MX'PR'R08; MX'BK'P01; MX'BK'R01; MX'BK'R02; MX'BK'R03; MX'BK'R04; MX'BK'R05; MX'BK'R06; MX'BK'R07; MX'BK'R08; MX'MC'MC'INITIALIZATION; 
+
+****************
+Procedure MX'01'EXEC calls:
+	MX'MC1'I4; MX'MC1'I01; 
+
+****************
+Procedure MX'04'EXEC calls:
+	MC'MC'EXEC; MX'PRI'SEC'MUX'TEST; MX'MC1'D01; MX'INS'I06; MX'INS'I07; MX'MC1'DS2; MX'MC1'DS3; MX'MC1'DS4; TR'TEST'MSG'TP4'TP5; 
+
+****************
+Procedure MX'08'EXEC calls:
+	MX'INS'I10; MX'MC1'U02; MX'CAR'U03; MX'GPS'G01; MO'GPS'INIT; MO'GPS'NAV'MODE; MO'GPS'AIDING; MX'GPS'G09; MX'GPS'G13; MX'MC1'N01; MX'MC1'TQ; MX'MC1'TF; MX'MC1'I5A; 
+
+****************
+Procedure MX'16'EXEC calls:
+	MX'INS'I01; MX'MC1'A01; MX'MC1'W16; MX'MC1'W17; MX'DSC'DS5; MX'MC1'DS1; MX'MC1'TP; 
+
+****************
+Procedure  calls:
+	
+
+****************
+Procedure MX'BUS'REQUEST calls:
+	
+
+****************
+Procedure MX'BUS'SCHEDULER calls:
+	IO'AC'EQP'OUTPUT; MX'TEST'CONFIG; SI'BC'TRANSFER'INIT; SI'RT'TRANSFER'INIT; MX'BUS'DRIVER; BC'PRIME'SLCT; 
+
+****************
+Procedure MX'TEST'CONFIG calls:
+	
+
+****************
+Procedure MX'BK'P01 calls:
+	GET'TT; 
+
+****************
+Procedure MX'BK'R01 calls:
+	
+
+****************
+Procedure MX'BK'R02 calls:
+	CD'EDIT'WAYPOINT; CD'EDIT'MOBILE'WAYPOINT; CD'EDIT'GLIDESLOPE; CD'EDIT'AIRDROP; CD'EDIT'THREAT; CD'EDIT'NOFLY'ZONES; CD'EDIT'NAVIGATORS'DATA; CD'EDIT'STEERING'PROBLEM; 
+
+****************
+Procedure MX'BK'R03 calls:
+	
+
+****************
+Procedure MX'BK'R04 calls:
+	
+
+****************
+Procedure MX'BK'R05 calls:
+	
+
+****************
+Procedure MX'BK'R06 calls:
+	
+
+****************
+Procedure MX'BK'R07 calls:
+	
+
+****************
+Procedure MX'BK'R08 calls:
+	
+
+****************
+Procedure MX'CAR'U03 calls:
+	
+
+****************
+Procedure D01'NEW'REQUEST'MADE calls:
+	
+
+****************
+Procedure D01'PROCESS'RETURN'DATA calls:
+	ASCEFP; 
+
+****************
+Procedure MX'MC1'DS29 calls:
+	
+
+****************
+Procedure MX'MC1'DS1 calls:
+	
+
+****************
+Procedure MX'MC1'DS2 calls:
+	
+
+****************
+Procedure MX'MC1'DS3 calls:
+	
+
+****************
+Procedure MX'MC1'DS4 calls:
+	
+
+****************
+Procedure MX'DSC'DS5 calls:
+	
+
+****************
+Procedure MX'MC1'DS9 calls:
+	
+
+****************
+Procedure MX'DT'M10'M11 calls:
+	
+
+****************
+Procedure MX'DT'M05 calls:
+	
+
+****************
+Procedure MX'DT'M09 calls:
+	
+
+****************
+Procedure MX'DTM'BIT'RECORDING calls:
+	
+
+****************
+Procedure MX'GPS'G01 calls:
+	
+
+****************
+Procedure MX'GPS'G02 calls:
+	
+
+****************
+Procedure MX'GPS'G09 calls:
+	OP'GPS'TIME'TAG; 
+
+****************
+Procedure MX'GPS'G13 calls:
+	
+
+****************
+Procedure MX'INS'I01 calls:
+	
+
+****************
+Procedure MX'INS'I06 calls:
+	
+
+****************
+Procedure MX'INS'I07 calls:
+	
+
+****************
+Procedure MX'INS'I10 calls:
+	
+
+****************
+Procedure MX'INS'I11 calls:
+	
+
+****************
+Procedure MX'INS'I12 calls:
+	
+
+****************
+Procedure MX'INS'I13 calls:
+	
+
+****************
+Procedure MX'MC1'A01 calls:
+	
+
+****************
+Procedure MX'MC1'D01 calls:
+	D01'PROCESS'RETURN'DATA; D01'NEW'REQUEST'MADE; 
+
+****************
+Procedure MX'MC1'F02 calls:
+	
+
+****************
+Procedure MX'MC1'I01 calls:
+	
+
+****************
+Procedure MX'MC1'I02 calls:
+	
+
+****************
+Procedure MX'MC1'I06 calls:
+	
+
+****************
+Procedure MX'MC1'I15 calls:
+	
+
+****************
+Procedure MX'MC1'I22 calls:
+	
+
+****************
+Procedure MX'MC1'I4 calls:
+	
+
+****************
+Procedure MX'MC1'I5A calls:
+	
+
+****************
+Procedure MX'MC1'N01 calls:
+	
+
+****************
+Procedure MX'MC1'TF calls:
+	
+
+****************
+Procedure MX'MC1'TQ calls:
+	
+
+****************
+Procedure MX'MC1'U02 calls:
+	
+
+****************
+Procedure MX'MC1'W16 calls:
+	
+
+****************
+Procedure MX'MC1'W17 calls:
+	
+
+****************
+Procedure MX'MC'MC'INITIALIZATION calls:
+	
+
+****************
+Procedure MX'PRI'SEC'MUX'TEST calls:
+	
+
+****************
+Procedure MX'PR'P01 calls:
+	
+
+****************
+Procedure MX'PR'R01 calls:
+	
+
+****************
+Procedure MX'PR'R02 calls:
+	
+
+****************
+Procedure MX'PR'R03 calls:
+	
+
+****************
+Procedure MX'PR'R04 calls:
+	
+
+****************
+Procedure MX'PR'R05 calls:
+	
+
+****************
+Procedure MX'PR'R06 calls:
+	
+
+****************
+Procedure MX'PR'R07 calls:
+	
+
+****************
+Procedure MX'PR'R08 calls:
+	
+
+****************
+Procedure MX'MC1'TP calls:
+	
+
+****************
+Procedure MC'ESTIMATED'TIME'OF'ARRIVAL calls:
+	
+
+****************
+Procedure MC'COMPUTE'REQRD'GROUNDSPEED calls:
+	
+
+****************
+Procedure MC'TIME'CALCULATOR calls:
+	
+
+****************
+Procedure NC'NAV'CALC'EXEC calls:
+	NC'QUEUE'MANAGER; SC'DRIFT'ANGLE'CORRECTION; SC'WIND'DIR'VEL; MC'ESTIMATED'TIME'OF'ARRIVAL; SC'INDICATED'AIRSPEED'COMPUTS; NC'FUEL'DURATION'RANGE; NC'FUEL'REQUIREMENTS; MC'COMPUTE'REQRD'GROUNDSPEED; MC'TIME'CALCULATOR; SC'PRESSURE'PATTERN; SC'WIND'AVERAGE'COMPUTS; NC'UTM'TO'LAT'LONG'CONV; NC'LAT'LONG'TO'UTM'CONV; NC'RANGE'BEARING; NC'DEAD'RECKON'LAT'LONG; SC'TRUE'AIRSPEED'COMPUTS; 
+
+****************
+Procedure NC'DEAD'RECKON'LAT'LONG calls:
+	
+
+****************
+Procedure NC'FUEL'DURATION'RANGE calls:
+	
+
+****************
+Procedure NC'FUEL'REQUIREMENTS calls:
+	
+
+****************
+Procedure NC'GET'OFF'NAV'QUEUE calls:
+	
+
+****************
+Procedure NC'LAT'LONG'TO'UTM'CONV calls:
+	UT'LAT'LONG'TO'UTM'CONV; UT'UTM'LONG'FORM'TO'SHORT'FORM; 
+
+****************
+Procedure NC'PUT'ON'NAV'QUEUE calls:
+	
+
+****************
+Procedure NC'QUEUE'MANAGER calls:
+	NC'PUT'ON'NAV'QUEUE; NC'GET'OFF'NAV'QUEUE; 
+
+****************
+Procedure NC'RANGE'BEARING calls:
+	
+
+****************
+Procedure NC'UTM'TO'LAT'LONG'CONV calls:
+	UT'UTM'TO'LAT'LONG; UT'UTM'SHORTFORM'TO'LONGFORM; 
+
+****************
+Procedure SC'DRIFT'ANGLE'CORRECTION calls:
+	
+
+****************
+Procedure SC'INDICATED'AIRSPEED'COMPUTS calls:
+	
+
+****************
+Procedure SC'PRESSURE'PATTERN calls:
+	
+
+****************
+Procedure SC'TRUE'AIRSPEED'COMPUTS calls:
+	
+
+****************
+Procedure SC'WIND'DIR'VEL calls:
+	
+
+****************
+Procedure SC'WIND'AVERAGE'COMPUTS calls:
+	
+
+****************
+Procedure CD'MMR'FAULT'REQUEST calls:
+	
+
+****************
+Procedure CD'ALERT'BITE'PROCESSING calls:
+	
+
+****************
+Procedure CD'ACTIVE'FAULT'EDIT calls:
+	
+
+****************
+Procedure CD'ALIGN'DISPLAY calls:
+	
+
+****************
+Procedure CD'AOA'CONTROL calls:
+	MX'BUS'REQUEST; MO'AOA'CONTROL; 
+
+****************
+Procedure CD'EDIT'AIRDROP'VALIDITY calls:
+	
+
+****************
+Procedure CD'B01 calls:
+	RELIMIT; 
+
+****************
+Procedure CD'B03'PRES'POS'DATA'REQ'PROC calls:
+	
+
+****************
+Procedure CD'B04'NAV'DATA'PROCESSING calls:
+	RELIMIT; 
+
+****************
+Procedure CD'B05'BUFFERING calls:
+	
+
+****************
+Procedure CD'B06'TA'NOFLY'DATA'PROC calls:
+	
+
+****************
+Procedure CD'B08'BUFFERING calls:
+	
+
+****************
+Procedure CD'B23'MD1'BUFFERING calls:
+	
+
+****************
+Procedure CD'B23'MISSION'NAMES calls:
+	
+
+****************
+Procedure CD'B24'BUFFERING calls:
+	
+
+****************
+Procedure CD'BITE'COM'DISPLAY'REQ calls:
+	CD'B24'BUFFERING; 
+
+****************
+Procedure CD'BACKGROUND'EXEC calls:
+	CD'ERASE; 
+
+****************
+Procedure CD'C08'BUFFERING calls:
+	
+
+****************
+Procedure CD'C22'BUFFERING calls:
+	
+
+****************
+Procedure CD'C22'MESSAGE'VALIDITY calls:
+	CD'C22'BUFFERING; 
+
+****************
+Procedure CD'C23'BUFFERING calls:
+	
+
+****************
+Procedure CD'C25'BUFFERING calls:
+	
+
+****************
+Procedure CD'C27'BUFFERING calls:
+	
+
+****************
+Procedure CD'CDU'BITE'SUMMARY calls:
+	CD'C27'BUFFERING; 
+
+****************
+Procedure CD'CEP'CALC'COMMAND calls:
+	
+
+****************
+Procedure CD'COMP'POSITIONS'DISPLAY calls:
+	
+
+****************
+Procedure CD'CONFIG'DATA'N'CHG'REQ'PROC calls:
+	
+
+****************
+Procedure CD'DATABASE'CHECKSUM'CAL calls:
+	
+
+****************
+Procedure CD'DATABASE'REQUEST calls:
+	
+
+****************
+Procedure CD'DEV'STATUS'INPUT'TST calls:
+	
+
+****************
+Procedure CD'DSC'OUTPUT'TEST calls:
+	CD'B24'BUFFERING; CD'C25'BUFFERING; MX'MC1'DS29; 
+
+****************
+Procedure CD'DYNAMIC'DIRECT'STEERING'DISPLAY calls:
+	
+
+****************
+Procedure CD'SYS'INIT'DTM'NAME'REQUEST calls:
+	CD'B23'MISSION'NAMES; 
+
+****************
+Procedure CD'EDIT'SPEEDBUG'WAYPOINT calls:
+	
+
+****************
+Procedure CD'EDIT'AIRDROP calls:
+	
+
+****************
+Procedure CD'EDIT'GLIDESLOPE calls:
+	
+
+****************
+Procedure CD'EDIT'MOBILE'WAYPOINT calls:
+	
+
+****************
+Procedure CD'EDIT'NAVIGATORS'DATA calls:
+	
+
+****************
+Procedure CD'EDIT'NOFLY'ZONES calls:
+	
+
+****************
+Procedure CD'EDIT'STEERING'PROBLEM calls:
+	
+
+****************
+Procedure CD'EDIT'THREAT calls:
+	
+
+****************
+Procedure CD'EDIT'WAYPOINT calls:
+	
+
+****************
+Procedure CD'ERASE calls:
+	SI'CD'INITIALIZE'OFP'DB; SI'DATABASE'DEFAULT; 
+
+****************
+Procedure CD'EXEC'8HZ calls:
+	CD'B01; CD'REQUEST'PROCESSING; CD'IO'CDU'PROCESSING; CD'IO'FLIR'PROCESSING; 
+
+****************
+Procedure CD'MMR'FAULT'LOG calls:
+	CD'ACTIVE'FAULT'EDIT; CD'INACTIVE'FAULT'EDIT; 
+
+****************
+Procedure CD'EDIT'GLIDESLOPE'VALIDITY calls:
+	
+
+****************
+Procedure CD'GPS'MODE'CONTROL calls:
+	MO'GPS'QUICK'CK; MO'GPS'MODE'DISP; 
+
+****************
+Procedure CD'HISTORY'DISPLAY calls:
+	CD'RER'COMMAND; CD'CEP'CALC'COMMAND; CD'LAST'CEP'CALC'COMMAND; CD'ZERO'HIST'COMMAND; 
+
+****************
+Procedure CD'ILLEGAL'EDIT'OR'EDIT'TYPE calls:
+	
+
+****************
+Procedure CD'INACTIVE'FAULT'EDIT calls:
+	
+
+****************
+Procedure CD'INU'MD calls:
+	
+
+****************
+Procedure CD'INU'MODE'DISPLAY calls:
+	
+
+****************
+Procedure CD'INU'MISC'PARAMS calls:
+	CD'C25'BUFFERING; 
+
+****************
+Procedure CD'IO'CDU'PROCESSING calls:
+	IO'SYNCHRO'FORMAT; DIROUTPUT; UT'DTG'FORMAT; RELIMIT; UT'A031'RATE'LIMIT; NU'DETER'SYS'COMPUTED'GS; 
+
+****************
+Procedure CD'IO'FLIR'PROCESSING calls:
+	
+
+****************
+Procedure CD'LAST'CEP'CALC'COMMAND calls:
+	
+
+****************
+Procedure  calls:
+	BMOVE; ASCINT; UT'HEX'TO'ASC'CONVERSION; RETADR; ASCUSI; CD'C23'BUFFERING; CD'B24'BUFFERING; 
+
+****************
+Procedure CD'MISSION'DATA'EDIT calls:
+	CD'ILLEGAL'EDIT'OR'EDIT'TYPE; CD'REQUEST'C'MESS'FOR'EDIT; CD'SEND'OUT'B'MESS; CD'PROCESS'EDIT'C'MESS; 
+
+****************
+Procedure CD'EDIT'MOB'WYPT'VALIDITY calls:
+	
+
+****************
+Procedure CD'B08'C08'NC'CDU'PROCESSING calls:
+	CD'C08'BUFFERING; CD'B08'BUFFERING; 
+
+****************
+Procedure CD'EDIT'NOFLY'VALIDITY calls:
+	
+
+****************
+Procedure CD'NAV'MODE'REQUEST calls:
+	
+
+****************
+Procedure CD'OUTPUT'MAINTENANCE'TEST'REQ calls:
+	CD'C25'BUFFERING; 
+
+****************
+Procedure CD'POS'FIX'PROCESSING calls:
+	CD'B05'BUFFERING; 
+
+****************
+Procedure CD'PROCESS'EDIT'C'MESS calls:
+	CD'EDIT'STEERING'PROBLEM; CD'EDIT'GLIDESLOPE; CD'EDIT'NAVIGATORS'DATA; CD'EDIT'NOFLY'ZONES; CD'EDIT'THREAT; CD'EDIT'MOBILE'WAYPOINT; CD'EDIT'AIRDROP; CD'EDIT'WAYPOINT; CD'EDIT'GLIDESLOPE'VALIDITY; CD'EDIT'NOFLY'VALIDITY; CD'EDIT'THREAT'VALIDITY; CD'EDIT'MOB'WYPT'VALIDITY; CD'EDIT'AIRDROP'VALIDITY; CD'EDIT'WAYPOINT'VALIDITY; MX'MC1'I4; CD'CHANGE'WAYPOINT'TOTS; 
+
+****************
+Procedure CD'PREFLIGHT'TEST calls:
+	DIROUTPUT; CD'C25'BUFFERING; CD'SEND'OUT'PREFLIGHT; 
+
+****************
+Procedure CD'RADAR'DECLUTTER calls:
+	CD'B24'BUFFERING; MX'MC1'DS9; 
+
+****************
+Procedure CD'RECORDING'REQUEST calls:
+	
+
+****************
+Procedure CD'REQUEST'C22 calls:
+	
+
+****************
+Procedure CD'REQUEST'PROCESSING calls:
+	UT'CLEAR'PENDING'POS'FIX; CD'RADAR'DECLUTTER; RP'AOA; CD'AOA'CONTROL; CD'MMR'FAULT'REQUEST; CD'MMR'FAULT'LOG; CD'SAVE'DSC; 
+
+****************
+Procedure CD'RER'COMMAND calls:
+	
+
+****************
+Procedure CD'REVIEW'REQUEST'NO calls:
+	
+
+****************
+Procedure CD'NAV'RAD'MGT'PROCESSING calls:
+	CD'B05'BUFFERING; 
+
+****************
+Procedure CD'REQUEST'C'MESS'FOR'EDIT calls:
+	
+
+****************
+Procedure CD'REQUEST'SPEEDBUG'WAYPOINT calls:
+	CD'EDIT'SPEEDBUG'WAYPOINT; 
+
+****************
+Procedure CD'SAVE'C22 calls:
+	
+
+****************
+Procedure CD'SAVE'DSC calls:
+	
+
+****************
+Procedure CD'SEND'OUT'B'MESS calls:
+	MX'MC1'I4; CD'EDIT'WAYPOINT; 
+
+****************
+Procedure CD'SEND'OUT'PREFLIGHT calls:
+	DIROUTPUT; IO'SYNCHRO'FORMAT; NU'DETER'SYS'COMPUTED'GS; UT'A031'RATE'LIMIT; 
+
+****************
+Procedure CD'SHADOW'PROCESSING'DISPLAY calls:
+	
+
+****************
+Procedure CD'SYS'INIT'DTM'UPLOAD'REQUEST calls:
+	CD'C23'BUFFERING; 
+
+****************
+Procedure CD'SYS'INIT'CDU'PROCESSING calls:
+	CD'B23'MD1'BUFFERING; 
+
+****************
+Procedure CD'TDR'ON'OFF calls:
+	
+
+****************
+Procedure CD'TEST'DATA'REC'DISPLAY'REQ calls:
+	
+
+****************
+Procedure CD'TDR'EDIT calls:
+	CD'C25'BUFFERING; 
+
+****************
+Procedure CD'EDIT'THREAT'VALIDITY calls:
+	
+
+****************
+Procedure CD'TERMINAL'FIX calls:
+	CD'B24'BUFFERING; CD'C25'BUFFERING; 
+
+****************
+Procedure CD'MAINTENANCE'TEST'DIS'REQ calls:
+	CD'B24'BUFFERING; 
+
+****************
+Procedure CD'EDIT'WAYPOINT'VALIDITY calls:
+	
+
+****************
+Procedure CD'WAYPT'STEERING'PROCESSING calls:
+	
+
+****************
+Procedure CD'CHANGE'WAYPOINT'TOTS calls:
+	
+
+****************
+Procedure CD'ZERO'HIST'COMMAND calls:
+	
+
+****************
+Procedure MC'MISC'PARAM'FORMAT calls:
+	UT'CLEAR'PENDING'POS'FIX; UT'HEX'TO'ASC'CONVERSION; BMOVE; ASCUSI; 
+
+****************
+Procedure IO'16HZ'INPUT'EXEC calls:
+	IO'AOA'INPUT'HANDLING; IO'READ'DISCRETES; IO'ADC'INPUT; IO'AC'EQP'INPUT; IO'AUTO'PILOT'INPUT; IO'CONVERTER'DATA; IO'READ'DVS'DATA; IO'RADAR'ALTIMETER'INPUT; 
+
+****************
+Procedure IO'16HZ'OUTPUT'EXEC calls:
+	IO'MMR'OUTPUT; IO'SSIU'OUTPUT; IO'AC'EQP'OUTPUT; IO'AUTO'PILOT'OUTPUT; IO'OUTPUT'DISCRETES; IO'AOA'OUTPUT; 
+
+****************
+Procedure IO'2HZ'INPUT'EXEC calls:
+	IO'OATS'INPUT; 
+
+****************
+Procedure IO'2HZ'OUTPUT'EXEC calls:
+	IO'GSDAI'OUTPUT; 
+
+****************
+Procedure IO'4HZ'INPUT'EXEC calls:
+	IO'GROUNDSPEED'AMP'INPUT; IO'DVS'INPUT; 
+
+****************
+Procedure IO'4HZ'OUTPUT'EXEC calls:
+	IO'GROUNDSPEED'AMP'OUTPUT; 
+
+****************
+Procedure IO'8HZ'INPUT'EXEC calls:
+	IO'C12'COMPASS'INPUT; IO'STAB'AMP'INPUT; 
+
+****************
+Procedure IO'AOA'OUTPUT calls:
+	IO'SYNCHRO'FORMAT; DIROUTPUT; 
+
+****************
+Procedure IO'AC'EQP'INPUT calls:
+	
+
+****************
+Procedure IO'AC'EQP'OUTPUT calls:
+	
+
+****************
+Procedure IO'ADC'INPUT calls:
+	
+
+****************
+Procedure IO'AOA'INPUT'HANDLING calls:
+	
+
+****************
+Procedure IO'AUTO'PILOT'INPUT calls:
+	
+
+****************
+Procedure IO'AUTO'PILOT'OUTPUT calls:
+	DIROUTPUT; 
+
+****************
+Procedure IO'C12'COMPASS'INPUT calls:
+	
+
+****************
+Procedure IO'CONVERTER'DATA calls:
+	DIRINPUT; 
+
+****************
+Procedure IO'OUTPUT'DISCRETES calls:
+	DIROUTPUT; 
+
+****************
+Procedure IO'DVS'INPUT calls:
+	
+
+****************
+Procedure IO'GROUNDSPEED'AMP'INPUT calls:
+	
+
+****************
+Procedure IO'GROUNDSPEED'AMP'OUTPUT calls:
+	IO'SYNCHRO'FORMAT; DIROUTPUT; 
+
+****************
+Procedure IO'GSDAI'OUTPUT calls:
+	
+
+****************
+Procedure IO'MMR'OUTPUT calls:
+	IO'SYNCHRO'FORMAT; DIROUTPUT; UT'A031'RATE'LIMIT; 
+
+****************
+Procedure IO'OATS'INPUT calls:
+	
+
+****************
+Procedure IO'RADAR'ALTIMETER'INPUT calls:
+	
+
+****************
+Procedure IO'READ'DISCRETES calls:
+	DIRINPUT; 
+
+****************
+Procedure IO'READ'DVS'DATA calls:
+	
+
+****************
+Procedure IO'SSIU'OUTPUT calls:
+	RELIMIT; IO'SYNCHRO'FORMAT; DIROUTPUT; UT'DTG'FORMAT; 
+
+****************
+Procedure IO'STAB'AMP'INPUT calls:
+	
+
+****************
+Procedure IO'SYNCHRO'FORMAT calls:
+	
+
+****************
+Procedure TESTDMA calls:
+	
+
+****************
+Procedure DIRINPUT calls:
+	DIRIN; OUTPUT; 
+
+****************
+Procedure DIROUTPUT calls:
+	
+
+****************
+Procedure BU'BUFFER'FROM'05HZ'TO'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'FROM'1HZ'TO'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'FROM'2HZ'TO'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'FROM'4HZ'TO'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'FROM'8HZ'TO'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'TO'05HZ'FROM'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'TO'1HZ'FROM'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'TO'2HZ'FROM'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'TO'4HZ'FROM'FASTER calls:
+	
+
+****************
+Procedure BU'BUFFER'TO'8HZ'FROM'FASTER calls:
+	
+
+****************
+Procedure BACKGROUND calls:
+	OFPINIT; 
+
+****************
+Procedure EXEC'IDLE calls:
+	
+
+****************
+Procedure OFPINIT calls:
+	
+
+****************
+Procedure REP005HZ calls:
+	
+
+****************
+Procedure REP1HZ calls:
+	
+
+****************
+Procedure REP16HZ calls:
+	
+
+****************
+Procedure REP2HZ calls:
+	
+
+****************
+Procedure REP4HZ calls:
+	
+
+****************
+Procedure REP8HZ calls:
+	
+
+****************
+Procedure SYSTEM'STARTUP calls:
+	JA$STP; BI'MCFAIL'INT'PROC; 
+
+****************
+Procedure DEFAULT'HANDLR calls:
+	
+
+****************
+Procedure SI'VARIABLE'INITIALIZATION calls:
+	
+
+****************
+Procedure BACKGROUND calls:
+	
+
+****************
+Procedure EQT$CPU3 calls:
+	
+
+****************
+Procedure OFPINIT calls:
+	
+
+****************
+Procedure REP005HZ calls:
+	
+
+****************
+Procedure REP1HZ calls:
+	
+
+****************
+Procedure REP16HZ calls:
+	MI'DT'LOAD; 
+
+****************
+Procedure REP2HZ calls:
+	MX'MC1'I22; 
+
+****************
+Procedure REP4HZ calls:
+	
+
+****************
+Procedure REP8HZ calls:
+	
+
+****************
+Procedure SYSTEM'STARTUP calls:
+	
+
+****************
+Procedure DEFAULT'HANDLR calls:
+	
+
+****************
+Procedure SI'VARIABLE'INITIALIZATION calls:
+	SI'DT'INITIALIZATION; SI'INS'MESSAGES'INIT; SI'RM'INITIALIZATION; SI'CD'INITIALIZATION; SI'DATABASE'DEFAULT; SI'CD'INITIALIZE'OFP'DB; SI'KF'KALMAN'FILTER'NAV'INIT; SI'GNS'INIT; MX'MC'MC'INITIALIZATION; SI'UTM'INITIALIZATION; 
+
+****************
+Procedure SI'BUS'INITIALIZATION calls:
+	
+
+****************
+Procedure SI'BC'SELECTION calls:
+	SI'DELAY; IO'READ'DISCRETES; IO'AC'EQP'INPUT; IO'AC'EQP'OUTPUT; IO'OUTPUT'DISCRETES; 
+
+****************
+Procedure SI'BC'TRANSFER'INIT calls:
+	BI'MUX'MSG'EDIT; IO'READ'DISCRETES; SI'DT'INITIALIZATION; SI'CD'INITIALIZATION; SI'GNS'INIT; CD'ALERT'BITE'PROCESSING; MX'MC'MC'INITIALIZATION; 
+
+****************
+Procedure SI'CD'INITIALIZE'OFP'DB calls:
+	CD'EDIT'WAYPOINT; CD'EDIT'MOBILE'WAYPOINT; CD'EDIT'GLIDESLOPE; CD'EDIT'AIRDROP; CD'EDIT'THREAT; CD'EDIT'NOFLY'ZONES; CD'EDIT'NAVIGATORS'DATA; CD'EDIT'STEERING'PROBLEM; 
+
+****************
+Procedure SI'CD'INITIALIZATION calls:
+	
+
+****************
+Procedure SI'DATABASE'DEFAULT calls:
+	
+
+****************
+Procedure SI'DELAY calls:
+	
+
+****************
+Procedure SI'DT'INITIALIZATION calls:
+	
+
+****************
+Procedure SI'EXECUTIVE calls:
+	IO'READ'DISCRETES; IO'AC'EQP'INPUT; IO'OUTPUT'DISCRETES; IO'AC'EQP'OUTPUT; BI'INITIALIZATION'BITE; BI'MUX'MSG'EDIT; ET'MUX'DEVICE'SELFTST; SI'BUS'INITIALIZATION; MX'BUS'SCHEDULER; SI'VARIABLE'INITIALIZATION; SI'DELAY; SI'DT'INITIALIZATION; SI'CD'INITIALIZATION; SI'GNS'INIT; MX'MC'MC'INITIALIZATION; MX'BUS'EDIT; SI'BC'SELECTION; DIRIN; 
+
+****************
+Procedure SI'GNS'INIT calls:
+	EC'STEERING'MODE; 
+
+****************
+Procedure SI'INS'MESSAGES'INIT calls:
+	
+
+****************
+Procedure SI'KF'KALMAN'FILTER'NAV'INIT calls:
+	OP'INIT'KALMAN'BLK'DEREFS; NU'MAGNETIC'VAR'INIT; 
+
+****************
+Procedure SI'RM'INITIALIZATION calls:
+	
+
+****************
+Procedure SI'RT'TRANSFER'INIT calls:
+	SI'DT'INITIALIZATION; SI'CD'INITIALIZATION; SI'GNS'INIT; MX'MC'MC'INITIALIZATION; 
+
+****************
+Procedure SI'UTM'INITIALIZATION calls:
+	
+
+****************
+Procedure UP'ALT'CAL'RESPONSE calls:
+	
+
+****************
+Procedure UP'EXT'ALTITUDE'FOR'PF calls:
+	UP'ALTITUDE'UPDATE; 
+
+****************
+Procedure UP'ALTITUDE'UPDATE calls:
+	
+
+****************
+Procedure UP'DET'UP'FOR'RADAR'FIX calls:
+	
+
+****************
+Procedure UP'DET'UP'FOR'FLIR'FIX calls:
+	
+
+****************
+Procedure UP'DET'CDU'DISPLAY'FOR'PF calls:
+	
+
+****************
+Procedure UP'EXT'LAT'LON'FOR'PF calls:
+	UP'POSITION'FIX; 
+
+****************
+Procedure UP'POS'FIX'KALMAN'GAIN calls:
+	
+
+****************
+Procedure UP'POSITION'FIX calls:
+	UP'POS'FIX'KALMAN'GAIN; UP'DET'CDU'DISPLAY'FOR'PF; UP'DET'UP'FOR'VISUAL'FIX; UP'DET'UP'FOR'RADAR'FIX; UP'DET'UP'FOR'FLIR'FIX; 
+
+****************
+Procedure UP'POSITION'UPDATE calls:
+	UP'EXT'LAT'LON'FOR'PF; UP'EXT'ALTITUDE'FOR'PF; UP'VISUAL'FIX'RESPONSE; UP'ALT'CAL'RESPONSE; 
+
+****************
+Procedure UP'POST'FLIGHT'UPDATE calls:
+	
+
+****************
+Procedure UP'RELATIVE'NAVIGATION calls:
+	UP'RELATIVE'NAV'EXTRAP; 
+
+****************
+Procedure UP'RELATIVE'NAV'EXTRAP calls:
+	
+
+****************
+Procedure UP'VISUAL'FIX'RESPONSE calls:
+	
+
+****************
+Procedure EC'EXECUTIVE calls:
+	EC'SEQUENCE'MODE; EC'NEXT'WAYPT'NUM; EC'STEERING'MODE; 
+
+****************
+Procedure EC'NEXT'WAYPT'NUM calls:
+	
+
+****************
+Procedure EC'SEQUENCE'MODE calls:
+	
+
+****************
+Procedure EC'STEERING'MODE calls:
+	
+
+****************
+Procedure EG'DESTINATION'WAYPOINT calls:
+	
+
+****************
+Procedure EG'EXECUTIVE calls:
+	EG'DESTINATION'WAYPOINT; EG'RANGE'TO'GO; EG'TIME'TO'GO; EG'STEERING'CORRECTION; EG'SPEEDBUG'EXEC; 
+
+****************
+Procedure EG'RANGE'TO'GO calls:
+	
+
+****************
+Procedure EG'SPEEDBUG'DTG'CALC calls:
+	
+
+****************
+Procedure EG'SPEEDBUG'EXEC calls:
+	EG'SPEEDBUG'DTG'CALC; 
+
+****************
+Procedure EG'STEERING'CORRECTION calls:
+	
+
+****************
+Procedure EG'TIME'TO'GO calls:
+	
+
+****************
+Procedure GS'EXECUTIVE calls:
+	GS'LZ'RANGE'TO'GO; GS'LZ'TIME'TO'GO; GS'STEERING'CORRECTION; GS'LZ'VERTICAL'OFF'TRACK; 
+
+****************
+Procedure GS'LZ'RANGE'TO'GO calls:
+	
+
+****************
+Procedure GS'LZ'TIME'TO'GO calls:
+	
+
+****************
+Procedure GS'LZ'VERTICAL'OFF'TRACK calls:
+	
+
+****************
+Procedure GS'STEERING'CORRECTION calls:
+	
+
+****************
+Procedure LI'EXECUTIVE calls:
+	LI'RANGE'TO'GO; LI'TIME'TO'GO; 
+
+****************
+Procedure LI'RANGE'TO'GO calls:
+	
+
+****************
+Procedure LI'TIME'TO'GO calls:
+	
+
+****************
+Procedure GUIDANCE'AND'STEERING'EXEC calls:
+	EC'EXECUTIVE; EG'EXECUTIVE; GS'EXECUTIVE; AR'EXECUTIVE; LI'EXECUTIVE; NU'DETER'SYS'COMPUTED'GS; 
+
+****************
+Procedure KF'BARO'CALIBRATION'OBS'PROC calls:
+	
+
+****************
+Procedure KF'KALMAN'DATA'BUFFERING calls:
+	
+
+****************
+Procedure KF'BEGIN'INU'SECTION calls:
+	
+
+****************
+Procedure KF'BEGIN'INU'INIT calls:
+	
+
+****************
+Procedure KF'BEGIN'BUF'MOV calls:
+	
+
+****************
+Procedure KF'TAS'DATA'OBS'PROC calls:
+	
+
+****************
+Procedure KF'CEP'CALCULATION calls:
+	
+
+****************
+Procedure KF'AIDED'INS'RATE'LIMIT calls:
+	KF'EXP1; 
+
+****************
+Procedure KF'COVARIANCE'RATE'LIMIT calls:
+	
+
+****************
+Procedure KF'DOPPLER'INERTIAL'OBS'PROC calls:
+	KF'DOPPLER'OBS'NOISE; 
+
+****************
+Procedure KF'DOPPLER'OBS'NOISE calls:
+	
+
+****************
+Procedure KF'EXT'ERROR'STATE'AIR'ALIGN calls:
+	KF'SPARSE'MAT'VECT'MULT; KF'TRANS'MATRIX'CALCULATION; 
+
+****************
+Procedure KF'EXTRAP'ERROR'STATE'VECTOR calls:
+	KF'EXT'ERROR'STATE'AIR'ALIGN; KF'EXT'ERROR'STATE'AIDED'NAV; KF'EXT'ERROR'STATE'AIDED'DVS; 
+
+****************
+Procedure KF'EXT'ERROR'STATE'AIDED'NAV calls:
+	KF'SPARSE'MAT'VECT'MULT; KF'TRANS'MATRIX'CALCULATION; 
+
+****************
+Procedure KF'EARTH'RAD'BUFFER calls:
+	
+
+****************
+Procedure KF'EXP1 calls:
+	
+
+****************
+Procedure KF'GEO'POSITION'FIX'OBS'PROC calls:
+	
+
+****************
+Procedure KF'GPS'OBS'PROC calls:
+	
+
+****************
+Procedure KF'HEAD'BIAS'CORRELATION calls:
+	
+
+****************
+Procedure KF'H'MATRIX'BUFFERING calls:
+	
+
+****************
+Procedure KF'INU'COVARIANCE'CAL calls:
+	KF'FORM'COV'MATRIX'FROM'UK; 
+
+****************
+Procedure KF'COARSE'AIR'ALIGN'INIT calls:
+	
+
+****************
+Procedure KF'KALMAN'CONTROL calls:
+	KF'EXTRAP'ERROR'STATE'VECTOR; KF'POST'ERREX'PROCESSING; KF'TRANS'MATRIX'CALCULATION; KF'COVARIANCE'RATE'LIMIT; KF'COV'EXTRAPOLATION; KF'UPDATE'PROCESSING'CONTROL; KF'POSITION'FIX'PREP; KF'INU'COVARIANCE'CAL; KF'CEP'CALCULATION; KF'MOTION'ALIGN'STATUS; KF'DVS'COVARIANCE'CAL; KF'AVERAGE'WEIGHT'CAL; 
+
+****************
+Procedure KF'AIDED'INS'FILTER'INIT calls:
+	KF'FORM'COV'MATRIX'FROM'UK; KF'FACT'COV'MATRIX'TO'UK; KF'TILT'BIAS'CORRELATION; KF'HEAD'BIAS'CORRELATION; 
+
+****************
+Procedure KF'KALMAN'FILTER'INIT calls:
+	KF'COARSE'AIR'ALIGN'INIT; KF'AIDED'INS'FILTER'INIT; KF'DVS'FILTER'INIT; OP'INIT'KALMAN'BLK'DEREFS; 
+
+****************
+Procedure KF'FVC'MATRIX'INIT calls:
+	KF'EXP1; 
+
+****************
+Procedure KF'FVC'MATRIX'MULT calls:
+	
+
+****************
+Procedure KF'FVC'MATRIX'MOVE calls:
+	
+
+****************
+Procedure KF'FVC'MATRIX'POWER calls:
+	KF'FVC'MATRIX'MULT; KF'FVC'MATRIX'MOVE; 
+
+****************
+Procedure KF'MEAS'UPDATE'PROCESS calls:
+	
+
+****************
+Procedure KF'MOTION'ALIGN'STATUS calls:
+	
+
+****************
+Procedure KF'GRAM'SCHMIDT'PROCESS calls:
+	
+
+****************
+Procedure KF'NAV'05'HERTZ'EXEC calls:
+	KF'KALMAN'DATA'BUFFERING; KF'KALMAN'CONTROL; NU'INERTIAL'DOP'DATA'COMP'CORR; NU'MAGNETIC'VAR'SETUP; 
+
+****************
+Procedure KF'NAV'16'HERTZ'EXEC calls:
+	FN'FAST'CYCLE'NAV'CONTROL; 
+
+****************
+Procedure KF'NAV'1'HERTZ'EXEC calls:
+	NU'EARTH'RATE'TORQ'CNTRL; NU'TAS'VEL'CAL; NU'WIND'COMP; NU'CHECK'WIND'LIMITS; NU'OUTSIDE'AIR'TEMP; NU'SYS'CIRCULAR'ERROR'PROB; NU'MAGNETIC'VAR'INTER; NU'EARTH'FUNCTION'CNTRL; NU'POSITION'ERROR'CNTRL; NU'ALT'EVE'OBS'CHECK; 
+
+****************
+Procedure KF'NAV'4'HERTZ'EXEC calls:
+	SN'SLOW'NAV'CNTRL'4; UP'POSITION'UPDATE; UP'RELATIVE'NAVIGATION; UP'POST'FLIGHT'UPDATE; MO'INU'MC; NV'NAVIGATION'MODE'CONTROL; DIRECT'IO'CONV'DATA'FETCH; OP'DERIV'CALC; OP'STORE'INS'BLOCKS; OP'TRANSFER'ALIGN'DATA'FETCH; OP'GPS'DATA'FETCH; OP'POS'FIX'DATA'FETCH; OP'OBSERVATION'PROCESSING; OP'ACCUM'DATA'TRANS'MATRIX; 
+
+****************
+Procedure KF'NAV'8'HERTZ'EXEC calls:
+	SN'SLOW'NAV'CNTRL'8; OP'BARO'ALT'PROC'8HZ; OP'DVS'8HZ'PROC; 
+
+****************
+Procedure KF'OBSERVATION'CHECK calls:
+	
+
+****************
+Procedure KF'COMPUTE'OBS'DATA calls:
+	KF'GEO'POSITION'FIX'OBS'PROC; KF'BARO'CALIBRATION'OBS'PROC; KF'GPS'OBS'PROC; KF'DOPPLER'INERTIAL'OBS'PROC; KF'TRANS'ALIGN'OBS'PROC; KF'TAS'DATA'OBS'PROC; KF'VIS'ALT'CALI'OBS'PROC; 
+
+****************
+Procedure KF'FORM'COV'MATRIX'FROM'UK calls:
+	
+
+****************
+Procedure KF'BEGIN'BUF'MOV'POS calls:
+	
+
+****************
+Procedure KF'POSITION'FIX'PREP calls:
+	KF'MEAS'UPDATE'PROCESS; 
+
+****************
+Procedure KF'ERROR'VECTOR'UPDATE calls:
+	
+
+****************
+Procedure KF'SPARSE'MAT'MULT'OF'FU calls:
+	
+
+****************
+Procedure KF'SPARSE'MAT'VECT'MULT calls:
+	
+
+****************
+Procedure KF'TILT'BIAS'CORRELATION calls:
+	
+
+****************
+Procedure KF'TRANS'MATRIX'FOR'AIR'ALIGN calls:
+	KF'TRANS'MATRIX'VERT'CHAN; 
+
+****************
+Procedure KF'TRANS'MATRIX'FOR'AIDED'NAV calls:
+	KF'TRANS'MATRIX'VERT'CHAN; 
+
+****************
+Procedure KF'TRANS'MATRIX'CALCULATION calls:
+	KF'TRANS'MATRIX'FOR'AIR'ALIGN; KF'TRANS'MATRIX'FOR'AIDED'NAV; KF'TRANS'MATRIX'FOR'DVS'NAV; 
+
+****************
+Procedure KF'TRANS'MATRIX'VERT'CHAN calls:
+	KF'FVC'MATRIX'INIT; KF'FVC'MATRIX'POWER; KF'FVC'MATRIX'MULT; 
+
+****************
+Procedure KF'COV'EXTRAPOLATION calls:
+	KF'GRAM'SCHMIDT'PROCESS; KF'SPARSE'MAT'MULT'OF'FU; 
+
+****************
+Procedure KF'FACT'COV'MATRIX'TO'UK calls:
+	
+
+****************
+Procedure KF'UPDATE'PROCESSING'CONTROL calls:
+	KF'SPARSE'MAT'VECT'MULT; KF'COMPUTE'OBS'DATA; KF'MEAS'UPDATE'PROCESS; KF'ERROR'VECTOR'UPDATE; KF'OBSERVATION'CHECK; 
+
+****************
+Procedure KF'VIS'ALT'CALI'OBS'PROC calls:
+	
+
+****************
+Procedure KF'AVERAGE'WEIGHT'CAL calls:
+	RELIMIT; 
+
+****************
+Procedure OP'MOTION'ALIGN'OBS'PRIORITY calls:
+	
+
+****************
+Procedure OP'INS'DATA'ACCUMULATOR calls:
+	
+
+****************
+Procedure OP'ACCUM'DATA'TRANS'MATRIX calls:
+	
+
+****************
+Procedure OP'SUM'INU'NAV'DATA calls:
+	
+
+****************
+Procedure OP'BARO'ALT'PROC'8HZ calls:
+	
+
+****************
+Procedure OP'FORM'RADAR'ALT'CAL'OBS'DATA calls:
+	
+
+****************
+Procedure OP'COPY'OBSERVATION calls:
+	
+
+****************
+Procedure OP'RESET'CT'ACCUM'FOR'GPS calls:
+	
+
+****************
+Procedure OP'RESET'CT'INS'ACCUMULATORS calls:
+	
+
+****************
+Procedure OP'DATA'AVAILABILITY'MONITOR calls:
+	
+
+****************
+Procedure OP'DERIV'CALC calls:
+	
+
+****************
+Procedure DIRECT'IO'CONV'DATA'FETCH calls:
+	
+
+****************
+Procedure OP'DISCRETE'OBS'DATA calls:
+	
+
+****************
+Procedure OP'DOPPLER'DATA'COMP calls:
+	
+
+****************
+Procedure OP'DVS'8HZ'PROC calls:
+	
+
+****************
+Procedure OP'GPS'DATA'FETCH calls:
+	
+
+****************
+Procedure OP'GPS'POS'VEL'OBS calls:
+	NU'DBAM'SYNCH; UT'A031'DIFF; 
+
+****************
+Procedure OP'GPS'TIME'TAG calls:
+	
+
+****************
+Procedure OP'H'MATRIX'DATA'ACCUM calls:
+	
+
+****************
+Procedure OP'STORE'INS'BLOCKS calls:
+	
+
+****************
+Procedure OP'INTEGRATED'OBS'PROC calls:
+	OP'DOPPLER'DATA'COMP; 
+
+****************
+Procedure OP'INU'PROCESSING calls:
+	OP'GPS'POS'VEL'OBS; 
+
+****************
+Procedure OP'INU'OBS'SELEC'PRIORITY calls:
+	
+
+****************
+Procedure OP'INIT'KALMAN'BLK'DEREFS calls:
+	
+
+****************
+Procedure OP'NAV'DATA'SYNCHING calls:
+	
+
+****************
+Procedure OP'OBSERVATION'PROCESSING calls:
+	
+
+****************
+Procedure OP'POS'FIX'DATA'FETCH calls:
+	
+
+****************
+Procedure OP'FORM'POS'OBSERV'DATA calls:
+	
+
+****************
+Procedure OP'RESET'PT'CT'ACCUMULATORS calls:
+	
+
+****************
+Procedure OP'RESET'PT'INS'ACCUMULATORS calls:
+	
+
+****************
+Procedure OP'TAS'DATA'COMP calls:
+	
+
+****************
+Procedure OP'FORM'VELOCITY'OBS calls:
+	
+
+****************
+Procedure MI'DT'DATA'STRUCTURE calls:
+	
+
+****************
+Procedure MI'DT'LOAD calls:
+	MI'DT'DATA'STRUCTURE; MI'DT'READ; 
+
+****************
+Procedure MI'DT'READ calls:
+	CD'EDIT'WAYPOINT; CD'EDIT'THREAT; CD'EDIT'GLIDESLOPE; CD'EDIT'NOFLY'ZONES; CD'EDIT'MOBILE'WAYPOINT; CD'EDIT'AIRDROP; CD'EDIT'NAVIGATORS'DATA; CD'EDIT'STEERING'PROBLEM; 
+
+****************
+Procedure MR'WRITE'FRZ'DATA'SET calls:
+	
+
+****************
+Procedure MR'DT'WRITE'FRZ'DTM calls:
+	
+
+****************
+Procedure MR'FREEZE'INTO'CDU'REV'QUEUE calls:
+	
+
+****************
+Procedure MR'FREEZE'PTS calls:
+	MR'FRZ'LEG'GLIDESLOPE; MR'FRZ'LEG'HAHO; MR'FRZ'LEG'HALO; MR'FRZ'LEG'TWOSTAGE; MR'FRZ'LEG'ENR'GUID; MR'FRZ'LEG'CARP'AIRDROP; MR'FRZ'POS'FIX'ACCEPT; MR'WRITE'FRZ'DATA'SET; MR'FREEZE'INTO'CDU'REV'QUEUE; MR'DT'WRITE'FRZ'DTM; 
+
+****************
+Procedure MR'FRZ'LEG'TWOSTAGE calls:
+	RELIMIT; 
+
+****************
+Procedure MR'FRZ'LEG'CARP'AIRDROP calls:
+	
+
+****************
+Procedure MR'FRZ'LEG'ENR'GUID calls:
+	
+
+****************
+Procedure MR'FRZ'LEG'GLIDESLOPE calls:
+	
+
+****************
+Procedure MR'FRZ'LEG'HAHO calls:
+	RELIMIT; 
+
+****************
+Procedure MR'FRZ'LEG'HALO calls:
+	RELIMIT; 
+
+****************
+Procedure MR'FRZ'POS'FIX'ACCEPT calls:
+	
+
+****************
+Procedure RE'DT'1HZ calls:
+	MI'DT'LOAD; MR'FREEZE'PTS; RR'RECORD'RECON'DATA; MX'DT'M05; MX'DT'M09; TR'TEST'FREEZE'PT'RECORDING; RETADR; 
+
+****************
+Procedure RE'DT'BACKGROUND calls:
+	MX'DT'M10'M11; UT'DTM'CHECK; 
+
+****************
+Procedure RR'RECORD'RECON'DATA calls:
+	MR'FREEZE'INTO'CDU'REV'QUEUE; MR'DT'WRITE'FRZ'DTM; 
+
+****************
+Procedure MO'AOA'CONTROL calls:
+	
+
+****************
+Procedure MO'FILTER'CDU'COMMAND calls:
+	
+
+****************
+Procedure MO'CORRECT'ORIENTATION calls:
+	MX'INS'I13; 
+
+****************
+Procedure MO'DEV'INITIALIZATION calls:
+	MX'INS'I11; MX'INS'I12; 
+
+****************
+Procedure MO'GPS'AIDING calls:
+	MX'MC1'I06; MX'MC1'I15; 
+
+****************
+Procedure MO'GPS'INIT calls:
+	MX'GPS'G02; MX'MC1'I02; MO'GPS'MC'REQ; 
+
+****************
+Procedure MO'GPS'MC'REQ calls:
+	MX'MC1'I01; 
+
+****************
+Procedure MO'GPS'MODE'DISP calls:
+	
+
+****************
+Procedure MO'GPS'NAV'MODE calls:
+	MO'GPS'MC'REQ; 
+
+****************
+Procedure MO'GPS'QUICK'CK calls:
+	
+
+****************
+Procedure MO'HW'WARMUP calls:
+	MX'MC1'F02; UT'A031'DIFF; 
+
+****************
+Procedure MO'INU'MC calls:
+	MO'FILTER'CDU'COMMAND; MO'INU'MC'SUB; 
+
+****************
+Procedure MO'INU'MC'SUB calls:
+	MO'DEV'INITIALIZATION; MO'CORRECT'ORIENTATION; MO'TRANSITION'OCCURRING; MO'HW'WARMUP; MO'INU'ST; 
+
+****************
+Procedure MO'INU'ST calls:
+	
+
+****************
+Procedure MO'SPMODE calls:
+	
+
+****************
+Procedure MO'TRANSITION'OCCURRING calls:
+	MX'INS'I11; MX'INS'I12; MO'SPMODE; 
+
+****************
+Procedure FN'FAST'CYCLE'NAV'CONTROL calls:
+	
+
+****************
+Procedure FN'INS'NAV'DATA'COMP calls:
+	
+
+****************
+Procedure FN'INS'SYNCHRONIZATION calls:
+	
+
+****************
+Procedure NV'CURRENT'MODE'ALLOWED calls:
+	
+
+****************
+Procedure NV'DOPPLER'NAV'INITIALIZATION calls:
+	
+
+****************
+Procedure NV'GPS'NAV'INITIALIZATION calls:
+	
+
+****************
+Procedure NV'INERTIAL'NAV'INITIALIZATION calls:
+	
+
+****************
+Procedure NV'NAVIGATION'MODE'CONTROL calls:
+	NV'NAV'SET'STATUS'AND'FLAGS; NV'AUTO'MODE'SELECTION; NV'MODE'INITIALIZATION; NV'CURRENT'MODE'ALLOWED; NV'SELECT'NEW'NAV'MODE; 
+
+****************
+Procedure NV'MODE'INITIALIZATION calls:
+	NV'NO'NAV'INITIALIZATION; NV'INERTIAL'NAV'INITIALIZATION; NV'DOPPLER'NAV'INITIALIZATION; NV'TAS'NAV'INITIALIZATION; NV'GPS'NAV'INITIALIZATION; 
+
+****************
+Procedure NV'NAV'SET'STATUS'AND'FLAGS calls:
+	
+
+****************
+Procedure NV'AUTO'MODE'SELECTION calls:
+	
+
+****************
+Procedure NV'NO'NAV'INITIALIZATION calls:
+	
+
+****************
+Procedure NV'SELECT'NEW'NAV'MODE calls:
+	
+
+****************
+Procedure NV'TAS'NAV'INITIALIZATION calls:
+	
+
+****************
+Procedure SN'DVS'DR'NAV'DATA'COMP calls:
+	
+
+****************
+Procedure SN'COMP'DOP'VEL'DATA'FOR'INERTIAL calls:
+	
+
+****************
+Procedure SN'DOPPLER'NAV'CNTRL'4 calls:
+	
+
+****************
+Procedure SN'DOPPLER'NAV'CNTRL'8 calls:
+	
+
+****************
+Procedure SN'TRAN'DOP'VEL'TO'NWU calls:
+	
+
+****************
+Procedure SN'DET'UNCOMP'DOP'VEL calls:
+	
+
+****************
+Procedure SN'SETUP'F02'BUFFER calls:
+	
+
+****************
+Procedure SN'GPS'NAV'CNTRL'4 calls:
+	NU'DETER'GPS'GROUND'TRACK; NU'DETER'GPS'DRIFT'ANGLE'GS; 
+
+****************
+Procedure SN'EXTRAP'CONTROL calls:
+	
+
+****************
+Procedure SN'INS'CONTROL calls:
+	MX'MC1'F02; 
+
+****************
+Procedure SN'INS'ERROR'EXTRAP calls:
+	
+
+****************
+Procedure SN'INERTIAL'NAV'CNTRL'4 calls:
+	
+
+****************
+Procedure SN'SLOW'NAV'CNTRL'4 calls:
+	
+
+****************
+Procedure SN'SLOW'NAV'CNTRL'8 calls:
+	
+
+****************
+Procedure SN'TAS'NAV'CNTRL'4 calls:
+	
+
+****************
+Procedure SN'TRAN'TAS'VEL'TO'NWU calls:
+	
+
+****************
+Procedure BMOVE calls:
+	
+
+****************
+Procedure RETADR calls:
+	
+
+****************
+Procedure GET'TT calls:
+	
+
+****************
+Procedure  calls:
+	
+
+****************
+Procedure RM'AZIMUTH'STAB calls:
+	
+
+****************
+Procedure RM'EXECUTIVE calls:
+	
+
+****************
+Procedure RP'ADC calls:
+	
+
+****************
+Procedure RP'AOA calls:
+	
+
+****************
+Procedure RP'COMPASS calls:
+	
+
+****************
+Procedure RP'CARA calls:
+	
+
+****************
+Procedure RP'DVS calls:
+	
+
+****************
+Procedure RP'EXEC calls:
+	RP'MC; RP'INS; RP'ADC; RP'CARA; RP'COMPASS; RP'DVS; RP'GPS; 
+
+****************
+Procedure RP'GPS calls:
+	
+
+****************
+Procedure RP'INS calls:
+	
+
+****************
+Procedure RP'MC calls:
+	
+
+****************
+Procedure TW'BRGDIS calls:
+	
+
+****************
+Procedure TW'EXECUTIVE calls:
+	TW'NF'EXECUTIVE; TW'TA'EXECUTIVE; TW'TNFRNG; 
+
+****************
+Procedure TW'NF'BDNOZ calls:
+	TW'NF'SEGMIN; 
+
+****************
+Procedure TW'NF'FORMAT'CONV calls:
+	
+
+****************
+Procedure TW'NF'EXECUTIVE calls:
+	TW'NF'FORMAT'CONV; TW'NF'BDNOZ; TW'BRGDIS; TW'NF'SEGINT; TW'NF'INNOZ; 
+
+****************
+Procedure TW'NF'INNOZ calls:
+	
+
+****************
+Procedure TW'NF'SEGINT calls:
+	
+
+****************
+Procedure TW'NF'SEGMIN calls:
+	
+
+****************
+Procedure TW'TA'BGDS calls:
+	
+
+****************
+Procedure TW'TA'EXECUTIVE calls:
+	TW'BRGDIS; TW'TA'BGDS; TW'TA'INTHRT; 
+
+****************
+Procedure TW'TA'INTHRT calls:
+	
+
+****************
+Procedure  calls:
+	
+
+****************
+Procedure TR'TEST'FREEZE'PT'RECORDING calls:
+	MR'FREEZE'INTO'CDU'REV'QUEUE; RETADR; 
+
+****************
+Procedure TR'TEST'MSG'TP4'TP5 calls:
+	
+
+****************
+Procedure DBAM'LIMIT calls:
+	
+
+****************
+Procedure UT'DTG'FORMAT calls:
+	
+
+****************
+Procedure RELIMIT calls:
+	
+
+****************
+Procedure NU'OUTSIDE'AIR'TEMP calls:
+	
+
+****************
+Procedure NU'ALT'EVE'OBS'CHECK calls:
+	
+
+****************
+Procedure NU'ANGLE'OF'ATTACK'CAL calls:
+	
+
+****************
+Procedure NU'C12'MAGNETIC'COMPASS'COMP calls:
+	
+
+****************
+Procedure NU'CHECK'WIND'LIMITS calls:
+	
+
+****************
+Procedure NU'COMPASS'CORRECT'COMP calls:
+	
+
+****************
+Procedure NU'DBAM'AVERAGE calls:
+	
+
+****************
+Procedure NU'DBAM'SYNCH calls:
+	
+
+****************
+Procedure NU'DBAM'WGHT'AVE calls:
+	
+
+****************
+Procedure  calls:
+	NU'DBAM'SYNCH; RELIMIT; 
+
+****************
+Procedure NU'DETER'DOPPLER'DRFT'ANGL'GS calls:
+	
+
+****************
+Procedure NU'DETER'DOPPLER'GROUND'TRACK calls:
+	
+
+****************
+Procedure NU'DETER'GPS'DRIFT'ANGLE'GS calls:
+	
+
+****************
+Procedure NU'DETER'GPS'GROUND'TRACK calls:
+	
+
+****************
+Procedure NU'DETER'INERTIAL'DRFT'ANGL'GS calls:
+	
+
+****************
+Procedure NU'DETER'INERTIAL'GROUND'TRACK calls:
+	
+
+****************
+Procedure NU'DET'BEST'REF'ALTITUDE calls:
+	NU'AUTO'GPS'ALT'CAL; 
+
+****************
+Procedure NU'DETER'SYS'DRIFT'ANGLE'GS calls:
+	
+
+****************
+Procedure NU'DETER'SYS'GROUND'TRACK calls:
+	
+
+****************
+Procedure NU'INERTIAL'DOP'DATA'COMP'CORR calls:
+	
+
+****************
+Procedure NU'EARTH'FUNCTION'CNTRL calls:
+	
+
+****************
+Procedure NU'EARTH'RATE'TORQ'CNTRL calls:
+	
+
+****************
+Procedure NU'GEO'POS'COMP calls:
+	
+
+****************
+Procedure NU'GEO'POS'VEL calls:
+	
+
+****************
+Procedure NU'GEO'VEL'COMP calls:
+	
+
+****************
+Procedure NU'EARTH'RATE'CAL calls:
+	
+
+****************
+Procedure NU'AUTO'GPS'ALT'CAL calls:
+	
+
+****************
+Procedure NU'GRAVITY'COMPUTATION calls:
+	
+
+****************
+Procedure NU'INVERSE'EARTH'RADII calls:
+	
+
+****************
+Procedure NU'MAGNETIC'COMPASS'COMP calls:
+	
+
+****************
+Procedure NU'MAGNETIC'VAR'CALC calls:
+	
+
+****************
+Procedure NU'MAGNETIC'VAR'INIT calls:
+	
+
+****************
+Procedure NU'MAGNETIC'VAR'INTER calls:
+	
+
+****************
+Procedure NU'MAGNETIC'VAR'SETUP calls:
+	
+
+****************
+Procedure NU'NON'INERTIAL'VER'CH'CAL calls:
+	
+
+****************
+Procedure NU'POSITION'ERROR'CNTRL calls:
+	
+
+****************
+Procedure NU'POS'ERROR'CORRECTION calls:
+	
+
+****************
+Procedure NU'EARTH'RADII calls:
+	
+
+****************
+Procedure NU'TRANSPORT'RATE'CAL calls:
+	
+
+****************
+Procedure NU'SYS'CIRCULAR'ERROR'PROB calls:
+	
+
+****************
+Procedure NU'SYSTEM'HEADING calls:
+	
+
+****************
+Procedure NU'SYSTEM'ROLL'PITCH calls:
+	
+
+****************
+Procedure NU'DET'SYS'TRUE'AIR'SPEED calls:
+	
+
+****************
+Procedure NU'TAS'VEL'CAL calls:
+	
+
+****************
+Procedure NU'DIRECT'COS'EXTRAP calls:
+	
+
+****************
+Procedure NU'WIND'COMP calls:
+	
+
+****************
+Procedure UT'LAT'LONG'TO'UTM'CONV calls:
+	SIN; COS; SQRT; 
+
+****************
+Procedure UT'UTM'TO'LAT'LONG calls:
+	NV2UTMLL; SIN; COS; SQRT; 
+
+****************
+Procedure RAD'TO'DBAM calls:
+	
+
+****************
+Procedure UT'A031'DIFF calls:
+	
+
+****************
+Procedure UT'A031'RATE'LIMIT calls:
+	
+
+****************
+Procedure UT'FIGURE'TIME'BCD'TO'REAL calls:
+	
+
+****************
+Procedure UT'FIGURE'TIME'REAL'TO'BCD calls:
+	UT'SECONDS'TO'SEXIGESIMAL; 
+
+****************
+Procedure UT'CLEAR'PENDING'POS'FIX calls:
+	KF'POSITION'FIX'PREP; 
+
+****************
+Procedure UT'CHANGE'WAYPOINT'TOTS calls:
+	CD'EDIT'WAYPOINT; 
+
+****************
+Procedure UT'DEAD'RECKON'LAT'LONG calls:
+	
+
+****************
+Procedure UT'DTM'CHECK calls:
+	
+
+****************
+Procedure UT'DT'CHECKSUM'CAL calls:
+	
+
+****************
+Procedure UT'DT'DTU'SET'UP calls:
+	
+
+****************
+Procedure UT'GET'NEXT'WP calls:
+	
+
+****************
+Procedure UT'HEX'TO'ASC'CONVERSION calls:
+	
+
+****************
+Procedure UT'RANGE'BEARING calls:
+	
+
+****************
+Procedure UT'SECONDS'TO'SEXIGESIMAL calls:
+	
+
+****************
+Procedure UT'SEXIGESIMAL'TO'SECONDS calls:
+	
+
+****************
+Procedure UT'STEERING'ROLL'CORR calls:
+	
+
+****************
+Procedure UT'SEXIGESIMAL'CALCULATOR calls:
+	
+
+****************
+Procedure UT'UTM'LONG'FORM'TO'SHORT'FORM calls:
+	
+
+****************
+Procedure UT'UTM'SHORTFORM'TO'LONGFORM calls:
+	

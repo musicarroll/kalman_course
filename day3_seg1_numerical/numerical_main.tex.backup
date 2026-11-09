@@ -1,0 +1,22 @@
+% day2_seg4_numerical/numerical_main.tex
+\begin{slide}
+\textbf{Day 3, Segment 1\\
+Some Practical Considerations (Numerical)\\
+Topics}
+ \begin{itemize}
+ \item Kalman Filter Theory vs. Reality
+ \item Numerical Stability
+ \item Round-Off Errors
+ \item Matrix Inversion
+% \item Loss of Symmetry and Positive Definiteness
+ \item UD Factorization
+\end{itemize}
+\end{slide}
+\input{day3_seg1_numerical/theory_vs_reality.tex}
+\input{day3_seg1_numerical/divergence.tex}
+\input{day3_seg1_numerical/numstab.tex}
+\input{day3_seg1_numerical/roundoff.tex}
+\input{day3_seg1_numerical/matinv.tex}
+%\input{day3_seg1_numerical/symmloss.tex}
+\input{day3_seg1_numerical/ud.tex}
+\input{day3_seg1_numerical/exercises.tex}

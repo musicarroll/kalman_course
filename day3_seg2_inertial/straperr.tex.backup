@@ -1,0 +1,247 @@
+% day3_seg2_inertial/straperr.tex
+\begin{slide}
+From Strapdown Equations to Error Equations
+ \begin{itemize}
+ \item Nav equations require perfect inertial instruments
+ \item Instruments are not perfect
+ \item Inertial instrument error sources (bias, scale factor errors, etc.) generate erroneous rate and acceleration inputs to the nav equations  
+ \item Need to figure out the effects on the outputs of these equations
+\end{itemize}
+\end{slide}
+% cm_kf_talk_straperr.tex
+\begin{slide}
+Strapdown Error Equations
+ \begin{itemize}
+ \item Nature of Errors
+ \item Error Operator
+ \item Error Equations
+\end{itemize}
+\end{slide}
+\begin{slide}
+Strapdown Error Equations: Nature of Errors
+ \begin{itemize}
+ \item Errors propagate according to derived equations
+ \item Errors are generally small, so approximating assumptions
+ help simplify the math
+ \begin{itemize}
+ \item linearize otherwise non-linear dynamics
+ \item small angle assumptions:  $\sin\theta \approx \theta$
+ \end{itemize}
+\end{itemize}
+\end{slide}
+\begin{slide}
+Strapdown Error Equations: Error Operator \\
+If $A$ is any quantity, we define error operator as follows:
+\begin{equation}\label{errop}
+  \errop{A},
+\end{equation}
+where $A$ is the true quantity of interest and $\hat{A}$ is an
+apparent quantity.  The latter could be a measured value, and
+estimated value, or some computed value.  This means that
+\[\hat{A}=A+\delta A\]
+i.e., the apparent value is the true value plus some error.
+\end{slide}
+\begin{slide}
+Strapdown Error Equations: Error Operator\\
+Error operator satisfies:
+\begin{equation}\label{erropid}
+  \delta(AB) = \delta A \cdot B + A \cdot \delta B
+\end{equation}
+Proof:
+\begin{align*}
+\delta(AB) &= \widehat{AB} - AB\\
+&= \hat{A}\hat{B}-AB\\
+&= (A+\delta A)(B+\delta B)-AB\\
+&= AB + A\cdot\delta B +\delta A \cdot B + \delta A \cdot \delta B - AB\\
+& = \delta A \cdot B + A\cdot\delta B
+\end{align*}
+since we may assume that $\delta A \cdot\delta B \approx 0$.
+\end{slide}
+\begin{slide}
+Strapdown Error Equations\\
+Applying these to the three differential equations, yields three
+error equations:
+\begin{equation}\label{cblerreq}
+  \cblerreq
+\end{equation}
+\begin{equation}\label{strapvelerreq}
+  \strapvelerreq
+\end{equation}
+\begin{equation}\label{cleerreq}
+  \cleerreq
+\end{equation}
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item $\compdcm{B}{L}$, the computed (i.e., apparent) version of $\dcm{B}{L}$ is related additively to the true version by the error $\delta \dcm{B}{L}$
+\[\compdcm{B}{L}= \dcm{B}{L}+ \delta \dcm{B}{L}\]
+  \item It is also related to $\dcm{B}{L}$ by a small direction cosine matrix relating the local level frame to the computer frame $\widehat{L}$:
+\[\compdcm{B}{L}= \dcm{L}{\widehat{L}}\dcm{B}{L}\] 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+\item Substituting the second equation into the first allows us to solve for $\delta \dcm{B}{L}$:
+\begin{align*}
+\delta \dcm{B}{L} &= \compdcm{B}{L} -\dcm{B}{L}\\
+&= \dcm{L}{\widehat{L}}\dcm{B}{L}-\dcm{B}{L}\\
+&= (\dcm{L}{\widehat{L}} - I)\dcm{B}{L}
+\end{align*}
+Now, let's introduce $\Phi=I-\dcm{L}{\widehat{L}}$ to obtain:
+\[\delta \dcm{B}{L}=-\Phi\dcm{B}{L}\]
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item Using small angle approximations, $\dcm{L}{\widehat{L}}$ can be written in the form
+\[\dcm{L}{\widehat{L}}=
+\begin{bmatrix}
+1&\phi_z&-\phi_y\\
+-\phi_z&1&\phi_x\\
+\phi_y&-\phi_x&1
+\end{bmatrix}.
+\]
+Thus, $\Phi=I-\dcm{L}{\widehat{L}}$ is seen to be a skew-symmetric rotation matrix:
+\[\Phi=
+\begin{bmatrix}
+0&-\phi_z&\phi_y\\
+\phi_z&0&-\phi_x\\
+-\phi_y&\phi_x&0
+\end{bmatrix}.
+\]
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item $\Phi$ is therefore equal to the cross product operator associated with a vector $\phi^L = \begin{bmatrix}\tiltx^L & \tilty^L & \az^L \end{bmatrix}\trans$.  I.e.,
+\[\Phi = \xop{\phi^L}\]
+\item The three components of $\phi^L$ will become three states in our inertial error dynamics Kalman filter.
+\item $\phi_x$ and $\phi_y$ are called tilts, while $\psi_z$ is called the azimuth error.
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item By a similar derivation, we can introduce a small angular position angle error $e^L=\begin{bmatrix}e_x^L & e_y^L & e_z^L \end{bmatrix}\trans$
+  \item $e^L$ is associated with $\delta\dcm{E}{L}$ just as $\phi^L$ is associated with $\delta\dcm{B}{L}$:
+\[\delta\dcm{E}{L}=-E^L\dcm{E}{L},\]
+where $E^L$ is the skew-symmetric matrix form of $e^L$.
+  \item The three components of $e^L$ yield the three position error states in a typical navigation Kalman filter.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item We are working to simplify Eq. \eqref{cblerreq}:
+\[\cblerreq\]
+  \item We have an expression for $\delta \dcm{B}{L}$.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item Consider the earth rate error term $\delta \rotmat{I}{E}^L$.  Since $\rotmat{I}{E}^L=\dcm{E}{L}\rotmat{I}{E}^E$ and $\delta\rotmat{I}{E}^E=0$, we derive:
+\[\delta\rotmat{I}{E}^L=\delta\dcm{E}{L}\rotmat{I}{E}^E.\]
+  \item But $\delta\dcm{E}{L}=-E^L\dcm{E}{L}$.  Therefore,
+\begin{align*}
+\delta\rotmat{I}{E}^L&=-E^L\dcm{E}{L}\rotmat{I}{E}^E\\
+&=-E^L\rotmat{I}{E}^L.
+\end{align*}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item For the error in transport rate, $\delta\rotmat{E}{L}^L$, using the error operator on Eq. \eqref{trateeq}, a new error terms having to do with altitude error shows up:
+\begin{align*}
+\delta\rotvec{E}{L}^L&=\delta\left[\dfrac{1}{R}u_r^L\times v^L\right]\\
+&=\dfrac{1}{R}u_r^L\times \delta v^L - \dfrac{\delta h}{R^2}\left[u_r^L\times v^L\right]
+\end{align*}
+\item Here, $R=R_e+h$ for a spherical earth of radius $R_e$.
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item Eq. \eqref{cblerreq} can now be rewritten as:
+\begin{equation}\label{tilteq}
+\tilteq
+\end{equation} 
+where $\delta \rotmat{E}{L}^L$ is the skew-symmetric matrix form of 
+\[\trateerreqsphere\]
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Introducing Small Angular Rotations for Tilt and Position
+\begin{itemize}
+  \item Similarly, the velocity equation can be rewritten:
+\begin{align*}
+\velerreq
+\end{align*} 
+while the equation for the position angle error $e^L$ itself is
+\begin{equation}
+\paeeq
+\end{equation} 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Further Simplifications Using Telescope Pointing Angle Error
+\begin{itemize}
+  \item $\psi^L = \phi^L - e^L$
+  \item Leads to:
+\end{itemize} 
+\begin{equation}\label{deltardoteq}
+\deltardoteq
+\end{equation}
+and
+\begin{eqnarray}
+\velerreqpsi
+\end{eqnarray}  
+\end{slide}
+
+\begin{slide}
+Further Simplifications Using Telescope Pointing Angle Error
+\begin{itemize}
+  \item Finally, the equations for the telescope pointing angle errors are: 
+\end{itemize} 
+\begin{equation}\label{telscopeeq}
+\telscopeeq
+\end{equation}
+\end{slide}
+
+\begin{slide}
+Strapdown Error Equations
+ \begin{itemize}
+ \item Three error equations yield three vector quantities of
+ interest
+ \begin{itemize}
+ \item position error vector (3) $\poserr$ derived from $\delta \dcm{L}{E}$
+ \item velocity error vector (3) $\velerr^L$ (or $\delta v^L$)
+ \item attitude error vector (3) $\tiltx,\tilty,\az$ from $\delta \dcm{B}{L}$
+ \end{itemize}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Strapdown Equations
+\begin{itemize}
+  \item See Matlab / Simulink Models
+	\begin{itemize}
+	  \item Strapdown Navigation Equations: stravnav.mdl
+	  \item Strapdown Navigation Error Equations: straperr.mdl
+    \end{itemize}
+\end{itemize} 
+\end{slide}

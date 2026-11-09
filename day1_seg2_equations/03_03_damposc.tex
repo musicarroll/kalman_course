@@ -1,0 +1,362 @@
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{Spring, Mass, Damper System}}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.85\textwidth]{\dayonesegtwo/damped_harmonic_oscillator.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator} 
+  \framesubtitle{System Dynamics}}
+\begin{itemize}
+  \onslide<2->{\item System model:  Number of states = 2 (position and velocity) }
+  \onslide<3->{Derived from differential equation model: $\damposcdiffeq{x}$}
+  \onslide<4->{\[\begin{bmatrix}
+x_{1}(j)\\
+x_{2}(j)
+\end{bmatrix}=
+\exp
+\left(
+\begin{bmatrix}
+0 & 1\\
+-b/m & -k/m
+\end{bmatrix}
+ \Delta t
+\right)
+\begin{bmatrix}
+x_{1}(j-1)\\
+x_{2}(j-1)
+\end{bmatrix}
++
+\begin{bmatrix}
+w_{1}(j)\\
+w_{2}(j)
+\end{bmatrix}
+\]}
+    \onslide<4->{\item Thus, $\stm{\Delta t}=\exp
+\left(
+\begin{bmatrix}
+0 & 1\\
+-b/m & -k/m
+\end{bmatrix}
+ \Delta t
+\right)$.   }
+  \onslide<5->{\item Note that $\exp$ is a matrix exponential. We'll explain later how to derive state transition 
+matrices from the underlying differential equations}
+  \onslide<6->{\item Here $\Delta t=t_j - t_{j-1}$, $m$ is the mass, $k$ is the 
+spring constant, and $b$ is the damping constant; we are using $t$ for the time step index, to avoid clash with spring constant}
+\end{itemize} 
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{comment}
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{Process Noise}}
+\begin{itemize}
+  \onslide<2->{\item Assume that the process noise $w$ has the following statistics:
+\[Q_t=\begin{bmatrix}
+q_{11} & 0\\
+0 & q_{22}
+\end{bmatrix}
+\]}
+  \onslide<3->{  \item This means that there is some process noise in both position and velocity.}
+  \onslide<4->{  \item It also means that the noise sequences in position and velocity are statistically 
+uncorrelated (i.e., no non-zero off-diagonal elements in $Q_t$.)}
+  \onslide<5->{  \item One may think of process noise as due to unmodelled dynamic effects}
+\end{itemize} 
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+\end{comment}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dampled Harmonic Oscillator}
+   \framesubtitle{Measurement Model}}
+\begin{itemize}
+  \onslide<2->{  \item Measurement Model:
+\[z(j) = \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
+x_{1}(j)\\
+x_{2}(j)
+\end{bmatrix}+
+v(j)
+\]
+where the measurement noise $v(j)$ has variance $\sigma^2$}
+  \onslide<3->{  \item Thus $H_t=\begin{bmatrix}1 & 0\end{bmatrix}$}
+  \onslide<4->{  \item Note that we only have a position measurement (similar to constant velocity example).}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{State Transition Matrix $\Phi$}}
+\begin{itemize}
+  \onslide<2->{  \item $\stm{\Delta t}$ can be approximated through series expansion of 
+\[\exp\begin{bmatrix}
+0 & \Delta t\\
+-\dfrac{b}{m}\Delta t & -\dfrac{k}{m}\Delta t
+\end{bmatrix}
+\]}
+  \onslide<3->{  \item Or we can use Matlab's (or scipy's) expm function for specific values 
+  of $k$,$b$,$m$, and $\Delta t$.}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+  \framesubtitle{Covariance Extrapolation}}
+\begin{itemize}
+  \onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form}
+  \onslide<3->{  \item Moreover, like $\Phi$, which is derived from a continuous model, $Q$ is also dependent on $\Delta t$ and $q$, the continuous process noise variance:
+\begin{align*}
+Q &=
+q\begin{bmatrix}
+\dfrac{(\Delta t)^3}{3} & \dfrac{(\Delta t)^2}{2}\\
+\dfrac{(\Delta t)^2}{2} & \Delta t
+\end{bmatrix}
+\end{align*}
+}
+  \onslide<4->{\item The details of how this is derived from the continuous model are beyond the scope of the current presentation.  See, e.g., Grewal and Andrews.}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator}
+	\framesubtitle{Covariance Extrapolation}}
+	\begin{itemize}
+		\onslide<2->{\item $\altcovextrapeqarg{j}$ becomes:  }
+		{\tiny \begin{align*} 
+		\onslide<3->{
+			\covmat{j}{-} &=
+			\begin{bmatrix}
+			\phi_{11} & \phi_{12}\\
+			\phi_{12} & \phi_{22}
+			\end{bmatrix} 
+			\begin{bmatrix}
+			p_{11} & p_{12}\\
+			p_{21} & p_{22}
+			\end{bmatrix}
+			\begin{bmatrix}
+			\phi_{11} & \phi_{21}\\
+			\phi_{12} & \phi_{22}
+			\end{bmatrix}
+			+\begin{bmatrix}
+			q_{11} & q_{12}\\
+			q_{21} & q_{22}
+			\end{bmatrix}
+		}\\
+		\onslide<4->{
+			&= 		
+\begin{bmatrix}
+(\phi_{11}p_{11}+\phi_{12}p_{21})\phi_{11}+(\phi_{11}p_{12}+\phi_{12}p_{22})\phi_{12} & (\phi_{11}p_{11}+\phi_{12}p_{21})\phi_{21}+(\phi_{11}p_{12}+\phi_{12}p_{22})\phi_{22}\\
+(\phi_{12}p_{11}+\phi_{22}p_{21})\phi_{11}+(\phi_{12}p_{12}+\phi_{22}p_{22})\phi_{12} & (\phi_{12}p_{11}+\phi_{22}p_{21})\phi_{21}+(\phi_{12}p_{12}+\phi_{22}p_{22})\phi_{22}
+\end{bmatrix}
+\\
+&\;\;\;\;\;+
+\begin{bmatrix}
+q_{11} & q_{12}\\
+q_{21} & q_{22}
+\end{bmatrix}		}\\
+		\onslide<5->{
+			&=		
+\begin{bmatrix}
+\phi_{12}p_{12}\phi_{12}+q_{11} & \phi_{12}p_{12}\phi_{21}+\phi_{12}p_{22}\phi_{22}+q_{12}\\
+\phi_{22}p_{21}\phi_{12}+q_{21} & \phi_{22}p_{21}\phi_{21}+\phi_{22}p_{22}\phi_{22}+q_{22}
+\end{bmatrix}
+		}
+		\end{align*}} 
+		\onslide<6->{\item Note that the last matrix results when we simplify using $\phi_{11}=0$ (See previous slide)  }
+		\onslide<7->{\item We've also decluttered by suppressing the + superscripts and $j-1$ indices on the right-hand sides}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator}
+		\framesubtitle{Kalman Gain}}
+	\begin{itemize}
+		\onslide<2->{  \item The gain equation $\genkalgaineq$ looks like this:}
+			\begin{align*}
+			\onslide<3->{ K &=
+			\begin{bmatrix}
+			p_{11} & p_{12}\\
+			p_{21} & p_{22}
+			\end{bmatrix}
+			\begin{bmatrix}1\\
+			0
+			\end{bmatrix}
+			\left( \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
+			p_{11} & p_{12}\\
+			p_{21} & p_{22}
+			\end{bmatrix}
+			\begin{bmatrix}
+			1\\ 
+			0
+			\end{bmatrix}
+			+\sigma^2
+			\right)^{-1}\\}
+			\onslide<4->{&=
+			\begin{bmatrix}
+			\dfrac{p_{11}}{p_{11}+\sigma^2}\\
+			\dfrac{p_{21}}{p_{11}+\sigma^2}
+			\end{bmatrix},}
+			\end{align*}
+			\onslide<5->{where we have once again suppressed the minus(-) superscripts and time step variable $j$ on the right hand side}
+	\end{itemize} 
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{comment}
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator}
+		\framesubtitle{Kalman Gain}}
+	\begin{itemize}
+		\onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form}
+		\onslide<3->{  \item However, the gain equation $\genkalgaineq$ looks like this:
+			\begin{align*}
+			K &=
+			\begin{bmatrix}
+			p_{11} & p_{12}\\
+			p_{21} & p_{22}
+			\end{bmatrix}
+			\begin{bmatrix}1\\
+			0
+			\end{bmatrix}
+			\left( \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
+			p_{11} & p_{12}\\
+			p_{21} & p_{22}
+			\end{bmatrix}
+			\begin{bmatrix}
+			1\\ 
+			0
+			\end{bmatrix}
+			+\sigma^2
+			\right)^{-1}\\
+			&=
+			\begin{bmatrix}
+			\dfrac{p_{11}}{p_{11}+\sigma^2}\\
+			\dfrac{p_{21}}{p_{11}+\sigma^2}
+			\end{bmatrix}
+			\end{figure}
+			\end{align*}
+			where we have once again suppressed the +/- superscripts and time step variable.}
+	\end{itemize} 
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+\end{comment}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator}
+		\framesubtitle{MATLAB/Python Run}}
+	\begin{itemize}
+	\onslide<2->{\item $\Delta t=0.1$ sec, 50 samples,\\ 50\% process noise assumption factor
+	}
+	\onslide<3->{\item $m=1$ kg 
+}
+	\onslide<4->{\item Light spring:  $k=1$ N/m
+}
+	\onslide<5->{\item Medium damping: $b=5$ Ns/m
+}
+    \end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator}
+  \framesubtitle{MATLAB/Python Run}}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator }
+  \framesubtitle{Sawtooth Plots}}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_variance.png}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator}
+		\framesubtitle{MATLAB/Python Run}}
+	\begin{itemize}
+		\onslide<2->{\item $\Delta t=1$ sec, 50 samples,\\ 50\% process noise assumption factor
+		}
+		\onslide<3->{\item $m=1$ kg 
+		}
+		\onslide<4->{\item Light spring:  $k=1$ N/m
+		}
+		\onslide<5->{\item Medium damping: $b=5$  Ns/m
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator}
+		\framesubtitle{MATLAB/Python Run}}
+	\onslide<2->{
+		\begin{figure}
+			\includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_dt_1s.png}
+		\end{figure}
+	}
+	\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator }
+		\framesubtitle{Sawtooth Plots}}
+	\onslide<2->{
+		\begin{figure}
+			\includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_variance_dt_1s.png}
+		\end{figure}
+	}
+	\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{comment}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator}
+  \framesubtitle{MATLAB/Python Run: Conservative Process Noise Estimate}}
+  \onslide<1->{
+\begin{figure}
+  \includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_conservative.png}
+\end{figure}
+}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator Sawtooth}
+  \framesubtitle{MATLAB/Python Run: Conservative Process Noise Estimate}}
+  \onslide<1->{
+\begin{figure}
+  \includegraphics[width=0.95\textwidth,height=7cm]{\dayonesegtwo/damposc_variance_conservative.png}
+\end{figure}
+}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\end{comment}

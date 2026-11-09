@@ -1,0 +1,32 @@
+% errdyneqdefs.tex
+\newcommand{\cblerreq}{\delta\cbldot=\delta\dcm{B}{L}\rotmat{I}{B}^B +\dcm{B}{L}\delta\rotmat{I}{B}^B
+ - \left( \delta\rotmat{I}{E}^L+\delta\rotmat{E}{L}^L\right)\dcm{B}{L}
+ - \left( \rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\delta\dcm{B}{L}}
+\newcommand{\strapvelerreq}{\delta\dot{v}^L=\delta\dcm{B}{L}\specforce^B+\dcm{B}{L}\delta\specforce^B + \delta g'
+ -\left(2\delta\rotmat{I}{E}^L + \delta\rotmat{E}{L}^L \right)v^L
+ -\left(2\rotmat{I}{E}^L + \rotmat{E}{L}^L \right)\delta v^L }
+\newcommand{\cleerreq}{\delta\dot{C}_L^E=\delta C_L^E\rotmat{E}{L}^L +C_L^E\delta\rotmat{E}{L}^L}
+% Simplified error equations:
+\newcommand{\tilteq}{
+\dot{\Phi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\Phi^L-\dcm{B}{L}\delta\rotmat{I}{B}^B
+ + \rotmat{I}{E}^LE^L + \delta \rotmat{E}{L}^L }
+\newcommand{\velerreq}{
+  \lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + \specforce^B\times \phi^L 
+    -\left(2\omega_{IE}^L+\omega_{EL}^L\right)\times\delta v^L +{} }
+\nonumber\\
+  & & -\left(\delta \omega_{EL}^L - 2 e^L\times\omega_{IE}^L\right)\times v^L + 
+  \dfrac{2g\delta h}{R_e} u_R^L +\delta g^L}
+\newcommand{\trateerreq}{\delta\omega_{EL}^L = \dfrac{1}{R_e}\left(u_R^L\times 
+\delta v^L\right)-\dfrac{\delta h}{R_e^2}\left(u_R^L\times v^L\right)+\delta \rho_R u_R^L}
+\newcommand{\trateerreqsphere}{\delta\omega_{EL}^L = \dfrac{1}{R}\left(u_R^L\times 
+  \delta v^L\right)-\dfrac{\delta h}{R^2}\left(u_R^L\times v^L\right)}
+\newcommand{\paeeq}{\dot{e}^L=-\rotmat{E}{L}^L e^L+ \delta\omega_{EL}^L}
+\newcommand{\deltardoteq}{\delta \dot{R}^L=\delta v^L-\rotmat{E}{L}^L \poserr^L}
+\newcommand{\velerreqpsi}{\lefteqn{ \delta \dot{v}^L = \dcm{B}{L}\delta\specforce^B + 
+  \specforce^B\times \psi^L -\dfrac{g}{R_e}\Delta R_H^L-\left(2\omega_{IE}^L+
+  \omega_{EL}^L\right)\times\delta v^L +{} }\nonumber\\ 
+& & -\left(\delta \omega_{EL}^L - 2 e^L\times\omega_{IE}^L\right)\times v^L + 
+\dfrac{2g\delta h}{R_e} u_R^L +\delta g^L}
+\newcommand{\telscopeeq}{
+  \dot{\psi}^L=-\left(\rotmat{I}{E}^L+\rotmat{E}{L}^L\right)\psi^L-\dcm{B}{L}\delta\omega_{IB}^B}
+

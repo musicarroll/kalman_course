@@ -1,0 +1,157 @@
+% orddiffops.tex
+\begin{slide}
+Ordinary Differential Operators: Vectors and Functions
+\begin{itemize}
+  \item Vectors are functions and functions are vectors
+  \item A vector $\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}$ in 3-space is really a function $x:\set{1,2,3}\rightarrow \Real$
+  \item We just write them differently than functions, i.e., instead of $x(i)$ we write $x_i$. 
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Ordinary Differential Operators: Vectors and Functions
+ \begin{itemize}
+  \item And since the domain $\set{1,2,3}$ of the function $x$ is so small, we can exhibit all values of $x$ explicitly in one fell swoop, i.e., as $\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}$
+  \item But, by the same token, ordinary real functions $f:\Real\rightarrow\Real$ are vectors
+  \item They just have so many components that we can't exhibit them all at once
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Ordinary Differential Operators: Vectors and Functions
+\begin{itemize}
+  \item We can add vectors by adding their components: $z=x+y$ if and only if $z_i=x_i+y_i$ for each index $i$
+  \item By the same token, we can add functions componentwise:
+  $h=f+g$ if and only if $h(t)=f(t)+g(t)$ for all $t$ in the domain
+  \item Componentwise multiplication of functions can also be defined (although this does not come up as often for ordinary vectors):  $h=f\cdot g$ if and only if $h(t)=f(t)\cdot g(t)$ for all $t$ in the domain
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Ordinary Differential Operators: Vectors and Functions
+\begin{itemize}
+  \item Finally, we can multiply functions by scalars, just like we do for vectors:  $g=a\cdot f$ if and only if $g(t)=a\cdot f(t)$ for all $t\in\Real$.
+  \item The upshot of all this is that the set of all real functions is a vector space!
+  \item But we are really more interested in a subspace of this vector space, i.e., we really want to restrict our attention to the set of all \textbf{differentiable} functions on some closed interval.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Ordinary Differential Operators: Differentiable Functions
+\begin{itemize}
+  \item Let $I=[a,b]$ be any closed interval of the real line
+  \item Consider the set $\Real^I=\set{f:I\rightarrow \Real}$ of all functions mapping $I=[a,b]$ into the real numbers
+  \item Then, as we have just pointed out, $\Real^I$ is a vector space over the reals
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+  \item We define the \textbf{\textit{derivative}} of a function $f$ at the point $t\in [a,b]$ as the limit as $s\rightarrow
+ t$ of the difference quotient,
+ \[\frac{f(s)-f(t)}{s-t},\]
+assuming this limit exists.
+  \item Note that not all functions have derivatives!
+  \item Those that do have a derivative defined at every point of $I$ we call \textbf{\textit{differentiable}} on $I$.
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+  \item This operation turns out to be a linear operator on the vector space of functions that are differentiable on $I=[a,b]$.
+  \item In fact, we want to consider those functions that can be differentiated as many times as we like
+  \item Thus, we consider the space of infinitely differentiable, real-valued functions defined on the closed real interval $[a,b]$: $C^\infty[a,b]$
+\end{itemize}
+\end{slide}
+% orddiffeqs.tex
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+ \item The operation of taking the derivative will enable us to develop deterministic differential
+ equations.
+ \item Later we will define derivatives of stochastic processes in order to introduce and solve stochastic differential equations.  You cannot always take the derivative (or even integrate) a random process -- and sometimes not even the sample functions of a random process -- in the ordinary sense.
+\end{itemize}
+\end{slide}
+% orddiffeqs.tex
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+ \item Since the derivatives of all orders are assumed to exist
+ for all functions $f\in C^\infty[a,b]$, the limit of the
+ difference quotient always exists for such functions.
+ \item Thus, we assign to each $f$ a new function $Df$ given by
+\begin{equation}\label{deriv}
+  [Df](t) = \lim_{s\rightarrow t}\frac{f(s)-f(t)}{s-t}
+\end{equation}
+ \item This assignment defines a transformation
+ \[D:C^\infty[a,b]\rightarrow C^\infty[a,b]\]
+  that is a linear operator.
+\end{itemize}
+\end{slide}
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+    \item $D$ is linear: $D[af+bg]=a[Df] + b[Dg]$
+    \item Sometimes we get lax and simply write $Df(t)$ instead of $[Df](t)$.  However, keep in mind that $Df(t)$ says "Differentiate $f$ and then evaluate the resulting function at the point $t$."
+    \item $D$ obeys all the usual rules of differential calculus such as the product rule and the chain rule:
+\[D(fg)=[Df]g+f[Dg]\]
+\[D(f\circ g) = [Df]\circ g \cdot Dg\]
+ \end{itemize}
+\end{slide}
+\begin{slide}
+Ordinary Differential Operators: Examples
+ \begin{itemize}
+  \item If $\id$ is the identity function, i.e., $\id(t)=t$, then
+    $D\id=1$. (You probably know this as $\frac{dt}{dt}=1$; Note that 1 is the function whose value at every $t$ is 1.)
+  \item Using the product rule, we have, for example,
+  \begin{align*}
+    D\id^2 &= D[\id \cdot \id]\\
+           &= D\id \cdot \id + \id \cdot D\id\\
+           &= 1 \cdot \id + \id \cdot 1\\
+           &= \id + \id\\
+           &= 2\id
+  \end{align*}
+(In more familiar notation this is just $\frac{dt^2}{dt}=2t$.)
+ \end{itemize}
+\end{slide}
+% orddiffeqs.tex
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+ \item Note that we sometimes write $d/dt$ or $\frac{d}{dt}$ for
+ the operator $D$ when we want to emphasize the independent
+ variable $t$.  Or, instead of $\frac{dy}{dt}$ we write simply $\dot{y}$.
+ \item However, that is really unnecessary, adds no new information, and is just extra
+ baggage.
+ \item Nevertheless, we shall do it sometimes because it may be more familiar.
+\end{itemize}
+\end{slide}
+% orddiffeqs.tex
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+ \item Since there is really only one generating operator $D$ that we are interested in here,
+ we are less interested in multiplication than we are in function
+ composition or iteration of this operator. For instance,
+ $D^2f=[D\circ D](f) = D(Df)$.
+ \item By induction we have $D^n=\underbrace{D\circ\cdots \circ D}_n$.
+ \item Just as real-valued functions inherit algebraic operations from those of their range
+ spaces, so too do differential operators:
+ \[\left[aD^m+bD^n\right](f)=a(D^mf)+b(D^nf)\]
+\end{itemize}
+\end{slide}
+% orddiffeqs.tex
+\begin{slide}
+Ordinary Differential Operators
+ \begin{itemize}
+ \item We can therefore generate polynomials in $D$:
+ \[p(D)=a_nD^n+\cdots +a_1D+a_oI,\]
+ where $I$ is the identity operator on $C^\infty[a,b]$.  We
+ usually just drop the identity operator, since it amounts to multiplying by 1.
+ \item Such polynomials in $D$ are still linear operators.
+ \item Thus, we have rediscovered the group
+ ring $\Real(\Diff)$, where $\Diff$ in this case is the infinite cyclic
+ group generated by the differential operator $D$.  We'll call
+ this group ring 
+ the \textit{\textbf{polynomial ring of differential operators}}.
+\end{itemize}
+\end{slide}

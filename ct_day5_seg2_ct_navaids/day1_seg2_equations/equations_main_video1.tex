@@ -1,0 +1,69 @@
+% equations_main_video1.tex
+
+\begin{frame}
+  \onslide<1->{\frametitle{Part I}
+  \framesubtitle{The Basic Kalman Equations\\
+  Topics}
+  }
+ \begin{itemize}
+  \onslide<2->{\item Understanding the Equations: Heuristic Introduction}
+  \onslide<3->{\item \bfit{Equation Drilldown:  Taking the Equations Apart}}
+%  \onslide<4->{\item Differential Equations, Difference Equations and Dynamic Systems}
+  \onslide<4->{\item State Space Concepts}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{
+	\frametitle{The Basic Kalman Equations}
+	\framesubtitle{Equation Drilldown:  Taking the Equations Apart\\
+					Subtopics}
+}
+\begin{itemize}
+ \onslide<2->{\item \bfit{Mathematical Formulation of the Problem}
+ }
+\onslide<3->{\item Drilldown on State Dynamics and Covariance Extrapolation Equations
+ }
+\onslide<4->{\item The Five Kalman Filter Equations
+ }
+\onslide<5->{\item Examples
+ }
+\onslide<6->{\item Exercises
+}
+\end{itemize}
+
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{01_summary.tex}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Mathematical Formulation of the Problem} 
+	\framesubtitle{Vector Check}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Where are we?  
+}
+	\begin{itemize}
+		\onslide<3->{\item We've formulated the linear discrete problem}
+		\onslide<4->{\item We've indicated the form of the solution: the recursive estimating algorithm with a matrix-valued Kalman gain}
+	\end{itemize}
+\onslide<5->{
+	\item What's next?  
+}
+	\begin{itemize}
+		\onslide<6->{\item Drill down on state dynamics and determine how 
+		noise/uncertainty statistics change over time 
+		}
+		\onslide<7->{ \item Use both estimation uncertainty and measurment noise 
+		uncertainty to calculate the Kalman gain }
+		\onslide<8->{\item Use Kalman gain to update estimation uncertainty}
+	\end{itemize}
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+

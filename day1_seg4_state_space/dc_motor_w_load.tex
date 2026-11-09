@@ -1,0 +1,238 @@
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Example:  DC Motor with Inertial Load: An Electromechanical System}
+	}
+	\begin{center}
+		\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/dc_motor_w_inertial_load.png}
+	\end{center}
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+	
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Model}
+		\framesubtitle{DC Motor with Inertial Load}
+	}
+	\onslide<2->{
+	\begin{block}{System Description}
+	\small	Consider a DC motor with an inertial load. The key variables and constants are as follows:
+		\begin{align*}
+		R & : \text{Motor resistance} \\
+		L & : \text{Motor inductance} \\
+		\theta & : \text{Rotational position of the load} \\
+		\omega & : \text{Rate of change of }\theta \\
+		K_f & : \text{Frictional constant} \\
+		\tau & : \text{Torque} \\
+		K_m & : \text{Armature constant}\\
+		v_{\text{app}} & : \text{Applied voltage} \\
+		v_{\text{emf}} & : \text{Back EMF} \\
+		K_b & : \text{EMF constant}
+		\end{align*}
+	\end{block}
+	}		
+		
+\end{frame}
+	
+	\begin{frame}
+		
+		\onslide<1->{
+			\frametitle{How the Motor Generates Back EMF} 
+			\framesubtitle{Electromagnetic Induction and Rotational Motion}  
+		}
+		\begin{itemize}
+			\onslide<2->{
+				\item Electromagnetic Induction
+			}
+			\onslide<3->{
+				\begin{itemize}
+					\item Changing magnetic field induces EMF in the windings
+					\item Faraday's Law of Electromagnetic Induction
+				\end{itemize}
+			}
+			\onslide<4->{
+				\item Rotational Motion
+			}
+			\onslide<5->{
+				\begin{itemize}
+					\item Armature rotates within a magnetic field
+					\item Windings cut through magnetic field lines
+				\end{itemize}
+			}
+			\onslide<6->{
+				\item Opposition to Applied Voltage
+			}
+			\onslide<7->{
+				\begin{itemize}
+					\item Back EMF acts against applied voltage
+					\item Proportional to motor speed: \( v_{\text{emf}} = K_b \cdot \omega \)
+				\end{itemize}
+			}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\onslide<1->{
+			\frametitle{Why the Motor Generates Back EMF} 
+			\framesubtitle{Motor-Generator Duality and Energy Conservation}  
+		}
+		\begin{itemize}
+			\onslide<2->{
+				\item Motor-Generator Duality
+			}
+			\onslide<3->{
+				\begin{itemize}
+					\item Motor converts electrical energy to mechanical energy
+					\item Generator converts mechanical energy to electrical energy
+				\end{itemize}
+			}
+			\onslide<4->{
+				\item Energy Conservation
+			}
+			\onslide<5->{
+				\begin{itemize}
+					\item Energy conversion processes are balanced
+					\item Back EMF ensures energy conservation
+				\end{itemize}
+			}
+			\onslide<6->{
+				\item Regulation of Motor Speed
+			}
+			\onslide<7->{
+				\begin{itemize}
+					\item Back EMF provides feedback to control speed
+					\item Higher speed increases back EMF, reducing net voltage
+				\end{itemize}
+			}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\onslide<1->{
+			\frametitle{Back EMF Summary} 
+			\framesubtitle{Back EMF Generation and its Effects}  
+		}
+		\begin{itemize}
+			\onslide<2->{
+				\item Back EMF is due to electromagnetic induction
+			}
+			\onslide<3->{
+				\item Acts in opposition to applied voltage
+			}
+			\onslide<4->{
+				\begin{itemize}
+					\item Provides natural speed regulation
+					\item Ensures energy conservation
+				\end{itemize}
+			}
+			\onslide<5->{
+				\item Motor can function as a generator
+			}
+			\onslide<6->{
+				\begin{itemize}
+					\item Converts mechanical energy back to electrical energy
+					\item Dual functionality of motors and generators
+				\end{itemize}
+			}
+		\end{itemize}
+		\onslide<7->{\center --------------------------------------------------------------------}
+		
+	\end{frame}
+
+	
+\begin{frame}
+	\onslide<1->{
+	\frametitle{State Space Model}
+	\framesubtitle{DC Motor with Inertial Load}
+}
+\onslide<2->{
+		\small State space equations:
+		
+		\[
+		\frac{d\theta}{dt} = \omega
+		\]
+		
+		\[
+		L\frac{di}{dt} = v_{\text{app}} - v_{\text{emf}} - Ri
+		\]
+		
+		\[
+		J\frac{d\omega}{dt} = \tau - K_f\omega
+		\]
+		
+		\[
+		v_{\text{emf}} = K_b\omega
+		\]
+}
+\onslide<3->{		
+	\small	Where:
+		\begin{align*}
+		\theta & : \text{Rotational position} \\
+		\omega & : \text{Angular velocity} \\
+		i & : \text{Current through the motor} \\
+		J & : \text{Moment of inertia of the load} \\
+		\tau & : \text{Applied torque}
+		\end{align*}
+}		
+	\end{frame}
+
+	
+	\begin{frame}
+	\onslide<1->{
+	\frametitle{State Space Model}
+	\framesubtitle{DC Motor with Inertial Load}
+}
+\onslide<2->{
+	\small	In matrix form, the state space model can be expressed as:
+		
+		\[
+		\left[\begin{array}{c}
+		\frac{d\theta}{dt} \\
+		\frac{di}{dt} \\
+		\frac{d\omega}{dt}
+		\end{array}\right]
+		=
+		\left[\begin{array}{ccc}
+		0 & 0 & 1 \\
+		0 & -\frac{R}{L} & -\frac{K_b}{L} \\
+		0 & \frac{K_b}{J} & -\frac{K_f}{J}
+		\end{array}\right]
+		\left[\begin{array}{c}
+		\theta \\
+		i \\
+		\omega
+		\end{array}\right]
+		+
+		\left[\begin{array}{c}
+		0 \\
+		\frac{1}{L} \\
+		0
+		\end{array}\right]
+		v_{\text{app}}
+		\]
+	}
+\onslide<3->{
+	The next slide shows the results for an applied voltage of 1.0V and various nominal parameter values.	
+}
+	\onslide<4->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Example:  DC Motor with Inertial Load}
+	}
+	\begin{center}
+		\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/dc_motor_w_inertial_load_plot.png}
+	\end{center}
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}

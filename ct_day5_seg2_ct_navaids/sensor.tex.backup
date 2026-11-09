@@ -1,0 +1,82 @@
+% day5_seg2_ct_navaids/sensor.tex
+\begin{slide}
+The Sensors and their Interfaces
+ \begin{itemize}
+ \item Global Positioning System (GPS)
+ \item Doppler Velocity Sensor (DVS)
+ \item Air Data Computer
+ \item Multimode Radar (MMR)
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+GPS
+\begin{itemize}
+	\item AN/APN-151
+	\item Rockwell-Collins 3A Receiver
+	\item 5 states
+	\item P-code
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+GPS Interfaces
+\begin{itemize}
+  \item 1553B
+  \item GPS receives: I1, I2, I4, I5A, I6, I15, I22
+  \item GPS transmits: G01, G02, G03, G09, G13
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Doppler Velocity Sensor (DVS)
+\begin{itemize}
+  \item AN/APN-218
+  \item Originally from Canadian Marconi
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+DVS Interfaces
+\begin{itemize}
+  \item Direct Device I/O
+  \item ARINC 575 serial input
+  \item heading, drift and vertical velocity
+  \item velocity validites
+  \item sensor validity message
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Air Data Computer (ADC)
+\begin{itemize}
+  \item LMSW P/N 4065084-3
+  \item Integrated externally with pitot-static and temperature subsystems
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+ADC Interfaces
+\begin{itemize}
+  \item Airspeed
+  \item Baro Alt (coarse and fine)
+  \item Validity signals
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Multimode Radar (MMR)
+\begin{itemize}
+  \item AN-APQ-122(V)8
+  \item Texas Instruments (now Raytheon)
+  \item Provides standalone terrain following functions in addition to mapping
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+MMR Interfaces
+\begin{itemize}
+  \item MMR outputs: X-Y Joystick serial data
+  \item MMR inputs: drift angle, azimuth stability, validity signals 
+\end{itemize} 
+\end{slide}

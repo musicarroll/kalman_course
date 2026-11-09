@@ -1,0 +1,129 @@
+% day1_seg3_state_space/stoch_diff_eq.tex
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+  \item If the differential equations describing the state model are driven by white noise, then the resulting solution $x(t)$ would actually have to be a random process.
+  \item There is a problem, however:  The white noise model commonly used is not integrable.  Formally, we think of its integral as the Wiener-Levy process.
+  \item So, instead of stochastic differential equations driven by white noise, we will briefly examine integral equations driven by the Wiener-Levy process.
+  \item Because of this, we need to postpone discussion of stochastic differential equations until after we've discussed probability, statistics, and random process theory.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item In this section, we will briefly consider the notion of
+ first-order, linear stochastic, vector differential equations of the
+ sort:
+\begin{equation}\label{stochdiffeq}
+  \frac{d}{dt}X(t) = A(t)X(t) + g(t) + WN(t)
+\end{equation}
+where $X$ and $WN$ are second order vector random processes, $WN$
+is in some sense a white noise process, and the initial condition
+vector is $X(0)=C$.
+ \item However, as we have seen, this $WN$ cannot be the
+mean square derivative of the Wiener-Levy vector process, because
+the latter is nowhere differentiable in mean square.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item Thus we are led to consider the vector integral equation form of
+ \eqref{stochdiffeq}:
+\begin{equation}\label{inteq}
+X(t)=C+\int_0^tA(s)X(s)ds+f(t)+W(t)
+\end{equation}
+where $W$ is the standard Wiener-Levy vector process.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item The homogeneous version of the integral equation
+ \eqref{inteq} is
+\begin{equation}\label{homointeq}
+  X(t)=C+\int_0^tA(s)X(s)ds
+\end{equation}
+for $t\in [0,T]$.
+\item This homogeneous equation has a unique solution $\Phi(t)$,
+called the \textit{\textbf{transition matrix}}.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item The transition matrix $\Phi(t)$ has the following properties:
+ \begin{enumerate}
+ \item $X(t)=\Phi(t)X(0)$ for each $t\in [0,T]$. Note that
+ $C=X(0)$.
+ \item $\frac{d}{dt}\Phi(t)=A(t)\Phi(t)$
+ \end{enumerate}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item The inhomogeneous mean square solution to equation \eqref{inteq} is
+ given by:
+\begin{equation}\label{inhomosol}
+X(t)=\Phi(t)\left[ C+f(0)+\int_0^t\Phi^{-1}(s)df(s) +
+\int_0^t\Phi^{-1}(s)dW(s) \right]
+\end{equation}
+for each $t\in [0,T]$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+ \begin{itemize}
+ \item The covariance matrix of a Wiener-Levy vector process is defined as
+\begin{equation}\label{covmat}
+  \expect{W(s)W\trans (t)}
+\end{equation}
+and may be represented in  terms of a positive semidefinite
+symmetric matrix $B(u)$ as follows:
+\begin{equation}\label{covmatrep}
+  \expect{W(s)W\trans (t)} = \int_0^s B(u)du
+\end{equation}
+provided $s\leq t$ on $[0,T]$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item By removing the means and centering the processes, we can
+ split the solution \eqref{inhomosol} into a deterministic part and a
+ stochastic part.
+ \item The deterministic part is
+\begin{equation}\label{detpart}
+ \expect{X(t)}=\Phi(t)\left[ \expect{C} + f(0) + \int_0^t\Phi^{-1}(s)df(s)
+ \right].
+\end{equation}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item If $X_0(t)=X(t)-\expect{X(t)}$ is the zero-mean stochastic
+ process, the stochastic part of the solution to \eqref{inhomosol}
+ is given by
+\begin{equation}\label{stochpart}
+  X_0(t)=\Phi(t)\left[ C_0 + \int_0^t\Phi^{-1}(s)dW(s)\right]
+\end{equation}
+where $C_0=C-\expect{C}$.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Stochastic Differential Equations
+ \begin{itemize}
+ \item It turns out that the zero-mean state vector covariance has a closed
+ form expression.  For $0\leq s\leq t\leq T$ we have:
+\begin{equation}\label{centered_statecov}
+ \expect{X_0(s)X_0\trans (t)} = \Phi(s)\Psi(s)\Phi\trans (t)
+\end{equation}
+where
+\[\Psi(s)=  \expect{C_0C_0\trans}
+ + \int_0^s\Phi^{-1}(u)B(u)[\Phi^{-1}(u)]\trans du\]
+ and $B(u)$ is defined by \eqref{covmatrep}.
+ \item Note that $X_0(t)$ is thus a zero-mean Gaussian vector
+ process.
+\end{itemize}
+\end{frame}

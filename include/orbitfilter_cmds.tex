@@ -1,0 +1,94 @@
+% Orbit filter specific definitions
+
+% See Tapley, Schutz, Born Appendix G
+%\newcommand{}[]{}
+
+  % Zero and identify blocks:
+\newcommand{\zeromat}[1]{\left[0\right]_{#1}}
+
+\newcommand{\idmat}[1]{\left[ I\right]_{#1}}
+
+% Two-Body Motion:
+\newcommand{\testnl}{\text{foo }~\newline \text{bar}}
+\newcommand{\gconst}{G \text{ is the gravitational constant}}
+\newcommand{\stdgparam}{M \text{ is the standard gravitational parameter}}
+\newcommand{\gravmudef}{\mu=GM}
+\newcommand{\rdef}{r \text{ is the 3d position vector}}
+\newcommand{\twobodywhere}{~\newline \text{ where } \gravmudef,~\newline\gconst,~\newline \stdgparam}
+\newcommand{\twobodyeq}{\ddot{r}= -\dfrac{\mu r}{\norm{r}^3}} 
+
+\newcommand{\angmom}{h:=r\times \dot{r}}
+\newcommand{\muearth}{\mu_E:=3.986004418\times 10^{14}\text{ m}^3/\text{sec}^2}
+
+% SV Dynamics:
+  % Equation of motion:
+\newcommand{\sveqmotion}[2]{\dot{#1}=#2(#1,t)}
+\newcommand{\wheresveqmotion}[5]{#1=\left[#1_{#2},#1_{#3},#1_{#4},\dot{#1}_{#2},\dot{#1}_{#3},\dot{#1}_{#4}, #5 \right]\trans}
+  % Tapley, Schutz, Born version:
+\newcommand{\tsbeqmo}{\sveqmotion{\underbar{X}}{F}}
+\newcommand{\tsbwhereeqmo}{\wheresveqmotion{\underbar{X}}{X}{Y}{Z}{\beta}}
+  % Carroll:
+\newcommand{\myeqmo}{\sveqmotion{X}{F}}
+\newcommand{\mywhereeqmo}{\wheresveqmotion{X}{1}{2}{3}{\gamma}}
+\newcommand{\myXdoteq}{\sveqmotion{X}{F}=\left[F_1,F_2,F_3,F_4,F_5,F_6,F_7 \right]\trans}
+  % GOMA
+\newcommand{\gomanonlineq}{x(t_{k+1})=f(x(t_k))+G(t_k)w(t_k)}
+\newcommand{\gomaeqmo}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+\newcommand{\gomaepochstateeq}{x(t)=F\left[ t,t_0,x_0(t)\right]}
+\newcommand{\gomawhereeqmo}{\wheresveqmotion{x}{1}{2}{3}{\gamma}}
+\newcommand{\gomaxdoteqseven}{f(x(t))=\left[f_1,f_2,f_3,f_4,f_5,f_6,f_7 \right]\trans}
+\newcommand{\gomarefepochstate}{x_0=x_{\text{ref}}(t_0)}
+% Example:
+% 2-d
+\newcommand{\svvectwodseven}[2]{\left[ #1, #2,\dot{#1}, \dot{#2}, \mu, X_s, Y_s\right]\trans}
+\newcommand{\dotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},\ddot{#1}, \ddot{#2}, \dot{\mu}, \dot{X_s}, \dot{Y_s}\right]\trans}
+\newcommand{\altdotsvvectwodseven}[2]{\left[ \dot{#1}, \dot{#2},-\dfrac{\mu#1}{r^3}, -\dfrac{\mu#2}{r^3}, 0, 0, 0\right]\trans}
+\newcommand{\Asvtwodseven}[2]{
+\begin{bmatrix}
+0&0&1&0&0&0&0\\
+0&0&0&1&0&0&0\\
+-\dfrac{\mu}{r^3}+\dfrac{3\mu#1^2}{r^5} & \dfrac{3\mu#1#2}{r^5} & 0&0& -\dfrac{#1}{r^3} &0&0\\
+\dfrac{3\mu#1#2}{r^5} & -\dfrac{\mu}{r^3}+\dfrac{3\mu#2^2}{r^5} & 0&0&  -\dfrac{#2}{r^3} &0&0\\
+0&0&0&0&0&0&0\\
+0&0&0&0&0&0&0\\
+0&0&0&0&0&0&0
+\end{bmatrix}^{*}
+}
+% 7-state measurement models
+\newcommand{\measmodelseven}[1]{#1:=\sqrt{\left[(X-X_s)^2+(Y-Y_s)^2\right]}}
+\newcommand{\linmeasseven}[1]{H:=\dfrac{\partial#1}{\partial X}=
+\left[\dfrac{X-X_s}{#1}\;\;\dfrac{Y-Y_s}{#1}\;\;0\;\;0\;\;0\;\;-\dfrac{X-X_s}{#1}\;\;-\dfrac{Y-Y_s}{#1}\right]}
+  % Linearization about reference state:
+\newcommand{\linrefeq}[1]{\dot{#1}(t)=\dot{#1}^{*}(t)+\left[ \dfrac{\partial\dot{#1}(t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+\newcommand{\altlinrefeq}[2]{\dot{#1}(t)=#2({#1}^{*},t)+\left[ \dfrac{\partial #2(#1,t)}{\partial #1(t)}\right]^{*}\left[ #1(t)-#1^{*}(t)\right] +\cdots}
+\newcommand{\svstatedef}[2]{#1(t):=#2(t)-#2^{*}(t)}
+\newcommand{\svdyneq}[2]{\dot{#1}(t)=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}#1(t)}
+\newcommand{\gomalinrefeq}[2]{\dot{#1}(t)=\dot{#1}_{\text{ref}}(t)+\left[ \dfrac{\partial #2(t)}{\partial \lambda}\right]_{\lambda=#1_{\text{ref}}}\left[ #1(t)-#1_{\text{ref}}(t)\right] +\cdots}
+\newcommand{\gomacurrentstateresidual}[2]{\delta #1 (#2)=#1(#2)-#1_{\text{ref}}(#2)}
+\newcommand{\gomaepochstateresidual}{\delta x_0(t)=x_0(t)-x_{0}}
+  % A matrix:
+\newcommand{\dynmatdef}[2]{#1(t):=\left[ \dfrac{\partial\dot{#2}(t)}{\partial #2(t)}\right]^{*}}
+\newcommand{\svdynmatdef}{\dynmatdef{A}{X}}
+\newcommand{\svdyneqAx}{\dot{x}(t)=Ax(t)}
+\newcommand{\svsolneqlong}[2]{x(#1)=\stmlong{#1}{#2}x(#2)}
+\newcommand{\svsolneq}{\svsolneqlong{t}{t_0}}
+  % SV A matrix:
+\newcommand{\svAmat}{
+\begin{bmatrix}
+\zeromat{3\times 3} & \idmat{3\times 3} & \zeromat{3\times m}\\
+\left[\dfrac{\partial\ddot{r}}{\partial r}\right]_{3\times 3} & \left[\dfrac{\partial\ddot{r}}{\partial \dot{r}}\right]_{3\times 3} & \left[\dfrac{\partial\ddot{r}}{\partial\gamma}\right]_{3\times m}\\
+\zeromat{m\times 3} & \zeromat{m\times 3} & \zeromat{m\times m}
+\end{bmatrix}
+}
+  % Phi diffeq:
+\newcommand{\phidiffeq}[1]{\dot{\Phi}(t,#1)=A(t,#1)\Phi(t,#1)}
+
+% Keplerian Elements:
+\newcommand{\semimajordef}{a \text{ is the semi-major axis}}
+\newcommand{\eccdef}{e \text{ is the eccentricity}}
+\newcommand{\incdef}{i \text{ is the inclination angle of the orbital plane}}
+\newcommand{\longanode}{\Omega \text{ is the longitude of the ascending node}}
+\newcommand{\argperiapsis}{\omega \text{ is the angle between the ascending node and the periapsis point}}
+\newcommand{\timeperiapsis}{T \text{ is the time of periapsis passage}}
+%\newcommand{}{}
+

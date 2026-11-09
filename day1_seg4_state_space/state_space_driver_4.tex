@@ -1,0 +1,78 @@
+\documentclass{beamer}
+
+%  Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{array}
+\usepackage{xfrac}
+
+% Custom package for timing control of slides and transitions
+\usepackage{etoolbox} % Additional package for controlling transitions
+
+\usetheme{Warsaw}
+\setbeamertemplate{footline}{}
+
+\renewcommand{\arraystretch}{1.25}
+
+\newcommand{\includes}{../include}
+\newcommand{\graphics}{../graphics}
+%\newcommand{\includes}{/home/1104070/latex_include}
+
+\newcommand{\dayonesegfour}{.}
+
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{\includes/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+%\pagestyle{plain}
+
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+
+% Define a command for automatic slide/bullet transitions
+\newcommand{\autoadvance}[1]{%
+	\addtocounter{framenumber}{1} % Move to the next step
+	\transduration{#1} % Set the transition duration in seconds
+}
+
+\begin{document}
+	
+	% Title Slide with Automatic Transition
+	\begin{frame}
+		\title{
+			\vfill \hrulefill \vfill
+			\begin{center}
+				Kalman Filter Theory and Applications\\
+				State Space Concepts\\
+				{\small \url{https://github.com/musicarroll/kalman_course}}
+			\end{center}
+		}
+		\author{Michael L. Carroll}
+		\date{\today\\
+			\vfill \hrulefill \vspace*{.25in} \vfill
+			\begin{tiny}
+				\copyright 2023 by Michael L. Carroll
+			\end{tiny}
+		}
+		\maketitle
+		\transduration{5} % Automatically transition after 5 seconds
+	\end{frame}
+	
+	% ----------------------------------------------------------------
+	% Modify input command and uncomment:
+	\input{state_space_main_video4.tex}
+	
+\end{document}

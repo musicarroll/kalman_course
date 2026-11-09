@@ -1,0 +1,10 @@
+\begin{slide}
+\begin{verbatim}
+REP005HZ
+| KF'NAV'05'HERTZ'EXEC
+| | NU'INERTIAL'DOP'DATA'COMP'CORR
+| | KF'KALMAN'DATA'BUFFERING
+| | NU'MAGNETIC'VAR'SETUP
+| | KF'KALMAN'CONTROL
+\end{verbatim}
+\end{slide}

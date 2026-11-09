@@ -1,0 +1,46 @@
+% day2_seg3_kalstats/err_cov.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Error Covariance Matrix} 
+	\framesubtitle{$P$}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item $P$ is the \textbf{estimation error covariance}, although it is commonly referred to simply as 
+ THE covariance matrix.
+}
+  \onslide<3->{
+ \item $\covmatdef$
+}
+  \onslide<4->{
+ \item The report card for the Kalman filter
+}
+  \onslide<5->{
+ \item Contains most of the information about how well or poorly your filter is doing.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Error Covariance Matrix} 
+	\framesubtitle{Relation of $P$ to $Q$ and $R$}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item $P$ brings $Q$ and $R$ together
+}
+  \onslide<3->{
+  \item In continuous framework, $P$ is solution to matrix Riccatti differential equation:
+\begin{equation}
+\matrixriccatieq
+\end{equation}
+\begin{footnotesize}
+Note:  In Kalman literature, $F$ is sometimes used instead of $A$, the notation used in general control theoy
+\end{footnotesize}
+}
+  \onslide<4->{
+  \item Covariance analysis is primarily concerned with solving this equation or its discrete equivalent 
+}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,47 @@
+\begin{frame}
+.1 Hz Kalman Routines
+\begin{itemize}
+\item Was originally .05 Hz
+\item Basic Kalman update period is 10 secs
+\item Call Tree:
+\begin{verbatim}
+REP005HZ
+| KF'NAV'05'HERTZ'EXEC
+| | NU'INERTIAL'DOP'DATA'COMP'CORR
+| | KF'KALMAN'DATA'BUFFERING
+| | NU'MAGNETIC'VAR'SETUP
+| | KF'KALMAN'CONTROL
+\end{verbatim}
+\end{itemize}
+\end{frame}
+\begin{frame}
+.1 Hz Detail
+\begin{verbatim}
+REP005HZ
+| KF'NAV'05'HERTZ'EXEC
+| | NU'INERTIAL'DOP'DATA'COMP'CORR
+| | KF'KALMAN'DATA'BUFFERING
+| | | KF'BEGIN'INU'INIT
+| | | KF'AIDED'INS'FILTER'INIT 
+| | | KF'EARTH'RAD'BUFFER
+| | | KF'BEGIN'BUF'MOV'POS
+| | NU'MAGNETIC'VAR'SETUP
+| | | NU'MAGNETIC'VAR'CALC
+\end{verbatim}
+\end{frame}
+\begin{frame}
+.1 Hz Detail
+\begin{verbatim}
+| | KF'KALMAN'CONTROL
+| | | KF'AVERAGE'WEIGHT'CAL
+| | | KF'EXTRAP'ERROR'STATE'VECTOR
+| | | KF'TRANS'MATRIX'CALCULATION *
+| | | KF'COVARIANCE'RATE'LIMIT
+| | | KF'COV'EXTRAPOLATION
+| | | KF'UPDATE'PROCESSING'CONTROL
+| | | KF'POSITION'FIX'PREP
+| | | KF'INU'COVARIANCE'CAL
+| | | KF'CEP'CALCULATION
+| | | KF'MOTION'ALIGN'STATUS
+\end{verbatim}
+\end{frame}

@@ -1,0 +1,164 @@
+% day1_seg4_prob/prob_dist.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Probability Distributions and Densities}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Probability Distributions  
+}
+  \onslide<3->{
+\item Probability Density Functions  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Probability Distributions}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Every random variable $X$ has an associated probability \textbf{\textit{distribution}} function
+ defined by
+\[F_X(x)=P\{X^{-1}[-\infty,x)\}=P\set{\omega\in\Omega:X(\omega)< x}\]\\
+Also referred to as a \textbf{\textit{Cumulative Distribution Function (c.d.f.)}}
+}
+  \onslide<3->{
+ \item The value of the distribution function at a real number $x$ is the
+ probability that the value of $X$ does not exceed $x$.
+}
+  \onslide<4->{
+ \item We can simplify the notation by writing $\set{X< x}$
+ instead of $\set{\omega\in\Omega : X(\omega)< x}$.
+}
+  \onslide<5->{
+ \item Thus, $F_X(x)=P\set{X< x}$.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Probability Distributions}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Distributions are nondecreasing:  $x\leq y\Rightarrow F(x)\leq
+ F(y)$.
+}
+  \onslide<3->{
+ \item Distributions are always continuous from the left:  \\
+ $F(x)\rightarrow F(a)$ as $x\uparrow a$.
+}
+  \onslide<4->{
+ \item The value of a distribution is always between 0 and 1
+ inclusively, and $\lim_{x\downarrow -\infty}F(x)=0$ and $\lim_{x\uparrow \infty}F(x)=1$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Probability Distributions: Three Flavors}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Continuous (no jumps)
+ }
+  \onslide<3->{
+ \item Piecewise continuous (some jumps)
+}
+  \onslide<4->{
+ \item Discrete (only jumps and flat).  $X$ is discrete if and only if $X$
+ takes on only finitely many, or at most countably infinite,
+ distinct values.  Note that a simple measurable function is a
+ discrete random variable.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Some Discrete Distributions}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Discrete Uniform Distribution:  Let $A=\set{a_1,\ldots,a_n}$ be a set of $n$ distinct real numbers and assume that $a_1<a_2<\ldots<a_n$.  
+ Then a random variable $X$ is said to have a discrete uniform
+ distribution if \\
+ $F(x)= \frac{1}{n}\cdot \abs{A\cap [-\infty, x)}$.
+}
+  \onslide<3->{
+ \item Let $\Omega$ be any sample space and $A\subseteq \Omega$.
+ Let $X(\omega)=\chi_A(\omega)$.  Recall that
+ $\chi_A(\omega)=
+  \begin{cases}
+    1 & \text{if } \omega\in A, \\
+    0 & \text{otherwise}.
+  \end{cases}
+$ \\
+Then $F(x)=
+  \begin{cases}
+    0   & \text{if } x<0, \\
+    1-P(A) & \text{if } 0\leq x<1, \\
+    1   &  \text{if } x\geq 1.
+  \end{cases}
+$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Continuous Distributions:  Probability Density Functions}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item $X$ is said to have a continuous distribution if there
+ exists a function $f:\Real\rightarrow \Real$ such that for each
+ $x\in \Real$ \\
+\begin{equation}\label{pdf1}
+   F(x)=\int_{-\infty}^{x}f(u)du.
+\end{equation}
+}
+  \onslide<3->{
+ \item $f$ is called a \textit{\textbf{probability density
+ function}}, or p.d.f, for short.
+ \item The p.d.f of a random variable, if it exists, is not
+ unique.  Why?
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Some Important Distributions}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The Gaussian or normal distribution with p.d.f:
+\begin{equation}\label{gauss_distr}
+ f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right]
+\end{equation}
+}
+  \onslide<3->{
+ \item The uniform distribution on $[a,b]$ with distribution function:
+\begin{equation}\label{uniform_distr}
+  F(x)=
+  \begin{cases}
+    0 & \text{if } x< a, \\
+    \frac{x-a}{b-a} & \text{if } a\leq x< b,\\
+    1 & \text{otherwise}.
+  \end{cases}
+\end{equation}
+}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,16 @@
+% day4_seg4_redund/redund_main.tex
+\begin{slide}
+\textbf{Day 4, Segment 4\\
+Filter Redundancy and Fault Tolerance\\
+Topics}
+ \begin{itemize}
+ \item Combat Talon Weighting Scheme
+ \item Detecting Faults
+ \item Graceful Degradation
+\end{itemize}
+\end{slide}
+\input{day4_seg4_redund/ct_weighting.tex}
+\input{day4_seg4_redund/alt_weight.tex}
+%\input{day4_seg4_redund/fault_detection.tex}
+%\input{day4_seg4_redund/graceful_deg.tex}
+\input{day4_seg4_redund/exercises.tex}

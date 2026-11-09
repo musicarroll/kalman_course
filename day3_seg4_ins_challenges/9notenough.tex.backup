@@ -1,0 +1,18 @@
+%day3_seg4_ins_challenges/9notenough.tex
+\begin{slide}
+Nine States Are Not Enough
+ \begin{itemize}
+ \item The canoncial 9 states only characterize the inertial error dynamics
+ \item They treat of the inner coupling between inertial error sources
+ \item However, they don't help characterize dynamics of aiding sensor errors
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Nine States Are Not Enough
+\begin{itemize}
+  \item They don't help estimate aiding states such as Doppler bias and boresight errors
+  \item Or GPS receiver clock errors
+  \item They also don't help us to estimate inertial instrument drifts such as bias drift or scale factor errors
+\end{itemize} 
+\end{slide}

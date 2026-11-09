@@ -1,0 +1,23 @@
+% day4_seg1_sim/diffrates.tex
+\begin{slide}
+Different Rates
+ \begin{itemize}
+ \item In realtime apps, you cannot waste processing cycles
+ \item Some, fast varying quanitites need to be updated often; others, less often
+ \item For example: body rates and quantities highly-dependent on them need to be updated as rapidly as possible
+ \item Depends, of course, on platform dynamics
+ \item Transport rates don't need to be updated as often
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Rate Allocation Example: Combat Talon I
+\begin{itemize}
+  \item Kalman Gain Calcuation, State and Covariance Update: 0.1 Hz (was originally 0.05 Hz)
+  \item State and Covariance Extrapolation: 4 Hz
+  \begin{itemize}
+	\item dependent on some 16 Hz Fast Nav calcs: body rates and attitudes 
+    \item dependent of some 8 Hz Slow Nav calcs: transport rates
+  \end{itemize}  
+\end{itemize} 
+\end{slide}

@@ -1,0 +1,39 @@
+\begin{frame}
+  \onslide<1->{
+	\frametitle{UD Factorization} 
+	\framesubtitle{Bierman and Thornton}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Based on Cholesky Decomposition
+}
+  \onslide<3->{
+  \item Unit Triangular Matrices: $U$ has 1's on the diagonal and all 0's below the diagonal.  E.g.,
+\[
+U=\begin{bmatrix}
+1 & 5 & 7 \\
+0 & 1 & 3\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{UD Factorization} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Factor $P^{-}$ as $UDU\trans$, where $U$ is unit upper triangular and $D$ is diagonal.
+}
+  \onslide<3->{
+  \item This then allows us to "invert" $P^{-}$ by solving the equation unit upper triangular equation $UDU\trans X=H$ for the matrix $X$, which will yield $X=\left[HPH\trans + R\right]^{-1}H$
+}
+  \onslide<4->{
+  \item This last expression is used on the covariance update equation in $KH$
+}
+\end{itemize}
+\end{frame}

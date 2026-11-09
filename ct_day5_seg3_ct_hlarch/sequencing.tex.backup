@@ -1,0 +1,24 @@
+% day5_seg3_ct_hlarch/sequencing.tex
+\begin{slide}
+CT I Kalman Filter Sequencing
+ \begin{itemize}
+ \item Process INU 1 filter, then INU 2
+ \item Different processing depending on INU mode: Alignment vs. Navigation
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+CT I Kalman Filter Sequencing
+\begin{itemize}
+ \item Main .1 Hz Sequence:
+	\begin{itemize}
+		\item Extrapolate state vector and transition matrix to current time
+		\item Perform covariance rate limiting
+		\item Extrapolate covariance matrix to current time
+		\item Process observations
+		\begin{itemize}
+			\item Gain computation included herein
+		\end{itemize}
+	\end{itemize}
+\end{itemize} 
+\end{slide}

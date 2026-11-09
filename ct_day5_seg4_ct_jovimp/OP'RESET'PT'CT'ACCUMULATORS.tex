@@ -1,0 +1,21 @@
+\begin{frame}
+OP'RESET'PT'CT'ACCUMULATORS
+\begin{verbatim}
+     FUNCTION: THE PT/CT ROUTINE SHALL CONTROLTHE RESET OF THE PT & CT
+               ACCUMULATORS BASED ON THE FLAGS FROM BEGIN AND OBPRC TO
+               SIGNAL THE BEGINNING OF A KALMAN CYCLE AND THE ARRIVAL
+               OF AN OBSERVATION RESPECTIVELY. OPPTCT SHALL CALL THE
+               APPROPRIATE PT OR CT RESET SUBFUNCTIONS DEPENDING UPON
+               THE OPERATIONAL KALMAN FILTER.  OPPTCT SHALL CALL THE
+               APPRORIATE SUBFUNCTIONS BASED ON THE STATE OF THE PT'CT
+               INDEX AS FOLLOWS :
+
+                       PT'CT = V(INS1'PT'RESET)
+                       PT'CT = V(INS2'PT'RESET)
+                       PT'CT = V(DVS'PT'RESET)
+                       PT'CT = V(INS1'CT'RESET)
+                       PT'CT = V(INS2'CT'RESET)
+                       PT'CT = V(DVS'CT'RESET)
+
+\end{verbatim}
+\end{frame}

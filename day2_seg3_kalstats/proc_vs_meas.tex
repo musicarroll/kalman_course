@@ -1,0 +1,48 @@
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Comparison of Process Noise and Measurement Noise} 
+	\framesubtitle{$Q$ vs $R$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item If $Q$ is large relative to $R$, then $K\approx I$, the extrapolated state estimate will cancel out in the state update 
+equation; the updated state estimate will consist essentially only of the measurement $z$
+}
+  \onslide<3->{
+\item This can be seen as follows in the special case that $H(k)$ is square and invertible:
+\begin{footnotesize}
+\begin{align*}
+\stateest{k}{+}&=\stateest{k}{-}+\kalgain{k}\left[\innovation{k}\right]\\
+&\approx \stateest{k}{-}+\covmat{k}{-}H(k)\trans\left[H(k)\covmat{k}{-}H(k)\trans\right]^{-1}\left[\innovation{k}\right]\\
+&= \stateest{k}{-}+\\
+&\;\;\;\;\;\;\;\;\covmat{k}{-}H(k)\trans
+\left[H(k)\trans\right]^{-1}\left[\covmat{k}{-}\right]^{-1}H(k)^{-1}\left[\innovation{k}\right]\\
+&= \stateest{k}{-}+H(k)^{-1}z(k)-\stateest{k}{-}\\
+&= H(k)^{-1}z(k)
+\end{align*}
+\end{footnotesize}
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Comparison of Process Noise and Measurement Noise} 
+	\framesubtitle{$Q$ vs $R$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item On the other hand, when $R$ dominates $Q$ (and thus $\covmat{k}{-}$), the gain $K$ is nearly 0, 
+and the updated estimate is simply the previously extrapolated estimate:
+\begin{align*}
+\stateest{k}{+}&=\stateest{k}{-}+\kalgain{k}\left[\innovation{k}\right]\\
+&\approx \stateest{k}{-}+0\left[\innovation{k}\right]\\
+&= \stateest{k}{-}
+\end{align*} 
+}
+  \onslide<3->{
+	\item Filter tuning is all about balancing $Q$ and $R$, with $Q$ being less constrained than $R$
+}
+\end{itemize}
+\end{frame}

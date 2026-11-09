@@ -1,0 +1,20 @@
+% day1_seg3_state_space/state_space_main.tex
+\begin{slide}
+\textbf{Day 1, Segment 3\\
+State Space Dynamics\\
+Topics}
+ \begin{itemize}
+ \item Input-Output Representation
+ \item Differential Equations and Dynamic Systems
+ \item Block Diagrams and State Space
+ \item State Transition Matrix
+\end{itemize}
+\end{slide}
+\input{day1_seg3_state_space/input_output.tex}
+\input{day1_seg3_state_space/diff_eq.tex}
+% \input{day1_seg3_state_space/stoch_diff_eq.tex}
+\input{day1_seg3_state_space/block_diagrams.tex}
+\input{day1_seg3_state_space/deriving_state.tex}
+\input{day1_seg3_state_space/examples.tex}
+\input{day1_seg3_state_space/stm.tex}
+\input{day1_seg3_state_space/exercises.tex}

@@ -1,0 +1,119 @@
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Predator-Prey Model}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Population Dynamics:  Predators (Wolves) vs. Prey (Rabbits)
+			\item Underlying Assumptions:
+		}
+		\begin{itemize}
+			\onslide<3->{
+				\item Sufficient food is always available for the prey population 
+			}
+			\onslide<4->{
+				\item  Food supply of predator population depends only on size of prey population (predators eat only one kind of thing)
+			}
+			\onslide<5->{
+				\item  Current rate of change of population is proportional to its current size
+			}
+			\onslide<6->{
+				\item Environment does not change to favor one species over another
+			}
+			\onslide<7-> {
+				\item Genetic adaptation is negligible
+			}
+			\onslide<8->{
+				\item Predators are insatiable
+			}
+	\end{itemize}
+\end{itemize}
+	\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+
+	\onslide<1->{
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey State Space Model (Equations)}
+	}
+	\onslide<2->{
+		State space model for Lotka-Volterra predator-prey system:
+		
+		\[
+		\frac{dR}{dt} = r_R R - c_{RW} R W
+		\]
+		
+		\[
+		\frac{dW}{dt} = c_{WR} R W - d_W W
+		\]
+}
+	\onslide<3->{
+		\small
+		Where:
+		\begin{align*}
+		R & : \text{Prey (Rabbits) population} \\
+		W & : \text{ Predator (Wolves) population} \\
+		r_R & : \text{Prey intrinsic growth rate} \\
+		c_{RW} & : \text{Predation rate, represents the rate}\\ 
+		& \;\;\;\; \text{at which predators capture and consume prey} \\
+		c_{WR} & : \text{Conversion efficiency, represents the efficiency}\\ 
+		 & \;\;\;\; \text{ with which consumed prey are converted into new predators} \\
+		d_W & : \text{Predator death rate}
+		\end{align*}
+    }
+	\onslide<4->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+
+	
+	\begin{frame}
+		\onslide<1->{
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey State Space Model (Matrix Form)}
+	}
+	\onslide<2->{
+		In matrix form, the state space model can be expressed as:
+		\[
+		\left[\begin{array}{c}
+		\frac{dR}{dt} \\
+		\frac{dW}{dt}
+		\end{array}\right]
+		=
+		\left[\begin{array}{cc}
+		r_R & -c_{RW} \\
+		c_{WR} & -d_W
+		\end{array}\right]
+		\left[\begin{array}{c}
+		R \\
+		W
+		\end{array}\right]
+		\]
+}
+	\onslide<3->{
+		See next slide for plot of python simulation
+}
+
+	\onslide<4->{\center --------------------------------------------------------------------}
+		
+	\end{frame}
+
+
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Example:  Predator-Prey Equations, Real World}
+}
+  \onslide<2->{
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/predprey.png}
+\end{center}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+

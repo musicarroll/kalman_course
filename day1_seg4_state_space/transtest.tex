@@ -1,0 +1,51 @@
+\documentclass{beamer}
+
+\usepackage{etoolbox} % Use this package to manage frame-by-frame transitions
+
+% Define a command for automatic bullet transitions
+\newcommand{\autoadvance}[1]{%
+  \addtocounter{framenumber}{1} % Move to next bullet/step
+  \transduration{#1} % Set transition duration in seconds
+}
+
+\begin{document}
+
+% Slide: Overview of Difference Equations
+\begin{frame}
+    \frametitle{Difference Equations} 
+    \framesubtitle{Overview}
+
+    \onslide<1->{ % First slide frame appears immediately
+        \frametitle{Difference Equations}
+        \framesubtitle{Overview}  
+    }
+
+    \begin{itemize}
+        \onslide<2->{ % First bullet point appears after transition
+            \item Definition and Importance
+            \autoadvance{5} % Wait 5 seconds, then move to the next bullet
+        }
+        \onslide<3->{ % Second bullet point
+            \item Examples and Applications
+            \autoadvance{5} % Wait 5 seconds
+        }
+        \onslide<4->{ % Sub-items for the second bullet point
+            \begin{itemize}
+                \item Control Systems
+                \item Signal Processing
+            \end{itemize}
+            \autoadvance{7} % Wait 7 seconds for this section
+        }
+        \onslide<5->{ % Final bullet point
+            \item Relationship to Differential Equations
+            \autoadvance{5} % Wait 5 seconds
+        }
+    \end{itemize}
+
+    \onslide<6->{ % Final footer appears
+        \center --------------------------------------------------------------------
+        \autoadvance{3} % Wait 3 seconds before the next slide
+    }
+\end{frame}
+
+\end{document}

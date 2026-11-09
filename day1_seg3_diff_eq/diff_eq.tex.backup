@@ -1,0 +1,13 @@
+% day1_seg3_diff_eq/diff_eq.tex
+\begin{slide}
+Differential Equations and Difference Equations
+ \begin{itemize}
+ \item Ordinary Differential Operators
+ \item Ordinary Differential Equations
+ \item Difference Equations
+\end{itemize}
+\end{slide}
+\input{day1_seg3_diff_eq/orddiffops.tex}
+\input{day1_seg3_diff_eq/ord_diff_eq.tex}
+\input{day1_seg3_diff_eq/difference_eq.tex}
+

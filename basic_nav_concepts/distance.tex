@@ -1,0 +1,110 @@
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Scenario:  Two soldiers each have a laser range finder.  The first soldier points his 
+range finder at a potential target and determines it to be 205.78 yards away.  The second soldier 
+determines with his range finder that the target is 201.22 yards away.
+  \item How do these two soldiers combine their two measurements to 
+produce an better estimate?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Soldier A says, "Let's just take the average of our two
+measurements and call that in to the shooters."
+  \item Soldier B disagrees and says, "No way!  My laser range finder
+is much better than yours.  We should just use my measurrement as the 
+the best estimate."
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Actually, both soldiers are wrong!
+  \item They should use a weighted average of both measurements as their final estimate.
+  \item But what's the weighting scheme?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Intuitively, the weighting scheme should take into account the relative uncertainty of each measurement.
+  \item Also, if the two weights are equal, the weighted average should reduce to the simple unweighted average.
+  \item Let $r_a$ be the range measurment of Soldier A, $r_b$ that of Solider  B.  Then, a weighted average would look like this:
+\[\hat{r}=w_a r_a+w_b r_b,\]
+where $w_a$ is the weight associated with Solider A's measurement and $w_b$ is that associated with Solider B's measurement.
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item One way to set the weights using the uncertainty is to use the standard deviations associate with each measurement.
+  \item Let $\sigma_a$ be the standard deviation associated with laser range finder of Soldier A, $\sigma_b$ that of Soldier B.
+  \item Then we could set 
+\[w_a=\dfrac{\sigma_b^2}{\sigma_a^2+\sigma_b^2}\;\;\;\text{and}\;\;\;
+  w_b=\dfrac{\sigma_a^2}{\sigma_a^2+\sigma_b^2}.
+\]
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Why does $w_a=\dfrac{\sigma_b^2}{\sigma_a^2+\sigma_b^2}$ have $\sigma_b$ in its denominator instead of $\sigma_a$?
+  \item Note also that these weights reduce to 1/2, as they should, when $\sigma_a=\sigma_b$.
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item If we have several sequential measurmeents, from a variety of range measurement sources, we would want to put this into a recursive form
+like we did for the running average of the resistor.
+  \item The recursive, weighted running average is beginning to look more and more like a Kalman filter.
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item To see this, we have to first realize that the information or certainty (=inverse of uncertainty) 
+of the weighted average estimate is:
+\[1/p=1/\sigma_a^2 + 1/\sigma_b^2.\]
+ \item Note that $p$ is the scalar version of the estimation error covariance matrix $P$ and the $1/\sigma$ terms
+are the measurement error covariances $R$.
+\end{itemize} 
+\end{frame}
+
+
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item This generalizes easily to $k$ measurements (let's number our soldiers now from 1 to $k$):
+\[1/p(k)=1/\sigma_1 + \cdots + 1/\sigma_{k}=1/p(k-1)+1/\sigma_{k}\]
+  \item The startling thing about this equation is that the infomration always increases, no matter how inaccurate the
+measurement!  As long as the measurements are unbiased (i.e., zero mean) and Gaussian, it doesn't
+ matter how inaccurate they are -- each new measurement will convey some amount of additional information
+to improve our estimate.
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+Static Distance Estimation
+\begin{itemize}
+  \item Finally, our recursive estimate of range $\hat{r}(k)$ after the $k^\text{th}$ measurement is
+\[\hat{r}(k) = \hat{r}(k-1)+ K(k)(r(k) - \hat{r}(k-1))\]
+where
+\[K(k) = p(k-1)\left[p(k-1)+\sigma_k^2\right]^{-1}\] and
+\[p(k)=\left[1/p(k-1) + 1/\sigma_k^2\right]^{-1}\]
+\end{itemize} 
+\end{frame}
+

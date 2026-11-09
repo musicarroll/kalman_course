@@ -1,0 +1,74 @@
+% theory_vs_reality.tex
+\begin{slide}
+Kalman Filter Theory vs. Reality
+\begin{itemize}
+\item Kalman theory based on multiple assumptions
+\begin{itemize}
+\item All states are modeled correctly
+\item Noise parameters are accurately known
+\item Initial values are appropriate
+\item Process and measurement noise are both Gaussian
+\item Process noise and measurement noise are uncorrelated
+\item Measurements are taken at regularly scheduled intervals
+\end{itemize} 
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Kalman Filter Theory vs. Reality
+\begin{itemize}
+  \item How do you select appropriate sensors for the problem at hand?
+  \item Some obvious general rules:
+  \begin{itemize}
+	\item the lower the sensor noise characteristics, the more accurate the estimates (narrow sensor noise variance)
+    \item the more the merrier, i.e., the more sensors the better
+    \item maximize the number of directly observable states
+  \end{itemize}
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Kalman Filter Theory vs. Reality
+\begin{itemize}
+  \item Some less obvious general rules:
+  \begin{itemize}
+	\item short-term / long-term complementarity (e.g, GPS vs. INS)
+    \item frequency response of sensor should match that of system
+    \item noise spectrum of sensor should be maximally disjoint from that of system
+  \end{itemize}
+\end{itemize} 
+\end{slide}
+\begin{slide}
+\includegraphics{day3_seg1_numerical/sensor_selection.eps}
+\end{slide}
+\begin{slide}
+Kalman Filter Theory vs. Reality
+\begin{itemize}
+  \item Choose sensors to match states.\\
+E.g., consider the state model
+\[
+\begin{bmatrix}
+\dot{x}_1\\
+\dot{x}_2
+\end{bmatrix}
+= \begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\]
+with the measurement model
+\[
+z = \begin{bmatrix} 1\;\; 0 \end{bmatrix}\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
++ v
+\]
+Here $x_1$ is observable but $x_2$ is not.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Kalman Filter Theory vs. Reality: Sensor Selection
+ \begin{itemize}
+  \item Examine the $H$ matrix that you would use with this sensor!
+  \item If it renders some states unobservable, then consider adding additional sensors for those states, or replacing this sensor with one that is more favorable.
+ \end{itemize}
+\end{slide}

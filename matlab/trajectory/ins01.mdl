@@ -1,0 +1,857 @@
+Model {
+  Name			  "ins01"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Oct 08 10:20:15 2002"
+  Creator		  "mcar"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mcar"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Oct 14 12:35:03 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:9>"
+  ConfigurationManager	  "sourcesafe"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "5040"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ins01"
+    Location		    [344, 81, 984, 705]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "79"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [75, 130, 105, 160]
+      Value		      "u"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 9]
+      Position		      [305, 22, 315, 358]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "9"
+      BusSelectionMode	      off
+      Port {
+	PortNumber		3
+	Name			"Vn"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		4
+	Name			"Ve"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		5
+	Name			"North Tilt"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		6
+	Name			"East Tilt"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		7
+	Name			"Azimuth Error"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		8
+	Name			"V Pos"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		9
+	Name			"V Vel"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 9]
+      Position		      [315, 412, 325, 748]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "9"
+      BusSelectionMode	      off
+      Port {
+	PortNumber		3
+	Name			"Vn"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		4
+	Name			"Ve"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		5
+	Name			"North Tilt"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		6
+	Name			"East Tilt"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		7
+	Name			"Azimuth Error"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		8
+	Name			"V Pos"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		9
+	Name			"V Vel"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1]
+      Position		      [155, 495, 185, 525]
+      Orientation	      "left"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "x0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [9]
+      Position		      [550, 19, 590, 371]
+      Floating		      off
+      Location		      [289, 71, 613, 732]
+      Open		      off
+      NumInputPorts	      "9"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+	axes5			"%<SignalLabel>"
+	axes6			"%<SignalLabel>"
+	axes7			"%<SignalLabel>"
+	axes8			"%<SignalLabel>"
+	axes9			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5~-5~-5~-5~-5~-5~-5~-5~-5"
+      YMax		      "5~5~5~5~5~5~5~5~5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope1"
+      Ports		      [9]
+      Position		      [545, 409, 585, 761]
+      Floating		      off
+      Location		      [12, 67, 336, 728]
+      Open		      on
+      NumInputPorts	      "9"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+	axes5			"%<SignalLabel>"
+	axes6			"%<SignalLabel>"
+	axes7			"%<SignalLabel>"
+	axes8			"%<SignalLabel>"
+	axes9			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "6000"
+      YMin		      "-500~-20000~0~-5000000~0~-100000000~-2000000000"
+"~-40000000000~-40000000"
+      YMax		      "500~0~40000~5000000~4000000000~100000000~200000"
+"0000~0~0"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "State-Space"
+      Position		      [195, 128, 255, 162]
+      A			      "A"
+      B			      "B"
+      C			      "C"
+      D			      "D"
+      X0		      "x0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv"
+      Position		      [370, 64, 445, 96]
+      Gain		      "rad2deg"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Lon"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv1"
+      Position		      [405, 178, 490, 212]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"North Tilt (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv10"
+      Position		      [400, 653, 485, 687]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Az err (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv2"
+      Position		      [385, 19, 460, 51]
+      Gain		      "rad2deg"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Lat"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv3"
+      Position		      [390, 218, 475, 252]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"East Tilt (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv4"
+      Position		      [405, 263, 490, 297]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Az err (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv5"
+      Position		      [175, 403, 260, 437]
+      Gain		      "A"
+      Multiplication	      "Matrix(K*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv6"
+      Position		      [365, 454, 440, 486]
+      Gain		      "rad2deg"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Lon"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv7"
+      Position		      [400, 568, 485, 602]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"North Tilt (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv8"
+      Position		      [380, 409, 455, 441]
+      Gain		      "rad2deg"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"Lat"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "conv9"
+      Position		      [385, 608, 470, 642]
+      Gain		      "rad2mrad"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+      Port {
+	PortNumber		1
+	Name			"East Tilt (mrad)"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Line {
+      SrcBlock		      "State-Space"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[15, 0]
+	DstBlock		"Demux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -65; -95, 0]
+	DstBlock		"State-Space"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "conv2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [0, -5]
+      DstBlock		      "conv"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Vn"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [0, -5]
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Line {
+      Name		      "Ve"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      DstBlock		      "Scope"
+      DstPort		      4
+    }
+    Line {
+      Name		      "North Tilt"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      Points		      [0, 5]
+      DstBlock		      "conv1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "East Tilt"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      Points		      [0, 10]
+      DstBlock		      "conv3"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Azimuth Error"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      Points		      [0, 15; 70, 0]
+      DstBlock		      "conv4"
+      DstPort		      1
+    }
+    Line {
+      Name		      "V Pos"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      Points		      [0, 20]
+      DstBlock		      "Scope"
+      DstPort		      8
+    }
+    Line {
+      Name		      "V Vel"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      Points		      [0, 25]
+      DstBlock		      "Scope"
+      DstPort		      9
+    }
+    Line {
+      Name		      "Lat"
+      Labels		      [0, 0]
+      SrcBlock		      "conv2"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Lon"
+      Labels		      [0, 0]
+      SrcBlock		      "conv"
+      SrcPort		      1
+      Points		      [85, 0]
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Line {
+      Name		      "North Tilt (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv1"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      5
+    }
+    Line {
+      Name		      "East Tilt (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv3"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      6
+    }
+    Line {
+      Name		      "Az err (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv4"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Scope"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "conv8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      Points		      [0, -5]
+      DstBlock		      "conv6"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Vn"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      Points		      [0, -5]
+      DstBlock		      "Scope1"
+      DstPort		      3
+    }
+    Line {
+      Name		      "Ve"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "Scope1"
+      DstPort		      4
+    }
+    Line {
+      Name		      "North Tilt"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      5
+      Points		      [0, 5]
+      DstBlock		      "conv7"
+      DstPort		      1
+    }
+    Line {
+      Name		      "East Tilt"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      6
+      Points		      [0, 10]
+      DstBlock		      "conv9"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Azimuth Error"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      7
+      Points		      [0, 15; 55, 0]
+      DstBlock		      "conv10"
+      DstPort		      1
+    }
+    Line {
+      Name		      "V Pos"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      8
+      Points		      [0, 20]
+      DstBlock		      "Scope1"
+      DstPort		      8
+    }
+    Line {
+      Name		      "V Vel"
+      Labels		      [2, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      9
+      Points		      [0, 25]
+      DstBlock		      "Scope1"
+      DstPort		      9
+    }
+    Line {
+      Name		      "Lat"
+      Labels		      [0, 0]
+      SrcBlock		      "conv8"
+      SrcPort		      1
+      DstBlock		      "Scope1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Lon"
+      Labels		      [0, 0]
+      SrcBlock		      "conv6"
+      SrcPort		      1
+      Points		      [85, 0]
+      DstBlock		      "Scope1"
+      DstPort		      2
+    }
+    Line {
+      Name		      "North Tilt (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv7"
+      SrcPort		      1
+      DstBlock		      "Scope1"
+      DstPort		      5
+    }
+    Line {
+      Name		      "East Tilt (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv9"
+      SrcPort		      1
+      DstBlock		      "Scope1"
+      DstPort		      6
+    }
+    Line {
+      Name		      "Az err (mrad)"
+      Labels		      [0, 0]
+      SrcBlock		      "conv10"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Scope1"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "conv5"
+      SrcPort		      1
+      Points		      [20, 0; 0, 90]
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [-15, 0]
+      Branch {
+	Points			[-10, 0; 0, 70]
+	DstBlock		"Demux1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -90]
+	Branch {
+	  Points		  [35, 0]
+	}
+	Branch {
+	  DstBlock		  "conv5"
+	  DstPort		  1
+	}
+      }
+    }
+    Annotation {
+      Position		      [178, 265]
+      HorizontalAlignment     "left"
+      Text		      "States:  \n1) lat\n2) lon\n3) north vel\n4) eas"
+"t velocity\n5) north tilt\n6) east tilt\n7) azimuth error\n8) vertical distan"
+"ce\n9) downward velocity"
+    }
+  }
+}

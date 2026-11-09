@@ -1,0 +1,15 @@
+% day3_seg2_inertial/inertial_main.tex
+\begin{slide}
+\textbf{Day 3, Segment 2 (Continued)\\
+Inertial Error Dynamics\\
+Topics}
+ \begin{itemize}
+ \item Imperfect Inertial Instruments
+ \item From Strapdown Equations to Error Equations
+ \item Initialization: Alignment
+\end{itemize}
+\end{slide}
+\input{day3_seg2_inertial/impinst.tex}
+\input{day3_seg2_inertial/straperr.tex}
+\input{day3_seg2_inertial/align.tex}
+%\input{day3_seg2_inertial/exercises.tex}

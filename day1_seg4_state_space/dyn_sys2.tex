@@ -1,0 +1,181 @@
+% dyn_sys2.tex
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} 
+  		\framesubtitle{Deriving State Equations from Differential Equations}
+}
+  
+\begin{itemize}
+  \onslide<2->{
+\item  A general $n^\text{th}$-order, homogeneous, linear differential equation can be expressed as a \textbf{system} of $n$ first-order differential equations
+}
+  \onslide<3->{
+	\item Let $D$ denote the time derivative operator with $D^2,D^3,\ldots$  denoting higher order derivatives
+}
+  \onslide<4->{
+\item This leads to using a operator polynomial to express an $n^\text{th}$-order homogeneous differential equation with constant coefficients:
+ \begin{equation}\label{nth order constant coefficient differential equation}
+ p(D)y = D^ny+a_{n-1}D^{n-1}y+\cdots +a_1Dy+a_0y = 0,
+ \end{equation}
+
+ 
+  where we have put the operator polynomial in normal form, such that its leading coefficient is 1 (e.g., dividing through by $m$ in $F=ma$)  
+}
+  \onslide<5->{
+	\item Also, since this is a homogeneous equation, we can solve for $D^ny$, as we'll soon see  
+}
+  
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item We now define new variables to replace the derivatives by setting $x_1=y,x_2=Dy,\ldots$:
+\begin{align*}
+  x_1(t) & := D^{0}y(t) := y(t)  \\
+  x_2(t) & := Dy(t) \\
+    \cdots \\
+  x_n(t) & := D^{n-1}y(t)
+\end{align*}  
+}
+  \onslide<3->{
+\item The functions $x_i(t)$ are called the \textbf{states} or \textbf{state variables} of the system    
+}
+  \onslide<4->{
+	\item These variables are merely definitions, but the derivative of $n^{\text{th}}$ variable will in fact deliver the essential characteristics of the system, since it will be the differential equation itself
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  Taking the derivative of these $n$ state variables and making use of the
+ original differential equation \eqref{nth order constant coefficient differential equation} yields (and using the fact that $Dx_n= D^ny$):
+\begin{align*}
+  Dx_1(t) & = x_2(t) \\
+  Dx_2(t) & = x_3(t) \\
+    \cdots \\
+  Dx_n(t) & =-a_0x_1(t)-a_1x_2(t)-\cdots -a_{n-1}x_n(t) .
+\end{align*} 
+}
+  \onslide<3->{
+\item  These $n$ equations can now be written more compactly in vector matrix
+ form:  $Dx(t)=Ax(t)$ or:
+ \begin{equation}\label{system dynamics vector matrix form}
+ \dot{x}(t)=Ax(t)
+ \end{equation} 
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  In \eqref{system dynamics vector matrix form}, $\dot{x}(t)=Ax(t)$, we have:
+ \[x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\\\vdots \\
+ x_n(t)\end{bmatrix},\]
+}
+  \onslide<3->{
+ the state vector, and
+ \begin{equation}\label{companion matrix}
+ A=\begin{bmatrix}
+ 0 & 1 & 0 &\cdots & 0\\
+ 0 & 0 & 1 & \cdots & 0\\
+ \vdots & & \ddots & & \vdots \\
+ 0 & 0  & 0 & 0 & 1\\
+ -a_{0} &-a_{1} & \cdots & -a_{n-2} & -a_{n-1}
+ \end{bmatrix},
+\end{equation}
+ the \textbf{companion matrix} of the differential
+ equation. 
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item If there is an input function $u$ and it is present via its
+			derivatives, then we can write:
+			\begin{equation}\label{state dynamics and control}
+			\dot{x}=Ax+Bu
+			\end{equation}
+			forming $B$ in much the same way we formed $A$, and suppressing
+			the time variable $t$
+		}
+		\onslide<3->{
+			\item  \eqref{state dynamics and control} expresses the system's \textbf{state dynamics}
+		}
+		\onslide<4->{
+			\item Later we will include white noise as an input
+		}
+		\begin{itemize}
+			\onslide<5->{
+				\item However, that will make the differential equations \textbf{stochastic}, and will require a deeper dive into stochastic processes (which we plan to do later)
+			}
+		\end{itemize}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item To obtain the original output $y$ as a function of the internal state of the system, we require one
+ additional vector-matrix equation:
+\begin{equation}\label{measdyn1}
+  y(t) = Cx(t) + Du(t)
+\end{equation}
+where the matrix $D$ (not to be confused with the differential operator!) represents a \textbf{direct feedthrough} of the input to the output
+}
+  \onslide<3->{
+\item  The output equation is not a differential equation.  It is an algebraic equations that represents a linear relationship between instantaneous state $x$ (and $u$) at time $t$ and the output variabe $y$ at time $t$.
+}
+	\onslide<4->{
+		\item We may think of $y(t)$ as the integral of the differential equation from time $t_0$ to time $t$.
+	}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item  Kalman filter theory often assumes the matrix $D$ in the output equation is 0, and uses a measurement model instead:
+\begin{equation}\label{measdyn2}
+  z = My = MCx = Hx
+\end{equation} 
+}
+  \onslide<3->{
+\item Note that $H:=MC$ implicitly includes $C$ as a factor
+}
+  \onslide<4->{
+\item Note also that we have not placed any restrictions on the size of
+ the measurement column vector $z$  
+}
+	\begin{itemize}
+		\onslide<5->{
+		\item As long as $H$ has $n$ columns it may have as many rows as desired
+	}
+		\onslide<6->{
+			\item Repeated rows typically indicate redundant sensors
+	}
+	\end{itemize}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+

@@ -1,0 +1,28 @@
+% day1_seg1_heuristic/gain.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Gain Computation}}
+ \begin{itemize}
+  \onslide<2->{\item Even though we've discussed the measurement update processing step, 
+there is an important calculation make just prior the update}
+   \onslide<3->{\item Before we can incorporate the information contained in both
+ the old estimate and the new measurement, we have to first
+ calculate the \textbf{\textit{{Kalman gain}}} $K_k$ at the $k^\text{th}$ step}
+  \onslide<4->{ \item $K_k=\dfrac{1}{k}$ in our running average example}
+  \onslide<5->{ \item If we have $k$ pieces of information \textit{of equal quality}, it 
+seems intuitive that we weight each piece by $1/k$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Kalman Gain Computation}}
+ \begin{itemize}
+ \onslide<2->{\item What we are weighting is the measurement residual, also
+ called the \textit{\textbf{innovation}}:  $z(k)-\hat{x}(k)$}
+ \onslide<3->{\item The innovation contains all the new information, i.e., the new
+ measurement, minus what we thought we already knew, i.e., the previous
+ estimate}
+ \onslide<4->{\item The Kalman gain computation occurs after the extrapolation but
+ before we update the estimate with measurement information}
+ \onslide<5->{\item The Kalman gain is also sometimes referred to as the 'Innovation gain'}
+\end{itemize}
+\end{frame}

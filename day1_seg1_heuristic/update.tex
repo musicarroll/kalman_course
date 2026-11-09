@@ -1,0 +1,115 @@
+% \dayonesegone/update.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Correction (Measurement Update)}
+	\framesubtitle{The Measurement Model}
+	}
+ \begin{itemize}
+  \onslide<2->{\item In the running average example, the update implicitly
+ assumed that measurements were corrupted by white noise}
+   \onslide<3->{\item Measurement model for this would be:\\ $z(k)=x(k)+v(k)$, \\where $x(k)$ is the true state and $v(k)$ is
+   measurement noise sequence}
+   \onslide<4->{\item Simulated measurements are based on this:  We provide a truth model and then add normally distributed 
+   measurement noise samples at time step $k$}
+   \onslide<5->{\item Measurement processing is sometimes called \bfit{Observation} processing}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Correction (Measurement Update)}}
+ \begin{itemize}
+   \onslide<2->{\item Because we assumed that measurement noise was white
+ Gaussian and zero mean, our best guess was simply the average value
+ of all the measurements}
+   \onslide<3->{\item Recall the resistor example:  Voltmeter not
+ perfect and each measurement differs slightly from previous
+ one due to measurement noise, i.e., randomness in the voltmeter}
+   \onslide<4->{
+	\item This randomness is completely independent of any noise that might be disturbing the dynamic process itself
+   }
+   
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Correction (Measurement Update)}}
+ \begin{itemize}
+ \onslide<2->{\item General Kalman filtering complicates the measurement model
+ by adding two new elements:}
+ \begin{itemize}
+ \onslide<3->{\item The measurement may have a more complicated relationship to
+ the underlying system state:  
+\[z(k)=h\left[k,x(k)\right]+v(k),\] 
+where $h$ could be a non-linear function with possible explicit time dependence}
+ \onslide<4->{\item Just as the state $x$ is allowed to be a vector variable, so
+ the measurement $z$ could also be a vector variable}
+ \onslide<5->{\item This means that we can measure several different quantities simultaneously, or use redundant measurements of the same 
+ quantities from different sensors
+ }
+ \onslide<6->{
+	\item Note that the measurement model is a direct algebraic equation, not a differential equation nor a difference equation
+ }
+ 
+ \end{itemize}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{
+	\frametitle{Correction (Measurement Update)}
+	\framesubtitle{Recursive Running Average Revisited}
+}
+ \begin{itemize}
+ \onslide<2->{
+	\item Recall the recursive formulation of the running average
+ }
+ \onslide<3->{
+	\item We used the latest measurement to \textbf{update} (or \textbf{correct}) the last estimate:
+}
+\onslide<4->{\begin{equation}\label{recursiverunavgupdate}
+\stateest{k}{+})=\stateest{k}{-}+K\left[z(k)-\stateest{k}{-}\right]
+\end{equation} 
+\;\;\;\;\;\;\;where the gain is $K=\dfrac{1}{n}$
+}
+ \onslide<5->{
+	\item Note the use of $\stateest{k}{-}$ in the measurement residual.  Ordinarily, we would use $h(\stateest{k}{-})$ instead because the measurement is a function of the state
+	(e.g., it might be in different units of measurement than the state variable)
+}
+
+\end{itemize}
+
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Correction (Measurement Update)} 
+	\framesubtitle{Simultaneous Measurements}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  If we had two voltmeters and make simultaneous measurements of the resistance, our measurement model would look like this 
+}
+  \onslide<3->{
+   \[\colvectwo{z}{2}{k}=
+   \begin{bmatrix}
+   1 & 0 \\
+   0 & 1
+   \end{bmatrix}
+   \colvectwo{x}{2}{k}+\colvectwo{v}{2}{k}\]  
+}
+  \onslide<4->{
+\item Here the $h$ function is a simple 2x2 identity matrix
+}
+  \onslide<5->{
+\item  The noise for each voltmeter would likely be different, unless these units were considered to be identical in precision
+}
+  \onslide<6->{
+\item  The solution of the Kalman gain assumes that the $h$ is a matrix; the letter $H$ is conventionally reserved for the measurement matrix 
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}

@@ -1,0 +1,83 @@
+% day2_seg3_kalstats/kal_assump.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Assumptions} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Your initial state estimate $\hat{x}_0$ is not too far off
+}
+  \onslide<3->{
+ \item Your initial error covariance estimate $P_0$ is not too far off
+}
+  \onslide<4->{
+ \item Process noise is truly white, i.e., uncorrelated in time
+}
+  \onslide<5->{
+ \item Measurement noise is truly white, ie., uncorrelated in time
+}
+  \onslide<6->{
+ \item Measurement noise and process noise are uncorrelated with each other
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Assumptions} 
+	\framesubtitle{Measurement Noise and Process Noise Are Uncorrelated}
+}
+\begin{itemize}
+  \onslide<2->{
+\item The Kalman assumptions require that the process noise and measurement noise be uncorrelated
+\[\expect{w(j)v(k)\trans}=0\]
+for all $j$ and $k$.
+}
+  \onslide<3->{
+\item If this turns out not to be the case, then you have to remodel your filter, perhaps using state space augmentation.  Otherwise, your filter could diverge.
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Assumptions} 
+	\framesubtitle{Measurement Noise and Process Noise Are Uncorrelated: An Exception}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item It is possible to allow for the case:
+\[\expect{w(j)v(k)\trans}=C(j)\]
+when $j=k$ (and 0 otherwise).
+}
+  \onslide<3->{
+  \item This leads to modification of the Kalman equations which incorporate the $C(j)$ cross covariance matrix.
+}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Kalman Assumptions} 
+	\framesubtitle{Linearity}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item System dynamics are linear
+	\begin{itemize}
+		\item To use Kalman filtering in nonlinear situations, some sort of linearization has to be introduced
+	\end{itemize}
+}
+  \onslide<3->{
+  \item Relationship of measurement to state is linear
+	\begin{itemize}
+		\item Again, if this is not the case, then some kind of linearization has to take place
+	\end{itemize}
+}
+\end{itemize}
+\end{frame}

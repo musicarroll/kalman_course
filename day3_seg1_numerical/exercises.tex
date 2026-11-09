@@ -1,0 +1,34 @@
+% day2_seg4_numerical/exercises.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Exercises} 
+}
+\begin{itemize}
+  \onslide<2->{
+\item   1. Let $v=[1\;\; -2]\trans$.  Compute the positive definite, symmetrix matrix $M=vv\trans$
+
+}
+  \onslide<3->{
+\item   2. Use the following algorithm (Grewal \& Andrews) to factor $M$ into $UDU\trans$ form:
+}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Exercises} 
+\begin{verbatim}
+for j=m:-1:1
+    for i=j:-1:1
+        covar=P(i,j);
+        for k=j+1:m
+            covar=covar-U(i,k)*D(k,k)*U(j,k);
+        end
+        if i==j
+            D(j,j)=covar;
+            U(j,j)=1;
+        else
+            U(i,j)=covar/D(j,j);
+        end
+    end
+end
+\end{verbatim}
+\end{frame}

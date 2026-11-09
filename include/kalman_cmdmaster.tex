@@ -1,0 +1,631 @@
+
+% Latex shortcuts:
+\newcommand{\bfit}[1]{\textbf{\textit{#1}}}
+%Decorations:
+\input{\includes/taylor.tex}
+\input{\includes/gensymdefs.tex}
+\newcommand{\highbar}[1]{\overset{\overline{\hspace{6pt}\vspace{1pt}}}{#1}}
+\newcommand{\widebar}[1]{\overset{\overline{\hspace{10pt}}}{#1}}
+% Document Structure:
+\newcommand{\subsubsubsection}[2]{\textbf{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.#1 #2 }}
+% Sets:
+\newcommand{\st}{\; : \;}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\demorganone}{X\setminus (A\cap B)=(X\setminus A) \cup (X\setminus B)}
+\newcommand{\demorgantwo}{X\setminus (A\cup B)=(X\setminus A) \cap (X\setminus B)}
+\newcommand{\simpledemorganone}{(A\cap B)'=A' \cup B'}
+\newcommand{\simpledemorgantwo}{(A\cup B)'=A' \cap B'}
+\newcommand{\arbunion}{\bigcup_{i\in I}A_i = \set{a: (\exists i)[i\in I \wedge a\in A_i]}}
+\newcommand{\arbintersection}{\bigcap_{i\in I}A_i = \set{a: (\forall i)[i\in I \Rightarrow a\in A_i]}}
+\newcommand{\intdistunion}{A\cap (B\cup C)=(A\cap B)\cup (A\cap C)}
+\newcommand{\uniondistint}{A\cup(B\cap C)=(A\cup B)\cap(A\cup C)}
+\newcommand{\crect}[2]{[#1,#2]\times[#1,#2]}
+
+% Relations and Functions:
+\newcommand{\dom}[1]{\text{dom}\left(#1\right)}
+\newcommand{\rng}[1]{\text{rng}\left(#1\right)}
+\newcommand{\To}{\longrightarrow}
+% Vectors, Matrices, Norms, Dot Products
+
+\newcommand{\scolvec}[2]{
+\begin{bmatrix}
+#1_1\\
+\vdots\\
+#1_#2 
+\end{bmatrix}}
+
+\newcommand{\coltwovec}[1]{
+	\begin{bmatrix}
+		#1_1\\
+		#1_2 
+\end{bmatrix}}
+
+\newcommand{\scolveck}[3]{
+\begin{bmatrix}
+#1_1(#3)\\
+\vdots\\
+#1_#2(#3) 
+\end{bmatrix}}
+
+\newcommand{\coltwoveck}[2]{
+	\begin{bmatrix}
+		#1_1(#2)\\
+		#1_2(#2) 
+\end{bmatrix}}
+
+\newcommand{\colvec}[2]{
+\begin{bmatrix}
+#1_1\\
+#1_#2
+\end{bmatrix}
+}
+
+\newcommand{\rowvec}[2]{
+\begin{bmatrix}
+#1_1 \ldots #1_#2
+\end{bmatrix}
+}
+
+\newcommand{\rowtwovec}[2]{
+	\begin{bmatrix}
+		#1_1  #1_#2
+	\end{bmatrix}
+}
+
+\newcommand{\colvectwo}[3]{
+\begin{bmatrix}
+#1_1(#3)\\
+#1_#2(#3)
+\end{bmatrix}
+}
+
+
+\newcommand{\colvecthree}[2]{
+\begin{bmatrix}
+#1_1^{#2}\\
+#1_2^{#2}\\
+#1_3^{#2} 
+\end{bmatrix}}
+
+\newcommand{\rowvecthree}[2]{
+\begin{bmatrix}
+#1_1^{#2}, #1_2^{#2}, #1_3^{#2} 
+\end{bmatrix}}
+
+\newcommand{\colvecsum}[3]{
+\begin{bmatrix}
+#1_1+#2_1\\
+#1_2+#2_2\\
+#1_#3+#2_#3 
+\end{bmatrix}
+}
+
+\newcommand{\colvecthreesum}[2]{
+#1_3+#2_3 
+}
+
+\newcommand{\colveck}[3]{
+\begin{bmatrix}
+#1_{#3 1}\\
+#1_{#3 2}\\
+#1_{#3#2} 
+\end{bmatrix}
+}
+
+\newcommand{\altcolveck}[3]{
+\begin{bmatrix}
+#1_{1}(#3)\\
+#1_{2}(#3)\\
+#1_{#2}(#3) 
+\end{bmatrix}}
+
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\ip}[2]{\left<#1,#2\right>}
+\newcommand{\dprod}[2]{#1^\top #2}  % x'x
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\normsq}[1]{\dprod{#1}{#1}}
+\newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+\newcommand{\trace}[1]{\text{tr}\left[ #1 \right]}
+\newcommand{\varlist}[2]{#1=1,\ldots,#2}
+\newcommand{\genmat}[1]{\left[ #1 \right]}
+\newcommand{\mat}[3]{
+\begin{bmatrix}
+#1_{11}&\cdots&#1_{1#3}\\
+\vdots&\ddots&\vdots\\
+#1_{#2 1}&\cdots & #1_{#2#3} 
+\end{bmatrix}}
+%\newcommand{\trans}{^{\textsc{\begin{tiny}T\end{tiny}}}}
+\newcommand{\trans}{^\top}
+\newcommand{\B}{
+\begin{bmatrix} 
+0\\
+K
+\end{bmatrix}
+}
+\newcommand{\C}{
+\begin{bmatrix} 
+b_o & b_1 & \cdots & b_{m-1}
+\end{bmatrix}
+}
+\newcommand{\skewsymmat}[4]{
+\begin{bmatrix}
+ 0 & -#1_{#4} & #1_{#3}\\
+ #1_{#4}& 0 & -#1_{#2}\\
+-#1_{#3} & #1_{#2} & 0
+\end{bmatrix}
+}
+\newcommand{\skewsymmatone}[4]{
+\begin{bmatrix}
+ 1 & -#1_{#4} & #1_{#3}\\
+ #1_{#4}& 1 & -#1_{#2}\\
+-#1_{#3} & #1_{#2} & 1
+\end{bmatrix}
+}
+% State Space Notation:
+\newcommand{\qloss}{\tilde{x}^\top\tilde{x}} %\top = top TRUE symbol in logic used for transpose.
+\newcommand{\Gint}{\int_{t_0}^{t}\Phi(t,\tau)G(\tau)w(\tau)d\tau}
+\newcommand{\Lint}{\int_{t_0}^{t}\Phi(t,\tau)L(\tau)u(\tau)d\tau}
+\newcommand{\Xhat}{\hat{X}_i(t)}
+\newcommand{\Xo}{X_{0i}(t)}
+\newcommand{\xdot}{\colvec{\dot{x}}{n}}
+\newcommand{\state}{\scolvec{x}{n}}
+\newcommand{\statek}{\scolveck{x}{n}{k}}
+\newcommand{\procnoisek}{\scolveck{w}{n}{k}}
+\newcommand{\altstatek}{\altcolveck{x}{n}{k}}
+\newcommand{\sxdot}{\scolvec{\dot{x}}{n}}
+\newcommand{\sstate}{\scolvec{x}{n}}
+\newcommand{\expstm}{\exp\left[A(t-t_0)\right]}
+\newcommand{\expstmalt}{\exp\left[F(t-t_0)\right]}
+% Kalman Specific Notation:
+\input{\includes/kfspecific.tex}
+% Statistical Notation:
+\newcommand{\gvpdf}{\frac{1}{\sqrt{(2\pi)^n \det(C)}}
+  \exp\left[ -\frac{1}{2}(x-\mu)\trans C^{-1} (x-\mu) \right]}
+\newcommand{\variance}[1]{\text{Var}(#1)}
+\newcommand{\sigsq}[1]{\sigma^2_{#1}}
+\newcommand{\cov}[2]{\text{Cov}(#1,#2)}
+\newcommand{\covdef}[2]{\cov{#1}{#2}:=\expect{(#1-\mu{#1})(#2-\mu{#2})}}
+\newcommand{\corrdef}[2]{\rho_{#1#2}:=\dfrac{\cov{#1}{#2}}{\sigma_{#1}\sigma_{#2}}}
+\newcommand{\std}[1]{\sqrt{\variance{#1}}}
+\newcommand{\expect}[1]{\text{E}\left[#1\right]}
+\newcommand{\shortexp}[1]{\text{E}#1}
+\newcommand{\msconv}{\xrightarrow{\text{m.s.}}}
+\newcommand{\samplemean}[1]{\bar{#1}}
+\newcommand{\samplemeandef}[1]{\samplemean{#1}:=\dfrac{1}{N}\sum_{i=1}^{N} #1_{i}}
+\newcommand{\samplevar}[1]{s^2_{#1}}
+\newcommand{\samplevardef}[1]{\samplevar{#1}:=\dfrac{1}{N-1}\sum_{i=1}^{N} (#1_{i}-\samplemean{#1})^2}
+\newcommand{\samplecov}[2]{s^2_{#1#2}}
+\newcommand{\samplecovdef}[2]{s^2_{#1#2}:=\dfrac{1}{N-1}\sum_{i=1}^{N}(#1-\samplemean{#1})(#2-\samplemean{#2})}
+\newcommand{\samplecorrdef}[2]{r_{#1#2}:=\dfrac{\samplecov{#1}{#2}}{s_{#1}s_{#2}}}
+% Various integrals:
+\newcommand{\minfint}[1]{\underbrace{\int_{-\infty}^{+\infty}\cdots}}
+\newcommand{\rsintfull}[4]{\int_{#1}^{#2}#3(t)d#4(t)}
+\newcommand{\rsint}[2]{\rsintfull{a}{b}{#1}{#2}}
+\newcommand{\drsint}[2]{\iint\limits_{\crect{a}{b}}#1(s)#1(t)d_{s}d_{t}#2(s,t)}
+\newcommand{\rint}[1]{\int_{a}^{b}#1dt}
+\newcommand{\infint}{\int\limits_{-\infty}^{\infty}}
+\newcommand{\limint}{\lim_{T\rightarrow \infty}\frac{1}{T}\int_0^T}
+\newcommand{\halfint}{\int\limits_0^{\infty}}
+\newcommand{\halfintplus}{\int\limits_{0^+}^{\infty}}
+% Derivatives:
+\newcommand{\deriv}[2]{\dfrac{d#1}{d#2}}
+\newcommand{\secondderiv}[2]{\dfrac{d^2#1}{d#2^2}}
+\newcommand{\pderiv}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\ppderivop}[1]{\dfrac{\partial^2}{\partial#1^2}}
+%\newcommand{\pderiv}[1]{\left[\partial / \partial #1\right]}
+\newcommand{\grad}[2]{\dfrac{\partial #1}{\partial #2}}
+% Differential and Difference equations:
+\newcommand{\diffeq}{\sum_{i=0}^{n}a_i\frac{d^iy}{dt^i} = \sum_{i=0}^{m}b_i\frac{d^iu}{dt^i}}
+\newcommand{\armaeq}{\sum_{i=0}^na_{n-i}y(k+n-i) = \sum_{i=0}^mb_{m-i}u(k+m-i)}
+\newcommand{\armaeqfull}{a_ny(n+k)+\cdots+a_0y(k)=b_mu(k+m)+\cdots+b_0y(k)}
+\newcommand{\companion}{
+\begin{bmatrix}
+0 & 1 & 0 & \cdots & 0 & 0\\
+0 & 0 & 1 & \cdots & 0 & 0\\
+\vdots &  &  &  &  & \vdots\\
+0 & 0 & 0 & \cdots & 0 & 0\\
+-a_0 & -a_1 & -a_2 & \cdots & -a_{n-2} & -a_{n-1}
+\emd{bmatrix}
+}
+\newcommand{\taylor}[3]{#1(#2)=#1(#3)+\dot{#1}(#3)(#2-#3)+\frac{1}{2!}\ddot{#1}(#3)(#2-#3)^2+\cdots}
+\newcommand{\gentaylorsingle}[3]{#1(#2)=#1(#3)+\dfrac{d#1}{d#2}(#3)(#2-#3)+\dfrac{1}{2!}\dfrac{d^2#1}{d#2^2}(#3)(#2-#3)^2+\cdots}
+\newcommand{\gentaylordouble}[5]{#1(#2,#3)
+&=#1(#4,#5)+#1_{#2}(#4,#5)(#2-#4)+#1_{#3}(#4,#5)(#3-#5)\\
+&+\;\;\;\dfrac{1}{2!}(#1_{#2#2}(#4,#5)(#2-#4)^2\\
+&+\;\;\;\;\;\;#1_{#2#3}(#4,#5)(#2-#4)(#3-#5)\\
+&+\;\;\;\;\;\;#1_{#3#3}(#4,#5)(#3-#5)^2)+\cdots}
+% Harmonic Oscillator Equations
+\newcommand{\harmoscdiffeqhom}{m\ddot{x}+c\dot{x}+kx=0}
+\newcommand{\harmoscdiffeqnonhom}{m\ddot{x}+c\dot{x}+kx=w(t)}
+\newcommand{\productrule}{D(f\cdot g)=[Df]\cdot g+f\cdot [Dg]}
+\newcommand{\chainrule}{D(f\circ g) = [Df]\circ g \cdot [Dg]}
+\newcommand{\multichainrule}{D(f\circ g\circ h) = ([Df]\circ g \circ h) \cdot ([Dg] \circ h) \cdot [Dh]}
+\newcommand{\compdist}{(f\cdot g)\circ h=(f\circ h) \cdot (g\circ h)}
+\newcommand{\zetaf}[1]{\exp\left[\frac{1}{#1^2-1}\right]}
+\newcommand{\laplace}{F(s)=\mathcal{L}[f(t)]=\int_{0^+}^{\infty}f(\tau)\exp(-s\tau)d\tau}
+\newcommand{\ithrow}[2]{#1_{(#2)}}
+\newcommand{\jthcol}[2]{#1^{(#2)}}
+\newcommand{\ijthelem}[1]{\left[ #1 \right]_{(i,j)}}
+% INS/GPS specific:
+\input{\includes/insgpsdefs.tex}
+% Navigation Quantities:
+\input{\includes/naveqdefs.tex}
+% Error Dynamics Equations:
+\input{\includes/errdyneqdefs.tex}
+% rate integrals:
+\newcommand{\eratevec}{\rotvec{I}{E}}
+\newcommand{\rotvec}[2]{\omega_{#1#2}}
+\newcommand{\rotmat}[2]{\Omega_{#1#2}}
+\newcommand{\erate}{\Omega_e}
+\newcommand{\eradius}{R_e}
+\newcommand{\erateval}{\erate=7.2921151467\times 10^{-5} \text{ rad/sec}}
+\newcommand{\eradiusval}{\eradius=6,378,137 \text{ meters}}
+\newcommand{\eratex}{\Omega_x}
+\newcommand{\eratexeq}{\eratex&=\erate\cos\lat\sin\alpha}
+\newcommand{\eratey}{\Omega_y}
+\newcommand{\erateyeq}{\eratey&=\erate\cos\lat\cos\alpha}
+\newcommand{\eratez}{\Omega_z}
+\newcommand{\eratezeq}{\eratez&=\erate\sin\lat}
+\newcommand{\avgearth}{\highbar{\Omega}_i}
+\newcommand{\avgeartheq}{\avgearth = \intdeltaT \Omega_i(t) dt,\forxyz}
+% relative rates or transport rates:
+\newcommand{\trate}{\rotvec{E}{L}}
+\newcommand{\avgrelvec}{\highbar{\rho}}
+\newcommand{\avgrel}{\highbar{\rho}_i}
+\newcommand{\avgreleq}{\avgrel=\intdeltaT \rho_i dt,\forxyz}
+\newcommand{\avgrelx}{\highbar{\rho}_x}
+\newcommand{\avgrelxeq}{\avgrelx&=-\dfrac{\highbar{V}_y}{R}}
+\newcommand{\avgrely}{\highbar{\rho}_y}
+\newcommand{\avgrelyeq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+\newcommand{\avgrelz}{\highbar{\rho}_z}
+\newcommand{\avgrelxspheroideq}{\avgrelx&=
+-\dfrac{\highbar{V}_y}{R}(1-\dfrac{h}{R})}
+\newcommand{\avgrelyspheroideq}{\avgrely&=\dfrac{\highbar{V}_x}{R}}
+\newcommand{\avgspatial}{\highbar{\omega}_i}
+\newcommand{\avgspatialeq}{\avgspatial = \avgearth + \avgrel,\forxyz}
+\newcommand{\avgCoriolis}{\highbar{\omega}_{ci}}
+\newcommand{\avgCorioliseq}{\avgCoriolis=\avgearth + \avgspatial}
+\newcommand{\Schulerfreq}{\omega_s}
+\newcommand{\Schulerfreqeq}{\Schulerfreq = \sqrt{\frac{g}{R}}}
+\newcommand{\localgeq}{g=\dfrac{A^2}{R^2}g_0}
+% body to nav transforms:
+\newcommand{\dcm}[2]{C_{#1}^{#2}}
+\newcommand{\compdcm}[2]{\widehat{C}_{#1}^{#2}}
+\newcommand{\bodytoll}{C_B^L}
+\newcommand{\lltoearth}{C_L^E}
+\newcommand{\earthtoll}{C_E^L}
+\newcommand{\bodytonav}[1]{C_B^L(#1)}
+\newcommand{\Ctminuseq}{\bodytonav{t^{-}}=\Ctzero \bodytonav{0}}
+\newcommand{\Ctzero}{C_{t0}}
+\newcommand{\Ctzeroeq}{
+C_{t0}=\bodytonav{t^{-}}\bodytonav{0}\trans=
+\skewsymmatone{p}{x}{y}{z} + 2^{\text{nd}}\text{ order terms} }
+\newcommand{\Ctzerocomm}[2]{\dfrac{1}{2}\left[\Ctzero(#1,#2)-\Ctzero(#2,#1)\right]}
+\newcommand{\peq}[3]{p_{#1}&=\dfrac{\theta_{#1} }
+{\theta}\sin\theta=\Ctzerocomm{#2}{#3}}
+\newcommand{\avgbodytoll}{\highbar{C}_B^L}
+\newcommand{\avgbodytolleq}{\avgbodytoll=\intdeltaT \bodytoll dt}
+\newcommand{\croll}{\cos\phi}
+\newcommand{\sroll}{\sin\phi}
+\newcommand{\cpitch}{\cos\theta}
+\newcommand{\spitch}{\sin\theta}
+\newcommand{\cyaw}{\cos\psi}
+\newcommand{\syaw}{\sin\psi}
+\newcommand{\bodytolleq}{\bodytoll&=
+\cpitch\syaw & \syaw\spitch\sroll+\cyaw\croll & \syaw\spitch\croll
+- \cyaw\sroll\\
+\cpitch\cyaw & \cyaw\spitch\sroll-\syaw\croll &
+\cyaw\spitch\croll+\syaw\sroll\\
+\spitch & -\cpitch\sroll & -\cpitch\croll
+}
+% Integrals of velocity (average velocity):
+\newcommand{\avgvelvec}{\highbar{V}}
+\newcommand{\avgvel}{\highbar{V}_i}
+\newcommand{\avgveleq}{\avgvel=\intdeltaT V_i dt, \forxyz}
+\newcommand{\sensedaccel}{\highbar{A}_{Bi}}
+\newcommand{\sensedacceleq}{\sensedaccel = \intdeltaT A_{Bi} dt, \forXYZ}
+\newcommand{\sensedrate}{\highbar{\omega}_{Bi}}
+\newcommand{\sensedrateeq}{\sensedrate = \intdeltaT \omega_{Bi} dt, \forXYZ}
+\newcommand{\sensedaccellev}{\highbar{A}_{L}}
+\newcommand{\sensedaccelleveq}{\sensedaccellev = \intdeltaT \bodytoll A_{B} dt}
+\newcommand{\avgbodyaccel}{A_{aBi}}
+\newcommand{\avgbodyacceleq}{\avgbodyaccel=\frac{\sensedaccel}{\Delta T}, \forXYZ}
+\newcommand{\avgbodyrate}{\omega_{aBi}}
+\newcommand{\avgbodyrateeq}{\avgbodyrate=\frac{\sensedrate}{\Delta T}, \forXYZ}
+\newcommand{\psix}{\psi_x}
+\newcommand{\psixeq}{\psix &= \phi_x + \frac{\Delta R_y}{R}}
+\newcommand{\psiy}{\psi_y}
+\newcommand{\psiyeq}{\psiy &= \phi_y - \frac{\Delta R_x}{R}}
+% Position Derivatives:
+\newcommand{\posderivx}{\delta R_x}
+\newcommand{\posderivxeq}{\posderivx &= \Delta V_x \Delta T+\highbar{V}_y\psi_z-\highbar{V}_z\phi_y-\avgrely\Delta R_z}
+\newcommand{\stmposerrxeq}{\poserr_x(k+1)=\poserr_x(k)+
+0 & 0 & \avgrely & \Delta T & 0 & 0 & 0 & -\highbar{V}_z &
+\highbar{V}_y & 0\; \cdots
+\state}
+\newcommand{\posderivy}{\delta R_y}
+\newcommand{\posderivyeq}{\posderivy &= \Delta V_y \Delta T+\highbar{V}_z\phi_x-\highbar{V}_x\psi_z+\avgrelx\Delta R_z}
+\newcommand{\posderivz}{\delta R_z}
+\newcommand{\posderivzeq}{\posderivz &= \Delta V_z \Delta T+\highbar{V}_x\phi_y-\highbar{V}_y\phi_x+\avgrely\Delta R_x-\avgrelx\Delta R_y}
+\newcommand{\posderiv}{\delta R}
+\newcommand{\posderiveq}{\posderiv = \Delta V \Delta T + \highbar{V}\times \psistar - \avgrelvec \times \Delta R}
+% Attitude Derivatives:
+\newcommand{\attderivx}{\delta \phi_x}
+\newcommand{\attderivxeq}{\attderivx &= \highbar{\omega}_z \psi_y -\highbar{\omega}_y\psi_z-\frac{\delta R_y}{R}+\highbar{\epsilon}_x}
+\newcommand{\attderivy}{\delta \phi_y}
+\newcommand{\attderivyeq}{\attderivy &= \highbar{\omega}_x \psi_z -\highbar{\omega}_z\psi_x+\frac{\delta R_x}{R}+\highbar{\epsilon}_y}
+\newcommand{\attderivz}{\delta \psi_z}
+\newcommand{\attderivzeq}{\attderivz &= \highbar{\omega}_y \psi_x -\highbar{\omega}_x\psi_y+\highbar{\epsilon}_z}
+% Psi and Psi*
+\newcommand{\psistar}{\psi^*}
+\newcommand{\psistareq}{\psistar =
+\phi_x\\
+\phi_y\\
+\psi_z
+}
+\newcommand{\dpsistar}{\delta\psi^*}
+\newcommand{\dpsistareq}{\dpsistar =
+\delta\phi_x\\
+\delta\phi_y\\
+\delta\psi_z
+}
+\newcommand{\psieq}{\psi =
+\psi_x\\
+\psi_y\\
+=
+\phi_x + \vspace{5 pt}\dfrac{\Delta R_y}{R}\\
+\phi_y - \dfrac{\Delta R_x}{R}
+}
+\newcommand{\psidoteq}{\dot{\psi}=-\omega\times\psi+\epsilon}
+\newcommand{\angposerr}{\delta \theta}
+\newcommand{\angposerreq}{\angposerr=
+-\dfrac{\Delta R_y}{R}\vspace{5 pt}\\
+\;\;\dfrac{\Delta R_x}{R}\;\vspace{5 pt}\\
+0}
+\newcommand{\xop}[1]{\left[\; #1\times \; \right]}
+\newcommand{\xopdef}[1]{
+\begin{bmatrix}
+0 & #1_z & -#1_y\\
+-#1_z & 0 & #1_x\\
+#1_y & -#1_x & 0
+\end{bmatrix}
+}
+\newcommand{\vxomegax}{\xop{V}\xop{\Omega}}
+\newcommand{\vxomegaxeq}{\vxomegax=\xopdef{V}\xopdef{\Omega}}
+\newcommand{\T}{T}
+\newcommand{\Teq}{\T=\frac{1}{\Delta T}\left[ \dpsistar + \highbar{\omega}_c\times \psistar \right]}
+\newcommand{\altTeq}{\T=\frac{1}{\Delta T}\left[\: \highbar{\Omega}\times \psistar + \highbar{\epsilon}\: \right]}
+\newcommand{\dV}{\delta V}
+\newcommand{\dVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+\newcommand{\altdVeq}{\dV=\Delta V\times \highbar{\omega}_c + \T\times \highbar{V} }
+\newcommand{\Corratecrossop}{\xop{\highbar{\omega}_c}}
+\newcommand{\Corratecrossopeq}{\Corratecrossop=
+ 0 & -\highbar{\omega}_{cz} & \highbar{\omega}_{cy}\\
+\highbar{\omega}_{cz} & 0 & -\highbar{\omega}_{cx}\\
+-\highbar{\omega}_{cy} & \highbar{\omega}_{cx} & 0
+}
+% Alternative rate coupling:
+\newcommand{\delRdot}{\Delta\dot{R}}
+\newcommand{\delRdoteq}{\delRdot=\Delta V+V\times\psi-\rho\times\Delta R}
+% Velocity Derivatives:
+\newcommand{\velderivx}{\delta V_x}
+\newcommand{\velderivxeq}{\velderivx &\leftarrow \velderivx - g\phi_y\Delta T +\highbar{\nabla}_x}
+\newcommand{\velderivy}{\delta V_y}
+\newcommand{\velderivyeq}{\velderivy &\leftarrow \velderivy + g\phi_x\Delta T +\highbar{\nabla}_y}
+\newcommand{\velderivz}{\delta V_z}
+\newcommand{\velderivzeq}{\velderivz &\leftarrow \velderivz + 2\Schulerfreq^2\Delta R_z\Delta T +\highbar{\nabla}_z}
+% Accelerometer errors:
+\newcommand{\accelsfmismat}{\accelsfmat}
+\newcommand{\accelsfmis}{\ijthelem{\accelsfmismat}}
+\newcommand{\accelerrbody}{\nabla_{Bi}}
+\newcommand{\accelerrbodyeq}{\accelerrbody=\accelbias{i} + \sum_{j\in\set{X,Y,Z}}\accelsfmis A_{aBj}}
+\newcommand{\accelerrlev}{\highbar{\nabla}_{i}}
+\newcommand{\accelerrleveq}{\accelerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \nabla_{Bj}, \forxyz}
+% Gyro errors:
+\newcommand{\gyrosfmismat}{\gyrosfmat}
+\newcommand{\gyrosfmis}{\ijthelem{\gyrosfmismat}}
+\newcommand{\gyroerrbody}{\epsilon_{Bi}}
+\newcommand{\gyroerrbodyeq}{\gyroerrbody=\gyrobias{i} + \sum_{j\in\set{X,Y,Z}}\gyrosfmis \omega_{aBj}, \forxyz}
+\newcommand{\gyroerrlev}{\highbar{\epsilon}_{i}}
+\newcommand{\gyroerrleveq}{\gyroerrlev=\sum_{j\in\set{X,Y,Z}}\ijthelem{\avgbodytoll} \epsilon_{Bj}}
+\newcommand{\simprateerreq}[3]{\epsilon\omega_#1=\gyrobias{#1}+\gyrosf{#1}\omega_#1 + \gyromisalign{#1}{#2}\omega_#2 + \gyromisalign{#1}{#3}\omega_#3}
+\newcommand{\simpaccelerreq}[3]{\epsilon a_#1=\accelbias{#1}+\accelsf{#1}a_#1+ \accelmisalign{#1}{#2}a_#2 + \accelmisalign{#1}{#3}a_#3}
+\newcommand{\gyromisalign}[2]{\theta_{g#1#2}}
+\newcommand{\accelmisalign}[2]{\theta_{a#1#2}}
+% Distribution Matrices
+\newcommand{\distmat}[1]{C_{Q#1}}
+\newcommand{\distmateq}{\distmat{j}=
+C_{xj}^2 & C_{xj}C_{yj} & C_{xj}C_{zj}\\
+C_{yj}C_{xj} & C_{yj}^2 &C_{yj}C_{zj}\\
+C_{zj}C_{xj} & C_{zj}C_{xj} & C_{zj}^2
+}
+\newcommand{\distmatpropeq}{\ijthelem{C_{Qk}}=C_{ik}C_{jk}}
+% Accelerometer Error Model
+\newcommand{\velvecbody}{V_B(t_n)}
+\newcommand{\velvecbodyelem}[1]{\V_{B#1}}
+\newcommand{\velvecbodyeq}{\velvecbody=\left[\bodytoll\right]\trans V(t_{n})}
+\newcommand{\dvelbody}{\Delta V_B(t_n)}
+\newcommand{\dvelbodyeq}{\dvelbody=V_B(t_{n})-V_B(t_{n-1})}
+\newcommand{\accelprocnoise}{r_{\Delta V i}}
+\newcommand{\accelwhitenoise}{q_{vwi}}
+\newcommand{\accelprocnoiseeq}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{V_{Bj}^2(t_n)-V_{Bj}^2(t_{n-1})}+\accelwhitenoise\Delta T}
+\newcommand{\accelprocnoiseeqalt}{\accelprocnoise = \sum_{j\in\set{X,Y,Z}}\accelsf{ij}^2\abs{\Delta V_{Bj}(t_n)\left[V_{Bj}(t_{n})+V_{Bj}(t_{n-1})\right]}+\accelwhitenoise\Delta T}
+\newcommand{\velstatenoise}{Q_{\Delta V}}
+\newcommand{\velstatenoiseeq}{\velstatenoise
+=\sum_{j\in\set{X,Y,Z}}\accelprocnoise\distmat{i}}
+% Gyro Error Model
+\newcommand{\bodyrateint}{\highbar{\omega}_{Bi}(t_n)}
+\newcommand{\bodyrateinteq}{\bodyrateint = \int\limits_{t_n-\Delta
+T}^{t_n}\omega_{Bi}dt}
+\newcommand{\gyroprocnoise}{r_{\Delta \phi i}}
+\newcommand{\gyroprocnoiseeq}{\gyroprocnoise=\sum_{j\in\set{X,Y,Z}}\gyrosf{ij}^2\left[
+\bodyrateint \right]^2 + H_{\epsilon \omega i}\Delta T}
+\newcommand{\attstatenoise}{Q_{\Delta \phi}}
+\newcommand{\unmodelledgsensdrift}{\epsilon_{Gg}^2}
+\newcommand{\attstatenoiseeq}{\attstatenoise=\sum_{i\in\set{X,Y,Z}}\gyroprocnoise \distmat{i}
++\unmodelledgsensdrift\sum_{i\in\set{X,Y,Z}}\abs{V_{Bi}^2(t_n)-V_{Bi}^2(t_{n-1})}}
+% Measurement Processing:
+\newcommand{\poschangeeq}{P_i(n)=\avgvel + P_i(n-1)}
+\newcommand{\faposmeas}{z_{\Delta R i}=P_i(n)}
+\newcommand{\posmeasmateq}{H_{\Delta R i}(j)=1}
+\newcommand{\hdgchangemeas}{z_{\Delta\psi z}}
+\newcommand{\hdgchangemeaseq}{\hdgchangemeas=\theta_z}
+\newcommand{\hdgchangemeasmat}{H_{\Delta\psi z}}
+\newcommand{\hdgchangemeasmateq}{\hdgchangemeasmat(11)=1}
+\newcommand{\gpsantennapos}{\Delta \highbar{P}_{PRF}}
+\newcommand{\gpsantennaposecef}{\Delta \highbar{P}_{PRE}}
+\newcommand{\gpsantennaposdelta}{\Delta \highbar{P}_{DPRF}}
+\newcommand{\gpsantennaposdeltaecef}{\Delta \highbar{P}_{DPRE}}
+\newcommand{\gpsantennaposecefeq}{\gpsantennaposecef=\left[\earthtoll\right]\trans \gpsantennapos}
+\newcommand{\gpsantennaposdeltaecefeq}{\gpsantennaposdeltaecef=\left[\earthtoll\right]\trans \gpsantennaposdelta}
+\newcommand{\prn}{\text{PRN}}
+\newcommand{\ctow}{T_{\text{SVC}}}
+\newcommand{\ftow}{T_{\text{SVF}}}
+\newcommand{\ecefposvec}{\highbar{R}_{\text{SV}}}
+\newcommand{\ecefposveceq}{\ecefposvec&=\highbar{R}_0+\dot{\highbar{R}}_0\Delta T_{\text{F}}+\ddot{\highbar{R}}_0\Delta T_{\text{F}}^2}
+\newcommand{\ecefvelvec}{\dot{\highbar{R}}_{\text{SV}}}
+\newcommand{\ecefvelveceq}{\ecefvelvec&=\dot{\highbar{R}}_0+2\ddot{\highbar{R}}_0\Delta T_{\text{F}}}
+\newcommand{\ecefhalfaccelvec}{\ddot{\highbar{R}}_{\text{SV}}}
+\newcommand{\ecefhalfaccelveceq}{\ecefhalfaccelvec&=\ddot{\highbar{R}}_0}
+\newcommand{\clockerr}{\rho_{\text{SV}}}
+\newcommand{\clockerreq}{\clockerr&=\rho_0}
+\newcommand{\clockerrrate}{\dot{\rho}_{\text{SV}}}
+\newcommand{\clockerrrateeq}{\clockerrrate&=\dot{\rho}_0+\ddot{\rho}\Delta T_{\text{F}}}
+\newcommand{\posvar}{\sigma^2_{\text{SV}}}
+\newcommand{\svf}{\text{SVF}}
+\newcommand{\rotangle}{\theta_p}
+\newcommand{\propdelay}{t_{p1}}
+\newcommand{\rotangleeq}{\rotangle=\erate \propdelay}
+\newcommand{\rngvec}{S_f}
+\newcommand{\rngvecbar}{\highbar{S}_f}
+\newcommand{\rngvecbareq}{\rngvecbar=\highbar{R}_{\text{S}}-\highbar{R}_{\text{AE}}}
+\newcommand{\rngveceq}{\rngvec=\sqrt{S_{fX}^2+S_{fY}^2+S_{fZ}^2}}
+\newcommand{\losuvecef}{\highbar{u}_{Ef}}
+\newcommand{\losuvnav}{\highbar{u}_{Nf}}
+\newcommand{\losunitveceqe}{\losuvecef=(\dfrac{1}{\rngvec})\rngvecbar}
+\newcommand{\CNEF}{\left[C_{NEF}\right]}
+\newcommand{\losunitveceqn}{\losuvnav=\CNEF\losuvecef}
+\newcommand{\navaxlosveceq}{\highbar{u}_N=\left[u_{Nf}\right]_{SPF}}
+\newcommand{\propdelayeq}{\propdelay=\dfrac{\rngvec}{c}}
+\newcommand{\delayrateeq}{\text{If }t_p\neq0 \text{ then } \Delta t_p=\propdelay - t_p}
+\newcommand{\nextdelayeq}{t_p=\propdelay}
+\newcommand{\zenithangeq}{\cos(z)=\sqrt{(K_{I0}u_{Nz})^2+K_{I1}}}
+\newcommand{\rangetointerseceq}{\Delta u_I=r_I/R_I=\cos(z)-K_{I0}u_{Nz}}
+\newcommand{\obliquityfactoreq}{F_I=r_I/h_I=K_{I2}\Delta u_I}
+\newcommand{\vertuvnaveq}{  \begin{split}
+  u_{INx}&=\Delta u_I u_{Nx}\\
+  u_{INy}&=\Delta u_I u_{Ny}\\
+  u_{INz}&=\Delta u_I u_{Nz}+K_{I0}\\
+\end{split}
+}
+\newcommand{\vertuvecefeq}{\highbar{u}_{IE}=\CNEF\trans \highbar{u}_{IN}}
+\newcommand{\maglat}{\phi_M}
+\newcommand{\maglateq}{\maglat=\sin^{-1}(\highbar{u}_{IE}\cdot\highbar{u}_{ME})\text{
+semi-circles}}
+\newcommand{\longintersecteq}{\lambda_I=\tan^{-1}(u_{IEY}/u_{IEX})\text{   semi-circles}}
+\newcommand{\localtimeeq}{T_L=43200\lambda_I+T_{\text{GPS}}}
+\newcommand{\periodeq}{T_P=\left[(\beta_3\maglat+\beta_2)\maglat+\beta_1\right]\maglat+\beta_0}
+\newcommand{\limitperiodeq}{\text{If }T_P\geq 72000, \text{ then } T_P=7200 }
+\newcommand{\phaseshifteq}{\theta=(T_L-50400)/T_P\text{   circles}}
+\newcommand{\squaredargtest}{\text{If }\theta^2\geq 0.0625, \text{ then } T_I=5\times 10^{-9}\text{ sec}}
+\newcommand{\alphaeq}{C_I=\left[(\alpha_3\maglat+\alpha_2)\maglat+\alpha_1\right]\maglat+\alpha_0}
+\newcommand{\finalampeq}{T_I=\left[(64.9394\theta^2-19.7392)\theta^2+1\right]+5\times 10^{-9}\text{  sec}}
+\newcommand{\grpdelay}{t_{\text{GD}}}
+\newcommand{\corrmeterseq}{\Delta S_{I}=(\grpdelay-F_I T_I)c_T\text{  meters}}
+\newcommand{\tropocorr}{\rho_{h}}
+\newcommand{\tropocorrecteqone}{\tropocorr=(-2.2395\times10^{-8}h-3.248\times10^{-4})h+2.5119\text{  meters}}
+\newcommand{\tropocorrecteqtwo}{\tropocorr=-0.1191+\exp(0.1226-1.226\times 10^{-4})h\text{  meters}}
+\newcommand{\tropocorrecteqthree}{\tropocorr=0.7376\exp(1.2816-1.424\times 10^{-4})h\text{  meters}}
+\newcommand{\coseleveq}{\cos(E)=\sqrt{u_{Nx}^2+u_{Ny}^2}}
+\newcommand{\sineleveq}{\sin(E)=u_{Nz}}
+\newcommand{\tempstoreqone}{T_1=\sin(E)+0.0455\cos(E)}
+\newcommand{\tempstoreqtwo}{T_2=0.000143\cos(E)+T_1\sin(E)}
+\newcommand{\DeltaSTeq}{\Delta S_T=\tropocorr T_1/T_2}
+\newcommand{\ionotropoeq}{\Delta S_{IT}=\Delta S_T - \Delta S_I}
+\newcommand{\pr}{\text{PR}}
+\newcommand{\pseudorangeeq}{\pr_M=\left[\pr_{SV}\right]_{\text{Fix}}}
+\newcommand{\prfeq}{\pr_F=S_f-\rho_{SV}c+S_{CB}}
+\newcommand{\prmeaseq}{z_{PR}=\left[\pr_{M}-\pr_{F}\right]_{\text{SPF}}-\Delta S_{IT}}
+\newcommand{\prmeasmat}{H_{\text{PR}}}
+\newcommand{\prmeasmateq}{
+  \prmeasmat(1)&=-u_{Nx}\\
+  \prmeasmat(2)&=-u_{Ny}\\
+  \prmeasmat(3)&=-u_{Nz}\\
+  \prmeasmat(13)&=-1
+  }
+\newcommand{\measinterval}{t_d}
+\newcommand{\poschangeecefeq}{\Delta \bar{S}=\ecefvelvec \measinterval - \gpsantennaposdeltaecef}
+\newcommand{\proptimechangeeq}{\Delta\measinterval=(\highbar{u}_E\cdot\Delta \highbar{S})\dfrac{1}{c}}
+\newcommand{\efftimeintervaleq}{t_{dl}=\measinterval-\Delta\measinterval}
+\newcommand{\changesatposecefeq}{\Delta\ecefposvec=t_{dl}(\ecefvelvec-\ecefhalfaccelvec t_{dl})}
+\newcommand{\poschangeroteq}{
+\Delta S_X&=\Delta R_{SVX}+\Delta R_{SVY}\theta_P-\Delta
+P_{DPREX}\\
+\Delta S_Y&=\Delta R_{SVY}-\Delta R_{SVY}\theta_P-\Delta
+P_{DPREY}\\
+\Delta S_Z&=\Delta R_{SVZ}-\Delta P_{DPREZ}
+}
+\newcommand{\uemeq}{\highbar{u}_{Em}=\highbar{u}_{Ef}-\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+\newcommand{\iniestrngeq}{\Delta S = \Delta \highbar{S}\cdot \highbar{u}_{Em}}
+\newcommand{\corrcoeff}{\epsilon/4}
+\newcommand{\corrcoeffeq}{\corrcoeff=\dfrac{1}{S_f}\dfrac{\Delta \highbar{S}}{2}}
+\newcommand{\poschangeeqtwo}{\Delta S=\Delta S+\Delta S (\corrcoeff)}
+\newcommand{\midpointloseq}{\highbar{u}_{Ef}=\highbar{u}_{Ef}+\highbar{u}_{Ef}(\corrcoeff)}
+\newcommand{\midpointlosnaveq}{\highbar{u}_{Nm}=\left[C_{NEF}\right]\highbar{u}_{Em}}
+\newcommand{\dpr}{\text{DPR}}
+\newcommand{\measdpreq}{\dpr_M=\left[\dpr_{SV}\right]_{\text{Fix}}}
+\newcommand{\preddpreq}{\dpr_F=\Delta S-\clockerrrate\measinterval c}
+\newcommand{\dprfiltmeaseq}{z_{DPR}=\left[\dpr_M-\dpr_F\right]_{SPF}}
+\newcommand{\measmatdpr}{H_{\text{DPR}}}
+\newcommand{\measmatdpreq}{
+\measmatdpr(j)&=\left[-u_{Nmx}\right]_{\text{SPF}}\\
+\measmatdpr(j+1)&=\left[-u_{Nmy}\right]_{\text{SPF}}\\
+\measmatdpr(j+2)&=\left[-u_{Nmz}\right]_{\text{SPF}}\\
+\measmatdpr(12)&=\left[-\measinterval \right]
+ }
+% 15-state
+\newcommand{\fsvec}{
+\delta R_X\\
+\delta R_Y\\
+\delta V_X\\
+\delta V_Y\\
+\psi_X\\
+\psi_Y\\
+\psi_Z\\
+\epsilon_x\\
+\epsilon_y\\
+\epsilon_z\\
+\alpha_x\\
+\alpha_y\\
+\delta\theta_Z\\
+\beta_1\\
+\beta_2
+}
+% Note: need to revert to arrays for large matrices:
+\newcommand{\fssdm}{
+\begin{tiny}\left[ \begin{array}{ccccccccccccccc}
+1 & 0 &  T & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0& -V_Y T & 0 & 0\\
+0 & 1 & 0 &  T & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -V_X T & 0 & 0\\
+\phi_{31} & \phi_{32} & 1 & 2\omega_Z T & 0 & -a_Z T & a_Y T& 0 & 0 & 0 & c_{11} T& c_{12} T & a_Y T  & 0 & 0\\
+\phi_{41} & \phi_{42} & \phi_{43} & 1 & a_Z T & 0 & -a_X T & 0 & 0 & 0 &  c_{21} T& c_{22} T& -a_X T & 0 & 0\\
+0&0&0&0&1& \omega_{Z} T & -\omega_Y T &  c_{11} T& c_{12} T & c_{13} T &0&0&0&0&0\\
+0&0&0&0&-\omega_{Z} T& 1 & -\omega_X T &  c_{21} T & c_{22} T& c_{23} T &0&0&0&0&0\\
+0&0&0&0&\omega_{Y} T & -\omega_X T& 1 &  c_{31} T & c_{32} T & c_{33} T &0&0&0&0&0\\
+0&0&0&0&0&0&0&e^{-T/\tau_g}&0&0&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&e^{-T/\tau_g}&0&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&e^{-T/\tau_g}&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&0&e^{-T/\tau_a}&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&0&0&e^{-T/\tau_a}&0&0&0\\
+\dfrac{V_Y T}{R^2}&\dfrac{V_X T}{R^2}&0&0&0&0&0&0&0&0&0&0&1&0&0\\
+0&0&0&0&0&0&0&0&0&0&0&0&0&e^{-T/\tau_N}&0\\
+0&0&0&0&0&0&0&0&0&0&0&0&0&0&e^{-T/\tau_E}\\
+\end{array} \right]
+\end{tiny}
+}
+% \Phi_{31}=(-a_Z + 2V_y\omega_{eX})\dfrac{ T}{R}
+% 2V_y\omega_{eY}\dfrac{ T}{R}
+\input{\includes/ct_kf_cmnds.tex}
+% Canonical 9-states
+\input{\includes/gps_cmds.tex}

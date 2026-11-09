@@ -1,0 +1,10 @@
+% day3_seg4_ins_challenges/exercises.tex
+\begin{slide}
+Exercises
+ \begin{itemize}
+ \item Use Eq. \eqref{deltardoteq}
+\[\deltardoteq,\]
+write the first three rows of the system dynamics matrix $F$ in the continuous Kalman formulation:
+\[\dot{x}=Fx+w\]
+\end{itemize}
+\end{slide}

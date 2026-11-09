@@ -1,0 +1,24 @@
+% day4_seg1_sim/covbump.tex
+\begin{frame}
+Covariance Bumping
+ \begin{itemize}
+ \item Covariance bumping refers to the addition of process noise to keep the filter from going to sleep
+ \item Usually based on ad hoc rules
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+JOVIAL Samples of three different kinds of bumping:
+\begin{verbatim}
+  DEF  ITEM  POSITION'BUMP   STATIC REAL = 10.0;
+  DEF  ITEM  V'BUMP          STATIC REAL = 10.0;
+  DEF  ITEM  COVARIANCE'BUMP STATIC REAL = 50.0;
+...
+  OBS'COV'SCALER = POSITION'BUMP * OBS'COUNT'SCALER;
+...
+  NOISE'VECTOR(3) = (Y'KAL'OBS(INU,11) * OBS'COUNT'SCALER 
+                         * OBS'COV'SCALER * V'BUMP) **2;
+...
+   OBS'COV'SCALER = COVARIANCE'BUMP * OBS'COUNT'SCALER;
+\end{verbatim}
+\end{frame}

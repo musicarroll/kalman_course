@@ -1,0 +1,232 @@
+% day1_seg4_prob/moments.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Moments: Means and Variances of Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item 1st Order Moment: Expectation or Mean  
+}
+  \onslide<3->{
+\item  2nd Order Moment: Variance 
+}
+  \onslide<4->{
+\item Higher Order Moments  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{1st Order Moment: Expectation of a Random Variable}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Let $X$ be a simple random variable and let
+ $a_1,\ldots,a_n$ be the distinct values taken on by $X$.  Then,
+ the expectation operator $\text{E}:SRV\rightarrow \Real$ is defined as
+\begin{equation}\label{simp_expect}
+  \expect{X}=\sum_{i=1}^{n}a_iP(A_i)
+\end{equation}
+where $A_i=X^{-1}\set{a_i}=\set{\omega\in\Omega:X(\omega)=a_i}$.
+}
+  \onslide<3->{
+ \item Thus, the expectation of $X$ is the weighted
+ sum of the values of $X$, the weights being the "size" or likelihood
+ of the events.
+}
+  \onslide<4->{
+ \item It is clear that $X=Y \text{a.s.}\Rightarrow
+ \expect{X}=\expect{Y}$.
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Expectation}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Alternative Integral notation:
+$\expect{X}=\int_{\Omega}XdP$, because the weighted sum given in
+\ref{simp_expect} is just the definition of the integral of $X$
+with respect to the (probability) measure $P$.
+}
+  \onslide<3->{
+ \item It can be shown that every random variable $X$ can be
+ written as the difference of two nonnegative random variables.
+}
+  \onslide<4->{
+ \item It can also be shown that every nonnegative random variable
+ is the limit of a monotone sequence of simple random variables.
+ Therefore, integration can be extended from $SRV(\Omega)$ to $RV(\Omega)$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Expectation}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Note that we did not need the use of a probability distribution nor density in defining the expectation this way.
+}
+  \onslide<3->{
+  \item We only needed the probability function.
+}
+  \onslide<4->{
+  \item Note also that the integration we defined above is abstract in the  sense that it works just as well for general measures, not just probability measures.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Expectation}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Expectation is a linear functional on the space $RV$ of random variables over $\Omega$:
+ \[\expect{aX+bY}=a\expect{X}+b\expect{Y}\]
+}
+  \onslide<3->{
+ \item Expectation is monotonic:
+ \[X\leq Y a.s.\Rightarrow \expect{X}\leq \expect{Y}\]
+}
+  \onslide<4->{
+ \item We can compute $\expect{X}$ by means of an ordinary
+ Riemann-Stieltjes integral:
+}
+  \onslide<5->{
+\begin{equation}\label{expect-RS}
+  \expect{X}= \infint xdF(x)
+\end{equation}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Expectation}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item If $X$ also has a p.d.f, then equation \eqref{expect-RS}
+ becomes:
+\begin{equation}\label{expect-pdf}
+  \expect{X} = \infint xdF(x) = \infint xF'(x)dx = \infint xf(x)dx
+\end{equation}
+}
+  \onslide<3->{
+ \item The expectation of $\exp(juX)$ for each $u\in \Real$ is
+ called the \textit{\textbf{characteristic function}} of $X$:
+\begin{equation}\label{charfunc}
+  \phi_X(u)=\expect{\exp(juX)} = \infint \exp(jux)dF(x)
+\end{equation}
+where $j=\sqrt{-1}$.
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{2nd order moment:  Variance}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The variance of a random variable is defined as the mean square deviation from the mean:
+\[\sigma^2 = \expect{(X-\mu)^2}\]
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Higher Order Moments}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The value of the integral
+ \[m_i=\infint x^nf(x)dx\]
+ is called the $n^{th}$ \textit{\textbf{moment}} of the distribution.  If instead we
+ subtract out the mean $\mu=\expect{X}$ prior to integrating, then we obtain the $n^{th}$
+ \textit{\textbf{central moment}}:
+ \[\mu_i=\infint (x-\mu)^nf(x)dx \]
+}
+  \onslide<3->{
+ \item We note that $\mu=\mu_1$, the first order moment, or mean
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Higher Order Moments}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The characteristic function $\phi_X$ is similar to the \textit{\textbf{moment generating
+ function}} defined as follows:
+\[M_X(t)=\expect{\exp(tX)}\]
+}
+  \onslide<3->{
+ \item If $X$ has a density function $f$, then
+ \[M_X(t)=\infint \exp(tx)f(x)dx\]
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Higher Order Moments}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Note that
+ \[\mu=\expect{X}=\frac{d}{dx}M_X(0)\]
+  and, in general,
+  \[\expect{X^n}=\frac{d^n}{dx^n}M_X(0).\]
+}
+  \onslide<3->{
+ \item The Gaussian distribution has only two fundamental moments $\mu=\expect{X}$ and
+ $\sigma^2=\expect{(X-\mu)^2}$.  All higher-order moments can be
+ expressed in terms of these two.
+}
+  \onslide<4->{
+ \item Thus, the Gaussian distribution is said to be a second-order distribution.
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Covariance and Correlation Between Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Let $X$ and $Y$ be two different random variables, 
+i.e., functions from the sample space $\Omega$ into the reals $\Real$. 
+}
+  \onslide<3->{
+\item Let $\sigsq{X}=\variance{X}$ be the variance of $X$ and $\sigsq{Y}=\variance{Y}$ be the variance of $Y$, 
+and let $\mu_X,\mu_Y$ be their respective means.   
+}
+  \onslide<4->{
+\item The \textbf{covariance} between $X$ and $Y$ is the mean of their product, 
+after removing their means: $\covdef{X}{Y}$ 
+}
+  \onslide<5->{
+\item Their correlation is their covariance normalized by the product of their standard deviations:
+$\corrdef{X}{Y}$
+}
+\end{itemize}
+\end{frame}
+
+

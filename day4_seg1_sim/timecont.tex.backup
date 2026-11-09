@@ -1,0 +1,12 @@
+% day4_seg1_sim/timecont.tex
+\begin{slide}
+Time Constraints
+ \begin{itemize}
+ \item Simulation
+ \begin{itemize}
+ \item offline, non-realtime
+ \item each calculation (transition matrix, Kalman gain, etc.) can run to completion
+ \item do not have to worry about rate group partitioning
+ \end{itemize}
+\end{itemize}
+\end{slide}

@@ -1,0 +1,388 @@
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems} 
+  \framesubtitle{The Concept of State Space}
+}
+  
+\begin{itemize}
+  \onslide<2->{
+\item Time-dependent behavior of \emph{smoothly changing} physical systems are often
+ modeled analytically by \emph{differential equations}
+}
+\begin{itemize}
+  \onslide<3->{
+\item  Called \textbf{dynamic systems} or
+ \textbf{dynamical systems}
+}
+\end{itemize}
+  \onslide<4->{
+	\item  Smooth processes:  Modeled (described / constrained) by continuous, differentiable functions of time
+}
+\begin{itemize}
+	\onslide<5->\item Smooth = continuous \textbf{and} differentiable 
+\end{itemize}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+	\onslide<1->{\frametitle{Dynamic Systems}
+	\framesubtitle{Newton's Laws of Motion} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Newton's first two laws assert what generally happens when a body is subjected to a force   
+		}
+		\onslide<3->{
+			\item Whenever a net force acts on a body, the body's velocity will change, i.e., it will accelerate or decelerate  (First Law)
+		}
+		\onslide<4->{
+			\item Its acceleration will be directly proportional to (and in the same direction as) the applied force, but the acceleration will also be inversely proportional to the body's mass (Second Law)
+		}
+		\begin{itemize}
+		\onslide<5->{
+			\item $a=F/m$ or $F=ma$
+		}
+		\onslide<6->{
+			\item Keeping the body constant, it will exhibit a small acceleration when subjected to a small force, and a larger acceleration when subjected to a larger force
+		}
+		\onslide<7->{
+			\item Under the same constant force, large bodies will exhibit a small acceleration, while small bodies will exhibit a larger acceleration
+		}
+		\end{itemize}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems}
+  \framesubtitle{Newton's Laws of Motion}
+ }
+\begin{itemize}
+  \onslide<2->{
+\item In Newton's Second law, $F=ma$, the \textbf{resultant force} $F$ is a vector that acts on the mass $m$ to produce an acceleration vector (in the same direction as $F$):
+\begin{equation}
+F=ma=m\dot{v}=m\deriv{v}{t}=m\secondderiv{y}{t}=m\ddot{y}
+\end{equation}  
+}
+  \onslide<3->{
+	\item Since acceleration is the second derivative of position, Newton's Second law often leads to \textbf{second order} differential equations (whenever the acceleration is constant, i.e., $\dot{a}=0$)  
+	}
+  	\onslide<4->{\item Solution $y(t)$ is sometimes termed the \textbf{output} of the dynamical system 
+  	}
+  \onslide<5->{
+	\item Resultant force is the \textbf{vector} sum of all forces acting on the body, both \textbf{internal} coupling forces and \textbf{external} input forces  
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Dynamic Systems} 
+	\framesubtitle{A Note on Notation}
+	}
+	\begin{itemize}
+		\onslide<2->{ \item In mathematics, one often sees $y$ as a function of $x$:  $y=f(x)$  
+		}
+		\onslide<3->{
+			\item  In physics, the variable $r=r(t)$ is often used for vector displacement with coordinates $x(t),y(t),z(t)$
+		}
+		\onslide<4->{
+			\item  In engineering work, the $x$ is often used as the (vector) state variable
+		}
+		\onslide<5->{
+			\item In dynamic systems and control theory, $y$ is generally considered to be the output function of time $t$.  Hence our use of symbols such as $y(t)$, $\dfrac{dy}{dt}$, $\Dopnth{n}{t}{y}$, $\dot{y}$, $\ddot{y}$, etc.
+		}
+		\onslide<6->{
+			\item  Also common in engineering to use $u=u(t)$ as the symbol for external input -- or \textbf{control function}
+		}
+		\onslide<7->{
+			\item In these slides we mostly use standard engineering notation and terminology
+		}
+		\onslide<8->{
+			\item Our notation doesn't distinguish between vectors and scalars
+		}
+	
+	\end{itemize}
+	\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems}
+	\framesubtitle{Internal and External Forces}  
+}
+\begin{itemize}
+  \onslide<2->{ \item Which forces are considered \textbf{internal} to the system and which  \textbf{external} depends on how you draw the system boundary  
+}
+  \onslide<3->{
+\item  Simple harmonic oscillator has one internal force determining system behavior: $F=-ky$; the spring itself is often considered a (massless) part of the system
+}
+	\onslide<4-> {
+		\item More complicated oscillators may also include internal frictional and/or external driving forces
+	}
+\onslide<5->{
+	\item Internal forces are generally NOT viewed as \textbf{inputs}
+}
+
+  \onslide<6->{
+\item  External forces (e.g., whether constant or time-dependent forcing functions) may also be present, e.g.:
+ \[\frac{d^2y}{dt^2}+\frac{k}{m}y=\dfrac{1}{m}\sin\omega t\]
+}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dynamic Systems} 
+	\framesubtitle{Second-Order Mechanical Systems}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Most general second-order equation for a mechanical
+ system of this type (according to Newton's law) is:
+\begin{equation}\label{second ord}
+ \ddot{y} =\frac{1}{m}F(y,\dot{y},t)
+\end{equation}  
+}
+  \onslide<3->{
+\item If $F(y,\dot{y},t)$ can be expressed 
+as sum of $F_1(y,\dot{y})$ and $F_2(t)$, then
+ we can rewrite Eq.~\ref{second ord} in input-output form:
+  \[\ddot{y}-\frac{1}{m}F_1(y,\dot{y})=\frac{1}{m}F_2(t)\]
+}
+  \onslide<4->{
+	\item Note that the left hand side is a function only of $y$ and its derivatives, while the right hand side is a function of time only.
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+	\onslide<1->{\frametitle{The Concept of State} }
+	\begin{itemize}
+		\onslide<2->{
+			\item  Mechanical systems like a moving, idealized particle have only three simultaneous translational attributes:  position, velocity, and acceleration
+		}
+		\onslide<3->{
+	\item A rigid body may also have analogous rotational or orientation attributes:  angular position, angular velocity, and angular accelerations
+}
+		\onslide<4->{
+			\item Newton tells us that translational acceleration is often a function
+			of position, velocity and perhaps time; analogous relations hold for rotational quantities
+		}
+		\onslide<5->{
+			\item A force that acts on a system as a function of
+			time only is often considered as an external forcing function,
+			i.e., a true input to the system
+		}
+		\onslide<6-> {
+			\item Thus we often think of position and velocity (and their rotational counterparts) as the primary state variables of interest in mechanical systems
+		}
+	\end{itemize}
+	\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{The Concept of State} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Concept of state involves in some sense the instantaneous internal arrangements and relationships of a system's components and their attributes
+		}
+		\onslide<3->{
+			\item In practical  situations, the state variables may simply just represent attributes of the system we need to know about 
+		}
+		\onslide<4->{
+			\item Also, intuitively, state variables are usually naturally coupled in some sense 			 
+		}
+		\begin{itemize}
+			\onslide<5->{ \item This is obvious when the state variables are derived from a single differential equation in which all the quantities are derivatives of a single variable (the output variable) 
+			}
+		\end{itemize}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{State as Initial Conditions}  
+}
+\begin{itemize}
+  \onslide<2->{
+	\item \footnotesize{"How is a dynamic system (linear or nonlinear) described?
+		The fundamental concept is the notion of the state.  By this is meant, intuitively, some quantitative information 
+		(a set of numbers, a function, etc.) which is the least amount of data one has to know about the past behavior of 
+		the system in order to predict its future behavior."\\
+		
+		\textbf{Rudolf Kalman}, in seminal paper (1960)}
+}
+  \onslide<3->{
+\item To determine the behavior of a deterministic system at any future time, we must have some knowledge of three things:
+}
+\begin{enumerate}
+  \onslide<4->{
+  	\item Equations governing the system dynamics \\(i.e., a system model, usually involving differential or difference equations)
+  }
+  \onslide<5->{
+	\item External forcing or control function (inputs as a function of time)
+}
+  \onslide<6->{
+	\item Initial conditions
+  }
+\end{enumerate}  
+
+  \onslide<7->{
+\item But initial conditions for an $n^{\text{th}}$-order continuous dynamic system are simply values of first $n$ derivatives at initial time \\(the identity operator can be considered the $0^{\text{th}}$ order derivative)
+}
+  \onslide<8->{
+	\item The $n^{\text{th}}$-order derivative is given essentially by the differential equation itself
+}
+
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} }
+\begin{itemize}
+  \onslide<2->{
+\item At any point in time, we can think of instantaneous values of the first $n$ derivatives as initial conditions for all future dynamic evolution  
+}
+  \onslide<3->{
+\item The first $n$ derivatives are the $0^\text{th},1^\text{st},\ldots,(n-1)^\text{st}$ derivatives of the output function $y$
+}
+  \onslide<4->{
+	\item These values capture the ``state" of the dynamic system at any time after the time of the initial conditions  
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Concept of ``state" also encoded in Taylor series of a function 
+}
+  \onslide<3->{
+\item Taylor's theorem: If a function $y(t)$ has derivatives of all orders near $t_0$, then its value at any point $t$ near $t_0$ can be determined from the values of its derivatives at $t_0$:
+}
+  \onslide<4->{
+\begin{equation}
+\taylor{y}{t}{t_0}
+\end{equation}
+}
+  \onslide<5->{
+	\item I.e., the value of the function at some point near $t_0$ is completely determined by its value at $t_0$ and the values of \textbf{all} of its derivatives at $t_0$
+}
+	\onslide<6->{  
+		\item Note that this works for time points in the past as well as those in the future, provided they are sufficiently close to $t_0$
+	}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{The Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+}
+\begin{itemize}
+  \onslide<2->{
+\item In the language of dynamic systems, the quantity $\Delta t:=t-t_0$\\ (if $>0$) is simply the time elapsed since the initial time $t_0$ (otherwise, it is the negative duration from $t_0$ to a past time point $t$)
+}
+  \onslide<3->{
+\item Thus, if you have knowledge of the state at time $t_0$, i.e., if you know the values of all the (infinitely many) derivatives, then you can determine the value of the function at any later time (sufficiently close to $t_0$)
+}
+  \onslide<4->{
+\item  This is because all of the dynamic information is contained in the derivatives
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+	\framesubtitle{Relation to Taylor's Series}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item If $y(t)$ is smooth, each of its derivatives also has a Taylor series
+		}
+		\onslide<3->{
+			\item E.g. (changing our notation slightly): 
+			$
+				\Dopnth{1}{t}{y}(t) = 0\cdot y(t_0) + 	\dfrac{\Dopnth{1}{t}{y}(t_0)}{1!}\Delta t + \dfrac{\Dopnth{(n-1)}{t}{y}(t_0)}{2!}(\Delta t)^2 + \cdots
+			$ \\
+			where $\Delta t = t-t_0$
+		}
+		\onslide<4->{
+			\item And similarly for the higher derivatives of $y(t)$
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  
+  
+}
+  \onslide<2-> {
+	Putting all this into vector-matrix form we get:
+}
+  \onslide<3-> {
+	\footnotesize{\begin{multline}\label{matrix taylor}
+	\left[
+	\begin{array}{c}
+	y(t) \\
+	\Dopnth{1}{t}{y}(t) \\
+	\vdots \\
+	\Dopnth{(n-1)}{t}{y}(t) \\
+	\end{array}
+	\right] 
+	\approx\\
+	\Taylormats{(n-1)}{t}{y}{n}{\Delta t}
+	\end{multline}}
+}
+  \onslide<4-> { where $\Delta t:=t-t_0$
+}
+
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Concept of State} 
+	\framesubtitle{Relation to Taylor's Series}  	
+}
+	\begin{itemize}
+		\onslide<2->{
+			\item Notice that Eq.~\ref{matrix taylor} is only an approximation 
+		}
+		\onslide<3->{
+			\item Useful in evaluating accuracy of linear approximation to a non-linear system; Taylor series is valid for any smooth function, whether linear or not
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item Helps assess the accuracy of time extrapolation provided by the state transition matrix, since the above matrix Taylor series approximation is in fact a time extrapolation 
+				\item The order of the approximation depends on the size of $\Delta t$,
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item We'll have more on this later when we drill down on the state transition matrix and various forms of linearization in later videos
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+

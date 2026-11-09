@@ -1,0 +1,39 @@
+%insgpsdefs.tex
+\newcommand{\poserr}{\delta R}
+\newcommand{\cmposerr}{\Delta R}
+\newcommand{\velerr}{\delta V}
+\newcommand{\tilt}{\phi}
+\newcommand{\tiltx}{\phi_x}
+\newcommand{\tilty}{\phi_y}
+\newcommand{\az}{\psi_z}
+\newcommand{\azdrift}{\theta_z}
+\newcommand{\azdrifteq}{\azdrift=p_z + p_z\dfrac{\sin^2\theta}{6}}
+\newcommand{\hdgref}{\Delta H_R}
+\newcommand{\caz}{c\az-1}
+\newcommand{\baroerr}{\Delta h}
+\newcommand{\roterr}{\Delta \theta_L}
+\newcommand{\azerrchange}{\Delta \az} % State 11
+\newcommand{\dfr}{\Delta FR}
+\newcommand{\df}{\Delta F}
+\newcommand{\gpsrangebias}{\Delta P}
+\newcommand{\poschange}{\Delta P}
+\newcommand{\xtherm}{\Delta B_{Tx}}
+\newcommand{\ytherm}{\Delta B_{Ty}}
+\newcommand{\lever}{\Delta L}
+\newcommand{\gyrobias}[1]{\Delta B_{g#1}}
+\newcommand{\accelbias}[1]{\Delta B_{a#1}}
+\newcommand{\gyrosf}[1]{\Delta K_{g#1}}
+\newcommand{\accelsf}[1]{\Delta K_{a#1}}
+\newcommand{\gyrosfmat}{\Delta K_{g}}
+\newcommand{\accelsfmat}{\Delta K_{a}}
+\newcommand{\forxyz}{\text{ for }i=x,y,z}
+\newcommand{\forjxyz}{\text{ for }j=x,y,z}
+\newcommand{\forXYZ}{\text{ for }i=X,Y,Z}
+\newcommand{\forjXYZ}{\text{ for }j=X,Y,Z}
+\newcommand{\intdeltaT}{\int_0^{\Delta T}}
+% RLGN Kalman filter:
+\newcommand{\cscmat}{\left[ \hat{x},P \right]}
+\newcommand{\numstates}{28}
+\newcommand{\numstatesplusone}{29}
+\newcommand{\colextrapeq}{\jthcol{\cscmat}{j}\leftarrow\Phi\jthcol{\cscmat}{j}}
+\newcommand{\rowextrapeq}{\ithrow{\cscmat}{i}\leftarrow\Phi\left[\ithrow{\cscmat}{i}\right]\trans}

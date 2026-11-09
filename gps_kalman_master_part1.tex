@@ -1,0 +1,75 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usetheme{Warsaw}
+%\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{footline}[text line]
+{%
+  \parbox{\linewidth}{\vspace*{-8pt}some text\hfill\insertshortauthor\hfill\insertpagenumber}
+}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{booktabs} 
+\usepackage[english]{babel} 
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{subfig}
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+\newcommand{\includes}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/include}
+\newcommand{\graphics}{/cygwin64/home/cognotrend/kalman_course/kf_gps_v4/graphics}
+%\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{include/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory\\ with Applications to Navigation \\
+Part I
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\currenttime\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2020 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+% ----------------------------------------------------------------
+\begin{frame}{Table of Contents} 
+\tableofcontents 
+\end{frame} 
+
+\input{overview.tex}
+\section{Heuristic Introduction}
+\input{day1_seg1_heuristic/heuristic_main.tex}
+\section{Equation Drilldown}
+\input{day1_seg2_equations/equation_main.tex}
+%\section{Dynamic Systems}
+%\input{day1_seg3_diff_eq/diff_eq_main.tex}
+\section{State Space Concepts}
+\input{day1_seg4_state_space/state_space_main.tex}
+% ----------------------------------------------------------------
+\end{document}

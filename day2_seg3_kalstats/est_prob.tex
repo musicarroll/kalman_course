@@ -1,0 +1,594 @@
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Derivation of the Kalman Gain}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Given: A known measurement vector $z=(z_1,z_2,\ldots
+ ,z_m)$ that is believed to be causally related to the
+ state vector $x=(x_1,\ldots ,x_n)$.
+}
+  \onslide<3->{
+ \item Find: The "best" \textit{\textbf{estimate}} of the state as a function of the
+ measurements: $\hat{x}=g(z)=g(z_1,\ldots ,z_m)$.
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Bayesian Derivation of Kalman Measurement Update}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Ignore state dynamics for now -- hence the term "static"
+}
+  \onslide<3->{
+ \item Disregard stochastic differential equations and don't have to use mean square calculus
+}
+  \onslide<4->{
+ \item Concerned only with statistical problem of estimating a vector random variable $x$ given a finite set of
+ measurements
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Static Estimation Problem} 
+	\framesubtitle{Why should we care?}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Solution to this problem will introduce concepts central to traditional Kalman filtering
+}
+  \onslide<3->{
+ \item Solution here nearly identical to that given by Kalman himself in his 1960 paper; result is
+ now classical
+}
+  \onslide<4->{
+ \item We'll derive the \textbf{Kalman gain} matrix $K$ that is used to weight the measurement residual in
+ updating the a priori state estimate and also used to update the a priori estimation error covariance matrix $P$
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Definition of Optimality}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item What do we mean by "best" estimate?
+}
+  \onslide<3->{
+ \item Need to define a measure of "goodness", i.e., a performance
+ measure and maximize it.
+}
+  \onslide<4->{
+ \item Actually, it turns out to be more convenient to define a
+ measure of "badness" that we can minimize.
+ \begin{itemize}
+    \item This is called a "loss function" or "penalty function".
+ \end{itemize}
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Mean Squared Error}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Estimation Error: The difference between the truth and the
+ estimate: $\tilde{x}=\hat{x}-x$
+}
+  \onslide<3->{
+ \item Estimation error is bad
+}
+  \onslide<4->{
+    \item Our estimators should try to minimize this error.
+}
+  \onslide<5->{
+ \begin{itemize}
+    \item At the very least, we should try to keep track of how
+    well we're doing (i.e., should have an error covariance
+    matrix).
+ \end{itemize}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Admissible Loss Functions}
+}
+\begin{itemize}
+  \onslide<2->{
+    \item Nonnegative, real-valued function of the estimation
+    error;
+}
+  \onslide<3->{
+    \item Non-decreasing, i.e., the loss gets bigger as the
+    estimation error gets bigger;
+}
+  \onslide<4->{
+    \item Should be zero when there is no error, i.e., when we
+    are certain;
+}
+  \onslide<5->{
+    \item Should not be dependent on the sign of the error, i.e.,
+    should be a symmetric function.
+}
+  \onslide<6->{
+ \item Note: As a function of a random variable, the loss function
+ has a random variable as its value.  Hence, we'll want to minimize the
+ mean of the loss function.
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Means Squared Error}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Estimation problem becomes: Find estimate $\hat{x}$ of $x$
+ that minimizes the mean of the loss function $L$:\\
+ $E\left[L(\tilde{x})\right]=E\left[L(\hat{x}-x)\right]$
+}
+  \onslide<3->{
+ \item A common loss function is a quadratic function: the square of the norm of the error
+ vector:  $L(\tilde{x})=\tilde{x}^\top\tilde{x}$ \\
+ Often referred to as the "square error."
+}
+  \onslide<4->{
+ \item Therefore, we want to minimize the mean:
+ $E\left[L(\tilde{x})\right]=E\left[\tilde{x}^\top\tilde{x}\right]$\\
+ i.e., we want to minimize the "mean square error."
+}
+  \onslide<5->{
+ \item Note that $L$ is really a function of two variables:
+ $L(\tilde{x})=L(\hat{x},x)$.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Problem Formulation}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Estimation problem becomes: Find estimate $\hat{x}$ of $x$
+ that minimizes the integral:\\
+\begin{equation}\label{lossfunc}
+ E\left[\tilde{x}^\top\tilde{x}\right]=\underbrace{\int_{-\infty}^{+\infty}\cdots \int_{-\infty}^{+\infty}}_{n+m}\tilde{x}^\top\tilde{x}f(x,z)dx_1\cdots dx_n dz_1\cdots dz_m
+\end{equation}
+
+ where $f(x,z)$ is the joint probability density function for $x$
+ and $z$.
+}
+  \onslide<3->{
+ \item $x$ is assumed to be an $n$-vector, while $z$ is assumed to
+ be an $m$-vector.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item But we can factor the joint p.d.f, through the conditional p.d.f:
+    \[f(x,z)=f(x|z)f(z)\]
+
+    where
+
+    $f(z)=\underbrace{\int_{-\infty}^{+\infty}\cdots\int_{-\infty}^{+\infty}}_{n}f(x,z)dx_1\cdots dx_n$
+    is the marginal p.d.f of $z$.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{footnotesize}
+  \onslide<2->{
+Therefore, we can modify
+Eq.~(\ref{lossfunc}), our integral expression for
+$E\left[\tilde{x}^\top\tilde{x}\right]$, as follows:
+}
+\begin{align*}
+  \onslide<3->{
+  E\left[\tilde{x}^\top\tilde{x}\right] & = \underbrace{\int_{-\infty}^{+\infty}\cdots
+\int_{-\infty}^{+\infty}}_{n+m}\tilde{x}^\top\tilde{x}f(x,z)dx_1\cdots
+dx_n dz_1\cdots dz_m\\
+}
+  \onslide<4->{
+    & = \underbrace{\int_{-\infty}^{+\infty}\cdots
+\int_{-\infty}^{+\infty}}_{n+m}\tilde{x}^\top\tilde{x}f(x|z)f(z)dx_1\cdots
+dx_n dz_1\cdots dz_m\\
+}
+  \onslide<5->{
+    & = \underbrace{\int_{-\infty}^{+\infty}\cdots
+\int_{-\infty}^{+\infty}}_{m}f(z)\left[\underbrace{\int_{-\infty}^{+\infty}\cdots
+\int_{-\infty}^{+\infty}}_{n}\tilde{x}^\top\tilde{x}f(x|z)dx_1\cdots
+dx_n\right]dz_1\cdots dz_m
+}
+\end{align*}
+  \onslide<6->{
+Note that we have pulled $f(z)$ out of the $x$-integral, because
+$f(z)$ does not depend on $x$.
+}
+\end{footnotesize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Notice that we now
+only need to minimize the integral within the brackets, i.e.,
+
+$E\left[\tilde{x}^\top\tilde{x}\right]$ is minimized if and only if\\
+
+$\underbrace{\int_{-\infty}^{+\infty}\cdots
+\int_{-\infty}^{+\infty}}_{n}\tilde{x}^\top\tilde{x}f(x|z)dx_1\cdots
+dx_n$ is minimized.
+}
+  \onslide<3->{
+Remember that we are trying to find the value of $\hat{x}$ that
+will cause this loss function to be minimized.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Let's expand $\tilde{x}^\top\tilde{x}:$
+}
+  \onslide<3->{
+\begin{align*}
+  \qloss & = \normsq{(\hat{x}-x)} \\
+    & =\hat{x}^\top\hat{x}-\hat{x}^\top x - x^\top \hat{x} + x^\top
+   x\\
+   & =\normsq{\hat{x}}+\dprod{x}{x}- 2\dprod{\hat{x}}{x}
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Thus, we expand the integral to be minimized accordingly:\\
+}
+  \onslide<3->{
+\begin{multline}
+  \minfint{n}\normsq{\tilde{x}}f(x|z)dx_1\cdots dx_n  = \normsq{\hat{x}}\\
+    +\minfint{n}\normsq{x}f(x|z)dx_1\cdots dx_n\\
+    - 2\hat{x}\minfint{n}xf(x|z)dx_1\cdots dx_n 
+\end{multline}
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{small}
+\begin{itemize}
+  \onslide<2->{
+\item  This last expansion is justified because $\normsq{\hat{x}}$ is a
+function of the $z$ alone:  $\hat{x}=g(z_1,\ldots ,z_m)$.  The
+equation of interest has the form:
+ 
+}
+  \onslide<3->{
+\begin{equation}\label{loss_integrand}
+\minfint{n}\normsq{\tilde{x}}f(x|z)dx_1\cdots dx_n =
+f_1(\hat{x})+f_2(z) -2f_3(\hat{x},z)
+\end{equation}
+}
+  \onslide<4->{
+where $f_1(\hat{x})=\normsq{\hat{x}}$,
+$f_2(z)=\minfint{n}\normsq{x}f(x|z)dx_1\cdots dx_n$ and
+}
+  \onslide<5->{
+$f_3(\hat{x},z)= \hat{x}^\top\minfint{n} f(x|z)dx_1\cdots dx_n$.
+}
+\end{itemize}
+\end{small}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   Now we need to minimize the right side of the last equation. \\ To
+do so, we must take the gradient with respect to $\hat{x}$,\\ set it
+equal to zero, and solve for $\hat{x}$ -- a typical min/max
+problem.
+}
+  \onslide<3->{
+\item   Recall that the gradient of the dot product is:\\
+\begin{center}
+$\pderiv{\dprod{y}{x}}{x}=y$ and also $\pderiv{\normsq{x}}{x}=2x$.
+\end{center}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Solving the Problem}
+}
+\begin{small}
+\begin{itemize}
+  \onslide<2->{
+\item Applying this to our problem, we note that the middle term of \\
+Eq. ~(\ref{loss_integrand}), 
+$f_2(z)$ is a function of $z$ \\
+alone and thus vanishes when the gradient \\
+ with respect to $\hat{x}$ is applied to it.
+}
+  \onslide<3->{
+\item  We are thus left with the first and third terms only:\\
+
+$\pderiv{\normsq{\hat{x}}}{\hat{x}}=2\hat{x}$ ~~~and \\
+
+\begin{multline}
+\pderiv{(\hat{x}^\top\minfint{n} x f(x|z)dx_1\cdots dx_n)}{\hat{x}} = \\
+ \minfint{n} x f(x|z)dx_1\cdots dx_n
+\end{multline}
+
+}
+\end{itemize}
+\end{small}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem } 
+	\framesubtitle{Solving the Problem}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Thus, taking the gradient with respect to $\hat{x}$ of
+Eq.~(\ref{loss_integrand}) we obtain \\
+
+$0 = 2\hat{x}-2\minfint{n}xf(x|z)dx_1\cdots dx_n$ ~~~~ or\\
+
+}
+  \onslide<3->{
+\begin{equation}\label{opt_est}
+  \hat{x}=\minfint{n}xf(x|z)dx_1\cdots dx_n
+\end{equation}
+  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{The Solution}
+}
+\begin{itemize}
+  \onslide<2->{
+\item This solution is just the conditional expectation for $x$,
+conditioned on the $z$:\\  
+}
+  \onslide<3->{
+  $\hat{x}=\minfint{n}xf(x|z)dx_1\cdots dx_n=E\left[ x|z\right]$.
+
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Assuming Gaussian Stats}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   Now let's see what this looks like with Gaussian statistics for
+$f(x|z):$\\
+
+}
+  \onslide<3->{
+\begin{equation}\label{cond_mean}
+  E\left[ x|z\right]=m_x+P_{xz}P^{-1}_{zz}(z-m_z),
+\end{equation}
+where $m_x, m_z$ are the means of $x$ and $z$, respectively, and
+$P_{xz}$ is the cross-covariance matrix between $x$ and $z$, while
+$P_{zz}$ is the covariance matrix for $z$ alone.
+}
+ \onslide<4->{
+  \item Not that this is the matrix analogue of the scalar case for two Gaussians:
+  $\expect{X|Z}=\expect{X}+\dfrac{\rho_{xz}\sigma_x}{\sigma_z}(z-\expect{Z})$
+ }
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Assuming Gaussian Stats}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   In other words, we have for Eq.~(\ref{cond_mean}):
+}
+  \onslide<3->{
+\begin{align*}
+E\left[ x|z\right]&=m_x+P_{xz}P^{-1}_{zz}(z-m_z) \text{, where}\\
+m_x &= E[ x ]\\
+m_z &= E[ z ]\\
+P_{xz}&=E[(x-m_x)(x-m_z)^\top]\\
+P_{zz}&=E[(z-m_z)(z-m_z)^\top]
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{The Solution}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Eq.~(\ref{cond_mean}) conveys the essence of the Kalman update algorithm.  
+}
+  \onslide<3->{
+\item  It will give us a new estimate of
+the state vector x conditioned on the actually observed
+measurements and all associated statistics.
+}
+  \onslide<4->{
+\item  Now consider again the relationship between x and z that we have
+previously assumed:  $z=Hx+v$
+}
+  \onslide<5->{
+Remember that $x$ and $z$ are statistically independent of each
+other.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{The Solution}
+}
+\begin{small}
+\begin{itemize}
+  \onslide<2->{
+\item   Since $m_z=E[z]=E[Hx+v]=H\cdot E[x]+E[v]=Hm_x+m_v$, we have
+}
+  \onslide<3->{
+\begin{align*}
+P_{xz} &= E[(x-m_x)(z-m_z)^\top]\\
+    &= E[(x-m_x)\{Hx+v - (Hm_x+m_v) \}^\top]\\
+    &= E[(x-m_x)\{(Hx-Hm_x) + (v-m_v) \}^\top]\\
+    &= E[(x-m_x)\{H(x-m_x) + (v-m_v) \}^\top]\\
+    &= E[(x-m_x)\{(x-m_x)^\top H^\top + (v-m_v)^\top \}]\\
+    &= E[(x-m_x)(x-m_x)^\top H^\top] + E[(x-m_x)(v-m_v)^\top]\\
+    &= E[(x-m_x)(x-m_x)^\top H^\top]\\
+\end{align*}
+}
+\end{itemize}
+because $x$,$z$ independent $\Rightarrow E[(x-m_x)(v-m_v)^\top]=0$.
+\end{small}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Translating into "Kalman Notation"}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   But, $E[(x-m_x)(x-m_x)^\top] = P_{xx}$ by definition. \\
+
+}
+  \onslide<3->{
+\item    Thus
+\begin{align*}
+P_{xz} &= E[(x-m_x)(x-m_x)^\top H^\top]\\
+        &= P_{xx}H^\top
+\end{align*}
+
+}
+  \onslide<4->{
+\item   A similar derivation shows that
+\begin{align*}
+P_{zz} &= HP_{xx}H^\top+P_{vv}\\
+\end{align*}
+
+}
+  \onslide<5->{
+\item  Later we'll see this in the form of $HP_{xx}H^\top+R$ since
+$P_{vv}=R$ by definition.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Translating into "Kalman Notation"}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Inserting these last two results into Eq.~(\ref{cond_mean}) yields
+ 
+}
+  \onslide<3->{
+\begin{align*}
+  E\left[ x|z\right]&=m_x+P_{xz}P^{-1}_{zz}(z-m_z)\\
+        &= m_x+P_{xx}H^\top[HP_{xx}H^\top+P_{vv}]^{-1}(z-m_z)\\
+        &= m_x+P_{xx}H^\top[HP_{xx}H^\top+P_{vv}]^{-1}(z-Hm_x)
+\end{align*}
+}
+  \onslide<4->{
+\item  This last step results because \\
+$m_z=E[z]=E[Hx+v]=H\cdot E[x]+E[v]=Hm_x+0=Hm_x$\\
+by definition.
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{The Static Estimation Problem} 
+	\framesubtitle{Translating into "Kalman Notation"}
+}
+\begin{itemize}
+  \onslide<2->{
+\item The Kalman Gain:   Eq.~(\ref{cond_mean}) now becomes the central result
+of classical Kalman Filter theory:
+}
+  \onslide<3->{
+\begin{equation}\label{update_eq}
+  \hat{x}=E[x|z]=m_x + K(z-Hm_x)
+\end{equation}
+where $K=P_{xx}H^\top[HPH^\top + P_{vv}]^{-1}$ is the \textbf{Kalman gain}.
+}
+\end{itemize}
+\end{frame}

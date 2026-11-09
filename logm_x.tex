@@ -1,0 +1,72 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{\includes/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Kalman Filter Theory and Applications\\
+An Overview\\
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018 by Michael L. Carroll
+\end{tiny}
+}
+\maketitle
+
+% ----------------------------------------------------------------
+$\left(\begin{array}{cc} \frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} - \frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} & \frac{\mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)\, \left(x_{1} - \mathrm{\epsilon}_{2} + \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}\right)}{2\, \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} + \frac{\mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)\, \left(\mathrm{\epsilon}_{2} - x_{1} + \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}\right)}{2\, \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}\\ \frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} - \frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} & \frac{\mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(x_{1} - \mathrm{\epsilon}_{2} + \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}\right)}{2\, \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} + \frac{\mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\mathrm{\epsilon}_{2} - x_{1} + \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}\right)}{2\, \sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} \end{array}\right)
+$\\
+$
+\frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}} - \frac{x_{2}\, \mathrm{log}\!\left(\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}\right)\, \left(\frac{\frac{\mathrm{\epsilon}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}{2}}{x_{2}} - \frac{\mathrm{\epsilon}_{2}}{x_{2}}\right)}{\sqrt{{\mathrm{\epsilon}_{2}}^2 - 2\, \mathrm{\epsilon}_{2}\, x_{1} + {x_{1}}^2 + 4\, \mathrm{\epsilon}_{1}\, x_{2}}}
+$
+\\
+$\frac{\mathrm{log}\!\left(\frac{\mathrm{eps}_{2}}{2} + \frac{x_{1}}{2} - \frac{\sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}}{2}\right)\, \left(\mathrm{eps}_{2} - x_{1} + \sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}\right)}{2\, \sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}} + \frac{\mathrm{log}\!\left(\frac{\mathrm{eps}_{2}}{2} + \frac{x_{1}}{2} + \frac{\sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}}{2}\right)\, \left(x_{1} - \mathrm{eps}_{2} + \sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}\right)}{2\, \sqrt{{\left(\mathrm{eps}_{2} - x_{1}\right)}^2}}
+$\\
+$
+\frac{\mathrm{log}\!\left(\frac{x_{1}}{2} + \frac{\sqrt{{x_{1}}^2}}{2}\right)\, \left(x_{1} + \sqrt{{x_{1}}^2}\right)}{2\, \sqrt{{x_{1}}^2}} - \frac{\mathrm{log}\!\left(\frac{x_{1}}{2} - \frac{\sqrt{{x_{1}}^2}}{2}\right)\, \left(x_{1} - \sqrt{{x_{1}}^2}\right)}{2\, \sqrt{{x_{1}}^2}}
+$\\
+$\left(\begin{array}{cc} \frac{\mathrm{log}\!\left(\frac{x_{1}}{2} + \frac{\sqrt{{x_{1}}^2}}{2}\right)\, \left(\frac{x_{1}}{2} + \frac{\sqrt{{x_{1}}^2}}{2}\right)}{\sqrt{{x_{1}}^2}} - \frac{\mathrm{log}\!\left(\frac{x_{1}}{2} - \frac{\sqrt{{x_{1}}^2}}{2}\right)\, \left(\frac{x_{1}}{2} - \frac{\sqrt{{x_{1}}^2}}{2}\right)}{\sqrt{{x_{1}}^2}} & 0\\ 0 & 0 \end{array}\right)
+$\\
+$\left(\begin{array}{cc} \frac{\left(x_{1}\, \Im\!\left(\sqrt{{x_{1}}^2}\right) + \Im\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2} - x_{1}\, \Re\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i} - \Re\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2}\, \mathrm{i}\right)\, \mathrm{i}}{2\, \sqrt{{x_{1}}^2}} & 0\\ \frac{\left(x_{2}\, \Im\!\left(\sqrt{{x_{1}}^2}\right) - x_{2}\, \Re\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i}\right)\, \mathrm{i}}{\sqrt{{x_{1}}^2}} & 0 \end{array}\right)
+$\\
+$
+\left(\begin{array}{cc} \frac{{x_{1}}^2}{\sqrt{{x_{1}}^2}} & 0\\ \frac{x_{1}\, x_{2}}{\sqrt{{x_{1}}^2}} & 0 \end{array}\right)
+$\\
+$
+\left(\begin{array}{cc} \frac{\left(x_{1}\, \Im\!\left(\sqrt{{x_{1}}^2}\right) + \Im\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2} - x_{1}\, \Re\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i} - \Re\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2}\, \mathrm{i}\right)\, \mathrm{i}}{2\, \sqrt{{x_{1}}^2}} & 0\\ \frac{\left(x_{2}\, \Im\!\left(\sqrt{{x_{1}}^2}\right) - x_{2}\, \Re\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i}\right)\, \mathrm{i}}{\sqrt{{x_{1}}^2}} & 0 \end{array}\right)
+$\\
+$\left(\begin{array}{cc} \frac{\Im\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2}\, \mathrm{i} + x_{1}\, \Re\!\left(\sqrt{{x_{1}}^2}\right) + \Re\!\left(x_{1}\right)\, \sqrt{{x_{1}}^2} + x_{1}\, \Im\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i}}{2\, \sqrt{{x_{1}}^2}} & 0\\ \frac{x_{2}\, \left(\Re\!\left(\sqrt{{x_{1}}^2}\right) + \Im\!\left(\sqrt{{x_{1}}^2}\right)\, \mathrm{i}\right)}{\sqrt{{x_{1}}^2}} & 0 \end{array}\right)
+$\\
+
+
+
+% ----------------------------------------------------------------
+\end{document}

@@ -1,0 +1,66 @@
+\begin{frame}
+  \onslide<1->{
+  	\frametitle{Dynamic Systems}
+	\framesubtitle{Measurement Models}  
+ }
+\begin{itemize}
+  \onslide<2->{
+	\item  In engineering applications, we often model not
+	 only system dynamics but also the processes by which we \textbf{measure} system outputs
+	}
+	\begin{itemize}
+		\onslide<3->{\item This is usually because we need to control the system dynamics
+		}
+		\onslide<4->{\item But more often than not we need to estimate certain quantities of interest associated with our system
+		}
+		\onslide<5->{\item And we can't control or change the behavior of something we can't accurately estimate!
+		}
+	\end{itemize}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+		\frametitle{Dynamic Systems}
+		\framesubtitle{Measurement Models}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item  But outputs are not always directly observable!! They might have a complicated relationship to something we can physically measure
+		}
+		\onslide<3->{
+			\item Thus, in modeling dynamic systems, we often add a second set of 
+			equations, usually algebraic or functional in nature, that relates
+			the output $y$ (and possibly the input $u$) to some measured or observed quantities
+			\[z = h(y)+g(u)\]  
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{State Space Representation Example} 
+		\framesubtitle{Simple Harmonic Oscillator}    
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item  For a measurement model, we could consider a camera with a strobe flash that periodically records the instantaneous position of the sliding mass.
+		}
+		\onslide<3->{
+			\item   In this case, only the position would be observable and we would write the measurement or observation model as:
+			\[
+			z =
+			\begin{bmatrix}
+			1 & 0
+			\end{bmatrix}
+			\begin{bmatrix}
+			x_1\\
+			x_2
+			\end{bmatrix}.
+			\]
+			(Remember that we are ignoring both process and measurement noise.)   
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}

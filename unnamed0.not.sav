@@ -1,0 +1,45 @@
+header
+score
+	pedstyle = pedstar
+	staffs = 2
+	time = 4/4
+score
+staff 1
+	vscheme = 2o
+// overlength = 60
+// underlength = 60
+// lyricsdist = 60
+// yrestoffs 1 = -2
+// stempolicy 1 = stemup
+// stempolicy 2 = stemdown
+	clef=treble
+staff 2
+	vscheme = 2o
+// overlength = 60
+// underlength = 60
+// lyricsdist = 60
+// stempolicy 1 = stemup
+// stempolicy 2 = stemdown
+	clef=bass
+music
+midi 1 1: 0 "channel=1"; 0 "program=0";
+midi 2 1: 0 "channel=2"; 0 "program=0";
+midi 1 1: 0 "parameter=7,80";
+midi 1 1: 0 "parameter=93,0";
+midi 1 1: 0 "parameter=91,0";
+midi 1 1: 0 "parameter=10,64";
+midi 2 1: 0 "parameter=7,80";
+midi 2 1: 0 "parameter=93,0";
+midi 2 1: 0 "parameter=91,0";
+midi 2 1: 0 "parameter=10,64";
+1 1: 4g+; 4f+; 4e+; 4e+; 
+2 2: 2c+; 2d+; 2c+; 2c+; 
+bar // 1
+1 1: 4d+; 4d+; 4c+; 4b; 
+bar // 2
+1 1: 4c+; 4d+; 4f+; 4e+; 
+bar // 3
+1 1: 4e+; 4.d+; 8c+; 8c+; 8e+; 
+bar // 4
+1 1: 8g+; 
+bar // 5

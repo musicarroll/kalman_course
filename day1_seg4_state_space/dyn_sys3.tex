@@ -1,0 +1,75 @@
+% dyn_sys3.tex
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation Example} 
+	\framesubtitle{Simple Harmonic Oscillator}  
+}
+\begin{itemize}
+  \onslide<2->{
+\item Consider again the simple harmonic oscillator (suppressing $t$):
+ \[m\frac{d^2y}{dt^2}+ky=0\]
+}
+ \onslide<3->{     
+ and convert this to state space form:
+\begin{align*}
+  x_1 & =y \\
+  x_2 & =\dot{x}_1 =Dy 
+\end{align*}
+and $\dot{x}_2 =\ddot{x}_1= - \frac{k}{m}x_1 - 0\cdot x_2 $.
+}
+  \onslide<4->{
+\item In matrix and vector form:
+ \[
+ \begin{bmatrix}
+ \dot{x}_1\\
+ \dot{x}_2
+ \end{bmatrix}
+ =
+\begin{bmatrix}
+ 0 & 1 \\
+ -k/m & 0
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}.
+ \]
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+% Add Python package overview
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation} }
+\begin{itemize}
+  \onslide<2->{
+\item A single $n^\text{th}$ order ordinary differential equation presents \textbf{only one way} of deriving a state space representation for a dynamic system 
+}
+  \onslide<3->{
+\item Can also derive state space models directly from systems of \textbf{coupled} ODEs
+}
+\begin{itemize}
+  \onslide<4->{
+	\item Coupled ODEs can also be converted into a single $n^\text{th}$ order ODE (e.g., a coupling of two second order systems yields a single $4^\text{th}$ order equation)
+}
+  \onslide<5->{
+	\item Systems consisting of electrical, mechanical, thermal, hydraulic components are coupled in this way:  e.g., a DC motor driving an inertial load
+}
+\end{itemize}
+  \onslide<6->{
+\item In discrete time, ordinary \textbf{difference equations} also lead to state space models
+}
+  \onslide<7->{
+	\item Finally, state space models may be derived empirically from data using \textbf{system identification} techniques
+}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{coupled_odes.tex}
+% predprey.tex
+% dc_motor_w_load.tex
+

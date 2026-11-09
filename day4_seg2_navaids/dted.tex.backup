@@ -1,0 +1,21 @@
+% day4_seg2_navaids/dted.tex
+\begin{slide}
+Digital Terrain Elevation Data (DTED)
+ \begin{itemize}
+ \item Published by National Geospatial Intelligence Agency (NGA)
+	\begin{itemize}
+		\item formerly NIMA, formerly DMA
+	\end{itemize}
+ \item 1 deg geocells of terrain height for each lat/long pair
+ \item DTED Levels 0,1,2
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+DTED
+\begin{itemize}
+  \item As navaid, a trail of radar altimeter measurements are stored
+  \item Trail is correlated with DTED to determine offset
+  \item SITAN, TERPROM
+\end{itemize} 
+\end{slide}

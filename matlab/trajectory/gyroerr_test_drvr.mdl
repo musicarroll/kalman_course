@@ -1,0 +1,741 @@
+Model {
+  Name			  "gyroerr_test_drvr"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Sep 04 10:59:42 2003"
+  Creator		  "mcar"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mcar"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Sep 22 17:16:34 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
+  ConfigurationManager	  "sourcesafe"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "1"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "gyroerr_test_drvr"
+    Location		    [28, 78, 983, 698]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Gyro Error\nDynamics"
+      Ports		      [7, 1]
+      Position		      [305, 111, 640, 649]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Compute Gyro Error\nDynamics"
+	Location		[159, 89, 972, 694]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "platform angle\nerror"
+	  Position		  [75, 548, 105, 562]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rate error\n(deg/hr)"
+	  Position		  [70, 328, 100, 342]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport\n rate error"
+	  Position		  [75, 723, 105, 737]
+	  Port			  "3"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth\nrate error"
+	  Position		  [75, 613, 105, 627]
+	  Port			  "4"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DCM_B2L"
+	  Position		  [25, 268, 55, 282]
+	  Port			  "5"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth rate\n(local level)"
+	  Position		  [75, 423, 105, 437]
+	  Port			  "6"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate\n(local level)"
+	  Position		  [75, 478, 105, 492]
+	  Port			  "7"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "CBL Display"
+	  Ports			  [1]
+	  Position		  [95, 147, 350, 223]
+	  Format		  "short_e"
+	  Decimation		  "1"
+	  Floating		  off
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [370, 636, 480, 704]
+	  Format		  "short"
+	  Decimation		  "1"
+	  Floating		  off
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display1"
+	  Ports			  [1]
+	  Position		  [610, 262, 755, 338]
+	  Format		  "long"
+	  Decimation		  "1"
+	  Floating		  off
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make sum of earth rate\nand transport rates"
+" \na skew matrix"
+	  Position		  [270, 415, 330, 445]
+	  MATLABFcn		  "skew(u)"
+	  OutputDimensions	  "-1"
+	  OutputSignalType	  "auto"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [425, 408, 470, 492]
+	  Inputs		  "2"
+	  Multiplication	  "Matrix(*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [475, 281, 520, 354]
+	  Inputs		  "2"
+	  Multiplication	  "Matrix(*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [175, 420, 195, 440]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [4, 1]
+	  Position		  [645, 394, 685, 546]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "|--++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "convert\nto rad/sec"
+	  Position		  [215, 320, 245, 350]
+	  Gain			  "pi/(3600*180)"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2pitch"
+	  Position		  [560, 95, 620, 125]
+	  MATLABFcn		  "dcm2pitch(u,'deg')"
+	  OutputDimensions	  "-1"
+	  OutputSignalType	  "auto"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pitch"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2roll"
+	  Position		  [560, 35, 620, 65]
+	  MATLABFcn		  "dcm2roll(u,'deg')"
+	  OutputDimensions	  "-1"
+	  OutputSignalType	  "auto"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "roll"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2yaw"
+	  Position		  [560, 160, 620, 190]
+	  MATLABFcn		  "dcm2yaw(u,'deg')"
+	  OutputDimensions	  "-1"
+	  OutputSignalType	  "auto"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "yaw"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "rpy scope"
+	  Ports			  [3]
+	  Position		  [720, 14, 765, 196]
+	  Floating		  off
+	  Location		  [15, 259, 339, 634]
+	  Open			  on
+	  NumInputPorts		  "3"
+	  TickLabels		  "OneTimeTick"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "10"
+	  YMin			  "-1~-1~-1"
+	  YMax			  "1~1~1"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "10000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rate of change\nof platform angle\nerror\n("
+"rad/sec)"
+	  Position		  [765, 463, 795, 477]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "platform angle\nerror"
+	  SrcPort		  1
+	  Points		  [280, 0; 0, -85]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Make sum of earth rate\nand transport rates"
+" \na skew matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rate error\n(deg/hr)"
+	  SrcPort		  1
+	  DstBlock		  "convert\nto rad/sec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 120]
+	    DstBlock		    "Sum3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [30, 0]
+	    DstBlock		    "Display1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "rate of change\nof platform angle\nerror\n("
+"rad/sec)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport\n rate error"
+	  SrcPort		  1
+	  Points		  [490, 0; 0, -200]
+	  DstBlock		  "Sum3"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "earth\nrate error"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  Branch {
+	    Points		    [320, 0; 0, -120]
+	    DstBlock		    "Sum3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "DCM_B2L"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [365, 0]
+	    Branch {
+	      Points		      [0, 25]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -55]
+	      Branch {
+		Points			[110, 0]
+		DstBlock		"dcm2yaw"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -65]
+		Branch {
+		  Points		  [110, 0]
+		  DstBlock		  "dcm2pitch"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -105]
+		  DstBlock		  "dcm2roll"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -90]
+	    DstBlock		    "CBL Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "earth rate\n(local level)"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport rate\n(local level)"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 20]
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "convert\nto rad/sec"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Make sum of earth rate\nand transport rates"
+" \na skew matrix"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "roll"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2roll"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  DstBlock		  "rpy scope"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pitch"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2pitch"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  DstBlock		  "rpy scope"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "yaw"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2yaw"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  DstBlock		  "rpy scope"
+	  DstPort		  3
+	}
+	Annotation {
+	  Position		  [211, 36]
+	  Text			  "Compute Gyro Error Dynamics"
+	  FontSize		  14
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [699, 240]
+	  Text			  "Note: 1 dph = 4.848136811095360e-006 rad/se"
+"c"
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "DCM_B2L"
+      Position		      [35, 414, 90, 446]
+      Value		      "CBL"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      Ports		      [1]
+      Position		      [745, 340, 895, 420]
+      Format		      "long"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display1"
+      Ports		      [1]
+      Position		      [745, 450, 895, 530]
+      Format		      "long"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "earth rate"
+      Position		      [40, 505, 70, 535]
+      Value		      "[0,0,7.292115167e-5]'"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "earth rate error \nlocal level"
+      Position		      [45, 325, 75, 355]
+      Value		      "[0 0 0]'"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "gyro rate error\nin\nbody coordinates\n(deg/hr)"
+      Position		      [50, 160, 80, 190]
+      Value		      "[1; 0; 0]"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "platform angle error (phi)"
+      Position		      [50, 95, 80, 125]
+      Value		      "[0 0 0]'"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "rps2dph"
+      Position		      [690, 475, 720, 505]
+      FontSize		      10
+      Gain		      "180/pi*3600"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "transport rate"
+      Position		      [45, 575, 75, 605]
+      Value		      "[0 0 0]'"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "transport rate error\nlocal level"
+      Position		      [50, 260, 80, 290]
+      Value		      "[0 0 0]'"
+      VectorParams1D	      off
+    }
+    Line {
+      SrcBlock		      "platform angle error (phi)"
+      SrcPort		      1
+      Points		      [50, 0; 0, 45]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "transport rate error\nlocal level"
+      SrcPort		      1
+      Points		      [55, 0; 0, 30]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "earth rate error \nlocal level"
+      SrcPort		      1
+      Points		      [60, 0; 0, 40]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "DCM_B2L"
+      SrcPort		      1
+      Points		      [0, 25]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "transport rate"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "earth rate"
+      SrcPort		      1
+      Points		      [0, 10]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "gyro rate error\nin\nbody coordinates\n(deg/hr)"
+      SrcPort		      1
+      Points		      [50, 0; 0, 55]
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Compute Gyro Error\nDynamics"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Display"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 110]
+	DstBlock		"rps2dph"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "rps2dph"
+      SrcPort		      1
+      DstBlock		      "Display1"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [139, 45]
+      Text		      "Open Loop Test Driver\nfor \nCompute Gyro Error"
+" Dynamics"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+% day3_seg1_navproblem/navproblem_main.tex
+\begin{slide}
+\textbf{Day 3, Segment 2\\
+The Navigation Problem and Reference Frames\\
+Topics}
+ \begin{itemize}
+ \item Basic Navigation Problem
+ \item Earth Referenced Navigation
+ \item Coordinate Frame Conversion
+ \item Basic Strapdown Navigation Equations
+\end{itemize}
+\end{slide}
+\input{day3_seg2_navproblem/basicnavprob.tex}
+\input{day3_seg2_navproblem/earthrev.tex}
+\input{day3_seg2_navproblem/coordconv.tex}
+\input{day3_seg2_navproblem/strapdown.tex}
+\input{day3_seg2_navproblem/exercises.tex}

@@ -1,0 +1,49 @@
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Example:  Predator-Prey Equations}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Lotka-Volterra Equations  
+}
+  \onslide<3->{
+\item Predator-Prey Population Dynamics \\
+Prey:  $\;\;\;\;\;\;\;\dot{x}_1(t)  =a x_1(t) - b x_2(t)$\\
+Predators:  $\dot{x}_2(t) =c x_1(t) - d x_2(t)$
+}
+  \onslide<4->{
+\item i.e., in state space form: \\
+ \[
+ \begin{bmatrix}
+ \dot{x}_1\\
+ \dot{x}_2
+ \end{bmatrix}
+ =
+\begin{bmatrix}
+ a & -b \\
+ c & -d
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}
+ \]
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Example:  Predator-Prey Equations, Simulated}
+}
+  \onslide<2->{
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/pred_prey.jpg}
+\end{center}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}

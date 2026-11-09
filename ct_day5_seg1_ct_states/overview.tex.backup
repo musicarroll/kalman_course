@@ -1,0 +1,124 @@
+% overview.tex
+\begin{slide}
+Overview of the Combat Talon I Kalman Filter
+\begin{itemize}
+  \item Historical Overview
+  \item Structural Overview 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Historical Overview
+\begin{itemize}
+  \item The Original Ancestor 1970s: F-111 
+  \begin{itemize}
+  \item Singer-Kearfott (Totowa, NJ)
+  \item Rockwell Autonetics (Anaheim, CA)
+	\begin{itemize}
+		\item Dr. Thomas De Vries
+	\end{itemize}
+  \end{itemize}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Historical Overview
+\begin{itemize}
+  \item Mid-1980s:  Combat Talon I SOF Improvements
+  \begin{itemize}
+    \item Lockheed Aircraft Services (Ontario, CA)
+    \item Singer-Kearfott (Totowa, NJ)
+	\begin{itemize}
+		\item Dr. George (Bill) Reynaud
+	\end{itemize}
+  \end{itemize}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Historical Overview
+\begin{itemize}
+  \item Siblings and Distant Cousins
+  \begin{itemize}
+    \item Fraternal Twin: The Gunship H Kalman Filter
+	\begin{itemize}
+	  \item First added GPS
+	  \item Lockheed Engineers: Jeff Wyman and Larry Gately
+	\end{itemize} 
+  \end{itemize} 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Historical Overview
+\begin{itemize}
+  \item Siblings and Distant Cousins
+ \begin{itemize}
+    \item Distant Cousin: The C-MIGITS I and II Kalman Filter
+    \begin{itemize}
+		\item C/A-code, Miniature Integrated GPS/INS Tactical System
+		\item descendant of original F-111 filter
+		\item Rockwell Autonetics (early to mid 1990s)
+		\item BEI Systron Donner Inertial Division (2000+)
+		\item C-MIGITS I replace 5-channel Microtraker GPS receiver with 12-channel Jupiter receiver 
+    \end{itemize}
+  \end{itemize}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Historical Overview
+\begin{itemize}
+  \item Siblings and Distant Cousins
+ \begin{itemize}
+    \item Some Likely Distant Cousins: Various Autonetics filters 
+	\begin{itemize}
+		\item ICBM
+		\item Submarine and Ship
+	\end{itemize}
+ \end{itemize}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Structural Overview
+\begin{itemize}
+  \item Two Filters
+	\begin{itemize}
+		\item one for each INS
+		\item two sets of INS reference navigation quantities
+	\end{itemize}
+  \item Feed-forward (nav) and feedback mechanizations (alignment)
+  \item Covariance outputs used to construct weights for weighted averaging of navigation quantities
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Structural Overview
+\begin{itemize}
+	\item Navaids
+	\begin{itemize}
+		\item Doppler Velocity Sensor (DVS)
+		\item Global Positioning System (GPS)
+		\item True Airspeed Sensor (TAS)
+	\end{itemize}
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+Structural Overview
+\begin{itemize}
+	\item Navaids (cont)
+	\begin{itemize}
+		\item Baro Altimeter
+			\begin{itemize}
+				\item Altitude Calibration
+			\end{itemize}
+		\item Position Fixes
+			\begin{itemize}
+				\item Manual
+				\item Multimode Radar (MMR)
+			\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{slide}

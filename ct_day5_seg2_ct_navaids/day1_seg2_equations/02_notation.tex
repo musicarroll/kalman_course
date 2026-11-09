@@ -1,0 +1,122 @@
+% \dayonesegone/notation.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Understanding Kalman Filter Notation}
+\framesubtitle{Drilldown on State Dynamics}
+}
+ \begin{itemize}
+\onslide<2->{ \item State Dynamics Model: $x(k)=\Phi x(k-1) + w(k)$}
+\onslide<3->{ \item $x(k)$ is the \textit{\textbf{state vector}} with $n$
+ elements, written as a column vector:}
+\onslide<4->{ \item $x(k)=\state (k)=\statek$}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+  \frametitle{Understanding Kalman Filter Notation}
+  \framesubtitle{Drilldown State Dynamics}
+}
+ \begin{itemize}
+\onslide<2->{ \item Discrete State Dynamics}
+\onslide<3->{ \item KF doesn't work for nonlinear dynamics function $f[x(k-1)]$ }
+\onslide<4->{ \item Restriction to matrices:  $\simplestatedyneq$}
+\onslide<5->{ \item $\stm{k}$ is called the \textbf{state transition matrix}.  It is 
+$n\times n$ in size.}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{Understanding Kalman Filter Notation}
+    \framesubtitle{Drilldown on State Dynamics}
+}
+ \begin{itemize}
+\onslide<2->{ \item State Transition Matrix: $\stmeqtwo{k}{k-1}$}
+\onslide<3->{ \item Extrapolates state vector from time step $k-1$ to time step
+ $k$ (pulling from past to present)}
+\onslide<4->{ \item Indicates how state evolves over time without forcing input}
+\onslide<5->{ \item Remember:  This is just a model!  Don't know
+ true state, because noise forcing function generates disturbances!}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{Understanding Kalman Filter Notation}
+    \framesubtitle{Drilldown on State Dynamics}
+}
+ \begin{itemize}
+\onslide<2->{ \item We could throw in other factors and terms}
+ \begin{itemize}
+\onslide<3->{ \item A matrix $\sdm{k}$ to distribute the Gaussian white noise
+ to the states}
+\onslide<4->{ \item An additional, deterministic control $u(k)$, and
+ associated distribution matrix $\Lambda(k)$}
+ \end{itemize}
+\onslide<5->{ \item For simplicity, ignore control}
+\onslide<6->{ \item Simplifying / decluttering notation
+ possible}
+\end{itemize}
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{The Kalman Filter Solution:}  
+    \framesubtitle{State Estimate Extrapolation}
+}
+\begin{itemize}
+\onslide<2->{\item Given an estimate $\stateest{k-1}{+}$ at time $k-1$, we extrapolate it forward in time 
+by the state transition matrix:
+\begin{equation}\label{stateextrapeq}
+\stateextrapeq 
+\end{equation}
+}
+\onslide<3->{\item Q: Why is white noise $w$ \textbf{not included} in extrapolation?}\\  
+\onslide<4->{A:  Because white noise forcing function is \textbf{zero-mean}  
+Difference equation is \textbf{homogeneous on average}, therefore we use homogeneous solution, i.e., 
+the state transition matrix.}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{The Kalman Filter Solution:}
+	\framesubtitle{Covariance Extrapolation}
+}
+\begin{itemize}
+\onslide<2->{\item Q: How accurate is the solution?}\\
+\onslide<3->{A: Answer given by \textbf{estimation error covariance matrix} $P(k)$ }
+\onslide<4->{\item Like state estimate, covariance is extrapolated forward in time and then updated:}
+\onslide<5->
+{\begin{equation}\label{altcovextrapeq}
+\altcovextrapeq
+\end{equation}
+where $Q(k)$ is the \textbf{process noise covariance matrix} }
+\onslide<6->{\item $Q(k)$ measures dispersion in white noise forcing function $w(k)$}
+\onslide<7->{\item $P^{-}(k)$ defined as expected estimation error: $\esterrdefminus$}
+\end{itemize} 
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+    \frametitle{The Kalman Filter Solution:}
+	\framesubtitle{Covariance Extrapolation}
+}
+\begin{itemize}
+\onslide<2->{\item What does Eq. \eqref{altcovextrapeq} really mean?}
+\onslide<3->{\item $\stm{k}\covmat{k-1}{+}\stm{k}\trans$ represents effect of state dynamics 
+on estimation error covariance}
+\begin{itemize}
+\onslide<4->{\item $P(k)$ is positive definite and $\Phi$'s action on $P(k)$ preserves positive definiteness }
+\end{itemize}
+\onslide<5->{\item $Q(k)$ increases uncertainty due to additive process noise}
+\end{itemize} 
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+

@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory and Navigation Applications\\
+Day 1
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{Mar 03, 2004\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2003 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+% ----------------------------------------------------------------
+\input{overview.tex}
+\input{day1_seg1_heuristic/heuristic_main.tex}
+\input{day1_seg2_equations/equation_main.tex}
+\input{day1_seg3_diff_eq/diff_eq_main.tex}
+\input{day1_seg4_state_space/state_space_main.tex}
+% ----------------------------------------------------------------
+\end{document}

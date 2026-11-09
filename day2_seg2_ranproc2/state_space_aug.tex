@@ -1,0 +1,174 @@
+% day2_seg2_ranproc2/state_space_aug.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Augmentation} 
+	\framesubtitle{Motivation}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Kalman filter theory assumes the only remaining forcing function is white process noise
+}
+  \onslide<3->{
+ \item The most frequently used models can all be understood as differential equations (or difference equations) 
+ driven by white noise
+}
+  \onslide<4->{
+ \item If assumption of the only forcing function being white is not satisfied due to presence of colored noise, 
+ then the colored noise can be whitened
+}
+  \onslide<5->{
+ \item Otherwise, new states need to be added:  this is called state vector or state space \textbf{augmentation}
+}
+  \onslide<6->{
+ \item We'll see an example of state space augmentation later when we discuss filter maintenance
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Augmentation} 
+	\framesubtitle{General Example:  Augmenting a 2-State Model}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Given 2-state model:  
+\[
+\begin{bmatrix}
+\dot{x}_1\\
+\dot{x}_2
+
+\end{bmatrix} =
+\begin{bmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}+
+\begin{bmatrix}
+w_1\\
+w_2
+\end{bmatrix}
+\]  
+}
+  \onslide<3->{
+\item  Suppose the "noise" is not actually white;  perhaps there is some long-term drift as exhibited by random walk
+}
+  \onslide<4->{
+\item   This means that $\dot{w}_i=\epsilon_i$, where $\epsilon_i$ is white
+}
+  \onslide<5->{
+\item We augment with new states $x_3=w_1,x_4=w_2$ as follows: 
+\[
+\begin{bmatrix}
+\dot{x}_1\\
+\dot{x}_2\\
+\dot{x}_3\\
+\dot{x}_4
+
+\end{bmatrix} =
+\begin{bmatrix}
+a_{11} & a_{12} & 1 & 0\\
+a_{21} & a_{22} & 0 & 1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+x_4
+\end{bmatrix}+
+\begin{bmatrix}
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+
+\end{bmatrix}
+\begin{bmatrix}
+0\\
+0\\
+\epsilon_1\\
+\epsilon_2
+\end{bmatrix}
+\]  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Augmentation} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   If original measurement was, say,
+\[
+\begin{bmatrix}
+z_1\\
+z_2
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}+
+\begin{bmatrix}
+v_1\\
+v_2
+\end{bmatrix}
+\]
+}
+  \onslide<3->{
+\item  It now becomes, after augmentation: 
+\[
+\begin{bmatrix}
+z_1\\
+z_2
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+x_4
+\end{bmatrix}+
+\begin{bmatrix}
+v_1\\
+v_2
+\end{bmatrix}
+\]
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Augmentation} 
+	\framesubtitle{How can you tell when to augment your state vector?}
+}
+\begin{itemize}
+  \onslide<2->{
+\item To determine if state vector augmentation is needed, look at the pre-fit residual sequence:  $\nu(k)=\innovation{k}$  
+}
+  \onslide<3->{
+\item Examine its autocorelation function $R_{\nu\nu}$ (or autospectal density)  
+}
+  \onslide<4->{
+\item Determine the correlation time constant and augment the state vector with a Gauss-Markov process with the appropriate
+time constant in the feedback gain 
+}
+  \onslide<5->{
+\item Alternatively, you can examine the autospectal density graph and eyeball a correlation constant (See Grewal handouts.)  
+}
+\end{itemize}
+\end{frame}
+

@@ -1,0 +1,103 @@
+% Current position vector:
+
+
+\newcommand{\svposvec}[1]{r_{\text{s}}\left(#1\right)}
+
+
+% Nominal (reference) position vector:
+\newcommand{\svrefposvec}[1]{r_{\text{s,ref}}\left(#1\right)}
+
+% SV Antenna Phase Center
+\newcommand{\svsaposvec}[1]{r_{\text{sa}}\left(#1\right)}
+
+% MS antenna position vector
+\newcommand{\msantposvec}[1]{r_{\text{m}}\left(#1\right)}
+
+% MS antenna phase center position vector
+
+\newcommand{\msantphaseposvec}[1]{r_{\text{ma}}\left(#1\right)}
+
+% Current SV velocity:
+
+\newcommand{\currsvvel}[1]{v_{\text{s}}\left(#1\right)}
+
+% Refernce SV velocity:
+
+\newcommand{\refsvvel}[1]{v_{\text{s,ref}}\left(#1\right)}
+
+% Current Solar Pressure scaling parameter
+
+\newcommand{\currsolarone}[1]{k_1\left(#1\right)}
+
+% Current solar pressure parameter for unmodeled acceleration
+
+\newcommand{\currsolartwo}[1]{k_2\left(#1\right)}
+
+% Current Solar Pressure vector
+
+\newcommand{\currsolarvec}[1]{
+
+\begin{bmatrix}
+\currsolarone{#1}\\
+\currsolartwo{#1}\\
+\end{bmatrix}
+}
+
+% Reference Solar Pressure scaling parameter
+
+\newcommand{\refsolarone}[1]{k_{1,\text{ref}}\left(#1\right)}
+
+% Reference solar pressure parameter for unmodeled acceleration
+
+\newcommand{\refsolartwo}[1]{k_{2,\text{ref}}\left(#1\right)}
+
+% Reference Solar Pressure vector
+
+\newcommand{\refsolarvec}[1]{
+
+\begin{bmatrix}
+\refsolarone{#1}\\
+\refsolartwo{#1}\\
+\end{bmatrix}
+}
+
+% Current SV Clock bias
+
+\newcommand{\currsvclockbias}[1]{\tau_{\text{s}}\left(#1\right)}
+
+% Current SV Clock drift
+
+% Current SV Clock drift
+\newcommand{\currsvclockdrift}[1]{\dot{\tau}_{\text{s}}\left(#1\right)}
+
+% Current SV Clock drift rate
+
+\newcommand{\currsvclockdriftrate}[1]{\ddot{\tau}_{\text{s}}\left(#1\right)}
+
+% Current SV Clock State Vector
+\newcommand{\currsvclockstatevec}[1]{
+\begin{bmatrix}
+\currsvclockbias{#1}\\
+\currsvclockdrift{#1}\\
+\currsvclockdriftrate{#1} 
+\end{bmatrix}
+}
+% Reference SV Clock bias
+\newcommand{\refsvclockbias}[1]{\tau_{\text{s,ref}}\left(#1\right)}
+% Reference SV Clock drift
+\newcommand{\refsvclockdrift}[1]{\dot{\tau}_{\text{s,ref}}\left(#1\right)}
+% Reference SV Clock drift rate
+\newcommand{\refsvclockdriftrate}[1]{\ddot{\tau}_{\text{s,ref}}\left(#1\right)}
+
+% Current SV Clock State Vector
+\newcommand{\refsvclockstatevec}[1]{
+
+\begin{bmatrix}
+\refsvclockbias{#1}\\
+\refsvclockdrift{#1}\\
+\refsvclockdriftrate{#1} 
+\end{bmatrix}
+}
+\newcommand{\corrpr}{\text{SPR}_\text{C}}
+\newcommand{\corradr}{\Delta\text{ADR}_\text{C}}
+\newcommand{\svmsmeasvec}{\left[\corrpr,\; \corradr\right]\trans}

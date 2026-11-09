@@ -1,0 +1,42 @@
+% day2_seg3_kalstats/meas_noise.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Measurement Noise} 
+	\framesubtitle{$v$ and its Covariance Matrix $R$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  $\measnoise{k}$ is the measurement noise sequence;  unlike $w(k)$ it is not simply hypothesized; 
+it is physically real and  can be determined empirically
+}
+  \onslide<3->{
+ \item The measurement noise covariance matrix $\measnoisematdef{k}$ indicates the amount of spread or dispersion and internal cross covariance within the measurement itself at any time $k$.
+}
+  \onslide<4->{
+ \item The diagonal elements of $\measnoise{k}$ give the expected variance in each of the individual measurements.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Measurement Noise} 
+	\framesubtitle{Characteristics of $R$}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The off-diagonal elements indicate degree of cross covariance between measurement noise random variables 
+ associated with each individual measurement;  often 0  
+}
+  \onslide<3->{
+ \item If the noise random variables of individual measurements are uncorrelated, 
+ then $R(k)$ will be a diagonal matrix
+}
+  \onslide<4->{
+\item General time series and spectral analysis techniques can be applied to a sequence measurements to determine appropriate values
+}
+  \onslide<5->{
+\item The elements of $R$ are key Kalman tuning parameters
+}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,334 @@
+% dyn_sys4.tex
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Difference Equations} 
+		\framesubtitle{Introduction}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item A difference equation expresses the relationship between the differences of successive values of a sequence.
+		}
+		\onslide<3->{
+			\item They are discrete analogs of differential equations.
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item Involve sequences and shifts instead of functions and derivatives.
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item Commonly used in numerical analysis, signal processing, and economic modeling.
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Difference Equations} 
+		\framesubtitle{Approximating Differential Equations}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Differential equations describe continuous systems.
+		}
+		\onslide<3->{
+			\item Difference equations can approximate these by discretizing the variables.
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item Replace derivatives with finite differences.
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item Useful in numerical methods like Euler's method and the Runge-Kutta methods.
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Example 1} 
+		\framesubtitle{Basic Difference Equation}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Consider the difference equation: $y_{n+1} = y_n + h f(y_n)$
+		}
+		\onslide<3->{
+			\item This can approximate the differential equation: $\frac{dy}{dt} = f(y)$
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item With step size $h$ representing the time interval.
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item Example: $y_{n+1} = y_n + h(-ky_n)$ approximates $\frac{dy}{dt} = -ky$
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Example 2} 
+		\framesubtitle{Euler's Method}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Euler's method uses difference equations to approximate solutions to ODEs.
+		}
+		\onslide<3->{
+			\item Given $\frac{dy}{dt} = f(t, y)$ with initial condition $y(t_0) = y_0$
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item Discretize time: $t_n = t_0 + nh$
+				\item Difference equation: $y_{n+1} = y_n + h f(t_n, y_n)$
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item This provides an iterative method to approximate $y(t)$ at discrete points.
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+
+
+% difference_eq.tex
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{ARMA Models} 
+		\framesubtitle{Introduction}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item ARMA stands for Auto-Regressive Moving Average.
+		}
+		\onslide<3->{
+			\item Combines two components: Auto-Regressive (AR) and Moving Average (MA).
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item AR component: Model the variable using its own previous values.
+				\item MA component: Model the variable using past forecast errors.
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item Widely used for time series analysis and forecasting.
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{ARMA Models} 
+		\framesubtitle{Model Definition}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item An ARMA model is defined by two orders: $p$ (AR order) and $q$ (MA order).
+		}
+		\onslide<3->{
+			\item The general form of an ARMA($p, q$) model is:
+			\begin{equation*}
+			y_t = \phi_1 y_{t-1} + \phi_2 y_{t-2} + \ldots + \phi_p y_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \ldots + \theta_q \epsilon_{t-q}
+			\end{equation*}
+		}
+		\onslide<4->{
+			\begin{itemize}
+				\item $\phi_i$ are the coefficients for the AR part.
+				\item $\theta_j$ are the coefficients for the MA part.
+				\item $\epsilon_t$ is white noise (random error term).
+			\end{itemize}
+		}
+		\onslide<5->{
+			\item Captures both the short-term dependencies (AR) and the structure of the error terms (MA).
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+		\frametitle{Example} 
+		\framesubtitle{ARMA(1,1) Model}  
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Consider an ARMA(1,1) model:
+			\begin{equation*}
+			y_t = \phi_1 y_{t-1} + \epsilon_t + \theta_1 \epsilon_{t-1}
+			\end{equation*}
+		}
+		\onslide<3->{
+			\item Here:
+			\begin{itemize}
+				\item $\phi_1$ is the AR coefficient.
+				\item $\theta_1$ is the MA coefficient.
+			\end{itemize}
+		}
+		\onslide<4->{
+			\item This model accounts for the immediate past value and the immediate past error.
+		}
+		\onslide<5->{
+			\item Example application: Modeling stock prices or economic indicators.
+		}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+
+
+\begin{frame}
+	Ordinary Difference Equations
+	\begin{itemize}
+		\item Auto-Regressive Moving Average (ARMA)
+		\item $n^{\text{th}}$ derivative corresponds to $n$-step advance:
+	\end{itemize} 
+	\begin{equation}\label{armaeq}
+	\armaeq
+	\end{equation}
+	\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+\begin{frame}
+	Ordinary Difference Equations
+	\begin{itemize}
+		\item The left side of Eq. \eqref{armaeq} is the Auto-Regressive part
+		\item The right side of Eq. \eqref{armaeq} is the Moving Average part
+		\item Hence, ARMA
+	\end{itemize} 
+	\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+\begin{frame}
+	Ordinary Difference Equations
+	\begin{itemize}
+		\item For difference equations, a state space model can be derived using the companion matrix exactly as for differential equations
+		\item Matlab / Simulink has a subsystem block in its Discrete block library in which the four matrices for an input-output model can be specified in the workspace.
+	\end{itemize} 
+	\onslide<1->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+% difference_eq.tex
+\input{difference_eq.tex}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Stability} }
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/poincare.jpg}
+\end{center}
+\begin{tiny}
+Source: By Freesodas - Gimp, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=67990034
+\end{tiny}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame} 
+  \onslide<1-> { \frametitle{Software Tools}
+    \framesubtitle{MATLAB toolboxes and Simulink blocks}
+  }
+\begin{itemize}
+ \onslide<2-> { 
+ \item MATLAB Control System Toolbox
+} 
+  \begin{itemize}
+    \onslide<3-> {
+	  \item Linear System Models:  LTI models as either transfer function or state space representation
+	}
+    \onslide<4-> {
+	  \item Functions for interconnecting models in series or parallel
+	}
+	\onslide<5-> {
+	  \item Functions for roundtrip converting from continuous-time to discrete-time
+	}
+	\onslide<6-> {
+      \item Functions for scaling state space models 
+	}
+  \end{itemize} 
+    \onslide<7-> {
+	   \item Simulink:  Intuitive Block Diagram GUI Drag and Drop approach (see later slides)
+	}
+\end{itemize}  
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{State Space Representation:  Summary} }
+\begin{itemize}
+  \onslide<2->{
+\item State variables sometimes provided by
+ $0^\text{th}$ through $n-1^\text{st}$ derivatives of single $n^\text{th}$-order differential equation plus internal dynamic coupling  
+}
+  \onslide<3->{
+\item  Equivalently, outputs of $n$ integrators of system 
+}
+  \onslide<4->{
+\item They represent implicit or explicit internal coupling of the system 
+}
+  \onslide<5->{
+\item In both natural and artificial systems, state space representations are often derived directly from observed or designed couplings 
+}
+  \onslide<6->{
+\item MATLAB Control Systems Toolbox and MATLAB / Simulink have many functions and blocks facilitating state space components and interconnections  
+}
+  \onslide<7-> {
+     \item Stability an important topic but beyond scope of this course
+  }
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+		\framesubtitle{Matlab / Simulink Example} }
+	\begin{itemize}
+		\onslide<2->{
+			\item Four parameters $A,B,C,D$ from Matlab workspace  
+		}
+		\onslide<3->{
+			\item Measurement model added external to Simulink's state space block  
+		}
+	\end{itemize}
+	\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.6]{\dayonesegfour/state_space_blocks.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{\frametitle{Appendix:  State Space Representation}
+	\framesubtitle{Matlab / Simulink Example} }
+	\begin{center}
+		\includegraphics[scale=0.5]{\dayonesegfour/state_space_block_params.jpg}
+	\end{center}
+	
+	\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+

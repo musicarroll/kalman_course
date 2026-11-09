@@ -1,0 +1,5 @@
+set terminal latex
+set output "gauss1.tex"
+plot [-10:10] 1/(2*sqrt(2*pi))*exp(-(x-2)**2/(2*2**2))\
+ title "$\dfrac{1}{\sigma\sqrt{2\pi}}\exp(\dfrac{-(x-\mu)^2}{2\sigma^2})$"
+

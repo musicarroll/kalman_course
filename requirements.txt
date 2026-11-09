@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+python-control
+python-pptx
+scipy
+statsmodels

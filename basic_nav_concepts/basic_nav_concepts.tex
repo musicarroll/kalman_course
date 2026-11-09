@@ -1,0 +1,56 @@
+\documentclass{beamer}
+
+%\documentclass[landscape,leqno]{beamer}
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm,verbatim}
+\usetheme{Berlin}
+\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+\usepackage{float}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{\includes/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Basic Concepts of Navigation\\
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{Sep 4, 2018\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018
+ by Michael L. Carroll
+\end{tiny}
+}
+\maketitle
+
+% ----------------------------------------------------------------
+\begin{frame}
+\frametitle{\textbf{Basic Concepts of Navigation\\Part I\\}}
+ \begin{itemize}
+ \item Overview
+ \item The Navigation Problem and Reference Frames
+ \item Inertial Navigation
+\end{itemize}
+\end{frame}
+\input{basic_nav_concepts/overview.tex}
+\input{basic_nav_concepts/navproblem_main.tex}
+\input{basic_nav_concepts/gps.tex}
+% ----------------------------------------------------------------
+\end{document}

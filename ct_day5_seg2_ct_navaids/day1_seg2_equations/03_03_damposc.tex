@@ -1,0 +1,156 @@
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator: Spring, Mass, Damper System}}
+  \onslide<2->{
+\begin{figure}
+  \includegraphics[width=0.85\textwidth]{\dayonesegone/spring_mass_damper.jpg}
+\end{figure}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator: System Dynamics}}
+\begin{itemize}
+  \onslide<2->{\item Number of states = 2.  System model:}
+  \onslide<3->{\[\begin{bmatrix}
+x_{1}(k)\\
+x_{2}(k)
+\end{bmatrix}=
+\exp
+\left(
+\begin{bmatrix}
+0 & 1\\
+-b/m & -k/m
+\end{bmatrix}
+ \Delta t
+\right)
+\begin{bmatrix}
+x_{1}(k-1)\\
+x_{2}(k-1)
+\end{bmatrix}
++
+\begin{bmatrix}
+w_{1}(k)\\
+w_{2}(k)
+\end{bmatrix}
+\]}
+    \onslide<4->{\item Thus, $\stm{k}=\exp
+\left(
+\begin{bmatrix}
+0 & 1\\
+-b/m & -k/m
+\end{bmatrix}
+ \Delta t
+\right)$.  We'll explain later how to derive state transition 
+matrices from the underlying differential equations. }
+  \onslide<5->{\item Here $\Delta t=t_k - t_{k-1}$, $m$ is the mass, $k$ is the 
+spring constant, and $b$ is the damping constant}
+  \onslide<6->{\item Note that $\exp$ is a matrix exponential.}
+\end{itemize} 
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator: Process Noise}}
+\begin{itemize}
+  \onslide<2->{\item Assume that the process noise $w$ has the following statistics:
+\[Q_k=\begin{bmatrix}
+0.00001 & 0\\
+0 & 0.000001
+\end{bmatrix}
+\]}
+  \onslide<3->{  \item This means that there is a small amount of position noise and an even
+smaller amount of velocity.}
+  \onslide<4->{  \item It also means that the noises in position and velocity are statistically 
+uncorrelated (i.e., no non-zero off-diagonal elements in $Q_k$.)}
+  \onslide<5->{  \item One may think of process noise as due to unmodelled dynamic effects}
+\end{itemize} 
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Dampled Harmonic Oscillator:  Measurement Model}}
+\begin{itemize}
+  \onslide<2->{  \item 
+\[z(k) = \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
+x_{1}(k)\\
+x_{2}(k)
+\end{bmatrix}+
+v(k)
+\]
+where the measurement noise $v(k)$ has variance $\sigma^2$}
+  \onslide<3->{  \item Thus $H_k=\begin{bmatrix}1 & 0\end{bmatrix}$}
+  \onslide<4->{  \item Note that we only have a position measurement (similar to constant velocity example).}
+\end{itemize} 
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator:  State Transistion Matrix $\Phi$}}
+\begin{itemize}
+  \onslide<2->{  \item $\stm{k}$ can be approximated through series expansion of 
+\[\exp\begin{bmatrix}
+0 & \Delta t\\
+-b/m\Delta t & -k/m\Delta t
+\end{bmatrix}
+\]}
+  \onslide<3->{  \item Or we can use Matlab's expm function for specific values of $k$,$c$,$m$, and $\Delta t$.}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator:  Kalman Gain}}
+\begin{itemize}
+  \onslide<2->{  \item Because $\Phi$ and $Q$ are matrices, the state and covariance extrapolation equations do not simplify from their general matrix form.}
+  \onslide<3->{  \item However, the gain equation $\kalgaineq$ looks like this:
+\begin{align*}
+K_k &=
+\begin{bmatrix}
+p_{11} & p_{12}\\
+p_{21} & p_{22}
+\end{bmatrix}
+\begin{bmatrix}1\\
+0
+\end{bmatrix}
+\left( \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}
+p_{11} & p_{12}\\
+p_{21} & p_{22}
+\end{bmatrix}
+\begin{bmatrix}
+1\\ 
+0
+\end{bmatrix}
++\sigma^2
+\right)^{-1}\\
+&=
+\begin{bmatrix}
+\dfrac{p_{11}}{p_{11}+\sigma^2}\\
+\dfrac{p_{21}}{p_{11}+\sigma^2}
+\end{bmatrix}
+\end{align*}
+where we have once again suppresed the +/- superscripts and $k$'s.}
+\end{itemize} 
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator:  MATLAB Run}}
+  \onslide<1->{
+\begin{figure}
+  \includegraphics[width=0.85\textwidth]{\dayonesegone/damposc.jpg}
+\end{figure}
+}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Damped Harmonic Oscillator Estimator Sawtooth:  MATLAB Run}}
+  \onslide<1->{
+\begin{figure}
+  \includegraphics[width=0.85\textwidth]{\dayonesegone/damposc_variance.jpg}
+\end{figure}
+}
+\onslide<2->{\center --------------------------------------------------------------------}
+\end{frame}

@@ -1,0 +1,115 @@
+#LyX file created by  tex2lyx 0.1.2
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass slides
+\begin_preamble
+
+\end_preamble
+\options landscape,leqno
+\language english
+\inputencoding latin1
+\fontscheme default
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% day1_seg3_state_space/lti.tex
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{slide}
+\end_layout
+
+\end_inset
+
+ Linear Time-Invariant Differential Equations 
+\end_layout
+
+\begin_layout Itemize
+
+Linear Time-Invariant (LTI) Differential Equations 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Linear: Polynomial differential operators are linear: 
+\begin_inset Formula \[p(D)[af+bg]= ap(D)f+bp(D)g\]
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Time-Invariant means the coefficients are constant. 
+\end_layout
+
+\begin_layout Itemize
+
+Homogeneous solution of corresponding state equation is a matrix exponential. (More on that later when we discuss the state transition matrix.) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{slide}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

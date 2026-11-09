@@ -1,0 +1,183 @@
+% day1_seg1_heuristic/summary.tex
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary}
+  }
+ \begin{itemize}
+  \onslide<2->{   \item Given two models:}
+    \begin{itemize}
+  	\onslide<3->{	\item State Dynamics Model:  Produces predictions}
+  	\onslide<4->{	\item Measurement Model:  Translates predictions into predicted measurements}
+    \end{itemize}
+  \onslide<5->{ 
+	\item Calculate: 
+	}
+  \begin{itemize}
+    \onslide<6->{ \item Residual, subtract the predicted measurements from 
+	the actual measurements
+	}
+  \onslide<7->{ \item Optimal \bfit{linear} gain matrix $K(k)$ for weighting measurement residual and
+      update state estimate \emph{recursively and incrementally} by adding gain-weighted residual 
+	} 
+	
+	\end{itemize}
+ \end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary\\General, Non-Linear, Time-Invariant,
+Discrete-Time Formulation}}
+Given: 
+ \begin{itemize}
+   \onslide<2->{ \item State Dynamics Model:  $x(k)=f[x(k-1)] + w(k)$}
+   \begin{itemize}
+      \onslide<3->{ \item where $x$=state vector,\;\;$f$=vector-valued dynamics function,\;\;$w$=process noise vector}
+   \end{itemize}
+   \onslide<4->{ \item Measurement Model: $z(k)=h[x(k)]+v(k)$}
+   \begin{itemize}
+      \onslide<5->{ \item where $z$=measurement vector,\;\;$h$=vector-valued measurement function,\;\; $v$=measurement noise}
+   \end{itemize}
+  \end{itemize}
+  \onslide<6->{ Calculate:}
+ \begin{itemize}
+  \onslide<7->{ \item Optimal gain $K(k)$ in order to update state estimate:\\
+  \begin{center}
+     $\stateest{k}{+} = \stateest{k}{-} + K(k)\,[\,z(k)-h(\stateest{k}{-})\,]$
+	\end{center}
+}
+
+   \begin{itemize}
+      \onslide<8->{ \item where $\stateest{k}{-}=f[\stateest{k-1}{+}]$=extrapolated/predicted estimate,\\ 
+	  $K$=gain matrix,\;\;$h(\stateest{k}{-}])$=expected/predicted measurement}
+   \end{itemize}
+
+\end{itemize}
+\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary:  Linear Restrictions}
+  }
+ \begin{itemize}
+  \onslide<2->{ \item Kalman filter originally derived for linear system dynamics and linear measurement 
+  model}
+  \begin{itemize}
+  \onslide<3->{
+    \item Assume vector-valued $f$ realized as multiplication by time-invariant matrix $\Phi$ called
+ \bfit{state transition matrix}
+}
+  \onslide<4->{
+  \item Assume $h$ realized as multiplication by matrix $H(k)$
+}
+  \end{itemize}
+  
+  \onslide<5->{ \item Find:  Gain multiplier matrix $K(k)$}
+
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+  \framesubtitle{Kalman Filter Problem Summary\\ Linear Discrete Formulation\\
+ }
+}
+Given:
+\begin{itemize}
+  \onslide<2->{\item Discrete-Time State Dynamics Model:
+  \begin{center}
+  $x(k)=\Phi x(k-1)+w(k)$}
+  \end{center}
+  \onslide<3->{
+    \begin{itemize}
+		\item $x$=state vector,\;\;$\Phi$=state transition matrix,\;\; $w$=process noise vector
+	\end{itemize} }
+  \onslide<4->{\item Measurement Model: $z(k)=H\,x(k)+v(k)$ \\
+	\begin{itemize}
+		\item where $z$=measurement vector,\;\;$H$=measurement matrix (assumed constant),\;\; $v$=measurement noise vector
+	\end{itemize}}
+  \end{itemize}
+  \onslide<5->{Calculate:}
+\begin{itemize}
+	  \onslide<6->{\item An optimal gain matrix $K(k)$ and new state estimate:\\
+	  \begin{center}
+ 	$\stateest{k}{+} = \stateest{k}{-} + K(k)\,[\,z(k)-H \stateest{k}{-}\,]$ }
+	  \end{center}
+	\begin{itemize}
+	  \onslide<7->{\item where $\stateest{k}{-}=\Phi\stateest{k-1}{+}$ extrapolates previous estimate,
+			and $H \stateest{k}{-}$ is the expected/predicted measurement 
+		}
+	\end{itemize}
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+\framesubtitle{Kalman Filter Problem Summary \\
+Notational Reminder}
+}
+\begin{itemize}
+  \onslide<2->{  \item Reminder:  To distinguish prior (extrapolated) estimate from updated estimate, we use 
+  +/- hat notation:
+} 
+	\onslide<3->{  \item $\stateest{k}{-}:=\Phi \stateest{k-1}{+}$ is predicted state estimate 
+	}
+  \onslide<4->{  
+	\item  $\stateest{k}{+}=\text{updated estimate}$
+  }
+  \onslide<5->{
+    \item $\hat{z}(k):=H(k) \stateest{k}{-}$ sometimes used to denote expected/predicted measurment  
+  }
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+\framesubtitle{Kalman Filter Problem Summary}
+}
+\begin{itemize}
+\onslide<2->{\item Solution should look like this:}
+\onslide<3->{
+\begin{equation}\label{filtersolution}
+\stateest{k}{+}=\stateest{k}{-}+ K(k)\,[\,z(k)-H\stateest{k}{-}\,]
+\end{equation}
+}
+\onslide<4-> {
+  where $\stateest{k}{-}=\Phi \stateest{k-1}{+}$
+}
+\onslide<5-> {
+  \item Looks like running average!
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+  \onslide<1->{\frametitle{Mathematical Formulation of the Problem} 
+\framesubtitle{Kalman Filter Problem Summary}
+}
+}
+\begin{itemize}
+  \onslide<2->{
+\item But where are process noise $w(k)$ and measurement noise $v(k)$ used? 
+}
+  \onslide<3->{
+\item Statistics (covariances) associated with noise processes are inputs to Kalman gain computation  
+}
+  \onslide<4->{
+\item  Kalman gain will also be used to  
+update \bfit{estimation uncertainty}, known as the \bfit{estimation error covariance} 
+}
+  \onslide<5->{
+\item  $\Phi$ be used to predict change in estimation uncertainty over time 
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}

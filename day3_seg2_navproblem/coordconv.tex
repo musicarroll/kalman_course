@@ -1,0 +1,177 @@
+% day3_seg1_navproblem/coordconv.tex
+\begin{frame}
+Coordinate Frames
+ \begin{itemize}
+ \item Inertial
+ \item Earth Fixed
+ \item Local Level
+ \item Body
+\end{itemize}
+\end{frame}
+\begin{frame}
+Coordinate Frames
+ \begin{itemize}
+  \item Technically speaking, all frames are earth-centered
+  \item Practically speaking, we think of the Body frame as centered in the body of the vehicle (usually at center of gravity).
+  \item Local Level is thought to be located at surface of earth directly beneath the vehicle.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Inertial Reference Frames
+ \begin{itemize}
+ \item Non-Rotating
+ \item Non-Accelerating
+ \item Fixed or moving uniformly with respect to another inertial
+ frame (fixed stars)
+\end{itemize}
+\end{frame}
+\begin{frame}
+Inertial Reference Frames
+ \begin{itemize}
+ \item Nav problem "easy" in inertial frames
+ \item Integrate gyro rates once to get attitude (rotational motion is absolute)
+ \item Rotate accelerometer outputs to inertial frame using attitude matrix, then integrate to get inertial
+ velocity; integrate velocity to get position.
+ \item Would still have to contend with instrument imperfections.
+\end{itemize}
+\end{frame}
+\begin{frame}
+Inertial Reference Frame Integrations
+\begin{equation}\label{inertacceleq}
+\ddot{r}(t)=\specforce+\text{other external forces}
+\end{equation}
+\begin{equation}\label{inertveleq}
+v(T)=\dot{r}(T)=v(0)+\int_{0}^{T}\specforce dt + \int_{0}^{T}(\text{other
+external forces})dt
+\end{equation}
+\begin{equation}\label{inertposeq}
+  r(T)=r(0)+\int_{0}^{T}v dt
+\end{equation}
+\end{frame}
+\begin{frame}
+Earth Fixed = ECEF = Earth Centered Earth Fixed
+ \begin{itemize}
+ \item Rotating frame, i.e., non-inertial
+ \item Cartesian ($X,Y,Z$ in meters)
+ \item Spherical (latitude $\lat$, longitude $\lon$, altitude $\alt$)
+ \begin{itemize}
+ \item geodetic
+ \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Local Level
+ \begin{itemize}
+ \item Tangent to earth's surface but translated to center of
+ earth.
+ \item Vertical $Z$-axis is normal to earth's surface
+ \item $X,Y$-axes are level
+ \item Several kinds: $Y$ north-slaved, wander (0 transport rate) or free azimuth
+ \item $Y$ makes wander angle $\alpha$ with respect to true north (ENU=East, North, Up).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+%\includegraphics[width=\textwidth]{graphics/ecef.jpg}
+
+\vfill
+\end{frame}
+
+
+\begin{frame}
+Body Frame
+ \begin{itemize}
+ \item Attached to vehicle
+ \item For aircraft:
+   \begin{itemize}
+    \item $X$ out the nose
+    \item $Y$ out the right wing
+    \item $Z$ down
+   \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Coordinate Frame Conversion
+ \begin{itemize}
+ \item All frames are earth-centered, hence differ only by
+ rotation
+ \item Rotation represented by direction cosine matrices (DCM)
+ \begin{itemize}
+	\item Represents the angles made by each of the basis vectors of one frame with those of the other
+ \end{itemize}
+ \item $\dcm{A}{B}$ = DCM transformation from frame A to frame B
+\end{itemize}
+\end{frame}
+\begin{frame}
+Coordinate Frame Conversion
+\begin{itemize}
+  \item "Direction Cosine" comes from dot product:
+\[\ip{x}{y}=x\cdot y=\norm{x}\norm{y}\cos\theta_{xy}\]
+where $\theta_{xy}$ is the angle between the two vectors $x$ and $y$.
+  \item If $x$ and $y$ are unit vectors, then $\norm{x}=\norm{y}=1$ and we have:
+\[\ip{x}{y}=x\cdot y=\cos\theta_{xy}\]
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Coordinate Frame Conversion
+\begin{itemize}
+  \item If $U=\set{u_1,u_2,u_3}$ and $V=\set{v_1,v_2,v_3}$ are two sets of orthonormal basis vectors, then the DCM relating one frame to the other is given by:
+\begin{align*}
+\dcm{U}{V}&=
+\begin{bmatrix}
+\ip{u_1}{v_1} & \ip{u_1}{v_2} & \ip{u_1}{v_3}\\
+\ip{u_2}{v_1} & \ip{u_2}{v_1} & \ip{u_2}{v_3}\\
+\ip{u_3}{v_1} & \ip{u_3}{v_2} & \ip{u_3}{v_3}\\
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+\cos\theta_{11} & \cos\theta_{12} & \cos\theta_{13}\\
+\cos\theta_{21} & \cos\theta_{22} & \cos\theta_{23}\\
+\cos\theta_{31} & \cos\theta_{32} & \cos\theta_{33}\\
+\end{bmatrix}
+\end{align*}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Coordinate Frame Conversion
+ \begin{itemize}
+ \item DCMs are orthogonal matrices $\Rightarrow \left[\dcm{A}{B} \right]^{-1}=\left[\dcm{A}{B} \right]\trans$
+ \item Third row (or column) is vector cross product of other two\\
+ $\Rightarrow$ only six independent parameters
+ \item DCMs satisfy:   $\dcm{B}{A}\dcm{C}{B}=\dcm{C}{A}$
+\end{itemize}
+\end{frame}
+\begin{frame}
+Coordinate Frame Conversion: Most important DCMs
+ \begin{itemize}
+ \item Body to Local Level: $\dcm{B}{L}$
+ \begin{itemize}
+ \item sometimes called Body to Nav and notated $\dcm{B}{N}$
+ \item yields attitude info (Euler angles for roll, pitch, yaw)
+ \end{itemize}
+ \item Local Level to Earth: $\dcm{L}{E}$
+ \begin{itemize}
+ \item yields position info and also used to transform earth rate to
+ local level
+ \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+Coordinate Frame Conversion: Most important DCMs
+\begin{itemize}
+  \item Visualize $\dcm{L}{E}$'s determination of position as follows:
+	\begin{itemize}
+		\item As vehicle moves, local level frame changes its orienation with respect to earth's center in order to maintain local level with respect to earth's surface
+		\item If you think of local level frame as attached to earth's surface, you get distracted by the displacement of the frame
+		\item If you move local level frame to center of earth, the displacement disappears and all that remains are the rotations
+	\end{itemize} 
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+
+%\includegraphics[width=\textwidth]{day3_seg2_navproblem/pos_dcm.jpg}
+
+\end{frame}

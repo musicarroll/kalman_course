@@ -1,0 +1,166 @@
+% day4_seg2_navaids/gps.tex
+\begin{slide}
+GPS: The Global Positioning System
+ \begin{itemize}
+ \item 24+ satellites orbiting at 10,900 miles above surface
+ \item Three Segments: Control, Space, User
+ \item Time-tagged signals and known satellite position enable calculation of signal time of flight and hence range traversed from satellite to receiver
+ \item Range to four satellites required to determine time plus three position coordinates
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+GPS: The Global Positioning System
+\begin{itemize}
+  \item Satellites have precise atomic clocks
+  \item User set receiver has less precise clock
+  \item Time is of the essence:  comparing satellite-generated time-tag with user clock time of arrival determines transit time
+  \item Note that user clock can be a source of systematic error
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+GPS: The Global Positioning System
+\begin{itemize}
+  \item Three types of navaid coupling:
+  \begin{itemize}
+	\item Loose coupling
+    \item Tight coupling
+    \item Deep coupling
+  \end{itemize} 
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Loosely-Coupled GPS
+\begin{itemize}
+  \item GPS receiver-generated position and velocity are differenced with INS position and velocity
+  \item GPS position and velocity are generally pre-filtered (with a Kalman filter) before being used in inertial filter
+  \item GPS position and velocity are also composite quantities from all satellites
+  \item Least accurate approach to using GPS as a navaid
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Loosely-Coupled GPS
+\begin{itemize}
+  \item The GPS receiver does not have the advantage of using inertial information to completely separate process noise from measurement noise
+  \item Simplifies Kalman integration: Don't necessarily have to model GPS receiver clock errors (assume receiver has already done so)
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Tightly-Coupled GPS
+\begin{itemize}
+  \item Pseudorange and delta pseudorange for each individual satellite are direct measurements presented to the filter
+  \item Contains only measurement noise, not receiver filter's model of process noise 
+  \item Gives INS filter more fine-grained control over GPS measurements
+  \item Higher accuracy
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Deeply-Coupled
+\begin{itemize}
+  \item Uses high-rate inertial data to aid in code and carrier phase tracking loops
+  \item Most accurate solution when combined with tightly-coupled INS filter as well
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+GPS Errors
+\begin{itemize}
+  \item Ephemeris data: Satellite's reported position can be in error
+  \item Satellite clock:  Negligible since SA (selective availability) has been turned off
+  \item Ionosphere:  Pseudorange errors caused by free electrons in the ionosphere
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+GPS Errors (cont)
+\begin{itemize}
+  \item Troposphere: Pseudorange errors casued by temperature, pressure, humidity influences on the speed of light
+  \item Multipath:  Errors casued by locking on to reflected signals
+  \item Receiver Noise: Errors caused by receiver's thermal noise and software inaccuracies
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+\begin{center}
+%\begin{tabular}{|c|p{2.5in}|p{2.5in} |} \hline
+ \begin{tabular}{|p{3in}|p{1.5in}|p{1.5in}|} \hline
+ % after \\ : \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \textbf{Error Source} & \textbf{C/A-Code Error Budget (meters)} & \textbf{P-Code Error Budget (meters)} \\ \hline
+Multipath & 12.0 & 1.2 \\ \hline
+Receiver Noise / Software & 11.1 & 1.1 \\ \hline
+Ionosphereic Delays & 9.0 & 3.1 \\ \hline
+Satellite Clock and  Ephemeris Errors & 3.9 & 3.9 \\ \hline
+Tropspheric Delays & 2.0 & 2.0 \\ \hline
+\end{tabular}
+\end{center}
+\end{slide}
+
+\begin{slide}
+Using Loosely-Coupled GPS Measurements
+\begin{itemize}
+  \item Position
+	\begin{itemize}
+		\item Form primary GPS position observation by subtracting Kalman-corrected INS reference position from raw GPS position
+		\item Next, the innovation (or measurement residual) is formed by subtracting off the extrapolated state estimate of position error
+		\item Extrapolated position error estimate needs to compensate for accumulated velocity error during Kalman cycle (or some fraction thereof) 
+	\end{itemize}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Combat Talon I GPS Position Observation, KF'GPS'OBS'PROC, we have:
+\end{slide}
+\begin{verbatim}
+  165  COMPUTE RESIDUALS 
+  166      RESIDUALS(1) = Y'KAL'OBS(INU,1) * OBS'COUNT'SCALER - SVVAR(1)
+  167 	- 5.0 * SVVAR(4);
+  168      RESIDUALS(2) = Y'KAL'OBS(INU,2) * OBS'COUNT'SCALER - SVVAR(2)
+  169 	- 5.0 * SVVAR(5);
+  170      RESIDUALS(3) = Y'KAL'OBS(INU,7) * OBS'COUNT'SCALER - SVVAR(3)     jlw vc correction 
+  171         - 5.0 * SVVAR(6);
+
+\end{verbatim}
+
+\begin{slide}
+GPS Velocity Measurements
+\begin{itemize}
+  \item Based on carrier phase measurements in receiver
+  \item Generally independent of position measurements
+  \item Observation is once again difference between Kalman-compensated INS reference velocity and GPS-indicated velocity
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+GPS Measurment Noise Covariance
+\begin{itemize}
+  \item Based on EHE (estimated horizontal error) and EVE (estimated vertical error)
+  \item These numbers highgly dependent on GDOPs
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Geometric Dillution of Precision (GDOP)
+\begin{itemize}
+  \item Satellites are not geostationary
+  \item H matrix is time-varying
+  \item Observability varies with time
+  \item $GDOP=\sqrt{\text{tr}\left(H\trans H\right)^{-1}}$
+\end{itemize} 
+\end{slide}
+
+
+\begin{slide}
+GDOP Chimney
+\begin{itemize}
+  \item Large DGOP is bad; normal values 3-5
+  \item Singularity periods of time (about 1 hr) when GDOP values spike upward with a peak as much as 1000
+  \item GDOP 50 $\approx$ 500 m position error
+  \item Chimney's effects should be less acute if receiver has enough channels to track many satellites and to handle constellation changes
+\end{itemize} 
+\end{slide}
+

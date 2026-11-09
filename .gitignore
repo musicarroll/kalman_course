@@ -1,0 +1,38 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+build/
+
+# LaTeX intermediate files (PDFs are intentional course deliverables)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+*.synctex.gz(busy)
+
+# Editor, desktop, and transient files
+*~
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
+

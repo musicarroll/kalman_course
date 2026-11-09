@@ -1,0 +1,179 @@
+\begin{itemize}
+	\item
+\end{itemize}
+% day4_seg3_maint/aug_state_vec.tex
+\begin{slide}
+Augmenting the State Vector
+ \begin{itemize}
+ \item State Vector Augmentation: Expanding the size of the state vector
+\begin{itemize}
+	\item i.e., adding new states
+\end{itemize}
+ \item Why?
+\begin{itemize}
+	\item new navaids with their own error dynamics (e.g., GPS)
+	\item correlated (non-white) process noise
+	\item correlated (non-white) measurement noise
+\end{itemize}
+\end{itemize}
+\end{slide}
+\begin{slide}
+Augmenting the State Vector
+\begin{itemize}
+  \item Why? (continued)
+\begin{itemize}
+  \item Correlation $\Rightarrow$ dynamics
+\begin{itemize}
+	\item No dynamics in white noise
+\end{itemize}
+  \item If dynamics are present they must be modeled
+  \item Otherwise, dynamic effects will be allocated to other states
+\end{itemize} 
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector
+\begin{itemize}
+ \item How?
+\begin{itemize}
+	\item model non-white noise as result of feeding white noise through a linear system
+	\item new states are outputs of new integrators
+\end{itemize}
+  \item State transition matrix $\Phi$ and error covariance matrix $P$ grow as $j^2$, where $j$ is number of new states
+  \item Geometry matrix $H$ grows as $m\cdot j$, where $m$ is number of measurements and $j$ is number of new states
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Long mission times
+\begin{itemize}
+	\item Especially submarines
+\end{itemize}
+  \item Position fixes insufficient to calibrate gyro bias drift w/o further modeling
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Gyro bias drift due to slowly changing bias
+  \item Can be modeled as random walk
+  \item Random walk modeled as integrated white noise
+  \item Kalman filter needed to estimate drift 
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Assume platform tilts are kept close to zero through velocity measurements damping the Schuler oscillations
+  \item North-West-Up (NWU) coordinate frame (or West-South-Up)
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Two angular position errors in radians:  $\psi_N$ and $\psi_W$
+\begin{itemize}
+	\item Note $\psi_N$ is a small angular rotation about the north axis and  thus induces a west position error.
+    \item Similarly, $\psi_W$ is a small rotation about the west axis and thus induces a south position error.
+\end{itemize}
+  \item $\theta_U =\psi_Z - \psi_N \tan(\lambda)$, where $\psi_Z$ is platform azimuth error and $\lambda$ is the latitude.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Error Dynamics:
+\begin{align*}
+\dot{\psi}_N - \Omega_U\psi_W &= \delta g_N\\
+\dot{\psi}_W + \Omega_U \psi_N - \Omega_N\theta_U &= \delta g_W\\
+\dot{\theta}_U + \Omega_N \psi_W &= \delta g_U
+\end{align*}
+where $\delta g_N,\delta g_W,\delta g_U$ are non-white gyro bias drift errors and $\Omega_N=\Omega\cos(\lambda)$ and $\Omega_U=\Omega\sin(\lambda)$ are components of earth rate
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Since $\delta g_N,\delta g_W,\delta g_U$ are non-white, the question arises as to what kind of model is appropriate
+  \item Empirical data indicates that gyro biases exhibit random walk behavior over time
+  \item Since random walk is the integral of white noise, white noise can be viewed (in some sense) as the derivative of random walk
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item Hence, the following dynamics of random walk apply:
+\begin{align*}
+\dot{\delta} g_N &= w_N\\
+\dot{\delta} g_W &= w_W\\
+\dot{\delta} g_U &= w_U
+\end{align*}
+where $w_N,w_W,w_U$ are white noise processes.
+\end{itemize} 
+\end{slide}
+\begin{slide}
+Augmenting the State Vector\\
+Example: Ship Inertial Navigation Systems (SINS)
+\begin{itemize}
+  \item We use the random walk equations to augment the state dynamics equations
+  \item Thus we now have a six-state model:
+\end{itemize} 
+\[
+\begin{bmatrix}
+\dot{\psi}_N\\
+\dot{\psi}_W\\
+\dot{\theta}_U\\
+\dot{\delta} g_N\\
+\dot{\delta} g_W\\
+\dot{\delta} g_U
+\end{bmatrix}
+=
+\begin{bmatrix}
+0&\Omega_U&0&1&0&0\\
+-\Omega_U&0&\Omega_N&0&1&0\\
+0&-\Omega_N&0&0&0&1\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+\psi_N\\
+\psi_W\\
+\theta_U\\
+\delta g_N\\
+\delta g_W\\
+\delta g_U
+\end{bmatrix}
++\begin{bmatrix}
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+0&0&0&1&0&0\\
+0&0&0&0&1&0\\
+0&0&0&0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+0\\
+0\\
+0\\
+w_N\\
+w_W\\
+w_U
+\end{bmatrix}
+\]
+\end{slide}
+\begin{slide}
+Augmenting the State Vector
+\begin{itemize}
+  \item Straightforward: When new, relevant dynamic relations found, simply add the states to the state vector and add the new dynamics to the $F$ and/or 
+\end{itemize} 
+\end{slide}
+

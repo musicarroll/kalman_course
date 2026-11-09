@@ -1,0 +1,76 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+%\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{include/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Kalman Filter Theory and Applications\\
+An Overview\\
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018 by Michael L. Carroll
+\end{tiny}
+}
+\maketitle
+
+% ----------------------------------------------------------------
+\input{overview.tex}
+\input{\dayonesegone/heuristic_main.tex}
+\input{day1_seg2_equations/equation_main.tex}
+% \input{day1_seg3_diff_eq/diff_eq_main.tex}
+\input{day1_seg4_state_space/state_space_main.tex}
+\input{day2_seg1_prob/probability_main.tex}
+\input{day2_seg1_ranproc1/ranproc_main.tex}
+\input{day2_seg2_ranproc2/ranproc2_main.tex}
+\input{day2_seg3_kalstats/kalstats_main.tex}
+\begin{frame}
+\textbf{Day 3: Strapdown Navigation and Inertial Error Dynamics\\
+Segments}
+ \begin{itemize}
+ \item Some Practical Considerations (Numerical)
+ \item The Navigation Problem and Reference Frames
+ \item Inertial Error Dynamics
+ \item The Basic 9-State Kalman Filter
+ \item Challenges of INS Filters
+\end{itemize}
+\end{frame}
+% Need SRIFs
+\input{day3_seg1_numerical/numerical_main.tex}  % Too Brief
+\input{day3_seg2_navproblem/navproblem_main.tex}
+\input{day3_seg2_inertial/inertial_main.tex}  % Replace with orbital and clock?
+\input{day3_seg3_9-state/9-state_main.tex}
+\input{day3_seg4_ins_challenges/ins_chal_main.tex}
+\input{day4_seg1_sim/sim_main.tex}  % SIMLTIC
+\input{day4_seg2_navaids/navaids_main.tex}
+\input{day4_seg3_maint/maint_main.tex}
+\input{day4_seg4_redund/redund_main.tex}
+% ----------------------------------------------------------------
+\end{document}

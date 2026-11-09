@@ -1,0 +1,65 @@
+\documentclass{beamer}
+% Use jpg graphics in figure environments and pdflatex to compile!!!
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+\usepackage{booktabs} 
+\usepackage[english]{babel} 
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\newcommand{\includes}{/home/1104070/latex_include}
+\newcommand{\dayonesegone}{day1_seg1_heuristic}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{include/kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\newcounter{exercisecounter}
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt}
+  \begin{tiny}@copyright 2018 by\hfill\insertshortauthor\hfill\insertpagenumber\end{tiny}}}
+\setbeamertemplate{navigation symbols}{}
+
+
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory\\ with Applications to Navigation \\
+Part 2
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{\today\\
+\currenttime\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2018 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+% ----------------------------------------------------------------
+\begin{frame}{Table of Contents} 
+\tableofcontents 
+\end{frame} 
+% ----------------------------------------------------------------
+\section{Probability and Statistics}
+\input{day2_seg1_prob/probability_main.tex}
+\section{Random Processes}
+\input{day2_seg1_ranproc1/ranproc_main.tex}
+\section{Some Important Random Processes}
+\input{day2_seg2_ranproc2/ranproc2_main.tex}
+\section{Kalman Statistics: Bayesian Derivation}
+\input{day2_seg3_kalstats/kalstats_main.tex}
+% ----------------------------------------------------------------
+\end{document}

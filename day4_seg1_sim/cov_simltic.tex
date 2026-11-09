@@ -1,0 +1,72 @@
+% cov_simltic.tex
+
+\begin{frame}
+SIMLTIC: \textbf{SIM}ulation of \textbf{L}inear \textbf{T}ime-\textbf{I}nvariant \textbf{C}ovariance
+\begin{itemize}
+  \item Discrete, Generic Covariance Simulation
+  \item LTI = Constant Coefficients in System Dynamics
+  \item Implemented as Simulink Subsystem Block
+	\begin{itemize}
+		\item Can be dropped into higher level models as required
+		\item Output can be integrated with Matlab Workspace
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=.70\textwidth]{matlab/simltic.jpg}
+\end{frame}
+
+\begin{frame}
+SIMLTIC: \textbf{SIM}ulation of \textbf{L}inear \textbf{T}ime-\textbf{I}nvariant \textbf{C}ovariance
+\begin{itemize}
+  \item Example:  Covariance Comparison of Two Harmonic Oscillator Models
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=.90\textwidth]{matlab/cov_compare.jpg}
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=\textwidth]{matlab/cov_compare1.jpg}
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=\textwidth]{matlab/cov_compare_comp_kalgain.jpg}
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=\textwidth]{matlab/cov_compare_upd_cov_mat.jpg}
+\end{frame}
+
+
+\begin{frame}
+%\includegraphics[angle=-90,width=\textwidth]{matlab/cov_compare_extrap_cov_mat.jpg}
+\end{frame}
+
+\begin{frame}
+%\includegraphics[angle=-90,width=\textwidth]{matlab/cov_compare_comp_trans_mat.jpg}
+\end{frame}
+
+\begin{frame}
+Transistion Matrix as Matrix Exponential
+\begin{itemize}
+  \item If system dynamics matrix $F$ is constant, i.e., not time-varying over the interval of interest, then $\Phi(\Delta t)$ can be expressed as matrix exponential:
+\[\Phi(\Delta t) = I + F\Delta t + \dfrac{1}{2!}\left[F\Delta t\right]^2 + \dfrac{1}{3!}\left[F\Delta t\right]^3+\cdots\]
+  \item If $\Delta t$ is small enough, the approximation $\Phi(\Delta t)\approx I+F\Delta t$ may be adequate
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+%\includegraphics[width=0.8\textwidth]{matlab/cov_compare_fig1.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+%\includegraphics[width=0.8\textwidth]{matlab/cov_compare_fig2.jpg}
+\end{center}
+\end{frame}

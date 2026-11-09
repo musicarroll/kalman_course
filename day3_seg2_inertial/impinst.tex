@@ -1,0 +1,157 @@
+% day3_seg2_inertial/impinst.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Imperfect Inertial Instruments}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Accelerometers and Gyros have inherent imperfections
+}
+  \onslide<3->{
+ \item Bias, scale factor, $g^2$ terms, noise, random walks, etc.
+}
+  \onslide<4->{
+ \item Inertial sensor clusters also have errors: misalignments
+}
+  \onslide<5->{
+ \item Many error sources are calibrated out using rate tables during ATP
+}
+ \onslide<6->{ 
+ \item Residual effects will influence strapdown nav equations
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Imperfect Inertial Instruments}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Strapdown nav equations very sensitive to gyro errors
+}
+  \onslide<3->{
+  \item Gyro biases yield erroneous $\dcm{B}{L}$ matrix which in turn causes erroneous accelerations to be computed in local level frame
+}
+  \onslide<4->{
+  \item Thus, gyro errors affect not only attitude, but also position and velocity
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Simple Inertial Error Models}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Gyros
+\[
+\simprateerreq{x}{y}{z}
+\]
+\[
+\simprateerreq{y}{z}{x}
+\]
+\[
+\simprateerreq{z}{x}{y}
+\]
+
+where $\gyrobias{i}$ is the $i^\text{th}$ gyro bias, $\gyrosf{i}$ the $i^\text{th}$ gyro scale factor, and $\gyromisalign{i}{j}$ is the misalignment of the $i^\text{th}$ gyro axis toward the $j^\text{th}$ gyro axis. 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Simple Inertial Error Models}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Accelerometers
+\[
+\simpaccelerreq{x}{y}{z}
+\]
+\[
+\simpaccelerreq{y}{z}{x}
+\]
+\[
+\simpaccelerreq{z}{x}{y}
+\]
+where $\accelbias{i}$ is the $i^\text{th}$ accelerometer bias, $\accelsf{i}$ the $i^\text{th}$ accelerometer scale factor, and $\accelmisalign{i}{j}$ is the misalignment of the $i^\text{th}$ accelerometer axis toward the $j^\text{th}$ accelerometer axis. 
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Bias Models}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Bias in both types of instruments can be further broken down into several components:
+  \begin{itemize}
+	\item fixed bias -- constant from turn-on to turn-on -- should be calibrated out
+	\item bias stability -- varies from turn-on to turn-on -- can't be calibrated out, but can be characterized in terms of variance -- can model as random constant
+	\item bias drift -- usually modeled as random walk
+  \end{itemize} 
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Scale Factor Models}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item Scale factor can also be modeled as a sum of three components
+}
+  \onslide<3->{
+  \item Often in nav filters, scale factor residual is modeled as a random constant
+}
+  \onslide<4->{
+  \item Important to keep in mind that the contribution of scale factor error is a function of input (rate or acceleration) 
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Higher Order Models}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item In expanding the output error as a Taylor series function of input, bias, scale factor, and misalignment show up as zero and first order terms.
+}
+  \onslide<3->{
+  \item Higher order terms are also present, especially second order terms.
+}
+  \onslide<4->{
+  \item In some calibration and alignment filters, such higher order effects are modelled
+}
+  \onslide<5->{
+  \item SNU-84-1 includes error budgets associated with all the combined, higher order effects.  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Inertial Error Dynamics} 
+	\framesubtitle{Higher Order Models:  Taylor Series of Two Variables}
+}
+  \onslide<2->{
+\begin{align*}
+\gentaylordouble{f}{x}{y}{x_0}{y_0}
+\end{align*}
+Taylor Series provides basis for all error analysis.
+}
+\end{frame}

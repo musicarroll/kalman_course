@@ -1,0 +1,18 @@
+% day3_seg4_ins_challenges/nonlinear.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Non-Linearities: Extended Kalman Filter} 
+	\framesubtitle{}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item When non-linearities are present, the $F$ matrix emerges as Jacobian of non-linear system function $f$:  $F(t)=\dfrac{\partial f}{\partial x}$
+}
+  \onslide<3->{
+  \item If Jacobian is evaluated at a nominal value of the trajectory,  we call this a linearized filter
+}
+  \onslide<4->{
+  \item If Jacobian is evaluated at the previous optimal estimate, we call it an Extended Kalman filter
+}
+\end{itemize}
+\end{frame}

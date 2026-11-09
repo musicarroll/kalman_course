@@ -1,0 +1,23 @@
+\begin{slide}
+UD Factorization
+\begin{itemize}
+  \item Based on Cholesky Decomposition
+  \item Unit Triangular Matrices: $U$ has 1's on the diagonal and all 0's below the diagonal.  E.g.,
+\[
+U=\begin{bmatrix}
+1 & 5 & 7 \\
+0 & 1 & 3\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+UD Factorization
+\begin{itemize}
+  \item Factor $HPH\trans + R$ as $UDU\trans$, where $U$ is unit upper triangular and $D$ is diagonal.
+  \item This then allows us to "invert" $HPH\trans + R$ by solving the equation unit upper triangular equation $UDU\trans X=H$ for the matrix $X$, which will yield $X=\left[HPH\trans + R\right]^{-1}H$
+  \item This last expression is used on the covariance update equation in $KH$
+\end{itemize} 
+\end{slide}

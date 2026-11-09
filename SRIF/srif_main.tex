@@ -1,0 +1,394 @@
+\subsection{SRIF Topics}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Topics}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Information Filters 
+}
+  \onslide<3->{
+\item  Square Root Filters 
+}
+  \onslide<4->{
+\item  Square Root Information Filters (SRIF) 
+}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Information Filters}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Information Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Standard KF is sometimes called the Covariance Kalman Filter because it is formulated
+using the covariance matrix $P$.  The Information Filter is more efficient when there are very large batches of 
+measurements to process.
+}
+
+  \onslide<3->{
+\item Information Matrix $\Lambda$:  Inverse of the Estimation Error Covariance Matrix $P$  \\
+}
+  \onslide<4->{
+\item Recall $\gencovmatdef$  
+}
+  \onslide<5->{
+\item  We define $\Lambda:=P^{-1}$ 
+}
+  \onslide<6->{
+\item When $\Lambda$ is "large" $P$ is "small" (in norm)  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Information Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Consider the covariance update equation $\gencovupdateeq$ 
+}
+  \onslide<3->{
+  % Taking inverses yields:  $\left[P^{+}\right]^{-1}=\left[P^{-}\right]^{-1}\left[ I-KH\right]^{-1}$ 
+\item  Substitute the Kalman gain formula $\genkalgaineq$ into the above equation to yield\\
+$P^{+}=P^{-}-P^{-}H\trans\left[HP^{-}H\trans+R\right]^{-1}HP^{-}$  
+}
+  \onslide<4->{
+\item   To futher expand and then simplify, we need to apply the Matrix Inversion Lemma (also known as the Woodbury formula):\\
+$\woodbury{A}{B}{C}{D}$
+}
+  \onslide<5->{
+\item We obtain:  $\left[P^{+}\right]^{-1}=\left[P^{-}\right]^{-1}+H\trans R^{-1}H$, or,\\ in terms of $\Lambda$:
+$\Lambda^{+}=\Lambda^{-}+H\trans R^{-1}H$  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Information Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Note that the information matrix is updated without knowledge of the gain!
+}
+  \onslide<3->{
+\item  The gain comutation takes on a very simple form:  $K=\Lambda^{+}H\trans R^{-1}$  
+}
+  \onslide<4->{
+\item  The state is then updated using the gain in the normal way 
+}
+  \onslide<5->{
+\item  Standard KF requires inversion of $r\times r$ matrix ($r=$number of measurements); information filter
+requires inversion of a couple of $n\times n$ inversions.   \\
+Thus, if $r>>n$, it is more efficient to use the information filter.
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Information Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  The information matrix extrapolation equation is derived in a similar fashion by 
+transforming the standard covariance extrapolation equation using once again the Woodbury formula
+}
+  \onslide<3->{
+\item  This yields:\\ $\Lambda^{-}(k)=Q^{-1}-Q^{-1}\Phi\left[ \Lambda^{+}(k-1)+\Phi\trans Q^{-1} \Phi\right]^{-1}\Phi\trans Q^{-1}$ 
+}
+  \onslide<4->{
+\item   If the process noise covariance $Q$ and/or the measurement noise covariance are constant (
+or change only infrequently) with time, then the indicated inverses can be computed once at startup or perhaps only 
+occasionaly.
+}
+\end{itemize}
+\end{frame}
+
+\subsection{Square Root Filters}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Square Root Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Motivation: Covariance matrices are supposed to be nonsingular, positive semi-definite; they are invertible  
+}
+  \onslide<3->{
+\item  But due to differences in uncertainy values for different states, they may be ill-conditioned for inversion 
+}
+  \onslide<4->{
+\item  Conditioning refers to the condition number of a matrix:  $\kappa (P):=\sigma_{\text{max}}/\sigma_{\text{min}}$,\\
+where $\sigma_{\text{max}}$ is the maximum singular value of $P$ and $\sigma_{\text{min}}$ is the minimum singular value.\\
+\begin{footnotesize} 
+Singular values of real-valued $P$ are square roots of eigenvalues of $P\trans P$ (or $PP\trans$)
+\end{footnotesize}
+}
+  \onslide<5->{
+\item  Note that $\kappa(P)\geq 1$, for a nonsingular matrix $P$, since all of its singular values are positive
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Square Root Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Example of 2-state model: Highly uncertain first state, but highly certain second state:\\
+$P=
+\begin{bmatrix}
+10^{10} & 0\\
+0 & 10^{-10}
+\end{bmatrix}$  
+}
+  \onslide<3->{
+\item $\kappa(P)=10^{10}/10^{-10}=10^{20}$, since singular values of a diagonal matrix 
+are absolute values of the diagonal elements  
+}
+  \onslide<4->{
+\item Although $P$ is technically nonsingular, on an embedded digital computer with limited word length 
+it may become singular   
+}
+  \onslide<5->{
+\item  MATLAB Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =
+1.000000e-20 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Square Root Filters}
+}
+\begin{itemize}
+  \onslide<2->{
+\item If we can factor $P$ as the product of a matrix and its transpose, i.e., $P=SS\trans$, then the matrix $S$  
+is said to be the matrix square root of $P$\\
+\begin{footnotesize}Note: There are several alternative definitions in the literature $SS\trans,S^2,S\trans S$\end{footnotesize}
+}
+  \onslide<3->{
+\item Key idea:  if $P=SS\trans$, then $\kappa(S)=\sqrt{\kappa(P)}$  
+}
+  \onslide<3->{
+\item Matrix square roots are not unique  
+}
+  \onslide<4->{
+\item But all square roots of a matrix are related by orthogonal transformations (i.e., 
+rotations in n-dimensional space)\\
+$T$ is \textbf{orthogonal} if its transpose is its inverse:   $TT\trans = T\trans T=I$  
+}
+  \onslide<5->{
+\item If $P=S_1 S_1\trans=S_2 S_2\trans$, then there is an orthogonal matrix $T$ such that $S_2=S_1 T$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Square Root Filters: Orthogonal Matrices}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Important Properties of Orthogonal Matrices:  
+}
+\begin{itemize}
+  \onslide<3->{
+\item Length Invariance (Isometry):  $\norm{Tx}=\norm{x}$  \\
+where $\norm{x}=\sqrt{x\trans x}$ is Euclidean norm\\ (also preserves dot product between two vectors)
+}
+  \onslide<4->{
+\item Angle Invariance:  The angle between the vectors $x$ and $y$ is the same as that between $Tx$ and $Ty$ 
+}
+  \onslide<5->{
+\item  Standard Gaussian Invariance: If $v$ is zero-mean Gaussian random vector such that $\expect{vv\trans}=I$, 
+then for orthogonal $T$ the 
+vector $Tv$ is also zero-mean Gaussian and $\expect{Tv(Tv)\trans}=I$
+}
+\end{itemize}
+  \onslide<6->{
+    \item Length and Standard Gaussian Invariances play crucial role in square root filtering
+}
+\end{itemize}
+\end{frame}
+
+\subsection{Bierman Derivation of SRIF}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Least Squares Derivation of SRIF (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Consider measurement model:  $z=Hx+v$  
+}
+  \onslide<3->{
+\item  Least squares solution minimizes means square error:  $$J=\sum_{j=1}^m v^2(j)=v\trans v$$ 
+}
+  \onslide<4->{
+\item As a function of $x$ this becomes $$J(x)=(z-Hx)\trans (z-Hx)$$  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Least Squares Derivation of SRIF (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Differentiating $J(x)$ with respect to $x$ (taking into account non-commutative multiplication of matrices),
+we obtain the least squares \textbf{normal equations}: $$H\trans H x=H\trans z$$
+}
+  \onslide<3->{
+\item  The least squares solution $x_{\text{ls}}$ is therefore $$x_{\text{ls}}=(H\trans H)^{-1}H\trans z$$ 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Least Squares Derivation of SRIF (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item   Interpreting the errors $v$ statistically and assuming both $\expect{v}=0$ and $\expect{vv\trans}=I$,
+we derive $$H\trans H \left(x_{\text{ls}}-x\right)=H\trans v$$
+}
+  \onslide<3->{
+\item  And it can be shown that $$P_{\text{ls}}=(H\trans H)^{-1}$$ 
+}
+  \onslide<4->{
+\item  Taking the matrix inverse of both sides reveals SRI matrix $$\Lambda_{\text{ls}} = H\trans H$$ 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Least Squares Derivation of SRIF (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  The above derivation was \textit{a posteriori}, i.e., after the measurement
+}
+  \onslide<3->{
+\item  We can now incorpoate the \textit{a priori} estimate $\hat{x}^{-}$ and SRI matrix $\Lambda^{-}$
+}
+  \onslide<4->{
+\item  The previous performance functional is now modified to become
+$$
+J_1(x):=(x-\hat{x}^{-})\trans \Lambda^{-} (x-\hat{x}^{-})+(z-Hx)\trans (z-Hx)
+$$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Least Squares Derivation of SRIF (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  The vector that minimizes $J_1$ is denoted $\hat{x}^{+}_{\text{ls}}$ and is easily shown to satisfy
+$$
+(\Lambda^{-}+H\trans H)\hat{x}^{+}_{\text{ls}}=\Lambda^{-}\hat{x}^{-}+H\trans z
+$$
+
+}
+  \onslide<3->{
+\item   Finally, the updated covariance is
+$$
+P^{+}_{\text{ls}}=(\Lambda^{-}+H\trans H)^{-1}
+$$
+}
+  \onslide<4->{
+\item  Bierman points out that $\Lambda^{-}$ need not be non-singular
+}
+  \onslide<5->{
+\item  In fact, one of the advantages of using the information matrix instead of the covariance 
+is that many entries of $\Lambda^{-}$ may be 0 (meaning no information=infinite uncerrtainty); we 
+may even start with $\Lambda^{-}=0$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{SRIF Recursion (Bierman)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Factor the \textit{a priori} $\Lambda^{-}$ into square root factors:  
+$\Lambda^{-}=\left[S^{-}\right]\trans S^{-}$
+}
+  \onslide<3->{
+\item This allows us to rewrite first term of $J_1(x)$ as
+$$
+(x-\hat{x}^{-})\trans \Lambda^{-} (x-\hat{x}^{-})=(z^{-}-S^{-}x)\trans (z^{-}-S^{-}x)
+$$
+where $z^{-}= S^{-}x^{-}$
+}
+  \onslide<4->{
+\item  We can now treat the \textit{a priori} estimate and covariance information 
+as if they were an additional (pseudo) measurement and augment the least squares problem
+$$
+\begin{bmatrix}
+z^{-}\\
+z
+\end{bmatrix}
+=
+\begin{bmatrix}
+S^{-}\\
+H
+\end{bmatrix}
+x +
+\begin{bmatrix}
+v^{-}\\
+v
+\end{bmatrix}
+$$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Square Root Information Filters} 
+	\framesubtitle{Summary}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Bierman:  "The interpretation of the \textit{a priori} as additional observations is the cornerstone
+of the square root information filter." 
+}
+  \onslide<3->{
+\item  Results do not depend on which square root is used;  facilitates use of orthogonal transformations 
+(Householder, Givens matrices) to put the square roots into numerical convenient forms 
+}
+  \onslide<4->{
+\item   Bierman and Thornton (JPL) combined this SRIF formulation with Cholesky decomposition to devise the U-D 
+factorization
+}
+\end{itemize}
+\end{frame}
+\input{day3_seg1_numerical/ud.tex}
+

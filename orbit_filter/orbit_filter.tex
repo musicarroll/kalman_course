@@ -1,0 +1,464 @@
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD):\\ Two-Body Equation of Motion} }
+\begin{itemize}
+  \onslide<2->{\item Basic two-body equation of relative motion:\\
+   \begin{center}Let $r$ be the vector from mass $m_1$ to $m_2$.  Then
+\begin{equation}\label{twobodyeq}
+  \twobodyeq,
+\end{equation}
+ $\twobodywhere$.\end{center} }
+  \onslide<3->{\item Note:  $r$ is a 3-vector function of time $r=r(t)$ }
+  \onslide<4->{\item For earth, $\muearth$ (from WGS84)}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD):\\ The Orbital Plane} }
+\begin{itemize}
+  \onslide<2->{\item Define angular momentum vector: $\angmom$,\\}   
+\onslide<3->{
+which is constant, since\\
+\begin{center}	
+	$\deriv{h}{t}=\deriv{(r\times\dot{r})}{t}
+		=\dot{r}\times \dot{r}+r\times \ddot{r}=0$ 
+\end{center} 
+}
+  \onslide<4->{\item $h$ constant $\Rightarrow$ planar motion  }
+  \onslide<5->{\item i.e., the \textbf{\textit{orbital plane}}, which is perpendicular to the angular momentum vector  }
+  \onslide<6->{\item Energy is also conserved (if we ignore internal, heat-generating forces)}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD):\\ Perturbations }}
+\begin{itemize}
+  \onslide<2->{\item Two-body model is too simple  }
+  \onslide<3->{\item Many more forces:  Gravitational and Non-Gravitational: $\twobodyeq+f_G+f_{NG}$  }
+  \onslide<4->{\item Highly non-linear; not amenable to simple, time-based linearization}
+  \onslide<5->{\item But two-body model (or slight variations thereof) may be close enough to provide an initial reference trajectory  }
+  \onslide<6->{\item Perturbation theory facilitates linearization with respect to reference trajectory  }
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD):\\ Gravitational Perturbations} }
+\begin{itemize}
+  \onslide<2->{\item Non-uniform mass density  }
+\begin{itemize}
+  \onslide<3->{\item Legendre polynomial spherical harmonics  }
+  \onslide<4->{\item zonal harmonics: tessoral, sectoral  }
+\end{itemize}
+  \onslide<5->{\item Oblateness  }
+  \onslide<6->{\item Third body effects on SV: Sun, moon, other planets  }
+  \onslide<7->{\item Temporal changes: Ocean tides, solid tides  }
+  \onslide<8->{\item General Relativity  }
+\begin{itemize}
+  \onslide<9->{\item Corrects Newtonian formula given in Eq. \eqref{twobodyeq}}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD):\\ Non-Gravitational Perturbations} }
+\begin{itemize}
+  \onslide<2->{\item Drag (appreciable for LEO satellites)  }
+  \onslide<3->{\item Solar Radiation Pressure (SRP) }
+  \onslide<4->{\item Earth Radiation Pressure (ERP), albedo  }
+  \onslide<5->{\item Other minor effects: thermal, magnetic, ...  }
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Linearization about a Nominal Trajectory:  Taylor Series} }
+\begin{itemize}
+  \onslide<2->{
+\item   To fully appreciate the linearization of orbit equations about a nominal trajectory, we need to make a detour into Taylor Series
+}
+  \onslide<3->{
+\item   Single Variable Taylor Series
+}
+  \onslide<4->{
+\item   Multivariable Taylor Series
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Single Variable Taylor Series} }
+\begin{itemize}
+  \onslide<2->{
+\item   If $f$ is a real-valued continuous function with continuous derivatives of all orders in a neighborhood of a point $x_0$,
+then the value of $f$ at any other point $x$ in that neighborhood can be expressed as an infinite series as follows:\\
+}
+  \onslide<3->{
+\begin{equation}
+f(x)=\Dopsumtaylor{f}{x}{x_0}
+\end{equation}
+where $\Dopnth{k}{x,x_0}{f}:= \svartaylorterm{k}{x}{f}{x_0}.$
+}
+  \onslide<4->{
+\item   $x$ is a scalar variable
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Multivariable Taylor Series} }
+\begin{itemize}
+  \onslide<2->{
+\item   For a vector-valued function $f$ of a vector variable $x$ the notation can be made similar, 
+using sums of partial derivatives instead of ordinary derivatives:
+}
+  \onslide<3->{
+\begin{equation}
+\mvartaylorseries{x}{f}
+\end{equation}
+where $\mvartaylortermsymdef{k}{x}{f}{x_0}$, and it is understood that the exponent $k$ applies to the derivative operator to form the $k^{\text{th}}$-order derivative \textbf{before} evaluating that derivative at the vector point $x_0$.
+}
+  \onslide<4->{
+\item Note that $x$ is also (in our applications) an implicit vector-valued function of time $x=x(t)$.
+But we are ignoring that for now.  
+}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Linearization} }
+\begin{itemize}
+  \onslide<2->{
+\item   We can unify the multivariable and single variable notation with the following definition:
+}
+  \onslide<3->{
+\begin{equation}
+\tayloropdef{k}{x}{f}{x_0}
+\end{equation}
+}
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD): Linearization} }
+\begin{itemize}
+  \onslide<2->{\item  $\gomaeqmo$\\ $\gomawhereeqmo$ }
+  \onslide<3->{\item $\gomalinrefeq{x}{F}$,\\ $\gamma$ is an $m$-vector of constant parameters 
+associated with perturbation forces, and the derivative is evaluated at a point on the reference trajectory  }
+  \onslide<4->{\item Or, equivalently\\ $\altlinrefeq{x}{F}$  }
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{General Linearization} }
+\begin{itemize}
+  \onslide<2->{ 
+\item  Typically, we linearize about an equilibrium point $x_0$ or a reference (or nominal) function $x_{\text{ref}}(t)$
+}
+  \onslide<3->{
+\item   Equilibrium:  $\dot{x}=f(x_0)=0$, define $\delta x(t)=x(t)-x_0$.  Then, since $x_0$ is a constant, we have\\
+$\deriv{\delta x(t)}{t}=\deriv{x(t)}{t}-\deriv{x_0}{t}=\dot{x}(t)-0=\dot{x}(t)$
+}
+  \onslide<4->{
+\item   Reference function:  $\deriv{\delta x(t)}{t}=\deriv{\left[x(t)-x_{\text{ref}}(t)\right]}{t}=
+\dot{x}(t)-\dot{x}_{\text{ref}}(t)$
+}
+  \onslide<5->{
+\item Note:  Equilibrium points are called critical points in mathematics (points where the gradient is zero)
+}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Precise Orbit Determination (POD): Linearization} }
+\begin{itemize}
+  \onslide<2->{\item Introduce the delta state:  $\gomacurrentstateresidual{x}{t}$ }
+  \onslide<3->{\item Then the equation of motion becomes: $\svdyneqAx$, where $\svdynmatdef$  }
+  \onslide<4->{\item The state transition matrix $\Phi$ is associated with the homgeneous solution of 
+the linearized differential equation above, and enables future state to be computed from the current state :\\
+   \begin{center}$\svsolneq$\end{center} and also itself satisfies the matrix differential equation\\
+   \begin{center}$\phidiffeq{t_0},$\end{center}
+	with initial condition $\Phi(t_0,t_0)=I$
+}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Simplified Perturbation Models} }
+\begin{itemize}
+  \onslide<2->{
+\item Five standard orbital math models: SGP, SGP4, SDP4, SGP8 and SDP8
+}
+  \onslide<3->{
+\item  SGP:  Simplified General Perturbations (orbital period < 225 minutes) 
+}
+  \onslide<4->{
+\item   SDP:  Simplified Deep Space Perturbations (orbital period > 225 minutes)
+}
+  \onslide<5->{
+\item  Many implementations available:  Python, MATLAB, FORTRAN, C 
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{\frametitle{Example:  2D, 7-state} }
+\begin{itemize}
+  \onslide<2->{
+\item   Consider a simple, planar example:  $X=\svvectwodseven{X_1}{X_2}$,
+where $X_1,X_2$ are the two SV position coordinates and the $\gamma$ (nuisance) 
+parameters are $\mu$ and the monitor station coordinates $X_s, Y_s$.
+}
+  \onslide<3->{
+\item   Note that $\dot{X}=\dotsvvectwodseven{X_1}{X_2}$
+}
+  \onslide<4->{
+\item   Using $\ddot{X_1}=-\mu X_1/r^3$ and $\ddot{X_2}=-\mu X_2/r^3$,
+and assuming that $\mu$ and the station coordinates are constant,
+we obtain $\dot{X}=\altdotsvvectwodseven{X_1}{X_2}$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Example:  2D, 7-state Model} 
+	\framesubtitle{Measurement Model}
+  
+}
+\begin{itemize}
+  \onslide<2->{
+\item  The $A$ matrix becomes:
+\begin{footnotesize}
+\begin{equation*}
+A=\Asvtwodseven{X_1}{X_2}
+\end{equation*}
+\end{footnotesize}
+}
+  \onslide<3->{
+\item If the $A$ matrix were constant, we could easily calculate the state
+transition matrix $\Phi$ to be the matrix exponential of $A$:
+\begin{equation*}
+\Phi(t-t_0)=\exp\left[A((t-t_0)\right]
+\end{equation*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+  \frametitle{Example:  2D, 7-state} 
+}
+\begin{itemize}
+  \onslide<2->{
+\item     In general, $A$ is time-varying. 
+\begin{equation*}
+\phidiffeq{t_0}
+\end{equation*}
+}
+  \onslide<3->{
+\item   But over small enough time incements it can be treated as constant.
+}
+  \onslide<4->{
+\item   We evaluate $A$ at $X_0$ 
+}
+  \onslide<5->{
+\item   We have to integrate the $\Phi$ differential 
+equation from $t_0$ to $t$ get the new value of the state transition matrix that will allow us
+to extrapolate the state from time $t_0$ to $t$,
+keeping it mind that $X_1,X_2,r$ are functions of time.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Example:  2D 7-state Model } 
+	\framesubtitle{System Dynamics Matrix}
+}
+$A(t)=\left(\begin{array}{ccccccc} 0 & 0 & 1 & 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 1 & 0 & 0 & 0\\ \frac{\mu \,\left(2\,X^2-Y^2\right)}{{\left(X^2+Y^2\right)}^{5/2}} & \frac{3\,X\,Y\,\mu }{{\left(X^2+Y^2\right)}^{5/2}} & 0 & 0 & -\frac{X}{{\left(X^2+Y^2\right)}^{3/2}} & 0 & 0\\ \frac{3\,X\,Y\,\mu }{{\left(X^2+Y^2\right)}^{5/2}} & -\frac{\mu \,\left(X^2-2\,Y^2\right)}{{\left(X^2+Y^2\right)}^{5/2}} & 0 & 0 & -\frac{Y}{{\left(X^2+Y^2\right)}^{3/2}} & 0 & 0\\ 0 & 0 & 0 & 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 & 0 & 0 & 0 \end{array}\right)$
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+  \frametitle{Example:  2D, 7-state} 
+	\framesubtitle{Measurement Model}
+}
+\begin{itemize}
+  \onslide<2->{
+\item The nonlinear measurement model is just the distance formula:  $\measmodelseven{\rho}$  
+}
+  \onslide<3->{
+\item   We linearize this by taking the Jacobian of this to get the time-dependent $H$ matrix:
+\[
+\linmeasseven{\rho}
+\]
+}
+  \onslide<4->{
+\item If measurements arrive at different times after epoch, then they can 
+be related back to epoch state by applying $\Phi$:  Let $H(i)$ be the $H$ matrix at 
+time $t_i>t_k$. Define new observation matrix $\Gamma$ whose $i^{\text{th}}$ element is the row block $H(i)\Phi(t_i,t_k)$
+}
+  \onslide<5->{
+\item  Stack all measurements via $z=\Gamma x(k)+v(k)$ 
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{Orbit Integrator (OI)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Equation of motion:  $\ddot{r}(t)=f(r,\dot{r},p,t)$, where p is a vector of constant force model parameters 
+}
+  \onslide<3->{
+\item  Force models:  $f=f_{\text{grav}}+f_{\text{3b}}+f_{\text{srp}}+f_{\text{tides}}+f_{\text{rel}}+
+f_{\text{earthrad}}+f_{\text{custom}}$
+where\\
+\begin{footnotesize}
+$f_{\text{grav}}=$ acceleration due to gravity\\
+$f_{\text{2b}}=$ acceleration due to sun and/or moon\
+$f_{\text{srp}}=$ acceleration due to solar radiation pressure\\
+$f_{\text{tides}}=$ acceleration due to to solid earth, pole, and ocean tides\\
+$f_{\text{rel}}=$ acceleration due to relativity\\
+$f_{\text{earthrad}}=$ acceleration due to earth albedo and IR radiation\\
+$f_{\text{custom}}=$ acceleration due to custom force model (e.g., constant and once-per-rev accelerations)\\
+\textbf{See gcore.pdf for details on the force models}
+\end{footnotesize}
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{Orbit Integrator (OI)}
+}
+\begin{footnotesize}
+\begin{itemize}
+  \onslide<2->{
+\item To facilitate filter estimation of the states, we compute partial derviatives of the state with respect to 
+$r_0,\dot{r}_0$ and $p$;  partials represent sensitivity of satellite state to uncertainty in initial conditions (i.e., prior state)
+}
+  \onslide<3->{
+\item  Variational Equations:
+\begin{align}
+\ppderivop{t}\left(\pderiv{r}{r_0}\right)&=A\pderiv{r}{r_0}+B\pderiv{\dot{r}}{r_0}\\
+\ppderivop{t}\left(\pderiv{r}{\dot{r}_0}\right)&=A\pderiv{r}{\dot{r}_0}+B\pderiv{\dot{r}}{\dot{r}_0}\\
+\ppderivop{t}\left(\pderiv{r}{p}\right)&=A\pderiv{r}{p}+B\pderiv{\dot{r}}{p}+C
+\end{align} 
+}
+  \onslide<4->{
+where $A=\pderiv{f}{r},B=\pderiv{f}{\dot{r}}$ and $C=\pderiv{f}{p}$
+}
+\end{itemize}
+\end{footnotesize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{Orbit Integrator (OI)}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Variational equations must be integrated together with equations of motion; 
+$A, B,$ and $C$ need to be computed at every time step 
+}
+  \onslide<3->{
+\item  Makes orbital integration numerically challenging: Satellite state gives rise to 18 variational equations
+and each force model parameter contributes another 3  
+}
+  \onslide<4->{
+\item Force models internally hard-coded as modular suboutines;  force models may be switched on and off 
+}
+  \onslide<5->{
+\item Foce model parameters read in from database 
+}
+  \onslide<5->{
+\item ODE solver includes single-step (Runge-Kutta) and multi-step (Adams)
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{RTGx Processing Flow}
+}
+\begin{itemize}
+  \onslide<2->{
+\item 1. SRIF Filter
+}
+  \onslide<3->{
+\item   2. UD Smoother with Ambiguity Resolution
+}
+  \onslide<4->{
+\item   3. SRIF Filter to apply ambiguity constraints
+}
+  \onslide<5->{
+\item   4. UD Smoother without Ambiguity Resolution  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{RTGx Inputs}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  1. Parameters and options
+}
+  \onslide<3->{
+\item   2. Deterministic state mapping functions, which come from integrating spacecraft state
+variational equations
+}
+  \onslide<4->{
+\item 3. Partial derivatives of the measurements with respect to the problem parameters
+}
+  \onslide<5->{
+\item   4. A time sequence of stochastic events for any of the stochastic parameters. As well
+as noting white noise and random walk updates, the time sequence will indicate
+parameters added and removed
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{GPS OCX} 
+	\framesubtitle{RTGx Optional Outputs}
+}
+\begin{itemize}
+  \onslide<2->{
+  \item   1. Estimates of linear combinations of state variables
+}
+  \onslide<3->{
+  \item   2. Sigmas of linear combinations of state variables
+
+}
+  \onslide<4->{
+  \item 3. SRI matrix
+}
+  \onslide<5->{
+  \item   4. Covariance matrix
+}
+  \onslide<6->{
+   \item 5. Sensitivity information
+}
+  \onslide<7->{
+\item 6. Smoothing/forward smoothing/removal smoothing coefficients
+}
+\end{itemize}
+\end{frame}
+

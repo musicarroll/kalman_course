@@ -1,0 +1,96 @@
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Models}
+		\framesubtitle{Satellite Orbits}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item 	Simplified model of a circular orbit about a perfectly spherical planet\\  (Note: Earth is an oblate spheroid, not a sphere!)	
+		}
+		\onslide<3->{
+			\item     The state vector consists of position and velocity components in the Planet-Centered Inertial (PCI) frame:
+
+		\[
+			\mathbf{x} = 
+			\begin{bmatrix}
+				x \\ y \\ z \\ u \\ v \\ w
+			\end{bmatrix}
+		\]
+
+
+}
+	\end{itemize}		
+	\onslide<4->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+	\frametitle{State Space Models}
+\framesubtitle{Satellite Orbits}
+}
+	\onslide<2->{
+
+	The dynamics of the satellite are governed by the following differential equations:
+	\begin{align*}
+	\dot{x} &= u \\
+	\dot{y} &= v \\
+	\dot{z} &= w \\
+	\end{align*}
+}
+	\onslide<3->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+	\onslide<1->{
+	\frametitle{State Space Models}
+\framesubtitle{Satellite Orbits}
+}
+	\onslide<2->{
+	and by:
+	\begin{align*}
+	\dot{u} &= -\frac{GM}{r^3}x \\
+	\dot{v} &= -\frac{GM}{r^3}y \\
+	\dot{w} &= -\frac{GM}{r^3}z
+	\end{align*}
+}
+	\onslide<3->{
+	Where:
+	\begin{itemize}
+		\item \(G\) is the gravitational constant.
+		\item \(M\) is the mass of the planet.
+		\item \(r = \sqrt{x^2 + y^2 + z^2}\) is the distance from the satellite to the center of the planet.
+	\end{itemize}
+}
+	\onslide<4->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{
+	\frametitle{State Space Models}
+\framesubtitle{Satellite Orbits}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Note that this is a \textbf{nonlinear} state equation, since the $r$ term is a nonlinear function of $x,y,z$!
+		}
+		\onslide<3->{
+			\item We haven't yet dealt with nonlinear differential equations
+		}
+		\onslide<4->{
+				\item To create a state space model, we must first be \textbf{linearize} the function about an equilibrium (or nominal) point and then use the linearized model in an \textbf{extended} Kalman filter 
+		}
+		\onslide<5->{
+			\item Once the system is linearized, we can identify the states in the usual way
+}
+		\onslide<6->{
+			\item This is beyond the scope of the current video
+		}
+	\end{itemize}
+	\onslide<7->{\center --------------------------------------------------------------------}
+	
+\end{frame}
+

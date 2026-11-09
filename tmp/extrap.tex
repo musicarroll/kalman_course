@@ -1,0 +1,76 @@
+% day1_seg1_heuristic/extrap.tex
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+ \begin{itemize}
+\onslide<2->{ \item In the running average example, the dynamics were trivial,
+ i.e., $x(k+1)=x(k)$}
+\onslide<3->{ \item This means that the state never really changes.  It's
+ always equal to its previous value.}
+\onslide<4->{ \item We just don't know what the exact value is.}
+\onslide<5->{ \item Example:  Measuring the same resistor over and over again with a voltmeter to
+ estimate the resistor's resistance value.  Or getting on and off a scale repeatedly.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+ \begin{itemize}
+ \onslide<2->{\item In more general Kalman filtering, we complicate the
+ situation by adding two more elements:}
+ \begin{itemize}
+\onslide<3->{ \item State dynamics with time dependence and process noise: 
+\begin{center}$x(k+1)=f\left[k,x(k),w(k)\right]$\end{center}}
+\onslide<4->{ \item Typically, the process noise is additive: 
+\begin{center}$x(k+1)=f\left[k,x(k)\right]+w(k)$\end{center}}
+ \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+\begin{itemize}
+  \onslide<2->{\item Form of function $f$ can be simple or complicated, linear or nonlinear}
+  \onslide<3->{\item Independent variable $k$ indicates  possible explicit time dependence}
+  \onslide<4->{\item Process noise assumed to be Gaussian white noise (to be defined later)}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+ \begin{itemize}
+ \onslide<2->{\item General Kalman filtering further complicates things by
+ allowing the state variable to be vector-valued}
+ \onslide<3->{\item This turns the function $f$ into a vector-valued function,
+ often a matrix (possibly time-dependent)}
+ \onslide<4->{\item Process noise must therefore also become a vector-valued variable}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+\begin{itemize}
+	\onslide<2->{\item Note that presence of a random forcing function like
+	 Gaussian white noise makes the state vector process a stochastic process (aka random process)}
+	  \begin{itemize} 
+  		\onslide<3->{ \item If white noise were zero, problem would be deterministic}
+	  \end{itemize}
+	 \onslide<4->{\item We'll see what this means when we take a look at random variables and random processes}
+	 \onslide<5->{\item Even for the same initial conditions the sample trajectory will be different each time, due to 
+	  randomly changing forcing functions}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{\frametitle{Extrapolation (Prediction)}}
+ \begin{itemize}
+  \onslide<2->{\item Note that we did not mention a control vector $u$ that could also be part of the 
+forcing function}
+\begin{itemize}
+\onslide<3->{\item Control vectors usually considered to be deterministic although in reality you can't control things 
+perfectly! }
+\onslide<4->{\item E.g., aircraft actuator (e.g., elevator or flaps) deflection angle might be a 
+control quantity yet its precise value may not be known!)}
+\end{itemize}
+ \onslide<5->{\item We are going to ignore the presence of deterministic control and focus solely on state estimation}
+\end{itemize}
+\end{frame}

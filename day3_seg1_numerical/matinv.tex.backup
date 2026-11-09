@@ -1,0 +1,9 @@
+% day2_seg4_numerical/matinv.tex
+\begin{slide}
+Matrix Inversion
+ \begin{itemize}
+ \item Matrix inversion is always risky due to potential ill-conditioning
+ \item One way to avoid this is to process measurements sequentially as scalars
+ \item Or at least as low-dimensional matrices
+\end{itemize}
+\end{slide}

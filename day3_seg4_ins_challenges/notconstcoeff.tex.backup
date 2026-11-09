@@ -1,0 +1,10 @@
+%day3_seg4_ins_challenges/notconstcoeff.tex
+\begin{slide}
+Not Constant Coefficient
+ \begin{itemize}
+ \item Notice that the $F$ matrix that has emerged (implicitly) from the 9-state inertial error dynamics is not time invariant
+ \item It is highly dependent on trajectory data such as acceleration and angular rate profiles
+ \item These are functions of time
+ \item Position dependent items such as latitude are also involved
+\end{itemize}
+\end{slide}

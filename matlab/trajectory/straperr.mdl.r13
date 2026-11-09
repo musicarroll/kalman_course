@@ -1,0 +1,5177 @@
+Model {
+  Name			  "straperr"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Apr 24 09:09:51 2003"
+  Creator		  "mcar"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mcarroll"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Apr  8 00:34:33 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:397>"
+  ConfigurationManager	  "sourcesafe"
+  SimParamPage		  "WorkspaceI/O"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode23s"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "20"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "1"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  on
+  ExternalInput		  "tu"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "StructureWithTime"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  off
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      From
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Goto
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "straperr"
+    Location		    [2, 52, 1022, 732]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "cyan"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "61"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "body rate inport X\n(deg/sec)"
+      Position		      [90, 213, 120, 227]
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "body rate inport Y\n(deg/sec)"
+      Position		      [90, 268, 120, 282]
+      Port		      "2"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "body rate inport Z \n(deg/sec)"
+      Position		      [90, 313, 120, 327]
+      Port		      "3"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "body accel inport X\n(g)"
+      Position		      [90, 448, 120, 462]
+      Port		      "4"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "body accel inport Y\n(g)"
+      Position		      [90, 493, 120, 507]
+      Port		      "5"
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "body accel inport Z\n(g)"
+      Position		      [90, 538, 120, 552]
+      Port		      "6"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Accel Switch"
+      Ports		      [2, 1]
+      Position		      [270, 516, 300, 569]
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Accel Error\nDynamics"
+      Ports		      [10, 1]
+      Position		      [1110, 95, 1285, 375]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Accel Error\nDynamics"
+	Location		[2, 52, 1022, 732]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"156"
+	Block {
+	  BlockType		  Inport
+	  Name			  "accelerometer\nerror (mg)"
+	  Position		  [40, 113, 70, 127]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "platform \nangle error"
+	  Position		  [35, 233, 65, 247]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth rate \nerror"
+	  Position		  [60, 308, 90, 322]
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate \nerror"
+	  Position		  [60, 358, 90, 372]
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity\nerror"
+	  Position		  [40, 633, 70, 647]
+	  Port			  "5"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DCM_B2L"
+	  Position		  [40, 63, 70, 77]
+	  Port			  "6"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth rate"
+	  Position		  [30, 463, 60, 477]
+	  Port			  "7"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate"
+	  Position		  [35, 533, 65, 547]
+	  Port			  "8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "v_L"
+	  Position		  [150, 388, 180, 402]
+	  Port			  "9"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "a_L"
+	  Position		  [35, 183, 65, 197]
+	  Port			  "10"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [500, 332, 590, 398]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display of a_Lxphi"
+	  Ports			  [1]
+	  Position		  [540, 132, 630, 198]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display1"
+	  Ports			  [1]
+	  Position		  [725, 122, 815, 188]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display2"
+	  Ports			  [1]
+	  Position		  [415, 667, 505, 733]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display3"
+	  Ports			  [1]
+	  Position		  [515, 522, 605, 588]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display4"
+	  Ports			  [1]
+	  Position		  [765, 377, 855, 443]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display5"
+	  Ports			  [1]
+	  Position		  [740, 517, 830, 583]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [115, 455, 145, 485]
+	  Gain			  "2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [120, 300, 150, 330]
+	  Gain			  "2"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make earth rate \nskew matrix"
+	  Position		  [230, 175, 290, 205]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew matrix"
+	  Position		  [290, 455, 350, 485]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew matrix2"
+	  Position		  [245, 300, 305, 330]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [465, 43, 510, 147]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [345, 171, 390, 244]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [425, 451, 470, 524]
+	  Multiplication	  "Matrix(*)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "velocity error term"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product6"
+	  Ports			  [2, 1]
+	  Position		  [355, 284, 400, 411]
+	  Multiplication	  "Matrix(*)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "velocity term"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [175, 305, 195, 325]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [235, 460, 255, 480]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [5, 1]
+	  Position		  [700, 211, 725, 379]
+	  ShowName		  off
+	  Inputs		  "|++--+"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "convert to\nm/sec^2"
+	  Position		  [110, 105, 140, 135]
+	  Gain			  "9.80665/1000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "gravity error"
+	  Position		  [520, 620, 550, 650]
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "acceleration\nerror"
+	  Position		  [790, 290, 820, 300]
+	}
+	Line {
+	  SrcBlock		  "accelerometer\nerror (mg)"
+	  SrcPort		  1
+	  DstBlock		  "convert to\nm/sec^2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make earth rate \nskew matrix"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "platform \nangle error"
+	  SrcPort		  1
+	  Points		  [240, 0; 0, -15]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Make skew matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make skew matrix"
+	  SrcPort		  1
+	  DstBlock		  "Product3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "velocity\nerror"
+	  SrcPort		  1
+	  Points		  [270, 5; 25, 0]
+	  Branch {
+	    Points		    [15, 0; 0, -140]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Display2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "earth rate \nerror"
+	  SrcPort		  1
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport rate \nerror"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Make skew matrix2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "acceleration\nerror"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Display4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [135, 0; 0, 65]
+	  Branch {
+	    Points		    [0, 90]
+	    DstBlock		    "Sum3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [60, 0]
+	    DstBlock		    "Display1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  Branch {
+	    Points		    [0, 20; 130, 0; 0, 50]
+	    DstBlock		    "Sum3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [35, 0]
+	    DstBlock		    "Display of a_Lxphi"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "gravity error"
+	  SrcPort		  1
+	  Points		  [95, 0; 0, -80]
+	  Branch {
+	    Points		    [0, -185]
+	    DstBlock		    "Sum3"
+	    DstPort		    5
+	  }
+	  Branch {
+	    Points		    [75, 0]
+	    DstBlock		    "Display5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "velocity error term"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [110, 0; 0, -150]
+	    DstBlock		    "Sum3"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Display3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "velocity term"
+	  Labels		  [3, 0]
+	  SrcBlock		  "Product6"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -40; 50, 0]
+	  Branch {
+	    DstBlock		    "Sum3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "DCM_B2L"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "earth rate"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport rate"
+	  SrcPort		  1
+	  Points		  [175, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "v_L"
+	  SrcPort		  1
+	  Points		  [90, 0; 0, -15]
+	  DstBlock		  "Product6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "convert to\nm/sec^2"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a_L"
+	  SrcPort		  1
+	  DstBlock		  "Make earth rate \nskew matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make skew matrix2"
+	  SrcPort		  1
+	  DstBlock		  "Product6"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Compute Accel Error Dynamics"
+	  Position		  [142, 25]
+	  FontSize		  14
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Earth Rate\nError"
+      Ports		      [2, 1]
+      Position		      [780, 655, 940, 715]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Earth Rate\nError"
+	Location		[188, 255, 790, 621]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth rate"
+	  Position		  [65, 268, 95, 282]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "position \nangle\nerror"
+	  Position		  [65, 128, 95, 142]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [140, 120, 170, 150]
+	  Gain			  "-1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew"
+	  Position		  [220, 120, 280, 150]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [380, 216, 425, 249]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "earth rate\nerror"
+	  Position		  [510, 228, 540, 242]
+	}
+	Line {
+	  SrcBlock		  "position \nangle\nerror"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Make skew"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make skew"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 90]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "earth rate"
+	  SrcPort		  1
+	  Points		  [220, 0; 0, -35]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "earth rate\nerror"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Gyro Error\nDynamics"
+      Ports		      [7, 1]
+      Position		      [465, 139, 710, 291]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Gyro Error\nDynamics"
+	Location		[2, 52, 1022, 732]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"141"
+	Block {
+	  BlockType		  Inport
+	  Name			  "platform angle\nerror"
+	  Position		  [105, 563, 135, 577]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rate error\n(deg/hr)"
+	  Position		  [105, 328, 135, 342]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport\n rate error"
+	  Position		  [105, 753, 135, 767]
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth\nrate error"
+	  Position		  [105, 613, 135, 627]
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DCM_B2L"
+	  Position		  [105, 268, 135, 282]
+	  Port			  "5"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "earth rate\n(local level)"
+	  Position		  [105, 398, 135, 412]
+	  Port			  "6"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate\n(local level)"
+	  Position		  [105, 498, 135, 512]
+	  Port			  "7"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [370, 651, 480, 719]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display1"
+	  Ports			  [1]
+	  Position		  [750, 291, 860, 359]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make earth rate \nskew matrix"
+	  Position		  [240, 390, 300, 420]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make transport rate skew matrix"
+	  Position		  [240, 490, 300, 520]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [455, 421, 500, 494]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [360, 281, 405, 354]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [365, 430, 385, 450]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [4, 1]
+	  Position		  [645, 384, 685, 536]
+	  ShowName		  off
+	  Inputs		  "|--++"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "convert\nto rad/sec"
+	  Position		  [215, 320, 245, 350]
+	  Gain			  "pi/(3600*180)"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2pitch"
+	  Position		  [265, 140, 325, 170]
+	  MATLABFcn		  "dcm2pitch(u,'deg')"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pitch"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2roll"
+	  Position		  [265, 80, 325, 110]
+	  MATLABFcn		  "dcm2roll(u,'deg')"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "roll"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2yaw"
+	  Position		  [265, 200, 325, 230]
+	  MATLABFcn		  "dcm2yaw(u,'deg')"
+	  Output1D		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "yaw"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "rpy scope"
+	  Ports			  [3]
+	  Position		  [515, 68, 560, 242]
+	  Location		  [42, 259, 366, 634]
+	  Open			  on
+	  NumInputPorts		  "3"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	    axes2		    ""
+	    axes3		    ""
+	  }
+	  TimeRange		  "3600            "
+	  YMin			  "-1~-1~0"
+	  YMax			  "1~1~20"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  MaxDataPoints		  "10000"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rate of change\nof platform angle\nerror"
+	  Position		  [765, 463, 795, 477]
+	}
+	Line {
+	  SrcBlock		  "Make transport rate skew matrix"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Make earth rate \nskew matrix"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 35]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "platform angle\nerror"
+	  SrcPort		  1
+	  Points		  [280, 0; 0, -95]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rate error\n(deg/hr)"
+	  SrcPort		  1
+	  DstBlock		  "convert\nto rad/sec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [155, 0; 0, 110]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  Points		  [0, 10; 25, 0]
+	  Branch {
+	    DstBlock		    "rate of change\nof platform angle\nerror"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -145]
+	    DstBlock		    "Display1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "transport\n rate error"
+	  SrcPort		  1
+	  Points		  [460, 0; 0, -240]
+	  DstBlock		  "Sum3"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "earth\nrate error"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  Branch {
+	    Points		    [320, 0; 0, -130]
+	    DstBlock		    "Sum3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 55; 105, 0]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "DCM_B2L"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [120, 0; 0, 25]
+	    DstBlock		    "Product1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    Branch {
+	      Points		      [70, 0]
+	      DstBlock		      "dcm2yaw"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -65]
+	      Branch {
+		DstBlock		"dcm2pitch"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -60]
+		DstBlock		"dcm2roll"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "earth rate\n(local level)"
+	  SrcPort		  1
+	  DstBlock		  "Make earth rate \nskew matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport rate\n(local level)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Make transport rate skew matrix"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "roll"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2roll"
+	  SrcPort		  1
+	  DstBlock		  "rpy scope"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pitch"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2pitch"
+	  SrcPort		  1
+	  DstBlock		  "rpy scope"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "yaw"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2yaw"
+	  SrcPort		  1
+	  DstBlock		  "rpy scope"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "convert\nto rad/sec"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Annotation {
+	  Name			  "Compute Gyro Error Dynamics"
+	  Position		  [136, 41]
+	  FontSize		  14
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Rate of Change\nof Position Angle Error"
+      Ports		      [3, 1]
+      Position		      [475, 673, 680, 737]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Rate of Change\nof Position Angle Err"
+"or"
+	Location		[98, 147, 785, 566]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate\nerror"
+	  Position		  [50, 63, 80, 77]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "position angle error"
+	  Position		  [50, 183, 80, 197]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "transport rate"
+	  Position		  [50, 248, 80, 262]
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [485, 237, 575, 313]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew"
+	  Position		  [190, 175, 250, 205]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [295, 196, 340, 274]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [375, 130, 395, 150]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rate of change\nof pos ang err"
+	  Position		  [510, 133, 540, 147]
+	}
+	Line {
+	  SrcBlock		  "position angle error"
+	  SrcPort		  1
+	  DstBlock		  "Make skew"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make skew"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 25]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "transport rate\nerror"
+	  SrcPort		  1
+	  Points		  [235, 0; 0, 70]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "rate of change\nof pos ang err"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 135]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "transport rate"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Annotation {
+	  Name			  "Compute Rate of Change of Position Angle Er"
+"ror"
+	  Position		  [223, 30]
+	  FontSize		  14
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Small Angle\nRotation Matrix"
+      Ports		      [2, 1]
+      Position		      [1075, 666, 1205, 724]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Small Angle\nRotation Matrix"
+	Location		[47, 156, 1005, 643]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"92"
+	Block {
+	  BlockType		  Inport
+	  Name			  "DCM_L2E"
+	  Position		  [85, 88, 115, 102]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "position angle error"
+	  Position		  [80, 208, 110, 222]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "DCM_E2L Display"
+	  Ports			  [1]
+	  Position		  [520, 17, 930, 93]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "E_L Display"
+	  Ports			  [1]
+	  Position		  [550, 182, 960, 258]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction"
+	  Ports			  [1, 1]
+	  Position		  [185, 85, 215, 115]
+	  Operator		  "transpose"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Norm"
+	  Position		  [510, 284, 590, 326]
+	  MATLABFcn		  "norm(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Norm of E_L\n(should be small!)"
+	  Ports			  [1]
+	  Position		  [630, 309, 795, 351]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Position Angle Error"
+	  Ports			  [1]
+	  Position		  [405, 417, 815, 493]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [420, 126, 465, 159]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "skew"
+	  Position		  [235, 189, 315, 231]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "E_L"
+	  Position		  [735, 138, 765, 152]
+	}
+	Line {
+	  SrcBlock		  "DCM_L2E"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  DstBlock		  "Math\nFunction"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Math\nFunction"
+	  SrcPort		  1
+	  Points		  [100, 0]
+	  Branch {
+	    Points		    [50, 0; 0, 35]
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "DCM_E2L Display"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [40, 0]
+	    Branch {
+	      DstBlock		      "E_L"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 75]
+	      DstBlock		      "E_L Display"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 160]
+	    DstBlock		    "Norm"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "position angle error"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  DstBlock		  "skew"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "skew"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [30, 0; 0, -60]
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 245]
+	    DstBlock		    "Position Angle Error"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Norm"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Norm of E_L\n(should be small!)"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Compute Small Angle \nPosition Error\nRotat"
+"ion Matrix"
+	  Position		  [65, 43]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Transport\nRate Error"
+      Ports		      [1, 1]
+      Position		      [635, 893, 805, 987]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Transport\nRate Error"
+	Location		[374, 157, 1007, 457]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity\nerror"
+	  Position		  [50, 168, 80, 182]
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/R"
+	  Position		  [350, 40, 380, 70]
+	  Gain			  "1/6378137"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [115, 40, 145, 70]
+	  Value			  "[0 0 1]'"
+	  VectorParams1D	  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew"
+	  Position		  [235, 40, 295, 70]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [475, 128, 525, 192]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "transport\nrate error"
+	  Position		  [570, 153, 600, 167]
+	}
+	Line {
+	  SrcBlock		  "velocity\nerror"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Make skew"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "transport\nrate error"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/R"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 35; 25, 0; 0, 10; 45, 0]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Make skew"
+	  SrcPort		  1
+	  DstBlock		  "1/R"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Compute Vertical\nComponent of\nVelocity Error"
+      Ports		      [1, 1]
+      Position		      [745, 1051, 915, 1109]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Compute Vertical\nComponent of\nVelocity Erro"
+"r"
+	Location		[164, 166, 662, 466]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity\nerror"
+	  Position		  [65, 153, 95, 167]
+	  Port {
+	    PortNumber		    1
+	    Name		    "v_L"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Dot Product"
+	  Ports			  [2, 1]
+	  Position		  [300, 136, 330, 169]
+	  SourceBlock		  "simulink/Math\nOperations/Dot Product"
+	  SourceType		  "Dot Product"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "unit vertical"
+	  Position		  [70, 60, 100, 90]
+	  Value			  "[0 0 1]'"
+	  VectorParams1D	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "vert vel\nerror"
+	  Position		  [420, 148, 450, 162]
+	}
+	Line {
+	  Name			  "v_L"
+	  Labels		  [0, 0]
+	  SrcBlock		  "velocity\nerror"
+	  SrcPort		  1
+	  DstBlock		  "Dot Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "unit vertical"
+	  SrcPort		  1
+	  Points		  [95, 0; 0, 70]
+	  DstBlock		  "Dot Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Dot Product"
+	  SrcPort		  1
+	  DstBlock		  "vert vel\nerror"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      Ports		      [1]
+      Position		      [620, 29, 705, 101]
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gyro Switch"
+      Ports		      [2, 1]
+      Position		      [270, 285, 300, 340]
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [3, 1]
+      Position		      [225, 247, 230, 303]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [3, 1]
+      Position		      [220, 471, 225, 529]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Platform\nAngle Error\nScope"
+      Ports		      [1]
+      Position		      [825, 232, 935, 268]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Platform\nAngle Error\nScope"
+	Location		[463, 267, 993, 586]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "platform\nangle\nerror"
+	  Position		  [45, 138, 75, 152]
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 3]
+	  Position		  [250, 102, 255, 188]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "3"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Display of\nPlatform Angle\nError"
+	  Ports			  [3]
+	  Position		  [395, 105, 430, 185]
+	  Location		  [10, 133, 334, 491]
+	  Open			  off
+	  NumInputPorts		  "3"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	    axes2		    ""
+	    axes3		    ""
+	  }
+	  TimeRange		  "10"
+	  YMin			  "-1.25538e+85~-2.69599e+67~-1"
+	  YMax			  "-0.422354~9e+83~1"
+	  SaveName		  "ScopeData5"
+	  DataFormat		  "StructureWithTime"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "rad2deg"
+	  Position		  [155, 130, 185, 160]
+	  Gain			  "180/pi"
+	}
+	Line {
+	  SrcBlock		  "platform\nangle\nerror"
+	  SrcPort		  1
+	  DstBlock		  "rad2deg"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  "Display of\nPlatform Angle\nError"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Display of\nPlatform Angle\nError"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [120, 0]
+	  DstBlock		  "Display of\nPlatform Angle\nError"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "rad2deg"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Position Angle Error\nScope"
+      Ports		      [2]
+      Position		      [1080, 765, 1215, 825]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Position Angle Error\nScope"
+	Location		[321, 103, 909, 639]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "position\nangle\nerror"
+	  Position		  [45, 138, 75, 152]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DCM_L2E"
+	  Position		  [45, 368, 75, 382]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 3]
+	  Position		  [275, 102, 280, 188]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "3"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [475, 250, 565, 280]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Display of\nLat/Lon"
+	  Ports			  [2]
+	  Position		  [475, 580, 510, 660]
+	  Location		  [5, 233, 1029, 743]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  YMin			  "-1~-1"
+	  YMax			  "1~1"
+	  SaveName		  "ScopeData10"
+	  DataFormat		  "StructureWithTime"
+	  MaxDataPoints		  "20000"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Display of\nLat/Lon Errors"
+	  Ports			  [2]
+	  Position		  [505, 295, 540, 375]
+	  Location		  [5, 233, 1029, 743]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  YMin			  "-1~-1"
+	  YMax			  "1~1"
+	  SaveName		  "ScopeData6"
+	  DataFormat		  "StructureWithTime"
+	  MaxDataPoints		  "20000"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Display of\nPosition\nAngle\nError"
+	  Ports			  [3]
+	  Position		  [385, 105, 420, 185]
+	  Location		  [23, 56, 532, 414]
+	  Open			  on
+	  NumInputPorts		  "3"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    SelectedSignals
+	    axes1		    ""
+	    axes2		    ""
+	    axes3		    ""
+	  }
+	  YMin			  "-2.5e-09~0~-1"
+	  YMax			  "0~1.75e-12~1"
+	  SaveName		  "ScopeData5"
+	  DataFormat		  "StructureWithTime"
+	  MaxDataPoints		  "20000"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display1"
+	  Ports			  [1]
+	  Position		  [480, 440, 570, 470]
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Make skew"
+	  Position		  [130, 225, 190, 255]
+	  MATLABFcn		  "skew(u)"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [230, 351, 275, 384]
+	  Multiplication	  "Matrix(*)"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2lat"
+	  Position		  [330, 325, 390, 355]
+	  MATLABFcn		  "dcm2lat(u,'deg')"
+	  Port {
+	    PortNumber		    1
+	    Name		    "lat err"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2lat1"
+	  Position		  [230, 590, 290, 620]
+	  MATLABFcn		  "dcm2lat(u,'deg')"
+	  Port {
+	    PortNumber		    1
+	    Name		    "lat"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2lon"
+	  Position		  [330, 385, 390, 415]
+	  MATLABFcn		  "dcm2lon(u,'deg')"
+	  Port {
+	    PortNumber		    1
+	    Name		    "long err"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "dcm2lon1"
+	  Position		  [230, 645, 290, 675]
+	  MATLABFcn		  "dcm2lon(u,'deg')"
+	  Port {
+	    PortNumber		    1
+	    Name		    "long"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "latitude"
+	  Ports			  [1]
+	  Position		  [405, 508, 560, 542]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "longitude"
+	  Ports			  [1]
+	  Position		  [410, 699, 565, 731]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [85, 0]
+	  DstBlock		  "Display of\nPosition\nAngle\nError"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Display of\nPosition\nAngle\nError"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "Display of\nPosition\nAngle\nError"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "position\nangle\nerror"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "Demux"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 95]
+	    DstBlock		    "Make skew"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "long err"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2lon"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Display1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [50, 0]
+	    DstBlock		    "Display of\nLat/Lon Errors"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "lat err"
+	  Labels		  [3, 0]
+	  SrcBlock		  "dcm2lat"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 5; 30, 0; 0, -30]
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "Display"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Display of\nLat/Lon Errors"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "DCM_L2E"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 230]
+	    Branch {
+	      DstBlock		      "dcm2lat1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      DstBlock		      "dcm2lon1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Make skew"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "dcm2lat"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "dcm2lon"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "long"
+	  Labels		  [0, 0]
+	  SrcBlock		  "dcm2lon1"
+	  SrcPort		  1
+	  Points		  [0, 0; 45, 0]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "longitude"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [65, 0; 0, -15; 55, 0]
+	    DstBlock		    "Display of\nLat/Lon"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "lat"
+	  Labels		  [2, 0]
+	  SrcBlock		  "dcm2lat1"
+	  SrcPort		  1
+	  Points		  [0, 0; 50, 0]
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "latitude"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [115, 0]
+	    DstBlock		    "Display of\nLat/Lon"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Strapdown Navigation\nSubsystem"
+      Ports		      [2, 7]
+      Position		      [540, 399, 700, 591]
+      AncestorBlock	      "strapnavlib/Strapdown Navigation\nSubsystem"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Strapdown Navigation\nSubsystem"
+	Location		[64, 81, 960, 670]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "body rates"
+	  Position		  [175, 65, 205, 80]
+	  Orientation		  "down"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "body acceleration"
+	  Position		  [140, 380, 170, 395]
+	  Orientation		  "down"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Compute\nBody to Nav \nRate of Change"
+	  Ports			  [4, 1]
+	  Position		  [252, 115, 418, 250]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Compute\nBody to Nav \nRate of Change"
+	    Location		    [36, 157, 948, 626]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "body rates"
+	      Position		      [55, 418, 85, 432]
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "earth\nrate"
+	      Position		      [55, 113, 85, 127]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"earth rate"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "transport\nrate"
+	      Position		      [55, 203, 85, 217]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"transport rate"
+		PropagatedSignals	"transport\nrate"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DCM_B2L"
+	      Position		      [200, 348, 230, 362]
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display"
+	      Ports		      [1]
+	      Position		      [83, 265, 327, 335]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display of DCM_B2L_dot"
+	      Ports		      [1]
+	      Position		      [650, 320, 890, 390]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display2"
+	      Ports		      [1]
+	      Position		      [530, 135, 770, 205]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make ang rate skew matrix"
+	      Position		      [195, 410, 255, 440]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make earth rate \nskew matrix"
+	      Position		      [190, 110, 250, 140]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make transport rate skew matrix"
+	      Position		      [185, 195, 245, 225]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [435, 201, 480, 274]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      Ports		      [2, 1]
+	      Position		      [475, 334, 520, 421]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [325, 115, 345, 135]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [2, 1]
+	      Position		      [560, 260, 580, 280]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|-+"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "earth rate vctor"
+	      Ports		      [1]
+	      Position		      [103, 40, 197, 100]
+	      Orientation	      "up"
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "skew version of earth rate"
+	      Ports		      [1]
+	      Position		      [530, 35, 770, 105]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "DCM_B2L_dot"
+	      Position		      [810, 263, 840, 277]
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		DstBlock		"DCM_B2L_dot"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 85]
+		DstBlock		"Display of DCM_B2L_dot"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[10, 0; 0, 30]
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -70]
+		DstBlock		"Display2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Make ang rate skew matrix"
+	      SrcPort		      1
+	      Points		      [100, 0; 0, -25]
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, 95]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DCM_B2L"
+	      SrcPort		      1
+	      Points		      [165, 0]
+	      Branch {
+		DstBlock		"Product1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -100]
+		DstBlock		"Product"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Make earth rate \nskew matrix"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -55]
+		DstBlock		"skew version of earth rate"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Make transport rate skew matrix"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[65, 0]
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 40]
+		DstBlock		"Display"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "transport rate"
+	      Labels		      [0, 0]
+	      SrcBlock		      "transport\nrate"
+	      SrcPort		      1
+	      DstBlock		      "Make transport rate skew matrix"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "earth rate"
+	      Labels		      [0, 0]
+	      SrcBlock		      "earth\nrate"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 5; 20, 0]
+	      Branch {
+		DstBlock		"Make earth rate \nskew matrix"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"earth rate vctor"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "body rates"
+	      SrcPort		      1
+	      DstBlock		      "Make ang rate skew matrix"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Compute Body to Nav (DCM) Rate of Chang"
+"e"
+	      Position		      [195, 15]
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Compute\nNav to Earth\nRate of Change"
+	  Ports			  [2, 1]
+	  Position		  [915, 527, 1015, 578]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Compute\nNav to Earth\nRate of Change"
+	    Location		    [103, 172, 1001, 637]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "transport rate"
+	      Position		      [60, 243, 90, 257]
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DCM_L2E"
+	      Position		      [60, 178, 90, 192]
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display"
+	      Ports		      [1]
+	      Position		      [650, 93, 1085, 187]
+	      Format		      "long"
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display1"
+	      Ports		      [1]
+	      Position		      [470, 298, 725, 392]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make skew"
+	      Position		      [325, 235, 385, 265]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [525, 203, 575, 267]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "DCM_L2E_dot"
+	      Position		      [780, 228, 810, 242]
+	    }
+	    Line {
+	      SrcBlock		      "DCM_L2E"
+	      SrcPort		      1
+	      Points		      [205, 0; 0, 35]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "transport rate"
+	      SrcPort		      1
+	      DstBlock		      "Make skew"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Make skew"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, 95]
+		DstBlock		"Display1"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Product"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, -95]
+		DstBlock		"Display"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"DCM_L2E_dot"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Compute\nTotal\nAcceleration\nin\nLocal Lev"
+"el Nav \nFrame"
+	  Ports			  [7, 1]
+	  Position		  [252, 440, 428, 540]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Compute\nTotal\nAcceleration\nin\nLocal L"
+"evel Nav \nFrame"
+	    Location		    [136, 95, 918, 676]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "accel_B"
+	      Position		      [110, 118, 140, 132]
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DCM_B2L"
+	      Position		      [110, 53, 140, 67]
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "earth rate"
+	      Position		      [115, 213, 145, 227]
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "transport rate"
+	      Position		      [115, 258, 145, 272]
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v_L"
+	      Position		      [115, 303, 145, 317]
+	      Port		      "5"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DCM_L2E"
+	      Position		      [15, 458, 45, 472]
+	      Port		      "6"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "h"
+	      Position		      [15, 408, 45, 422]
+	      Port		      "7"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [485, 485, 515, 515]
+	      Value		      "[0;0;-1]"
+	      VectorParams1D	      off
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display"
+	      Ports		      [1]
+	      Position		      [375, 345, 465, 375]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display1"
+	      Ports		      [1]
+	      Position		      [575, 340, 665, 370]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display2"
+	      Ports		      [1]
+	      Position		      [515, 550, 605, 580]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display3"
+	      Ports		      [1]
+	      Position		      [85, 515, 355, 585]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [195, 205, 225, 235]
+	      Gain		      "2"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make skew matrix"
+	      Position		      [320, 205, 380, 235]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1]
+	      Position		      [400, 436, 405, 474]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [200, 81, 245, 114]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product2"
+	      Ports		      [2, 1]
+	      Position		      [590, 411, 635, 444]
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [270, 210, 290, 230]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [3, 1]
+	      Position		      [570, 195, 610, 235]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-+"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "cross product\nof earth rate and \ntran"
+"sport rates \nwith\nlocal level vel"
+	      Ports		      [2, 1]
+	      Position		      [455, 221, 500, 254]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "get (2,3) element"
+	      Position		      [280, 450, 340, 480]
+	      MATLABFcn		      "getElem(2,3,u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "plumb bob\ngravity"
+	      Position		      [445, 398, 545, 442]
+	      MATLABFcn		      "plumbbobg(u(1),u(2))"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "v_L_dot"
+	      Position		      [685, 218, 715, 232]
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [0, 10]
+	      DstBlock		      "v_L_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [275, 0; 0, 98]
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "cross product\nof earth rate and \ntran"
+"sport rates \nwith\nlocal level vel"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -8]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "v_L"
+	      SrcPort		      1
+	      Points		      [265, 0; 0, -65]
+	      DstBlock		      "cross product\nof earth rate and \ntran"
+"sport rates \nwith\nlocal level vel"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Make skew matrix"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 10]
+	      DstBlock		      "cross product\nof earth rate and \ntran"
+"sport rates \nwith\nlocal level vel"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "Make skew matrix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "transport rate"
+	      SrcPort		      1
+	      Points		      [130, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "earth rate"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "accel_B"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -20]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "DCM_B2L"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, 30]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DCM_L2E"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"get (2,3) element"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 85]
+		DstBlock		"Display3"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "h"
+	      SrcPort		      1
+	      Points		      [290, 0]
+	      Branch {
+		Points			[30, 0; 0, 30]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -55]
+		DstBlock		"Display"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "get (2,3) element"
+	      SrcPort		      1
+	      Points		      [0, 0; 35, 0]
+	      Branch {
+		DstBlock		"Mux"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 100]
+		DstBlock		"Display2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -35]
+	      DstBlock		      "plumb bob\ngravity"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      DstBlock		      "Product2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "plumb bob\ngravity"
+	      SrcPort		      1
+	      Points		      [0, 0; 5, 0]
+	      Branch {
+		DstBlock		"Product2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -65]
+		DstBlock		"Display1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Product2"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, -180]
+	      DstBlock		      "Sum1"
+	      DstPort		      3
+	    }
+	    Annotation {
+	      Name		      "Compute Total Accerlation in \nLocal Le"
+"vel Frame"
+	      Position		      [95, 23]
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Compute\nTransport\nRate"
+	  Ports			  [1, 1]
+	  Position		  [530, 620, 630, 670]
+	  TreatAsAtomicUnit	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "transport\nrate"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	  System {
+	    Name		    "Compute\nTransport\nRate"
+	    Location		    [205, 126, 944, 659]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v_L"
+	      Position		      [60, 123, 90, 137]
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "1/R"
+	      Position		      [400, 110, 450, 150]
+	      Gain		      "1/6378137"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3]
+	      Position		      [295, 316, 300, 354]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      Ports		      [1, 3]
+	      Position		      [645, 406, 650, 444]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display"
+	      Ports		      [1]
+	      Position		      [315, 422, 405, 508]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display1"
+	      Ports		      [1]
+	      Position		      [675, 96, 765, 174]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "MATLAB Fcn"
+	      Position		      [110, 335, 170, 365]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      MATLABFcn		      "norm(u)"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Make skew"
+	      Position		      [285, 115, 345, 145]
+	      MATLABFcn		      "skew(u)"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [545, 203, 595, 267]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Vel Norm Scope"
+	      Ports		      [1]
+	      Position		      [115, 449, 145, 481]
+	      Location		      [18, 370, 342, 609]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      YMin		      "587.5"
+	      YMax		      "630"
+	      SaveName		      "ScopeData7"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "normal unit vector"
+	      Position		      [185, 115, 215, 145]
+	      Value		      "[0 0 1]'"
+	      VectorParams1D	      off
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "transport rate scope"
+	      Ports		      [3]
+	      Position		      [715, 387, 750, 463]
+	      Location		      [22, 204, 346, 443]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "5.5e-007~1.8e-007~-1"
+	      YMax		      "6.7e-007~2.15e-007~1"
+	      SaveName		      "ScopeData3"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "velocity in local level coords"
+	      Ports		      [3]
+	      Position		      [350, 280, 385, 390]
+	      Location		      [31, 183, 355, 580]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "-100000~-2.5e+006~-2.5e+006"
+	      YMax		      "700000~250000~2.5e+006"
+	      SaveName		      "ScopeData4"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "transport rate"
+	      Position		      [720, 228, 750, 242]
+	    }
+	    Line {
+	      SrcBlock		      "Make skew"
+	      SrcPort		      1
+	      DstBlock		      "1/R"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "1/R"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 90]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		Points			[25, 0; 0, -100]
+		DstBlock		"Display1"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"transport rate"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Demux1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "normal unit vector"
+	      SrcPort		      1
+	      DstBlock		      "Make skew"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v_L"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, 120; 100, 0]
+	      Branch {
+		DstBlock		"Product"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 85]
+		Branch {
+		  Points		  [0, 130]
+		  DstBlock		  "Display"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 15]
+		  DstBlock		  "MATLAB Fcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "velocity in local level coords"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "velocity in local level coords"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      Points		      [30, 0]
+	      DstBlock		      "velocity in local level coords"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -15]
+	      DstBlock		      "transport rate scope"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "transport rate scope"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      Points		      [25, 0; 0, 15]
+	      DstBlock		      "transport rate scope"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "MATLAB Fcn"
+	      SrcPort		      1
+	      Points		      [-20, 0; 0, 115]
+	      DstBlock		      "Vel Norm Scope"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Convert Earth Rate\nto Local Level"
+	  Ports			  [1, 1]
+	  Position		  [925, 30, 1065, 90]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Convert Earth Rate\nto Local Level"
+	    Location		    [261, 387, 947, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DCM_L2E"
+	      Position		      [60, 178, 90, 192]
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Earth Rate"
+	      Position		      [195, 255, 225, 285]
+	      Value		      "[0,0,7.292115167e-5]'"
+	      VectorParams1D	      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      Ports		      [2, 1]
+	      Position		      [525, 203, 575, 267]
+	      Multiplication	      "Matrix(*)"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "transpose"
+	      Position		      [280, 185, 340, 215]
+	      MATLABFcn		      "u'"
+	      Output1D		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "earth rate\n(local level)"
+	      Position		      [625, 228, 655, 242]
+	    }
+	    Line {
+	      SrcBlock		      "Earth Rate"
+	      SrcPort		      1
+	      Points		      [140, 0; 0, -20]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "DCM_L2E"
+	      SrcPort		      1
+	      Points		      [85, 0; 0, 15]
+	      DstBlock		      "transpose"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "earth rate\n(local level)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "transpose"
+	      SrcPort		      1
+	      Points		      [165, 0]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "DCM_B2L to \nDisplay Subsystem"
+	  Position		  [655, 285, 695, 315]
+	  GotoTag		  "B"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  Ports			  [1]
+	  Position		  [505, 131, 850, 199]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Display SubSystem"
+	  Ports			  [7]
+	  Position		  [755, 723, 865, 877]
+	  DropShadow		  on
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Display SubSystem"
+	    Location		    [202, 152, 961, 675]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [240, 625, 270, 635]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      Position		      [70, 235, 100, 245]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"v_L"
+		PropagatedSignals	"transport\nrate"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In3"
+	      Position		      [420, 215, 450, 225]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"h"
+		PropagatedSignals	"h"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In4"
+	      Position		      [15, 15, 45, 25]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"v_L"
+		PropagatedSignals	"v_L"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In5"
+	      Position		      [245, 60, 275, 70]
+	      Port		      "5"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In6"
+	      Position		      [610, 590, 640, 600]
+	      Port		      "6"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In7"
+	      Position		      [350, 255, 380, 265]
+	      Port		      "7"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3]
+	      Position		      [95, 72, 100, 138]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      Ports		      [1, 3]
+	      Position		      [65, 305, 70, 365]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux2"
+	      Ports		      [1, 3]
+	      Position		      [150, 440, 160, 510]
+	      Orientation	      "left"
+	      BackgroundColor	      "black"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Outputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display of DCM_B2L"
+	      Ports		      [1]
+	      Position		      [520, 438, 775, 532]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "Display of DCM_L2E"
+	      Ports		      [1]
+	      Position		      [370, 13, 625, 107]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Display of Lat/Lon/Alt\n(rad)"
+	      Ports		      [3]
+	      Position		      [765, 107, 800, 173]
+	      Location		      [6, 58, 551, 748]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      ZoomMode		      "xonly"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "0~-0.13~0"
+	      YMax		      "0.04~0~3.5e+006"
+	      SaveName		      "ScopeData8"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Display of Roll,Pitch,Yaw"
+	      Ports		      [3]
+	      Position		      [740, 307, 775, 373]
+	      Location		      [5, 53, 1029, 743]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "-0.1~0~-2.5e-009"
+	      YMax		      "0.1~0.2~1.5e-008"
+	      SaveName		      "ScopeData9"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Display of a_L"
+	      Ports		      [3]
+	      Position		      [60, 440, 100, 510]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Location		      [648, 503, 972, 742]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "-5~-5~-5"
+	      YMax		      "5~5~5"
+	      SaveName		      "ScopeData2"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Display of v_L"
+	      Ports		      [3]
+	      Position		      [170, 72, 205, 138]
+	      Location		      [5, 312, 1029, 743]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      ZoomMode		      "xonly"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "-450~-100~-400"
+	      YMax		      "50~900~400"
+	      SaveName		      "ScopeData4"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "altitude"
+	      Ports		      [1]
+	      Position		      [685, 209, 715, 241]
+	      Location		      [55, 431, 379, 670]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      TimeRange		      "1               "
+	      YMin		      "-0.5"
+	      YMax		      "0"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2lat"
+	      Position		      [350, 560, 410, 590]
+	      MATLABFcn		      "dcm2lat(u,'deg')"
+	      Port {
+		PortNumber		1
+		Name			"latitutde"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2lat1"
+	      Position		      [555, 125, 615, 155]
+	      MATLABFcn		      "dcm2lat(u,'rad')"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2lon"
+	      Position		      [340, 620, 400, 650]
+	      MATLABFcn		      "dcm2lon(u,'deg')"
+	      Port {
+		PortNumber		1
+		Name			"longitude"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2lon1"
+	      Position		      [555, 175, 615, 205]
+	      MATLABFcn		      "dcm2lon(u,'rad')"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2pitch"
+	      Position		      [510, 300, 570, 330]
+	      MATLABFcn		      "dcm2pitch(u,'rad')"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2roll"
+	      Position		      [510, 245, 570, 275]
+	      MATLABFcn		      "dcm2roll(u,'rad')"
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "dcm2yaw"
+	      Position		      [510, 365, 570, 395]
+	      MATLABFcn		      "dcm2yaw(u,'rad')"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "display of\ntransport rate"
+	      Ports		      [3]
+	      Position		      [125, 306, 160, 364]
+	      Location		      [639, 463, 963, 702]
+	      Open		      off
+	      NumInputPorts	      "3"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+	      }
+	      YMin		      "-5~-5~-5"
+	      YMax		      "5~5~5"
+	      SaveName		      "ScopeData3"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Block {
+	      BlockType		      Display
+	      Name		      "earth rate\nin local level\ncoordinates"
+	      Ports		      [1]
+	      Position		      [705, 544, 805, 646]
+	      Decimation	      "1"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "lat/lon"
+	      Ports		      [2]
+	      Position		      [530, 550, 565, 630]
+	      Location		      [5, 53, 1029, 743]
+	      Open		      off
+	      NumInputPorts	      "2"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+	      }
+	      YMin		      "-5~-5"
+	      YMax		      "5~5"
+	      SaveName		      "ScopeData1"
+	      DataFormat	      "StructureWithTime"
+	    }
+	    Line {
+	      SrcBlock		      "Demux2"
+	      SrcPort		      3
+	      DstBlock		      "Display of a_L"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux2"
+	      SrcPort		      2
+	      DstBlock		      "Display of a_L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux2"
+	      SrcPort		      1
+	      DstBlock		      "Display of a_L"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, -155]
+	      DstBlock		      "Demux2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "h"
+	      Labels		      [0, 0]
+	      SrcBlock		      "In3"
+	      SrcPort		      1
+	      Points		      [180, 0]
+	      Branch {
+		Points			[35, 0]
+		DstBlock		"altitude"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -20; 60, 0; 0, -30; 55, 0]
+		DstBlock		"Display of Lat/Lon/Alt\n(rad)"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In6"
+	      SrcPort		      1
+	      DstBlock		      "earth rate\nin local level\ncoordinates"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In7"
+	      SrcPort		      1
+	      Points		      [0, 0; 15, 0]
+	      Branch {
+		Points			[0, 225]
+		DstBlock		"Display of DCM_B2L"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[50, 0]
+		Branch {
+		  DstBlock		  "dcm2roll"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 45]
+		  Branch {
+		    Points		    [0, 10]
+		    DstBlock		    "dcm2pitch"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "dcm2yaw"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In5"
+	      SrcPort		      1
+	      Points		      [0, 0; 10, 0]
+	      Branch {
+		Points			[65, 0]
+		DstBlock		"Display of DCM_L2E"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 75]
+		Branch {
+		  DstBlock		  "dcm2lat1"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 30]
+		  Branch {
+		    Points		    [0, 130]
+		    Branch {
+		    Points		    [0, 335]
+		    DstBlock		    "dcm2lon"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "dcm2lat"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [250, 0]
+		    DstBlock		    "dcm2lon1"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      Name		      "longitude"
+	      Labels		      [0, 0]
+	      SrcBlock		      "dcm2lon"
+	      SrcPort		      1
+	      Points		      [45, 0; 0, -25]
+	      DstBlock		      "lat/lon"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "latitutde"
+	      Labels		      [2, 0]
+	      SrcBlock		      "dcm2lat"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "lat/lon"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Display of v_L"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Display of v_L"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Display of v_L"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "v_L"
+	      Labels		      [0, 0]
+	      SrcBlock		      "In4"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, 85]
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "display of\ntransport rate"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "display of\ntransport rate"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "display of\ntransport rate"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "v_L"
+	      Labels		      [0, 0]
+	      SrcBlock		      "In2"
+	      SrcPort		      1
+	      Points		      [-45, 0; 0, 95]
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "dcm2lon1"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -35; 55, 0; 0, -5; 55, 0]
+	      DstBlock		      "Display of Lat/Lon/Alt\n(rad)"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "dcm2lat1"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, -10; 55, 0]
+	      DstBlock		      "Display of Lat/Lon/Alt\n(rad)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "dcm2roll"
+	      SrcPort		      1
+	      Points		      [105, 0; 0, 45; 45, 0]
+	      DstBlock		      "Display of Roll,Pitch,Yaw"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "dcm2pitch"
+	      SrcPort		      1
+	      Points		      [105, 0; 0, 10; 45, 0]
+	      DstBlock		      "Display of Roll,Pitch,Yaw"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "dcm2yaw"
+	      SrcPort		      1
+	      Points		      [105, 0; 0, -35; 45, 0]
+	      DstBlock		      "Display of Roll,Pitch,Yaw"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display1"
+	  Ports			  [1]
+	  Position		  [15, 439, 175, 501]
+	  Format		  "long"
+	  Decimation		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Dot Product"
+	  Ports			  [2, 1]
+	  Position		  [590, 496, 620, 529]
+	  SourceBlock		  "simulink/Math\nOperations/Dot Product"
+	  SourceType		  "Dot Product"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From DCM_B2L"
+	  Position		  [650, 886, 690, 914]
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "B"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From earth rate"
+	  Position		  [650, 826, 690, 854]
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "A"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integral\nof\nangular rate\nDCM"
+	  Ports			  [1, 1]
+	  Position		  [320, 280, 350, 310]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  InitialCondition	  "eye(3)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integral\nof \naccel"
+	  Ports			  [1, 1]
+	  Position		  [325, 595, 355, 625]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  InitialCondition	  "[0 0 0]'"
+	  Port {
+	    PortNumber		    1
+	    Name		    "v_L"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator3"
+	  Ports			  [1, 1]
+	  Position		  [1055, 540, 1085, 570]
+	  InitialCondition	  "D0"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "earth rate to Display \nSubsystem"
+	  Position		  [915, 130, 955, 160]
+	  GotoTag		  "A"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "integrate\nvertical\nvelocity"
+	  Ports			  [1, 1]
+	  Position		  [650, 500, 680, 530]
+	  Port {
+	    PortNumber		    1
+	    Name		    "h"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "unit vertical"
+	  Position		  [490, 490, 520, 520]
+	  Value			  "[0 0 -1]'"
+	  VectorParams1D	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "earth rate\n(local level)"
+	  Position		  [800, 13, 830, 27]
+	  Orientation		  "left"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DCM_B2L"
+	  Position		  [600, 210, 630, 225]
+	  Orientation		  "up"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "transport rate"
+	  Position		  [730, 455, 760, 470]
+	  Orientation		  "up"
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DCM_L2E"
+	  Position		  [1140, 508, 1170, 522]
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "a_L"
+	  Position		  [150, 558, 180, 572]
+	  Orientation		  "left"
+	  Port			  "5"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "altitude"
+	  Position		  [785, 673, 815, 687]
+	  Port			  "6"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v_L"
+	  Position		  [360, 685, 390, 700]
+	  Orientation		  "down"
+	  Port			  "7"
+	}
+	Line {
+	  SrcBlock		  "body acceleration"
+	  SrcPort		  1
+	  Points		  [0, 10]
+	  Branch {
+	    Points		    [110, 0]
+	    DstBlock		    "Compute\nTotal\nAcceleration\nin\nLocal L"
+"evel Nav \nFrame"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15; -155, 0]
+	    DstBlock		    "Display1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "body rates"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  DstBlock		  "Compute\nBody to Nav \nRate of Change"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From DCM_B2L"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -40]
+	  DstBlock		  "Display SubSystem"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "From earth rate"
+	  SrcPort		  1
+	  DstBlock		  "Display SubSystem"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "h"
+	  Labels		  [0, 0]
+	  SrcBlock		  "integrate\nvertical\nvelocity"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [25, 0; 0, 185]
+	    Branch {
+	      Points		      [45, 0]
+	      DstBlock		      "altitude"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 80]
+	      DstBlock		      "Display SubSystem"
+	      DstPort		      3
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -90]
+	    DstBlock		    "Compute\nTotal\nAcceleration\nin\nLocal L"
+"evel Nav \nFrame"
+	    DstPort		    7
+	  }
+	}
+	Line {
+	  SrcBlock		  "Convert Earth Rate\nto Local Level"
+	  SrcPort		  1
+	  Points		  [0, 0; -45, 0]
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "earth rate to Display \nSubsystem"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [-25, 0]
+	    Branch {
+	      Points		      [-5, 0]
+	      DstBlock		      "earth rate\n(local level)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [-375, 0]
+	      Branch {
+		Points			[0, 310; -160, 0]
+		DstBlock		"Compute\nTotal\nAcceleration\nin\nLoc"
+"al Level Nav \nFrame"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[-160, 0]
+		DstBlock		"Compute\nBody to Nav \nRate of Change"
+		DstPort			2
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator3"
+	  SrcPort		  1
+	  Points		  [20, 0; 10, 0]
+	  Branch {
+	    Points		    [0, 105; -200, 0]
+	    Branch {
+	      Points		      [0, 290; -330, 0; 0, -130]
+	      DstBlock		      "Display SubSystem"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Points		      [-60, 0; 0, -95]
+	      DstBlock		      "Compute\nNav to Earth\nRate of Change"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      DstBlock		      "DCM_L2E"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -105]
+	      Branch {
+		Points			[0, -350]
+		DstBlock		"Convert Earth Rate\nto Local Level"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[-730, 0]
+		DstBlock		"Compute\nTotal\nAcceleration\nin\nLoc"
+"al Level Nav \nFrame"
+		DstPort			6
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compute\nNav to Earth\nRate of Change"
+	  SrcPort		  1
+	  DstBlock		  "Integrator3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Dot Product"
+	  SrcPort		  1
+	  DstBlock		  "integrate\nvertical\nvelocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "unit vertical"
+	  SrcPort		  1
+	  DstBlock		  "Dot Product"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "transport\nrate"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Compute\nTransport\nRate"
+	  SrcPort		  1
+	  Points		  [0, 0; 40, 0]
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Display SubSystem"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [155, 0; 0, -105]
+	    Branch {
+	      Points		      [0, -100]
+	      Branch {
+		Points			[0, 45]
+		DstBlock		"transport rate"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -55]
+		Branch {
+		  Points		  [-490, 0]
+		  DstBlock		  "Compute\nTotal\nAcceleration\nin\nL"
+"ocal Level Nav \nFrame"
+		  DstPort		  4
+		}
+		Branch {
+		  Points		  [30, 0; 0, -310; -505, 0]
+		  DstBlock		  "Compute\nBody to Nav \nRate of Chan"
+"ge"
+		  DstPort		  3
+		}
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Compute\nNav to Earth\nRate of Change"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "v_L"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integral\nof \naccel"
+	  SrcPort		  1
+	  Points		  [0, 15; 35, 0]
+	  Branch {
+	    DstBlock		    "v_L"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [50, 0]
+	    Branch {
+	      Points		      [0, 155]
+	      DstBlock		      "Display SubSystem"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, -95]
+		Branch {
+		  Points		  [0, -150; -85, 0]
+		  DstBlock		  "Compute\nTotal\nAcceleration\nin\nL"
+"ocal Level Nav \nFrame"
+		  DstPort		  5
+		}
+		Branch {
+		  Points		  [105, 0; 0, -30]
+		  DstBlock		  "Dot Product"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		DstBlock		"Compute\nTransport\nRate"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compute\nTotal\nAcceleration\nin\nLocal Lev"
+"el Nav \nFrame"
+	  SrcPort		  1
+	  Points		  [0, -5; 0, 25]
+	  Branch {
+	    Points		    [-80, 0]
+	    Branch {
+	      DstBlock		      "a_L"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 175]
+	      DstBlock		      "Display SubSystem"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Integral\nof \naccel"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compute\nBody to Nav \nRate of Change"
+	  SrcPort		  1
+	  DstBlock		  "Integral\nof\nangular rate\nDCM"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integral\nof\nangular rate\nDCM"
+	  SrcPort		  1
+	  Points		  [0, 10; -30, 0; 0, 25]
+	  Branch {
+	    Points		    [135, 0; 0, -50]
+	    Branch {
+	      Points		      [0, -210; -45, 0]
+	      DstBlock		      "Compute\nBody to Nav \nRate of Change"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [50, 0]
+	      Branch {
+		Points			[100, 0; 0, -55; 25, 0]
+		Branch {
+		  DstBlock		  "DCM_B2L"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 55]
+		  DstBlock		  "DCM_B2L to \nDisplay Subsystem"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Display"
+		DstPort			1
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [-15, 0]
+	    DstBlock		    "Compute\nTotal\nAcceleration\nin\nLocal L"
+"evel Nav \nFrame"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Name			  "Note: If you change\nthe switches above and"
+" below\nto accept input from 3x1xm\narrays provided in the workspace, then\ny"
+"ou need to tell Simulink the name of these\ninput vectors in the Simulation P"
+"arameters\ndialog box.\nNote also that the body rate and accel\nprofiles are "
+"not independent.  They need\nto be generated by a trajectory simulator.  \nTh"
+"e acceleration generates transport rates\nwhich would be sensed in inertial s"
+"pace \nby the gyros.\nChange"
+	  Position		  [23, 280]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "Initial\nCondition\ndetermines\nInitial \nA"
+"ttitude"
+	  Position		  [391, 299]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Velocity\nError\nScope"
+      Ports		      [1]
+      Position		      [1075, 1015, 1160, 1065]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Velocity\nError\nScope"
+	Location		[442, 138, 940, 438]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity\nerror"
+	  Position		  [45, 138, 75, 152]
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 3]
+	  Position		  [275, 102, 280, 188]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "3"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Display of\nVelocity Error"
+	  Ports			  [3]
+	  Position		  [385, 101, 420, 189]
+	  Location		  [5, 108, 1029, 743]
+	  Open			  off
+	  NumInputPorts		  "3"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  YMin			  "0~0~-0.05"
+	  YMax			  "350~20~0.03"
+	  SaveName		  "ScopeData5"
+	  DataFormat		  "StructureWithTime"
+	}
+	Line {
+	  SrcBlock		  "velocity\nerror"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Display of\nVelocity Error"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Display of\nVelocity Error"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "Display of\nVelocity Error"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "accelerometer error \nin body coordinates\n(mg)"
+      Position		      [900, 40, 930, 70]
+      Value		      "[0;00;00]"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "altitude error"
+      Ports		      [1]
+      Position		      [510, 1065, 540, 1095]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Location		      [34, 300, 358, 539]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-1"
+      YMax		      "1"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "body acceleration\n(g)"
+      Position		      [90, 595, 120, 625]
+      Value		      "[0; 0; 1]"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "body rates\n(deg/sec)"
+      Position		      [90, 365, 120, 395]
+      Value		      "[0; 0;  0]"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "convert\nto \nrad/sec"
+      Position		      [300, 395, 330, 425]
+      Orientation	      "down"
+      Gain		      "pi/180"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "convert\nto m/sec^2"
+      Position		      [330, 530, 360, 560]
+      Gain		      "9.80665"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "gyro rate error\nin\nbody coordinates\n(deg/hr)"
+      Position		      [245, 161, 315, 189]
+      Value		      "[.1; 0; 0]"
+      VectorParams1D	      off
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "integrate\ninto position\nangle error"
+      Ports		      [1, 1]
+      Position		      [710, 689, 730, 721]
+      InitialCondition	      "[0;0;0]"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "integrate into \naltitude error"
+      Ports		      [1, 1]
+      Position		      [640, 1065, 670, 1095]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      InitialCondition	      "[0;0;0]"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "integrate into \nplatform angle\nerror"
+      Ports		      [1, 1]
+      Position		      [740, 200, 770, 230]
+      InitialCondition	      "[0;0;0]"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "integrate into \nvelocity error"
+      Ports		      [1, 1]
+      Position		      [1120, 925, 1150, 955]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      InitialCondition	      "[0;0;0]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "DCM_L2E"
+      Position		      [1225, 453, 1255, 467]
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "accel_L"
+      Position		      [1225, 513, 1255, 527]
+      Port		      "2"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "altitude"
+      Position		      [1225, 568, 1255, 582]
+      Port		      "3"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "v_L"
+      Position		      [1225, 613, 1255, 627]
+      Port		      "4"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "E_L"
+      Position		      [1275, 688, 1305, 702]
+      Port		      "5"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "platform_angle_error"
+      Position		      [770, 13, 800, 27]
+      Port		      "6"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "v_err_L"
+      Position		      [1170, 973, 1200, 987]
+      Port		      "7"
+    }
+    Line {
+      SrcBlock		      "gyro rate error\nin\nbody coordinates\n(deg/hr)"
+      SrcPort		      1
+      DstBlock		      "Compute Gyro Error\nDynamics"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Compute Gyro Error\nDynamics"
+      SrcPort		      1
+      DstBlock		      "integrate into \nplatform angle\nerror"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "integrate into \nplatform angle\nerror"
+      SrcPort		      1
+      Points		      [5, 0; 10, 0]
+      Branch {
+	Points			[10, 0; 0, 35]
+	DstBlock		"Platform\nAngle Error\nScope"
+	DstPort			1
+      }
+      Branch {
+	Points			[10, 0; 0, -70]
+	Branch {
+	  Points		  [295, 0]
+	  DstBlock		  "Compute Accel Error\nDynamics"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -35; -280, 0]
+	  Branch {
+	    Points		    [-145, 0; 0, 45]
+	    DstBlock		    "Compute Gyro Error\nDynamics"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -90; 65, 0]
+	    Branch {
+	      DstBlock		      "platform_angle_error"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 45]
+	      DstBlock		      "Display"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Compute Accel Error\nDynamics"
+      SrcPort		      1
+      Points		      [65, 0; 0, 705]
+      DstBlock		      "integrate into \nvelocity error"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "integrate into \nvelocity error"
+      SrcPort		      1
+      Points		      [0, 0; -80, 0]
+      Branch {
+	Points			[-45, 0]
+	Branch {
+	  Points		  [-45, 0]
+	  Branch {
+	    DstBlock		    "Compute Transport\nRate Error"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 140]
+	    DstBlock		    "Compute Vertical\nComponent of\nVelocity "
+"Error"
+	    DstPort		    1
+	  }
+	}
+	Branch {
+	  Points		  [0, -720]
+	  DstBlock		  "Compute Accel Error\nDynamics"
+	  DstPort		  5
+	}
+      }
+      Branch {
+	Points			[0, 40]
+	Branch {
+	  Points		  [0, 60]
+	  DstBlock		  "Velocity\nError\nScope"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "v_err_L"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Compute Vertical\nComponent of\nVelocity Error"
+      SrcPort		      1
+      DstBlock		      "integrate into \naltitude error"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "accelerometer error \nin body coordinates\n(mg)"
+      SrcPort		      1
+      Points		      [35, 0; 0, 45]
+      DstBlock		      "Compute Accel Error\nDynamics"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Compute Transport\nRate Error"
+      SrcPort		      1
+      Points		      [0, 0; -50, 0]
+      Branch {
+	Points			[-185, 0]
+	Branch {
+	  Points		  [-20, 0; 0, -745]
+	  DstBlock		  "Compute Gyro Error\nDynamics"
+	  DstPort		  3
+	}
+	Branch {
+	  Points		  [0, -255]
+	  DstBlock		  "Compute Rate of Change\nof Position Angle E"
+"rror"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, -110; 390, 0; 0, -640]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Compute Rate of Change\nof Position Angle Error"
+      SrcPort		      1
+      DstBlock		      "integrate\ninto position\nangle error"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "integrate into \naltitude error"
+      SrcPort		      1
+      DstBlock		      "altitude error"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Compute Earth Rate\nError"
+      SrcPort		      1
+      Points		      [5, 0; 0, -50]
+      Branch {
+	Points			[-560, 0; 0, -420]
+	DstBlock		"Compute Gyro Error\nDynamics"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, -475]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      2
+      Points		      [105, 0; 70, 0]
+      Branch {
+	Points			[0, -80; -475, 0; 0, -130]
+	DstBlock		"Compute Gyro Error\nDynamics"
+	DstPort			5
+      }
+      Branch {
+	Points			[130, 0; 0, -195]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			6
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      1
+      Points		      [105, 0; 20, 0]
+      Branch {
+	Points			[0, -90; -405, 0]
+	Branch {
+	  Points		  [0, -75]
+	  DstBlock		  "Compute Gyro Error\nDynamics"
+	  DstPort		  6
+	}
+	Branch {
+	  Points		  [0, 320; 325, 0; 0, 20]
+	  DstBlock		  "Compute Earth Rate\nError"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[200, 0; 0, -140]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			7
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      3
+      Points		      [105, 0; 45, 0]
+      Branch {
+	Points			[195, 0; 0, -160]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			8
+      }
+      Branch {
+	Points			[0, -125; -410, 0]
+	Branch {
+	  Points		  [0, -70]
+	  DstBlock		  "Compute Gyro Error\nDynamics"
+	  DstPort		  7
+	}
+	Branch {
+	  Points		  [0, 380]
+	  DstBlock		  "Compute Rate of Change\nof Position Angle E"
+"rror"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "integrate\ninto position\nangle error"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 70]
+	Branch {
+	  Points		  [-340, 0; 0, -70]
+	  DstBlock		  "Compute Rate of Change\nof Position Angle E"
+"rror"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [260, 0]
+	  Branch {
+	    Points		    [55, 0]
+	    DstBlock		    "Position Angle Error\nScope"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Compute Small Angle\nRotation Matrix"
+	    DstPort		    2
+	  }
+	}
+      }
+      Branch {
+	Points			[0, -5]
+	DstBlock		"Compute Earth Rate\nError"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      7
+      Points		      [105, 0; 255, 0]
+      Branch {
+	Points			[0, -230]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			9
+      }
+      Branch {
+	Points			[65, 0; 0, 50]
+	DstBlock		"v_L"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      6
+      Points		      [470, 0; 0, 30]
+      DstBlock		      "altitude"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      5
+      Points		      [105, 0; 275, 0]
+      Branch {
+	DstBlock		"accel_L"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -150]
+	DstBlock		"Compute Accel Error\nDynamics"
+	DstPort			10
+      }
+    }
+    Line {
+      SrcBlock		      "Strapdown Navigation\nSubsystem"
+      SrcPort		      4
+      Points		      [105, 0; 230, 0]
+      Branch {
+	Points			[130, 0; 0, -35]
+	DstBlock		"DCM_L2E"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 180]
+	Branch {
+	  Points		  [0, 135]
+	  DstBlock		  "Position Angle Error\nScope"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [20, 0]
+	  DstBlock		  "Compute Small Angle\nRotation Matrix"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "convert\nto \nrad/sec"
+      SrcPort		      1
+      Points		      [0, 20]
+      DstBlock		      "Strapdown Navigation\nSubsystem"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "convert\nto m/sec^2"
+      SrcPort		      1
+      DstBlock		      "Strapdown Navigation\nSubsystem"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Compute Small Angle\nRotation Matrix"
+      SrcPort		      1
+      DstBlock		      "E_L"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "body rates\n(deg/sec)"
+      SrcPort		      1
+      Points		      [100, 0; 0, -55]
+      DstBlock		      "Gyro Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gyro Switch"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "convert\nto \nrad/sec"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Accel Switch"
+      SrcPort		      1
+      DstBlock		      "convert\nto m/sec^2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "body acceleration\n(g)"
+      SrcPort		      1
+      Points		      [120, 0; 0, -55]
+      DstBlock		      "Accel Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "body rate inport Z \n(deg/sec)"
+      SrcPort		      1
+      Points		      [50, 0; 0, -25]
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "body rate inport Y\n(deg/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "body rate inport X\n(deg/sec)"
+      SrcPort		      1
+      Points		      [30, 0; 0, 35]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [10, 0; 0, 25]
+      DstBlock		      "Gyro Switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "body accel inport X\n(g)"
+      SrcPort		      1
+      Points		      [50, 0; 0, 25]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "body accel inport Y\n(g)"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "body accel inport Z\n(g)"
+      SrcPort		      1
+      Points		      [50, 0; 0, -25]
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [15, 0; 0, 30]
+      DstBlock		      "Accel Switch"
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Strapdown Navigator Error Model\nFor use with K"
+"CAT."
+      Position		      [246, 51]
+      HorizontalAlignment     "left"
+      FontSize		      16
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "This model is based on the INS \nerror dynamics"
+" model contained in P. Savage, pg 341\nNote:  This model is generic and only "
+"\nshows how the gyro and accel errors propagate\ninto position, velocity and "
+"tilt errors (9 states).\n"
+      Position		      [47, 1018]
+      HorizontalAlignment     "left"
+    }
+  }
+}

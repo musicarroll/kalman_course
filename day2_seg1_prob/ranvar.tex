@@ -1,0 +1,262 @@
+\begin{frame}
+	\onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item In measure-theoretic terms, a ra\textbf{ndom variable} 
+is simply a real-valued measurable function on the sample space $\Omega$.   
+}
+  \onslide<3->{
+\item A \textbf{measurable function} is one such that the inverse image of any 
+open set in $\Real$ is measurable (i.e. is a member of the $\sigma$-algebra).   
+}
+  \onslide<4->{
+\item Some elementary probability texts are not that strict and instead consider 
+any real-valued function of the sample space to be a random variable.  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item We use capital letters at the end of the alphabet to denote random variables:  $X,Y,Z, ...$ 
+(This helps us distinguish them from ordinary real-valued variables.)  
+}
+  \onslide<3->{
+\item Later we will use lowercase letters so as not to confuse them with certain transforms.  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Note that random variables are not really variables in any ordinary sense -- they are functions.  Thus, if $\omega\in \Omega$, and $X$ is a random 
+variable on $\Omega$, then $X(\omega)\in\Real$, i.e., $X(\omega)$ is a real number.  
+}
+  \onslide<3->{
+\item Also note that $X^{-1}(A)=\set{\omega\in\Omega | X(\omega)\in A}$ is 
+always an event in the event algebra by definition.  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Random variables provide a way to quantify the outcomes of
+ experiments  
+}
+  \onslide<3->{
+\item Random variables are important because we are often more
+ interested in the consequences of an experiment than in the
+ experiment itself  
+}
+  \onslide<4->{
+\item For example, a gambler is usually more interested in his
+ wins and losses than in the particular game he's playing  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Moreover, random variables are not really random  
+}
+  \onslide<3->{
+\item They are deterministic functions from the space of all possible outcomes
+ to the real numbers.  If you give them a particular outcome to operate on,
+ they return the same real value every time.  
+}
+  \onslide<4->{
+\item What gives them the appearance of randomness is really the fact that you don't 
+really know what those values are.  Usually, 
+you only know (or assume you know) certain statistical properties like 
+distributions (to be discussed soon).  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item The "randomness" of random variables stems from the
+ probabilistic nature of the underlying sample space.  Usually, we
+ can't say much about the individual outcomes in a sample space.
+ We can only measure the size of events. (The connection between the
+ "randomness" of the underlying space and the random variables will
+ be made by means of probability distributions.)  
+}
+  \onslide<3->{
+\item It is because random variables are functions that we find
+ ourselves having to deal with infinite dimensional vector
+ spaces, i.e., function spaces.  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Equality and Equivalence of Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Since random variables are functions, strict equality of
+ random variables is the same as the equality of functions.  Two
+ functions are equal if and only if they have equal values when
+ evaluated at the same point:  $X=Y\Leftrightarrow
+ X(\omega)=Y(\omega)$ for all $\omega\in\Omega$.  
+}
+  \onslide<3->{
+\item However, when you take probability into account, things can
+ get a little fuzzier.  We say that two random variables $X$ and
+ $Y$ are equal \textit{\textbf{almost surely}} (a.s.) if $P\set{\omega\in\Omega:X(\omega)\neq
+ Y(\omega)}=0$.  
+}
+  \onslide<4->{
+\item In other words, $X=Y \text{a.s.}$, if the set of all points at
+ which $X$ and $Y$ differ is insignificant, i.e., of measure 0.  
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Simple Random Variables}
+}
+\begin{itemize}
+  \onslide<2->{
+\item If a random variable $X$ takes on only finitely many
+ values, then $X$ is called a \textit{\textbf{simple random variable}}.
+ \item If $X$ is a simple random variable and
+ $\set{a_1,\cdots,a_n}$ are its values, let $A_i=\set{\omega:X(\omega)=a_i}$
+ for each $i=1,\ldots,n$.\\  
+}
+  \onslide<3->{
+Then $X$ can bewritten as a
+ sum:
+\begin{equation}\label{simple_rv}
+  X=\sum_{i=1}^{n}a_i\chi_{A_i}
+\end{equation}
+where $\chi_{A_i}$ is the characteristic or indicator function on $A_i$ defined by\\
+ $\chi_{A_i}(\omega)=
+  \begin{cases}
+    1 & \text{if } \omega\in A_i, \\
+    0 & \text{otherwise}.
+  \end{cases}$
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Example:  Simple Random Variable}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Double coin toss:  
+}
+  \onslide<3->{
+  \begin{itemize}
+  \item Sample Space: $\Omega=\set{HH,HT,TH,TT}$
+}
+  \onslide<4->{
+\item $\sigma$-algebra: $\mathcal{M}=\set{\emptyset, \set{HH},\set{HT,TH,TT},\Omega}$  
+}
+  \onslide<5->{
+\item Probability Measure: $P(A)=$number of elements in $A$ divided by total number of elements in $\Omega$
+\end{itemize}  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Example:  Simple Random Variable}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Let $A=\set{HT,TH,TT}$ and define $X=\chi_A$.  Then
+\begin{align*}
+X(HH)&=0\\
+X(HT)&=1\\
+X(TH)&=1\\
+X(TT)&=1
+\end{align*}  
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Example:  Simple Random Variable}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Let $B=\set{HH}$ and define $Y=-3\chi_A + 0.5\chi_B$  
+}
+  \onslide<3->{
+\item $Y$ is a simple random variable.  
+}
+  \onslide<4->{
+\item We compute:  
+\begin{align*}
+  Y(HH)&=-3\chi_A(HH) + 0.5\chi_B(HH)\\
+&=-3\cdot 0 + 0.5\cdot 1\\
+&=0.5
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Statistics} 
+	\framesubtitle{Random Variables form a Vector Space}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Let $RV(\Omega)$ denote the set of all random variables on $\Omega$.
+ If $X,Y\in RV(\Omega)$ and $a,b\in \Real$, then $aX+bY\in
+ RV(\Omega)$.  
+}
+  \onslide<3->{
+\item Scalar multiplication:  Recall that $(aX+bY)(\omega):=a\cdot X(\omega)+b\cdot
+ Y(\omega)$, where $\cdot$ denotes ordinary real multiplication.
+ }
+   \onslide<4->{
+ \item For brevity we will drop the $\cdot$ and merely
+ juxtapose.  Likewise, we will drop $\Omega$ from $RV(\Omega)$
+ and merely write $RV$, assuming implicitly that the underlying sample space is
+ $\Omega$. 
+}
+  \onslide<5->{
+  \item Thus, $RV(\Omega)$ becomes a vector space over the reals.  It is an infinite dimensional vector space.\\
+  In fact, after we define a norm and inner products on $RV(\Omega)$ using statistical expectation, 
+  we will see that it becomes a Hilbert space (modulo almost surely equivalence).
+  }
+\end{itemize}
+\end{frame}

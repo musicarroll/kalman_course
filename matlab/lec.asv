@@ -1,0 +1,23 @@
+%LEC
+n=30; % number of years
+r = .05; % discount rate
+I = ones(n,1);
+M = ones(n,1);
+F = ones(n,1);
+E = ones(n,1);
+discount = ones(n,1);
+discount(1) = 1+r;
+mum = zeros(n,1);
+num(1) = (I(1)+M(1)+F(1))/discount(1);
+den(1) = E(
+for i=2:n
+    I(t) = .10*I(t-1);
+    M(t) = M(t-1)+.01*M(t-1);
+    F(t) = F(t-1);
+    E(t) = E(t-1);
+    discount(t) = (1+r)^i;
+    num(i) = (I(i)+M(i)+F(i))/discount(i);
+    den(i) = E(i)/discount(i);
+end
+
+

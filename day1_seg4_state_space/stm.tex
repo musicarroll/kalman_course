@@ -1,0 +1,121 @@
+% day1_seg3_state_space/stm.tex
+\begin{frame}
+\onslide<1->{\frametitle{State Transition Matrix}
+}
+\begin{itemize}
+\onslide<2->{ 
+	\item $\Phi(t,t_0)$
+}
+\onslide<3->{ 
+	\item Needed when deriving a discrete-time state space model from a continuous-time model
+ }
+\onslide<4->{ 
+	\item Solution of homogeneous (zero-input) equation for continuous-time systems
+ }
+\onslide<5->{
+	\item If discrete-time system is derived from continuous-time system, then $\stmeq{k}$ satisfies:
+\[
+x_k=\stm{k}x_{k-1}
+\]}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+\onslide<1->{
+\frametitle{State Transition Matrix}
+}
+\begin{itemize}
+\onslide<2->{ 
+	\item $\Phi$ satisfies matrix differential equation:  $\dot{\Phi}(t,t_0)=A(t)\Phi(t,t_0)$\\
+	with initial condition:  $\Phi(t_0,t_0)=I$
+}
+\onslide<3->{ 
+	\item For a time-invariant system ($A$ is constant):  $\dot{x}(t)=Ax(t)$, solution is $\Phi(t_2,t_1)=\exp(A(t_2-t_1))$\\
+}
+\onslide<4->{ 
+	\item For a time-varying system:  $\dot{x}(t)=A(t)x(t)$, there is NO general solution. \\
+	But solutions can be found in special circumstances and several series solutions 
+	are available.\\
+	E.g., 	If $A(t)A(s)=A(s)A(t)$ for every pair of times $t,s$, then $\Phi(t_2,t_1)=\exp\left(\int_{t_1}^{t_2}A(\tau)d\tau\right)$
+
+}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Transition Matrix} 
+	\framesubtitle{Properties of $\Phi$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Transition Property: $\Phi(t_3,t_1)=\Phi(t_3,t_2)\Phi(t_2,t_1)$
+}
+  \onslide<3->{
+\item  Inversion Property:  $\Phi^{-1}(t_2,t_1)=\Phi(t_1,t_2)$ 
+}
+  \onslide<4->{
+	\item Separation Property:  $\Phi$ can be written as $\Phi(t_2,t_1)=\theta(t_2)\theta^{-1}(t_1)$, where $\theta$ is the solution to the matrix differential equation:\\
+$\dot{\theta}(t)=A(t)\theta(t)$
+}
+  \onslide<5->{
+	\item Determinant Property:  $\det{\Phi(t_2,t_1)}=\exp\left(\int_{t_1}^{t_2}\trace{A(\tau)}d\tau\right)$
+}
+\end{itemize}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Transition Matrix} 
+	\framesubtitle{Solving for $\Phi$}
+}
+\begin{itemize}
+  \onslide<2->{
+\item  Peano-Baker Series (valid even for time-varying $A(t)$):\\
+$\Phi(t_2,t_1)=I+\int_{t_1}^{t_2}A(s_1)ds_1+\int_{t_1}^{t_2}A(s_1)\int_{t_1}^{s_1}A(s_2)ds_2ds_1+\cdots$
+}
+  \onslide<3->{
+\item Another series solution is given by the Magnus series expansion involving matrix commutators  
+\begin{itemize}
+\item Truncated Magnus expansions exhibit many of the properties of $\Phi$
+\end{itemize}
+}
+\end{itemize}
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Transition Matrix} 
+	\framesubtitle{MATLAB Symbolic Toolbox}
+}
+  \onslide<2->{
+
+syms dt;  n=8; A = zeros(n); A(1:n-1,2:n)=eye(n-1); expm(A*dt)\\
+}
+  \onslide<3->{
+  \begin{footnotesize}
+    $\Phi(t_k,t_{k-1})=\left(\begin{array}{cccccccc} 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2} & \frac{{\mathrm{dt}}^3}{6} & \frac{{\mathrm{dt}}^4}{24} & \frac{{\mathrm{dt}}^5}{120} & \frac{{\mathrm{dt}}^6}{720} & \frac{{\mathrm{dt}}^7}{5040}\\ 0 & 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2} & \frac{{\mathrm{dt}}^3}{6} & \frac{{\mathrm{dt}}^4}{24} & \frac{{\mathrm{dt}}^5}{120} & \frac{{\mathrm{dt}}^6}{720}\\ 0 & 0 & 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2} & \frac{{\mathrm{dt}}^3}{6} & \frac{{\mathrm{dt}}^4}{24} & \frac{{\mathrm{dt}}^5}{120}\\ 0 & 0 & 0 & 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2} & \frac{{\mathrm{dt}}^3}{6} & \frac{{\mathrm{dt}}^4}{24}\\ 0 & 0 & 0 & 0 & 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2} & \frac{{\mathrm{dt}}^3}{6}\\ 0 & 0 & 0 & 0 & 0 & 1 & \mathrm{dt} & \frac{{\mathrm{dt}}^2}{2}\\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & \mathrm{dt}\\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{array}\right)$\\
+	where $dt=t_k-t_{k-1}$
+	\end{footnotesize}
+
+  }
+\onslide<4->{\center --------------------------------------------------------------------}
+\end{frame}
+%\begin{frame}
+%  \onslide<1->{
+%	\frametitle{State Transition Matrix} 
+%	\framesubtitle{MATLAB Symbolic Toolbox: Companion Matrix}
+%}
+%\begin{tiny}
+%  \onslide<2->{
+%For $\left(\begin{array}{cc} 0 & 1\\ -a_{0} & -a_{1} \end{array}\right)$ 
+%}
+%  \onslide<3->{
+%$\Phi_{11}=\frac{{\mathrm{e}}^{-\frac{\mathrm{dt}\,\sqrt{{a_{1}}^2-4\,a_{0}}}{2}-\frac{a_{1}\,\mathrm{dt}}{2}}\,\sqrt{{a_{1}}^2-4\,a_{0}}+{\mathrm{e}}^{\frac{\mathrm{dt}\,\sqrt{{a_{1}}^2-4\,a_{0}}}{2}-\frac{a_{1}\,\mathrm{dt}}{2}}\,\sqrt{{a_{1}}^2-4\,a_{0}}-a_{1}\,{\mathrm{e}}^{-\frac{\mathrm{dt}\,\sqrt{{a_{1}}^2-4\,a_{0}}}{2}-\frac{a_{1}\,\mathrm{dt}}{2}}+a_{1}\,{\mathrm{e}}^{\frac{\mathrm{dt}\,\sqrt{{a_{1}}^2-4\,a_{0}}}{2}-\frac{a_{1}\,\mathrm{dt}}{2}}}{2\,\sqrt{{a_{1}}^2-4\,a_{0}}}'$
+%}
+%\end{tiny}
+\onslide<4->{\center --------------------------------------------------------------------}
+%\end{frame}

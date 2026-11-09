@@ -1,0 +1,151 @@
+% day2_seg1_ranproc1/corrcov.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Correlation and Covariance}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Since at each $t$ $X(t)$ is a random variable in its own right, it makes sense to talk about the correlation of two such random variables $X(t)$ and $X(s)$.
+}
+  \onslide<3->{
+ \item Since both random variables come from the same underlying process, we refer to this as autocorrelation.
+}
+  \onslide<4->{
+ \item Similarly, autocovariance involves first centering the process about its mean process $\mu_t$.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Correlation and Covariance}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item The function $\expect{X(t)X(t+\tau)}$ is called the \textit{\textbf{autocorrelation
+ function}} of $X$ and for a weakly stationary process $X$, and it is denoted by
+ $R_{XX}(\tau)$, since it is a function of $\tau$ alone.
+}
+  \onslide<3->{
+ \item The \textit{\textbf{autocovariance}} function for a weakly stationary process is formed
+ by subtracting out the means:
+ $C_{XX}(\tau)=\expect{(X(t)-\mu_t)(X(t+\tau)-\mu_{t+\tau})}$.
+}
+  \onslide<4->{
+ \item Cross correlation and cross covariance between two different random processes $X$
+ and $Y$ are defined in the obvious way.
+}
+ \onslide<5->{
+ \item Note that these are difference than the sample cross correlation and sample cross covariance that 
+ we deal with in empirical work
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Examples of Autocorrelation Functions}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Consider the random process $X(t,\omega)=A(\omega)\sin(2\pi f t+\theta)$ in which $A:\Omega\rightarrow \Real$ is a normally distributed random variable with variance $\sigma^2$.
+}
+  \onslide<3->{
+\item The autocorrelation function $R_{XX}(s,t)$ is therefore
+\begin{align*}
+\expect{X(t,\omega)X(s,\omega)}&=\expect{A(\omega)\sin(2\pi f t+\theta)A(\omega)\sin(2\pi f s+\theta)}\\
+&=\expect{A(\omega)^2}\sin(2\pi f t+\theta)\sin(2\pi f s+\theta)\\
+&=\sigma^2\sin(2\pi f t+\theta)\sin(2\pi f s+\theta)
+\end{align*}
+}
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Examples of Autocorrelation Functions}
+}
+\begin{itemize}
+  \onslide<2->{
+\item Consider the white noise process $W(t)$.
+}
+  \onslide<3->{
+\item Characteristic of white noise to be uncorrelated in time
+}
+  \onslide<4->{
+\item Thus, $\expect{W(t)W(s}=0$ for every $s$ and $t$ such that $s\neq t$.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Ergodic Processes}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item We shall be concerned almost exclusively with weakly
+ stationary processes that are also \textbf{ergodic}, meaning that ensemble
+ averaging at any one time gives the same result as time averaging
+ one sample trajectory.  Thus we may assume:
+}
+  \onslide<3->{
+\begin{equation}\label{ergodic_mean}
+  \mu_X=\limint X(t)dt
+\end{equation}
+}
+  \onslide<4->{
+\begin{equation}\label{ergodic_meansquare}
+  \psi_X^2 = \limint X^2(t)dt
+\end{equation}
+}
+  \onslide<5->{
+\begin{equation}\label{ergodic_autocorr}
+  R_{XX}(\tau)=\limint X(t)X(t+\tau)dt
+\end{equation}
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Ergodic Processes}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item We haven't yet defined want we mean by such time integrals,
+ however, so we have to hold off dealing with them.
+}
+  \onslide<3->{
+ \item Once we have defined the mean square limit of
+ Riemann-Stieltjes sums, then we'll know what these integrals
+ really mean.
+}
+  \onslide<4->{
+ \item Nevertheless, if we fix $\omega$ and consider only sample trajectories $X(t,\omega)$, then we can use ordinary integrals provided that the sample trajectories are well-enough behaved.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Ergodic Processes}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item Well-behaved means that they are of bounded variation, i.e., they don't wiggle around too much.
+}
+  \onslide<3->{
+ \item Unfortunately, this doesn't really work for the usual conception of white noise, because its sample trajectories are not of bounded variation.
+}
+  \onslide<4->{
+ \item If we restrict our attention to band-limited white noise (like Matlab / Simulink does), then we can stick to the ordinary integrals we learned in calculus.
+}
+\end{itemize}
+\end{frame}

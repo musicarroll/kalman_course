@@ -1,0 +1,24 @@
+% day4_seg1_sim/filtersawake.tex
+\begin{frame}
+Keeping Filters Awake
+ \begin{itemize}
+ \item Filter goes to sleep means error covariance for certain states becomes so small that measurements no longer have an effect
+ \item Can be the result of round-off problems
+ \item Presence of non-random, determinisitc quantities can be contributors
+	\begin{itemize}
+		\item Random constants are nearly deterministic
+		\item Watch out for states not driven by process noise!
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Keeping Filters Awake
+\begin{itemize}
+  \item Recall running average example
+  \item That was a random constant
+  \item Gain $1/N\rightarrow 0$ as $N\rightarrow\infty$
+  \item One aircraft nav filter has 12 states modeled as random constants, i.e., the non-varying states
+\end{itemize} 
+\end{frame}
+

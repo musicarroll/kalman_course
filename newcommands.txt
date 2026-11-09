@@ -1,0 +1,11 @@
+./day1_seg1_heuristic/day1_heuristic_main.tex:\newcommand{\includes}{/home/1104070/latex_include}
+./day1_seg1_heuristic/day1_heuristic_main.tex:\newcommand{\dayonesegone}{.}
+./day1_seg1_heuristic/day1_heuristic_main.tex:\renewcommand{\thethm}{}  % unnumbered
+./orbit_filter/orbit_main.tex:\newcommand{\includes}{/home/1104070/latex_include}
+./orbit_filter/orbit_main.tex:\newcommand{\CamelCase}{\widetilde}
+./orbit_filter/orbit_main.tex:\renewcommand{\thethm}{}  % unnumbered
+./orbit_filter/orbit_notation.tex:\newcommand{\includes}{/home/1104070/latex_include}
+./orbit_filter/orbit_notation.tex:\renewcommand{\thethm}{}  % unnumbered
+./tmp/day1_heuristic_main.tex:\newcommand{\includes}{/home/1104070/latex_include}
+./tmp/day1_heuristic_main.tex:\newcommand{\day1_seg1_heuristic}{.}
+./tmp/day1_heuristic_main.tex:\renewcommand{\thethm}{}  % unnumbered

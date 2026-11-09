@@ -1,0 +1,56 @@
+% day4_seg1_sim/buffering.tex
+\begin{frame}
+Buffering
+ \begin{itemize}
+ \item Keep low rate data from being clobbered by higher rate data
+ \item Keep high rate data from being clobbered by low rate data
+ \item Buffering: Orderly passage and distribution of data up and down the rate group hierarchy
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Buffering Example from an Aircraft Navigation Filter:
+\begin{itemize}
+  \item Slow rate group exec buffers data to and from faster rate groups
+  \item Faster rate groups do not push or pull data with respect to slower groups
+	\begin{itemize}
+		\item REP8HZ buffers data to and from the 16 Hz 
+rate group, but does not control buffering to and from 4 Hz
+		\item Hence REP16HZ does not call any BU' routines
+	\end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+Buffering Example:\\
+Approach
+\begin{itemize}
+  \item Buffer from faster at beginning of start of slow rate group
+  \item Buffer to faster at end of slow rate group
+  \item Within BU'* routine:
+	\begin{enumerate}
+		\item Disable interrupts
+		\item Perform buffering assignments
+		\item Re-enable interrupts
+	\end{enumerate}
+\end{itemize} 
+\end{frame}
+\begin{frame}[fragile]
+\begin{verbatim}
+  117 DEF PROC BU'BUFFER'TO'05HZ'FROM'FASTER;
+  118 BEGIN
+  119 
+  120   DISABLE THE INTERRUPTS
+  121 %
+  122       DISABLE'INTRUPT;
+  123 
+  124   BUFFER SYSTEM LATITUDE AND LONGITUDE FOR G/S
+  125 %
+  126       SYSTEM'LATITUDE'05  = SYSTEM'LATITUDE'16;
+  127       SYSTEM'LONGITUDE'05 = SYSTEM'LONGITUDE'16;
+  128 
+  129   ENABLE THE INTERRUPTS
+  130 %
+  131       ENABLE'INTRUPT;
+\end{verbatim}
+\end{frame}

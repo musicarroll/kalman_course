@@ -1,0 +1,452 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Cygwin) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./gps_kalman_master_day1.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/share/texmf-dist/tex/latex/base/size11.clo)
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(/usr/share/texmf-dist/tex/latex/ms/everyshi.sty))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+
+Package hyperref Message: Stopped early.
+
+) (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/share/texmf-dist/tex/latex/filehook/filehook.sty)))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/share/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+(/usr/share/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerthemeBerlin.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerouterthememiniframes.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty))
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/switch.def)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def))))
+(/home/1104070/latex_include/kalman_cmdmaster.tex
+(/home/1104070/latex_include/taylor.tex)
+(/home/1104070/latex_include/gensymdefs.tex)
+(/home/1104070/latex_include/kfspecific.tex)
+(/home/1104070/latex_include/insgpsdefs.tex)
+(/home/1104070/latex_include/naveqdefs.tex)
+(/home/1104070/latex_include/errdyneqdefs.tex)
+(/home/1104070/latex_include/ct_kf_cmnds.tex)
+(/home/1104070/latex_include/gps_cmds.tex)) (./gps_kalman_master_day1.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty)
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./gps_kalman_master_day1.out) (./gps_kalman_master_day1.out)
+(/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
+.dict)
+(/usr/share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-
+English.dict)
+(/usr/share/texmf-dist/tex/latex/translator/translator-environment-dictionary-E
+nglish.dict)
+(/usr/share/texmf-dist/tex/latex/translator/translator-months-dictionary-Englis
+h.dict)
+(/usr/share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Engli
+sh.dict)
+(/usr/share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Engli
+sh.dict) (./gps_kalman_master_day1.nav)
+Overfull \hbox (352.91176pt too wide) detected at line 28
+  [] [][][][][][] [][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][]  
+
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 36.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead on input line 42.
+
+
+Overfull \vbox (32.78041pt too high) detected at line 42
+[1
+Non-PDF special ignored!
+<special> landscape
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./gps_kalman_master_day1.toc) [2] (./overview.tex [3] [4] [5] [6] [7] [8]
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+[24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
+[39] [40] [41] [42] [43] [44] [45] [46] [47] [48 <./boscovich.jpg> <./gauss.jpg
+>] [49 <./Peter_Swerling.jpg> <./RudolfKalman.jpg>] [50] [51] [52]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[53]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[54]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[55]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[56]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[57]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[58]
+Overfull \vbox (17.65987pt too high) detected at line 171
+[59] [60] [61] [62] (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd) [63]
+[64] [65] [66] [67] [68]) (./day1_seg1_heuristic/heuristic_main.tex [69]
+[70] [71] [72] [73] [74] [75] [76] [77] [78]
+(./day1_seg1_heuristic/predict_correct.tex [79] [80] [81] [82] [83] [84]
+[85] [86] [87] [88] [89] [90] [91] [92]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 71.
+
+[93] [94] [95] [96] [97] [98] [99] [100 <./day1_seg1_heuristic/pred_correct.jpg
+>] [101] [102] [103] [104] [105] [106] [107]) (./day1_seg1_heuristic/runavg.tex
+ [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]
+[120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]
+[132] [133] [134] [135 <./day1_seg1_heuristic/resistor.jpg>] [136] [137]
+[138] [139] [140]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[141]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[142]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[143]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[144]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[145]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[146]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[147]
+Overfull \vbox (24.65527pt too high) detected at line 100
+[148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159]
+[160]
+Overfull \vbox (22.33958pt too high) detected at line 150
+[161 <./day1_seg1_heuristic/runavgplot.jpg>]
+Overfull \vbox (22.33958pt too high) detected at line 150
+[162]) (./day1_seg1_heuristic/extrap.tex [163] [164] [165] [166] [167] [168]
+[169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180]
+[181] [182] [183] [184] [185] [186] [187] [188] [189])
+(./day1_seg1_heuristic/update.tex [190] [191] [192] [193] [194] [195] [196]
+[197] [198] [199] [200]) (./day1_seg1_heuristic/gain.tex [201] [202] [203]
+[204] [205] [206] [207] [208] [209] [210]) (./day1_seg1_heuristic/exercises.tex
+
+Overfull \vbox (19.37442pt too high) detected at line 27
+[211] [212] [213] [214] [215]
+Overfull \vbox (16.05556pt too high) detected at line 213
+[216] [217] [218] [219])) (./day1_seg2_equations/equation_main.tex [220]
+[221] [222] (./day1_seg2_equations/01_summary.tex [223] [224] [225] [226]
+[227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238]
+[239] [240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250]
+[251] [252] [253] [254] [255] [256] [257] [258] [259] [260])
+(./day1_seg2_equations/02_notation.tex [261] [262] [263] [264] [265] [266]
+[267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278]
+[279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290]
+[291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302]
+[303] [304] [305] [306] [307]
+Overfull \vbox (7.39827pt too high) detected at line 165
+[308]
+Overfull \vbox (7.39827pt too high) detected at line 165
+[309]
+Overfull \vbox (7.39827pt too high) detected at line 165
+[310]
+Overfull \vbox (7.39827pt too high) detected at line 165
+[311]
+Overfull \vbox (7.39827pt too high) detected at line 165
+[312] [313] [314] [315] [316] [317]) (./day1_seg2_equations/03_examples.tex
+[318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328] [329]
+[330] [331] [332] [333] (./day1_seg2_equations/03_01_resistor.tex [334]
+[335] [336] [337] [338] [339] [340] [341] [342] [343] [344]
+Overfull \vbox (40.33958pt too high) detected at line 42
+[345 <./day1_seg2_equations/kf_resistor_plot.jpg>]
+Overfull \vbox (40.33958pt too high) detected at line 42
+[346]
+Overfull \vbox (84.61201pt too high) detected at line 52
+[347]
+Overfull \vbox (84.61201pt too high) detected at line 52
+[348]
+Overfull \vbox (36.29834pt too high) detected at line 64
+[349 <./day1_seg2_equations/kf_resistor_variance.jpg>]
+Overfull \vbox (36.29834pt too high) detected at line 64
+[350]
+Overfull \vbox (49.89835pt too high) detected at line 77
+[351 <./day1_seg2_equations/kf_resistor_variance_no_process_noise.jpg>]
+Overfull \vbox (49.89835pt too high) detected at line 77
+[352]) (./day1_seg2_equations/03_02_constant_velocity.tex
+Overfull \vbox (3.75774pt too high) detected at line 21
+[353]
+Overfull \vbox (3.75774pt too high) detected at line 21
+[354]
+Overfull \vbox (3.75774pt too high) detected at line 21
+[355]
+Overfull \vbox (3.75774pt too high) detected at line 21
+[356]
+Overfull \vbox (3.75774pt too high) detected at line 21
+[357]
+Overfull \vbox (3.75774pt too high) detected at line 21
+[358] [359] [360] [361] [362] [363] [364] [365] [366 <./day1_seg2_equations/con
+st_vel.jpg>] [367]
+Overfull \vbox (30.90062pt too high) detected at line 88
+[368 <./day1_seg2_equations/const_vel_sawtooth.jpg>]
+Overfull \vbox (30.90062pt too high) detected at line 88
+[369]
+Overfull \vbox (30.90062pt too high) detected at line 88
+[370] [371 <./day1_seg2_equations/const_vel_w_proc_noise.jpg>] [372] [373 <./da
+y1_seg2_equations/const_vel_sawtooth_w_proc_noise.jpg>] [374] [375 <./day1_seg2
+_equations/const_vel_w_proc_noise_100_samples.jpg>] [376]
+Overfull \vbox (0.22977pt too high) detected at line 128
+[377 <./day1_seg2_equations/const_vel_sawtooth_w_proc_noise_100_samples.jpg>]
+Overfull \vbox (0.22977pt too high) detected at line 128
+[378] [379 <./day1_seg2_equations/const_vel_w_large_proc_noise_100_samples.jpg>
+] [380]
+Overfull \vbox (0.22977pt too high) detected at line 148
+[381 <./day1_seg2_equations/const_vel_sawtooth_w_large_proc_noise_100_samples.j
+pg>]
+Overfull \vbox (0.22977pt too high) detected at line 148
+[382] [383 <./day1_seg2_equations/const_vel_w_large_proc_noise_large_meas_noise
+_100_samples.jpg>] [384] [385 <./day1_seg2_equations/const_vel_sawtooth_w_large
+_proc_noise_large_meas_noise_100_samples.jpg>] [386])
+(./day1_seg2_equations/03_03_damposc.tex [387 <./day1_seg2_equations/spring_mas
+s_damper.jpg>] [388] [389] [390] [391] [392] [393] [394] [395] [396] [397]
+[398] [399] [400] [401] [402] [403] [404] [405] [406] [407] [408] [409]
+Overfull \vbox (15.31137pt too high) detected at line 139
+[410 <./day1_seg2_equations/damposc.jpg>]
+Overfull \vbox (29.53696pt too high) detected at line 148
+[411 <./day1_seg2_equations/damposc_variance.jpg>]))
+(./day1_seg2_equations/04_exercises.tex [412] [413] [414] [415] [416] [417]
+[418])) (./day1_seg4_state_space/state_space_main.tex [419] [420] [421]
+[422] (./day1_seg4_state_space/dyn_sys.tex [423] [424] [425] [426] [427]
+[428] [429] [430] [431] [432] [433] [434]
+
+LaTeX Warning: Reference `diffeq' on page 435 undefined on input line 69.
+
+[435]
+
+LaTeX Warning: Reference `diffeq' on page 436 undefined on input line 69.
+
+[436]
+
+LaTeX Warning: Reference `diffeq' on page 437 undefined on input line 69.
+
+[437] [438] [439] [440] [441] [442] [443] [444] [445] [446] [447] [448]
+[449] [450] [451] [452]
+Overfull \vbox (5.05154pt too high) detected at line 153
+[453]
+Overfull \vbox (5.05154pt too high) detected at line 153
+[454]
+Overfull \vbox (5.05154pt too high) detected at line 153
+[455]
+Overfull \vbox (5.05154pt too high) detected at line 153
+[456]
+Overfull \vbox (5.05154pt too high) detected at line 153
+[457] [458] [459] [460] [461] [462] [463] [464] [465] [466] [467] [468]
+[469] [470] [471] [472] [473] [474] [475] [476] [477] [478] [479] [480]
+
+LaTeX Warning: Reference `diffeq' on page 481 undefined on input line 310.
+
+[481]
+
+LaTeX Warning: Reference `diffeq' on page 482 undefined on input line 310.
+
+[482]
+
+LaTeX Warning: Reference `diffeq' on page 483 undefined on input line 310.
+
+[483] [484] [485] [486] [487] [488] [489] [490] [491] [492] [493] [494]
+[495] [496] [497] [498] [499] [500] [501] [502] [503] [504]
+Overfull \vbox (10.83516pt too high) detected at line 448
+[505 <./day1_seg4_state_space/lynx_hare.jpg>]
+Overfull \vbox (10.83516pt too high) detected at line 448
+[506] [507] [508] [509] [510] [511] [512] [513] [514] [515] [516] [517]
+Overfull \vbox (10.83328pt too high) detected at line 522
+[518 <./day1_seg4_state_space/pred_prey.jpg>]
+Overfull \vbox (10.83328pt too high) detected at line 522
+[519]
+Overfull \vbox (24.43575pt too high) detected at line 535
+[520 <./day1_seg4_state_space/dc_motor_inertial_load.jpg>]
+Overfull \vbox (13.91426pt too high) detected at line 556
+[521]
+Overfull \vbox (13.91426pt too high) detected at line 556
+[522]
+Overfull \vbox (13.91426pt too high) detected at line 556
+[523]
+Overfull \vbox (13.91426pt too high) detected at line 556
+[524]
+Overfull \vbox (13.91426pt too high) detected at line 556
+[525] [526] [527] [528] [529] [530] [531] [532] [533] [534] [535] [536]
+[537] [538] [539] [540] [541] [542] [543] [544] [545] [546] [547] [548]
+[549] [550] [551]
+Overfull \vbox (13.93633pt too high) detected at line 711
+[552 <./day1_seg4_state_space/poincare.jpg>])
+(./day1_seg4_state_space/block_diagrams.tex [553] [554] [555] [556] [557]
+[558] [559] [560] [561] [562]
+Overfull \vbox (21.52272pt too high) detected at line 28
+[563 <./day1_seg4_state_space/clock_block_diagram_model.jpg>])
+(./day1_seg4_state_space/deriving_state.tex [564] [565] [566] [567] [568])
+(./day1_seg4_state_space/examples.tex [569] [570] [571] [572] [573] [574]
+[575] [576] [577] [578 <./matlab/scalar_const_noise.jpg>] [579] [580] [581]
+[582] [583] [584]
+Overfull \vbox (17.4072pt too high) detected at line 54
+[585 <./day1_seg4_state_space/scalar_const_est.jpg>] [586] [587] [588] [589]
+[590] [591]
+Overfull \vbox (44.30772pt too high) detected at line 75
+[592 <./matlab/scalar_ramp_noise_est.jpg>] [593] [594] [595] [596] [597]
+Overfull \hbox (40.8111pt too wide) in paragraph at lines 108--108
+[][]  
+[598 <./day1_seg4_state_space/damped_harmosc_det.jpg>] [599] [600] [601]
+[602] [603]) (./day1_seg4_state_space/stm.tex [604] [605] [606] [607] [608]
+[609] [610] [611] [612] [613] [614] [615] [616] [617] [618] [619] [620])
+(./day1_seg4_state_space/exercises.tex [621])) (./gps_kalman_master_day1.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{differenceexample} has been referenced but does not exist, replaced by a fixed
+ one
+
+pdfTeX warning (dest): name{diffeq} has been referenced but does not exist, rep
+laced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on gps_kalman_master_day1.pdf (621 pages, 2670079 bytes).
+Transcript written on gps_kalman_master_day1.log.

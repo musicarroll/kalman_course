@@ -1,0 +1,67 @@
+% \dayonesegtwo/equation_main.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Part I}
+  \framesubtitle{The Five Basic Kalman Equations\\
+  Topics}
+  }
+ \begin{itemize}
+  \onslide<2->{\item Understanding the Equations: Heuristic Introduction}
+  \onslide<3->{\item \textbf{Equation Drilldown:  Taking the Equations Apart}}
+%  \onslide<4->{\item Differential Equations, Difference Equations and Dynamic Systems}
+  \onslide<4->{\item State Space Concepts}
+\end{itemize}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+
+\onslide<1->{
+  \frametitle{Equation Drilldown:  Taking the Equations Apart}
+     \framesubtitle{Topics}
+}
+
+\begin{itemize}
+  \onslide<2->{\item Mathematical Formulation of the Problem}
+  \onslide<3->{\item Drilldown on State Dynamics and Covariance Extrapolation Equations}
+  \onslide<4->{\item The Five Kalman Filter Equations}
+  \onslide<5->{\item \textbf{Examples:  Resistor Revisited}}
+  \onslide<6->{\item Exercises}
+\end{itemize}
+
+\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\input{\dayonesegtwo/03_01_resistor.tex}
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Summary} 
+	\framesubtitle{Vector Check}
+  }
+
+\begin{itemize}
+  \onslide<2->{
+\item Where are we?  
+}
+
+\begin{itemize}
+
+\onslide<3->{\item We reformulated the resistor model as a very simple Kalman filter }
+\onslide<4->{\item We've looked at the plots produced by kf\_resistor\_demo.py and seen that 
+they are almost identical to the running average plots}
+
+\end{itemize}
+
+\onslide<6->{
+\item What's next?  
+}
+\begin{itemize}
+  \onslide<7->{ \item In the next video, we will look a bona fide matrix model:  the 2-state constant velocity system. }
+\end{itemize}
+
+\end{itemize}
+\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+

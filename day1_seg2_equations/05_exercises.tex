@@ -1,0 +1,70 @@
+% day1_seg2_equations/exercises.tex
+
+\begin{frame}
+
+  \onslide<1->{\frametitle{Exercises}
+  	\framesubtitle{Resistor Revisited}
+}
+\begin{enumerate}
+  \onslide<2->{\item Work through the resistor example by hand using 
+$\hat{x}(0)=100\Omega$, $\sigma=0.1$, and $P(0)=0$.  Start the recursive loop 
+with the gain equation first.  Run through the loop three times.}
+
+  \onslide<3->{
+\item How does the measurement model change when you add a second (but identical type of) voltmeter measurement?}
+
+  \onslide<4->{
+	\item How does the measurement model change when you add a second (but less accurate by 2x) voltmeter?}
+
+  \onslide<5->{
+	\item Modify your own copy of run\_avg\_demo.py to add a small amount of process noise to the truth\_vec truth model.  Compare how well the running average performs compared to the Kalman filter in kf\_resistor\_demo.py using the statistically identical process noise.  (Ensure measurement noise remains the same for both.)}
+
+\end{enumerate}
+
+\onslide<6->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \onslide<1->{\frametitle{Exercises}
+	\framesubtitle{Constant Velocity Motion}
+}
+\begin{enumerate}
+\setcounter{enumi}{4}
+
+  \onslide<2->{\item Calculate the Kalman gain of the non-accelerated motion example.  Hint:  It looks a lot like the 
+gain for the damped harmonic oscillator.}
+
+  \onslide<3->{\item Modify the measurement model in your own copy of  constant\_velocity.py by adding a velocity sensor.  (Be sure to modify both the H and R matrices.)
+}
+
+  \onslide<4->{\item How do the dimensions of the Kalman gain matrix change after modifying the measurement model in the above manner?
+ }
+
+  \onslide<5->{\item By how much does the RMS error accuracy of the velocity estimation change with the addition of a direct velocity sensor?
+}
+
+\end{enumerate}
+\onslide<6->{\center --------------------------------------------------------------------}
+\end{frame}
+
+\begin{frame}
+	
+	\onslide<1->{\frametitle{Exercises}
+		\framesubtitle{Damped Harmonic Oscillator}
+	}
+	\begin{enumerate}
+		\setcounter{enumi}{8}		
+
+		\onslide<2->{\item Modify the measurement model for the damped harmonic oscillator in your own copy of damposc.py by adding a direct velocity sensor.}
+		
+		\onslide<3->{\item By how much does the RMS error accuracy of the velocity estimation change with the addition of a direct velocity sensor?}
+
+		\onslide<4->{\item Add a second sawtooth plot for the velocity state estimation uncertainty.   How do the sawtooth patterns change with each of the mods above?
+}
+	\end{enumerate}
+\onslide<5->{\center --------------------------------------------------------------------}
+\end{frame}
+

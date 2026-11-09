@@ -1,0 +1,39 @@
+% day1_seg1_heuristic/update.tex
+\begin{frame}
+  \onslide<1->{\frametitle{Measurement Update (Correction)}}
+ \begin{itemize}
+  \onslide<2->{\item In running average example, the update implicitly
+ assumed that measurements were corrupted by white noise}
+   \onslide<3->{\item Math model for this would be:\\ $z(k)=x(k)+v(k)$, \\where $v(k)$ is
+  Gaussian white measurement noise sequence}
+   \onslide<4->{\item Measurement processing is also often called Observation processing}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Measurement Update (Correction)}}
+ \begin{itemize}
+   \onslide<2->{\item Because we assumed that measurement noise was white
+ Gaussian and zero mean, our best guess was simply the average value
+ of all the measurements}
+   \onslide<3->{\item Remember the resistor example: our voltmeter is not
+ perfect, and each measurement will differ slightly from the previous
+ one, even though we are measuring the same resistor each time}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<1->{\frametitle{Measurement Update (Correction)}}
+ \begin{itemize}
+ \onslide<2->{\item General Kalman filtering complicates the measurement model
+ by adding two new elements:}
+ \begin{itemize}
+ \onslide<3->{\item The measurement may have a more complicated relationship to
+ the underlying system state:  
+\[z(k)=h\left[k,x(k)\right]+v(k),\] 
+where $h$ could be a non-linear function with possible explicit time dependence}
+ \onslide<4->{\item Just as the state $x$ is allowed to be a vector variable, so
+ the measurement $z$ could also be a vector variable}
+ \end{itemize}
+\end{itemize}
+\end{frame}

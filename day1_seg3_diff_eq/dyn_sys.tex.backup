@@ -1,0 +1,241 @@
+\begin{slide}
+Dynamic Systems
+ \begin{itemize}
+ \item The time-dependent behavior of physical systems can often
+ be modeled by differential equations.
+ \item Such systems are often called \textit{\textbf{dynamic systems}} or
+ \textit{\textbf{dynamical systems}}.
+\end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems
+ \begin{itemize}
+ \item Considering Newton's law $F=ma$ once again, we see that the
+ force $F$ is the resultant force acting on the mass $m$.
+ \item However, the resultant force is simply the vector sum of all the forces, both those
+ internal to the system as well as the input forces that are external.
+ \item The restoring force, $-ky$ in the simple oscillator
+ problem, is a force internal to the system.  So we don't consider
+ it an input \textit{per se}.
+\end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems
+ \begin{itemize}
+ \item The response or output of the system is motion, more specifically,
+ accelerated motion given by $a$.
+ \item Thus, the simple harmonic oscillator is a dynamic system, one in which there is only an internal force determining
+ system behavior: $F=-ky$.
+ \item An external forcing function may also be present, e.g.:
+ \[\frac{d^2y}{dt^2}+\frac{k}{m}y=\sin\omega t\]
+\end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems
+ \begin{itemize}
+ \item The most general second-order equation for a mechanical
+ system of this sort according to Newton's law is:
+\begin{equation}\label{second ord}
+  \frac{d^2y}{dt^2} =\frac{1}{m}F(y,\dot{y},t)
+\end{equation}
+ \item If we can separate the forcing function $F(y,\dot{y},t)$
+ into a sum of two functions $F_1(y,\dot{y})$ and $F_2(t)$, then
+ we can rearrange this equation into the input-output form of
+ equation \eqref{diffeq}:
+  \[\frac{d^2y}{dt^2}-\frac{1}{m}F_1(y,\dot{y})=\frac{1}{m}F_2(t)\]
+ \end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems
+ \begin{itemize}
+ \item In engineering applications, we are often interested not
+ only in modeling the dynamics of the system, but also in
+ measuring the output or behavior of the system.
+ \item But the output is not always directly observable.
+ \item Thus, in specifying dynamic systems, we often add a second
+ equation, usually algebraic or functional in nature, that relates
+ the output $y$ (and possibly the input $u$) to some measured or observed quantities.
+  \[z = h(y)+g(u)\]
+\end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems: The Concept of State
+ \begin{itemize}
+ \item In keeping with the linear spirit of things, we will
+ restrict ourselves for now to linear functions $h$.
+ \item Also, we will now introduce the state space concept and
+ define $z$ as a function of the state.
+ \item Intuitively, the concept of state involves in some sense the
+ instantaneous internal arrangement of a system.  In practical
+ situations, the state variables may represent attributes of the
+ system that we wish to know something about.
+\end{itemize}
+\end{slide}
+\begin{slide}
+Dynamic Systems: The Concept of State
+ \begin{itemize}
+ \item Mechanical systems like a moving particle have three simultaneous attributes:  position, velocity, and
+ acceleration.
+ \item Newton tells us that acceleration is often a function
+ of position, velocity and perhaps time.
+ \item However, as we just saw, a force that acts on a system as a function of
+ time only should be considered an external forcing function,
+ i.e., an input to the system.
+\item Thus we are led to think of position and velocity as the
+primary state variables of interest.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item A general $n$-th order linear differential equation can be
+ expressed as a system of first-order differential equations.
+ \item Ignoring the input $u$ for the moment, consider:
+ \[p(D)y = D^ny+a_{n-1}D^{n-1}y+\cdots +a_1Dy+a_0y,\]
+ where we have put the polynomial in normal form, i.e., such that
+ its leading coefficient is 1.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item If we consider $y$ and its first $n-1$ derivatives as the
+ states of this system, then we have $n$ first order equations.
+ Setting $x_1=y$, we write
+\begin{align*}
+  x_1(t) & = y(t) \\
+  x_2(t) & = Dy(t) \\
+    \cdots \\
+  x_n(t) & = D^{n-1}y(t).
+\end{align*}
+\item The functions $x_i(t)$ are called the \textit{\textbf{state variables}}.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item Taking the derivative of these $n$ state variables and making use of the
+ original differential equation yields:
+\begin{align*}
+  Dx_1(t) & = x_2(t) \\
+  Dx_2(t) & = x_3(t) \\
+    \cdots \\
+  Dx_n(t) & =-a_{n-1}x_n(t)-\cdots - a_0x_1(t).
+\end{align*}
+ \item  These $n$ equations can be written more compactly in vector matrix
+ form:  $Dx(t)=Ax(t)$ or $\dot{x}(t)=Ax(t)$.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item In the equation $\dot{x}(t)=Ax(t)$, we have:
+ \[x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\\\vdots \\
+ x_n(t)\end{bmatrix}\]
+ and
+ \[A=\begin{bmatrix}
+ 0 & 1 & 0 &\cdots & 0\\
+ 0 & 0 & 1 & \cdots & 0\\
+ \vdots & & \ddots & & \vdots \\
+ 0 & 0  & 0 & 0 & 1\\
+ -a_{0} &-a_{1} & \cdots & -a_{n-2} & -a_{n-1}
+ \end{bmatrix},\]
+ the \textit{\textbf{companion matrix}} of the differential
+ equation.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item If there is an input function $u$ and it is present via its
+ derivatives as in equation \eqref{diffeq}, then we can write:
+\begin{equation}\label{statedyn}
+  \dot{x}=Ax+Bu
+\end{equation}
+forming $B$ in much the same way we formed $A$, and suppressing
+the time variable $t$.
+ \item Equation \eqref{statedyn} expresses the system's \textit{\textbf{state dynamics}}.
+ \item Later we will include white noise as an input.  However,
+ that will make the differential equations stochastic, and we are not
+ yet ready for that.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation
+ \begin{itemize}
+ \item The output model to this we obtain one
+ additional vector-matrix equation:
+\begin{equation}\label{measdyn1}
+  y = Cx + Du
+\end{equation}
+where the matrix $D$ represents a direct feed-through of the input to the output.  
+\item The output equation is derived directly from the $b_i$ coefficients in the original matrix differential equation.
+although it is common in Kalman filter theory to use $H$ instead
+of $C$ and to assume $D=0$:
+\begin{equation}\label{measdyn2}
+  z = Hx
+\end{equation}
+ \item Note that we have not placed any restrictions on the size of
+ the measurement column vector $z$.  As long as $H$ has $n$ columns it can
+ have as many rows as desired.
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation: Example
+ \begin{itemize}
+ \item Let's consider once again the simple harmonic oscillator:
+ \[m\frac{d^2y}{dt^2}+ky=0\]
+ and convert this to state space form:
+\begin{align*}
+  x_1 & =y \\
+  x_2 & =Dy
+\end{align*}
+and $\dot{x}_2 = - \frac{k}{m}x_1+ 0\cdot x_2 $.
+ \item Therefore, in matrix and vector form:
+ \[
+ \begin{bmatrix}
+ \dot{x}_1\\
+ \dot{x}_2
+ \end{bmatrix}
+ =
+\begin{bmatrix}
+ 0 & 1 \\
+ -k/m & 0
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}.
+ \]
+\end{itemize}
+\end{slide}
+\begin{slide}
+\begin{itemize}
+ \item For a measurement model, we could consider a camera with a strobe flash that periodically records the instantaneous position of the sliding mass.
+ \item In this case, only the position would be observable and we would write the measurement or observation model as:
+ \[
+ z =
+\begin{bmatrix}
+ 1 & 0
+ \end{bmatrix}
+ \begin{bmatrix}
+ x_1\\
+ x_2
+ \end{bmatrix}.
+ \]
+(Remember that we are ignoring both process and measurement noise.)
+\end{itemize}
+\end{slide}
+\begin{slide}
+State Space Representation:  Summary
+ \begin{itemize}
+ \item The state variables of the system are usually provided by
+ the 0th through $n-1$st derivatives.
+ \item Equivalently, they are the outputs of the $n$ integrators of
+ the system.
+ \item They represent the internal coupling of the system.
+ \item Any similarity transformation of the state vector yields an
+ equivalent state space representation.  This is nothing more than
+ changing coordinate systems (and is sometimes very useful).
+\end{itemize}
+\end{slide}

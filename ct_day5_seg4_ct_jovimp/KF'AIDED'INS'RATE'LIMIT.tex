@@ -1,0 +1,29 @@
+\begin{frame}
+KF'AIDED'INS'RATE'LIMIT
+\begin{verbatim}
+     FUNCTION: The KFCOVINS functions calculates covariance rate limiting
+     for the aided inertial navaigation Kalman filter.  KFCOVINS makes use
+     of the INS error budget information provided via the INS standardized
+     interface.  The unmodelled states accounted for in KFCOVINS include:
+
+               o Gyro Drift Randomness
+               o Gyro Warmup
+               o Gyro Scale Factor
+               o Gyro Misalignment
+	       o Gyro Trending
+               o Gyro Mass Unbalance
+               o Accelerometer Randomness
+               o Accelerometer Scale Factor
+               o Accelerometer Misalignment
+               o Accelerometer Warmup
+               o Gravity Anomalies
+
+     KFCOVINS shall use an alogorithm appropriate to both air alignment
+     and aided navigation and for both strapdown and gimballed INUs.
+     The same algorithm shall be used for coarse air align, fine air
+     align, and aided navigation.
+
+     IN THIS ALGORITHM, THETA SUBSCRIPT I IS THE ACCUMULATED GYRO
+
+\end{verbatim}
+\end{frame}

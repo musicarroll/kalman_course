@@ -1,0 +1,48 @@
+% day2_seg4_numerical/divergence.tex
+\begin{slide}
+Filter Divergence
+\begin{itemize}
+\item Kinds of Divergence
+\item Causes and Remedies
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Kinds of Divergence
+\begin{itemize}
+\item Mean estimation error is supposed to converge to 0
+\begin{itemize}
+	\item $\esterrdef$
+	\item $\expect{\esterr}\rightarrow 0$
+	\item Estimate is unbiased: $\expect{\hat{x}_k}=x_k$
+\end{itemize}
+\item Covariance matrix for estimation error is same as state estimation error covariance matrix: $\covmatdef$
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+Kinds of Divergence
+\begin{itemize}
+\item For optimal filter, $P$ will indicate convergence or divergence.
+	\begin{itemize}
+		\item One common form of divergence due to round-off will send $P$ to zero
+	\end{itemize}
+\item For suboptimal filters, $P$ will not necessarily indicate divergence
+	\begin{itemize}
+	  \item $P$ may seem to indicate nominal steady-state values and yet the state estimate may go diverge from the true value
+	\end{itemize}
+\end{itemize} 
+\end{slide}
+
+\begin{slide}
+\includegraphics{day3_seg1_numerical/covconverge.eps} 
+\end{slide}
+
+\begin{slide}
+Kinds of Divergence
+\begin{itemize}
+\item Going to sleep:  error covariance becomes so small that measurements are no longer believed by the filter
+\item Loss of symmetry in $P$
+\item Loss of positive definiteness: negative numbers on the diagonal!
+\end{itemize} 
+\end{slide}

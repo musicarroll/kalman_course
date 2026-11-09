@@ -1,0 +1,41 @@
+\begin{frame}
+OP'DATA'AVAILABILITY'MONITOR
+\begin{verbatim}
+     FUNCTION: The DATAVL subfunction shall monitor the availabilty of
+     observation for the operational Kalman filters. DATAVL shall
+     monitor all observations at all times regardless of whether the
+     presently operating filters can utilize the observations.  DATAVL
+     shall output indications of available observations in terms of 
+     DATAVL1 & DATAVL2 the format of which is in figure below this
+     paragraph.  The processing must assure that data is continuously
+     available regardless if the present operational filters can 
+     utilize the observation at the very start of the Kalman cycle.
+     The availability criterion shall be: at least 
+     (DPLRAT * DELTA'T'KALMAN)/4 pieces of data were present during
+     the last Kalman cycle.  If this is true, OPDATAVL, logical flags
+     shall be set equal to .TRUE. for the next Kalman cycle.  (Note:
+     OPDATAVL is\ zeroed in KLBEGIN each Kalman cycle.)
+
+BIT  ITEM NAME     DATA'AVAIL'INU1  DATA'AVAIL'INU2    DATA'AVAIL'DVS
+===  ===========   ===============  ===============    ==============
+ 00   VISUAL'FIX        AVAIL            AVAIL            AVAIL
+ 01   RADAR'FIX         AVAIL            AVAIL            SPARE
+ 02   ALT'CAL           AVAIL            AVAIL            AVAIL
+ 03   VIS'ALT'CAL       AVAIL            AVAIL            AVAIL
+
+COMMENT MODIFIED FOR GPS 7/27/89 F. TAM 
+ 04   GPS               AVAIL            AVAIL            AVAIL
+
+ 05   GPS'POS           AVAIL            AVAIL            AVAIL
+ 06   GPS'VEL           AVAIL            AVAIL            AVAIL
+ 07   DVS               AVAIL            AVAIL            SPARE
+ 08   BARO
+ 08   DVS               AVAIL            AVAIL            SPARE
+ 09   TRANS'VEL         AVAIL  (1->2)    AVAIL (2->1)       X
+ 10   TRANS'POS         AVAIL  (1->2)    AVAIL (2->1)       X
+ 11   TAS
+
+ NOTE : "X" = DON'T CARE
+
+\end{verbatim}
+\end{frame}

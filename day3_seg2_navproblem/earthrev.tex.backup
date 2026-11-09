@@ -1,0 +1,16 @@
+% day3_seg1_navproblem/earthrev.tex
+\begin{slide}
+Earth Referenced Navigation
+ \begin{itemize}
+ \item Terrestial navigation seeks to answer nav questions with respect to earth
+ \begin{itemize}
+   \item Global earth reference
+   \item Local or relative navigation
+ \end{itemize}
+ \item Complications:
+ \begin{itemize}
+   \item Earth surface is curved (ellipsoid)
+   \item Earth is turning (can usually ignore motion about the Sun for terrestrial nav)
+ \end{itemize}
+\end{itemize}
+\end{slide}

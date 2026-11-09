@@ -1,0 +1,41 @@
+% day3_seg1_navproblem/basicnavprob.tex
+\begin{frame}
+Basic Navigation Problem
+ \begin{itemize}
+ \item Where am I?
+ \item Where am I headed?
+ \item How fast am I going?
+\end{itemize}
+\end{frame}
+\begin{frame}
+Basic Navigation Problem
+ \begin{itemize}
+ \item What's my position?
+ \item What's my heading and attitude?
+ \item What's my velocity?
+\end{itemize}
+\end{frame}
+\begin{frame}
+Solution in Inertial Space
+ \begin{itemize}
+ \item In inertial space, it's no problem!
+ \item Just integrate the acceleration once to get velocity, twice to get
+ position.
+\[v(T) = v(0) + \int_{0}^{T}\dfrac{d^2r}{dt^2}dt\]
+\[r(T) = r(0) + \int_{0}^{T}v(T)dt\]
+ \item And integrate the angular rate once to get attitude.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Solution in Inertial Space
+\begin{itemize}
+  \item Solution easy in inertial space because ...
+  \begin{itemize}
+	\item inertial instruments sense acceleration and rotational rate with respect to inertial coordinate frame 
+	\item inertial frame attached to sensor platform
+    \item Note: You still need to rotate accelerations from body to inertial coordinates prior to integration (strapdown)
+  \end{itemize}
+  \item But we don't necessarily want the answer to our questions expressed in terms of inertial coordinates!
+\end{itemize} 
+\end{frame}

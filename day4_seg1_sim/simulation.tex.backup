@@ -1,0 +1,12 @@
+% day4_seg1_sim/simulation.tex
+\begin{slide}
+Simulation
+ \begin{itemize}
+ \item Introduction to Simulink
+ \item Covariance Analysis
+ \item Trajectory Simulation
+\end{itemize}
+\end{slide}
+\input{day4_seg1_sim/simulink.tex}
+\input{day4_seg1_sim/covanal.tex}
+\input{day4_seg1_sim/trajectory.tex}

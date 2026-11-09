@@ -1,0 +1,23 @@
+% day2_seg1_ranproc1/stationary.tex
+\begin{frame}
+  \onslide<1->{
+	\frametitle{Random Processes} 
+	\framesubtitle{Stationary Random Processes}
+}
+\begin{itemize}
+  \onslide<2->{
+ \item A process $X$ is called \textit{\textbf{strongly stationary}} if for
+ any finite set of times $\set{t_1,\ldots,t_n}$ and any $\tau>0$
+ the two sets of random variables $\set{X(t_1),\ldots,X(t_n)}$ and
+$\set{X(t_1+\tau),\ldots,X(t_n+\tau)}$ have identical probability
+distributions.
+}
+  \onslide<3->{
+ \item $X$ is called \textit{\textbf{weakly stationary}} if
+ \[ \expect{X(s)}=\expect{X(t)}\]
+ and
+ \[ \expect{X(s)X(t)}=\expect{X(s+\tau)X(t+\tau)}\]
+ for all appropriate $\tau>0$ and all times $s,t$.
+}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+% Node the following tag will orient things right using dvi2pdf.
+% Process with LaTeX first, then dvi2pdf.
+\special{landscape}
+% Fuzz -----------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+% MATH -----------------------------------------------------------
+\input{kalman_cmdmaster.tex}
+% THEOREM ENV. ---------------------------------------------------
+\newtheorem{thm}{Theorem.}
+\newtheorem{cor}[thm]{Corollary.}
+\newtheorem{con}[thm]{Conjecture.}
+\newtheorem{lem}[thm]{Lemma.}
+\newtheorem{prop}[thm]{Proposition.}
+\newtheorem{defn}[thm]{Definition.}
+\renewcommand{\thethm}{}  % unnumbered
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{
+\vfill \hrulefill \vfill
+\begin{center}
+Overview of Kalman Filter Theory and Navigation Applications\\
+\end{center}
+}
+\author{Michael L. Carroll}
+\date{Feb 27, 2004\\
+\vfill \hrulefill \vspace*{.25in} \vfill
+\begin{tiny}
+\copyright 2003 by Michael L. Carroll
+\end{tiny}
+} \maketitle
+% ----------------------------------------------------------------
+\begin{frame}
+\textbf{Day 5: Details of the Combat Talon I Navigation Kalman
+Filter}
+ \begin{itemize}
+ \item Segment 1:  The Combat Talon I States
+ \item Segment 2:  The Combat Talon I Navaids
+ \item Segment 3:  The Combat Talon I Kalman Filter High-Level Software Architecture
+ \item Segment 4:  The Combat Talon I Kalman Filter JOVIAL Implementation
+\end{itemize}
+\end{frame}
+\input{day5_seg1_ct_states/ct_states_main.tex}
+\input{day5_seg2_ct_navaids/ct_navaids_main.tex}
+% ----------------------------------------------------------------
+\end{document}

@@ -1,0 +1,104 @@
+\begin{frame}
+	\onslide<1->{
+		\frametitle{State Space Representation} 
+		\framesubtitle{Predator-Prey Model}
+	}
+	\begin{itemize}
+		\onslide<2->{
+			\item Population Dynamics:  Predators (Wolves) vs. Prey (Rabbits)
+			\item Underlying Assumptions:
+		}
+		\begin{itemize}
+			\onslide<3->{
+				\item Sufficient food is always available for the prey population 
+			}
+			\onslide<4->{
+				\item  Food supply of predator population depends only on size of prey population (predators eat only one kind of thing)
+			}
+			\onslide<5->{
+				\item  Current rate of change of population is proportional to its current size
+			}
+			\onslide<6->{
+				\item Environment does not change to favor one species over another
+			}
+			\onslide<7-> {
+				\item Genetic adaptation is negligible
+			}
+			\onslide<8->{
+				\item Predators are insatiable
+			}
+	\end{itemize}
+\end{itemize}
+	\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+
+\begin{frame}
+
+	\onslide<1->{
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey Differential Equations}
+	}
+	\onslide<2->{
+		Coupled differential equation model for Lotka-Volterra predator-prey system:
+		
+		\[
+		\frac{dR}{dt} = r_R R - c_{RW} R W
+		\]
+		
+		\[
+		\frac{dW}{dt} = c_{WR} R W - d_W W
+		\]
+}
+	\onslide<3->{
+		\small
+		Where:
+		\begin{align*}
+		R & : \text{Prey (Rabbits) population} \\
+		W & : \text{ Predator (Wolves) population} \\
+		r_R & : \text{Prey intrinsic growth rate} \\
+		c_{RW} & : \text{Predation rate, represents the rate}\\ 
+		& \;\;\;\; \text{at which predators capture and consume prey} \\
+		c_{WR} & : \text{Conversion efficiency, represents the efficiency}\\ 
+		 & \;\;\;\; \text{ with which consumed prey are converted into new predators} \\
+		d_W & : \text{Predator death rate}
+		\end{align*}
+    }
+	\onslide<4->{\center --------------------------------------------------------------------}
+
+\end{frame}
+
+	
+	\begin{frame}
+		\onslide<1->{
+		\frametitle{Coupled ODEs}
+		\framesubtitle{Predator-Prey State Differential Equations}
+	}
+	\begin{itemize}
+	\onslide<2->{\item This model it its current form cannot be expressed as a state space model due to its state variable product terms $R\cdot W$ in each equation
+}
+	\onslide<3->{\item Later we will linearize it about its nominal, critical values }
+	\onslide<4->{ \item  However, it's behavior can be simulated for nominal initial values
+}
+	\onslide<5->{\item 	See next slide for plot of python simulation}
+	\end{itemize}
+	\onslide<6->{\center --------------------------------------------------------------------}
+		
+	\end{frame}
+
+
+
+
+\begin{frame}
+  \onslide<1->{
+	\frametitle{State Space Representation} 
+	\framesubtitle{Example:  Predator-Prey Equations, Nominal Initial Conditions}
+}
+  \onslide<2->{
+\begin{center}
+\includegraphics[width=.9\textwidth,height=.6\textheight]{\dayonesegfour/predprey.png}
+\end{center}
+}
+\onslide<3->{\center --------------------------------------------------------------------}
+\end{frame}
+

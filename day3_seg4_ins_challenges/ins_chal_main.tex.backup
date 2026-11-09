@@ -1,0 +1,17 @@
+% day3_seg4_ins_challenges/ins_chal_main.tex
+\begin{slide}
+\textbf{Day 3, Segment 4\\
+Challenges of INS Filters\\
+Topics}
+ \begin{itemize}
+ \item Nine States Are Not Enough
+ \item Not Constant Coefficient
+ \item Non-Linearities: Extended Kalman Filter
+ \item Observability
+\end{itemize}
+\end{slide}
+\input{day3_seg4_ins_challenges/9notenough.tex}
+\input{day3_seg4_ins_challenges/notconstcoeff.tex}
+\input{day3_seg4_ins_challenges/nonlinear.tex}
+\input{day3_seg4_ins_challenges/observability.tex}
+\input{day3_seg4_ins_challenges/exercises.tex}

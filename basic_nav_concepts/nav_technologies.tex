@@ -1,0 +1,659 @@
+\documentclass{beamer}
+\usepackage{graphicx,color,amsmath,amssymb,amsfonts,amsbsy,amsthm}
+\usepackage{verbatim}
+\usetheme{Berlin}
+
+\begin{document}
+	
+	\begin{frame}
+	\title{
+		\vfill \hrulefill \vfill
+		\begin{center}
+			Assured PNT\\
+			Challenges for Current Nav Technologies\\
+		\end{center}
+	}
+	\author{Michael L. Carroll}
+	\date{\today\\
+		\vfill \hrulefill \vspace*{.25in} \vfill
+		\begin{tiny}
+			\copyright 2024 by Michael L. Carroll
+		\end{tiny}
+	}
+	\maketitle
+	\end{frame}
+
+	
+	% Slide 1: Introduction to Assured PNT
+	\begin{frame}
+		\onslide<1->{\frametitle{Introduction to Assured PNT} \framesubtitle{What is Assured PNT?}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Assured Position, Navigation, and Timing (A-PNT):}}
+			\begin{itemize}
+				\onslide<3->{\item Provides reliable PNT information, even in GPS-degraded or denied environments}
+				\onslide<4->{\item Critical for applications requiring high-precision and resilience, such as military, aviation, and critical infrastructure}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Main Goals of A-PNT}}
+			\begin{itemize}
+				\onslide<6->{\item Ensuring accuracy and integrity of position, navigation, and timing data}
+				\onslide<7->{\item Providing robustness against jamming, spoofing, and interference}
+				\onslide<8->{\item Mitigating risks of depending on GPS
+				}
+				
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 2: Key Technologies in Assured PNT
+	\begin{frame}
+		\onslide<1->{\frametitle{Key Technologies in Assured PNT} \framesubtitle{Technologies Critical to A-PNT}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Global Navigation Satellite Systems (GNSS):}}
+			\begin{itemize}
+				\onslide<3->{\item Primary source of PNT data, with anti-jamming and anti-spoofing techniques (e.g., M-Code and SAASM for secure military applications)}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Inertial Navigation Systems (INS):}}
+			\begin{itemize}
+				\onslide<5->{\item Provides self-contained PNT information with accelerometers and gyroscopes, allowing operation in GPS-denied environments}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Alternative PNT Sources:}}
+			\begin{itemize}
+				\onslide<7->{\item Terrestrial-based signals (e.g., radio, cellular networks) and signals from Low Earth Orbit (LEO) satellites}
+			\end{itemize}
+			\onslide<8->{\item \textbf{Precision Timing Sources:}}
+			\begin{itemize}
+				\onslide<9->{\item Atomic clocks and GPS-disciplined oscillators to ensure reliable timing}
+			\end{itemize}
+		\end{itemize}
+		\onslide<10->{\center --------------------------------------------------------------------}
+	\end{frame}
+\begin{frame}
+	\onslide<1->{\frametitle{Security of M-Code Signals} \framesubtitle{Spoofing and Adversarial Threats}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Purpose of M-Code:}}
+		\begin{itemize}
+			\onslide<3->{\item Developed by the U.S. Department of Defense (DoD) for enhanced security in military GPS}
+			\onslide<4->{\item Provides stronger encryption, anti-jamming, and anti-spoofing features compared to earlier GPS signals}
+		\end{itemize}
+		\onslide<5->{\item \textbf{Current Status:}}
+		\begin{itemize}
+			\onslide<6->{\item No publicly available evidence that adversaries have successfully spoofed M-Code signals}
+			\onslide<7->{\item M-Code’s design makes spoofing significantly more challenging than with civilian signals}
+		\end{itemize}
+		\onslide<8->{\item \textbf{DoD Countermeasures:}}
+		\begin{itemize}
+			\onslide<9->{\item Ongoing assessment and improvements in GPS security to counter emerging threats}
+			\onslide<10->{\item Continued vigilance as part of broader efforts to secure military navigation and timing}
+		\end{itemize}
+	\end{itemize}
+	\onslide<11->{\center --------------------------------------------------------------------}
+\end{frame}
+\begin{frame}
+	\onslide<1->{\frametitle{M-Code Resistance to Jamming} \framesubtitle{Key Features Enhancing M-Code Resilience}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Higher Power Signal:}}
+		\begin{itemize}
+			\onslide<3->{\item M-Code is broadcast at a higher power level than civilian GPS signals, making it harder to overwhelm with jamming signals}
+		\end{itemize}
+		\onslide<4->{\item \textbf{Advanced Modulation Techniques:}}
+		\begin{itemize}
+			\onslide<5->{\item Uses Binary Offset Carrier (BOC) modulation, which improves signal separation and reduces interference}
+		\end{itemize}
+		\onslide<6->{\item \textbf{Narrower Beam Forming:}}
+		\begin{itemize}
+			\onslide<7->{\item Directed beam shaping on modern GPS III satellites focuses signals for military users, increasing jamming resistance}
+		\end{itemize}
+		\onslide<8->{\item \textbf{Enhanced Encryption and Anti-Spoofing:}}
+		\begin{itemize}
+			\onslide<9->{\item Strong encryption and authentication make M-Code signals harder for adversaries to disrupt or imitate}
+		\end{itemize}
+	\end{itemize}
+	\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+	
+	% Slide 3: Achieving Assured PNT
+	\begin{frame}
+		\onslide<1->{\frametitle{Achieving Assured PNT} \framesubtitle{Strategies for Resilience and Accuracy}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Sensor Fusion Algorithms:}}
+			\begin{itemize}
+				\onslide<3->{\item Integrate data from multiple sources (GNSS, INS, timing devices) to create a reliable composite solution}
+				\onslide<4->{\item Kalman filters and machine learning models are commonly used}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Robust Signal Authentication:}}
+			\begin{itemize}
+				\onslide<6->{\item Techniques to verify signal integrity and authenticity, essential for detecting spoofing and interference}
+			\end{itemize}
+			\onslide<7->{\item \textbf{System Redundancy:}}
+			\begin{itemize}
+				\onslide<8->{\item Use of alternative PNT sources to maintain accuracy in contested or challenging environments}
+			\end{itemize}
+			\onslide<9->{\item \textbf{Intermittent GPS Synchronization:}}
+			\begin{itemize}
+				\onslide<10->{\item Periodic GPS updates improve INS drift performance and timing accuracy}
+			\end{itemize}
+		\end{itemize}
+		\onslide<11->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	
+
+
+
+	% Slide 7: Assured PNT System Overview
+\begin{frame}
+	\onslide<1->{\frametitle{Assured Position, Navigation, and Timing (A-PNT)} \framesubtitle{System Components}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Primary Navigation Sources}}
+		\begin{itemize}
+			\onslide<3->{\item GNSS (e.g., GPS), supplemented with anti-jamming technology}
+		\end{itemize}
+		\onslide<4->{\item \textbf{Alternative PNT Sources}}
+		\begin{itemize}
+			\onslide<5->{\item Terrestrial radio, cellular, and other satellite constellations}
+		\end{itemize}
+		\onslide<6->{\item \textbf{IMUs and Precise Clocks}}
+		\begin{itemize}
+			\onslide<7->{\item INS data for position and orientation in GPS-denied conditions}
+		\end{itemize}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 8: State Model for INS/IMU, GPS, and Timing Kalman Filter
+\begin{frame}
+	\onslide<1->{\frametitle{Kalman Filter State Model for INS/IMU, GPS, and Timing} \framesubtitle{State Vector}}
+	\begin{itemize}
+		\onslide<2->{\item Minimal State Vector 
+			\footnotesize{\(\mathbf{x} = [P_x, P_y, P_z, V_x, V_y, V_z, \newline
+				\text{Orientation}, \text{Accel Bias}, \text{Gyro Bias}, \text{Clock Bias}, \text{Clock Drift}]\)}}
+		\onslide<3->{\item \textbf{Position and Velocity}}
+		\onslide<4->{\item \textbf{Attitude and Orientation}}
+		\onslide<5->{\item \textbf{Accelerometer and Gyroscope Biases}}
+		\onslide<6->{\item \textbf{Clock Bias and Drift}}
+	\end{itemize}
+	\onslide<7->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 1: Introduction to the International GNSS Service
+\begin{frame}
+	\onslide<1->{\frametitle{Additional Navaids:  The International GNSS Service (IGS)} \framesubtitle{Overview}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{What is IGS?}}
+		\begin{itemize}
+			\onslide<3->{\item IGS is a global collaborative network led by NASA's Jet Propulsion Laboratory (JPL)}
+			\onslide<4->{\item Provides highly accurate GNSS data and products, supporting research, navigation, and Earth observation}
+			\onslide<5->{\item Supported by 500+ Tracking Stations and Dozens of Analysis Centers}
+		\end{itemize}
+		\onslide<6->{\item \textbf{GNSS Systems Supported:}}
+		\begin{itemize}
+			\onslide<7->{\item IGS includes data from multiple GNSS systems: GPS, GLONASS, Galileo, BeiDou, and QZSS}
+			\onslide<8->{\item Enables multi-constellation support, increasing resilience when GPS signals are unavailable}
+		\end{itemize}
+	\end{itemize}
+	\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 2: Key IGS Products and Applications
+\begin{frame}
+	\onslide<1->{\frametitle{Key IGS Products} \framesubtitle{Applications in Navigation and PNT Systems}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Precise GNSS Satellite Orbits:}}
+		\begin{itemize}
+			\onslide<3->{\item Provides satellite position data with centimeter-level accuracy}
+		\end{itemize}
+		\onslide<4->{\item \textbf{Satellite Clock Corrections:}}
+		\begin{itemize}
+			\onslide<5->{\item Offers high-accuracy clock corrections, improving timing accuracy across systems}
+		\end{itemize}
+		\onslide<6->{\item \textbf{Earth Rotation Parameters (ERP):}}
+		\begin{itemize}
+			\onslide<7->{\item Supports high-precision geospatial applications by modeling Earth’s rotational variations}
+		\end{itemize}
+		\onslide<8->{\item \textbf{Ionospheric and Tropospheric Data:}}
+		\begin{itemize}
+			\onslide<9->{\item Models atmospheric effects on GNSS signals, enabling better correction and positioning accuracy}
+		\end{itemize}
+	\end{itemize}
+	\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+\begin{frame}
+	\onslide<1->{\frametitle{IGS Real-Time Satellite and Clock Corrections} \framesubtitle{IGS Real-Time Service (RTS)}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Real-Time Service (RTS):}}
+		\begin{itemize}
+			\onslide<3->{\item Provides real-time GPS satellite orbit and clock correction parameters}
+			\onslide<4->{\item Distributed via RTCM State Space Representation (SSR) correction streams}
+		\end{itemize}
+		\onslide<5->{\item \textbf{Supports Multi-Constellation GNSS:}}
+		\begin{itemize}
+			\onslide<6->{\item Currently includes GPS and GLONASS, with plans for additional GNSS constellations}
+		\end{itemize}
+		\onslide<7->{\item \textbf{Applications:}}
+		\begin{itemize}
+			\onslide<8->{\item Enables real-time Precise Point Positioning (PPP) for high-accuracy positioning}
+			\onslide<9->{\item Supports scientific, educational, and commercial applications needing real-time corrections}
+		\end{itemize}
+		\onslide<10->{\item \textbf{Access via NTRIP:}}
+		\begin{itemize}
+			\onslide<11->{\item Data is accessible globally through IGS NTRIP broadcasters, facilitating real-time use}
+		\end{itemize}
+	\end{itemize}
+	\onslide<12->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 3: Using IGS Products to Bound Gyro Errors in GPS-Denied Environments
+\begin{frame}
+	\onslide<1->{\frametitle{Bounding Gyro Errors with IGS Products} \framesubtitle{Role of IGS in GPS-Denied Scenarios}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Multi-Constellation GNSS Data:}}
+		\begin{itemize}
+			\onslide<3->{\item IGS provides real-time GNSS data from systems like GLONASS and Galileo, which can supplement GPS-denied times}
+		\end{itemize}
+		\onslide<4->{\item \textbf{Leveraging Precise Clock Corrections:}}
+		\begin{itemize}
+			\onslide<5->{\item Accurate timing corrections from IGS improve clock drift estimates, supporting INS and gyro-based dead reckoning}
+		\end{itemize}
+		\onslide<6->{\item \textbf{Ionospheric Models for Error Mitigation:}}
+		\begin{itemize}
+			\onslide<7->{\item IGS’s atmospheric data can be used to refine position estimates, reducing gyro error propagation}
+		\end{itemize}
+		\onslide<8->{\item \textbf{Earth Rotation Parameters (ERP):}}
+		\begin{itemize}
+			\onslide<9->{\item ERPs help maintain geodetic accuracy, which stabilizes navigation in the absence of direct GNSS signals}
+		\end{itemize}
+	\end{itemize}
+	\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 4: Benefits of IGS in Resilient PNT Solutions
+\begin{frame}
+	\onslide<1->{\frametitle{Benefits of IGS in Resilient PNT} \framesubtitle{Enhancing PNT Robustness with IGS Data}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Increased Redundancy through Multi-GNSS Data:}}
+		\begin{itemize}
+			\onslide<3->{\item Enables fallback to alternative GNSS systems (e.g., GLONASS, Galileo), maintaining PNT resilience}
+		\end{itemize}
+		\onslide<4->{\item \textbf{Reduced Dependence on Single GNSS System:}}
+		\begin{itemize}
+			\onslide<5->{\item IGS provides products compatible with multiple constellations, lowering the impact of GPS outages}
+		\end{itemize}
+		\onslide<6->{\item \textbf{Supports Continuous Navigation:}}
+		\begin{itemize}
+			\onslide<7->{\item By integrating IGS products, INS and gyro systems maintain bounded errors and reliable navigation}
+		\end{itemize}
+	\end{itemize}
+	\onslide<8->{\center --------------------------------------------------------------------}
+\end{frame}
+
+	
+	% Slide 1: Navigation Aids in GPS-Denied Environments
+	\begin{frame}
+		\onslide<1->{\frametitle{Navigation Aids for Aircraft in GPS-Denied Environments} \framesubtitle{Assisting INS/ Kalman Filter Systems}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Inertial Navigation System (INS):}}
+			\begin{itemize}
+				\onslide<3->{\item Primary source when GPS is denied, but accuracy degrades over time}
+				\onslide<4->{\item External measurement sources help to bound INS errors}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Ground-Based Navigation Aids:}}
+			\begin{itemize}
+				\onslide<6->{\item \textbf{VOR (Very High Frequency Omnidirectional Range):} Provides azimuth or bearing information}
+				\onslide<7->{\item \textbf{DME (Distance Measuring Equipment):} Measures slant range for triangulation when combined with VOR}
+				\onslide<8->{\item \textbf{TACAN (Tactical Air Navigation):} Combines azimuth and distance, offering precise positioning for military aircraft}
+			\end{itemize}
+		\end{itemize}
+		\onslide<9->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 2: Additional Ground-Based and Radar-Based Systems
+	\begin{frame}
+		\onslide<1->{\frametitle{Additional Ground-Based and Radar-Based Aids} \framesubtitle{Supporting Position and Bearing Data}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Automatic Direction Finder (ADF):}}
+			\begin{itemize}
+				\onslide<3->{\item Uses Non-Directional Beacons (NDBs) for bearing; a backup to VOR/DME}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Radar-Based Systems:}}
+			\begin{itemize}
+				\onslide<5->{\item \textbf{Secondary Surveillance Radar (SSR):} Provides range and bearing within controlled airspace}
+				\onslide<6->{\item \textbf{Multilateration (MLAT):} Uses transponder signal timing for precise position triangulation}
+				\onslide<7->{\item \textbf{Weather Radar:} Assists in dead reckoning using terrain and storm positioning}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 3: Alternative Satellite and Sensor-Based Aids
+	\begin{frame}
+		\onslide<1->{\frametitle{Alternative Satellite and Sensor-Based Navigation Aids} \framesubtitle{Augmenting INS Accuracy}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Alternative Satellite Constellations:}}
+			\begin{itemize}
+				\onslide<3->{\item Multi-GNSS systems (e.g., GLONASS, Galileo) act as backups when GPS is unavailable}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Onboard Vision and Sensor Systems:}}
+			\begin{itemize}
+				\onslide<5->{\item \textbf{Terrain-Referenced Navigation (TRN):} Matches terrain features with maps}
+				\onslide<6->{\item \textbf{Camera-Based Navigation:} Uses visual cues for position estimation (e.g., visual odometry)}
+				\onslide<7->{\item \textbf{Air Data Systems:} Provides wind and airspeed data for dead reckoning}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+
+	
+	% Slide 1: Introduction to Terrain-Referenced Navigation (TRN)
+	\begin{frame}
+		\onslide<1->{\frametitle{Terrain-Referenced Navigation (TRN)} \framesubtitle{Overview}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{What is TRN?}}
+			\begin{itemize}
+				\onslide<3->{\item A navigation technique that uses terrain features to estimate position by matching observed data with known maps}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Primary Application:}}
+			\begin{itemize}
+				\onslide<5->{\item Used in GPS-denied situations to provide navigation data in various terrains (e.g., mountains, valleys, coastlines)}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Common Use Cases:}}
+			\begin{itemize}
+				\onslide<7->{\item Military aircraft and submarines for navigation in hostile or GPS-denied areas}
+				\onslide<8->{\item Autonomous vehicles for precise navigation over land}
+			\end{itemize}
+		\end{itemize}
+		\onslide<9->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 2: How TRN Works
+	\begin{frame}
+		\onslide<1->{\frametitle{How TRN Works} \framesubtitle{Matching Terrain Features to Maps}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Step 1: Data Collection}}
+			\begin{itemize}
+				\onslide<3->{\item Onboard sensors (e.g., radar, LiDAR, or sonar) collect data on terrain features below the vehicle}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Step 2: Terrain Matching}}
+			\begin{itemize}
+				\onslide<5->{\item The collected data is matched to a stored digital elevation model (DEM) of the terrain}
+				\onslide<6->{\item Algorithms compare observed terrain patterns with the DEM to estimate location}
+			\end{itemize}
+			\onslide<7->{\item \textbf{Step 3: Position Update}}
+			\begin{itemize}
+				\onslide<8->{\item Position estimate is continuously updated as the vehicle moves, using successive matches to terrain}
+			\end{itemize}
+		\end{itemize}
+		\onslide<9->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 3: TRN Sensors and Data Sources
+	\begin{frame}
+		\onslide<1->{\frametitle{TRN Sensors and Data Sources} \framesubtitle{Onboard Sensors for Data Collection}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Radar Altimeters:}}
+			\begin{itemize}
+				\onslide<3->{\item Measures distance to the ground, commonly used on aircraft for altitude and terrain mapping}
+			\end{itemize}
+			\onslide<4->{\item \textbf{LiDAR (Light Detection and Ranging):}}
+			\begin{itemize}
+				\onslide<5->{\item Uses laser pulses to create detailed terrain profiles; effective for both land and low-altitude applications}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Sonar (Sound Navigation and Ranging):}}
+			\begin{itemize}
+				\onslide<7->{\item Used primarily by submarines to map the seafloor or underwater terrain}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 4: TRN Accuracy and Error Bounds
+	\begin{frame}
+		\onslide<1->{\frametitle{TRN Accuracy and Error Bounds} \framesubtitle{Factors Influencing Accuracy}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Resolution of Digital Elevation Model (DEM):}}
+			\begin{itemize}
+				\onslide<3->{\item Higher resolution DEMs enable more accurate terrain matching and smaller error bounds}
+				\onslide<4->{\item Typical accuracy with high-resolution DEMs can be within 10-20 meters in well-mapped areas}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Terrain Variability:}}
+			\begin{itemize}
+				\onslide<6->{\item Accuracy is higher in areas with distinct terrain features (e.g., mountains, valleys)}
+				\onslide<7->{\item Flat or homogeneous terrain may lead to larger error bounds due to lack of unique features}
+			\end{itemize}
+			\onslide<8->{\item \textbf{Sensor Accuracy and Noise:}}
+			\begin{itemize}
+				\onslide<9->{\item Higher-quality sensors (e.g., LiDAR vs. radar) generally provide better terrain mapping accuracy}
+				\onslide<10->{\item Sensor noise can lead to mismatches with the DEM, increasing position error}
+			\end{itemize}
+		\end{itemize}
+		\onslide<11->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 5: Limitations and Challenges of TRN
+	\begin{frame}
+		\onslide<1->{\frametitle{Limitations and Challenges of TRN} \framesubtitle{Considerations for Effective Use}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Dependence on DEM Quality and Availability:}}
+			\begin{itemize}
+				\onslide<3->{\item High-resolution DEMs may not be available for all regions, reducing TRN effectiveness in those areas}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Environmental Constraints:}}
+			\begin{itemize}
+				\onslide<5->{\item Poor weather, low visibility, or extreme terrain (e.g., deserts) can impact sensor readings}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Resource Requirements:}}
+			\begin{itemize}
+				\onslide<7->{\item High-performance computing resources needed for real-time terrain matching and updating}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	
+	% Slide 4: Communication-Based Positioning and RTK
+	\begin{frame}
+		\onslide<1->{\frametitle{Communication-Based Positioning and RTK} \framesubtitle{Additional Measurement Sources}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Real-Time Kinematic (RTK) Corrections:}}
+			\begin{itemize}
+				\onslide<3->{\item Ground-based RTK stations provide high-precision correction data, useful with partial GNSS}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Communication-Based Positioning:}}
+			\begin{itemize}
+				\onslide<5->{\item \textbf{ADS-B In/Out:} Provides positional data from nearby aircraft, allowing relative positioning}
+				\onslide<6->{\item \textbf{Cellular Networks:} Can support triangulation at low altitudes (e.g., over populated areas)}
+			\end{itemize}
+		\end{itemize}
+		\onslide<7->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 5: Integration with INS/GPS Kalman Filter
+	\begin{frame}
+		\onslide<1->{\frametitle{Integration with INS/GPS Kalman Filter} \framesubtitle{Enhancing Accuracy in GPS-Denied Conditions}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Kalman Filter Integration:}}
+			\begin{itemize}
+				\onslide<3->{\item Each alternative navigation aid can provide updates to the Kalman filter}
+				\onslide<4->{\item Measurement sources correct INS drift, helping maintain accurate estimates of position, velocity, and attitude}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Resilience in GPS-Denied Environments:}}
+			\begin{itemize}
+				\onslide<6->{\item Kalman filter dynamically uses available sources to ensure reliable navigation until GPS is restored}
+			\end{itemize}
+		\end{itemize}
+		\onslide<7->{\center --------------------------------------------------------------------}
+	\end{frame}
+
+
+
+	% Slide 1: Budgetary Challenges in Achieving Assured PNT
+\begin{frame}
+	\onslide<1->{\frametitle{Backup:  Budgetary Challenges in Achieving Assured PNT} \framesubtitle{Impact of Program Delays}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Delayed GPS OCX and MGUE Programs:}}
+		\begin{itemize}
+			\onslide<3->{\item \textbf{GPS OCX (Next Generation Operational Control System):} \newline 
+				Critical for improved anti-jamming and anti-spoofing capabilities, but delayed deployment affects A-PNT timelines}
+			\onslide<4->{\item \textbf{GPS MGUE (Military GPS User Equipment):} \newline 
+				Essential for integrating M-Code, which is designed to enhance signal security; delays impact military readiness for secure PNT}
+		\end{itemize}
+		\onslide<5->{\item \textbf{Increased Costs Due to Extended Timelines:}}
+		\begin{itemize}
+			\onslide<6->{\item Project delays require additional funding to maintain and upgrade legacy systems as a stopgap solution}
+		\end{itemize}
+		\onslide<7->{\item \textbf{Dependency on Supplemental PNT Solutions:}}
+		\begin{itemize}
+			\onslide<8->{\item Delays in OCX and MGUE push agencies to invest in alternative PNT solutions (e.g., terrestrial or LEO-based systems), increasing overall costs}
+		\end{itemize}
+	\end{itemize}
+	\onslide<9->{\center --------------------------------------------------------------------}
+\end{frame}
+
+% Slide 2: Additional Budgetary Considerations
+\begin{frame}
+	\onslide<1->{\frametitle{Additional Budgetary Considerations for A-PNT} \framesubtitle{Adapting to Delays and Rising Costs}}
+	\begin{itemize}
+		\onslide<2->{\item \textbf{Balancing Investment in Legacy Systems and Modernization:}}
+		\begin{itemize}
+			\onslide<3->{\item Funding needed to sustain legacy GPS systems until OCX and MGUE are operational, adding to budget strain}
+			\onslide<4->{\item Resources diverted to address immediate operational gaps rather than long-term A-PNT advancements}
+		\end{itemize}
+		\onslide<5->{\item \textbf{Investment in Alternative A-PNT Technologies:}}
+		\begin{itemize}
+			\onslide<6->{\item Increased allocation for non-GPS-dependent solutions (e.g., IMUs, precision timing, and LEO constellations) adds to the budget but enhances resilience}
+		\end{itemize}
+		\onslide<7->{\item \textbf{Cost of Integrating New Technologies:}}
+		\begin{itemize}
+			\onslide<8->{\item Integrating supplemental technologies with existing infrastructure can be complex and costly}
+			\onslide<9->{\item Ensuring interoperability between legacy and new systems is resource-intensive}
+		\end{itemize}
+	\end{itemize}
+	\onslide<10->{\center --------------------------------------------------------------------}
+\end{frame}
+
+	
+	% Slide 1: Gyroscope Technology Overview
+	\begin{frame}
+		\onslide<1->{\frametitle{State of the Art in Gyroscope Technology} \framesubtitle{Overview}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Optical Gyroscopes}}
+			\begin{itemize}
+				\onslide<3->{\item Fiber-Optic Gyroscopes (FOGs) \newline
+					Achieve accuracy of 0.1 to 0.0001 degrees per hour}
+				\onslide<4->{\item Optical Resonator Gyroscopes (ORGs) \newline
+					Random drift values as low as 0.06 degrees per hour}
+			\end{itemize}
+			\onslide<5->{\item \textbf{Micro-Electro-Mechanical Systems (MEMS) Gyroscopes}}
+			\begin{itemize}
+				\onslide<6->{\item Miniaturization advances enable high-precision navigation-grade applications}
+			\end{itemize}
+			\onslide<7->{\item \textbf{Quantum Gyroscopes}}
+			\begin{itemize}
+				\onslide<8->{\item Using double-mode surface-acoustic-wave cavities to surpass standard quantum limits}
+			\end{itemize}
+			\onslide<9->{\item \textbf{Applications} \newline Expanding to medical, sensing, imaging, and critical navigation}
+		\end{itemize}
+		\onslide<10->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 2: Navigation-Grade Performance Criteria
+	\begin{frame}
+		\onslide<1->{\frametitle{Navigation-Grade Gyroscope Performance} \framesubtitle{Criteria}}
+		\begin{itemize}
+			\onslide<2->{\item Bias Instability (Drift Rate)}
+			\begin{itemize}
+				\onslide<3->{\item Drift rates around 0.01 to 1 degree per hour}
+			\end{itemize}
+			\onslide<4->{\item Scale Factor Accuracy}
+			\begin{itemize}
+				\onslide<5->{\item Accuracy within 50 ppm}
+			\end{itemize}
+			\onslide<6->{\item Noise Performance (Angle Random Walk)}
+			\begin{itemize}
+				\onslide<7->{\item Below 0.01 degrees per \(\sqrt{\text{hour}}\)}
+			\end{itemize}
+			\onslide<8->{\item Thermal Stability and Bandwidth}
+			\begin{itemize}
+				\onslide<9->{\item Consistent performance under varying temperatures and dynamic changes}
+			\end{itemize}
+		\end{itemize}
+		\onslide<10->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 3: Navigation-Grade MEMS Gyroscopes
+	\begin{frame}
+		\onslide<1->{\frametitle{MEMS Gyroscopes with Navigation-Grade Performance} \framesubtitle{Examples}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{CEA-Leti's Nano-Resistive Sensing Gyroscope}}
+			\begin{itemize}
+				\onslide<3->{\item Bias instability of 0.02°/h and angular random walk (ARW) of 0.004°/\(\sqrt{\text{h}}\)}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Safran's Si-MEMS Gyroscope}}
+			\begin{itemize}
+				\onslide<5->{\item High-precision with optimization for CSWAP requirements}
+			\end{itemize}
+			\onslide<6->{\item \textbf{EMCORE's Quartz MEMS IMU}}
+			\begin{itemize}
+				\onslide<7->{\item Angle random walk < 0.006°/\(\sqrt{\text{h}}\), bias stability of 0.2°/h over temperature}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 4: Role of Precise Clocks in MEMS Gyro-CSWAP Systems
+	\begin{frame}
+		\onslide<1->{\frametitle{Precise Clocks in MEMS Gyro-CSWAP Systems} \framesubtitle{Importance without GPS}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{Reducing Drift Accumulation}}
+			\begin{itemize}
+				\onslide<3->{\item Synchronizes timing, reducing drift over time}
+			\end{itemize}
+			\onslide<4->{\item \textbf{Improving Dead Reckoning Accuracy}}
+			\begin{itemize}
+				\onslide<5->{\item Enables consistent time-stamping of measurements}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Supporting Sensor Fusion Algorithms}}
+			\begin{itemize}
+				\onslide<7->{\item Accurate timing of multi-sensor data, improving algorithm performance}
+			\end{itemize}
+			\onslide<8->{\item \textbf{Supporting Assisted Inertial Navigation Systems (AINS)}}
+			\begin{itemize}
+				\onslide<9->{\item Assists in periodic GPS syncing for extended stability}
+			\end{itemize}
+		\end{itemize}
+		\onslide<10->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 5: EMCORE Overview
+	\begin{frame}
+		\onslide<1->{\frametitle{About EMCORE Corporation} \framesubtitle{Overview and History}}
+		\begin{itemize}
+			\onslide<2->{\item Founded in 1984}
+			\onslide<3->{\item Specializes in fiber optic, MEMS, and ring laser gyro technology}
+			\onslide<4->{\item Applications in aerospace, defense, and industrial markets}
+		\end{itemize}
+		\onslide<5->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	% Slide 6: FEI-Zyfer and Assured PNT Applications
+	\begin{frame}
+		\onslide<1->{\frametitle{FEI-Zyfer and Assured PNT} \framesubtitle{Timing Solutions for PNT}}
+		\begin{itemize}
+			\onslide<2->{\item \textbf{GPS-Disciplined Time and Frequency Systems}}
+			\begin{itemize}
+				\onslide<3->{\item M-Code and SAASM GPS receivers for secure applications}
+			\end{itemize}
+			\onslide<4->{\item \textbf{High-Precision Oscillators}}
+			\begin{itemize}
+				\onslide<5->{\item Uses Rubidium Atomic Clocks for precise timing}
+			\end{itemize}
+			\onslide<6->{\item \textbf{Certified for Defense Applications}}
+			\begin{itemize}
+				\onslide<7->{\item Approved Host Application Equipment integrator}
+			\end{itemize}
+		\end{itemize}
+		\onslide<8->{\center --------------------------------------------------------------------}
+	\end{frame}
+	
+	
+\end{document}

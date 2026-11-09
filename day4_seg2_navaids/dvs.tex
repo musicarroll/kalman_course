@@ -1,0 +1,28 @@
+% day4_seg2_navaids/dvs.tex
+\begin{frame}
+Doppler Velocity Sensor (DVS)
+ \begin{itemize}
+ \item DVS provides genuine velocity measurement with respect to ground
+ \item DVS provides heading and drift velocities $V_H$ and $V_D$
+ \item Nonlinear measurement relationship to INS-indicated velocities $V_x$ and $V_y$ and platform azimuth $\beta$:
+\end{itemize}
+\begin{align*}
+V_H &= -V_x\sin\beta + V_y\cos\beta\\
+V_D &=  V_x\cos\beta + V_y\sin\beta
+\end{align*}
+\end{frame}
+
+\begin{frame}
+DVS
+\begin{itemize}
+  \item Relationship between $(V_x,V_y)$ and $(V_H,V_D)$ is non-linear $h$
+  \item To generate a linearized $H$ matrix we compute partial derivatives (Jacobians) to yield:
+\[H=
+\begin{bmatrix}
+0&-\sin\beta&0&0&\cos\beta&0&0&0&-V_x\cos\beta - V_y\sin\beta\\
+0&\cos\beta&0&0&\sin\beta&0&0&0&-V_x\sin\beta + V_y\cos\beta
+\end{bmatrix}
+\]
+for a canonical 9-state filter.
+\end{itemize} 
+\end{frame}
